@@ -1,0 +1,22 @@
+<ValueSet xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/R4/valueset.xsd">
+	<id value="be-reason-referral-status"/>
+	<url value="https://www.ehealth.fgov.be/standards/fhir/ValueSet/be-reason-referral-status"/>
+	<version value="1.0.0"/>
+	<name value="BeReasonReferralStatus"/>
+	<status value="active"/>
+	<publisher value="eHealth Platform"/>
+	<contact>
+		<name value="eHealth Platform"/>
+
+		<telecom>
+			<system value="url"/>
+			<value value="https://www.ehealth.fgov.be/standards/kmehr/en"/>
+		</telecom>
+	</contact>
+	<description value="Codes to explain the current status of a referral prescription."/>
+	<compose>
+	   <include>
+            <system value="https://www.ehealth.fgov.be/standards/fhir/CodeSystem/be-status-reason" />
+        </include>
+	</compose>
+</ValueSet>

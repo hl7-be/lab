@@ -1,0 +1,30 @@
+<CodeSystem xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/R4/codesystem.xsd">
+	<id value="be-status-reason"/>
+	<url value="https://www.ehealth.fgov.be/standards/fhir/CodeSystem/be-status-reason"/>
+	<version value="1.0"/>
+	<name value="BeStatusReason"/>
+	<title value="BeStatusReason"/>
+	<status value="draft"/>
+	<experimental value="false"/>
+	<publisher value="eHealth Platform"/>
+	<description value="Status reason in Belgium. Initially defined as supporting CodeSystem for the referral prescription."/>
+	<caseSensitive value="false"/>
+	<content value="fragment"/>
+	<concept>
+		<code value="not-used-by-patient"/>
+		<display value="not-used-by-patient"/>
+		<designation>
+			<language value="en"/>
+			<value value="Patient does not use it."/>
+		</designation>
+		<designation>
+			<language value="nl-BE"/>
+			<value value="Patient gebruikt het niet."/>
+		</designation>
+		<designation>
+			<language value="fr-BE"/>
+			<value value="Le patient ne l'utilise pas"/>
+		</designation>
+	</concept>
+	
+</CodeSystem>

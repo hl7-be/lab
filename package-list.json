@@ -1,0 +1,13 @@
+{
+ "package-id" : "hl7-be-medication",
+ "title" : "Affiliate IG", 
+ "canonical" : "http://hl7.be/fhir/implementationguide", 
+ "introduction" : "Belgian Medication Implementation Guide",
+ "list" : [{
+  "version" : "current",
+  "desc" : "Continuous Integration Build (latest in version control)",
+  "path" : "http://build.fhir.org/ig/hl7-be/hl7-be-fhir-medication/branches/master",
+  "status" : "ci-build",
+  "current" : true
+ }]
+}

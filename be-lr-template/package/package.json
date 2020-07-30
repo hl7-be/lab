@@ -1,0 +1,13 @@
+{
+  "name": "hl7.be-rp.fhir.template",
+
+  "version": "0.0.1",
+  "type": "fhir.template",
+  "license": "CC0-1.0",
+  "description": "HL7 BE Referral Prescription template",
+  "author": "http://hl7.org/fhir",
+	"base":  "hl7.be.fhir.template",
+  "dependencies": {
+    "hl7.be.fhir.template": "current"
+  }
+}
