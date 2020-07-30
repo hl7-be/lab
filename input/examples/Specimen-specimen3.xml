@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Specimen xmlns="http://hl7.org/fhir">
+  <id value="specimen3"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>id</b>: specimen3</p><p><b>identifier</b>: 1</p><p><b>type</b>: <span title="Codes: {http://snomed.info/sct 243301005}">Morganella Morganii</span></p></div>
+  </text>
+  <identifier>
+    <value value="1"/>
+  </identifier>
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="243301005"/>
+      <display value="Morganella Morganii"/>
+    </coding>
+  </type>
+</Specimen>

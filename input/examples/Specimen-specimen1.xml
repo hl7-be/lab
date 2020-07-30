@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Specimen xmlns="http://hl7.org/fhir">
+  <id value="specimen1"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>id</b>: specimen1</p><p><b>identifier</b>: 1</p><p><b>type</b>: <span title="Codes: {http://snomed.info/sct 119297000}">Blood specimen</span></p><p><b>receivedTime</b>: 2015-11-04</p><h3>Collections</h3><table class="grid"><tr><td>-</td><td><b>Collected[x]</b></td></tr><tr><td>*</td><td>2015-11-03</td></tr></table></div>
+  </text>
+  <identifier>
+    <value value="1"/>
+  </identifier>
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="119297000"/>
+      <display value="Blood specimen"/>
+    </coding>
+  </type>
+  <receivedTime value="2015-11-04"/>
+  <collection>
+    <collectedDateTime value="2015-11-03"/>
+  </collection>
+</Specimen>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="eHealthPlatform"/>
+  <meta>
+    <profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-organization"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>id</b>: eHealthPlatform</p><p><b>meta</b>: </p><p><b>active</b>: true</p><p><b>name</b>: eHealth Platform</p><p><b>telecom</b>: ph: 3228918611(WORK)</p><p><b>address</b>: </p><ul><li>Willebroekkaai 38, 1000 Brussel(WORK)</li><li>38, Quai de Willeborek, 1000 Bruxelles(WORK)</li></ul></div>
+  </text>
+  <active value="true"/>
+  <name value="eHealth Platform"/>
+  <telecom>
+    <system value="phone"/>
+    <value value="3228918611"/>
+    <use value="work"/>
+  </telecom>
+  <address>
+    <extension url="http://hl7.org/fhir/StructureDefinition/language">
+      <valueCode value="nl"/>
+    </extension>
+    <use value="work"/>
+    <type value="both"/>
+    <text value="Willebroekkaai 38, 1000 Brussel"/>
+    <line value="Willebroekkaai 38">
+      <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+        <valueString value="Willebroekkaai"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+        <valueString value="38"/>
+      </extension>
+    </line>
+    <city value="Brussel"/>
+    <postalCode value="1000"/>
+    <country value="BE"/>
+  </address>
+  <address>
+    <extension url="http://hl7.org/fhir/StructureDefinition/language">
+      <valueCode value="fr"/>
+    </extension>
+    <use value="work"/>
+    <type value="both"/>
+    <text value="38, Quai de Willeborek, 1000 Bruxelles"/>
+    <line value="38, Quai de Willeborek">
+      <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+        <valueString value="Quai de Willeborek"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+        <valueString value="38"/>
+      </extension>
+    </line>
+    <city value="Bruxelles"/>
+    <postalCode value="1000"/>
+    <country value="BE"/>
+  </address>
+</Organization>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="observation1"/>
+  <meta>
+    <profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>id</b>: observation1</p><p><b>meta</b>: </p><p></p><p><b>category</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/observation-category vital-signs}">Vital Signs</span></p><p><b>code</b>: <span title="Codes: {http://loinc.org 8867-4}, {http://snomed.info/sct 364075005}, {https://www.ehealth.fgov.be/standards/fhir/CodeSystem/albert H-RATE}">Heart rate</span></p><p><b>subject</b>: <a href="Patient-patient1.html">Generated Summary: id: patient1; 79121137740 (OFFICIAL), Social Beneficiary Identifier = 79121137740 (OFFICIAL), Medical record number = 45XXP0PA-4 (USUAL); active; Josephine Nessa La Paradisio ; nessa.laparadisio@belgium.be, ph: +322476792979(MOBILE), ph: +3226718655(HOME), ph: +322476799(WORK); gender: female; birthDate: 1979-12-11; <span title="Codes: {http://terminology.hl7.org/CodeSystem/v3-MaritalStatus D}, {https://www.ehealth.fgov.be/standards/fhir/CodeSystem/cd-civilstate 41}">Divorced</span></a></p><p><b>effective</b>: 1999-07-02</p><p><b>performer</b>: <a href="Practitioner-practitioner1.html">Generated Summary: id: practitioner1; 79121137740 (OFFICIAL), 18749704477 (OFFICIAL); Katherine Pulaski (OFFICIAL); katherine.pulaski@enterprisehospital.be(WORK), ph: 022675198(WORK), fax: 022675209(WORK); gender: female; birthDate: 1979-12-11</a></p><p><b>value</b>: 44 beats/minute</p></div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="vital-signs"/>
+      <display value="Vital Signs"/>
+    </coding>
+    <text value="Vital Signs"/>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="8867-4"/>
+      <display value="Heart rate"/>
+    </coding>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="364075005"/>
+      <display value="Heart rate (observable entity)"/>
+    </coding>
+    <coding>
+      <system value="https://www.ehealth.fgov.be/standards/fhir/CodeSystem/albert"/>
+      <code value="H-RATE"/>
+      <display value="Heart rate"/>
+    </coding>
+    <text value="Heart rate"/>
+  </code>
+  <subject>
+    <reference value="Patient/patient1"/>
+  </subject>
+  <effectiveDateTime value="1999-07-02"/>
+  <performer>
+    <reference value="Practitioner/practitioner1"/>
+  </performer>
+  <valueQuantity>
+    <value value="44"/>
+    <unit value="beats/minute"/>
+    <system value="http://unitsofmeasure.org"/>
+    <code value="/min"/>
+  </valueQuantity>
+</Observation>

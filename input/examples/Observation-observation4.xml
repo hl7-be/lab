@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="observation4"/>
+  <meta>
+    <profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>id</b>: observation4</p><p><b>meta</b>: </p><p></p><p><b>category</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/observation-category laboratory}">laboratory studies</span></p><p><b>code</b>: <span title="Codes: {http://loinc.org 18769-0}">Microbial susceptibility tests Set</span></p><p><b>subject</b>: <a href="Patient-patient1.html">Generated Summary: id: patient1; 79121137740 (OFFICIAL), Social Beneficiary Identifier = 79121137740 (OFFICIAL), Medical record number = 45XXP0PA-4 (USUAL); active; Josephine Nessa La Paradisio ; nessa.laparadisio@belgium.be, ph: +322476792979(MOBILE), ph: +3226718655(HOME), ph: +322476799(WORK); gender: female; birthDate: 1979-12-11; <span title="Codes: {http://terminology.hl7.org/CodeSystem/v3-MaritalStatus D}, {https://www.ehealth.fgov.be/standards/fhir/CodeSystem/cd-civilstate 41}">Divorced</span></a></p><p><b>effective</b>: Feb 3, 2015, 4:00:00 AM</p><p><b>performer</b>: <a href="Practitioner-practitioner1.html">Generated Summary: id: practitioner1; 79121137740 (OFFICIAL), 18749704477 (OFFICIAL); Katherine Pulaski (OFFICIAL); katherine.pulaski@enterprisehospital.be(WORK), ph: 022675198(WORK), fax: 022675209(WORK); gender: female; birthDate: 1979-12-11</a></p><p><b>specimen</b>: <a href="Specimen-specimen4.html">Generated Summary: id: specimen4; 1; <span title="Codes: {http://snomed.info/sct 112283007}">Escherichia coli</span></a></p><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes: {http://loinc.org 29-9}">Ampicillin Islt KB</span></p><p><b>interpretation</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation S}">Susceptible</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes: {http://loinc.org 516-5}">TMP SMX Islt MIC</span></p><p><b>interpretation</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation S}">Susceptible</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes: {http://loinc.org 363-2}">Nitrofurantoin Islt MIC</span></p><p><b>interpretation</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation S}">Susceptible</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes: {http://loinc.org 51774-8}">Cefuroxime Islt MIC</span></p><p><b>interpretation</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation S}">Susceptible</span></p></blockquote></div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="laboratory"/>
+      <display value="laboratory"/>
+    </coding>
+    <text value="laboratory studies"/>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="18769-0"/>
+      <display value="Microbial susceptibility tests Set"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/patient1"/>
+  </subject>
+  <effectiveDateTime value="2015-02-02T23:00:00-05:00"/>
+  <performer>
+    <reference value="Practitioner/practitioner1"/>
+  </performer>
+  <specimen>
+    <reference value="Specimen/specimen4"/>
+  </specimen>
+  <component>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="29-9"/>
+        <display value="Ampicillin Islt KB"/>
+      </coding>
+    </code>
+    <interpretation>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+        <code value="S"/>
+        <display value="Susceptible"/>
+      </coding>
+    </interpretation>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="516-5"/>
+        <display value="TMP SMX Islt MIC"/>
+      </coding>
+    </code>
+    <interpretation>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+        <code value="S"/>
+        <display value="Susceptible"/>
+      </coding>
+    </interpretation>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="363-2"/>
+        <display value="Nitrofurantoin Islt MIC"/>
+      </coding>
+    </code>
+    <interpretation>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+        <code value="S"/>
+        <display value="Susceptible"/>
+      </coding>
+    </interpretation>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="51774-8"/>
+        <display value="Cefuroxime Islt MIC"/>
+      </coding>
+    </code>
+    <interpretation>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+        <code value="S"/>
+        <display value="Susceptible"/>
+      </coding>
+    </interpretation>
+  </component>
+</Observation>

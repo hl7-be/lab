@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="observation2"/>
+  <meta>
+    <profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>id</b>: observation2</p><p><b>meta</b>: </p><p></p><p><b>category</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/observation-category laboratory}">laboratory studies</span></p><p><b>code</b>: <span title="Codes: {http://loinc.org 30341-2}">Erythrocyte sedimentation rate</span></p><p><b>subject</b>: <a href="Patient-patient1.html">Generated Summary: id: patient1; 79121137740 (OFFICIAL), Social Beneficiary Identifier = 79121137740 (OFFICIAL), Medical record number = 45XXP0PA-4 (USUAL); active; Josephine Nessa La Paradisio ; nessa.laparadisio@belgium.be, ph: +322476792979(MOBILE), ph: +3226718655(HOME), ph: +322476799(WORK); gender: female; birthDate: 1979-12-11; <span title="Codes: {http://terminology.hl7.org/CodeSystem/v3-MaritalStatus D}, {https://www.ehealth.fgov.be/standards/fhir/CodeSystem/cd-civilstate 41}">Divorced</span></a></p><p><b>effective</b>: Nov 4, 2015, 2:16:00 PM</p><p><b>performer</b>: <a href="Practitioner-practitioner1.html">Generated Summary: id: practitioner1; 79121137740 (OFFICIAL), 18749704477 (OFFICIAL); Katherine Pulaski (OFFICIAL); katherine.pulaski@enterprisehospital.be(WORK), ph: 022675198(WORK), fax: 022675209(WORK); gender: female; birthDate: 1979-12-11</a></p><p><b>value</b>: 2 mm/h</p><p><b>specimen</b>: <a href="Specimen-specimen1.html">Generated Summary: id: specimen1; 1; <span title="Codes: {http://snomed.info/sct 119297000}">Blood specimen</span>; receivedTime: 2015-11-04</a></p><h3>ReferenceRanges</h3><table class="grid"><tr><td>-</td><td><b>Low</b></td><td><b>High</b></td><td><b>Type</b></td></tr><tr><td>*</td><td>0 mm/h</td><td>30 mm/h</td><td><span title="Codes: {http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}">Normal Range</span></td></tr></table></div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="laboratory"/>
+      <display value="laboratory"/>
+    </coding>
+    <text value="laboratory studies"/>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="30341-2"/>
+      <display value="Erythrocyte sedimentation rate"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/patient1"/>
+  </subject>
+  <effectiveDateTime value="2015-11-04T09:16:00-05:00"/>
+  <performer>
+    <reference value="Practitioner/practitioner1"/>
+  </performer>
+  <valueQuantity>
+    <value value="2"/>
+    <unit value="mm/h"/>
+    <system value="http://unitsofmeasure.org"/>
+    <code value="mm/h"/>
+  </valueQuantity>
+  <specimen>
+    <reference value="Specimen/specimen1"/>
+  </specimen>
+  <referenceRange>
+    <low>
+      <value value="0"/>
+      <unit value="mm/h"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="mm/h"/>
+    </low>
+    <high>
+      <value value="30"/>
+      <unit value="mm/h"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="mm/h"/>
+    </high>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/referencerange-meaning"/>
+        <code value="normal"/>
+      </coding>
+    </type>
+  </referenceRange>
+</Observation>

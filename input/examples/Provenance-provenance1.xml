@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Provenance xmlns="http://hl7.org/fhir">
+  <id value="provenance1"/>
+  <meta>
+    <profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-provenance"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>id</b>: provenance1</p><p><b>meta</b>: </p><p><b>target</b>: <a href="Practitioner-practitioner1.html">Generated Summary: id: practitioner1; 79121137740 (OFFICIAL), 18749704477 (OFFICIAL); Katherine Pulaski (OFFICIAL); katherine.pulaski@enterprisehospital.be(WORK), ph: 022675198(WORK), fax: 022675209(WORK); gender: female; birthDate: 1979-12-11</a></p><p><b>recorded</b>: Jun 27, 2019, 6:39:24 AM</p><p><b>reason</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/v3-ActReason HOPERAT}">Healthcare Operations</span></p><p><b>activity</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/v3-DataOperation CREATE}">create</span></p><h3>Agents</h3><table class="grid"><tr><td>-</td><td><b>Type</b></td><td><b>Who</b></td></tr><tr><td>*</td><td><span title="Codes: {http://terminology.hl7.org/CodeSystem/provenance-participant-type author}">Author</span></td><td><a href="Organization-organization1.html">Enterprise Hospital Ziekenhuis. Generated Summary: id: organization1; Provider Number = 0425.222.333 (OFFICIAL), Medical License number = 999999999 (OFFICIAL); active; <span title="Codes: {https://www.ehealth.fgov.be/standards/fhir/CodeSystem/cd-hcparty orghospital}">hospital</span>; name: Enterprise Hospital Ziekenhuis; ph: 322675199(WORK)</a></td></tr></table></div>
+  </text>
+  <target>
+    <reference value="Practitioner/practitioner1"/>
+  </target>
+  <recorded value="2019-06-27T08:39:24+02:00"/>
+  <reason>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HOPERAT"/>
+      <display value="Healthcare Operations"/>
+    </coding>
+  </reason>
+  <activity>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-DataOperation"/>
+      <code value="CREATE"/>
+    </coding>
+  </activity>
+  <agent>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/provenance-participant-type"/>
+        <code value="author"/>
+      </coding>
+    </type>
+    <who>
+      <reference value="Organization/organization1"/>
+      <display value="Enterprise Hospital Ziekenhuis"/>
+    </who>
+  </agent>
+</Provenance>

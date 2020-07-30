@@ -35,6 +35,14 @@
   <license value="CC0-1.0"/>
   <!-- This is whatever FHIR version(s) the IG artifacts are targeting (not the version of this file, which should always be 'current release') -->
   <fhirVersion value="4.0.1"/>
+  
+    <dependsOn>
+    
+      <uri value="https://www.ehealth.fgov.be/standards/fhir/ImplementationGuide/BeCoreImplementationGuide"/>
+      <packageId value ="BeCoreImplementationGuide"/>
+      <id value="BeCoreImplementationGuide"/>
+      <version value="dev"/>
+</dependsOn>
 
   <definition>
     <!-- You don't need to define any groupings.  The IGPublisher will define them for you.  You only need to do so if your IG is 'special' and it's
