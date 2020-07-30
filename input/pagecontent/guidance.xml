@@ -2,19 +2,4 @@
   
 
 
-<h3>Related persons as performer of the prescription</h3>
-<p>The requested performer in a referral prescription is typically a reference to a practitioner but it could also be reference to related person.  Typically the performer shall be referred by a business identifier or Reference.display.</p>
-<p>It is RECOMMENDED in case of a related person as performer, the related person is included using the <a href="https://www.hl7.org/fhir/references.html#contained">contained mechanism</a>.</p>
- <h3>The procedure or observation executing the referral prescription</h3>
- <p>A procedure or observation resource typically execute the referral prescription. As such, they shall be made available on the system where the ServiceRequest resides and refer to the ServiceRequest resource using their basedOn field.</p> 
-
- <h3>Specifics concerning the referral prescription for nursing</h3>
-   <h4>Availability of prescriber</h4>
- <p>If needed, the availability of a prescriber SHALL be given using a PractitionerRole resource referring to the Practitioner that is the prescriber of the ServiceRequest.</p> 
-  <h4>Signature and date of signature</h4>
- <p>If needed, a signature SHALL be given using a Provenance resource referring to the ServiceRequest.</p> 
-  <h3>Specifics concerning the referral prescription for diagnostic imaging</h3>
- <p>N/A</p> 
-  <h3>Specifics concerning the referral prescription for physiotherapy</h3>
- <p>N/A</p> 
 </div>

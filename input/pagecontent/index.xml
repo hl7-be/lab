@@ -2,7 +2,7 @@
   <a name="scope"> </a>
 	<p>
     This is the HL7 Belgium FHIR Implementation Guide for the Referral prescription workgroup
- <a href="https://wiki.hl7belgium.org/index.php?title=Procedure_Referral_Workgroup">which can be consulted here</a>. First work in progress is available in this guide on the <a href="artifacts.html">Artifacts page</a> General guidance work in progress information is on the <a href="guidance.html">Guidance page</a>
+ <a href="https://wiki.hl7belgium.org/index.php?title=Laboratory_Report_Workgroup">which can be consulted here</a>. First work in progress is available in this guide on the <a href="artifacts.html">Artifacts page</a> General guidance work in progress information is on the <a href="guidance.html">Guidance page</a>
    </p>
 	<blockquote class="stu-note">
 	<strong>This documentation and set of artefacts are still undergoing development.</strong>
@@ -12,7 +12,7 @@
   <h3>Content</h3>
 	<p/>
 
-<p>This publication contains the specifications related to the referral prescription areas and is structured in the following content sections:</p>
+<p>This publication contains the specifications related to the laboratory report areas and is structured in the following content sections:</p>
 <p></p>
 <p><strong>Background:</strong> Information about the HL7 Belgium specifications, or what you should know to be able to best navigate and use these specifications. Contains a general introduction to the publication structure and content, the artefact types, common privacy and security specifications and the official HL7 FHIR release that this specification is based upon.</p>
 <p></p>
