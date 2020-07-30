@@ -40,7 +40,7 @@
     
       <uri value="https://www.ehealth.fgov.be/standards/fhir/ImplementationGuide/BeCoreImplementationGuide"/>
       <packageId value ="BeCoreImplementationGuide"/>
-      <id value="BeCoreImplementationGuide"/>
+     
       <version value="dev"/>
 </dependsOn>
 
