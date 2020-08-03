@@ -1,0 +1,137 @@
+/*
+ 
+    Specific layout and styling, project based
+        
+    
+*/
+/*
+Flexslider vs LayerSlider vs SliderRevolution
+Font-scaling
+Transition
+Isotope Masonry less
+popover alties => wireframe analyse hiervoor
+breadcrumb vs history what is a breadcrumb hiearchy or history?
+gray-color thingy
+
+widget-row vs thumbs vs joyo-thumbs
+shortcode for 
+- Fontawesome
+- Accordion
+- Notifications
+- span-fluid in content bv span3
+font-awesome OWN export
+joyo-widget and all other style
+widget in sidebar vs in column = uiterlijk op basis van locale class via functions of template
+  een sidebar uiterlijk moet ook midden in de pagina kunnen.
+*/
+/*
+
+- SCAFFOLDING							Groundwork for the site. Background colors are set in less or overruled here
+- SCAFFOLDING OBJECTS					Objects reoccurring on every page
+- COMPONENTS							Everything what can be moved around				
+- BACK TO TOP							Anchor animating to top of the page
+- EXCEPTIONS FOR SPECIFIC SITUATIONS	Some pages are not like the others
+- D-I-D AREA							Do-It-Dirty 
+
+*/
+/* SCAFFOLDING STYLING 
+----------------------------------------------------------------------------------------*/
+
+
+
+:root {
+/* 
+Color scheme definitions
+Usage:
+   var(--publish-box-bg-color); 
+*/
+
+  --ig-status-text-color: maroon; /* 1. IG Title and status text color */
+  --navbar-bg-color: #ad1f2f; /* 2. Header container color */
+  --footer-bg-color: #707070; /* 3. Footer background color*/
+  --footer-container-color: #ad1f2f; /* 4. Footer container color */
+  --stripe-bg-color: #999999; /* 5. Header strip color */
+
+  --btn-hover-color: #790713;  /* 6. Menu button hover color */
+  --btn-active-color: #da0c23; /* 7. Menu button active color */
+  --btn-text-color: #e6e6e6; /* 8. Menu button text color */
+  --btn-gradient-start-color: #428bca; /* 9. Menu item gradient start color */
+  --btn-gradient-end-color: #357ebd; /* 10. Menu item gradient end  color */
+  --btn-gradient-start-color-alpha: #ff428bca; /* 11. Menu item gradient start color (with alpha) */
+  --btn-gradient-end-color-alpha: #ff357ebd; /* 12. Menu item gradient end color (with alpha) */
+  --link-color: #428bca; /* 13. Hyperlink text color */
+  --link-hover-color: #2a6496; /* 14. Hyperlink text hover color */
+
+  --publish-box-bg-color: yellow; /* 15. Publish box background color */
+  --publish-box-border: 1px solid #0A0008; /* 16.  Publish box border definition */
+
+  --toc-box-bg-color: #ffeb7e; /* 17.  TOC box background color */
+  --toc-box-border: 1px solid navy; /* 18. TOC box border definition */
+
+  --stu-note-background-color: #fff2ff; /* 19. (STU) Note box background color */
+  --stu-note-border-left-color: #ffa0ff; /* 20. (STU) Note box border color */
+
+}
+
+.navbar .nav > li > a {
+  padding: 8px 12px;
+  text-shadow: none;
+}
+
+#fhir-nav {
+    line-height: 50px;
+    float: right;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #808080;
+}
+
+#ig-nav {
+    line-height: 50px;
+    float: left;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #808080;
+    vertical-align: middle;
+    line-height: 5.5;
+    margin-left: 10px;
+}
+
+#ig-status {
+  line-height: 20px;
+  margin-top: 26px;
+  color: var(--ig-status-text-color);
+  text-align: center;
+  height: 60px;
+
+}
+
+#ig-search {
+    line-height: 50px;
+    float: right;
+    margin-top: 16px;
+    color: var(--ig-status-text-color);
+}
+
+
+
+.feedback {
+  color: #ffffff;
+  padding:2px ;
+  font-size: 80%;
+  background-size: 18px 18px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  padding-left: 17px;
+  padding-right: 7px;
+  float: right; 
+  border-radius: 6px; 
+
+}
+
+.feedback:hover  {
+  color: #101010;
+  border: 1px solid #777;
+  background-color: #f0f0f0;
+}
+

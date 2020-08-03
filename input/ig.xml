@@ -129,6 +129,11 @@
         <title value="Guidance"/>
         <generation value="html"/>
       </page>
+	    <page>
+        <nameUrl value="downloads.html"/>
+        <title value="Downloads"/>
+        <generation value="html"/>
+      </page>
 
 	  
     </page>

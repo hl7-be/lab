@@ -1,5 +1,16 @@
 <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../src-generated/schemas/fhir-single.xsd" >
-  
+  <h3>Guidance</h3>
+<p>This guide uses the artefacts and guidance as they are defined in <a href="https://www.ehealth.fgov.be/standards/kmehr/en/page/fhir-profiles">the official federal IG as published by eHealth Platform</a>. Please take note when you are technically validating against the IG described on this page you also need that IG for the base federal profiles.</p>
+
+<h3>High level overview</h3>
+<p>This Guidance page aims to clarify the definition of the Belgian laboratory result.
+It concerns the construction of a laboratory result in a HL7 FHIR format. This laboratory result must be able to identify itself as a temporary, replacement, final or correction version.
+</p>
+<p>
+This page does not aim to explain all the possibilities of the HL7 FHIR format. Instead, its focus is to give as pragmatic and concise as possible instructions to create a valid HL7 FHIR laboratory result concerning a human patient.</p>
+<h3>Note on values</h3>
+<p>Values are always expressed with the 'full stop' or point (.) as decimal mark. No commas are used to make numbers easier to read. (e.g. ten thousand is always written as '10000' – never as '10,000' or '10.000')</p>
+
 
 
 </div>
