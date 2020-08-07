@@ -4,13 +4,15 @@
 
 <h3>High level overview</h3>
 <p>This Guidance page aims to clarify the definition of the Belgian laboratory result.
-It concerns the construction of a laboratory result in a HL7 FHIR format. This laboratory result must be able to identify itself as a temporary, replacement, final or correction version.
+It concerns the construction of a laboratory report in a HL7 FHIR format. This laboratory report is able to identify itself as a temporary, replacement, final or corrected version.
 </p>
 <p>
-This page does not aim to explain all the possibilities of the HL7 FHIR format. Instead, its focus is to give as pragmatic and concise as possible instructions to create a valid HL7 FHIR laboratory result concerning a human patient.</p>
-<h3>Note on values</h3>
-<p>Values are always expressed with the 'full stop' or point (.) as decimal mark. No commas are used to make numbers easier to read. (e.g. ten thousand is always written as '10000' – never as '10,000' or '10.000')</p>
-
+The text here does not aim to explain all the possibilities of the HL7 FHIR format. Instead, its focus is to give as pragmatic and concise as possible the pointers needed to create a valid HL7 FHIR laboratory result concerning a human patient. The reader of this text shall take note of the FHIR artefacts that are also included in this Implementation Guide. The pointers given on this page cannot be understood without them.</p>
+<h3>Note on values expressing laboratory results</h3>
+<p>Values are always expressed with the 'full stop' or point (.) as decimal mark. Commas SHALL NOT be used to make numbers easier to read. (e.g. ten thousand is always written as '10000' – never as '10,000' or '10.000')</p>
+<h3>Main FHIR resource of the report: the DiagnosticReport</h3>
+<p>The main FHIR resource to express the laboratory report is the DiagnosticReport. A Belgian profile has been created to use this resource in the intended fashion.<p/>
+<p>This DiagnosticReport forms the high level structure around all the actual concrete information in the laboratory report e.g. the actual observations, the patient etc.</p>
 
 
 </div>
