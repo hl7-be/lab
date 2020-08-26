@@ -23,5 +23,6 @@ The text here does not aim to explain the HL7 FHIR standard as such nor does thi
 <h4>Role of the narrative in FHIR</h4>
 <p>Implementers SHALL explicitely take note of the rules around the narrative in FHIR <a href="https://www.hl7.org/fhir/narrative.html">as explained on the pages of HL7.</a></p>
 <p>Specifically, the strong recommendation of HL7 concerning the use of the narrative "to support human-consumption as a fallback" is important in the context of the laboratory report. Indeed, this "human-consumption" aspect actually concerns the inclusion of limited xhtml content and as such an effortless implementation to visualize the content of the report by consuming systems is guarantueed. Also, for systems that might not initially choose to consume reports in a structured way, this guarantuees a way to at least visualize and present the content to the user. </p>
+<p>In the Belgian laboratory report, all content SHALL be available in the structured elements. As such, a narrative with <a href="https://www.hl7.org/fhir/valueset-narrative-status.html">narrative-status 'additional'</a> SHALL NOT be used.</p>
 
 </div>
