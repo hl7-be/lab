@@ -3,7 +3,7 @@
 It concerns the construction of a laboratory report in a HL7 FHIR format. This laboratory report is able to identify itself as a temporary, replacement, final or corrected version.
 </p>
 <p>
-The text here does not aim to explain all the possibilities of the HL7 FHIR standard. Instead, its focus is to give as pragmatic and concise as possible the pointers needed to create a valid HL7 FHIR laboratory result concerning a human patient. The reader of this text shall take note of the FHIR artefacts that are also included in this Implementation Guide. The pointers given on this page cannot be understood without them.</p>
+The text here does not aim to explain the HL7 FHIR standard as such nor does this guide aim to explain all the possibilities of the HL7 FHIR standard. For any exhaustive overview of the FHIR standard, the pages by HL7 are considered sufficient. Instead, the focus of this guide is to give as pragmatic and concise as possible the pointers needed to create a valid HL7 FHIR laboratory result concerning a human patient in the Belgian context. The reader of this text shall take note of the FHIR artefacts that are also included in this Implementation Guide. The pointers given on this page cannot be understood without them.</p>
 
   <h3>FHIR technical specifics</h3>
   <h4>The federal IG</h4>
@@ -18,8 +18,10 @@ The text here does not aim to explain all the possibilities of the HL7 FHIR stan
 
 <h3>The structure of report</h3>
 <h4>Main FHIR resource of the report: the DiagnosticReport</h4>
-<p>The main FHIR resource to express the laboratory report is the DiagnosticReport. A Belgian profile has been created to use this resource in the intended fashion.</p>
+<p>The main FHIR resource to express the laboratory report is the DiagnosticReport. A Belgian profile has thus been created to use this resource in the intended fashion.</p>
 <p>This DiagnosticReport forms the high level structure around all the actual concrete information in the laboratory report e.g. the actual observations, the patient etc.</p>
-
+<h4>Role of the narrative in FHIR</h4>
+<p>Implementers SHALL explicitely take note of the rules around the narrative in FHIR <a href="https://www.hl7.org/fhir/narrative.html">as explained on the pages of HL7.</a></p>
+<p>Specifically, the strong recommendation of HL7 concerning the use of the narrative "to support human-consumption as a fallback" is important in the context of the laboratory report. Indeed, this "human-consumption" aspect actually concerns the inclusion of limited xhtml content and as such an effortless implementation to visualize the content of the report by consuming systems is guarantueed. Also, for systems that might not initially choose to consume reports in a structured way, this guarantuees a way to at least visualize and present the content to the user. </p>
 
 </div>
