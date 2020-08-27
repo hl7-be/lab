@@ -26,7 +26,7 @@ The text here does not aim to explain the HL7 FHIR standard as such nor does thi
 <p>This DiagnosticReport forms the high level structure around all the actual concrete information in the laboratory report e.g. the actual observations, the patient etc.</p>
 
 <h4>Referencing other FHIR resources</h4>
-<p>As FHIR provided different resources, the DiagnosticReport will reference many other FHIR resources such as Patient, Practitioner, Specimen etc.</p>
+<p>As FHIR provides different resources, the DiagnosticReport will reference many other FHIR resources such as Patient, Practitioner, Specimen etc.</p>
 <p>FHIR allows for <a href="https://www.hl7.org/fhir/references.html">multiple ways to reference</a> other resources. For example, these other resources can be referenced using a URL to a server or they can be added to the DiagnosticReport as contained resources to have everything available in the DiagnosticReport.</p>
 
 <h4>Role of the narrative in FHIR</h4>
