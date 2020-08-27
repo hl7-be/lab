@@ -17,12 +17,37 @@ The text here does not aim to explain the HL7 FHIR standard as such nor does thi
 
 
 <h3>The structure of report</h3>
+<p>The content of the report is described in detail in the profile. This chapter highlights some attention points of the structure </p>
+
+
+
 <h4>Main FHIR resource of the report: the DiagnosticReport</h4>
 <p>The main FHIR resource to express the laboratory report is the DiagnosticReport. A Belgian profile has thus been created to use this resource in the intended fashion.</p>
 <p>This DiagnosticReport forms the high level structure around all the actual concrete information in the laboratory report e.g. the actual observations, the patient etc.</p>
+
+<h4>Referencing other FHIR resources</h4>
+<p>As FHIR provided different resources, the DiagnosticReport will reference many other FHIR resources such as Patient, Practitioner, Specimen etc.</p>
+<p>FHIR allows for <a href="https://www.hl7.org/fhir/references.html">multiple ways to reference</a> other resources. For example, these other resources can be referenced using a URL to a server or they can be added to the DiagnosticReport as contained resources to have everything available in the DiagnosticReport.</p>
+
 <h4>Role of the narrative in FHIR</h4>
 <p>Implementers SHALL explicitely take note of the rules around the narrative in FHIR <a href="https://www.hl7.org/fhir/narrative.html">as explained on the pages of HL7.</a></p>
 <p>Specifically, the strong recommendation of HL7 concerning the use of the narrative "to support human-consumption as a fallback" is important in the context of the laboratory report. Indeed, this "human-consumption" aspect actually concerns the inclusion of limited xhtml content and as such an effortless implementation to visualize the content of the report by consuming systems is guarantueed. Also, for systems that might not initially choose to consume reports in a structured way, this guarantuees a way to at least visualize and present the content to the user. </p>
 <p>In the Belgian laboratory report, all content SHALL be available in the structured elements. As such, a narrative with <a href="https://www.hl7.org/fhir/valueset-narrative-status.html">narrative-status 'additional'</a> SHALL NOT be used.</p>
 
+<h4>Specimen overview</h4>
+<p>Every specimen is expressed as a seperate Specimen resource in FHIR.</p>
+<p>In the DiagnosticReport.specimen element, all the specimen are referenced.</p>
+<p>The actual Observations refer to these Specimen.</p>
+
+<h4>Important time elements</h4>
+<p>This chapter gives a quick overview of where to find the most important time elements in a laboratory report.</p>
+
+<h5>Time of the prescription</h5>
+<p>The time of the prescription lives in the original ServiceRequest resource that can be referenced in the DiagnosticReport.basedOn element. The time of the prescription lives in the ServiceRequest.authoredOn element.</p>
+<h5>Time of the specimen collection</h5>
+<p>This is part of the Specimen resource that is referenced from within the diagnostic report. The Specimen.collection.collected element gives the dateTime or period of the collection.</p>
+<h5>Time of the specimen reception</h5>
+<p>This is part of the Specimen resource that is referenced from within the diagnostic report. The Specimen.receivedTime element gives the dateTime of the collection.</p>
+<h5>Time when the report is created</h5>
+<p>This is the DiagnosticReport.issued element.</p>
 </div>
