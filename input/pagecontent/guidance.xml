@@ -7,18 +7,20 @@ The text here does not aim to explain the HL7 FHIR standard as such nor does thi
 
   <h3>FHIR technical specifics</h3>
   <h4>The federal IG</h4>
-<p>This guide uses the artefacts and guidance as they are defined in <a href="https://www.ehealth.fgov.be/standards/kmehr/en/page/fhir-profiles">the official federal IG as published by eHealth Platform</a>. Please take note when you are technically validating against the IG described on this page you also need that IG for the base federal profiles.</p>
+<p>This guide uses the artefacts and guidance as they are defined in <a href="https://www.ehealth.fgov.be/standards/kmehr/en/page/fhir-profiles">the official federal IG as published by eHealth Platform</a>. Implementers SHALL take note of the guidelines defined in that IG. Please take note when you are technically validating against the IG described on this page you also need that IG for the base federal profiles.</p>
 
 <h3>Conventions</h3>
 
-<h4>Note on values expressing laboratory results</h4>
+<h4>Note on values and decimal mark</h4>
 <p>Values are always expressed with the 'full stop' or point (.) as decimal mark. Commas SHALL NOT be used to make numbers easier to read. (e.g. ten thousand is always written as '10000' – never as '10,000' or '10.000')</p>
 
+<h4>UTF 8</h4>
+<p>The HL7 FHIR message is considered to be UTF-8. It is RECOMMENDED to declare the use of UTF-8 at the top when sending FHIR as XML.</p>
 
 
 <h3>The structure of report</h3>
-<p>The content of the report is described in detail in the profile. This chapter highlights some attention points of the structure </p>
-
+<p>The content of the report is described in detail in the profile. This chapter highlights some general attention points in the structure. </p>
+<p>The profile defines cardinalities, preferred codesystems etc. It is equally important to take note of the different descriptions explaining the elements in the profile. These descriptions contain information that would otherwise by typically found in a cookbook explaining a technical structure element by element.</p>
 
 
 <h4>Main FHIR resource of the report: the DiagnosticReport</h4>
@@ -50,4 +52,11 @@ The text here does not aim to explain the HL7 FHIR standard as such nor does thi
 <p>This is part of the Specimen resource that is referenced from within the diagnostic report. The Specimen.receivedTime element gives the dateTime of the collection.</p>
 <h5>Time when the report is created</h5>
 <p>This is the DiagnosticReport.issued element.</p>
+
+<h4>Versioning of reports</h4>
+<p>The base FHIR resource DiagnosticReport is of the FHIR type DomainResource and as such it inherits the base FHIR resource elements. In its root, it inherits the elements defined in the base Resource FHIR datatype. This includes the <a href="http://hl7.org/fhir/R4/resource.html#Meta">Resource Metadata</a>.</p>
+<p>The Resource Metadata contains in its .versionId the actual version of the DiagnosticReport.</p>
+<p>The laboratory report SHALL identify itself uniquely using a business identifier in the DiagnosticReport.identifier element</p>
+<p>More recent versions of a labaratory result that have the same .identifier are considered as a correction or new version of the laboratory report.</p>
+<p>If needed to explicitely mark a new version of a laboratory report as an append or revision, a Provenance resource that refers to the laboratory report SHALL be used to clarify this.</p>
 </div>
