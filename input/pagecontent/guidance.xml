@@ -41,6 +41,19 @@ The text here does not aim to explain the HL7 FHIR standard as such nor does thi
 <p>In the DiagnosticReport.specimen element, all the specimen are referenced.</p>
 <p>The actual Observations refer to these Specimen.</p>
 
+<h4>Grouping of observations using Observation resources</h4>
+<p>Naturally, the Observation resource is heavily used in the laboratory report.</p>
+<p>It SHALL be noted, the FHIR DiagnosticReport base standard resource takes a <a href="https://www.hl7.org/fhir/diagnosticreport.html#bnc">pragmatic approach</a> to dealing with the multiple observations.</p>
+<p>Basically, to fully understand the DiagnosticReport and the Observation resource it is key to understand a <a href="https://www.hl7.org/fhir/observation.html#obsgrouping">few basic distinct ways to group observations</a> and how they cater to different use cases:</p>
+<ol>
+<li>Using the .result of the DiagnosticReport resource to reference 0..* Observation: that way multiple Observation are referenced in the root of the report. These will cater to reports that give back 0..* results without any complex structure between the results. These Observation resource might however leverage more complex structures by also following the strategy described in the following options.</li>
+<li>The Observation itself may include 0..* .component elements. A component element within an Observation is a list of key/value pairs with optionally for each key/value pair a data absent reason and/or an interpretation code and/or a referenceRange. Such a list of key/value pairs is considered to be part of one Observation. A typical example is to include systolic and diastolic component observations for blood pressure measurement. "Components should only be used when there is only one method, one observation, one performer, one device, and one time."</li>
+<li>The Observation may be part of a group of Observation resources. This is established by using the .hasMember in the Observation. Typically, this is used for a panel or battery where the panel code is given without a value in the parent Observation and the actual results are seperate Observation resources referenced from that parent Observation</li>
+</ol>
+<p>To summarize, including 0..* Observation in a report always happen by using the first method. These Observation resources might be (relatively) simple or have a complex structure.<p>
+
+
+
 <h4>Important time elements</h4>
 <p>This chapter gives a quick overview of where to find the most important time elements in a laboratory report.</p>
 
