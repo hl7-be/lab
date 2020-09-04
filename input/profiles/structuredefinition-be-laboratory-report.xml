@@ -44,10 +44,50 @@
     </element>
     <element id="DiagnosticReport.language">
       <path value="DiagnosticReport.language" />
+      <definition value="The base language in which the resource is written. This is typically en, de, fr-BE or nl-BE in the Belgian context." />
       <min value="1" />
+      <binding>
+        <strength value="required" />
+      </binding>
     </element>
     <element id="DiagnosticReport.text">
       <path value="DiagnosticReport.text" />
+      <min value="1" />
+    </element>
+    <element id="DiagnosticReport.identifier">
+      <path value="DiagnosticReport.identifier" />
+      <min value="1" />
+    </element>
+    <element id="DiagnosticReport.identifier.system">
+      <path value="DiagnosticReport.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="DiagnosticReport.identifier.value">
+      <path value="DiagnosticReport.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="DiagnosticReport.category">
+      <path value="DiagnosticReport.category" />
+      <short value="The subject of this specialty, expressed in a LOINC code." />
+      <definition value="The subject of this specialty, expressed in a LOINC code.&#xD;&#xA;Use the LOINC code for ‘LABORATORY STUDIES’ (26436-6) if this report contains multiple laboratory specialties.&#xD;&#xA;&#xD;&#xA;The choice of what observations to categorize under what specialty are left ultimately to the discretion of the laboratory sending the results. Some non-restrictive guidelines:&#xD;&#xA;*18721-1 (THERAPEUTIC DRUG MONITORING STUDIES) will be used for a section carrying pharmacologyobservations on a patient.&#xD;&#xA;*Mycology and parasitology, as well as bacteriology, are part of the 18725-2 (MICROBIOLOGY STUDIES) specialty.&#xD;&#xA;*665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18727-8 (SEROLOGY STUDIES)or split between both specialties, depending upon the Content Creator Actor’s choice" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="DiagnosticReport.category.coding">
+      <path value="DiagnosticReport.category.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="DiagnosticReport.category.coding.system">
+      <path value="DiagnosticReport.category.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="DiagnosticReport.category.coding.code">
+      <path value="DiagnosticReport.category.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="DiagnosticReport.category.coding.display">
+      <path value="DiagnosticReport.category.coding.display" />
       <min value="1" />
     </element>
     <element id="DiagnosticReport.subject">
