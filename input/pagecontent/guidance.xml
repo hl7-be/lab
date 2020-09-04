@@ -9,6 +9,10 @@ The text here does not aim to explain the HL7 FHIR standard as such nor does thi
   <h4>The federal IG</h4>
 <p>This guide uses the artefacts and guidance as they are defined in <a href="https://www.ehealth.fgov.be/standards/kmehr/en/page/fhir-profiles">the official federal IG as published by eHealth Platform</a>. Implementers SHALL take note of the guidelines defined in that IG. Please take note when you are technically validating against the IG described on this page you also need that IG for the base federal profiles.</p>
 
+<h4>Technical implementation of the specification published here</h4>
+<p>As per the FHIR standard specifications, there are multiple ways in how the report can be exchanged or requested.</p>
+<p>A POC phase for this project will normally investigate a few possibilities. It is however expected the laboratory will probably be (also)exchanged under some form of FHIR Bundle in which the different used resources are fully available as seperate entries.</p>
+
 <h3>Conventions</h3>
 
 <h4>Note on values and decimal mark</h4>
