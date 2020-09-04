@@ -68,10 +68,16 @@
     </element>
     <element id="DiagnosticReport.category">
       <path value="DiagnosticReport.category" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="coding.code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <short value="The subject of this specialty, expressed in a LOINC code." />
-      <definition value="The subject of this specialty, expressed in a LOINC code.&#xD;&#xA;Use the LOINC code for ‘LABORATORY STUDIES’ (26436-6) if this report contains multiple laboratory specialties.&#xD;&#xA;&#xD;&#xA;The choice of what observations to categorize under what specialty are left ultimately to the discretion of the laboratory sending the results. Some non-restrictive guidelines:&#xD;&#xA;*18721-1 (THERAPEUTIC DRUG MONITORING STUDIES) will be used for a section carrying pharmacologyobservations on a patient.&#xD;&#xA;*Mycology and parasitology, as well as bacteriology, are part of the 18725-2 (MICROBIOLOGY STUDIES) specialty.&#xD;&#xA;*665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18727-8 (SEROLOGY STUDIES)or split between both specialties, depending upon the Content Creator Actor’s choice" />
+      <definition value="The subject of this specialty, expressed in a LOINC code.&#xD;&#xA;&#xD;&#xA;The choice of what observations to categorize under what specialty are left ultimately to the discretion of the laboratory sending the results. Some non-restrictive guidelines:&#xD;&#xA;*18721-1 (THERAPEUTIC DRUG MONITORING STUDIES) will be used for a section carrying pharmacologyobservations on a patient.&#xD;&#xA;*Mycology and parasitology, as well as bacteriology, are part of the 18725-2 (MICROBIOLOGY STUDIES) specialty.&#xD;&#xA;*665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18727-8 (SEROLOGY STUDIES)or split between both specialties, depending upon the Content Creator Actor’s choice" />
       <min value="1" />
-      <max value="1" />
     </element>
     <element id="DiagnosticReport.category.coding">
       <path value="DiagnosticReport.category.coding" />
@@ -89,6 +95,32 @@
     <element id="DiagnosticReport.category.coding.display">
       <path value="DiagnosticReport.category.coding.display" />
       <min value="1" />
+    </element>
+    <element id="DiagnosticReport.category:LABSTUDIES">
+      <path value="DiagnosticReport.category" />
+      <sliceName value="LABSTUDIES" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="DiagnosticReport.category:LABSTUDIES.coding">
+      <path value="DiagnosticReport.category.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="DiagnosticReport.category:LABSTUDIES.coding.system">
+      <path value="DiagnosticReport.category.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://terminology.hl7.org/CodeSystem/v2-0074" />
+    </element>
+    <element id="DiagnosticReport.category:LABSTUDIES.coding.code">
+      <path value="DiagnosticReport.category.coding.code" />
+      <min value="1" />
+      <fixedCode value="LAB" />
+    </element>
+    <element id="DiagnosticReport.category:LABSTUDIES.coding.display">
+      <path value="DiagnosticReport.category.coding.display" />
+      <min value="1" />
+      <fixedString value="Laboratory" />
     </element>
     <element id="DiagnosticReport.subject">
       <path value="DiagnosticReport.subject" />
