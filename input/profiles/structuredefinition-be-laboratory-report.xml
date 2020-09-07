@@ -34,6 +34,29 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/DiagnosticReport" />
   <derivation value="constraint" />
   <differential>
+    <element id="DiagnosticReport.extension">
+      <path value="DiagnosticReport.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="DiagnosticReport.extension:Replaces">
+      <path value="DiagnosticReport.extension" />
+      <sliceName value="Replaces" />
+      <short value="The report replaces the target resource." />
+      <definition value="The report replaces the target resource. For example, when a final anatomic pathology report replaces a preliminary anatomic pathology report replaces where the subsequent observation of case and report may be on more or different material (specimen). Note that this is not same concept asDiagnosticReport.status = preliminary of final, but industry definition of preliminary and final." />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/diagnosticReport-replaces" />
+      </type>
+      <mustSupport value="true" />
+    </element>
     <element id="DiagnosticReport.meta">
       <path value="DiagnosticReport.meta" />
       <min value="1" />
@@ -42,7 +65,7 @@
     <element id="DiagnosticReport.meta.profile">
       <path value="DiagnosticReport.meta.profile" />
       <min value="1" />
-      <mustSupport value="true" />
+      <mustSupport value="false" />
     </element>
     <element id="DiagnosticReport.language">
       <path value="DiagnosticReport.language" />
@@ -66,10 +89,12 @@
     <element id="DiagnosticReport.identifier.system">
       <path value="DiagnosticReport.identifier.system" />
       <min value="1" />
+      <mustSupport value="false" />
     </element>
     <element id="DiagnosticReport.identifier.value">
       <path value="DiagnosticReport.identifier.value" />
       <min value="1" />
+      <mustSupport value="false" />
     </element>
     <element id="DiagnosticReport.basedOn">
       <path value="DiagnosticReport.basedOn" />
@@ -85,6 +110,8 @@
     </element>
     <element id="DiagnosticReport.status">
       <path value="DiagnosticReport.status" />
+      <short value="Status of the report: consult the HL7 list of permitted values" />
+      <definition value="The status of the diagnostic report. Consult the HL7 list of allowed values here. Note when a report should actually replace a previous one, use the Replaces extension." />
       <mustSupport value="true" />
     </element>
     <element id="DiagnosticReport.category">
@@ -105,6 +132,7 @@
       <path value="DiagnosticReport.category.coding" />
       <min value="1" />
       <max value="1" />
+      <mustSupport value="false" />
     </element>
     <element id="DiagnosticReport.category.coding.system">
       <path value="DiagnosticReport.category.coding.system" />
@@ -123,27 +151,31 @@
       <sliceName value="LABSTUDIES" />
       <min value="1" />
       <max value="1" />
-      <mustSupport value="true" />
+      <mustSupport value="false" />
     </element>
     <element id="DiagnosticReport.category:LABSTUDIES.coding">
       <path value="DiagnosticReport.category.coding" />
       <min value="1" />
       <max value="1" />
+      <mustSupport value="false" />
     </element>
     <element id="DiagnosticReport.category:LABSTUDIES.coding.system">
       <path value="DiagnosticReport.category.coding.system" />
       <min value="1" />
       <fixedUri value="http://terminology.hl7.org/CodeSystem/v2-0074" />
+      <mustSupport value="false" />
     </element>
     <element id="DiagnosticReport.category:LABSTUDIES.coding.code">
       <path value="DiagnosticReport.category.coding.code" />
       <min value="1" />
       <fixedCode value="LAB" />
+      <mustSupport value="false" />
     </element>
     <element id="DiagnosticReport.category:LABSTUDIES.coding.display">
       <path value="DiagnosticReport.category.coding.display" />
       <min value="1" />
       <fixedString value="Laboratory" />
+      <mustSupport value="false" />
     </element>
     <element id="DiagnosticReport.code">
       <path value="DiagnosticReport.code" />
@@ -161,6 +193,11 @@
       </type>
       <mustSupport value="true" />
     </element>
+    <element id="DiagnosticReport.effective[x]">
+      <path value="DiagnosticReport.effective[x]" />
+      <short value="Time of the specimen collection - is overruled when collection time is given in .specimen element." />
+      <definition value="The time or time-period the observed values are related to. This is the time specimen collection(s)" />
+    </element>
     <element id="DiagnosticReport.issued">
       <path value="DiagnosticReport.issued" />
       <min value="1" />
@@ -168,6 +205,8 @@
     </element>
     <element id="DiagnosticReport.performer">
       <path value="DiagnosticReport.performer" />
+      <short value="Entity that takes responsibility for the clinical report." />
+      <definition value="The diagnostic service that is responsible for issuing the report.&#xD;&#xA;Note the Observation MAY have a different performer." />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/CareTeam" />
@@ -175,6 +214,7 @@
         <targetProfile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-practitionerrole" />
         <targetProfile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-organization" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="DiagnosticReport.resultsInterpreter">
       <path value="DiagnosticReport.resultsInterpreter" />
