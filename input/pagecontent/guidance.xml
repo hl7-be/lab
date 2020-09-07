@@ -49,14 +49,14 @@ The text here does not aim to explain the HL7 FHIR standard as such nor does thi
 <li>The Observation may be part of a group of Observation resources. This is established by using the .hasMember in the Observation. Typically, this is used for a panel or battery where the panel code is given without a value in the parent Observation and the actual results are seperate Observation resources referenced from that parent Observation</li>
 </ol>
 <p>To summarize, including 0..* Observation in a report always happen by using the first method. These Observation resources might be (relatively) simple or have a complex structure.</p>
-
-
-
+<h4>Using subtitles</h4>
+<p>An important requirement is the ability to use subtitles in the structure of the laboratory report.</p>
+<p>This can be done in the report by leveraging the third way to use observations grouping supra. When doing this with the goal of only adding a subtitle, the CodeableConcept datatype of the .code element in the parent Observation will minimally contain the .text element.</p>
 <h4>Important time elements</h4>
 <p>This chapter gives a quick overview of where to find the most important time elements in a laboratory report.</p>
 
 <h5>Time of the prescription</h5>
-<p>The time of the prescription lives in the original ServiceRequest resource that can be referenced in the DiagnosticReport.basedOn element. The time of the prescription lives in the ServiceRequest.authoredOn element.</p>
+<p>The time of the prescription lives in the original ServiceRequest resource that is referenced in the DiagnosticReport.basedOn element. The time of the prescription lives in the ServiceRequest.authoredOn element.</p>
 <h5>Time of the specimen collection</h5>
 <p>This is part of the Specimen resource that is referenced from within the diagnostic report. The Specimen.collection.collected element gives the dateTime or period of the collection.</p>
 <h5>Time of the specimen reception</h5>
@@ -79,8 +79,6 @@ The text here does not aim to explain the HL7 FHIR standard as such nor does thi
 <p>As per the FHIR standard specifications, there are multiple ways in how the report can be exchanged or requested.</p>
 <p>A POC phase for this project will normally investigate a few possibilities. It is however expected the laboratory will probably be (also)exchanged under some form of FHIR Bundle in which the different used resources are fully available as seperate entries.</p>
 <p>If an implementation makes the choice to deliver the report under the form of a 'FHIR document', <a href="https://www.hl7.org/fhir/documents.html#content">the extra Composition resource that is needed in a FHIR document</a> SHALL be considered as it contains many mandatory elements such as general author of the document and the date of the document.</p>
-<p>Specifically, when leveraging the FHIR document structure, it SHALL be considered the document as a whole has an .identifier and a .status. Although the Composition resource in the document structure provides for the creation of extra 'sections' in a document, these SHALL NOT be leveraged in the laboratory report: the laboratory report SHALL contain its entire structure in one DiagnosticReport resource.</p>
-
-
-
+<p>Specifically, when leveraging the FHIR document structure, it SHALL be considered the document as a whole has an .identifier and a .status.</p>
+<p>The Composition resource in the document structure provides for the creation of extra 'sections' in a document, this is something that is not available in the same way in the base diagnosticReport resource and implementers SHALL exercise caution when using this in the context of laboratory reporting.</p>
 </div>
