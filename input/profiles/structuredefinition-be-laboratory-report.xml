@@ -37,15 +37,18 @@
     <element id="DiagnosticReport.meta">
       <path value="DiagnosticReport.meta" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="DiagnosticReport.meta.profile">
       <path value="DiagnosticReport.meta.profile" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="DiagnosticReport.language">
       <path value="DiagnosticReport.language" />
       <definition value="The base language in which the resource is written. This is typically en, de, fr-BE or nl-BE in the Belgian context." />
       <min value="1" />
+      <mustSupport value="true" />
       <binding>
         <strength value="required" />
       </binding>
@@ -53,10 +56,12 @@
     <element id="DiagnosticReport.text">
       <path value="DiagnosticReport.text" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="DiagnosticReport.identifier">
       <path value="DiagnosticReport.identifier" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="DiagnosticReport.identifier.system">
       <path value="DiagnosticReport.identifier.system" />
@@ -65,6 +70,22 @@
     <element id="DiagnosticReport.identifier.value">
       <path value="DiagnosticReport.identifier.value" />
       <min value="1" />
+    </element>
+    <element id="DiagnosticReport.basedOn">
+      <path value="DiagnosticReport.basedOn" />
+      <short value="A reference to a ServiceRequest SHALL be given here that minimally includes the time of prescription." />
+      <definition value="Details concerning the prescription this laboratory report fullfills. A reference to a ServiceRequest SHALL be given here that includes the time of prescription in its .authoredOn element." />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ServiceRequest" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="DiagnosticReport.status">
+      <path value="DiagnosticReport.status" />
+      <mustSupport value="true" />
     </element>
     <element id="DiagnosticReport.category">
       <path value="DiagnosticReport.category" />
@@ -78,6 +99,7 @@
       <short value="The subject of this specialty, expressed in a LOINC code." />
       <definition value="The subject of this specialty, expressed in a LOINC code.&#xD;&#xA;&#xD;&#xA;The choice of what observations to categorize under what specialty are left ultimately to the discretion of the laboratory sending the results. Some non-restrictive guidelines:&#xD;&#xA;*18721-1 (THERAPEUTIC DRUG MONITORING STUDIES) will be used for a section carrying pharmacologyobservations on a patient.&#xD;&#xA;*Mycology and parasitology, as well as bacteriology, are part of the 18725-2 (MICROBIOLOGY STUDIES) specialty.&#xD;&#xA;*665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18727-8 (SEROLOGY STUDIES)or split between both specialties, depending upon the Content Creator Actor’s choice" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="DiagnosticReport.category.coding">
       <path value="DiagnosticReport.category.coding" />
@@ -101,6 +123,7 @@
       <sliceName value="LABSTUDIES" />
       <min value="1" />
       <max value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="DiagnosticReport.category:LABSTUDIES.coding">
       <path value="DiagnosticReport.category.coding" />
@@ -122,8 +145,13 @@
       <min value="1" />
       <fixedString value="Laboratory" />
     </element>
+    <element id="DiagnosticReport.code">
+      <path value="DiagnosticReport.code" />
+      <mustSupport value="true" />
+    </element>
     <element id="DiagnosticReport.subject">
       <path value="DiagnosticReport.subject" />
+      <min value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
@@ -131,6 +159,12 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Location" />
         <targetProfile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-patient" />
       </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="DiagnosticReport.issued">
+      <path value="DiagnosticReport.issued" />
+      <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="DiagnosticReport.performer">
       <path value="DiagnosticReport.performer" />
@@ -152,12 +186,33 @@
         <targetProfile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-organization" />
       </type>
     </element>
+    <element id="DiagnosticReport.specimen">
+      <path value="DiagnosticReport.specimen" />
+      <mustSupport value="true" />
+    </element>
     <element id="DiagnosticReport.result">
       <path value="DiagnosticReport.result" />
       <type>
         <code value="Reference" />
         <targetProfile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation" />
       </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="DiagnosticReport.media">
+      <path value="DiagnosticReport.media" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DiagnosticReport.conclusion">
+      <path value="DiagnosticReport.conclusion" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DiagnosticReport.conclusionCode">
+      <path value="DiagnosticReport.conclusionCode" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DiagnosticReport.presentedForm">
+      <path value="DiagnosticReport.presentedForm" />
+      <mustSupport value="true" />
     </element>
   </differential>
 </StructureDefinition>
