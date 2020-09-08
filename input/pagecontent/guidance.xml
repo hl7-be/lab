@@ -16,9 +16,9 @@ The text here does not aim to explain the HL7 FHIR standard as such nor does thi
 <p>The HL7 FHIR message is considered to be UTF-8. It is RECOMMENDED to declare the use of UTF-8 at the top when sending FHIR as XML.</p>
 
 
-<h3>The structure of report</h3>
+<h3>The high level structure of the report</h3>
 <p>The content of the report is described in detail in the profile. This chapter highlights some general attention points in the structure. </p>
-<p>The profile defines cardinalities, preferred codesystems etc. It is equally important to take note of the different descriptions explaining the elements in the profile. These descriptions contain information that would otherwise by typically found in a cookbook explaining a technical structure element by element.</p>
+<p>The profile defines cardinalities, preferred codesystems etc. As usual in the FHIR standard, it is equally important to take note of the different descriptions explaining the elements in the profile. These descriptions contain information that would otherwise by typically found in a cookbook explaining a technical structure element by element.</p>
 
 
 <h4>Main FHIR resource of the report: the DiagnosticReport</h4>
