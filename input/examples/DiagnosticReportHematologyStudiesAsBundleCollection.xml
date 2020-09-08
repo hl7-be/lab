@@ -18,6 +18,7 @@
 					<status value="generated"/>
 					<div xmlns="http://www.w3.org/1999/xhtml">
 						<p>This example is presented as a Collection bundle for ease of understanding. It makes no assumption towards any final implementation of using FHIR technically. Open this as XML to view XML annotations.</p>
+									<p>ALL LOINC, SNOMED-CT CODES ETC. ARE USED FOR ILLUSTRATIVE PURPOSES AND DO NOT NECESSARILY PRESENT A REAL LIFE LABORATORY REPORT</p>
 						<h2>A narrative SHALL be included</h2>
 						<p>Specifically, the strong recommendation of HL7 concerning the use of the narrative "to support human-consumption as a fallback" is important in the context of the laboratory report. Indeed, this "human-consumption" aspect actually concerns the inclusion of limited xhtml content and as such an effortless implementation to visualize the content of the report by consuming systems is guarantueed. Also, for systems that might not initially choose to consume reports in a structured way, this guarantuees a way to at least visualize and present the content to the user.</p>
 						<table class="grid">
@@ -87,9 +88,10 @@
 		</resource>
 	</entry>
 	<entry>
-		<fullUrl value="https://example.com/base/DiagnosticReport/1"/>
+		<fullUrl value="https://example.com/base/Specimen/1"/>
 		<resource>
 			<Specimen xmlns="http://hl7.org/fhir">
+				<!--the other resources use the id to refer to this specimen -->
 				<id value="specimen1"/>
 				<text>
 					<status value="generated"/>
@@ -122,10 +124,13 @@
 					</div>
 				</text>
 				<identifier>
+					<!--unique business identifier of the specimen SHOULD BE included if available-->
+					<system value="https://www.GTL-LABO.be/"/>
 					<value value="1"/>
 				</identifier>
 				<type>
 					<coding>
+						<!-- The actual specimen, described using a coding system. Here, the coding system SNOMED-CT is used for this -->
 						<system value="http://snomed.info/sct"/>
 						<code value="119297000"/>
 						<display value="Blood specimen"/>
@@ -133,7 +138,24 @@
 				</type>
 				<receivedTime value="2015-11-04"/>
 				<collection>
+					<!-- The date/time when the specimen was collected SHOULD be included if available -->
 					<collectedDateTime value="2015-11-03"/>
+					<method>
+						<!--OPTIONAL provide the method of collection-->
+						<coding>
+							<system value="http://snomed.info/sct"/>
+							<code value="28520004"/>
+							<display value="Venipuncture for blood test (procedure)"/>
+						</coding>
+					</method>
+					<bodySite>
+						<!--OPTIONAL provide the bodySite-->
+						<coding>
+							<system value="http://snomed.info/sct"/>
+							<code value="368208006"/>
+							<display value="Left upper arm structure (body structure)"/>
+						</coding>
+					</bodySite>
 				</collection>
 			</Specimen>
 		</resource>
