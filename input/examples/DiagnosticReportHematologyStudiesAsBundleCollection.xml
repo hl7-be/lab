@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///H:/OLD_DESKTOP/Desktop/LATEST%20AND%20GREATEST/FHIR4/bundle.xsd">
+	<id value="f001"/>
+	<type value="collection"/>
+	<entry>
+		<fullUrl value="https://example.com/base/DiagnosticReport/1"/>
+		<resource>
+			<DiagnosticReport xmlns="http://hl7.org/fhir">
+				<id value="diagnosticreport1"/>
+				<meta>
+					<!-- the be-report SHALL claim conformance to the be-profile -->
+					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report"/>
+				</meta>
+				<!-- the be-report SHALL have 1 language -->
+				<language value="en"/>
+				<text>
+					<!-- the be-report SHALL have 1 text -->
+					<status value="generated"/>
+					<div xmlns="http://www.w3.org/1999/xhtml">
+						<p>This example is presented as a Collection bundle for ease of understanding. It makes no assumption towards any final implementation of using FHIR technically. Open this as XML to view XML annotations.</p>
+						<h2>A narrative SHALL be included</h2>
+						<p>Specifically, the strong recommendation of HL7 concerning the use of the narrative "to support human-consumption as a fallback" is important in the context of the laboratory report. Indeed, this "human-consumption" aspect actually concerns the inclusion of limited xhtml content and as such an effortless implementation to visualize the content of the report by consuming systems is guarantueed. Also, for systems that might not initially choose to consume reports in a structured way, this guarantuees a way to at least visualize and present the content to the user.</p>
+						<table class="grid">
+							<tr>
+								<td>Here, a </td>
+								<td>
+									<b>Report Details</b>
+									<br/>Identifier: to do<br/> to do</td>
+							</tr>
+						</table>
+						<table class="none">
+							<tr>
+								<td>to do</td>
+								<td>to do</td>
+								<td>to do</td>
+								<td>to do</td>
+								<td>to do</td>
+								<td>to do</td>
+							</tr>
+						</table>
+						<p>
+							<b>Coded Diagnoses :</b>
+						</p>
+					</div>
+				</text>
+				<identifier>
+					<system value="http://acme.com/lab/reports"/>
+					<value value="11530231003.2015110413180000000"/>
+				</identifier>
+				<basedOn>
+					<reference value="ServiceRequest/servicerequest1"/>
+				</basedOn>
+				<status value="final"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/v2-0074"/>
+						<code value="LAB"/>
+						<display value="laboratory"/>
+					</coding>
+				</category>
+				<!-- If needed, extra categories can be added to further categorize the report -->
+				<code>
+					<!-- One code in  -->
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="18723-7"/>
+						<display value="Hematology studies (set)"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/patient1"/>
+				</subject>
+				<effectiveDateTime value="2015-11-04T13:18:00+01:00"/>
+				<performer>
+					<reference value="Organization/organization1"/>
+				</performer>
+				<resultsInterpreter>
+					<reference value="Organization/organization1"/>
+				</resultsInterpreter>
+				<specimen>
+					<reference value="Specimen/specimen1"/>
+				</specimen>
+				<result>
+					<reference value="Observation/observation2"/>
+				</result>
+			</DiagnosticReport>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="https://example.com/base/DiagnosticReport/1"/>
+		<resource>
+			<Specimen xmlns="http://hl7.org/fhir">
+				<id value="specimen1"/>
+				<text>
+					<status value="generated"/>
+					<div xmlns="http://www.w3.org/1999/xhtml">
+						<p>
+							<b>Generated Narrative</b>
+						</p>
+						<p>
+							<b>id</b>: specimen1</p>
+						<p>
+							<b>identifier</b>: 1</p>
+						<p>
+							<b>type</b>: <span title="Codes: {http://snomed.info/sct 119297000}">Blood specimen</span>
+						</p>
+						<p>
+							<b>receivedTime</b>: 2015-11-04</p>
+						<h3>Collections</h3>
+						<table class="grid">
+							<tr>
+								<td>-</td>
+								<td>
+									<b>Collected[x]</b>
+								</td>
+							</tr>
+							<tr>
+								<td>*</td>
+								<td>2015-11-03</td>
+							</tr>
+						</table>
+					</div>
+				</text>
+				<identifier>
+					<value value="1"/>
+				</identifier>
+				<type>
+					<coding>
+						<system value="http://snomed.info/sct"/>
+						<code value="119297000"/>
+						<display value="Blood specimen"/>
+					</coding>
+				</type>
+				<receivedTime value="2015-11-04"/>
+				<collection>
+					<collectedDateTime value="2015-11-03"/>
+				</collection>
+			</Specimen>
+		</resource>
+	</entry>
+</Bundle>
