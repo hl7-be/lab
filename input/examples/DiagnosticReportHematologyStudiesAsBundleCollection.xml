@@ -21,27 +21,78 @@
 						<p>ALL LOINC, SNOMED-CT CODES ETC. ARE USED FOR ILLUSTRATIVE PURPOSES AND DO NOT NECESSARILY PRESENT A REAL LIFE LABORATORY REPORT</p>
 						<h2>A narrative SHALL be included</h2>
 						<p>Specifically, the strong recommendation of HL7 concerning the use of the narrative "to support human-consumption as a fallback" is important in the context of the laboratory report. Indeed, this "human-consumption" aspect actually concerns the inclusion of limited xhtml content and as such an effortless implementation to visualize the content of the report by consuming systems is guarantueed. Also, for systems that might not initially choose to consume reports in a structured way, this guarantuees a way to at least visualize and present the content to the user.</p>
-						<table class="grid">
+			<p>Here follow just some example structures of what shape a narrative might take</p>
+						<table class="none">
 							<tr>
-								<td>Here, a </td>
-								<td>
-									<b>Report Details</b>
-									<br/>Identifier: to do<br/> to do</td>
+								<td>Report specialty:</td>
+								<td>HEMATOLOGY STUDIES - Laboratory Hematology results</td>
+							</tr>
+							<tr>
+								<td>Specimen</td>
+								<td>Blood</td>
+							</tr>
+							<tr>
+								<td>Specimen collection:	</td>
+								<td>3 November, 2015</td>
+							</tr>
+							<tr>
+								<td>Specimen received:</td>
+								<td>4 November, 2015	</td>
 							</tr>
 						</table>
 						<table class="none">
 							<tr>
-								<td>to do</td>
-								<td>to do</td>
-								<td>to do</td>
-								<td>to do</td>
-								<td>to do</td>
-								<td>to do</td>
+								<td>-</td>
+							</tr>
+							<tr>
+								<td>
+									<b>Hemoglobin/Hematocrit</b>
+								</td>
+							</tr>
+							<tr>
+								<td/>
+								<td>value</td>
+								<td>unit</td>
+								<td>----------</td>
+								<td>Reference range</td>
+								<td>----------</td>
+							</tr>
+							<tr>
+								<td>Erythrocyte sedimentation rate</td>
+								<td>2</td>
+								<td>mm/h</td>
+								<td>|</td>
+								<td>0 -30</td>
+								<td>mm/h</td>
+							</tr>
+							<tr>
+								<td>-</td>
+							</tr>
+							<tr>
+								<td>SCREENING</td>
+								<td/>
+								<td/>
+								<td>|</td>
+								<td/>
+								<td/>
+							</tr>
+							<tr>
+								<td>Red blood cells (blood)</td>
+								<td>4.35</td>
+								<td>10*6/uL</td>
+								<td>|</td>
+								<td>3.93-5.01</td>
+								<td>10*6/uL</td>
+							</tr>
+							<tr>
+								<td>Hemoglobin</td>
+								<td>14.1</td>
+								<td>g/dL</td>
+								<td>|</td>
+								<td>11.8-14.8</td>
+								<td>g/dL</td>
 							</tr>
 						</table>
-						<p>
-							<b>Coded Diagnoses :</b>
-						</p>
 					</div>
 				</text>
 				<identifier>
@@ -86,7 +137,7 @@
 					<!--Here follow the 1..* result that make up this report-->
 					<reference value="Observation/observation10"/>
 				</result>
-					<result>
+				<result>
 					<reference value="Observation/observation11"/>
 				</result>
 			</DiagnosticReport>
@@ -346,7 +397,6 @@
 			</Observation>
 		</resource>
 	</entry>
-
 	<entry>
 		<fullUrl value="https://example.com/base/Observation/111"/>
 		<resource>
@@ -418,8 +468,6 @@
 			</Observation>
 		</resource>
 	</entry>
-
-
 	<entry>
 		<fullUrl value="https://example.com/base/Observation/112"/>
 		<resource>
@@ -491,12 +539,4 @@
 			</Observation>
 		</resource>
 	</entry>
-
-
-
-
-	
-	
-	
-	
 </Bundle>

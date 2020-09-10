@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="be-laboratory-report" />
   <text>
@@ -819,6 +818,21 @@
         <targetProfile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report" />
       </type>
     </element>
+    <element id="DiagnosticReport.meta">
+      <path value="DiagnosticReport.meta" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DiagnosticReport.language">
+      <path value="DiagnosticReport.language" />
+      <definition value="The base language in which the resource is written. The base language in which the resource is written, typically this will be fr-BE, nl-BE, en or de. It is RECOMMENDED to only declare the language here." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DiagnosticReport.text">
+      <path value="DiagnosticReport.text" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
     <element id="DiagnosticReport.identifier">
       <path value="DiagnosticReport.identifier" />
       <min value="1" />
@@ -924,10 +938,10 @@
       <min value="1" />
       <type>
         <code value="Reference" />
+        <targetProfile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-patient" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Location" />
-        <targetProfile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-patient" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -945,25 +959,26 @@
     <element id="DiagnosticReport.performer">
       <path value="DiagnosticReport.performer" />
       <short value="Entity that takes responsibility for the clinical report." />
-      <definition value="The diagnostic service that is responsible for issuing the report.&#xD;&#xA;Note the Observation MAY have a different performer." />
+      <definition value="The diagnostic service that is responsible for issuing the report. In the laboratory report, this is typically an organization (i.e. the laboratory)&#xD;&#xA;Note the Observation MAY have a different performer." />
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CareTeam" />
-        <targetProfile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-practitioner" />
-        <targetProfile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-practitionerrole" />
         <targetProfile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-organization" />
+        <targetProfile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CareTeam" />
+        <targetProfile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-practitionerrole" />
       </type>
       <mustSupport value="true" />
     </element>
     <element id="DiagnosticReport.resultsInterpreter">
       <path value="DiagnosticReport.resultsInterpreter" />
+      <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CareTeam" />
         <targetProfile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-practitioner" />
         <targetProfile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-practitionerrole" />
         <targetProfile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-organization" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CareTeam" />
       </type>
       <mustSupport value="true" />
     </element>
