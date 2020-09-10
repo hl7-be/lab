@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="be-laboratory-report" />
   <text>
@@ -818,21 +819,6 @@
         <targetProfile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report" />
       </type>
     </element>
-    <element id="DiagnosticReport.meta">
-      <path value="DiagnosticReport.meta" />
-      <mustSupport value="true" />
-    </element>
-    <element id="DiagnosticReport.language">
-      <path value="DiagnosticReport.language" />
-      <definition value="The base language in which the resource is written. The base language in which the resource is written, typically this will be fr-BE, nl-BE, en or de. It is RECOMMENDED to only declare the language here." />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="DiagnosticReport.text">
-      <path value="DiagnosticReport.text" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
     <element id="DiagnosticReport.identifier">
       <path value="DiagnosticReport.identifier" />
       <min value="1" />
@@ -851,7 +837,7 @@
     <element id="DiagnosticReport.basedOn">
       <path value="DiagnosticReport.basedOn" />
       <short value="A reference to a ServiceRequest SHALL be given here that minimally includes the time of prescription." />
-      <definition value="Details concerning the prescription this laboratory report fullfills. A reference to a ServiceRequest SHALL be given here that includes the time of prescription in its .authoredOn element." />
+      <definition value="Details concerning the prescription this laboratory report fullfills. A reference to a ServiceRequest SHALL be given here that includes the time of prescription in its .authoredOn element. It is RECOMMENDED to also use the .identifier element of the ServiceRequest to refer to the original order number. Note, within the Observation resource it is possible to define they were defined on a different serviceRequest (e.g. to clarify it was a sub ordering)" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -1008,6 +994,21 @@
     </element>
     <element id="DiagnosticReport.presentedForm">
       <path value="DiagnosticReport.presentedForm" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DiagnosticReport.meta">
+      <path value="DiagnosticReport.meta" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DiagnosticReport.language">
+      <path value="DiagnosticReport.language" />
+      <definition value="The base language in which the resource is written. The base language in which the resource is written, typically this will be fr-BE, nl-BE, en or de. It is RECOMMENDED to only declare the language here." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DiagnosticReport.text">
+      <path value="DiagnosticReport.text" />
+      <min value="1" />
       <mustSupport value="true" />
     </element>
   </differential>

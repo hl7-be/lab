@@ -855,6 +855,10 @@
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-servicerequest"/>
 				</meta>
+				<identifier>
+<system value="TheOrderingSystem"/>
+<value value="12334546"/>				
+				</identifier>
 				<status value="active"/>
 				<intent value="order"/>
 				<category>
