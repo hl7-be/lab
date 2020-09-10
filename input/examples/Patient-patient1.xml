@@ -1,155 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <Patient xmlns="http://hl7.org/fhir">
-  <id value="patient1"/>
-  <meta>
-    <profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-patient"/>
-  </meta>
-  <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>id</b>: patient1</p><p><b>meta</b>: </p><p><b>identifier</b>: 79121137740 (OFFICIAL), Social Beneficiary Identifier = 79121137740 (OFFICIAL), Medical record number = 45XXP0PA-4 (USUAL)</p><p><b>active</b>: true</p><p><b>name</b>: Josephine Nessa La Paradisio </p><p><b>telecom</b>: nessa.laparadisio@belgium.be, ph: +322476792979(MOBILE), ph: +3226718655(HOME), ph: +322476799(WORK)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1979-12-11</p><p><b>address</b>: </p><ul><li>Sloordelle 42, 1160 Oudergem(HOME)</li><li>42, Allee des Colzas, 1160 Auderghem(HOME)</li></ul><p><b>maritalStatus</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/v3-MaritalStatus D}, {https://www.ehealth.fgov.be/standards/fhir/CodeSystem/cd-civilstate 41}">Divorced</span></p><h3>Contacts</h3><table class="grid"><tr><td>-</td><td><b>Relationship</b></td><td><b>Name</b></td><td><b>Telecom</b></td></tr><tr><td>*</td><td><span title="Codes: {http://terminology.hl7.org/CodeSystem/v2-0131 N}, {https://www.ehealth.fgov.be/standards/fhir/CodeSystem/cd-contact-person mother}">Next-of-Kin</span></td><td>Leia Vogels </td><td>ph: +31201234567(MOBILE)</td></tr></table><p><b>generalPractitioner</b>: <a href="Practitioner-practitioner1.html">Generated Summary: id: practitioner1; 79121137740 (OFFICIAL), 18749704477 (OFFICIAL); Katherine Pulaski (OFFICIAL); katherine.pulaski@enterprisehospital.be(WORK), ph: 022675198(WORK), fax: 022675209(WORK); gender: female; birthDate: 1979-12-11</a></p></div>
-  </text>
-  <extension url="http://hl7.org/fhir/StructureDefinition/patient-nationality">
-    <extension url="code">
-      <valueCodeableConcept>
-        <coding>
-          <system value="https://www.ehealth.fgov.be/standards/fhir/CodeSystem/cd-fed-country"/>
-          <code value="BE"/>
-          <display value="Belgium"/>
-        </coding>
-      </valueCodeableConcept>
-    </extension>
-    <extension url="period">
-      <valuePeriod>
-        <start value="1979-12-11"/>
-      </valuePeriod>
-    </extension>
-  </extension>
-  <extension url="http://hl7.org/fhir/StructureDefinition/patient-birthPlace">
-    <valueAddress>
-      <city value="Namen"/>
-      <country value="BE"/>
-    </valueAddress>
-  </extension>
-  <identifier>
-    <use value="official"/>
-    <system value="https://www.ehealth.fgov.be/standards/fhir/NamingSystem/ssin"/>
-    <value value="79121137740"/>
-  </identifier>
-  <identifier>
-    <use value="official"/>
-    <type>
-      <coding>
-        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
-        <code value="SB"/>
-        <display value="Social Beneficiary Identifier"/>
-      </coding>
-    </type>
-    <system value="https://www.ehealth.fgov.be/standards/fhir/NamingSystem/ssin"/>
-    <value value="79121137740"/>
-  </identifier>
-  <identifier>
-    <use value="usual"/>
-    <type>
-      <coding>
-        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
-        <code value="MR"/>
-        <display value="Medical record number"/>
-      </coding>
-    </type>
-    <system value="https://www.goodhealthhospital.be/standards/fhir/NamingSystem/patientrecord"/>
-    <value value="45XXP0PA-4"/>
-  </identifier>
-  <active value="true"/>
-  <name>
-    <family value="La Paradisio"/>
-    <given value="Josephine"/>
-    <given value="Nessa"/>
-  </name>
-  <telecom>
-    <system value="email"/>
-    <value value="nessa.laparadisio@belgium.be"/>
-  </telecom>
-  <telecom>
-    <system value="phone"/>
-    <value value="+322476792979"/>
-    <use value="mobile"/>
-  </telecom>
-  <telecom>
-    <system value="phone"/>
-    <value value="+3226718655"/>
-    <use value="home"/>
-  </telecom>
-  <telecom>
-    <system value="phone"/>
-    <value value="+322476799"/>
-    <use value="work"/>
-  </telecom>
-  <gender value="female"/>
-  <birthDate value="1979-12-11">
-    <extension url="http://hl7.org/fhir/StructureDefinition/patient-birthTime">
-      <valueDateTime value="1979-12-11T13:28:17-05:00"/>
-    </extension>
-  </birthDate>
-  <address>
-    <extension url="http://hl7.org/fhir/StructureDefinition/language">
-      <valueCode value="nl"/>
-    </extension>
-    <use value="home"/>
-    <type value="both"/>
-    <text value="Sloordelle 42, 1160 Oudergem"/>
-    <line value="Sloordelle 42"/>
-    <city value="Oudergem"/>
-    <postalCode value="1160"/>
-    <country value="BE"/>
-  </address>
-  <address>
-    <extension url="http://hl7.org/fhir/StructureDefinition/language">
-      <valueCode value="fr"/>
-    </extension>
-    <use value="home"/>
-    <type value="both"/>
-    <text value="42, Allee des Colzas, 1160 Auderghem"/>
-    <line value="42, Allee des Colzas"/>
-    <city value="Auderghem"/>
-    <postalCode value="1160"/>
-    <country value="BE"/>
-  </address>
-  <maritalStatus>
-    <coding>
-      <system value="http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"/>
-      <code value="D"/>
-      <display value="Divorced"/>
-    </coding>
-    <coding>
-      <system value="https://www.ehealth.fgov.be/standards/fhir/CodeSystem/cd-civilstate"/>
-      <code value="41"/>
-      <display value="Divorced since 1/10/1994"/>
-    </coding>
-  </maritalStatus>
-  <contact>
-    <relationship>
-      <coding>
-        <system value="http://terminology.hl7.org/CodeSystem/v2-0131"/>
-        <code value="N"/>
-        <display value="Next-of-Kin"/>
-      </coding>
-      <coding>
-        <system value="https://www.ehealth.fgov.be/standards/fhir/CodeSystem/cd-contact-person"/>
-        <code value="mother"/>
-        <display value="mother"/>
-      </coding>
-    </relationship>
-    <name>
-      <family value="Vogels"/>
-      <given value="Leia"/>
-    </name>
-    <telecom>
-      <system value="phone"/>
-      <value value="+31201234567"/>
-      <use value="mobile"/>
-    </telecom>
-  </contact>
-  <generalPractitioner>
-    <reference value="Practitioner/practitioner1"/>
-  </generalPractitioner>
+	<id value="patient1"/>
+	<meta>
+		<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-patient"/>
+	</meta>
+	<identifier>
+		<use value="official"/>
+		<system value="https://www.ehealth.fgov.be/standards/fhir/NamingSystem/ssin"/>
+		<value value="79121137740"/>
+	</identifier>
+	<active value="true"/>
+	<name>
+		<family value="La Paradisio"/>
+		<given value="Josephine"/>
+		<given value="Nessa"/>
+	</name>
+	<telecom>
+		<system value="email"/>
+		<value value="nessa.laparadisio@belgium.be"/>
+	</telecom>
+	<telecom>
+		<system value="phone"/>
+		<value value="+322476792979"/>
+		<use value="mobile"/>
+	</telecom>
+	<telecom>
+		<system value="phone"/>
+		<value value="+3226718655"/>
+		<use value="home"/>
+	</telecom>
+	<telecom>
+		<system value="phone"/>
+		<value value="+322476799"/>
+		<use value="work"/>
+	</telecom>
+	<gender value="female"/>
+	<birthDate value="1979-12-11">
+		<extension url="http://hl7.org/fhir/StructureDefinition/patient-birthTime">
+			<valueDateTime value="1979-12-11T13:28:17-05:00"/>
+		</extension>
+	</birthDate>
+	<address>
+		<use value="home"/>
+		<type value="both"/>
+		<text value="Sloordelle 42, 1160 Oudergem"/>
+		<line value="Sloordelle 42"/>
+		<city value="Oudergem"/>
+		<postalCode value="1160"/>
+		<country value="BE"/>
+	</address>
 </Patient>

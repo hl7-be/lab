@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Practitioner xmlns="http://hl7.org/fhir">
+	<id value="practitioner10"/>
+	<meta>
+		<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-practitioner"/>
+	</meta>
+	<identifier>
+		<use value="official"/>
+		<system value="https://www.ehealth.fgov.be/standards/fhir/NamingSystem/nihdi"/>
+		<value value="554488997"/>
+	</identifier>
+	<name>
+		<use value="official"/>
+		<family value="Davoust"/>
+		<given value="Nicolas"/>
+		<suffix value="MD"/>
+	</name>
+	<telecom>
+		<system value="email"/>
+		<value value="nicolas.davoust@gtl.be"/>
+		<use value="work"/>
+	</telecom>
+	<telecom>
+		<system value="phone"/>
+		<value value="022675198"/>
+		<use value="work"/>
+	</telecom>
+	<telecom>
+		<system value="fax"/>
+		<value value="022675209"/>
+		<use value="work"/>
+	</telecom>
+</Practitioner>

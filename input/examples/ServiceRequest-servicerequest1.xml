@@ -5,9 +5,6 @@
   <meta>
     <profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-servicerequest"/>
   </meta>
-  <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>id</b>: servicerequest1</p><p><b>meta</b>: </p><p><b>status</b>: active</p><p><b>intent</b>: order</p><p><b>category</b>: <span title="Codes: {http://snomed.info/sct 108252007}">Laboratory procedure</span></p><p><b>subject</b>: <a href="Patient-patient1.html">Generated Summary: id: patient1; 79121137740 (OFFICIAL), Social Beneficiary Identifier = 79121137740 (OFFICIAL), Medical record number = 45XXP0PA-4 (USUAL); active; Josephine Nessa La Paradisio ; nessa.laparadisio@belgium.be, ph: +322476792979(MOBILE), ph: +3226718655(HOME), ph: +322476799(WORK); gender: female; birthDate: 1979-12-11; <span title="Codes: {http://terminology.hl7.org/CodeSystem/v3-MaritalStatus D}, {https://www.ehealth.fgov.be/standards/fhir/CodeSystem/cd-civilstate 41}">Divorced</span></a></p><p><b>authoredOn</b>: Nov 1, 2015, 1:41:00 PM</p><p><b>requester</b>: <a href="Practitioner-practitioner1.html">Generated Summary: id: practitioner1; 79121137740 (OFFICIAL), 18749704477 (OFFICIAL); Katherine Pulaski (OFFICIAL); katherine.pulaski@enterprisehospital.be(WORK), ph: 022675198(WORK), fax: 022675209(WORK); gender: female; birthDate: 1979-12-11</a></p><p><b>specimen</b>: <a href="Specimen-specimen1.html">Generated Summary: id: specimen1; 1; <span title="Codes: {http://snomed.info/sct 119297000}">Blood specimen</span>; receivedTime: 2015-11-04</a></p></div>
-  </text>
   <status value="active"/>
   <intent value="order"/>
   <category>

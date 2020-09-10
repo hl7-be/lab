@@ -5,23 +5,23 @@
 	<entry>
 		<fullUrl value="https://example.com/base/DiagnosticReport/1"/>
 		<resource>
-			<DiagnosticReport xmlns="http://hl7.org/fhir">
+			<DiagnosticReport>
 				<id value="diagnosticreport1"/>
 				<meta>
-					<!-- the be-report SHALL claim conformance to the be-profile -->
+					<!--  the be-report SHALL claim conformance to the be-profile  -->
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report"/>
 				</meta>
-				<!-- the be-report SHALL have 1 language -->
+				<!--  the be-report SHALL have 1 language  -->
 				<language value="en"/>
 				<text>
-					<!-- the be-report SHALL have 1 text -->
+					<!--  the be-report SHALL have 1 text  -->
 					<status value="generated"/>
 					<div xmlns="http://www.w3.org/1999/xhtml">
 						<p>This example is presented as a Collection bundle for ease of understanding. It makes no assumption towards any final implementation of using FHIR technically. Open this as XML to view XML annotations.</p>
 						<p>ALL LOINC, SNOMED-CT CODES ETC. ARE USED FOR ILLUSTRATIVE PURPOSES AND DO NOT NECESSARILY PRESENT A REAL LIFE LABORATORY REPORT</p>
 						<h2>A narrative SHALL be included</h2>
-						<p>Specifically, the strong recommendation of HL7 concerning the use of the narrative "to support human-consumption as a fallback" is important in the context of the laboratory report. Indeed, this "human-consumption" aspect actually concerns the inclusion of limited xhtml content and as such an effortless implementation to visualize the content of the report by consuming systems is guarantueed. Also, for systems that might not initially choose to consume reports in a structured way, this guarantuees a way to at least visualize and present the content to the user.</p>
-			<p>Here follow just some example structures of what shape a narrative might take</p>
+						<p>Specifically, the strong recommendation of HL7 concerning the use of the narrative &quot;to support human-consumption as a fallback&quot; is important in the context of the laboratory report. Indeed, this &quot;human-consumption&quot; aspect actually concerns the inclusion of limited xhtml content and as such an effortless implementation to visualize the content of the report by consuming systems is guarantueed. Also, for systems that might not initially choose to consume reports in a structured way, this guarantuees a way to at least visualize and present the content to the user.</p>
+						<p>Here follow just some draft example structures of what shape a narrative might take. The exact presentation is left at the discretion of the providing party.</p>
 						<table class="none">
 							<tr>
 								<td>Report specialty:</td>
@@ -100,7 +100,9 @@
 					<value value="11530231003.2015110413180000000"/>
 				</identifier>
 				<basedOn>
+					<!-- The time of the prescription lives in the original ServiceRequest resource and SHALL be  referenced here. The time of the prescription lives in the ServiceRequest.authoredOn element. -->
 					<reference value="ServiceRequest/servicerequest1"/>
+					<!-- Note, within the Observation resource it is possible to define they were defined on a different serviceRequest (e.g. to clarify it was a sub ordering)) -->
 				</basedOn>
 				<status value="final"/>
 				<category>
@@ -109,10 +111,10 @@
 						<code value="LAB"/>
 						<display value="laboratory"/>
 					</coding>
-					<!-- If needed, extra categories can be added to further categorize the report -->
 				</category>
+				<!-- The generic 'LAB' category SHALL be given. If needed, extra categories can be added to further categorize the report  -->
 				<code>
-					<!-- Here, one LOINC code is given that describes what this report is actually about. -->
+					<!--  Here, one LOINC code is given that describes what this report is actually about.  -->
 					<coding>
 						<system value="http://loinc.org"/>
 						<code value="18723-7"/>
@@ -124,20 +126,24 @@
 				</subject>
 				<effectiveDateTime value="2015-11-04T13:18:00+01:00"/>
 				<performer>
-					<reference value="Organization/organization1"/>
+					<!--  performer is given 1..* and will be typically the laboratory  -->
+					<reference value="Organization/organization10"/>
 				</performer>
 				<resultsInterpreter>
-					<reference value="Organization/organization1"/>
+					<!--  resultsinterpreter is given 1..* and will be typically a person. Need to know whom to contact if there are queries about the results. -->
+					<reference value="Organization/practitioner11"/>
 				</resultsInterpreter>
 				<specimen>
-					<!--OPTIONAL include 0..* specimen (in certain cases, referring to specimen explicetely is considerd redundant)-->
+					<!-- OPTIONAL include 0..* specimen (in certain cases, referring to specimen explicetely is considerd redundant) -->
 					<reference value="Specimen/specimen1"/>
 				</specimen>
 				<result>
-					<!--Here follow the 1..* result that make up this report-->
+					<!-- Here follow the 1..* result that make up this report -->
+					<!-- In this case, this Observation10 is the Erythrocyte sedimentation rate  -->
 					<reference value="Observation/observation10"/>
 				</result>
 				<result>
+					<!-- In this case, this Observation11 is actually the subtitle SCREENING and it refers to Observation111 and Observation112 that contain the red blood cells and the hemoglobin observations respectively  -->
 					<reference value="Observation/observation11"/>
 				</result>
 			</DiagnosticReport>
@@ -146,8 +152,8 @@
 	<entry>
 		<fullUrl value="https://example.com/base/Specimen/1"/>
 		<resource>
-			<Specimen xmlns="http://hl7.org/fhir">
-				<!--the other resources use the id to refer to this specimen -->
+			<Specimen>
+				<!-- the other resources use the id to refer to this specimen  -->
 				<id value="specimen1"/>
 				<text>
 					<status value="generated"/>
@@ -160,6 +166,8 @@
 						<p>
 							<b>identifier</b>: 1</p>
 						<p>
+							<b>status</b>: available</p>
+						<p>
 							<b>type</b>: <span title="Codes: {http://snomed.info/sct 119297000}">Blood specimen</span>
 						</p>
 						<p>
@@ -171,36 +179,50 @@
 								<td>
 									<b>Collected[x]</b>
 								</td>
+								<td>
+									<b>Method</b>
+								</td>
+								<td>
+									<b>BodySite</b>
+								</td>
 							</tr>
 							<tr>
 								<td>*</td>
 								<td>2015-11-03</td>
+								<td>
+									<span title="Codes: {http://snomed.info/sct 28520004}">Venipuncture for blood test (procedure)</span>
+								</td>
+								<td>
+									<span title="Codes: {http://snomed.info/sct 368208006}">Left upper arm structure (body structure)</span>
+								</td>
 							</tr>
 						</table>
+						<p>
+							<b>note</b>: Annotation: Some extra relevant information concerning the specimen</p>
 					</div>
 				</text>
 				<identifier>
-					<!--unique business identifier of the specimen SHOULD BE included if available-->
+					<!-- unique business identifier of the specimen SHOULD BE included if available -->
 					<system value="https://www.GTL-LABO.be/"/>
 					<value value="1"/>
 				</identifier>
-				<!-- OPTIONAL status code of a Specimen available | unavailable | unsatisfactory | entered-in-error -->
+				<!--  OPTIONAL status code of a Specimen available | unavailable | unsatisfactory | entered-in-error  -->
 				<status value="available"/>
 				<type>
 					<coding>
-						<!-- The actual specimen, described using a coding system. Here, the coding system SNOMED-CT is used for this -->
+						<!--  The actual specimen, described using a coding system. Here, the coding system SNOMED-CT is used for this  -->
 						<system value="http://snomed.info/sct"/>
 						<code value="119297000"/>
 						<display value="Blood specimen"/>
 					</coding>
 				</type>
-				<!-- The date/time when the specimen was received SHOULD be included if available -->
+				<!--  The date/time when the specimen was received SHOULD be included if available  -->
 				<receivedTime value="2015-11-04"/>
 				<collection>
-					<!-- The date/time when the specimen was collected SHOULD be included if available -->
+					<!--  The date/time when the specimen was collected SHOULD be included if available  -->
 					<collectedDateTime value="2015-11-03"/>
 					<method>
-						<!--OPTIONAL provide the method of collection-->
+						<!-- OPTIONAL provide the method of collection -->
 						<coding>
 							<system value="http://snomed.info/sct"/>
 							<code value="28520004"/>
@@ -208,7 +230,7 @@
 						</coding>
 					</method>
 					<bodySite>
-						<!--OPTIONAL provide the bodySite. Here, a SNOMED-CT code is used. Alternatively, express this using the .text element of the CodeableConcept datatype.-->
+						<!-- OPTIONAL provide the bodySite. Here, a SNOMED-CT code is used. Alternatively, express this using the .text element of the CodeableConcept datatype. -->
 						<coding>
 							<system value="http://snomed.info/sct"/>
 							<code value="368208006"/>
@@ -217,7 +239,7 @@
 					</bodySite>
 				</collection>
 				<note>
-					<!-- OPTIONAL, any note concerning the specimen. Using the Annotation datatype in FHIR, it is OPTIONAL here to also add an author and/or dateTime of this annotation -->
+					<!--  OPTIONAL, any note concerning the specimen. Using the Annotation datatype in FHIR, it is OPTIONAL here to also add an author and/or dateTime of this annotation  -->
 					<text value="Some extra relevant information concerning the specimen"/>
 				</note>
 			</Specimen>
@@ -226,7 +248,7 @@
 	<entry>
 		<fullUrl value="https://example.com/base/Observation/10"/>
 		<resource>
-			<Observation xmlns="http://hl7.org/fhir">
+			<Observation>
 				<id value="observation10"/>
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation"/>
@@ -238,7 +260,7 @@
 							<b>Generated Narrative</b>
 						</p>
 						<p>
-							<b>id</b>:observation10</p>
+							<b>id</b>: observation10</p>
 						<p>
 							<b>meta</b>: </p>
 						<p/>
@@ -253,7 +275,7 @@
 							</a>
 						</p>
 						<p>
-							<b>effective</b>: Nov 4, 2015, 2:16:00 PM</p>
+							<b>effective</b>: Nov 4, 2015, 3:16:00 PM</p>
 						<p>
 							<b>performer</b>: <a href="Practitioner-practitioner1.html">Generated Summary: id: practitioner1; 79121137740 (OFFICIAL), 18749704477 (OFFICIAL); Katherine Pulaski (OFFICIAL); katherine.pulaski@enterprisehospital.be(WORK), ph: 022675198(WORK), fax: 022675209(WORK); gender: female; birthDate: 1979-12-11</a>
 						</p>
@@ -345,7 +367,7 @@
 	<entry>
 		<fullUrl value="https://example.com/base/Observation/11"/>
 		<resource>
-			<Observation xmlns="http://hl7.org/fhir">
+			<Observation>
 				<id value="observation11"/>
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation"/>
@@ -400,7 +422,7 @@
 	<entry>
 		<fullUrl value="https://example.com/base/Observation/111"/>
 		<resource>
-			<Observation xmlns="http://hl7.org/fhir">
+			<Observation>
 				<id value="observation111"/>
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation"/>
@@ -411,6 +433,54 @@
 						<p>
 							<b>Generated Narrative</b>
 						</p>
+						<p>
+							<b>id</b>: observation111</p>
+						<p>
+							<b>meta</b>: </p>
+						<p/>
+						<p>
+							<b>category</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/observation-category laboratory}">laboratory studies</span>
+						</p>
+						<p>
+							<b>code</b>: <span title="Codes: {http://loinc.org 789-8}">Red blood cells (blood)</span>
+						</p>
+						<p>
+							<b>subject</b>: <a href="Patient-patient1.html">Generated Summary: id: patient1; 79121137740 (OFFICIAL), Social Beneficiary Identifier = 79121137740 (OFFICIAL), Medical record number = 45XXP0PA-4 (USUAL); active; Josephine Nessa La Paradisio ; nessa.laparadisio@belgium.be, ph: +322476792979(MOBILE), ph: +3226718655(HOME), ph: +322476799(WORK); gender: female; birthDate: 1979-12-11; <span title="Codes: {http://terminology.hl7.org/CodeSystem/v3-MaritalStatus D}, {https://www.ehealth.fgov.be/standards/fhir/CodeSystem/cd-civilstate 41}">Divorced</span>
+							</a>
+						</p>
+						<p>
+							<b>effective</b>: Nov 4, 2015, 3:16:00 PM</p>
+						<p>
+							<b>performer</b>: <a href="Practitioner-practitioner1.html">Generated Summary: id: practitioner1; 79121137740 (OFFICIAL), 18749704477 (OFFICIAL); Katherine Pulaski (OFFICIAL); katherine.pulaski@enterprisehospital.be(WORK), ph: 022675198(WORK), fax: 022675209(WORK); gender: female; birthDate: 1979-12-11</a>
+						</p>
+						<p>
+							<b>value</b>: 4.35 10*6/uL</p>
+						<p>
+							<b>specimen</b>: <a href="Specimen-specimen1.html">Generated Summary: id: specimen1; 1; <span title="Codes: {http://snomed.info/sct 119297000}">Blood specimen</span>; receivedTime: 2015-11-04</a>
+						</p>
+						<h3>ReferenceRanges</h3>
+						<table class="grid">
+							<tr>
+								<td>-</td>
+								<td>
+									<b>Low</b>
+								</td>
+								<td>
+									<b>High</b>
+								</td>
+								<td>
+									<b>Type</b>
+								</td>
+							</tr>
+							<tr>
+								<td>*</td>
+								<td>3.93 10*6/uL</td>
+								<td>5.01 10*6/uL</td>
+								<td>
+									<span title="Codes: {http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}">Normal Range</span>
+								</td>
+							</tr>
+						</table>
 					</div>
 				</text>
 				<status value="final"/>
@@ -471,7 +541,7 @@
 	<entry>
 		<fullUrl value="https://example.com/base/Observation/112"/>
 		<resource>
-			<Observation xmlns="http://hl7.org/fhir">
+			<Observation>
 				<id value="observation112"/>
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation"/>
@@ -482,6 +552,54 @@
 						<p>
 							<b>Generated Narrative</b>
 						</p>
+						<p>
+							<b>id</b>: observation112</p>
+						<p>
+							<b>meta</b>: </p>
+						<p/>
+						<p>
+							<b>category</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/observation-category laboratory}">laboratory studies</span>
+						</p>
+						<p>
+							<b>code</b>: <span title="Codes: {http://loinc.org 20563-3}">Hemoglobin</span>
+						</p>
+						<p>
+							<b>subject</b>: <a href="Patient-patient1.html">Generated Summary: id: patient1; 79121137740 (OFFICIAL), Social Beneficiary Identifier = 79121137740 (OFFICIAL), Medical record number = 45XXP0PA-4 (USUAL); active; Josephine Nessa La Paradisio ; nessa.laparadisio@belgium.be, ph: +322476792979(MOBILE), ph: +3226718655(HOME), ph: +322476799(WORK); gender: female; birthDate: 1979-12-11; <span title="Codes: {http://terminology.hl7.org/CodeSystem/v3-MaritalStatus D}, {https://www.ehealth.fgov.be/standards/fhir/CodeSystem/cd-civilstate 41}">Divorced</span>
+							</a>
+						</p>
+						<p>
+							<b>effective</b>: Nov 4, 2015, 3:16:00 PM</p>
+						<p>
+							<b>performer</b>: <a href="Practitioner-practitioner1.html">Generated Summary: id: practitioner1; 79121137740 (OFFICIAL), 18749704477 (OFFICIAL); Katherine Pulaski (OFFICIAL); katherine.pulaski@enterprisehospital.be(WORK), ph: 022675198(WORK), fax: 022675209(WORK); gender: female; birthDate: 1979-12-11</a>
+						</p>
+						<p>
+							<b>value</b>: 14.1 g/dl</p>
+						<p>
+							<b>specimen</b>: <a href="Specimen-specimen1.html">Generated Summary: id: specimen1; 1; <span title="Codes: {http://snomed.info/sct 119297000}">Blood specimen</span>; receivedTime: 2015-11-04</a>
+						</p>
+						<h3>ReferenceRanges</h3>
+						<table class="grid">
+							<tr>
+								<td>-</td>
+								<td>
+									<b>Low</b>
+								</td>
+								<td>
+									<b>High</b>
+								</td>
+								<td>
+									<b>Type</b>
+								</td>
+							</tr>
+							<tr>
+								<td>*</td>
+								<td>11.8 g/dl</td>
+								<td>14.8 g/dl</td>
+								<td>
+									<span title="Codes: {http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}">Normal Range</span>
+								</td>
+							</tr>
+						</table>
 					</div>
 				</text>
 				<status value="final"/>
@@ -537,6 +655,271 @@
 					</type>
 				</referenceRange>
 			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="https://example.com/base/Organization/10"/>
+		<resource>
+			<Organization>
+				<id value="organization10"/>
+				<meta>
+					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-organization"/>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<div xmlns="http://www.w3.org/1999/xhtml">
+						<p>
+							<b>Generated Narrative</b>
+						</p>
+						<p>
+							<b>id</b>: organization10</p>
+						<p>
+							<b>meta</b>: </p>
+						<p>
+							<b>identifier</b>: Medical License number = 81165343998 (OFFICIAL)</p>
+						<p>
+							<b>active</b>: true</p>
+						<p>
+							<b>type</b>: <span title="Codes: {https://www.ehealth.fgov.be/standards/fhir/CodeSystem/cd-hcparty orglaboratory}">orglaboratory</span>
+						</p>
+						<p>
+							<b>name</b>: GTL - General Testing Laboratory</p>
+						<p>
+							<b>telecom</b>: ph: 322675199(WORK)</p>
+						<p>
+							<b>address</b>: Vulcansstraat 120, 1000 Brussel(WORK)</p>
+					</div>
+				</text>
+				<identifier>
+					<use value="official"/>
+					<type>
+						<coding>
+							<system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+							<code value="MD"/>
+							<display value="Medical License number"/>
+						</coding>
+					</type>
+					<system value="https://www.ehealth.fgov.be/standards/fhir/NamingSystem/nihdi"/>
+					<value value="81165343998"/>
+				</identifier>
+				<active value="true"/>
+				<type>
+					<coding>
+						<system value="https://www.ehealth.fgov.be/standards/fhir/CodeSystem/cd-hcparty"/>
+						<code value="orglaboratory"/>
+					</coding>
+				</type>
+				<name value="GTL - General Testing Laboratory"/>
+				<telecom>
+					<system value="phone"/>
+					<value value="322675199"/>
+					<use value="work"/>
+				</telecom>
+				<address>
+					<extension url="http://hl7.org/fhir/StructureDefinition/language">
+						<valueCode value="nl"/>
+					</extension>
+					<use value="work"/>
+					<type value="both"/>
+					<text value="Vulcansstraat 120, 1000 Brussel"/>
+					<line value="Vulcansstraat 120">
+						<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+							<valueString value="Vulcansstraat"/>
+						</extension>
+						<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+							<valueString value="120"/>
+						</extension>
+					</line>
+					<city value="Brussel"/>
+					<postalCode value="1000"/>
+					<country value="BE"/>
+				</address>
+			</Organization>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="https://example.com/base/Practitioner/10"/>
+		<resource>
+			<Practitioner>
+				<id value="practitioner10"/>
+				<meta>
+					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-practitioner"/>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<div xmlns="http://www.w3.org/1999/xhtml">
+						<p>
+							<b>Generated Narrative</b>
+						</p>
+						<p>
+							<b>id</b>: practitioner10</p>
+						<p>
+							<b>meta</b>: </p>
+						<p>
+							<b>identifier</b>: 554488997 (OFFICIAL)</p>
+						<p>
+							<b>name</b>: Nicolas Davoust (OFFICIAL)</p>
+						<p>
+							<b>telecom</b>: nicolas.davoust@gtl.be(WORK), ph: 022675198(WORK), fax: 022675209(WORK)</p>
+					</div>
+				</text>
+				<identifier>
+					<use value="official"/>
+					<system value="https://www.ehealth.fgov.be/standards/fhir/NamingSystem/nihdi"/>
+					<value value="554488997"/>
+				</identifier>
+				<name>
+					<use value="official"/>
+					<family value="Davoust"/>
+					<given value="Nicolas"/>
+				</name>
+				<telecom>
+					<system value="email"/>
+					<value value="nicolas.davoust@gtl.be"/>
+					<use value="work"/>
+				</telecom>
+				<telecom>
+					<system value="phone"/>
+					<value value="022675198"/>
+					<use value="work"/>
+				</telecom>
+				<telecom>
+					<system value="fax"/>
+					<value value="022675209"/>
+					<use value="work"/>
+				</telecom>
+			</Practitioner>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="https://example.com/base/Practitioner/10"/>
+		<resource>
+			<Patient xmlns="http://hl7.org/fhir">
+				<id value="patient1"/>
+				<meta>
+					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-patient"/>
+				</meta>
+				<identifier>
+					<use value="official"/>
+					<system value="https://www.ehealth.fgov.be/standards/fhir/NamingSystem/ssin"/>
+					<value value="79121137740"/>
+				</identifier>
+				<active value="true"/>
+				<name>
+					<family value="La Paradisio"/>
+					<given value="Josephine"/>
+					<given value="Nessa"/>
+				</name>
+				<telecom>
+					<system value="email"/>
+					<value value="nessa.laparadisio@belgium.be"/>
+				</telecom>
+				<telecom>
+					<system value="phone"/>
+					<value value="+322476792979"/>
+					<use value="mobile"/>
+				</telecom>
+				<telecom>
+					<system value="phone"/>
+					<value value="+3226718655"/>
+					<use value="home"/>
+				</telecom>
+				<telecom>
+					<system value="phone"/>
+					<value value="+322476799"/>
+					<use value="work"/>
+				</telecom>
+				<gender value="female"/>
+				<birthDate value="1979-12-11">
+					<extension url="http://hl7.org/fhir/StructureDefinition/patient-birthTime">
+						<valueDateTime value="1979-12-11T13:28:17-05:00"/>
+					</extension>
+				</birthDate>
+				<address>
+					<use value="home"/>
+					<type value="both"/>
+					<text value="Sloordelle 42, 1160 Oudergem"/>
+					<line value="Sloordelle 42"/>
+					<city value="Oudergem"/>
+					<postalCode value="1160"/>
+					<country value="BE"/>
+				</address>
+			</Patient>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="https://example.com/base/ServiceRequest/1"/>
+		<resource>
+			<ServiceRequest xmlns="http://hl7.org/fhir">
+				<id value="servicerequest1"/>
+				<meta>
+					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-servicerequest"/>
+				</meta>
+				<status value="active"/>
+				<intent value="order"/>
+				<category>
+					<coding>
+						<system value="http://snomed.info/sct"/>
+						<code value="108252007"/>
+						<display value="Laboratory procedure"/>
+					</coding>
+				</category>
+				<subject>
+					<reference value="Patient/patient1"/>
+				</subject>
+				<authoredOn value="2015-11-01T14:41:00+01:00"/>
+				<requester>
+					<reference value="Practitioner/practitioner1"/>
+				</requester>
+				<specimen>
+					<reference value="Specimen/specimen1"/>
+				</specimen>
+			</ServiceRequest>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="https://example.com/base/Practitioner/1"/>
+		<resource>
+			<Practitioner xmlns="http://hl7.org/fhir">
+				<id value="practitioner1"/>
+				<meta>
+					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-practitioner"/>
+				</meta>
+				<identifier>
+					<use value="official"/>
+					<system value="https://www.ehealth.fgov.be/standards/fhir/NamingSystem/nihdi"/>
+					<value value="18749704477"/>
+				</identifier>
+				<name>
+					<use value="official"/>
+					<family value="Pulaski"/>
+					<given value="Katherine"/>
+					<suffix value="MD"/>
+				</name>
+				<telecom>
+					<system value="email"/>
+					<value value="katherine.pulaski@enterprisehospital.be"/>
+					<use value="work"/>
+				</telecom>
+				<telecom>
+					<system value="phone"/>
+					<value value="022675198"/>
+					<use value="work"/>
+				</telecom>
+				<telecom>
+					<system value="fax"/>
+					<value value="022675209"/>
+					<use value="work"/>
+				</telecom>
+				<address>
+					<use value="home"/>
+					<text value="Jupiterlaan 5, 1853 Grimbergen"/>
+					<line value="Jupiterlaan 5"/>
+					<city value="Grimbergen"/>
+					<postalCode value="1853"/>
+					<country value="BE"/>
+				</address>
+			</Practitioner>
 		</resource>
 	</entry>
 </Bundle>

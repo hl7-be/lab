@@ -5,14 +5,6 @@
   <meta>
     <profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-practitioner"/>
   </meta>
-  <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>id</b>: practitioner1</p><p><b>meta</b>: </p><p><b>identifier</b>: 79121137740 (OFFICIAL), 18749704477 (OFFICIAL)</p><p><b>name</b>: Katherine Pulaski (OFFICIAL)</p><p><b>telecom</b>: katherine.pulaski@enterprisehospital.be(WORK), ph: 022675198(WORK), fax: 022675209(WORK)</p><p><b>address</b>: Jupiterlaan 5, 1853 Grimbergen(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1979-12-11</p></div>
-  </text>
-  <identifier>
-    <use value="official"/>
-    <system value="https://www.ehealth.fgov.be/standards/fhir/NamingSystem/ssin"/>
-    <value value="79121137740"/>
-  </identifier>
   <identifier>
     <use value="official"/>
     <system value="https://www.ehealth.fgov.be/standards/fhir/NamingSystem/nihdi"/>
@@ -40,9 +32,6 @@
     <use value="work"/>
   </telecom>
   <address>
-    <extension url="http://hl7.org/fhir/StructureDefinition/language">
-      <valueCode value="nl"/>
-    </extension>
     <use value="home"/>
     <text value="Jupiterlaan 5, 1853 Grimbergen"/>
     <line value="Jupiterlaan 5"/>
@@ -50,6 +39,4 @@
     <postalCode value="1853"/>
     <country value="BE"/>
   </address>
-  <gender value="female"/>
-  <birthDate value="1979-12-11"/>
 </Practitioner>
