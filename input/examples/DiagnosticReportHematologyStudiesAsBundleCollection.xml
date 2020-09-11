@@ -3,7 +3,7 @@
 	<id value="HematologyStudiesAsBundleCollection"/>
 	<type value="collection"/>
 	<entry>
-		<fullUrl value="https://example.com/base/DiagnosticReport/1"/>
+		<fullUrl value="urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d34"/>
 		<resource>
 			<DiagnosticReport>
 				<id value="diagnosticreport1"/>
@@ -11,17 +11,29 @@
 					<!--  the be-report SHALL claim conformance to the be-profile  -->
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report"/>
 				</meta>
-				<!--  the be-report SHALL have 1 language  -->
+				<!--  the be-report SHALL have 1 language. The base language in which the resource is written. The base language in which the resource is written, typically this will be fr-BE, nl-BE, en or de. It is RECOMMENDED to only declare the language here.  -->
 				<language value="en"/>
 				<text>
-					<!--  the be-report SHALL have 1 text  -->
+					<!--  the be-report SHALL have 1 text. A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative.  -->
 					<status value="generated"/>
 					<div xmlns="http://www.w3.org/1999/xhtml">
 						<p>This example is presented as a Collection bundle for ease of understanding. It makes no assumption towards any final implementation of using FHIR technically. Open this as XML to view XML annotations.</p>
-						<p>ALL LOINC, SNOMED-CT CODES ETC. ARE USED FOR ILLUSTRATIVE PURPOSES AND DO NOT NECESSARILY PRESENT A REAL LIFE LABORATORY REPORT</p>
+						<p>ALL LOINC, SNOMED-CT CODES ETC. ARE USED FOR ILLUSTRATIVE PURPOSES AND DO NOT NECESSARILY PRESENT A CLINICALLY CORRECT REAL LIFE LABORATORY REPORT</p>
 						<h2>A narrative SHALL be included</h2>
 						<p>Specifically, the strong recommendation of HL7 concerning the use of the narrative &quot;to support human-consumption as a fallback&quot; is important in the context of the laboratory report. Indeed, this &quot;human-consumption&quot; aspect actually concerns the inclusion of limited xhtml content and as such an effortless implementation to visualize the content of the report by consuming systems is guarantueed. Also, for systems that might not initially choose to consume reports in a structured way, this guarantuees a way to at least visualize and present the content to the user.</p>
-						<p>Here follow just some draft example structures of what shape a narrative might take. The exact presentation is left at the discretion of the providing party.</p>
+						<p>Here follow just some draft example structures of what shape a narrative might take and what tags might be used. The exact presentation is left at the discretion of the providing party.</p>
+						<pre>Report specialty:			HEMATOLOGY STUDIES - Laboratory Hematology results
+Specimen:				Blood
+Specimen collection:			3 November, 2015
+Specimen received:			4 November, 2015
+
+
+Hemoglobin/Hematocrit
+  									Reference range
+Erythrocyte sedimentation rate		2	mm/h			0-30 	mm/h
+SCREENING
+Red blood cells (blood)			4.35	10*6/uL			3.93-5.01 	10*6/uL
+Hemoglobin				14.1	g/dL			11.8-14.8 	g/dL</pre>
 						<table class="none">
 							<tr>
 								<td>Report specialty:</td>
@@ -104,17 +116,18 @@
 					<reference value="ServiceRequest/servicerequest1"/>
 					<!-- Note, within the Observation resource it is possible to define they were defined on a different serviceRequest (e.g. to clarify it was a sub ordering)) -->
 				</basedOn>
+				<!-- The status SHALL be given. As per the base FHIR resource, this can be registered,partial,preliminary,final,	amended, corrected, appended,cancelled,entered-in-error or	unknown. Naturally, the status on this level SHALL have a logical status according to the status of any individual Observation and possibly Specimen -->
 				<status value="final"/>
 				<category>
 					<coding>
+					<!-- The generic 'LAB' category SHALL be given. If needed, extra categories can be added to further categorize the report  -->
 						<system value="http://terminology.hl7.org/CodeSystem/v2-0074"/>
 						<code value="LAB"/>
-						<display value="laboratory"/>
+						<display value="Laboratory"/>
 					</coding>
-				</category>
-				<!-- The generic 'LAB' category SHALL be given. If needed, extra categories can be added to further categorize the report  -->
+				</category>			
 				<code>
-					<!--  Here, one LOINC code is given that describes what this report is actually about.  -->
+					<!--  Here, one code SHALL be given - preferred is a LOINC code -  that describes what this report is actually about.  -->
 					<coding>
 						<system value="http://loinc.org"/>
 						<code value="18723-7"/>
@@ -122,11 +135,15 @@
 					</coding>
 				</code>
 				<subject>
+				<!--  Here, the subject SHALL be given - normally, this will be a patient.  -->
 					<reference value="Patient/patient1"/>
 				</subject>
-				<effectiveDateTime value="2015-11-04T13:18:00+01:00"/>
+				<!--- ATTENTION: the effectiveDateTime (OR effectivePeriod) element is defined by FHIR as "The time or time-period the observed values are related to. When the subject of the report is a patient, this is normally the time of specimen collection(s)" As such, this is OPTIONAL and SHALL NOT be confused with the next element .issued-->
+				<effectiveDateTime value="2015-11-03T13:18:00+01:00"/>
+					<!--- ATTENTION: the .issued element is defined by FHIR as "The date and time that this version of the report was made available to providers, typically after the report was reviewed and verified.." As such, this is MANDATORY and SHALL NOT be confused with the previous element .effectiveDateTime or effectivePeriod-->
+				<issued value="2015-11-04T13:18:00+01:00"/>
 				<performer>
-					<!--  performer is given 1..* and will be typically the laboratory  -->
+					<!--  performer is given 1..* and will be typically a laboratory  -->
 					<reference value="Organization/organization10"/>
 				</performer>
 				<resultsInterpreter>
@@ -134,7 +151,7 @@
 					<reference value="Organization/practitioner11"/>
 				</resultsInterpreter>
 				<specimen>
-					<!-- OPTIONAL include 0..* specimen (in certain cases, referring to specimen explicetely is considerd redundant) -->
+					<!-- OPTIONAL include 0..* specimen (in certain cases, referring to specimen explicetely is considerd redundant in laboratort reporting) -->
 					<reference value="Specimen/specimen1"/>
 				</specimen>
 				<result>
@@ -143,14 +160,14 @@
 					<reference value="Observation/observation10"/>
 				</result>
 				<result>
-					<!-- In this case, this Observation11 is actually the subtitle SCREENING and it refers to Observation111 and Observation112 that contain the red blood cells and the hemoglobin observations respectively  -->
+					<!-- Another Observation is given in this example. In this case, this Observation11 is actually the subtitle SCREENING and it refers to Observation111 and Observation112 that contain the red blood cells and the hemoglobin observations respectively  -->
 					<reference value="Observation/observation11"/>
 				</result>
 			</DiagnosticReport>
 		</resource>
 	</entry>
 	<entry>
-		<fullUrl value="https://example.com/base/Specimen/1"/>
+		<fullUrl value="urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d35"/>
 		<resource>
 			<Specimen>
 				<!-- the other resources use the id to refer to this specimen  -->
@@ -246,7 +263,7 @@
 		</resource>
 	</entry>
 	<entry>
-		<fullUrl value="https://example.com/base/Observation/10"/>
+		<fullUrl value="urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d36"/>
 		<resource>
 			<Observation>
 				<id value="observation10"/>
@@ -365,7 +382,7 @@
 		</resource>
 	</entry>
 	<entry>
-		<fullUrl value="https://example.com/base/Observation/11"/>
+	<fullUrl value="urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d37"/>
 		<resource>
 			<Observation>
 				<id value="observation11"/>
@@ -420,7 +437,7 @@
 		</resource>
 	</entry>
 	<entry>
-		<fullUrl value="https://example.com/base/Observation/111"/>
+		<fullUrl value="urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d38"/>
 		<resource>
 			<Observation>
 				<id value="observation111"/>
@@ -539,7 +556,7 @@
 		</resource>
 	</entry>
 	<entry>
-		<fullUrl value="https://example.com/base/Observation/112"/>
+<fullUrl value="urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d39"/>
 		<resource>
 			<Observation>
 				<id value="observation112"/>
@@ -658,7 +675,7 @@
 		</resource>
 	</entry>
 	<entry>
-		<fullUrl value="https://example.com/base/Organization/10"/>
+		<fullUrl value="urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d40"/>
 		<resource>
 			<Organization>
 				<id value="organization10"/>
@@ -738,7 +755,7 @@
 		</resource>
 	</entry>
 	<entry>
-		<fullUrl value="https://example.com/base/Practitioner/10"/>
+	<fullUrl value="urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d41"/>
 		<resource>
 			<Practitioner>
 				<id value="practitioner10"/>
@@ -792,7 +809,7 @@
 		</resource>
 	</entry>
 	<entry>
-		<fullUrl value="https://example.com/base/Practitioner/10"/>
+		<fullUrl value="urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d42"/>
 		<resource>
 			<Patient xmlns="http://hl7.org/fhir">
 				<id value="patient1"/>
@@ -848,16 +865,14 @@
 		</resource>
 	</entry>
 	<entry>
-		<fullUrl value="https://example.com/base/ServiceRequest/1"/>
+		<fullUrl value="urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d43"/>
 		<resource>
 			<ServiceRequest xmlns="http://hl7.org/fhir">
 				<id value="servicerequest1"/>
-				<meta>
-					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-servicerequest"/>
-				</meta>
 				<identifier>
-<system value="TheOrderingSystem"/>
-<value value="12334546"/>				
+				<!--The oroginal order number -->
+					<system value="TheOrderingSystem"/>
+					<value value="12334546"/>
 				</identifier>
 				<status value="active"/>
 				<intent value="order"/>
@@ -873,6 +888,7 @@
 				</subject>
 				<authoredOn value="2015-11-01T14:41:00+01:00"/>
 				<requester>
+				<!--in case of sub orders, the requester might also be a laboratory -->
 					<reference value="Practitioner/practitioner1"/>
 				</requester>
 				<specimen>
@@ -882,7 +898,7 @@
 		</resource>
 	</entry>
 	<entry>
-		<fullUrl value="https://example.com/base/Practitioner/1"/>
+		<fullUrl value="urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d44"/>
 		<resource>
 			<Practitioner xmlns="http://hl7.org/fhir">
 				<id value="practitioner1"/>
