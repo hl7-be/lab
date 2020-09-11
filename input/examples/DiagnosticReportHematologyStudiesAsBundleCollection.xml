@@ -2,6 +2,7 @@
 <Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///H:/OLD_DESKTOP/Desktop/LATEST%20AND%20GREATEST/FHIR4/bundle.xsd">
 	<id value="HematologyStudiesAsBundleCollection"/>
 	<type value="collection"/>
+	<!--This example is presented as a Collection bundle for ease of understanding. It makes no assumption towards any final implementation of using FHIR technically. Open this as XML to view XML annotations.-->
 	<entry>
 		<fullUrl value="urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d34"/>
 		<resource>
@@ -17,7 +18,8 @@
 					<!--  the be-report SHALL have 1 text. A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative.  -->
 					<status value="generated"/>
 					<div xmlns="http://www.w3.org/1999/xhtml">
-						<p>This example is presented as a Collection bundle for ease of understanding. It makes no assumption towards any final implementation of using FHIR technically. Open this as XML to view XML annotations.</p>
+						<p>This example is presented as a Collection bundle for ease of understanding. It makes no assumption towards any final implementation of using FHIR technically. </p>
+						<p>Download and open this as XML in an editor to view XML annotations.</p>
 						<p>ALL LOINC, SNOMED-CT CODES ETC. ARE USED FOR ILLUSTRATIVE PURPOSES AND DO NOT NECESSARILY PRESENT A CLINICALLY CORRECT REAL LIFE LABORATORY REPORT</p>
 						<h2>A narrative SHALL be included</h2>
 						<p>Specifically, the strong recommendation of HL7 concerning the use of the narrative &quot;to support human-consumption as a fallback&quot; is important in the context of the laboratory report. Indeed, this &quot;human-consumption&quot; aspect actually concerns the inclusion of limited xhtml content and as such an effortless implementation to visualize the content of the report by consuming systems is guarantueed. Also, for systems that might not initially choose to consume reports in a structured way, this guarantuees a way to at least visualize and present the content to the user.</p>
@@ -120,12 +122,12 @@ Hemoglobin				14.1	g/dL			11.8-14.8 	g/dL</pre>
 				<status value="final"/>
 				<category>
 					<coding>
-					<!-- The generic 'LAB' category SHALL be given. If needed, extra categories can be added to further categorize the report  -->
+						<!-- The generic 'LAB' category SHALL be given. If needed, extra categories can be added to further categorize the report  -->
 						<system value="http://terminology.hl7.org/CodeSystem/v2-0074"/>
 						<code value="LAB"/>
 						<display value="Laboratory"/>
 					</coding>
-				</category>			
+				</category>
 				<code>
 					<!--  Here, one code SHALL be given - preferred is a LOINC code -  that describes what this report is actually about.  -->
 					<coding>
@@ -135,12 +137,12 @@ Hemoglobin				14.1	g/dL			11.8-14.8 	g/dL</pre>
 					</coding>
 				</code>
 				<subject>
-				<!--  Here, the subject SHALL be given - normally, this will be a patient.  -->
+					<!--  Here, the subject SHALL be given - normally, this will be a patient.  -->
 					<reference value="Patient/patient1"/>
 				</subject>
 				<!--- ATTENTION: the effectiveDateTime (OR effectivePeriod) element is defined by FHIR as "The time or time-period the observed values are related to. When the subject of the report is a patient, this is normally the time of specimen collection(s)" As such, this is OPTIONAL and SHALL NOT be confused with the next element .issued-->
 				<effectiveDateTime value="2015-11-03T13:18:00+01:00"/>
-					<!--- ATTENTION: the .issued element is defined by FHIR as "The date and time that this version of the report was made available to providers, typically after the report was reviewed and verified.." As such, this is MANDATORY and SHALL NOT be confused with the previous element .effectiveDateTime or effectivePeriod-->
+				<!--- ATTENTION: the .issued element is defined by FHIR as "The date and time that this version of the report was made available to providers, typically after the report was reviewed and verified.." As such, this is MANDATORY and SHALL NOT be confused with the previous element .effectiveDateTime or effectivePeriod-->
 				<issued value="2015-11-04T13:18:00+01:00"/>
 				<performer>
 					<!--  performer is given 1..* and will be typically a laboratory  -->
@@ -223,7 +225,7 @@ Hemoglobin				14.1	g/dL			11.8-14.8 	g/dL</pre>
 					<system value="https://www.GTL-LABO.be/"/>
 					<value value="1"/>
 				</identifier>
-				<!--  OPTIONAL status code of a Specimen available | unavailable | unsatisfactory | entered-in-error  -->
+				<!--  OPTIONAL status code of a Specimen available | unavailable | unsatisfactory | entered-in-error  Functionally, this status SHALL be logical when considered with the status of the report and/or the status of the Observation using this specimen-->
 				<status value="available"/>
 				<type>
 					<coding>
@@ -326,15 +328,9 @@ Hemoglobin				14.1	g/dL			11.8-14.8 	g/dL</pre>
 						</table>
 					</div>
 				</text>
+				<!--  MANDATORY status code of the Observation registered, preliminary, final, amended, corrected, cancelled, entered-in-error, unknown  Functionally, this status SHALL be logical when considered with the status of the report and/or the status of the Specimen used by this observation-->
 				<status value="final"/>
-				<category>
-					<coding>
-						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
-						<code value="laboratory"/>
-						<display value="laboratory"/>
-					</coding>
-					<text value="laboratory studies"/>
-				</category>
+				<!--  MANDATORY -->
 				<code>
 					<coding>
 						<system value="http://loinc.org"/>
@@ -345,20 +341,56 @@ Hemoglobin				14.1	g/dL			11.8-14.8 	g/dL</pre>
 				<subject>
 					<reference value="Patient/patient1"/>
 				</subject>
+				<!--OPTIONAL the effectiveDateTime OR effectivePeriod OR effectiveTiming OR effectiveInstant reflects the "The time or time-period the observed value is asserted as being true. For biological subjects - e.g. human patients - this is usually called the "physiologically relevant time". This is usually either the time of the procedure or of specimen collection, but very often the source of the date/time is not known, only the date/time itself." Note also, the next element .issued -->
 				<effectiveDateTime value="2015-11-04T09:16:00-05:00"/>
+				<!--OPTIONAL the issued instant."The date and time this version of the observation was made available to providers, typically after the results have been reviewed and verified." Note also, the previous element -->
+				<issued value="2015-11-04T09:16:00-05:00"/>
 				<performer>
 					<reference value="Practitioner/practitioner1"/>
 				</performer>
+				<!--Many options here to express the result. In this case, the Quantity FHIR datatype is used, that is typical for these kind of observations -->
 				<valueQuantity>
 					<value value="2"/>
 					<unit value="mm/h"/>
 					<system value="http://unitsofmeasure.org"/>
 					<code value="mm/h"/>
 				</valueQuantity>
+				<!--OPTIONAL It is possible to add an interpretation element here -->
+				<interpretation>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+						<code value="L"/>
+						<display value="Lowl"/>
+					</coding>
+				</interpretation>
+				<!--OPTIONAL It is possible to add a note here -->
+				<note>
+					<text value="The Bodysite and Methos that are given below do not really make any sense here!"/>
+				</note>
+				<!-- OPTIONAL: Is is possible to add a bodySite element here - preferred SNOMED-CT, provide <text> if using propriety code! -->
+				<bodySite>
+					<coding>
+						<system value="http://snomed.info/sct"/>
+						<code value="344001"/>
+						<display value="Ankle"/>
+					</coding>
+					<text value="ankle (this code was just an example to show the structure)"></text>
+				</bodySite>
+				<!-- OPTIONAL: Is is possible to add a method element here, provide <text> if using propriety code! The methodCode element may be used to record the specific method used to make an observation when this information is not already logically within the observation code. -->
+			<method>
+			<coding>
+					<system value="http://snomed.info/sct"/>
+						<code value="14456009"/>
+						<display value="Measuring height of patient"/>
+					</coding>
+					<text value="Measuring height of patient (this code was just an example to show the structure)"></text>
+			</method>
 				<specimen>
 					<reference value="Specimen/specimen1"/>
 				</specimen>
 				<referenceRange>
+					<!--This is a structured way to express a referenceRange, note it is also possible to have a text element in this to provide for a reference range
+ that is less evident to express structurally -->
 					<low>
 						<value value="0"/>
 						<unit value="mm/h"/>
@@ -382,7 +414,7 @@ Hemoglobin				14.1	g/dL			11.8-14.8 	g/dL</pre>
 		</resource>
 	</entry>
 	<entry>
-	<fullUrl value="urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d37"/>
+		<fullUrl value="urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d37"/>
 		<resource>
 			<Observation>
 				<id value="observation11"/>
@@ -409,14 +441,6 @@ Hemoglobin				14.1	g/dL			11.8-14.8 	g/dL</pre>
 					</div>
 				</text>
 				<status value="final"/>
-				<category>
-					<coding>
-						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
-						<code value="laboratory"/>
-						<display value="laboratory"/>
-					</coding>
-					<text value="laboratory studies"/>
-				</category>
 				<code>
 					<text value="SCREENING"/>
 				</code>
@@ -501,14 +525,6 @@ Hemoglobin				14.1	g/dL			11.8-14.8 	g/dL</pre>
 					</div>
 				</text>
 				<status value="final"/>
-				<category>
-					<coding>
-						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
-						<code value="laboratory"/>
-						<display value="laboratory"/>
-					</coding>
-					<text value="laboratory studies"/>
-				</category>
 				<code>
 					<coding>
 						<system value="http://loinc.org"/>
@@ -556,7 +572,7 @@ Hemoglobin				14.1	g/dL			11.8-14.8 	g/dL</pre>
 		</resource>
 	</entry>
 	<entry>
-<fullUrl value="urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d39"/>
+		<fullUrl value="urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d39"/>
 		<resource>
 			<Observation>
 				<id value="observation112"/>
@@ -620,14 +636,6 @@ Hemoglobin				14.1	g/dL			11.8-14.8 	g/dL</pre>
 					</div>
 				</text>
 				<status value="final"/>
-				<category>
-					<coding>
-						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
-						<code value="laboratory"/>
-						<display value="laboratory"/>
-					</coding>
-					<text value="laboratory studies"/>
-				</category>
 				<code>
 					<coding>
 						<system value="http://loinc.org"/>
@@ -755,7 +763,7 @@ Hemoglobin				14.1	g/dL			11.8-14.8 	g/dL</pre>
 		</resource>
 	</entry>
 	<entry>
-	<fullUrl value="urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d41"/>
+		<fullUrl value="urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d41"/>
 		<resource>
 			<Practitioner>
 				<id value="practitioner10"/>
@@ -870,7 +878,7 @@ Hemoglobin				14.1	g/dL			11.8-14.8 	g/dL</pre>
 			<ServiceRequest xmlns="http://hl7.org/fhir">
 				<id value="servicerequest1"/>
 				<identifier>
-				<!--The oroginal order number -->
+					<!--The original order number -->
 					<system value="TheOrderingSystem"/>
 					<value value="12334546"/>
 				</identifier>
@@ -888,7 +896,7 @@ Hemoglobin				14.1	g/dL			11.8-14.8 	g/dL</pre>
 				</subject>
 				<authoredOn value="2015-11-01T14:41:00+01:00"/>
 				<requester>
-				<!--in case of sub orders, the requester might also be a laboratory -->
+					<!--in case of sub orders, the requester might also be a laboratory -->
 					<reference value="Practitioner/practitioner1"/>
 				</requester>
 				<specimen>
