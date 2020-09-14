@@ -110,6 +110,7 @@ Hemoglobin				14.1	g/dL			11.8-14.8 	g/dL</pre>
 					</div>
 				</text>
 				<identifier>
+					<!--Here SHALL be a business identifier to identify the report. "Need to know what identifier to use when making queries about this report from the source laboratory"-->
 					<system value="http://acme.com/lab/reports"/>
 					<value value="11530231003.2015110413180000000"/>
 				</identifier>
@@ -118,11 +119,11 @@ Hemoglobin				14.1	g/dL			11.8-14.8 	g/dL</pre>
 					<reference value="ServiceRequest/servicerequest1"/>
 					<!-- Note, within the Observation resource it is possible to define they were defined on a different serviceRequest (e.g. to clarify it was a sub ordering)) -->
 				</basedOn>
-				<!-- The status SHALL be given. As per the base FHIR resource, this can be registered,partial,preliminary,final,	amended, corrected, appended,cancelled,entered-in-error or	unknown. Naturally, the status on this level SHALL have a logical status according to the status of any individual Observation and possibly Specimen -->
+				<!-- The status SHALL be given. As per the base FHIR resource, this can be registered,partial,preliminary,final,	amended, corrected, appended,cancelled,entered-in-error or	unknown. Naturally, the status on this level SHALL be logical according to the status of any individual Observation and possibly Specimen -->
 				<status value="final"/>
 				<category>
 					<coding>
-						<!-- The generic 'LAB' category SHALL be given. If needed, extra categories can be added to further categorize the report  -->
+						<!-- The generic 'LAB' category SHALL be given as per the base FHIR specification. If needed, extra categories can be added to further categorize the report  -->
 						<system value="http://terminology.hl7.org/CodeSystem/v2-0074"/>
 						<code value="LAB"/>
 						<display value="Laboratory"/>
@@ -137,7 +138,7 @@ Hemoglobin				14.1	g/dL			11.8-14.8 	g/dL</pre>
 					</coding>
 				</code>
 				<subject>
-					<!--  Here, the subject SHALL be given - normally, this will be a patient.  -->
+					<!--  Here, the subject SHALL be given - normally, this will be a patient. As per the FHIR Reference datatype (that also applies to other parts in this message when a Reference datatype is used) when Patient is available on a server, a URL may be given but it is also possible here to give e.g. the SSIN business identifier for a patient. In this bundle example, this is a reference to the entry in this bundle that contains this patient. -->
 					<reference value="Patient/patient1"/>
 				</subject>
 				<!--- ATTENTION: the effectiveDateTime (OR effectivePeriod) element is defined by FHIR as "The time or time-period the observed values are related to. When the subject of the report is a patient, this is normally the time of specimen collection(s)" As such, this is OPTIONAL and SHALL NOT be confused with the next element .issued-->
@@ -150,7 +151,7 @@ Hemoglobin				14.1	g/dL			11.8-14.8 	g/dL</pre>
 				</performer>
 				<resultsInterpreter>
 					<!--  resultsinterpreter is given 1..* and will be typically a person. Need to know whom to contact if there are queries about the results. -->
-					<reference value="Organization/practitioner11"/>
+					<reference value="Practitioner/practitioner11"/>
 				</resultsInterpreter>
 				<specimen>
 					<!-- OPTIONAL include 0..* specimen (in certain cases, referring to specimen explicetely is considerd redundant in laboratort reporting) -->
@@ -174,54 +175,9 @@ Hemoglobin				14.1	g/dL			11.8-14.8 	g/dL</pre>
 			<Specimen>
 				<!-- the other resources use the id to refer to this specimen  -->
 				<id value="specimen1"/>
-				<text>
-					<status value="generated"/>
-					<div xmlns="http://www.w3.org/1999/xhtml">
-						<p>
-							<b>Generated Narrative</b>
-						</p>
-						<p>
-							<b>id</b>: specimen1</p>
-						<p>
-							<b>identifier</b>: 1</p>
-						<p>
-							<b>status</b>: available</p>
-						<p>
-							<b>type</b>: <span title="Codes: {http://snomed.info/sct 119297000}">Blood specimen</span>
-						</p>
-						<p>
-							<b>receivedTime</b>: 2015-11-04</p>
-						<h3>Collections</h3>
-						<table class="grid">
-							<tr>
-								<td>-</td>
-								<td>
-									<b>Collected[x]</b>
-								</td>
-								<td>
-									<b>Method</b>
-								</td>
-								<td>
-									<b>BodySite</b>
-								</td>
-							</tr>
-							<tr>
-								<td>*</td>
-								<td>2015-11-03</td>
-								<td>
-									<span title="Codes: {http://snomed.info/sct 28520004}">Venipuncture for blood test (procedure)</span>
-								</td>
-								<td>
-									<span title="Codes: {http://snomed.info/sct 368208006}">Left upper arm structure (body structure)</span>
-								</td>
-							</tr>
-						</table>
-						<p>
-							<b>note</b>: Annotation: Some extra relevant information concerning the specimen</p>
-					</div>
-				</text>
+			
 				<identifier>
-					<!-- unique business identifier of the specimen SHOULD BE included if available -->
+					<!-- Business identifier of the specimen SHOULD BE included if available -->
 					<system value="https://www.GTL-LABO.be/"/>
 					<value value="1"/>
 				</identifier>
@@ -229,11 +185,12 @@ Hemoglobin				14.1	g/dL			11.8-14.8 	g/dL</pre>
 				<status value="available"/>
 				<type>
 					<coding>
-						<!--  The actual specimen, described using a coding system. Here, the coding system SNOMED-CT is used for this  -->
+						<!--  The actual specimen, described using a coding system. Here, the coding system SNOMED-CT is used for this which is RECOMMENDED for specimen. As a general back-up rule, whenever the laboratory does use a propriety code, a .text element SHALL always be included explaining the code.  -->
 						<system value="http://snomed.info/sct"/>
 						<code value="119297000"/>
 						<display value="Blood specimen"/>
 					</coding>
+					<text value="A string can be added to nuance or explain."/>
 				</type>
 				<!--  The date/time when the specimen was received SHOULD be included if available  -->
 				<receivedTime value="2015-11-04"/>
@@ -272,62 +229,7 @@ Hemoglobin				14.1	g/dL			11.8-14.8 	g/dL</pre>
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation"/>
 				</meta>
-				<text>
-					<status value="generated"/>
-					<div xmlns="http://www.w3.org/1999/xhtml">
-						<p>
-							<b>Generated Narrative</b>
-						</p>
-						<p>
-							<b>id</b>: observation10</p>
-						<p>
-							<b>meta</b>: </p>
-						<p/>
-						<p>
-							<b>category</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/observation-category laboratory}">laboratory studies</span>
-						</p>
-						<p>
-							<b>code</b>: <span title="Codes: {http://loinc.org 30341-2}">Erythrocyte sedimentation rate</span>
-						</p>
-						<p>
-							<b>subject</b>: <a href="Patient-patient1.html">Generated Summary: id: patient1; 79121137740 (OFFICIAL), Social Beneficiary Identifier = 79121137740 (OFFICIAL), Medical record number = 45XXP0PA-4 (USUAL); active; Josephine Nessa La Paradisio ; nessa.laparadisio@belgium.be, ph: +322476792979(MOBILE), ph: +3226718655(HOME), ph: +322476799(WORK); gender: female; birthDate: 1979-12-11; <span title="Codes: {http://terminology.hl7.org/CodeSystem/v3-MaritalStatus D}, {https://www.ehealth.fgov.be/standards/fhir/CodeSystem/cd-civilstate 41}">Divorced</span>
-							</a>
-						</p>
-						<p>
-							<b>effective</b>: Nov 4, 2015, 3:16:00 PM</p>
-						<p>
-							<b>performer</b>: <a href="Practitioner-practitioner1.html">Generated Summary: id: practitioner1; 79121137740 (OFFICIAL), 18749704477 (OFFICIAL); Katherine Pulaski (OFFICIAL); katherine.pulaski@enterprisehospital.be(WORK), ph: 022675198(WORK), fax: 022675209(WORK); gender: female; birthDate: 1979-12-11</a>
-						</p>
-						<p>
-							<b>value</b>: 2 mm/h</p>
-						<p>
-							<b>specimen</b>: <a href="Specimen-specimen1.html">Generated Summary: id: specimen1; 1; <span title="Codes: {http://snomed.info/sct 119297000}">Blood specimen</span>; receivedTime: 2015-11-04</a>
-						</p>
-						<h3>ReferenceRanges</h3>
-						<table class="grid">
-							<tr>
-								<td>-</td>
-								<td>
-									<b>Low</b>
-								</td>
-								<td>
-									<b>High</b>
-								</td>
-								<td>
-									<b>Type</b>
-								</td>
-							</tr>
-							<tr>
-								<td>*</td>
-								<td>0 mm/h</td>
-								<td>30 mm/h</td>
-								<td>
-									<span title="Codes: {http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}">Normal Range</span>
-								</td>
-							</tr>
-						</table>
-					</div>
-				</text>
+			
 				<!--  MANDATORY status code of the Observation registered, preliminary, final, amended, corrected, cancelled, entered-in-error, unknown  Functionally, this status SHALL be logical when considered with the status of the report and/or the status of the Specimen used by this observation-->
 				<status value="final"/>
 				<!--  MANDATORY -->
@@ -360,12 +262,12 @@ Hemoglobin				14.1	g/dL			11.8-14.8 	g/dL</pre>
 					<coding>
 						<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
 						<code value="L"/>
-						<display value="Lowl"/>
+						<display value="Low"/>
 					</coding>
 				</interpretation>
 				<!--OPTIONAL It is possible to add a note here -->
 				<note>
-					<text value="The Bodysite and Methos that are given below do not really make any sense here!"/>
+					<text value="The Bodysite and Method that are given below do not really make any sense here!"/>
 				</note>
 				<!-- OPTIONAL: Is is possible to add a bodySite element here - preferred SNOMED-CT, provide <text> if using propriety code! -->
 				<bodySite>
@@ -374,23 +276,22 @@ Hemoglobin				14.1	g/dL			11.8-14.8 	g/dL</pre>
 						<code value="344001"/>
 						<display value="Ankle"/>
 					</coding>
-					<text value="ankle (this code was just an example to show the structure)"></text>
+					<text value="ankle (this code was just an example to show the structure)"/>
 				</bodySite>
 				<!-- OPTIONAL: Is is possible to add a method element here, provide <text> if using propriety code! The methodCode element may be used to record the specific method used to make an observation when this information is not already logically within the observation code. -->
-			<method>
-			<coding>
-					<system value="http://snomed.info/sct"/>
+				<method>
+					<coding>
+						<system value="http://snomed.info/sct"/>
 						<code value="14456009"/>
 						<display value="Measuring height of patient"/>
 					</coding>
-					<text value="Measuring height of patient (this code was just an example to show the structure)"></text>
-			</method>
+					<text value="Measuring height of patient (this code was just an example to show the structure)"/>
+				</method>
 				<specimen>
 					<reference value="Specimen/specimen1"/>
 				</specimen>
 				<referenceRange>
-					<!--This is a structured way to express a referenceRange, note it is also possible to have a text element in this to provide for a reference range
- that is less evident to express structurally -->
+					<!--OPTIONAL element structure: a structured way to express a referenceRange, note it is also possible to have a text element in this to provide for a reference range that is less evident to express structurally -->
 					<low>
 						<value value="0"/>
 						<unit value="mm/h"/>
@@ -404,11 +305,23 @@ Hemoglobin				14.1	g/dL			11.8-14.8 	g/dL</pre>
 						<code value="mm/h"/>
 					</high>
 					<type>
+						<!-- OPTIONAL The .type is the Reference range qualifier, using a HL7 coding table -->
 						<coding>
 							<system value="http://terminology.hl7.org/CodeSystem/referencerange-meaning"/>
 							<code value="normal"/>
 						</coding>
 					</type>
+					<appliesTo>
+						<!-- OPTIONAL 1..* of something like 'Male', 'Female', etc. could be added here -->
+						<coding>
+							<system value="http://snomed.info/sct"/>
+							<code value="248153007"/>
+							<display value="Male"/>
+						</coding>
+					</appliesTo>
+					<!-- OPTIONAL an age range could be given here using the .age element -->
+					<!--OPTIONAL when reference can only be explained in text or if extra info is needed -->
+					<text value="Something concerning the reference range that can only be explained in text -->"/>
 				</referenceRange>
 			</Observation>
 		</resource>
@@ -421,25 +334,7 @@ Hemoglobin				14.1	g/dL			11.8-14.8 	g/dL</pre>
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation"/>
 				</meta>
-				<text>
-					<status value="generated"/>
-					<div xmlns="http://www.w3.org/1999/xhtml">
-						<p>
-							<b>Generated Narrative</b>
-						</p>
-						<p>
-							<b>id</b>: observation11</p>
-						<p>
-							<b>meta</b>: </p>
-						<p/>
-						<p>
-							<b>category</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/observation-category laboratory}">laboratory studies</span>
-						</p>
-						<p>
-							<b>code</b>: SCREENING
-						</p>
-					</div>
-				</text>
+		
 				<status value="final"/>
 				<code>
 					<text value="SCREENING"/>
@@ -468,69 +363,16 @@ Hemoglobin				14.1	g/dL			11.8-14.8 	g/dL</pre>
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation"/>
 				</meta>
-				<text>
-					<status value="generated"/>
-					<div xmlns="http://www.w3.org/1999/xhtml">
-						<p>
-							<b>Generated Narrative</b>
-						</p>
-						<p>
-							<b>id</b>: observation111</p>
-						<p>
-							<b>meta</b>: </p>
-						<p/>
-						<p>
-							<b>category</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/observation-category laboratory}">laboratory studies</span>
-						</p>
-						<p>
-							<b>code</b>: <span title="Codes: {http://loinc.org 789-8}">Red blood cells (blood)</span>
-						</p>
-						<p>
-							<b>subject</b>: <a href="Patient-patient1.html">Generated Summary: id: patient1; 79121137740 (OFFICIAL), Social Beneficiary Identifier = 79121137740 (OFFICIAL), Medical record number = 45XXP0PA-4 (USUAL); active; Josephine Nessa La Paradisio ; nessa.laparadisio@belgium.be, ph: +322476792979(MOBILE), ph: +3226718655(HOME), ph: +322476799(WORK); gender: female; birthDate: 1979-12-11; <span title="Codes: {http://terminology.hl7.org/CodeSystem/v3-MaritalStatus D}, {https://www.ehealth.fgov.be/standards/fhir/CodeSystem/cd-civilstate 41}">Divorced</span>
-							</a>
-						</p>
-						<p>
-							<b>effective</b>: Nov 4, 2015, 3:16:00 PM</p>
-						<p>
-							<b>performer</b>: <a href="Practitioner-practitioner1.html">Generated Summary: id: practitioner1; 79121137740 (OFFICIAL), 18749704477 (OFFICIAL); Katherine Pulaski (OFFICIAL); katherine.pulaski@enterprisehospital.be(WORK), ph: 022675198(WORK), fax: 022675209(WORK); gender: female; birthDate: 1979-12-11</a>
-						</p>
-						<p>
-							<b>value</b>: 4.35 10*6/uL</p>
-						<p>
-							<b>specimen</b>: <a href="Specimen-specimen1.html">Generated Summary: id: specimen1; 1; <span title="Codes: {http://snomed.info/sct 119297000}">Blood specimen</span>; receivedTime: 2015-11-04</a>
-						</p>
-						<h3>ReferenceRanges</h3>
-						<table class="grid">
-							<tr>
-								<td>-</td>
-								<td>
-									<b>Low</b>
-								</td>
-								<td>
-									<b>High</b>
-								</td>
-								<td>
-									<b>Type</b>
-								</td>
-							</tr>
-							<tr>
-								<td>*</td>
-								<td>3.93 10*6/uL</td>
-								<td>5.01 10*6/uL</td>
-								<td>
-									<span title="Codes: {http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}">Normal Range</span>
-								</td>
-							</tr>
-						</table>
-					</div>
-				</text>
+			
 				<status value="final"/>
 				<code>
 					<coding>
 						<system value="http://loinc.org"/>
 						<code value="789-8"/>
-						<display value="Red blood cells (blood)"/>
+						<display value="Erythrocytes [#/volume] in Blood by Automated count"/>
+						
 					</coding>
+					<text value="Red blood cells (blood)"/>
 				</code>
 				<subject>
 					<reference value="Patient/patient1"/>
@@ -579,69 +421,15 @@ Hemoglobin				14.1	g/dL			11.8-14.8 	g/dL</pre>
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation"/>
 				</meta>
-				<text>
-					<status value="generated"/>
-					<div xmlns="http://www.w3.org/1999/xhtml">
-						<p>
-							<b>Generated Narrative</b>
-						</p>
-						<p>
-							<b>id</b>: observation112</p>
-						<p>
-							<b>meta</b>: </p>
-						<p/>
-						<p>
-							<b>category</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/observation-category laboratory}">laboratory studies</span>
-						</p>
-						<p>
-							<b>code</b>: <span title="Codes: {http://loinc.org 20563-3}">Hemoglobin</span>
-						</p>
-						<p>
-							<b>subject</b>: <a href="Patient-patient1.html">Generated Summary: id: patient1; 79121137740 (OFFICIAL), Social Beneficiary Identifier = 79121137740 (OFFICIAL), Medical record number = 45XXP0PA-4 (USUAL); active; Josephine Nessa La Paradisio ; nessa.laparadisio@belgium.be, ph: +322476792979(MOBILE), ph: +3226718655(HOME), ph: +322476799(WORK); gender: female; birthDate: 1979-12-11; <span title="Codes: {http://terminology.hl7.org/CodeSystem/v3-MaritalStatus D}, {https://www.ehealth.fgov.be/standards/fhir/CodeSystem/cd-civilstate 41}">Divorced</span>
-							</a>
-						</p>
-						<p>
-							<b>effective</b>: Nov 4, 2015, 3:16:00 PM</p>
-						<p>
-							<b>performer</b>: <a href="Practitioner-practitioner1.html">Generated Summary: id: practitioner1; 79121137740 (OFFICIAL), 18749704477 (OFFICIAL); Katherine Pulaski (OFFICIAL); katherine.pulaski@enterprisehospital.be(WORK), ph: 022675198(WORK), fax: 022675209(WORK); gender: female; birthDate: 1979-12-11</a>
-						</p>
-						<p>
-							<b>value</b>: 14.1 g/dl</p>
-						<p>
-							<b>specimen</b>: <a href="Specimen-specimen1.html">Generated Summary: id: specimen1; 1; <span title="Codes: {http://snomed.info/sct 119297000}">Blood specimen</span>; receivedTime: 2015-11-04</a>
-						</p>
-						<h3>ReferenceRanges</h3>
-						<table class="grid">
-							<tr>
-								<td>-</td>
-								<td>
-									<b>Low</b>
-								</td>
-								<td>
-									<b>High</b>
-								</td>
-								<td>
-									<b>Type</b>
-								</td>
-							</tr>
-							<tr>
-								<td>*</td>
-								<td>11.8 g/dl</td>
-								<td>14.8 g/dl</td>
-								<td>
-									<span title="Codes: {http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}">Normal Range</span>
-								</td>
-							</tr>
-						</table>
-					</div>
-				</text>
+			
 				<status value="final"/>
 				<code>
 					<coding>
 						<system value="http://loinc.org"/>
 						<code value="20563-3"/>
-						<display value="Hemoglobin"/>
+						<display value="Carboxyhemoglobin/Hemoglobin.total in Blood"/>
 					</coding>
+					<text value="Hemoglobin"/>
 				</code>
 				<subject>
 					<reference value="Patient/patient1"/>
@@ -690,31 +478,7 @@ Hemoglobin				14.1	g/dL			11.8-14.8 	g/dL</pre>
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-organization"/>
 				</meta>
-				<text>
-					<status value="generated"/>
-					<div xmlns="http://www.w3.org/1999/xhtml">
-						<p>
-							<b>Generated Narrative</b>
-						</p>
-						<p>
-							<b>id</b>: organization10</p>
-						<p>
-							<b>meta</b>: </p>
-						<p>
-							<b>identifier</b>: Medical License number = 81165343998 (OFFICIAL)</p>
-						<p>
-							<b>active</b>: true</p>
-						<p>
-							<b>type</b>: <span title="Codes: {https://www.ehealth.fgov.be/standards/fhir/CodeSystem/cd-hcparty orglaboratory}">orglaboratory</span>
-						</p>
-						<p>
-							<b>name</b>: GTL - General Testing Laboratory</p>
-						<p>
-							<b>telecom</b>: ph: 322675199(WORK)</p>
-						<p>
-							<b>address</b>: Vulcansstraat 120, 1000 Brussel(WORK)</p>
-					</div>
-				</text>
+
 				<identifier>
 					<use value="official"/>
 					<type>
@@ -766,28 +530,10 @@ Hemoglobin				14.1	g/dL			11.8-14.8 	g/dL</pre>
 		<fullUrl value="urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d41"/>
 		<resource>
 			<Practitioner>
-				<id value="practitioner10"/>
+				<id value="practitioner11"/>
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-practitioner"/>
 				</meta>
-				<text>
-					<status value="generated"/>
-					<div xmlns="http://www.w3.org/1999/xhtml">
-						<p>
-							<b>Generated Narrative</b>
-						</p>
-						<p>
-							<b>id</b>: practitioner10</p>
-						<p>
-							<b>meta</b>: </p>
-						<p>
-							<b>identifier</b>: 554488997 (OFFICIAL)</p>
-						<p>
-							<b>name</b>: Nicolas Davoust (OFFICIAL)</p>
-						<p>
-							<b>telecom</b>: nicolas.davoust@gtl.be(WORK), ph: 022675198(WORK), fax: 022675209(WORK)</p>
-					</div>
-				</text>
 				<identifier>
 					<use value="official"/>
 					<system value="https://www.ehealth.fgov.be/standards/fhir/NamingSystem/nihdi"/>
@@ -879,7 +625,7 @@ Hemoglobin				14.1	g/dL			11.8-14.8 	g/dL</pre>
 				<id value="servicerequest1"/>
 				<identifier>
 					<!--The original order number -->
-					<system value="TheOrderingSystem"/>
+					<system value="https://www.GTL-LABO.be/orderingsystem"/>
 					<value value="12334546"/>
 				</identifier>
 				<status value="active"/>

@@ -4,7 +4,7 @@
   <id value="hl7.country.ig"/>
   <url value="http://hl7.country.org/fhir/ig"/>
   <!-- This version will propagate to all artifacts unless the "propagate-version" extension is overridden -->
-  <version value="0.2.0"/>
+  <version value="0.0.1"/>
   <name value="AffiliateIG"/>
   <title value="HL7 BE Laboratory Result WG Implementation Guide (work in progress)"/>
   <status value="draft"/>
@@ -60,7 +60,10 @@
     </grouping>
 
 
-
+<grouping id="exl">
+      <name value="Laboratory Report examples"/>
+      <description value="Specific examples made for the Belgian laboratory report."/>
+    </grouping>
 
 
 
@@ -108,6 +111,17 @@
       <name value="Observation core BE profile"/>
       <description value="Core Belgian profile for Observation"/>
       <groupingId value="sc"/>
+    </resource>
+
+
+	  <resource>
+      <reference>
+        <reference value="Bundle/HematologyStudiesAsBundleCollection"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Hematology studies example"/>
+      <description value="Hematology studies example as collection bundle"/>
+      <groupingId value="exl"/>
     </resource>
 
 

@@ -63,25 +63,7 @@
   "derivation": "constraint",
   "differential": {
     "element": [
-          {
-        "id": "DiagnosticReport.meta",
-        "path": "DiagnosticReport.meta",
-        "mustSupport": true
-      },
       {
-        "id": "DiagnosticReport.language",
-        "path": "DiagnosticReport.language",
-        "definition": "The base language in which the resource is written. The base language in which the resource is written, typically this will be fr-BE, nl-BE, en or de. It is RECOMMENDED to only declare the language here.",
-        "min": 1,
-        "mustSupport": true
-      },    
-      {
-        "id": "DiagnosticReport.text",
-        "path": "DiagnosticReport.text",
-        "min": 1,
-        "mustSupport": true
-      },
-	  {
         "id": "DiagnosticReport.extension",
         "path": "DiagnosticReport.extension",
         "slicing": {
@@ -124,6 +106,24 @@
         ]
       },
       {
+        "id": "DiagnosticReport.meta",
+        "path": "DiagnosticReport.meta",
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.language",
+        "path": "DiagnosticReport.language",
+        "definition": "The base language in which the resource is written. The base language in which the resource is written, typically this will be fr-BE, nl-BE, en or de. It is RECOMMENDED to only declare the language here.",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.text",
+        "path": "DiagnosticReport.text",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
         "id": "DiagnosticReport.identifier",
         "path": "DiagnosticReport.identifier",
         "min": 1,
@@ -145,7 +145,7 @@
         "id": "DiagnosticReport.basedOn",
         "path": "DiagnosticReport.basedOn",
         "short": "A reference to a ServiceRequest SHALL be given here that minimally includes the time of prescription.",
-        "definition": "Details concerning the prescription this laboratory report fullfills. A reference to a ServiceRequest SHALL be given here that includes the time of prescription in its .authoredOn element. It is RECOMMENDED to also use the .identifier element of the ServiceRequest to refer to the original order number. Note, within the Observation resource it is possible to define they were defined on a different serviceRequest (e.g. to clarify it was a sub ordering)",
+        "definition": "Details concerning the prescription this laboratory report fullfills. A reference to a ServiceRequest SHALL be given here that includes the time of prescription in its .authoredOn element. It is RECOMMENDED to also use the .identifier element of the ServiceRequest to identify the original order number. Note, within the Observation resource it is possible to define they were defined on a different serviceRequest (e.g. to clarify it was a sub ordering)",
         "min": 1,
         "max": "1",
         "type": [
@@ -297,6 +297,7 @@
       {
         "id": "DiagnosticReport.resultsInterpreter",
         "path": "DiagnosticReport.resultsInterpreter",
+        "short": "Primary result interpreter. Need to know whom to contact if there are queries about the results.",
         "min": 1,
         "type": [
           {

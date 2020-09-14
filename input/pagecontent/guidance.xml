@@ -133,6 +133,13 @@ Typically, values will be expressed using a certain unit.
 Units will be expressed using <a href="http://unitsofmeasure.org/ucum.html">UCUM codes</a> as per the specification. The KMEHR reference table CD-UNIT is not used.</li>
 <li>Implementers SHALL take note of the very flexible .value[x] element within the FHIR Observation resource. This allows multiple ways to express the result structurally. Each option has its own datatype. Typically, for measurements, .valueQuantity is expected to be used that leverages the FHIR Quantity datatype. For observation results that do not fall in any structured category, there is the option to use .valueString to express the result in text.
 </li></ul>
+<h5>Use of preformatted text</h5>
+<p>If the Observation can only be fully expressed in preformatted text, this is NOT RECOMMENDED but possible by only providing the mininal required elements in the Observation resource and using the XML 'pre' tag to include this in the narrative. As such, the Observation will not contain a structured .value and the narrative will normally be marked as ''additional.'</p>
+<h5>Use of images</h5>
+<p>Images can be included in the Observation by leveraging the .derivedFrom element within the Observation."	
+The target resource that represents a measurement from which this observation value is derived. For example, a calculated anion gap or a fetal measurement based on an ultrasound image."</p>
+<p>If the goal is to simply add images in general to the report, they can be referenced from the diagnosticReport resource itself via the .media element.</p>
+<p>Use of images should be done with caution towards consumers of the data.</p>
 
 <h4>Guidance for minimal information in supporting resources</h4>
 
