@@ -140,6 +140,27 @@ Units will be expressed using <a href="http://unitsofmeasure.org/ucum.html">UCUM
 The target resource that represents a measurement from which this observation value is derived. For example, a calculated anion gap or a fetal measurement based on an ultrasound image."</p>
 <p>If the goal is to simply add images in general to the report, they can be referenced from the diagnosticReport resource itself via the .media element.</p>
 <p>Use of images should be done with caution towards consumers of the data.</p>
+<h5>Relative time for challenge testing</h5>
+<p>Some LOINC codes exist that define a specific timing interval as ‘XXX’. E.g.“LOINC 16904-5 GLUCOSE^1ST SPECIMEN POST XXX CHALLENGE” but without a timing interval.
+If the Code needs to be extended with a relative time or a point in time: use the defined extension to do this.</p>
+<p><pre>[...]
+"code" : {
+          "extension" : [
+            {
+              "url" : "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-ext-relative-time",
+              "valueQuantity" : {
+                "value" : 50,
+                "unit" : "m",
+                "system" : "http://unitsofmeasure.org",
+                "code" : "m"
+              }
+            }
+          ],
+          "coding" : [
+            {
+              "system" : "http://loinc.org",
+			  [...]
+</pre></p>
 
 <h4>Guidance for minimal information in supporting resources</h4>
 

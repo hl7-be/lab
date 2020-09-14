@@ -113,14 +113,12 @@
       {
         "id": "DiagnosticReport.language",
         "path": "DiagnosticReport.language",
-        "definition": "The base language in which the resource is written. The base language in which the resource is written, typically this will be fr-BE, nl-BE, en or de. It is RECOMMENDED to only declare the language here.",
-        "min": 1,
         "mustSupport": true
       },
       {
         "id": "DiagnosticReport.text",
         "path": "DiagnosticReport.text",
-        "min": 1,
+        "requirements": "The base language in which the resource is written. The base language in which the resource is written, typically this will be fr-BE, nl-BE, en or de. It is RECOMMENDED to only declare the language here.",
         "mustSupport": true
       },
       {
@@ -324,7 +322,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation"
+              "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"
             ]
           }
         ],

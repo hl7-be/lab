@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="be-ext-relative-time" />
+  <url value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-ext-relative-time" />
+  <name value="BeRelativeTime" />
+  <title value="BeRelativeTime" />
+  <status value="draft" />
+  <description value="Some LOINC codes exist that define a specific timing interval as ‘XXX’. E.g.“LOINC 16904-5 GLUCOSE^1ST SPECIMEN POST XXX CHALLENGE” but without a timing interval.&#xD;&#xA;This extension is used to define the timing interval, typically the UCUM code will be s, min or h." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="Observation.code" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="Relative time extension" />
+      <definition value="To define codes that imply a specific timing interval but where the interval is not specified in the code.&#xD;&#xA;This extension is used to define the timing interval, typically the UCUM code will be s, min or h." />
+      <isModifier value="false" />
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-ext-relative-time" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <type>
+        <code value="Quantity" />
+      </type>
+    </element>
+    <element id="Extension.value[x].value">
+      <path value="Extension.value[x].value" />
+      <min value="1" />
+    </element>
+    <element id="Extension.value[x].unit">
+      <path value="Extension.value[x].unit" />
+      <min value="1" />
+    </element>
+    <element id="Extension.value[x].system">
+      <path value="Extension.value[x].system" />
+      <min value="1" />
+      <fixedUri value="http://unitsofmeasure.org" />
+    </element>
+    <element id="Extension.value[x].code">
+      <path value="Extension.value[x].code" />
+      <min value="1" />
+    </element>
+  </differential>
+</StructureDefinition>
