@@ -9,6 +9,7 @@
 			<DiagnosticReport>
 				<id value="diagnosticreport1"/>
 				<meta>
+				<versionId value="1"/>
 					<!--  the be-report SHALL claim conformance to the be-profile  -->
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report"/>
 				</meta>
@@ -113,6 +114,7 @@ Hemoglobin				14.1	g/dL			11.8-14.8 	g/dL</pre>
 					<!--Here SHALL be a business identifier to identify the report. "Need to know what identifier to use when making queries about this report from the source laboratory"-->
 					<system value="http://acme.com/lab/reports"/>
 					<value value="11530231003.2015110413180000000"/>
+					
 				</identifier>
 				<basedOn>
 					<!-- The time of the prescription lives in the original ServiceRequest resource and SHALL be  referenced here. The time of the prescription lives in the ServiceRequest.authoredOn element. -->
@@ -124,6 +126,7 @@ Hemoglobin				14.1	g/dL			11.8-14.8 	g/dL</pre>
 				<category>
 					<coding>
 						<!-- The generic 'LAB' category SHALL be given as per the base FHIR specification. If needed, extra categories can be added to further categorize the report  -->
+						<!-- QUESTION: DO WE NEED TO PROVIDE A LIMITED LIST HERE FOR EXTRA CATEGORIES? -->
 						<system value="http://terminology.hl7.org/CodeSystem/v2-0074"/>
 						<code value="LAB"/>
 						<display value="Laboratory"/>
@@ -131,6 +134,33 @@ Hemoglobin				14.1	g/dL			11.8-14.8 	g/dL</pre>
 				</category>
 				<code>
 					<!--  Here, one code SHALL be given - preferred is a LOINC code -  that describes what this report is actually about.  -->
+					<!-- QUESTION: DO WE NEED TO PROVIDE A LIMITED LIST HERE FOR CATEGORIES? 
+e.g. the one from the CDA format?
+18717-9 BLOOD BANK STUDIES
+18718-7 CELL MARKER STUDIES
+18719-5 CHEMISTRY STUDIES
+18720-3 COAGULATION STUDIES
+18721-1 THERAPEUTIC DRUG MONITORING STUDIES
+18722-9 FERTILITY STUDIES
+18723-7 HEMATOLOGY STUDIES
+18724-5 HLA STUDIES
+18725-2 MICROBIOLOGY STUDIES
+18727-8 SEROLOGY STUDIES
+18728-6 TOXICOLOGY STUDIES
+18729-4 URINALYSIS STUDIES
+18767-4 BLOOD GAS STUDIES
+18768-2 CELL COUNTS+DIFFERENTIAL STUDIES
+18769-0 MICROBIAL SUSCEPTIBILITY TESTS
+26435-8 MOLECULAR PATHOLOGY STUDIES
+26436-6 LABORATORY STUDIES
+26437-4 CHEMISTRY CHALLENGE STUDIES
+26438-2 CYTOLOGY STUDIES
+Notes:
+The choice of what observations to categorize under what specialty are left ultimately to the discretion of the laboratory sending the results. Some non-restrictive guidelines:
+o 18721-1 (THERAPEUTIC DRUG MONITORING STUDIES) will be used for a section carrying pharmacologyobservations on a patient.
+o Mycology and parasitology, as well as bacteriology, are part of the 18725-2 (MICROBIOLOGY STUDIES) specialty.
+o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18727-8 (SEROLOGY STUDIES)or split between both specialties, depending upon the Content Creator Actor’s choice
+-->
 					<coding>
 						<system value="http://loinc.org"/>
 						<code value="18723-7"/>
