@@ -18,7 +18,7 @@
 				<text>
 					<!--  the be-report SHALL have 1 text. A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative.  -->
 					<status value="generated"/>
-					<div xmlns="http://www.w3.org/1999/xhtml">
+					<div xmlns="http://www.w3.org/1999/xhtml"  lang="en" xml:lang="en">
 						<p>This example is presented as a Collection bundle for ease of understanding. It makes no assumption towards any final implementation of using FHIR technically. </p>
 						<p>Download and open this as XML in an editor to view XML annotations.</p>
 						<p>ALL LOINC, SNOMED-CT CODES ETC. ARE USED FOR ILLUSTRATIVE PURPOSES AND DO NOT NECESSARILY PRESENT A CLINICALLY CORRECT REAL LIFE LABORATORY REPORT</p>
@@ -196,6 +196,8 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 					<!-- Another Observation is given in this example. In this case, this Observation11 is actually the subtitle SCREENING and it refers to Observation111 and Observation112 that contain the red blood cells and the hemoglobin observations respectively  -->
 					<reference value="Observation/observation11"/>
 				</result>
+				<!--OPTIONAL include here any conclusion using .conclusion or .conclusionCode -->
+				<conclusion value="This is our conclusion"></conclusion>
 			</DiagnosticReport>
 		</resource>
 	</entry>
@@ -353,6 +355,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 					<!--OPTIONAL when reference can only be explained in text or if extra info is needed -->
 					<text value="Something concerning the reference range that can only be explained in text -->"/>
 				</referenceRange>
+				
 			</Observation>
 		</resource>
 	</entry>
