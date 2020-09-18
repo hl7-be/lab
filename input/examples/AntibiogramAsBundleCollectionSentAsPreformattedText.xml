@@ -9,7 +9,7 @@
 			<DiagnosticReport>
 				<id value="diagnosticreport2"/>
 				<meta>
-				<versionId value="1"/>
+					<versionId value="1"/>
 					<!--  the be-report SHALL claim conformance to the be-profile  -->
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report"/>
 				</meta>
@@ -18,19 +18,18 @@
 				<text>
 					<!--  the be-report SHALL have 1 text. A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative.  -->
 					<status value="generated"/>
-					<div xmlns="http://www.w3.org/1999/xhtml"  lang="be-nl" xml:lang="be-nl">
+					<div xmlns="http://www.w3.org/1999/xhtml" lang="be-nl" xml:lang="be-nl">
 						<p>This example is presented as a Collection bundle for ease of understanding. It makes no assumption towards any final implementation of using FHIR technically. </p>
 						<p>Download and open this as XML in an editor to view XML annotations.</p>
 						<p>ALL LOINC, SNOMED-CT CODES ETC. ARE USED FOR ILLUSTRATIVE PURPOSES AND DO NOT NECESSARILY PRESENT A CLINICALLY CORRECT REAL LIFE LABORATORY REPORT</p>
 						<h2>A narrative SHALL be included</h2>
 						<p>Specifically, the strong recommendation of HL7 concerning the use of the narrative &quot;to support human-consumption as a fallback&quot; is important in the context of the laboratory report. Indeed, this &quot;human-consumption&quot; aspect actually concerns the inclusion of limited xhtml content and as such an effortless implementation to visualize the content of the report by consuming systems is guarantueed. Also, for systems that might not initially choose to consume reports in a structured way, this guarantuees a way to at least visualize and present the content to the user.</p>
-			</div></text>
-
+					</div>
+				</text>
 				<identifier>
 					<!--Here SHALL be a business identifier to identify the report. "Need to know what identifier to use when making queries about this report from the source laboratory"-->
 					<system value="http://acme.com/lab/reports"/>
 					<value value="11530231003.2015110413180000000"/>
-					
 				</identifier>
 				<basedOn>
 					<!-- The time of the prescription lives in the original ServiceRequest resource and SHALL be  referenced here. The time of the prescription lives in the ServiceRequest.authoredOn element. -->
@@ -99,72 +98,17 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 					<!--  resultsinterpreter is given 1..* and will be typically a person. Need to know whom to contact if there are queries about the results. -->
 					<reference value="Practitioner/practitioner11"/>
 				</resultsInterpreter>
-				<specimen>
-					<!-- OPTIONAL include 0..* specimen (in certain cases, referring to specimen explicetely is considerd redundant in laboratort reporting) -->
-					<reference value="Specimen/specimen1"/>
-				</specimen>
 				<result>
 					<!-- Here follow the 1..* result that make up this report -->
 					<!-- In this case, this Observation20 is a preformatted text observation  -->
 					<reference value="Observation/observation10"/>
 				</result>
 				<!--OPTIONAL include here any conclusion using .conclusion or .conclusionCode -->
-				<conclusion value="This is our conclusion"></conclusion>
+				<conclusion value="This is our conclusion"/>
 			</DiagnosticReport>
 		</resource>
 	</entry>
-	<entry>
-		<fullUrl value="urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d35"/>
-		<resource>
-			<Specimen>
-				<!-- the other resources use the id to refer to this specimen  -->
-				<id value="specimen1"/>
-			
-				<identifier>
-					<!-- Business identifier of the specimen SHOULD BE included if available -->
-					<system value="https://www.GTL-LABO.be/"/>
-					<value value="1"/>
-				</identifier>
-				<!--  OPTIONAL status code of a Specimen available | unavailable | unsatisfactory | entered-in-error  Functionally, this status SHALL be logical when considered with the status of the report and/or the status of the Observation using this specimen-->
-				<status value="available"/>
-				<type>
-					<coding>
-						<!--  The actual specimen, described using a coding system. Here, the coding system SNOMED-CT is used for this which is RECOMMENDED for specimen. As a general back-up rule, whenever the laboratory does use a propriety code, a .text element SHALL always be included explaining the code.  -->
-						<system value="http://snomed.info/sct"/>
-						<code value="119297000"/>
-						<display value="Blood specimen"/>
-					</coding>
-					<text value="A string can be added to nuance or explain."/>
-				</type>
-				<!--  The date/time when the specimen was received SHOULD be included if available  -->
-				<receivedTime value="2015-11-04"/>
-				<collection>
-					<!--  The date/time when the specimen was collected SHOULD be included if available  -->
-					<collectedDateTime value="2015-11-03"/>
-					<method>
-						<!-- OPTIONAL provide the method of collection -->
-						<coding>
-							<system value="http://snomed.info/sct"/>
-							<code value="28520004"/>
-							<display value="Venipuncture for blood test (procedure)"/>
-						</coding>
-					</method>
-					<bodySite>
-						<!-- OPTIONAL provide the bodySite. Here, a SNOMED-CT code is used. Alternatively, express this using the .text element of the CodeableConcept datatype. -->
-						<coding>
-							<system value="http://snomed.info/sct"/>
-							<code value="368208006"/>
-							<display value="Left upper arm structure (body structure)"/>
-						</coding>
-					</bodySite>
-				</collection>
-				<note>
-					<!--  OPTIONAL, any note concerning the specimen. Using the Annotation datatype in FHIR, it is OPTIONAL here to also add an author and/or dateTime of this annotation  -->
-					<text value="Some extra relevant information concerning the specimen"/>
-				</note>
-			</Specimen>
-		</resource>
-	</entry>
+	
 	<entry>
 		<fullUrl value="urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d36"/>
 		<resource>
@@ -173,9 +117,9 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"/>
 				</meta>
-			<text>
-	<status value="additional"/>
-					<div xmlns="http://www.w3.org/1999/xhtml"  lang="be-nl" xml:lang="be-nl">
+				<text>
+					<status value="additional"/>
+					<div xmlns="http://www.w3.org/1999/xhtml" lang="be-nl" xml:lang="be-nl">
 						<pre>Staal Specificatie                          peroperatief staal
   Staal Specificatie                          abdominaal vocht    				Val 
   Gramkleuring                                WBC +- gram-negatieve staven +++
@@ -201,19 +145,13 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
                                               Cefotaxim/ceftriaxone    S
                                               Ceftazidime              S
                                               Meropenem                S</pre>
-						
-					
-					
 					</div>
-
-				
-	
-			</text>
+				</text>
 				<!--  MANDATORY status code of the Observation registered, preliminary, final, amended, corrected, cancelled, entered-in-error, unknown  Functionally, this status SHALL be logical when considered with the status of the report and/or the status of the Specimen used by this observation-->
 				<status value="final"/>
 				<!--  MANDATORY -->
 				<code>
-		<text value="The observation is given as preformatted text in the narrative"/>
+					<text value="The observation is given as preformatted text in the narrative"/>
 				</code>
 				<subject>
 					<reference value="Patient/patient1"/>
@@ -225,15 +163,9 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<performer>
 					<reference value="Practitioner/practitioner1"/>
 				</performer>
-
-
-			
 			</Observation>
 		</resource>
 	</entry>
-	
-
-
 	<entry>
 		<fullUrl value="urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d40"/>
 		<resource>
@@ -242,7 +174,6 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-organization"/>
 				</meta>
-
 				<identifier>
 					<use value="official"/>
 					<type>
