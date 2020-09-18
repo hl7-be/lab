@@ -41,7 +41,7 @@ The text here does not aim to explain the HL7 FHIR standard as such nor does thi
 <h4>Role of the narrative in FHIR</h4>
 <p>Implementers SHALL explicitely take note of the rules around the narrative in FHIR <a href="https://www.hl7.org/fhir/narrative.html">as explained on the pages of HL7.</a></p>
 <p>Specifically, the strong recommendation of HL7 concerning the use of the narrative "to support human-consumption as a fallback" is important in the context of the laboratory report. Indeed, this "human-consumption" aspect actually concerns the inclusion of limited xhtml content and as such an effortless implementation to visualize the content of the report by consuming systems is guarantueed. Also, for systems that might not initially choose to consume reports in a structured way, this guarantuees a way to at least visualize and present the content to the user. </p>
-<p>In the Belgian laboratory report, all content is RECOMMENDED to be available in the structured elements. As such, a narrative with <a href="https://www.hl7.org/fhir/valueset-narrative-status.html">narrative-status 'additional'</a> SHOULD NOT be used. Specifically, on the level of the individual Observation resources, that 'additional' status should be avoided as much as possible and only in exotic cases it is acceptable to express an Observation using only its narrative.</p>
+<p>In the Belgian laboratory report, all content is RECOMMENDED to be available in the structured elements. As such, a narrative with <a href="https://www.hl7.org/fhir/valueset-narrative-status.html">narrative-status 'additional'</a> SHOULD NOT be used. Specifically, on the level of the individual Observation resources, that 'additional' status should be avoided as much as possible and only in cases where the Observation can only be expressed in preformatted text (cfr. infra), it is acceptable to express an Observation using only its narrative.</p>
 
 <h4>Specimen overview</h4>
 <p>Every specimen is expressed as a seperate Specimen resource in FHIR.</p>
@@ -89,6 +89,9 @@ The text here does not aim to explain the HL7 FHIR standard as such nor does thi
 <h4>Referencing the (sub)order</h4>
 <p>The order (ServiceRequest resource) that is referenced from the DiagnosticReport via its .basedOn element contains the time when this order was placed as well as the original order number.</p>
 <p>It is possible for one or more of the Observations to reference a different ServiceRequest by using the .basedOn element in the Observation. This can be used e.g. if needed to explicitely state an Observation was made via a sub order. It is noted the Observation also contains the element .performer to simply specify the Observation had a different performer from the main performer referenced from the DiagnosticReport resource.</p>  
+
+<h4>Adding a PDF representation</h4>
+<p>If needed to also include the report as a PDF, that is possible using the element .presentedForm. Please refer to the <a href="http://hl7.org/fhir/R4/datatypes.html#Attachment">FHIR complex datatype 'Attachment'</a> for further instructions how to do include this.</p> <p>Naturally, the sender of the report that adds a PDF representation SHALL ensure it remains clinically logical and safe with the way the data is otherwise structurally expressed in the resource.</p>
 
 <h4>Guidance for the Observation resource</h4>
 <h5>Use of Retam codes</h5>
@@ -138,7 +141,7 @@ Units will be expressed using <a href="http://unitsofmeasure.org/ucum.html">UCUM
 <li>Implementers SHALL take note of the very flexible .value[x] element within the FHIR Observation resource. This allows multiple ways to express the result structurally. Each option has its own datatype. Typically, for measurements, .valueQuantity is expected to be used that leverages the FHIR Quantity datatype. For observation results that do not fall in any structured category, there is the option to use .valueString to express the result in text.
 </li></ul>
 <h5>Use of preformatted text</h5>
-<p>If the Observation can only be fully expressed in preformatted text, this is NOT RECOMMENDED but possible by only providing the mininal required elements in the Observation resource and using the XML 'pre' tag to include this in the narrative. As such, the Observation will not contain a structured .value and the narrative will normally be marked as ''additional.'</p>
+<p>If the Observation can only be fully expressed in preformatted text, this is NOT RECOMMENDED but possible by only providing the mininal required elements in the Observation resource and using the 'pre' tag to include this in the narrative. As such, the Observation will not contain a structured .value and the narrative will normally be marked as ''additional.'</p>
 <h5>Use of images</h5>
 <p>Images can be included in the Observation by leveraging the .derivedFrom element within the Observation."	
 The target resource that represents a measurement from which this observation value is derived. For example, a calculated anion gap or a fetal measurement based on an ultrasound image."</p>
