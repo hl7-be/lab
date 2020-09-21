@@ -106,22 +106,6 @@
         ]
       },
       {
-        "id": "DiagnosticReport.meta",
-        "path": "DiagnosticReport.meta",
-        "mustSupport": true
-      },
-      {
-        "id": "DiagnosticReport.language",
-        "path": "DiagnosticReport.language",
-        "mustSupport": true
-      },
-      {
-        "id": "DiagnosticReport.text",
-        "path": "DiagnosticReport.text",
-        "requirements": "The base language in which the resource is written. The base language in which the resource is written, typically this will be fr-BE, nl-BE, en or de. It is RECOMMENDED to only declare the language here.",
-        "mustSupport": true
-      },
-      {
         "id": "DiagnosticReport.identifier",
         "path": "DiagnosticReport.identifier",
         "min": 1,
@@ -166,15 +150,6 @@
       {
         "id": "DiagnosticReport.category",
         "path": "DiagnosticReport.category",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "coding.code"
-            }
-          ],
-          "rules": "open"
-        },
         "short": "The subject of this specialty, expressed in a LOINC code.",
         "definition": "The subject of this specialty, expressed in a LOINC code.\r\n\r\nThe choice of what observations to categorize under what specialty are left ultimately to the discretion of the laboratory sending the results. Some non-restrictive guidelines:\r\n*18721-1 (THERAPEUTIC DRUG MONITORING STUDIES) will be used for a section carrying pharmacologyobservations on a patient.\r\n*Mycology and parasitology, as well as bacteriology, are part of the 18725-2 (MICROBIOLOGY STUDIES) specialty.\r\n*665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18727-8 (SEROLOGY STUDIES)or split between both specialties, depending upon the Content Creator Actor’s choice",
         "min": 1,
@@ -183,9 +158,16 @@
       {
         "id": "DiagnosticReport.category.coding",
         "path": "DiagnosticReport.category.coding",
-        "min": 1,
-        "max": "1",
-        "mustSupport": false
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "code"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
       },
       {
         "id": "DiagnosticReport.category.coding.system",
@@ -203,40 +185,27 @@
         "min": 1
       },
       {
-        "id": "DiagnosticReport.category:LABSTUDIES",
-        "path": "DiagnosticReport.category",
-        "sliceName": "LABSTUDIES",
-        "min": 1,
-        "max": "1",
-        "mustSupport": false
-      },
-      {
-        "id": "DiagnosticReport.category:LABSTUDIES.coding",
+        "id": "DiagnosticReport.category.coding:LABREPORT",
         "path": "DiagnosticReport.category.coding",
+        "sliceName": "LABREPORT",
         "min": 1,
-        "max": "1",
-        "mustSupport": false
+        "max": "1"
       },
       {
-        "id": "DiagnosticReport.category:LABSTUDIES.coding.system",
+        "id": "DiagnosticReport.category.coding:LABREPORT.system",
         "path": "DiagnosticReport.category.coding.system",
         "min": 1,
-        "fixedUri": "http://terminology.hl7.org/CodeSystem/v2-0074",
-        "mustSupport": false
+        "fixedUri": "http://terminology.hl7.org/CodeSystem/v2-0074"
       },
       {
-        "id": "DiagnosticReport.category:LABSTUDIES.coding.code",
+        "id": "DiagnosticReport.category.coding:LABREPORT.code",
         "path": "DiagnosticReport.category.coding.code",
-        "min": 1,
-        "fixedCode": "LAB",
-        "mustSupport": false
+        "fixedCode": "LAB"
       },
       {
-        "id": "DiagnosticReport.category:LABSTUDIES.coding.display",
+        "id": "DiagnosticReport.category.coding:LABREPORT.display",
         "path": "DiagnosticReport.category.coding.display",
-        "min": 1,
-        "fixedString": "Laboratory",
-        "mustSupport": false
+        "fixedString": "Laboratory"
       },
       {
         "id": "DiagnosticReport.code",
