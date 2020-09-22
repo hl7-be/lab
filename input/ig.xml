@@ -132,6 +132,18 @@
       <description value="Structured Antibiogram in collection bundle"/>
       <groupingId value="exl"/>
     </resource>
+	
+	
+		 <resource>
+      <reference>
+        <reference value="Bundle/AntibiogramIsNegativeAsBundleCollection"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Structured Negative Antibiogram in collection bundle"/>
+      <description value="Structured Negative Antibiogram in collection bundle"/>
+      <groupingId value="exl"/>
+    </resource>
+	
 	 <resource>
       <reference>
         <reference value="Bundle/AntibiogramAsBundleCollectionSentAsPreformattedText"/>

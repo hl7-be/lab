@@ -174,7 +174,7 @@ If the Code needs to be extended with a relative time: use the defined extension
 <p>The HL7 pages describe how to deal with more complex antibiogram structures. In <a href="https://www.hl7.org/fhir/R4/diagnosticreport-examples.html#10.3.7.1.1">these rules</a>, examples
  are given how to deal with multiple levels to model the organisms and susceptibility panels.</p>
  <p>The 'AntibiogramAsBundleCollection' example that can be found in this guide is based on the second structure described on that page</p>
- <p>It basically leverages the third way as described infra how to group resources:</p>
+ <p>It basically leverages the third way as described supra how to group resources:</p>
  <ul>
   <li>Any general Observation that is done is on the level of the report.</li>
  <li>For each organism there is an Observation on the level of the report: the 'organism observation'

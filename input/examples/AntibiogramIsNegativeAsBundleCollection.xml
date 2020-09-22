@@ -1,29 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///H:/OLD_DESKTOP/Desktop/LATEST%20AND%20GREATEST/FHIR4/bundle.xsd">
-	<id value="AntibiogramAsBundleCollectionSentAsPreformattedText"/>
+	<id value="AntibiogramIsNegativeAsBundleCollection"/>
 	<type value="collection"/>
 	<!--This example is presented as a Collection bundle for ease of understanding. It makes no assumption towards any final implementation of using FHIR technically. Open this as XML to view XML annotations.-->
 	<entry>
-		<fullUrl value="urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d34"/>
+		<fullUrl value="urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d90"/>
 		<resource>
 			<DiagnosticReport>
-				<id value="diagnosticreport20"/>
+				<id value="diagnosticreport60"/>
 				<meta>
 					<versionId value="1"/>
 					<!--  the be-report SHALL claim conformance to the be-profile  -->
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report"/>
 				</meta>
 				<!--  the be-report SHALL have 1 language. The base language in which the resource is written. The base language in which the resource is written, typically this will be fr-BE, nl-BE, en or de. It is RECOMMENDED to only declare the language here.  -->
-				<language value="be-nl"/>
+				<language value="en"/>
 				<text>
 					<!--  the be-report SHALL have 1 text. A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative.  -->
 					<status value="generated"/>
-					<div xmlns="http://www.w3.org/1999/xhtml" lang="be-nl" xml:lang="be-nl">
+					<div xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 						<p>This example is presented as a Collection bundle for ease of understanding. It makes no assumption towards any final implementation of using FHIR technically. </p>
 						<p>Download and open this as XML in an editor to view XML annotations.</p>
 						<p>ALL LOINC, SNOMED-CT CODES ETC. ARE USED FOR ILLUSTRATIVE PURPOSES AND DO NOT NECESSARILY PRESENT A CLINICALLY CORRECT REAL LIFE LABORATORY REPORT</p>
 						<h2>A narrative SHALL be included</h2>
 						<p>Specifically, the strong recommendation of HL7 concerning the use of the narrative &quot;to support human-consumption as a fallback&quot; is important in the context of the laboratory report. Indeed, this &quot;human-consumption&quot; aspect actually concerns the inclusion of limited xhtml content and as such an effortless implementation to visualize the content of the report by consuming systems is guarantueed. Also, for systems that might not initially choose to consume reports in a structured way, this guarantuees a way to at least visualize and present the content to the user.</p>
+						<p>The exact presentation is left at the discretion of the providing party.</p>
+						<pre>Specimen			Intubation Aspirate
+Macroscopic observation		Matig purulent
+Culture				Commensalen +-</pre>
 					</div>
 				</text>
 				<identifier>
@@ -33,7 +37,7 @@
 				</identifier>
 				<basedOn>
 					<!-- The time of the prescription lives in the original ServiceRequest resource and SHALL be  referenced here. The time of the prescription lives in the ServiceRequest.authoredOn element. -->
-					<reference value="ServiceRequest/servicerequest1"/>
+					<reference value="ServiceRequest/servicerequest60"/>
 					<!-- Note, within the Observation resource it is possible to define they were defined on a different serviceRequest (e.g. to clarify it was a sub ordering)) -->
 				</basedOn>
 				<!-- The status SHALL be given. As per the base FHIR resource, this can be registered,partial,preliminary,final,	amended, corrected, appended,cancelled,entered-in-error or	unknown. Naturally, the status on this level SHALL be logical according to the status of any individual Observation and possibly Specimen -->
@@ -41,10 +45,15 @@
 				<category>
 					<coding>
 						<!-- The generic 'LAB' category SHALL be given as per the base FHIR specification. If needed, extra categories can be added to further categorize the report  -->
-						<!-- QUESTION: DO WE NEED TO PROVIDE A LIMITED LIST HERE FOR EXTRA CATEGORIES? -->
 						<system value="http://terminology.hl7.org/CodeSystem/v2-0074"/>
 						<code value="LAB"/>
 						<display value="Laboratory"/>
+					</coding>
+					<coding>
+						<!--  If needed, extra categories can be added to further categorize the report - in this example, the extra code 'MB' is given -->
+						<system value="http://terminology.hl7.org/CodeSystem/v2-0074"/>
+						<code value="MB"/>
+						<display value="Microbiology"/>
 					</coding>
 				</category>
 				<code>
@@ -80,8 +89,9 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 						<system value="http://loinc.org"/>
 						<code value="18769-0"/>
 						<display value="Microbial susceptibility tests Set"/>
+					
 					</coding>
-							<text value="Microbial susceptibility tests"/>
+					<text value="Microbial susceptibility tests"/>
 				</code>
 				<subject>
 					<!--  Here, the subject SHALL be given - normally, this will be a patient. As per the FHIR Reference datatype (that also applies to other parts in this message when a Reference datatype is used) when Patient is available on a server, a URL may be given but it is also possible here to give e.g. the SSIN business identifier for a patient. In this bundle example, this is a reference to the entry in this bundle that contains this patient. -->
@@ -99,76 +109,115 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 					<!--  resultsinterpreter is given 1..* and will be typically a person. Need to know whom to contact if there are queries about the results. -->
 					<reference value="Practitioner/practitioner11"/>
 				</resultsInterpreter>
+				<specimen>
+					<!-- OPTIONAL include 0..* specimen (in certain cases, referring to specimen explicetely is considerd redundant in laboratort reporting) -->
+					<reference value="Specimen/specimen60"/>
+				</specimen>
 				<result>
-					<!-- Here follow the 1..* result that make up this report -->
-					<!-- In this case, this Observation20 is a preformatted text observation  -->
-					<reference value="Observation/observation20"/>
+					<reference value="Observation/mac60"/>
 				</result>
-				<!--OPTIONAL include here any conclusion using .conclusion or .conclusionCode -->
+				<result>
+					<reference value="Observation/cult60"/>
+				</result>
 				<conclusion value="This is our conclusion"/>
 			</DiagnosticReport>
 		</resource>
 	</entry>
-	
 	<entry>
-		<fullUrl value="urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d36"/>
+		<fullUrl value="urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d91"/>
+		<resource>
+			<Specimen>
+				<!-- the other resources use the id to refer to this specimen  -->
+				<id value="specimen60"/>
+				<identifier>
+					<!-- Business identifier of the specimen SHOULD BE included if available -->
+					<system value="https://www.GTL-LABO.be/"/>
+					<value value="1"/>
+				</identifier>
+				<!--  OPTIONAL status code of a Specimen available | unavailable | unsatisfactory | entered-in-error  Functionally, this status SHALL be logical when considered with the status of the report and/or the status of the Observation using this specimen-->
+				<status value="available"/>
+				<type>
+					<coding>
+						<!--  The actual specimen, described using a coding system. Here, the coding system SNOMED-CT is used for this which is RECOMMENDED for specimen. As a general back-up rule, whenever the laboratory does use a propriety code, a .text element SHALL always be included explaining the code.  -->
+						<system value="http://snomed.info/sct"/>
+						<code value="119295008"/>
+						<display value="Aspirate"/>
+					</coding>
+					<text value="A string can be added to nuance or explain."/>
+				</type>
+				<!--  The date/time when the specimen was received SHOULD be included if available  -->
+				<receivedTime value="2015-11-04"/>
+				<note>
+					<!--  OPTIONAL, any note concerning the specimen. Using the Annotation datatype in FHIR, it is OPTIONAL here to also add an author and/or dateTime of this annotation  -->
+					<text value="Some extra relevant information concerning the specimen"/>
+				</note>
+			</Specimen>
+		</resource>
+	</entry>
+		<entry>
+		<fullUrl value="urn:uuid:7c16c9c0-c471-4098-ae09-48abcadd9d92"/>
 		<resource>
 			<Observation>
-				<id value="observation20"/>
+				<id value="mac60"/>
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"/>
 				</meta>
-				<text>
-					<status value="additional"/>
-					<div xmlns="http://www.w3.org/1999/xhtml" lang="be-nl" xml:lang="be-nl">
-						<pre>Staal Specificatie                          peroperatief staal
-  Staal Specificatie                          abdominaal vocht    				Val 
-  Gramkleuring                                WBC +- gram-negatieve staven +++
-                                               gram+ coccen +					Val 
-  Kweek (isolaten, ABgram...)                 1: : Klebsiella pneumoniae +++
-                                              2: : Enterococcus faecium +
-                                              3: : Streptococcus mitis groep +			Val 
-  Antibiogram                                                          1   2   3
-                                              Ampicilline/Amoxicilline R   R   I
-                                              Cotrimoxazol             S
-                                              Vancomycine                  S   S
-                                              Clindamycine                     S
-                                              Nitrofurantoine          S
-                                              Cefuroxim                S
-                                              Gentamycine              S
-                                              Colimycine               S
-                                              Temocilline              S
-                                              Fosfomycine              S
-                                              Ofloxacine/levofloxacine S
-                                              Amoxy-clavulaanzuur      S
-                                              Amikacine                S
-                                              Piperacilline/tazobactam S
-                                              Cefotaxim/ceftriaxone    S
-                                              Ceftazidime              S
-                                              Meropenem                S</pre>
-					</div>
-				</text>
 				<!--  MANDATORY status code of the Observation registered, preliminary, final, amended, corrected, cancelled, entered-in-error, unknown  Functionally, this status SHALL be logical when considered with the status of the report and/or the status of the Specimen used by this observation-->
 				<status value="final"/>
 				<!--  MANDATORY -->
 				<code>
-					<text value="The observation is given as preformatted text in the narrative"/>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="74574-5"/>
+						<display value="Macroscopic observation [Interpretation] in Unspecified specimen Narrative"/>
+					</coding>
+						<text value="Macroscopic observation"/>
 				</code>
 				<subject>
 					<reference value="Patient/patient1"/>
 				</subject>
-				<!--OPTIONAL the effectiveDateTime OR effectivePeriod OR effectiveTiming OR effectiveInstant reflects the "The time or time-period the observed value is asserted as being true. For biological subjects - e.g. human patients - this is usually called the "physiologically relevant time". This is usually either the time of the procedure or of specimen collection, but very often the source of the date/time is not known, only the date/time itself." Note also, the next element .issued -->
 				<effectiveDateTime value="2015-11-04T09:16:00-05:00"/>
-				<!--OPTIONAL the issued instant."The date and time this version of the observation was made available to providers, typically after the results have been reviewed and verified." Note also, the previous element -->
 				<issued value="2015-11-04T09:16:00-05:00"/>
 				<performer>
 					<reference value="Practitioner/practitioner1"/>
 				</performer>
+				<valueString value="matig purulent"/>
 			</Observation>
 		</resource>
 	</entry>
 	<entry>
-		<fullUrl value="urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d40"/>
+		<fullUrl value="urn:uuid:7c16c9c0-c471-4098-ae09-48abcadd9d93"/>
+		<resource>
+			<Observation>
+				<id value="cult60"/>
+				<meta>
+					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"/>
+				</meta>
+				<!--  MANDATORY status code of the Observation registered, preliminary, final, amended, corrected, cancelled, entered-in-error, unknown  Functionally, this status SHALL be logical when considered with the status of the report and/or the status of the Specimen used by this observation-->
+				<status value="final"/>
+				<!--  MANDATORY -->
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="43411-8"/>
+						<display value="Bacteria identified in Aspirate by Culture"/>
+					</coding>
+					<text value="Culture"/>
+				</code>
+				<subject>
+					<reference value="Patient/patient1"/>
+				</subject>
+				<effectiveDateTime value="2015-11-04T09:16:00-05:00"/>
+				<issued value="2015-11-04T09:16:00-05:00"/>
+				<performer>
+					<reference value="Practitioner/practitioner1"/>
+				</performer>
+				<valueString value="Commensalen +-"/>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d94"/>
 		<resource>
 			<Organization>
 				<id value="organization10"/>
@@ -223,7 +272,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 		</resource>
 	</entry>
 	<entry>
-		<fullUrl value="urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d41"/>
+		<fullUrl value="urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d95"/>
 		<resource>
 			<Practitioner>
 				<id value="practitioner11"/>
@@ -259,7 +308,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 		</resource>
 	</entry>
 	<entry>
-		<fullUrl value="urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d42"/>
+		<fullUrl value="urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d96"/>
 		<resource>
 			<Patient xmlns="http://hl7.org/fhir">
 				<id value="patient1"/>
@@ -315,10 +364,10 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 		</resource>
 	</entry>
 	<entry>
-		<fullUrl value="urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d43"/>
+		<fullUrl value="urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d97"/>
 		<resource>
 			<ServiceRequest xmlns="http://hl7.org/fhir">
-				<id value="servicerequest1"/>
+				<id value="servicerequest60"/>
 				<identifier>
 					<!--The original order number -->
 					<system value="https://www.GTL-LABO.be/orderingsystem"/>
@@ -342,13 +391,13 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 					<reference value="Practitioner/practitioner1"/>
 				</requester>
 				<specimen>
-					<reference value="Specimen/specimen1"/>
+					<reference value="Specimen/specimen60"/>
 				</specimen>
 			</ServiceRequest>
 		</resource>
 	</entry>
 	<entry>
-		<fullUrl value="urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d44"/>
+		<fullUrl value="urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d98"/>
 		<resource>
 			<Practitioner xmlns="http://hl7.org/fhir">
 				<id value="practitioner1"/>
