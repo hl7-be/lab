@@ -23,14 +23,17 @@ The text here does not aim to explain the HL7 FHIR standard as such nor does thi
 <p>The different bindings with codes SHALL be exmamined when implementing the laboratory report. Specifically the use of codes to express the observations as expressed on this page infra SHALL be strictly followed. As a general back-up rule, whenever the laboratory does use a propriety code (e.g. to express a bodysite), a .text element SHALL always be included explaining the code.</p>
 
 
-<h3>The structure of the report: pointers</h3>
-<p>The content of the report is described in detail in the profile. This chapter highlights some general attention points in the structure. </p>
+<h3>The structure of the report: attention points</h3>
+<p>The content of the report is described in detail in the profiles. This chapter highlights some general attention points in the structure. </p>
 <p>The profile defines cardinalities, preferred codesystems etc. As usual in the FHIR standard, it is equally important to take note of the different descriptions explaining the elements in the profile. These descriptions contain information that would otherwise by typically found in a cookbook explaining a technical structure element by element.</p>
 
 
-<h4>Main FHIR resource of the report: the DiagnosticReport</h4>
+<h4>Main FHIR resources of the report: the DiagnosticReport</h4>
 <p>The main FHIR resource to express the laboratory report is the DiagnosticReport. A Belgian profile has thus been created to use this resource in the intended fashion.</p>
 <p>This DiagnosticReport forms the high level structure around all the actual concrete information in the laboratory report e.g. the actual observations, the specimen, the patient etc.</p>
+<h3>The Observation and the Specimen</h3>
+<p>The most important content within the DiagnosticReport is expressed using the FHIR resources
+ Observation and Specimen. Both have a specific Belgian profile to use in the DiagnosticReport.</p>
 
 <h4>Referencing other FHIR resources</h4>
 <p>As FHIR provides different resources, the DiagnosticReport will reference many other FHIR resources such as Patient, Practitioner, Specimen etc.</p>

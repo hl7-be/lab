@@ -6,7 +6,7 @@
   <name value="BeSpecimenLaboratory" />
   <title value="BeSpecimenLaboratory" />
   <status value="draft" />
-  <description value="Belgian profile for a specimen in a laboratory report" />
+  <description value="Belgian profile for a specimen in a laboratory report. In some laboratory reports, specimen information is allowed to be minimal as many informations concerning the specimen are implied by the observations done." />
   <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="rim" />
@@ -46,6 +46,14 @@
       <path value="Specimen.receivedTime" />
       <mustSupport value="true" />
     </element>
+    <element id="Specimen.parent">
+      <path value="Specimen.parent" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Specimen.request">
+      <path value="Specimen.request" />
+      <mustSupport value="true" />
+    </element>
     <element id="Specimen.collection">
       <path value="Specimen.collection" />
       <mustSupport value="true" />
@@ -72,6 +80,14 @@
     </element>
     <element id="Specimen.collection.fastingStatus[x]">
       <path value="Specimen.collection.fastingStatus[x]" />
+      <mustSupport value="false" />
+    </element>
+    <element id="Specimen.processing">
+      <path value="Specimen.processing" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Specimen.container">
+      <path value="Specimen.container" />
       <mustSupport value="false" />
     </element>
     <element id="Specimen.condition">
