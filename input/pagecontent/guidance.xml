@@ -31,7 +31,7 @@ The text here does not aim to explain the HL7 FHIR standard as such nor does thi
 <h4>Main FHIR resources of the report: the DiagnosticReport</h4>
 <p>The main FHIR resource to express the laboratory report is the DiagnosticReport. A Belgian profile has thus been created to use this resource in the intended fashion.</p>
 <p>This DiagnosticReport forms the high level structure around all the actual concrete information in the laboratory report e.g. the actual observations, the specimen, the patient etc.</p>
-<h3>The Observation and the Specimen</h3>
+<h5>The Observation and the Specimen</h5>
 <p>The most important content within the DiagnosticReport is expressed using the FHIR resources
  Observation and Specimen. Both have a specific Belgian profile to use in the DiagnosticReport.</p>
 
