@@ -341,9 +341,6 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 					<!--in case of sub orders, the requester might also be a laboratory -->
 					<reference value="Practitioner/practitioner1"/>
 				</requester>
-				<specimen>
-					<reference value="Specimen/specimen1"/>
-				</specimen>
 			</ServiceRequest>
 		</resource>
 	</entry>

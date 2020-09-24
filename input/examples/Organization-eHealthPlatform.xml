@@ -5,9 +5,7 @@
   <meta>
     <profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-organization"/>
   </meta>
-  <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>id</b>: eHealthPlatform</p><p><b>meta</b>: </p><p><b>active</b>: true</p><p><b>name</b>: eHealth Platform</p><p><b>telecom</b>: ph: 3228918611(WORK)</p><p><b>address</b>: </p><ul><li>Willebroekkaai 38, 1000 Brussel(WORK)</li><li>38, Quai de Willeborek, 1000 Bruxelles(WORK)</li></ul></div>
-  </text>
+
   <active value="true"/>
   <name value="eHealth Platform"/>
   <telecom>
