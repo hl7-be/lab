@@ -165,6 +165,12 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 			<Specimen>
 				<!-- the other resources use the id to refer to this specimen  -->
 				<id value="specimen50"/>
+											<meta>
+				<versionId value="1"/>
+					<!--   claim conformance to the be-profile  -->
+					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-specimen-laboratory"/>
+				</meta>
+
 				<identifier>
 					<!-- Business identifier of the specimen SHOULD BE included if available -->
 					<system value="https://www.GTL-LABO.be/"/>

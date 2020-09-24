@@ -282,6 +282,14 @@
       {
         "id": "DiagnosticReport.specimen",
         "path": "DiagnosticReport.specimen",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-specimen-laboratory"
+            ]
+          }
+        ],
         "mustSupport": true
       },
       {
