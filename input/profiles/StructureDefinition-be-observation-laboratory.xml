@@ -2,8 +2,11 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="be-observation-laboratory" />
   <url value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" />
+  <version value="0.0.1" />
   <name value="BeObservationLaboratory" />
+  <title value="BeObservationLaboratory" />
   <status value="draft" />
+  <description value="Belgian profile for an observation in a laboratory report" />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -48,7 +51,6 @@
     <element id="Observation.code.extension:relativeTime">
       <path value="Observation.code.extension" />
       <sliceName value="relativeTime" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
