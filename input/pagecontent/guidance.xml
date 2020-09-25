@@ -22,6 +22,17 @@ The text here does not aim to explain the HL7 FHIR standard as such nor does thi
 <h4>Use of codes</h4>
 <p>The different bindings with codes SHALL be exmamined when implementing the laboratory report. Specifically the use of codes to express the observations as expressed on this page infra SHALL be strictly followed. As a general back-up rule, whenever the laboratory does use a propriety code (e.g. to express a bodysite), a .text element SHALL always be included explaining the code.</p>
 
+<h4>mustSupport</h4>
+<p>The marking of an element as 'mustSupport' might be a new concept when one is new to HL7 FHIR.</p>
+<p>As expressed in the HL7 specifications, this marking actually
+ is a functional concept more
+ then it is used in a purely technical validation: "[…] mustSupport means that implementations that produce or consume 
+ resources SHALL provide "support" for the element in some meaningful way."</p>  
+<p>That is indeed the way this marking SHALL be understood in the profiles in this guide: elements
+ marked mustSupport might provide meaningful information when produced or consumed
+ and these parties SHALL deal with it in a meaningful way. 
+ Note a mustSupport marking does not mean the element is mandatory – when that is the case, it is of course expressed in the cardinality.
+</p>
 
 <h3>The structure of the report: attention points</h3>
 <p>The content of the report is described in detail in the profiles. This chapter highlights some general attention points in the structure. </p>

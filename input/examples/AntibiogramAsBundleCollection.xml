@@ -10,13 +10,10 @@
 				<id value="diagnosticreport50"/>
 				<meta>
 					<versionId value="1"/>
-					<!--  the be-report SHALL claim conformance to the be-profile  -->
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report"/>
 				</meta>
-				<!--  the be-report SHALL have 1 language. The base language in which the resource is written. The base language in which the resource is written, typically this will be fr-BE, nl-BE, en or de. It is RECOMMENDED to only declare the language here.  -->
 				<language value="en"/>
 				<text>
-					<!--  the be-report SHALL have 1 text. A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative.  -->
 					<status value="generated"/>
 					<div xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 						<p>This example is presented as a Collection bundle for ease of understanding. It makes no assumption towards any final implementation of using FHIR technically. </p>
@@ -56,20 +53,15 @@ MRGN					Negative
 					</div>
 				</text>
 				<identifier>
-					<!--Here SHALL be a business identifier to identify the report. "Need to know what identifier to use when making queries about this report from the source laboratory"-->
 					<system value="http://acme.com/lab/reports"/>
 					<value value="11530231003.2015110413180000000"/>
 				</identifier>
 				<basedOn>
-					<!-- The time of the prescription lives in the original ServiceRequest resource and SHALL be  referenced here. The time of the prescription lives in the ServiceRequest.authoredOn element. -->
 					<reference value="ServiceRequest/servicerequest50"/>
-					<!-- Note, within the Observation resource it is possible to define they were defined on a different serviceRequest (e.g. to clarify it was a sub ordering)) -->
 				</basedOn>
-				<!-- The status SHALL be given. As per the base FHIR resource, this can be registered,partial,preliminary,final,	amended, corrected, appended,cancelled,entered-in-error or	unknown. Naturally, the status on this level SHALL be logical according to the status of any individual Observation and possibly Specimen -->
 				<status value="final"/>
 				<category>
 					<coding>
-						<!-- The generic 'LAB' category SHALL be given as per the base FHIR specification. If needed, extra categories can be added to further categorize the report  -->
 						<system value="http://terminology.hl7.org/CodeSystem/v2-0074"/>
 						<code value="LAB"/>
 						<display value="Laboratory"/>
@@ -82,56 +74,22 @@ MRGN					Negative
 					</coding>
 				</category>
 				<code>
-					<!--  Here, one code SHALL be given - preferred is a LOINC code -  that describes what this report is actually about.  -->
-					<!-- QUESTION: DO WE NEED TO PROVIDE A LIMITED LIST HERE FOR CATEGORIES? 
-e.g. the one from the CDA format?
-18717-9 BLOOD BANK STUDIES
-18718-7 CELL MARKER STUDIES
-18719-5 CHEMISTRY STUDIES
-18720-3 COAGULATION STUDIES
-18721-1 THERAPEUTIC DRUG MONITORING STUDIES
-18722-9 FERTILITY STUDIES
-18723-7 HEMATOLOGY STUDIES
-18724-5 HLA STUDIES
-18725-2 MICROBIOLOGY STUDIES
-18727-8 SEROLOGY STUDIES
-18728-6 TOXICOLOGY STUDIES
-18729-4 URINALYSIS STUDIES
-18767-4 BLOOD GAS STUDIES
-18768-2 CELL COUNTS+DIFFERENTIAL STUDIES
-18769-0 MICROBIAL SUSCEPTIBILITY TESTS
-26435-8 MOLECULAR PATHOLOGY STUDIES
-26436-6 LABORATORY STUDIES
-26437-4 CHEMISTRY CHALLENGE STUDIES
-26438-2 CYTOLOGY STUDIES
-Notes:
-The choice of what observations to categorize under what specialty are left ultimately to the discretion of the laboratory sending the results. Some non-restrictive guidelines:
-o 18721-1 (THERAPEUTIC DRUG MONITORING STUDIES) will be used for a section carrying pharmacologyobservations on a patient.
-o Mycology and parasitology, as well as bacteriology, are part of the 18725-2 (MICROBIOLOGY STUDIES) specialty.
-o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18727-8 (SEROLOGY STUDIES)or split between both specialties, depending upon the Content Creator Actor’s choice
--->
 					<coding>
 						<system value="http://loinc.org"/>
 						<code value="18769-0"/>
 						<display value="Microbial susceptibility tests Set"/>
-					
 					</coding>
 					<text value="Microbial susceptibility tests"/>
 				</code>
 				<subject>
-					<!--  Here, the subject SHALL be given - normally, this will be a patient. As per the FHIR Reference datatype (that also applies to other parts in this message when a Reference datatype is used) when Patient is available on a server, a URL may be given but it is also possible here to give e.g. the SSIN business identifier for a patient. In this bundle example, this is a reference to the entry in this bundle that contains this patient. -->
 					<reference value="Patient/patient1"/>
 				</subject>
-				<!--- ATTENTION: the effectiveDateTime (OR effectivePeriod) element is defined by FHIR as "The time or time-period the observed values are related to. When the subject of the report is a patient, this is normally the time of specimen collection(s)" As such, this is OPTIONAL and SHALL NOT be confused with the next element .issued-->
 				<effectiveDateTime value="2015-11-03T13:18:00+01:00"/>
-				<!--- ATTENTION: the .issued element is defined by FHIR as "The date and time that this version of the report was made available to providers, typically after the report was reviewed and verified.." As such, this is MANDATORY and SHALL NOT be confused with the previous element .effectiveDateTime or effectivePeriod-->
 				<issued value="2015-11-04T13:18:00+01:00"/>
 				<performer>
-					<!--  performer is given 1..* and will be typically a laboratory  -->
 					<reference value="Organization/organization10"/>
 				</performer>
 				<resultsInterpreter>
-					<!--  resultsinterpreter is given 1..* and will be typically a person. Need to know whom to contact if there are queries about the results. -->
 					<reference value="Practitioner/practitioner11"/>
 				</resultsInterpreter>
 				<specimen>
@@ -165,18 +123,15 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 			<Specimen>
 				<!-- the other resources use the id to refer to this specimen  -->
 				<id value="specimen50"/>
-											<meta>
-				<versionId value="1"/>
+				<meta>
+					<versionId value="1"/>
 					<!--   claim conformance to the be-profile  -->
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-specimen-laboratory"/>
 				</meta>
-
 				<identifier>
-					<!-- Business identifier of the specimen SHOULD BE included if available -->
 					<system value="https://www.GTL-LABO.be/"/>
 					<value value="1"/>
 				</identifier>
-				<!--  OPTIONAL status code of a Specimen available | unavailable | unsatisfactory | entered-in-error  Functionally, this status SHALL be logical when considered with the status of the report and/or the status of the Observation using this specimen-->
 				<status value="available"/>
 				<type>
 					<coding>
@@ -187,10 +142,8 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 					</coding>
 					<text value="A string can be added to nuance or explain."/>
 				</type>
-				<!--  The date/time when the specimen was received SHOULD be included if available  -->
 				<receivedTime value="2015-11-04"/>
 				<note>
-					<!--  OPTIONAL, any note concerning the specimen. Using the Annotation datatype in FHIR, it is OPTIONAL here to also add an author and/or dateTime of this annotation  -->
 					<text value="Some extra relevant information concerning the specimen"/>
 				</note>
 			</Specimen>
@@ -204,9 +157,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"/>
 				</meta>
-				<!--  MANDATORY status code of the Observation registered, preliminary, final, amended, corrected, cancelled, entered-in-error, unknown  Functionally, this status SHALL be logical when considered with the status of the report and/or the status of the Specimen used by this observation-->
 				<status value="final"/>
-				<!--  MANDATORY -->
 				<code>
 					<coding>
 						<system value="http://loinc.org"/>
@@ -217,12 +168,10 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<subject>
 					<reference value="Patient/patient1"/>
 				</subject>
-				<!--OPTIONAL the effectiveDateTime OR effectivePeriod OR effectiveTiming OR effectiveInstant reflects the "The time or time-period the observed value is asserted as being true. For biological subjects - e.g. human patients - this is usually called the "physiologically relevant time". This is usually either the time of the procedure or of specimen collection, but very often the source of the date/time is not known, only the date/time itself." Note also, the next element .issued -->
 				<effectiveDateTime value="2015-11-04T09:16:00-05:00"/>
-				<!--OPTIONAL the issued instant."The date and time this version of the observation was made available to providers, typically after the results have been reviewed and verified." Note also, the previous element -->
 				<issued value="2015-11-04T09:16:00-05:00"/>
 				<performer>
-					<reference value="Practitioner/practitioner1"/>
+					<reference value="Practitioner/practitioner11"/>
 				</performer>
 				<!--Many options here to express the result. In this case, the culture is expressed in SNOMED-CT -->
 				<valueCodeableConcept>
@@ -235,6 +184,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<specimen>
 					<reference value="Specimen/specimen50"/>
 				</specimen>
+				<!--Panel observations follow -->
 				<hasMember>
 					<reference value="Observation/org51-ampicilin"/>
 				</hasMember>
@@ -297,9 +247,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"/>
 				</meta>
-				<!--  MANDATORY status code of the Observation registered, preliminary, final, amended, corrected, cancelled, entered-in-error, unknown  Functionally, this status SHALL be logical when considered with the status of the report and/or the status of the Specimen used by this observation-->
 				<status value="final"/>
-				<!--  MANDATORY -->
 				<code>
 					<coding>
 						<system value="http://loinc.org"/>
@@ -314,7 +262,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<effectiveDateTime value="2015-11-04T09:16:00-05:00"/>
 				<issued value="2015-11-04T09:16:00-05:00"/>
 				<performer>
-					<reference value="Practitioner/practitioner1"/>
+					<reference value="Practitioner/practitioner11"/>
 				</performer>
 				<interpretation>
 					<coding>
@@ -334,9 +282,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"/>
 				</meta>
-				<!--  MANDATORY status code of the Observation registered, preliminary, final, amended, corrected, cancelled, entered-in-error, unknown  Functionally, this status SHALL be logical when considered with the status of the report and/or the status of the Specimen used by this observation-->
 				<status value="final"/>
-				<!--  MANDATORY -->
 				<code>
 					<coding>
 						<system value="http://loinc.org"/>
@@ -351,7 +297,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<effectiveDateTime value="2015-11-04T09:16:00-05:00"/>
 				<issued value="2015-11-04T09:16:00-05:00"/>
 				<performer>
-					<reference value="Practitioner/practitioner1"/>
+					<reference value="Practitioner/practitioner11"/>
 				</performer>
 				<interpretation>
 					<coding>
@@ -388,7 +334,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<effectiveDateTime value="2015-11-04T09:16:00-05:00"/>
 				<issued value="2015-11-04T09:16:00-05:00"/>
 				<performer>
-					<reference value="Practitioner/practitioner1"/>
+					<reference value="Practitioner/practitioner11"/>
 				</performer>
 				<interpretation>
 					<coding>
@@ -408,9 +354,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"/>
 				</meta>
-				<!--  MANDATORY status code of the Observation registered, preliminary, final, amended, corrected, cancelled, entered-in-error, unknown  Functionally, this status SHALL be logical when considered with the status of the report and/or the status of the Specimen used by this observation-->
 				<status value="final"/>
-				<!--  MANDATORY -->
 				<code>
 					<coding>
 						<system value="http://loinc.org"/>
@@ -425,7 +369,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<effectiveDateTime value="2015-11-04T09:16:00-05:00"/>
 				<issued value="2015-11-04T09:16:00-05:00"/>
 				<performer>
-					<reference value="Practitioner/practitioner1"/>
+					<reference value="Practitioner/practitioner11"/>
 				</performer>
 				<interpretation>
 					<coding>
@@ -445,16 +389,14 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"/>
 				</meta>
-				<!--  MANDATORY status code of the Observation registered, preliminary, final, amended, corrected, cancelled, entered-in-error, unknown  Functionally, this status SHALL be logical when considered with the status of the report and/or the status of the Specimen used by this observation-->
 				<status value="final"/>
-				<!--  MANDATORY -->
 				<code>
 					<coding>
 						<system value="http://loinc.org"/>
 						<code value="267-5"/>
 						<display value="Gentamicin [Susceptibility] by Minimum inhibitory concentration (MIC)"/>
 					</coding>
-						<text value="Gentamicin"/>
+					<text value="Gentamicin"/>
 				</code>
 				<subject>
 					<reference value="Patient/patient1"/>
@@ -462,7 +404,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<effectiveDateTime value="2015-11-04T09:16:00-05:00"/>
 				<issued value="2015-11-04T09:16:00-05:00"/>
 				<performer>
-					<reference value="Practitioner/practitioner1"/>
+					<reference value="Practitioner/practitioner11"/>
 				</performer>
 				<interpretation>
 					<coding>
@@ -482,10 +424,8 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"/>
 				</meta>
-				<!--  MANDATORY status code of the Observation registered, preliminary, final, amended, corrected, cancelled, entered-in-error, unknown  Functionally, this status SHALL be logical when considered with the status of the report and/or the status of the Specimen used by this observation-->
 				<status value="final"/>
-				<!--  MANDATORY -->
-					<code>
+				<code>
 					<coding>
 						<system value="http://loinc.org"/>
 						<code value="205-5"/>
@@ -499,7 +439,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<effectiveDateTime value="2015-11-04T09:16:00-05:00"/>
 				<issued value="2015-11-04T09:16:00-05:00"/>
 				<performer>
-					<reference value="Practitioner/practitioner1"/>
+					<reference value="Practitioner/practitioner11"/>
 				</performer>
 				<interpretation>
 					<coding>
@@ -519,16 +459,14 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"/>
 				</meta>
-				<!--  MANDATORY status code of the Observation registered, preliminary, final, amended, corrected, cancelled, entered-in-error, unknown  Functionally, this status SHALL be logical when considered with the status of the report and/or the status of the Specimen used by this observation-->
 				<status value="final"/>
-				<!--  MANDATORY -->
 				<code>
 					<coding>
 						<system value="http://loinc.org"/>
 						<code value="492-9"/>
 						<display value="Temocillin [Susceptibility] by Minimum inhibitory concentration (MIC)"/>
 					</coding>
-						<text value="Temocillin"/>
+					<text value="Temocillin"/>
 				</code>
 				<subject>
 					<reference value="Patient/patient1"/>
@@ -536,7 +474,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<effectiveDateTime value="2015-11-04T09:16:00-05:00"/>
 				<issued value="2015-11-04T09:16:00-05:00"/>
 				<performer>
-					<reference value="Practitioner/practitioner1"/>
+					<reference value="Practitioner/practitioner11"/>
 				</performer>
 				<interpretation>
 					<coding>
@@ -556,9 +494,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"/>
 				</meta>
-				<!--  MANDATORY status code of the Observation registered, preliminary, final, amended, corrected, cancelled, entered-in-error, unknown  Functionally, this status SHALL be logical when considered with the status of the report and/or the status of the Specimen used by this observation-->
 				<status value="final"/>
-				<!--  MANDATORY -->
 				<code>
 					<coding>
 						<system value="http://loinc.org"/>
@@ -573,7 +509,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<effectiveDateTime value="2015-11-04T09:16:00-05:00"/>
 				<issued value="2015-11-04T09:16:00-05:00"/>
 				<performer>
-					<reference value="Practitioner/practitioner1"/>
+					<reference value="Practitioner/practitioner11"/>
 				</performer>
 				<interpretation>
 					<coding>
@@ -593,16 +529,14 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"/>
 				</meta>
-				<!--  MANDATORY status code of the Observation registered, preliminary, final, amended, corrected, cancelled, entered-in-error, unknown  Functionally, this status SHALL be logical when considered with the status of the report and/or the status of the Specimen used by this observation-->
 				<status value="final"/>
-				<!--  MANDATORY -->
 				<code>
 					<coding>
 						<system value="http://loinc.org"/>
 						<code value="20396-8"/>
 						<display value="levoFLOXacin [Susceptibility] by Minimum inhibitory concentration (MIC)"/>
 					</coding>
-									<text value="Levofloxacin"/>
+					<text value="Levofloxacin"/>
 				</code>
 				<subject>
 					<reference value="Patient/patient1"/>
@@ -610,7 +544,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<effectiveDateTime value="2015-11-04T09:16:00-05:00"/>
 				<issued value="2015-11-04T09:16:00-05:00"/>
 				<performer>
-					<reference value="Practitioner/practitioner1"/>
+					<reference value="Practitioner/practitioner11"/>
 				</performer>
 				<interpretation>
 					<coding>
@@ -630,16 +564,14 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"/>
 				</meta>
-				<!--  MANDATORY status code of the Observation registered, preliminary, final, amended, corrected, cancelled, entered-in-error, unknown  Functionally, this status SHALL be logical when considered with the status of the report and/or the status of the Specimen used by this observation-->
 				<status value="final"/>
-				<!--  MANDATORY -->
-						<code>
+				<code>
 					<coding>
 						<system value="http://loinc.org"/>
 						<code value="375-6"/>
 						<display value="Ofloxacin [Susceptibility] by Minimum inhibitory concentration (MIC)"/>
 					</coding>
-						<text value="Ofloxacin"/>
+					<text value="Ofloxacin"/>
 				</code>
 				<subject>
 					<reference value="Patient/patient1"/>
@@ -647,7 +579,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<effectiveDateTime value="2015-11-04T09:16:00-05:00"/>
 				<issued value="2015-11-04T09:16:00-05:00"/>
 				<performer>
-					<reference value="Practitioner/practitioner1"/>
+					<reference value="Practitioner/practitioner11"/>
 				</performer>
 				<interpretation>
 					<coding>
@@ -667,9 +599,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"/>
 				</meta>
-				<!--  MANDATORY status code of the Observation registered, preliminary, final, amended, corrected, cancelled, entered-in-error, unknown  Functionally, this status SHALL be logical when considered with the status of the report and/or the status of the Specimen used by this observation-->
 				<status value="final"/>
-				<!--  MANDATORY -->
 				<code>
 					<coding>
 						<system value="http://loinc.org"/>
@@ -684,7 +614,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<effectiveDateTime value="2015-11-04T09:16:00-05:00"/>
 				<issued value="2015-11-04T09:16:00-05:00"/>
 				<performer>
-					<reference value="Practitioner/practitioner1"/>
+					<reference value="Practitioner/practitioner11"/>
 				</performer>
 				<interpretation>
 					<coding>
@@ -704,10 +634,8 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"/>
 				</meta>
-				<!--  MANDATORY status code of the Observation registered, preliminary, final, amended, corrected, cancelled, entered-in-error, unknown  Functionally, this status SHALL be logical when considered with the status of the report and/or the status of the Specimen used by this observation-->
 				<status value="final"/>
-				<!--  MANDATORY -->
-					<code>
+				<code>
 					<coding>
 						<system value="http://loinc.org"/>
 						<code value="12-5"/>
@@ -721,7 +649,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<effectiveDateTime value="2015-11-04T09:16:00-05:00"/>
 				<issued value="2015-11-04T09:16:00-05:00"/>
 				<performer>
-					<reference value="Practitioner/practitioner1"/>
+					<reference value="Practitioner/practitioner11"/>
 				</performer>
 				<interpretation>
 					<coding>
@@ -741,9 +669,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"/>
 				</meta>
-				<!--  MANDATORY status code of the Observation registered, preliminary, final, amended, corrected, cancelled, entered-in-error, unknown  Functionally, this status SHALL be logical when considered with the status of the report and/or the status of the Specimen used by this observation-->
 				<status value="final"/>
-				<!--  MANDATORY -->
 				<code>
 					<coding>
 						<system value="http://loinc.org"/>
@@ -758,7 +684,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<effectiveDateTime value="2015-11-04T09:16:00-05:00"/>
 				<issued value="2015-11-04T09:16:00-05:00"/>
 				<performer>
-					<reference value="Practitioner/practitioner1"/>
+					<reference value="Practitioner/practitioner11"/>
 				</performer>
 				<interpretation>
 					<coding>
@@ -778,10 +704,8 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"/>
 				</meta>
-				<!--  MANDATORY status code of the Observation registered, preliminary, final, amended, corrected, cancelled, entered-in-error, unknown  Functionally, this status SHALL be logical when considered with the status of the report and/or the status of the Specimen used by this observation-->
 				<status value="final"/>
-				<!--  MANDATORY -->
-			<code>
+				<code>
 					<coding>
 						<system value="http://loinc.org"/>
 						<code value="141-2"/>
@@ -795,7 +719,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<effectiveDateTime value="2015-11-04T09:16:00-05:00"/>
 				<issued value="2015-11-04T09:16:00-05:00"/>
 				<performer>
-					<reference value="Practitioner/practitioner1"/>
+					<reference value="Practitioner/practitioner11"/>
 				</performer>
 				<interpretation>
 					<coding>
@@ -815,16 +739,14 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"/>
 				</meta>
-				<!--  MANDATORY status code of the Observation registered, preliminary, final, amended, corrected, cancelled, entered-in-error, unknown  Functionally, this status SHALL be logical when considered with the status of the report and/or the status of the Specimen used by this observation-->
 				<status value="final"/>
-				<!--  MANDATORY -->
 				<code>
 					<coding>
 						<system value="http://loinc.org"/>
 						<code value="108-1"/>
 						<display value="Cefotaxime [Susceptibility] by Minimum inhibitory concentration (MIC)"/>
 					</coding>
-						<text value="Cefotaxime"/>
+					<text value="Cefotaxime"/>
 				</code>
 				<subject>
 					<reference value="Patient/patient1"/>
@@ -832,7 +754,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<effectiveDateTime value="2015-11-04T09:16:00-05:00"/>
 				<issued value="2015-11-04T09:16:00-05:00"/>
 				<performer>
-					<reference value="Practitioner/practitioner1"/>
+					<reference value="Practitioner/practitioner11"/>
 				</performer>
 				<interpretation>
 					<coding>
@@ -852,16 +774,14 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"/>
 				</meta>
-				<!--  MANDATORY status code of the Observation registered, preliminary, final, amended, corrected, cancelled, entered-in-error, unknown  Functionally, this status SHALL be logical when considered with the status of the report and/or the status of the Specimen used by this observation-->
 				<status value="final"/>
-				<!--  MANDATORY -->
-			<code>
+				<code>
 					<coding>
 						<system value="http://loinc.org"/>
 						<code value="133-9"/>
 						<display value="cefTAZidime [Susceptibility] by Minimum inhibitory concentration (MIC)"/>
 					</coding>
-								<text value="Ceftazidime"/>
+					<text value="Ceftazidime"/>
 				</code>
 				<subject>
 					<reference value="Patient/patient1"/>
@@ -869,7 +789,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<effectiveDateTime value="2015-11-04T09:16:00-05:00"/>
 				<issued value="2015-11-04T09:16:00-05:00"/>
 				<performer>
-					<reference value="Practitioner/practitioner1"/>
+					<reference value="Practitioner/practitioner11"/>
 				</performer>
 				<interpretation>
 					<coding>
@@ -889,16 +809,14 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"/>
 				</meta>
-				<!--  MANDATORY status code of the Observation registered, preliminary, final, amended, corrected, cancelled, entered-in-error, unknown  Functionally, this status SHALL be logical when considered with the status of the report and/or the status of the Specimen used by this observation-->
 				<status value="final"/>
-				<!--  MANDATORY -->
 				<code>
 					<coding>
 						<system value="http://loinc.org"/>
 						<code value="6652-2"/>
 						<display value="Meropenem [Susceptibility] by Minimum inhibitory concentration (MIC)"/>
 					</coding>
-						<text value="Meropenem"/>
+					<text value="Meropenem"/>
 				</code>
 				<subject>
 					<reference value="Patient/patient1"/>
@@ -906,7 +824,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<effectiveDateTime value="2015-11-04T09:16:00-05:00"/>
 				<issued value="2015-11-04T09:16:00-05:00"/>
 				<performer>
-					<reference value="Practitioner/practitioner1"/>
+					<reference value="Practitioner/practitioner11"/>
 				</performer>
 				<interpretation>
 					<coding>
@@ -917,11 +835,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				</interpretation>
 			</Observation>
 		</resource>
-	</entry>	
-	
-	
-	
-	
+	</entry>
 	<entry>
 		<fullUrl value="urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d55"/>
 		<resource>
@@ -930,9 +844,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"/>
 				</meta>
-				<!--  MANDATORY status code of the Observation registered, preliminary, final, amended, corrected, cancelled, entered-in-error, unknown  Functionally, this status SHALL be logical when considered with the status of the report and/or the status of the Specimen used by this observation-->
 				<status value="final"/>
-				<!--  MANDATORY -->
 				<code>
 					<coding>
 						<system value="http://loinc.org"/>
@@ -943,14 +855,11 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<subject>
 					<reference value="Patient/patient1"/>
 				</subject>
-				<!--OPTIONAL the effectiveDateTime OR effectivePeriod OR effectiveTiming OR effectiveInstant reflects the "The time or time-period the observed value is asserted as being true. For biological subjects - e.g. human patients - this is usually called the "physiologically relevant time". This is usually either the time of the procedure or of specimen collection, but very often the source of the date/time is not known, only the date/time itself." Note also, the next element .issued -->
 				<effectiveDateTime value="2015-11-04T09:16:00-05:00"/>
-				<!--OPTIONAL the issued instant."The date and time this version of the observation was made available to providers, typically after the results have been reviewed and verified." Note also, the previous element -->
 				<issued value="2015-11-04T09:16:00-05:00"/>
 				<performer>
-					<reference value="Practitioner/practitioner1"/>
+					<reference value="Practitioner/practitioner11"/>
 				</performer>
-				<!--Many options here to express the result. In this case, the culture is expressed in SNOMED-CT -->
 				<valueCodeableConcept>
 					<coding>
 						<system value="http://snomed.info/sct"/>
@@ -1015,7 +924,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 			</Observation>
 		</resource>
 	</entry>
-		<entry>
+	<entry>
 		<fullUrl value="urn:uuid:7c16c9c0-c471-4098-ae01-48abcadd8d56"/>
 		<resource>
 			<Observation>
@@ -1023,9 +932,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"/>
 				</meta>
-				<!--  MANDATORY status code of the Observation registered, preliminary, final, amended, corrected, cancelled, entered-in-error, unknown  Functionally, this status SHALL be logical when considered with the status of the report and/or the status of the Specimen used by this observation-->
 				<status value="final"/>
-				<!--  MANDATORY -->
 				<code>
 					<coding>
 						<system value="http://loinc.org"/>
@@ -1039,7 +946,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<effectiveDateTime value="2015-11-04T09:16:00-05:00"/>
 				<issued value="2015-11-04T09:16:00-05:00"/>
 				<performer>
-					<reference value="Practitioner/practitioner1"/>
+					<reference value="Practitioner/practitioner11"/>
 				</performer>
 				<interpretation>
 					<coding>
@@ -1059,9 +966,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"/>
 				</meta>
-				<!--  MANDATORY status code of the Observation registered, preliminary, final, amended, corrected, cancelled, entered-in-error, unknown  Functionally, this status SHALL be logical when considered with the status of the report and/or the status of the Specimen used by this observation-->
 				<status value="final"/>
-				<!--  MANDATORY -->
 				<code>
 					<coding>
 						<system value="http://loinc.org"/>
@@ -1076,7 +981,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<effectiveDateTime value="2015-11-04T09:16:00-05:00"/>
 				<issued value="2015-11-04T09:16:00-05:00"/>
 				<performer>
-					<reference value="Practitioner/practitioner1"/>
+					<reference value="Practitioner/practitioner11"/>
 				</performer>
 				<interpretation>
 					<coding>
@@ -1096,9 +1001,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"/>
 				</meta>
-				<!--  MANDATORY status code of the Observation registered, preliminary, final, amended, corrected, cancelled, entered-in-error, unknown  Functionally, this status SHALL be logical when considered with the status of the report and/or the status of the Specimen used by this observation-->
 				<status value="final"/>
-				<!--  MANDATORY -->
 				<code>
 					<coding>
 						<system value="http://loinc.org"/>
@@ -1113,7 +1016,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<effectiveDateTime value="2015-11-04T09:16:00-05:00"/>
 				<issued value="2015-11-04T09:16:00-05:00"/>
 				<performer>
-					<reference value="Practitioner/practitioner1"/>
+					<reference value="Practitioner/practitioner11"/>
 				</performer>
 				<interpretation>
 					<coding>
@@ -1133,9 +1036,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"/>
 				</meta>
-				<!--  MANDATORY status code of the Observation registered, preliminary, final, amended, corrected, cancelled, entered-in-error, unknown  Functionally, this status SHALL be logical when considered with the status of the report and/or the status of the Specimen used by this observation-->
 				<status value="final"/>
-				<!--  MANDATORY -->
 				<code>
 					<coding>
 						<system value="http://loinc.org"/>
@@ -1150,7 +1051,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<effectiveDateTime value="2015-11-04T09:16:00-05:00"/>
 				<issued value="2015-11-04T09:16:00-05:00"/>
 				<performer>
-					<reference value="Practitioner/practitioner1"/>
+					<reference value="Practitioner/practitioner11"/>
 				</performer>
 				<interpretation>
 					<coding>
@@ -1170,16 +1071,14 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"/>
 				</meta>
-				<!--  MANDATORY status code of the Observation registered, preliminary, final, amended, corrected, cancelled, entered-in-error, unknown  Functionally, this status SHALL be logical when considered with the status of the report and/or the status of the Specimen used by this observation-->
 				<status value="final"/>
-				<!--  MANDATORY -->
-			<code>
+				<code>
 					<coding>
 						<system value="http://loinc.org"/>
 						<code value="267-5"/>
 						<display value="Gentamicin [Susceptibility] by Minimum inhibitory concentration (MIC)"/>
 					</coding>
-						<text value="Gentamicin"/>
+					<text value="Gentamicin"/>
 				</code>
 				<subject>
 					<reference value="Patient/patient1"/>
@@ -1187,7 +1086,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<effectiveDateTime value="2015-11-04T09:16:00-05:00"/>
 				<issued value="2015-11-04T09:16:00-05:00"/>
 				<performer>
-					<reference value="Practitioner/practitioner1"/>
+					<reference value="Practitioner/practitioner11"/>
 				</performer>
 				<interpretation>
 					<coding>
@@ -1207,9 +1106,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"/>
 				</meta>
-				<!--  MANDATORY status code of the Observation registered, preliminary, final, amended, corrected, cancelled, entered-in-error, unknown  Functionally, this status SHALL be logical when considered with the status of the report and/or the status of the Specimen used by this observation-->
 				<status value="final"/>
-				<!--  MANDATORY -->
 				<code>
 					<coding>
 						<system value="http://loinc.org"/>
@@ -1224,7 +1121,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<effectiveDateTime value="2015-11-04T09:16:00-05:00"/>
 				<issued value="2015-11-04T09:16:00-05:00"/>
 				<performer>
-					<reference value="Practitioner/practitioner1"/>
+					<reference value="Practitioner/practitioner11"/>
 				</performer>
 				<interpretation>
 					<coding>
@@ -1244,16 +1141,14 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"/>
 				</meta>
-				<!--  MANDATORY status code of the Observation registered, preliminary, final, amended, corrected, cancelled, entered-in-error, unknown  Functionally, this status SHALL be logical when considered with the status of the report and/or the status of the Specimen used by this observation-->
 				<status value="final"/>
-				<!--  MANDATORY -->
-	<code>
+				<code>
 					<coding>
 						<system value="http://loinc.org"/>
 						<code value="492-9"/>
 						<display value="Temocillin [Susceptibility] by Minimum inhibitory concentration (MIC)"/>
 					</coding>
-						<text value="Temocillin"/>
+					<text value="Temocillin"/>
 				</code>
 				<subject>
 					<reference value="Patient/patient1"/>
@@ -1261,7 +1156,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<effectiveDateTime value="2015-11-04T09:16:00-05:00"/>
 				<issued value="2015-11-04T09:16:00-05:00"/>
 				<performer>
-					<reference value="Practitioner/practitioner1"/>
+					<reference value="Practitioner/practitioner11"/>
 				</performer>
 				<interpretation>
 					<coding>
@@ -1281,9 +1176,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"/>
 				</meta>
-				<!--  MANDATORY status code of the Observation registered, preliminary, final, amended, corrected, cancelled, entered-in-error, unknown  Functionally, this status SHALL be logical when considered with the status of the report and/or the status of the Specimen used by this observation-->
 				<status value="final"/>
-				<!--  MANDATORY -->
 				<code>
 					<coding>
 						<system value="http://loinc.org"/>
@@ -1298,7 +1191,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<effectiveDateTime value="2015-11-04T09:16:00-05:00"/>
 				<issued value="2015-11-04T09:16:00-05:00"/>
 				<performer>
-					<reference value="Practitioner/practitioner1"/>
+					<reference value="Practitioner/practitioner11"/>
 				</performer>
 				<interpretation>
 					<coding>
@@ -1318,16 +1211,14 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"/>
 				</meta>
-				<!--  MANDATORY status code of the Observation registered, preliminary, final, amended, corrected, cancelled, entered-in-error, unknown  Functionally, this status SHALL be logical when considered with the status of the report and/or the status of the Specimen used by this observation-->
 				<status value="final"/>
-				<!--  MANDATORY -->
 				<code>
 					<coding>
 						<system value="http://loinc.org"/>
 						<code value="20396-8"/>
 						<display value="levoFLOXacin [Susceptibility] by Minimum inhibitory concentration (MIC)"/>
 					</coding>
-									<text value="Levofloxacin"/>
+					<text value="Levofloxacin"/>
 				</code>
 				<subject>
 					<reference value="Patient/patient1"/>
@@ -1335,7 +1226,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<effectiveDateTime value="2015-11-04T09:16:00-05:00"/>
 				<issued value="2015-11-04T09:16:00-05:00"/>
 				<performer>
-					<reference value="Practitioner/practitioner1"/>
+					<reference value="Practitioner/practitioner11"/>
 				</performer>
 				<interpretation>
 					<coding>
@@ -1355,16 +1246,14 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"/>
 				</meta>
-				<!--  MANDATORY status code of the Observation registered, preliminary, final, amended, corrected, cancelled, entered-in-error, unknown  Functionally, this status SHALL be logical when considered with the status of the report and/or the status of the Specimen used by this observation-->
 				<status value="final"/>
-				<!--  MANDATORY -->
 				<code>
 					<coding>
 						<system value="http://loinc.org"/>
 						<code value="375-6"/>
 						<display value="Ofloxacin [Susceptibility] by Minimum inhibitory concentration (MIC)"/>
 					</coding>
-						<text value="Ofloxacin"/>
+					<text value="Ofloxacin"/>
 				</code>
 				<subject>
 					<reference value="Patient/patient1"/>
@@ -1372,7 +1261,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<effectiveDateTime value="2015-11-04T09:16:00-05:00"/>
 				<issued value="2015-11-04T09:16:00-05:00"/>
 				<performer>
-					<reference value="Practitioner/practitioner1"/>
+					<reference value="Practitioner/practitioner11"/>
 				</performer>
 				<interpretation>
 					<coding>
@@ -1392,9 +1281,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"/>
 				</meta>
-				<!--  MANDATORY status code of the Observation registered, preliminary, final, amended, corrected, cancelled, entered-in-error, unknown  Functionally, this status SHALL be logical when considered with the status of the report and/or the status of the Specimen used by this observation-->
 				<status value="final"/>
-				<!--  MANDATORY -->
 				<code>
 					<coding>
 						<system value="http://loinc.org"/>
@@ -1409,7 +1296,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<effectiveDateTime value="2015-11-04T09:16:00-05:00"/>
 				<issued value="2015-11-04T09:16:00-05:00"/>
 				<performer>
-					<reference value="Practitioner/practitioner1"/>
+					<reference value="Practitioner/practitioner11"/>
 				</performer>
 				<interpretation>
 					<coding>
@@ -1429,9 +1316,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"/>
 				</meta>
-				<!--  MANDATORY status code of the Observation registered, preliminary, final, amended, corrected, cancelled, entered-in-error, unknown  Functionally, this status SHALL be logical when considered with the status of the report and/or the status of the Specimen used by this observation-->
 				<status value="final"/>
-				<!--  MANDATORY -->
 				<code>
 					<coding>
 						<system value="http://loinc.org"/>
@@ -1446,7 +1331,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<effectiveDateTime value="2015-11-04T09:16:00-05:00"/>
 				<issued value="2015-11-04T09:16:00-05:00"/>
 				<performer>
-					<reference value="Practitioner/practitioner1"/>
+					<reference value="Practitioner/practitioner11"/>
 				</performer>
 				<interpretation>
 					<coding>
@@ -1466,10 +1351,8 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"/>
 				</meta>
-				<!--  MANDATORY status code of the Observation registered, preliminary, final, amended, corrected, cancelled, entered-in-error, unknown  Functionally, this status SHALL be logical when considered with the status of the report and/or the status of the Specimen used by this observation-->
 				<status value="final"/>
-				<!--  MANDATORY -->
-					<code>
+				<code>
 					<coding>
 						<system value="http://loinc.org"/>
 						<code value="412-7"/>
@@ -1483,7 +1366,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<effectiveDateTime value="2015-11-04T09:16:00-05:00"/>
 				<issued value="2015-11-04T09:16:00-05:00"/>
 				<performer>
-					<reference value="Practitioner/practitioner1"/>
+					<reference value="Practitioner/practitioner11"/>
 				</performer>
 				<interpretation>
 					<coding>
@@ -1503,9 +1386,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"/>
 				</meta>
-				<!--  MANDATORY status code of the Observation registered, preliminary, final, amended, corrected, cancelled, entered-in-error, unknown  Functionally, this status SHALL be logical when considered with the status of the report and/or the status of the Specimen used by this observation-->
 				<status value="final"/>
-				<!--  MANDATORY -->
 				<code>
 					<coding>
 						<system value="http://loinc.org"/>
@@ -1520,7 +1401,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<effectiveDateTime value="2015-11-04T09:16:00-05:00"/>
 				<issued value="2015-11-04T09:16:00-05:00"/>
 				<performer>
-					<reference value="Practitioner/practitioner1"/>
+					<reference value="Practitioner/practitioner11"/>
 				</performer>
 				<interpretation>
 					<coding>
@@ -1540,16 +1421,14 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"/>
 				</meta>
-				<!--  MANDATORY status code of the Observation registered, preliminary, final, amended, corrected, cancelled, entered-in-error, unknown  Functionally, this status SHALL be logical when considered with the status of the report and/or the status of the Specimen used by this observation-->
 				<status value="final"/>
-				<!--  MANDATORY -->
-			<code>
+				<code>
 					<coding>
 						<system value="http://loinc.org"/>
 						<code value="108-1"/>
 						<display value="Cefotaxime [Susceptibility] by Minimum inhibitory concentration (MIC)"/>
 					</coding>
-						<text value="Cefotaxime"/>
+					<text value="Cefotaxime"/>
 				</code>
 				<subject>
 					<reference value="Patient/patient1"/>
@@ -1557,7 +1436,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<effectiveDateTime value="2015-11-04T09:16:00-05:00"/>
 				<issued value="2015-11-04T09:16:00-05:00"/>
 				<performer>
-					<reference value="Practitioner/practitioner1"/>
+					<reference value="Practitioner/practitioner11"/>
 				</performer>
 				<interpretation>
 					<coding>
@@ -1577,16 +1456,14 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"/>
 				</meta>
-				<!--  MANDATORY status code of the Observation registered, preliminary, final, amended, corrected, cancelled, entered-in-error, unknown  Functionally, this status SHALL be logical when considered with the status of the report and/or the status of the Specimen used by this observation-->
 				<status value="final"/>
-				<!--  MANDATORY -->
 				<code>
 					<coding>
 						<system value="http://loinc.org"/>
 						<code value="133-9"/>
 						<display value="cefTAZidime [Susceptibility] by Minimum inhibitory concentration (MIC)"/>
 					</coding>
-								<text value="Ceftazidime"/>
+					<text value="Ceftazidime"/>
 				</code>
 				<subject>
 					<reference value="Patient/patient1"/>
@@ -1594,7 +1471,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<effectiveDateTime value="2015-11-04T09:16:00-05:00"/>
 				<issued value="2015-11-04T09:16:00-05:00"/>
 				<performer>
-					<reference value="Practitioner/practitioner1"/>
+					<reference value="Practitioner/practitioner11"/>
 				</performer>
 				<interpretation>
 					<coding>
@@ -1614,16 +1491,14 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"/>
 				</meta>
-				<!--  MANDATORY status code of the Observation registered, preliminary, final, amended, corrected, cancelled, entered-in-error, unknown  Functionally, this status SHALL be logical when considered with the status of the report and/or the status of the Specimen used by this observation-->
 				<status value="final"/>
-				<!--  MANDATORY -->
-					<code>
+				<code>
 					<coding>
 						<system value="http://loinc.org"/>
 						<code value="6652-2"/>
 						<display value="Meropenem [Susceptibility] by Minimum inhibitory concentration (MIC)"/>
 					</coding>
-						<text value="Meropenem"/>
+					<text value="Meropenem"/>
 				</code>
 				<subject>
 					<reference value="Patient/patient1"/>
@@ -1631,7 +1506,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<effectiveDateTime value="2015-11-04T09:16:00-05:00"/>
 				<issued value="2015-11-04T09:16:00-05:00"/>
 				<performer>
-					<reference value="Practitioner/practitioner1"/>
+					<reference value="Practitioner/practitioner11"/>
 				</performer>
 				<interpretation>
 					<coding>
@@ -1643,7 +1518,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 			</Observation>
 		</resource>
 	</entry>
-		<entry>
+	<entry>
 		<fullUrl value="urn:uuid:7c16c9c0-c471-4098-ae09-48abcadd9d80"/>
 		<resource>
 			<Observation>
@@ -1651,9 +1526,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"/>
 				</meta>
-				<!--  MANDATORY status code of the Observation registered, preliminary, final, amended, corrected, cancelled, entered-in-error, unknown  Functionally, this status SHALL be logical when considered with the status of the report and/or the status of the Specimen used by this observation-->
 				<status value="final"/>
-				<!--  MANDATORY -->
 				<code>
 					<coding>
 						<system value="http://loinc.org"/>
@@ -1668,7 +1541,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<effectiveDateTime value="2015-11-04T09:16:00-05:00"/>
 				<issued value="2015-11-04T09:16:00-05:00"/>
 				<performer>
-					<reference value="Practitioner/practitioner1"/>
+					<reference value="Practitioner/practitioner11"/>
 				</performer>
 				<valueString value="negative"/>
 			</Observation>
@@ -1682,9 +1555,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"/>
 				</meta>
-				<!--  MANDATORY status code of the Observation registered, preliminary, final, amended, corrected, cancelled, entered-in-error, unknown  Functionally, this status SHALL be logical when considered with the status of the report and/or the status of the Specimen used by this observation-->
 				<status value="final"/>
-				<!--  MANDATORY -->
 				<code>
 					<coding>
 						<system value="http://loinc.org"/>
@@ -1699,7 +1570,7 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<effectiveDateTime value="2015-11-04T09:16:00-05:00"/>
 				<issued value="2015-11-04T09:16:00-05:00"/>
 				<performer>
-					<reference value="Practitioner/practitioner1"/>
+					<reference value="Practitioner/practitioner11"/>
 				</performer>
 				<valueString value="negative"/>
 			</Observation>

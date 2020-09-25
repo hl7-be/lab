@@ -38,6 +38,11 @@
       <path value="Specimen.status" />
       <mustSupport value="true" />
     </element>
+    <element id="Specimen.type">
+      <path value="Specimen.type" />
+      <definition value="The kind of material that forms the specimen. RECOMMENDED to include." />
+      <mustSupport value="true" />
+    </element>
     <element id="Specimen.subject">
       <path value="Specimen.subject" />
       <mustSupport value="true" />
