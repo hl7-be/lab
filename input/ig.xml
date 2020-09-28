@@ -153,7 +153,15 @@
       <description value="Antibiogram as preformatted text example in collection bundle"/>
       <groupingId value="exl"/>
     </resource>
-
+ <resource>
+      <reference>
+        <reference value="Bundle/AntibiogramAsFHIRDocumentSentAsPreformattedText"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Antibiogram as preformatted text example in a FHIR document"/>
+      <description value="Antibiogram as preformatted text example in a FHIR document. View as XML to read the XML annotations."/>
+      <groupingId value="exl"/>
+    </resource>
 
 
 

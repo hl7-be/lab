@@ -224,6 +224,23 @@ If the Code needs to be extended with a relative time: use the defined extension
 <p>As per the FHIR standard specifications, there are multiple ways in how the report can be exchanged or requested.</p>
 <p>A POC phase for this project will normally investigate a few possibilities. It is however expected the laboratory will probably be (also)exchanged under some form of FHIR Bundle in which the different used resources are fully available as seperate entries.</p>
 <p>If an implementation makes the choice to deliver the report under the form of a 'FHIR document', <a href="https://www.hl7.org/fhir/documents.html#content">the extra Composition resource that is needed in a FHIR document</a> SHALL be considered as it contains many mandatory elements such as general author of the document and the date of the document.</p>
-<p>Specifically, when leveraging the FHIR document structure, it SHALL be considered that Composition has an .identifier and a .status. That .identifier of the document is the same for all documents that are derived from that composition.</p>
+<p>Specifically, when leveraging the FHIR document structure, these elements of the Compistion resource SHALL be considered:</p>
+<ul>
+ <li>.identifier: A persistent identifier for the dcoument. If a new version document is sent that replaces this one, this identifier will SHALL remain the same. </li>
+ <li>.status: The document has status preliminary|final|amended|entered-in-error. Of course, this status SHALL make sense in concert with the other statusses given.</li>
+ <li>.type: The document identifies itself as a sort of document using a LOINC code. </li>
+ <li>.subject: The subject of the report (typically a patient) </li>
+ <li>.date: </li>
+ <li>.author: </li>
+ <li>.title: </li>
+ <li>.confidentiality: </li>
+ <li>.attester: </li>
+ <li>.custodian: </li>
+ <li>.relatesTo.code: Using replaces|transforms|appends to follow up the use cases for reports. </li>
+  <li>.relatesTo.target: </li>
+ <li>.section: </li>
+ 
+ 
+ </ul>
 <p>The Composition resource in the document structure provides for the creation of extra 'sections' in a document, this is something that is not available in the same way in the base diagnosticReport resource and implementers SHALL exercise caution when using this in the context of laboratory reporting.</p>
 </div>

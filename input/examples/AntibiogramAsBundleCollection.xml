@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///H:/OLD_DESKTOP/Desktop/LATEST%20AND%20GREATEST/FHIR4/bundle.xsd">
 	<id value="AntibiogramAsBundleCollection"/>
+	<identifier> 
+ <!-- A persistent identifier for the bundle that won't change as a bundle is copied from server to server.(https://www.hl7.org/fhir/bundle-definitions.html#Bundle.identifier )-->
+    <system value="urn:ietf:rfc:3986"/> 
+    <value value="urn:uuid:0c3151bd-1cbf-4d99-b04d-cd9187a4c6e0"/> 
+  </identifier> 	
 	<type value="collection"/>
 	<!--This example is presented as a Collection bundle for ease of understanding. It makes no assumption towards any final implementation of using FHIR technically. Open this as XML to view XML annotations.-->
 	<entry>
