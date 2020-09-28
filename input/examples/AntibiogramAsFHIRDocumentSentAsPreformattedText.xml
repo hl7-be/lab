@@ -28,9 +28,12 @@
 						<display value="Laboratory report"/>
 					</coding>
 				</type>
-				<date/>
-				<author/>
-				<title/>
+				<date value="2015-11-03T13:18:00+01:00"/>
+		
+				<author>
+					<reference value="Practitioner/practitioner11"/>
+				</author>
+				<title value="Report"></title>
 			</Composition>
 		</resource>
 	</entry>
