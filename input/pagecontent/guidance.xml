@@ -226,26 +226,26 @@ If the Code needs to be extended with a relative time: use the defined extension
 <p>If an implementation makes the choice to deliver the report under the form of a 'FHIR document', <a href="https://www.hl7.org/fhir/documents.html#content">the extra Composition resource that is needed in a FHIR document</a> SHALL be considered as it contains many mandatory elements such as general author of the document and the date of the document.</p>
 <p>Specifically, IF the choice is made to leverage the FHIR document structure, these elements of the Compostion resource SHALL be considered:</p>
 <ul>
- <li>.identifier: A persistent identifier for the document. If a new version of the document is sent, this identifier SHALL remain the same (but the version of
+ <li>.identifier: A persistent identifier for the document SHALL be provided. If a new version of the document is sent, this identifier SHALL remain the same (but the version of
 the document increments. cfr. infra ) </li>
- <li>.status: The document has status preliminary|final|amended|entered-in-error. Of course, this status SHALL make sense in concert with the other statusses given.</li>
- <li>.type: The document identifies itself as a sort of document using a LOINC code. </li>
- <li>.subject: The subject of the report (typically a patient) </li>
- <li>.date: When the composition was last logically changed by the author</li>
- <li>.author: Identifies who is responsible for the content.</li>
+ <li>.status: The document SHALL have status preliminary|final|amended|entered-in-error. Of course, this status SHALL make sense in concert with the other statusses given.</li>
+ <li>.type: The document identifies itself as a sort of document using a LOINC code SHALL be provided. </li>
+ <li>.subject: The subject of the report (typically a patient) SHALL be provided. </li>
+ <li>.date: When the composition was last logically changed by the author SHALL be provided.</li>
+ <li>.author: Identifies who is responsible for the content SHALL be provided.</li>
  <li>.attester.party: Identifies who has taken on the responsibility for accuracy of the composition content. Might be the same as the .author
-but includes a specific mode.  </li>
- <li>.attester.mode: The way the attester takes responsibility: typically this will be professional or legal. </li>
- <li>.title: A string to give the document a name. </li>
- <li>.relatesTo.code: Using replaces|transforms|appends if the report has a connection with a different report. </li>
-  <li>.relatesTo.target: Give the identifier</li>
- <li>.section: One section with one .section.entry referring to the diagnosticReport.</li>
+but includes a specific mode SHALL be provided.  </li>
+ <li>.attester.mode: The way the attester takes responsibility: typically this will be professional SHALL be provided.</li>
+ <li>.title: A string to give the document a name SHALL be provided. </li>
+ <li>.relatesTo.code: Using replaces|transforms|appends to make a connection to a different report if needed.</li>
+  <li>.relatesTo.target: Give the identifier to a different report if needed.</li>
+ <li>.section: One section with one .section.entry referring to the diagnosticReport SHALL be provided.</li>
  <li>.extension: As the .identifier SHALL remain the same when a final, amended or entered-in-error status update of the document 
  is created, there SHALL also be a document versionnumber available. This SHALL be added
- by using the standard HL7 extension: https://www.hl7.org/fhir/extension-composition-clinicaldocument-versionnumber.html. 
+ by using the standard HL7 extension: https://www.hl7.org/fhir/extension-composition-clinicaldocument-versionnumber. 
  Each new version of the document SHALL increment this value.</li>
  
- 
+ <li>Bundle.timestamp: the FHIR Bundle of type document that contains everything SHALL contain a timestamp. </li>
  </ul>
 <p>The Composition resource in the document structure provides for the creation of extra 'sections' in a document, this is something that is not available in the same way in the base diagnosticReport resource and implementers SHALL exercise caution when using this in the context of laboratory reporting.</p>
 </div>
