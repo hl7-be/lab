@@ -224,21 +224,27 @@ If the Code needs to be extended with a relative time: use the defined extension
 <p>As per the FHIR standard specifications, there are multiple ways in how the report can be exchanged or requested.</p>
 <p>A POC phase for this project will normally investigate a few possibilities. It is however expected the laboratory will probably be (also)exchanged under some form of FHIR Bundle in which the different used resources are fully available as seperate entries.</p>
 <p>If an implementation makes the choice to deliver the report under the form of a 'FHIR document', <a href="https://www.hl7.org/fhir/documents.html#content">the extra Composition resource that is needed in a FHIR document</a> SHALL be considered as it contains many mandatory elements such as general author of the document and the date of the document.</p>
-<p>Specifically, when leveraging the FHIR document structure, these elements of the Compistion resource SHALL be considered:</p>
+<p>Specifically, IF the choice is made to leverage the FHIR document structure, these elements of the Compostion resource SHALL be considered:</p>
 <ul>
- <li>.identifier: A persistent identifier for the dcoument. If a new version document is sent that replaces this one, this identifier will SHALL remain the same. </li>
+ <li>.identifier: A persistent identifier for the dcoument. If a new version document is sent that replaces this one, this identifier will SHALL remain the same (but the version of
+the document increments. cfr. infra ) </li>
  <li>.status: The document has status preliminary|final|amended|entered-in-error. Of course, this status SHALL make sense in concert with the other statusses given.</li>
  <li>.type: The document identifies itself as a sort of document using a LOINC code. </li>
  <li>.subject: The subject of the report (typically a patient) </li>
- <li>.date: </li>
- <li>.author: </li>
- <li>.title: </li>
+ <li>.date: When the composition was last logically changed by the author</li>
+ <li>.author: Identifies who is responsible for the content.</li>
+ <li>.attester.party: Identifies who has taken on the responsibility for accuracy of the composition content. Might be the same as the .author
+but includes a specific mode.  </li>
+ <li>.attester.mode: The way the attester takes responsibility: typically this will be professional or legal. </li>
+ <li>.title: A string to give the document a name. </li>
  <li>.confidentiality: </li>
- <li>.attester: </li>
- <li>.custodian: </li>
- <li>.relatesTo.code: Using replaces|transforms|appends to follow up the use cases for reports. </li>
-  <li>.relatesTo.target: </li>
- <li>.section: </li>
+ <li>.relatesTo.code: Using replaces|transforms|appends if the report has a connection with a different report. </li>
+  <li>.relatesTo.target: Give the identifier</li>
+ <li>.section: One section with one .section.entry referring to the diagnosticReport.</li>
+ <li>.extension: As the .identifier SHALL remain the same when a final, amended or entered-in-error status update of the document 
+ is created, there SHALL also be a document versionnumber available. This SHALL be added
+ by using the standard HL7 extension: https://www.hl7.org/fhir/extension-composition-clinicaldocument-versionnumber.html. 
+ Each new version of the document SHALL increment this value.</li>
  
  
  </ul>
