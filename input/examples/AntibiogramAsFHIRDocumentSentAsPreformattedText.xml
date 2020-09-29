@@ -14,13 +14,17 @@
 		<resource>
 			<Composition>
 				<id value="7c16c9c0-c471-4020-ae18-48abcadd8d34"/>
-					<identifier>
-		<!-- A persistent identifier for the DOCUMENT. If a new DOCUMENT is sent that replaces this one, this identifier will REMAIN THE SAME-->
-		<system value="urn:ietf:rfc:3986"/>
-		<value value="urn:uuid:0c3151bd-1cbf-4d64-b04d-cd9187a4c7e0"/>
-	</identifier>
+				<extension url="https://www.hl7.org/fhir/extension-composition-clinicaldocument-versionnumber.html">
+				<!--The official HL7 document extension for the logical version of the composition -->
+					<valueString value="1"/>
+				</extension>
+				<identifier>
+					<!-- A persistent identifier for the DOCUMENT. If a new DOCUMENT is sent that (re-)finalizes or amends this one, this identifier will REMAIN THE SAME (in this example, this is a UUID)-->
+					<system value="urn:ietf:rfc:3986"/>
+					<value value="urn:uuid:0c3151bd-1cbf-4d64-b04d-cd9187a4c7e0"/>
+				</identifier>
 				<status value="final"/>
-				<!--MANDATORY preliminary|final|amended|entered-in-error: This of course is vital to the workflow when sending lab reports as FHIR documents. -->
+				<!--MANDATORY preliminary|final|amended|entered-in-error: This is vital to the workflow when sending lab reports as FHIR documents. -->
 				<type>
 					<coding>
 						<system value="http://loinc.org"/>
@@ -29,11 +33,51 @@
 					</coding>
 				</type>
 				<date value="2015-11-03T13:18:00+01:00"/>
-		
 				<author>
 					<reference value="Practitioner/practitioner11"/>
 				</author>
-				<title value="Report"></title>
+				<title value="Report"/>
+				<attester>
+					<mode value="professional"/>
+					<party>
+						<reference value="Practitioner/practitioner11"/>
+					</party>
+				</attester>
+				<section>
+							<text>
+					<status value="additional"/>
+					<div xmlns="http://www.w3.org/1999/xhtml" lang="be-nl" xml:lang="be-nl">
+						<pre>Staal Specificatie                          peroperatief staal
+  Staal Specificatie                          abdominaal vocht    				Val 
+  Gramkleuring                                WBC +- gram-negatieve staven +++
+                                               gram+ coccen +					Val 
+  Kweek (isolaten, ABgram...)                 1: : Klebsiella pneumoniae +++
+                                              2: : Enterococcus faecium +
+                                              3: : Streptococcus mitis groep +			Val 
+  Antibiogram                                                          1   2   3
+                                              Ampicilline/Amoxicilline R   R   I
+                                              Cotrimoxazol             S
+                                              Vancomycine                  S   S
+                                              Clindamycine                     S
+                                              Nitrofurantoine          S
+                                              Cefuroxim                S
+                                              Gentamycine              S
+                                              Colimycine               S
+                                              Temocilline              S
+                                              Fosfomycine              S
+                                              Ofloxacine/levofloxacine S
+                                              Amoxy-clavulaanzuur      S
+                                              Amikacine                S
+                                              Piperacilline/tazobactam S
+                                              Cefotaxim/ceftriaxone    S
+                                              Ceftazidime              S
+                                              Meropenem                S</pre>
+					</div>
+			</text>
+			<entry>
+						<reference value="DiagnosticReport/diagnosticreport20"/>
+					</entry>
+				</section>
 			</Composition>
 		</resource>
 	</entry>
