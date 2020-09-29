@@ -7,14 +7,17 @@
 		<system value="urn:ietf:rfc:3986"/>
 		<value value="urn:uuid:0c3151bd-1cbf-4d64-b04d-cd9187a4c7e0"/>
 	</identifier>
+	
 	<type value="document"/>
+	<timestamp value="2015-11-03T13:18:00+01:00"/> <!--timestamp SHALL be given in a bundle when it is document -->
 	<entry>
 		<!--A FHIR document always starts with the FHIR Composition resource -->
 		<fullUrl value="urn:uuid:7c16c9c0-c471-4020-ae18-48abcadd8d34"/>
 		<resource>
 			<Composition>
+			
 				<id value="7c16c9c0-c471-4020-ae18-48abcadd8d34"/>
-				<extension url="https://www.hl7.org/fhir/extension-composition-clinicaldocument-versionnumber.html">
+				<extension url="http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber">
 				<!--The official HL7 document extension for the logical version of the composition -->
 					<valueString value="1"/>
 				</extension>
