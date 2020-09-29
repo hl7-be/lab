@@ -20,7 +20,7 @@ The text here does not aim to explain the HL7 FHIR standard as such nor does thi
 <p>The HL7 FHIR message is considered to be UTF-8. It is RECOMMENDED to declare the use of UTF-8 at the top when sending FHIR as XML.</p>
 
 <h4>Use of codes</h4>
-<p>The different bindings with codes SHALL be exmamined when implementing the laboratory report. Specifically the use of codes to express the observations as expressed on this page infra SHALL be strictly followed. As a general back-up rule, whenever the laboratory does use a propriety code (e.g. to express a bodysite), a .text element SHALL always be included explaining the code.</p>
+<p>The different bindings with codes SHALL be examined when implementing the laboratory report. Specifically the use of codes to express the observations as expressed on this page infra SHALL be strictly followed. As a general back-up rule, whenever the laboratory does use a propriety code (e.g. to express a bodysite), a .text element SHALL always be included explaining the code.</p>
 
 <h4>mustSupport</h4>
 <p>The marking of an element as 'mustSupport' might be a new concept when one is new to HL7 FHIR.</p>
