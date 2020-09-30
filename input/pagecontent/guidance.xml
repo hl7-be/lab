@@ -2,7 +2,7 @@
 
 
 <p>This Guidance page aims to clarify the definition of the Belgian laboratory result.
-It concerns the construction of a laboratory report in a HL7 FHIR format.</p>
+It concerns the construction of a laboratory report in the HL7 FHIR format.</p>
 <p>Examples are sometimes given in JSON or XML format but it SHALL be understood all structures can be expressed in both as per the FHIR standard.</p>
 <p>
 The text here does not aim to explain the HL7 FHIR standard as such nor does this guide aim to explain all the possibilities of the HL7 FHIR standard. For any exhaustive overview of the FHIR standard, the pages by HL7 are considered sufficient.</p>
