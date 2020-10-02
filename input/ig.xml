@@ -159,7 +159,9 @@
       </reference>
       <fhirVersion value="4.0.1"/>
       <name value="Antibiogram as preformatted text example in a FHIR document"/>
-      <description value="Antibiogram as preformatted text example in a FHIR document. View as XML to read the XML annotations."/>
+      <description value="Antibiogram as preformatted text example in a FHIR document. 
+	  View as XML to read the XML annotations. This is an example to illustrate the extra Composition resource that is
+	  mandatory when leveraging the FHIR document structure."/>
       <groupingId value="exl"/>
     </resource>
 
