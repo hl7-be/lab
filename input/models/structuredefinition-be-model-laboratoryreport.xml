@@ -16,7 +16,7 @@
       <path value="BeLaboratoryReportModel" />
       <min value="0" />
       <max value="*" />
-   
+
     </element>
     <element id="BeLaboratoryReportModel.Identifier">
       <path value="BeLaboratoryReportModel.Identifier" />
@@ -58,12 +58,79 @@
     </element>
     <element id="BeLaboratoryReportModel.Category">
       <path value="BeLaboratoryReportModel.Category" />
-      <short value="Specialty, expressed in LOINC" />
+      <short value="Category of the report - expressed in LOINC" />
       <min value="1" />
       <max value="*" />
       <type>
         <code value="CodeableConcept" />
         <profile value="http://hl7.org/fhir/StructureDefinition/CodeableConcept" />
+      </type>
+    </element>
+    <element id="BeLaboratoryReportModel.Code">
+      <path value="BeLaboratoryReportModel.Code" />
+      <short value="One LOINC code to express the name of the report" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/CodeableConcept" />
+      </type>
+    </element>
+    <element id="BeLaboratoryReportModel.Subject">
+      <path value="BeLaboratoryReportModel.Subject" />
+      <short value="Typically a patient" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+      </type>
+    </element>
+    <element id="BeLaboratoryReportModel.SpecimenCollectionTime">
+      <path value="BeLaboratoryReportModel.SpecimenCollectionTime" />
+      <short value="Can be overruled in the actual specimen." />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="dateTime" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/dateTime" />
+      </type>
+    </element>
+    <element id="BeLaboratoryReportModel.ReportIssued">
+      <path value="BeLaboratoryReportModel.ReportIssued" />
+      <short value="Time report was verified" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="dateTime" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/dateTime" />
+      </type>
+    </element>
+    <element id="BeLaboratoryReportModel.Performer">
+      <path value="BeLaboratoryReportModel.Performer" />
+      <short value="Entity that takes responsability" />
+      <definition value="Typically the laboratory" />
+      <min value="1" />
+      <max value="*" />
+      <type>
+        <code value="Reference" />
+      </type>
+    </element>
+    <element id="BeLaboratoryReportModel.ResultsInterpreter">
+      <path value="BeLaboratoryReportModel.ResultsInterpreter" />
+      <short value="Who to contact when queries about results?" />
+      <min value="1" />
+      <max value="*" />
+      <type>
+        <code value="Reference" />
+      </type>
+    </element>
+    <element id="BeLaboratoryReportModel.Specimen">
+      <path value="BeLaboratoryReportModel.Specimen" />
+      <short value="Specimen" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Reference" />
       </type>
     </element>
   </differential>

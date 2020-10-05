@@ -15,13 +15,13 @@
 		<fullUrl value="urn:uuid:7c16c9c0-c471-4020-ae18-48abcadd8d34"/>
 		<resource>
 			<Composition>
-				<id value="7c16c9c0-c471-4020-ae18-48abcadd8d34"/>
+				<id value="7c16c9c0-c471-4020-ae18-48abcadd8d34"/><!-- a unique value identifying this version of the document -->
 				<extension url="http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber">
 					<!--The official HL7 document extension for the logical version of the composition -->
 					<valueString value="1"/>
 				</extension>
 				<identifier>
-					<!-- A persistent identifier for the DOCUMENT. If a new DOCUMENT is sent that (re-)finalizes or amends this one, this identifier will REMAIN THE SAME (in this example, this is a UUID)-->
+					<!-- A persistent identifier for the DOCUMENT. If a new DOCUMENT is sent that (re-)finalizes or amends this one, this identifier will REMAIN THE SAME (in this example, this is a UUID). -->
 					<system value="urn:ietf:rfc:3986"/>
 					<value value="urn:uuid:0c3151bd-1cbf-4d64-b04d-cd9187a4c7e0"/>
 				</identifier>
@@ -103,7 +103,7 @@
 						<p>Specifically, the strong recommendation of HL7 concerning the use of the narrative &quot;to support human-consumption as a fallback&quot; is important in the context of the laboratory report. Indeed, this &quot;human-consumption&quot; aspect actually concerns the inclusion of limited xhtml content and as such an effortless implementation to visualize the content of the report by consuming systems is guarantueed. Also, for systems that might not initially choose to consume reports in a structured way, this guarantuees a way to at least visualize and present the content to the user.</p>
 					</div>
 				</text>
-				<identifier>
+				<identifier><!-- Business identifier, Usually assigned by the Information System of the diagnostic service provider (filler id).-->
 					<system value="http://acme.com/lab/reports"/>
 					<value value="11530231003.2015110413180000000"/>
 				</identifier>
