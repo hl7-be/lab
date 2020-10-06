@@ -16,7 +16,7 @@
       <path value="BeLaboratoryReportModel" />
       <min value="0" />
       <max value="*" />
-
+ 
     </element>
     <element id="BeLaboratoryReportModel.Identifier">
       <path value="BeLaboratoryReportModel.Identifier" />
@@ -127,6 +127,53 @@
     <element id="BeLaboratoryReportModel.Specimen">
       <path value="BeLaboratoryReportModel.Specimen" />
       <short value="Specimen" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Reference" />
+      </type>
+    </element>
+    <element id="BeLaboratoryReportModel.Results">
+      <path value="BeLaboratoryReportModel.Results" />
+      <short value="The actual observations" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Reference" />
+      </type>
+    </element>
+    <element id="BeLaboratoryReportModel.Media">
+      <path value="BeLaboratoryReportModel.Media" />
+      <short value="Any supporting images" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Reference" />
+      </type>
+    </element>
+    <element id="BeLaboratoryReportModel.Conclusion">
+      <path value="BeLaboratoryReportModel.Conclusion" />
+      <short value="Any text conclusion" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="BeLaboratoryReportModel.CodedConclusion">
+      <path value="BeLaboratoryReportModel.CodedConclusion" />
+      <short value="Any coded conclusions" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/CodeableConcept" />
+      </type>
+    </element>
+    <element id="BeLaboratoryReportModel.PresentedForm">
+      <path value="BeLaboratoryReportModel.PresentedForm" />
+      <short value="Entire report e.g. as PDF" />
       <min value="0" />
       <max value="*" />
       <type>
