@@ -158,15 +158,7 @@ Units will be expressed using <a href="http://unitsofmeasure.org/ucum.html">UCUM
 </li></ul>
 <h4>Use of preformatted text</h4>
 <p>If the Observation can only be fully expressed in preformatted text, this is NOT RECOMMENDED but possible by only providing the mininal required elements in the Observation resource and using the 'pre' tag to include this in the narrative. As such, the Observation will not contain a structured .value and the narrative will normally be marked as ''additional.'</p>
-<h4>Use of images</h4>
-<p>Images can be included in the Observation by leveraging the .derivedFrom element within the Observation."	
-The target resource that represents a measurement from which this observation value is derived. For example, a calculated anion gap or a fetal measurement based on an ultrasound image."</p>
-<p>If the goal is to simply add images in general to the report, they can be referenced from the diagnosticReport resource itself via the .media element.</p>
-<h5>Caution concerning the size of images</h5>
-<p>Use of images SHALL be done with caution towards consumers of the data as including a complete image in a result
-might lead to extremely large payloads.</p>
-<p>In the .derivedFrom element within an Observation as well as in the .media element within the DiagnosticReport resource, the
-FHIR Media resource can be leveraged.</p>
+
 <h4>Relative time for challenge testing</h4>
 <p>Some LOINC codes exist that define a specific timing interval as ‘XXX’. E.g.“LOINC 16904-5 GLUCOSE^1ST SPECIMEN POST XXX CHALLENGE” but without a timing interval.
 If the Code needs to be extended with a relative time: use the defined extension to do this.</p>
@@ -188,6 +180,40 @@ If the Code needs to be extended with a relative time: use the defined extension
               "system" : "http://loinc.org",
 			  [...]
 </pre></p>
+
+
+<h3>Use of images</h3>
+<p>Images can be included in the Observation by leveraging the .derivedFrom element within the Observation."	
+The target resource that represents a measurement from which this observation value is derived. For example, a calculated anion gap or a fetal measurement based on an ultrasound image."</p>
+<p>If the goal is to simply add images in general to the report, they can be referenced from the diagnosticReport resource itself via the .media element.</p>
+<h4>Caution concerning the size of images</h4>
+<p>Use of images SHALL be done with caution towards consumers of the data as including a complete image in a result
+might lead to extremely large payloads.</p>
+<p>In the .derivedFrom element within an Observation as well as in the .media element within the DiagnosticReport resource, the
+FHIR Media resource can be leveraged.</p>
+<p>
+Many elements are available within the Media resource to further define, 
+in the below example, minimal use is made of the Media resource to only highlight the bare essentials. 
+This limited use of this resource in this
+guide was a very conscious choice as it appears the Media resource is abanded in future FHIR versions in favor of the DocumentReference resource.
+The impact on the examples here however is minimal as both use the FHIR datatype Attachment to express the actual content.
+Including a full image using Base64 SHALL be used with caution. In this example there is an external link where an image could be retrieved.
+<pre>
+"resource" : {
+        "resourceType" : "Media",
+     [...] 
+        "status" : "completed",
+        "content" : {
+		[This element is of the FHIR datatype Attachment]
+          "contentType" : "application/dicom",
+          "url" : "http://imaging.acme.com/wado/server[...]"
+		[Alternatively, the contentType contains a mimetype like e.g. image/gif and in place of the .url element, 
+the next element could be .data with a Base64.]
+        }
+      }
+</pre></p>
+
+
 <h3>Guidance for antibiogram structures</h3>
 <p>The HL7 pages describe how to deal with more complex antibiogram structures. In <a href="https://www.hl7.org/fhir/R4/diagnosticreport-examples.html#10.3.7.1.1">these rules</a>, examples
  are given how to deal with multiple levels to model the organisms and susceptibility panels.</p>
