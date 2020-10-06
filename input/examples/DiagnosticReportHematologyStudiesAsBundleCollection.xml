@@ -534,8 +534,10 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 		<fullUrl value="urn:uuid:7c16c9c0-c469-4088-ae18-48abcadd8d40"/>
 		<resource>
 			<Media>
+			<id value="media1"/>
 				<!--  This just to illustrate how lo leverage the Media resource.  -->
 				<status value="completed"/>
+				<!--Many elements are available within the Media resource to further define, in this example, minimal use is made of the Media resource to only highlight the bare essentials -->
 				<content>
 					<contentType value="application/dicom"/> 
 					<!--Alternatively, the contentType contains a mimetype like e.g. image/gif and the next element could be .data with a Base64. This SHALL be used with caution. In this example there is an external link where an image could be retrieved. -->
