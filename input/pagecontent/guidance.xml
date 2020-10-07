@@ -115,7 +115,7 @@ The text here does not aim to explain the HL7 FHIR standard as such nor does thi
 <p>The recommended codification used is LOINC as per the subset defined by the FPS Health, for the majority of commonly used lab measurements and demands. This subset is available on the <a href="https://www.vas.ehealth.fgov.be/webretam/retam/home.htm">website of the FPS Health</a>.</p>
 
 <p>
-It is allowed to use multiple codes within the FHIR CodeableConcept datatype. But the first code given must follow the following rules.(Other codes given will be for information purposes.)</p>
+It is allowed to use multiple codes within the FHIR CodeableConcept datatype. But the code given must follow the following rules.</p>
 <ol>
 <li> The actual observation is preferably coded in LOINC (subset as defined by FPS Health)<ul><li><pre>"code":{
 	"coding":[
@@ -149,7 +149,35 @@ It is allowed to use multiple codes within the FHIR CodeableConcept datatype. Bu
 <li> If above not possible the kind of observation is expressed only in text (allowed but not recommended)<ul><li><pre>"code":{
 	"text": "TEXTEXPLAINING"
 	}</pre></li></ul></li>
-</ol>
+	</ol>
+	<p> If needed, it is always possible to add extra translations in the display using the HL7 translation extension as such<pre>"code":{
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "18723-7",
+              "display": "Hematology studies (set)",
+              "_display": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                    "extension": [
+                      {
+                        "url": "lang",
+                        "valueCode": "be-nl"
+                      },
+                      {
+                        "url": "content",
+                        "valueString": "HEMATOLOGIE"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }</pre></p>
+	
+
 <h4>Expression of results</h4>
 <ul><li>
 Typically, values will be expressed using a certain unit.

@@ -188,6 +188,7 @@
 				<code>
 					<text value="The observation is given as preformatted text in the narrative"/>
 				</code>
+				
 				<subject>
 					<reference value="Patient/patient1"/>
 				</subject>
