@@ -109,8 +109,6 @@
         "id": "DiagnosticReport.extension:Extends",
         "path": "DiagnosticReport.extension",
         "sliceName": "Extends",
-        "min": 0,
-        "max": "1",
         "type": [
           {
             "code": "Extension",
@@ -122,11 +120,21 @@
         "mustSupport": true
       },
       {
+        "id": "DiagnosticReport.extension:Extends.value[x]",
+        "path": "DiagnosticReport.extension.value[x]",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report"
+            ]
+          }
+        ]
+      },
+      {
         "id": "DiagnosticReport.extension:AddendumOf",
         "path": "DiagnosticReport.extension",
         "sliceName": "AddendumOf",
-        "min": 0,
-        "max": "1",
         "type": [
           {
             "code": "Extension",
@@ -136,6 +144,18 @@
           }
         ],
         "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.extension:AddendumOf.value[x]",
+        "path": "DiagnosticReport.extension.value[x]",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report"
+            ]
+          }
+        ]
       },
       {
         "id": "DiagnosticReport.identifier",
