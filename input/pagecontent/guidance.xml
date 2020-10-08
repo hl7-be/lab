@@ -41,7 +41,7 @@ The text here does not aim to explain the HL7 FHIR standard as such nor does thi
 
 <h4>Main FHIR resources of the report: the DiagnosticReport</h4>
 <p>The main FHIR resource to express the laboratory report is the DiagnosticReport. A Belgian profile has thus been created to use this resource in the intended fashion.</p>
-<p>This DiagnosticReport forms the high level structure around all the actual concrete information in the laboratory report e.g. the actual observations, the specimen, the patient etc.</p>
+<p>This DiagnosticReport is the 'organizer' of the report. It forms the high level structure around all the actual concrete information in the laboratory report e.g. the actual observations, the specimen, the patient etc.</p>
 <h5>The Observation and the Specimen</h5>
 <p>The most important content within the DiagnosticReport is expressed using the FHIR resources
  Observation and Specimen. Both have a specific Belgian profile to use in the DiagnosticReport.</p>
@@ -83,7 +83,7 @@ The text here does not aim to explain the HL7 FHIR standard as such nor does thi
 <h4>Time of the prescription</h4>
 <p>The time of the prescription lives in the original ServiceRequest resource that is referenced in the DiagnosticReport.basedOn element. The time of the prescription lives in the ServiceRequest.authoredOn element.</p>
 <h4>Time of the specimen collection</h4>
-<p>This is part of the Specimen resource that is referenced from within the diagnostic report. The Specimen.collection.collected element gives the dateTime or period of the collection.</p>
+<p>This can be expressed in the DiagnosticReport.effectiveDateTime or DiagnosticReport.effectivePeriod element. This is overruled when this is also expressed as part of the Specimen resource that is referenced from within the diagnostic report. The Specimen.collection.collected element gives the dateTime or period of the collection.</p>
 <h4>Time of the specimen reception</h4>
 <p>This is part of the Specimen resource that is referenced from within the diagnostic report. The Specimen.receivedTime element gives the dateTime of the collection.</p>
 <h4>Time when the report is made available</h4>
@@ -281,29 +281,5 @@ the next element could be .data with a Base64.]
 <h4>Technical implementation of the specification published here</h4>
 <p>As per the FHIR standard specifications, there are multiple ways in how the report can be exchanged or requested.</p>
 <p>A POC phase for this project will normally investigate a few possibilities. It is however expected the laboratory will probably be (also)exchanged under some form of FHIR Bundle in which the different used resources are fully available as seperate entries.</p>
-<p>If an implementation makes the choice to deliver the report under the form of a 'FHIR document', <a href="https://www.hl7.org/fhir/documents.html#content">the extra Composition resource that is needed in a FHIR document</a> SHALL be considered as it contains many mandatory elements such as general author of the document and the date of the document.</p>
-<p>Specifically, IF the choice is made to leverage the FHIR document structure, these elements of the Compostion resource SHALL be considered:</p>
-<ul>
- <li>.identifier: A persistent identifier for the document SHALL be provided. If a new version of the document is sent, this identifier SHALL remain the same (but the version of
-the document increments. cfr. infra ) </li>
- <li>.status: The document SHALL have status preliminary|final|amended|entered-in-error. Of course, this status SHALL make sense in concert with the other statusses given.</li>
- <li>.type: The document identifies itself as a sort of document using a LOINC code SHALL be provided. </li>
- <li>.subject: The subject of the report (typically a patient) SHALL be provided. </li>
- <li>.date: When the composition was last logically changed by the author SHALL be provided.</li>
- <li>.author: Identifies who is responsible for the content SHALL be provided.</li>
- <li>.attester.party: Identifies who has taken on the responsibility for accuracy of the composition content. Might be the same as the .author
-but includes a specific mode SHALL be provided.  </li>
- <li>.attester.mode: The way the attester takes responsibility: typically this will be professional SHALL be provided.</li>
- <li>.title: A string to give the document a name SHALL be provided. </li>
- <li>.relatesTo.code: Using replaces|transforms|appends to make a connection to a different report if needed.</li>
-  <li>.relatesTo.target: Give the identifier to a different report if needed.</li>
- <li>.section: One section with one .section.entry referring to the diagnosticReport SHALL be provided.</li>
- <li>.extension: As the .identifier SHALL remain the same when a final, amended or entered-in-error status update of the document 
- is created, there SHALL also be a document versionnumber available. This SHALL be added
- by using the standard HL7 extension: https://www.hl7.org/fhir/extension-composition-clinicaldocument-versionnumber. 
- Each new version of the document SHALL increment this value.</li>
- 
- <li>Bundle.timestamp: the FHIR Bundle of type document that contains everything SHALL contain a timestamp. </li>
- </ul>
-<p>The Composition resource in the document structure provides for the creation of extra 'sections' in a document, this is something that is not available in the same way in the base diagnosticReport resource and implementers SHALL exercise caution when using this in the context of laboratory reporting.</p>
+
 </div>
