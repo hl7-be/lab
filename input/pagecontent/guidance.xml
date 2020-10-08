@@ -98,9 +98,21 @@ The text here does not aim to explain the HL7 FHIR standard as such nor does thi
 <p>The laboratory report SHALL also identify itself using a business identifier in the DiagnosticReport.identifier element.</p>
 <p>Some extra data concerning the status of the DiagnosticReport report can be found in its .status element. This element provides the <a href="https://www.hl7.org/fhir/valueset-diagnostic-report-status.html">possibility to add a status like 'corrected', 'final' etc.</a> It is noted also the Observation resources that are part of the report have in their structure each also a .status element. Naturally, the different statuses should be logical.</p>
 
-<h3>Replacing reports</h3>
-<p>It is also possible to explicitely replace a report by a different one. Using the HL7 replace extension (as included in the be profile published in this guide), it is possible to reference the report that is being replaced.</p>
+<h3>Relating reports</h3>
+<p>As described supra, the report has a status. As such, a new version of the report might be a correction. A new version is however still
+the same report. It is also possible to make a new report and declare a relation with a previous one. This is done by the use
+of some specific extensions already available within the HL7 standard.</p>
+<h4>Replacing report by a report</h4>
+<p>It is possible to explicitely replace a report by a different one. Using the HL7 'replace' extension (as included in the be profile published in this guide), it is possible to reference the report that is being replaced.</p>
 <p>This is used when e.g. a report replaces a preliminary report where the subsequent observation may be on more or different material (specimen). Note that this is not same concept asDiagnosticReport.status = preliminary of final.</p>
+
+<h4>Extending report with a report</h4>
+<p>It is possible to explicitely reference a related or 'sibiling' report. Using the HL7 'extends' extension (as included in the be profile published in this guide), it is possible to reference the related report.</p>
+
+<h4>Addend report with a report</h4>
+<p>It is possible to addend a report with a report. Using the HL7 addendumOf extension (as included in the be profile published in this guide), it is possible to reference the report where the report is an addendum of.</p>
+
+
 
 <h3>Referencing the (sub)order</h3>
 <p>The order (ServiceRequest resource) that is referenced from the DiagnosticReport via its .basedOn element contains the time when this order was placed as well as the original order number.</p>

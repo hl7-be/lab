@@ -106,6 +106,38 @@
         ]
       },
       {
+        "id": "DiagnosticReport.extension:Extends",
+        "path": "DiagnosticReport.extension",
+        "sliceName": "Extends",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/diagnosticReport-extends"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.extension:AddendumOf",
+        "path": "DiagnosticReport.extension",
+        "sliceName": "AddendumOf",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/diagnosticReport-addendumOf"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "DiagnosticReport.identifier",
         "path": "DiagnosticReport.identifier",
         "min": 1,
