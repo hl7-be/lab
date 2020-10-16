@@ -34,6 +34,16 @@ The text here does not aim to explain the HL7 FHIR standard as such nor does thi
  Note a mustSupport marking does not mean the element is mandatory – when that is the case, it is of course expressed in the cardinality.
 </p>
 
+<h3>The laboratory order</h3>
+<p>A FHIR artefact to start the workflow with the order has also been created.</p>
+<p>This is based on the base FHIR resource serviceRequest.<p>
+<ul>
+<li><a href="http://build.fhir.org/ig/hl7-be/hl7-be-fhir-referral-prescription/guidance.html#guidance">General guidance</a>
+ concerning the orders in Belgium and <a href="http://build.fhir.org/ig/hl7-be/hl7-be-fhir-referral-prescription/guidance.html#specifics-concerning-the-referral-prescription-for-laboratory">specific laboratory order guidance.</a></li>
+<li><a href="http://build.fhir.org/ig/hl7-be/hl7-be-fhir-referral-prescription/StructureDefinition-be-lab-prescription.html">Technical definition</a> of the order for laboratory.</li>
+<li>An <a href="http://build.fhir.org/ig/hl7-be/hl7-be-fhir-referral-prescription/ServiceRequest-laboratory-order-example1.html">example</a> for the order.</li>
+</ul>
+
 <h3>The structure of the report: attention points</h3>
 <p>The content of the report is described in detail in the profiles. This chapter highlights some general attention points in the structure. </p>
 <p>The profile defines cardinalities, preferred codesystems etc. As usual in the FHIR standard, it is equally important to take note of the different descriptions explaining the elements in the profile. These descriptions contain information that would otherwise by typically found in a cookbook explaining a technical structure element by element.</p>
