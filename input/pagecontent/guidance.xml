@@ -85,7 +85,8 @@ The text here does not aim to explain the HL7 FHIR standard as such nor does thi
 <h4>Time of the specimen collection</h4>
 <p>This can be expressed in the DiagnosticReport.effectiveDateTime or DiagnosticReport.effectivePeriod element. This is overruled when this is also expressed as part of the Specimen resource that is referenced from within the diagnostic report. The Specimen.collection.collected element gives the dateTime or period of the collection.</p>
 <h4>Time of the specimen reception</h4>
-<p>This is part of the Specimen resource that is referenced from within the diagnostic report. The Specimen.receivedTime element gives the dateTime of the collection.</p>
+<p>This is part of the Specimen resource that is referenced from within the diagnostic report. The Specimen.receivedTime element
+ gives the dateTime of reception.</p>
 <h4>Time when the report is made available</h4>
 <p>This is the DiagnosticReport.issued element.</p>
 <h3>Effective vs Issued</h3>
