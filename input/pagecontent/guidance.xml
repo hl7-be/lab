@@ -1,3 +1,5 @@
+
+
 <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../src-generated/schemas/fhir-single.xsd" >
 
 
@@ -36,13 +38,15 @@ The text here does not aim to explain the HL7 FHIR standard as such nor does thi
 
 <h3>The laboratory order</h3>
 <p>A FHIR artefact to start the workflow with the order has also been created.</p>
-<p>This is based on the base FHIR resource serviceRequest.<p>
+<p>This is based on the base FHIR resource serviceRequest.</p>
 <ul>
 <li><a href="http://build.fhir.org/ig/hl7-be/hl7-be-fhir-referral-prescription/guidance.html#guidance">General guidance</a>
  concerning the orders in Belgium and <a href="http://build.fhir.org/ig/hl7-be/hl7-be-fhir-referral-prescription/guidance.html#specifics-concerning-the-referral-prescription-for-laboratory">specific laboratory order guidance.</a></li>
 <li><a href="http://build.fhir.org/ig/hl7-be/hl7-be-fhir-referral-prescription/StructureDefinition-be-lab-prescription.html">Technical definition</a> of the order for laboratory.</li>
 <li>An <a href="http://build.fhir.org/ig/hl7-be/hl7-be-fhir-referral-prescription/ServiceRequest-laboratory-order-example1.html">example</a> for the order.</li>
 </ul>
+
+
 
 <h3>The structure of the report: attention points</h3>
 <p>The content of the report is described in detail in the profiles. This chapter highlights some general attention points in the structure. </p>
