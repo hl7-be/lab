@@ -284,7 +284,15 @@ the next element could be .data with a Base64.]
  
  </li>
 </ul>
-
+<h4>Codification of organisms</h4>
+<p>Organisms are preferably expressed in SNOMED-CT as such:</p>
+<pre> "coding" : [
+            {
+              "system" : "http://snomed.info/sct",
+              "code" : "243301005",
+              "display" : "Morganella morganii"
+            }
+          ]</pre>
 
 
 <h3>Guidance for minimal information in supporting resources</h3>
