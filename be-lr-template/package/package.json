@@ -5,8 +5,8 @@
   "license": "CC0-1.0",
   "description": "HL7 BE Referral Prescription template",
   "author": "http://hl7.org/fhir",
-	"base":  "fhir.base.template",
+	"base":  "hl7.be.fhir.template",
   "dependencies": {
-    "fhir.base.template": "current"
+    "hl7.be.fhir.template": "current"
   }
 }
