@@ -14,16 +14,18 @@ The text here does not aim to explain the HL7 FHIR standard as such nor does thi
 
 
 <h3>Conventions</h3>
-
+<a name="Note on values and decimal mark"> </a>
 <h4>Note on values and decimal mark</h4>
 <p>Values are always expressed with the 'full stop' or point (.) as decimal mark. Commas SHALL NOT be used to make numbers easier to read. (e.g. ten thousand is always written as '10000' – never as '10,000' or '10.000')</p>
 
+<a name="UTF 8"> </a>
 <h4>UTF 8</h4>
 <p>The HL7 FHIR message is considered to be UTF-8. It is RECOMMENDED to declare the use of UTF-8 at the top when sending FHIR as XML.</p>
 
+<a name="Use of codes"> </a>
 <h4>Use of codes</h4>
 <p>The different bindings with codes SHALL be examined when implementing the laboratory report. Specifically the use of codes to express the observations as expressed on this page infra SHALL be strictly followed. As a general back-up rule, whenever the laboratory does use a propriety code (e.g. to express a bodysite), a .text element SHALL always be included explaining the code.</p>
-
+<a name="mustSupport"> </a>
 <h4>mustSupport</h4>
 <p>The marking of an element as 'mustSupport' might be a new concept when one is new to HL7 FHIR.</p>
 <p>As expressed in the HL7 specifications, this marking actually
@@ -35,7 +37,7 @@ The text here does not aim to explain the HL7 FHIR standard as such nor does thi
  and these parties SHALL deal with it in a meaningful way. 
  Note a mustSupport marking does not mean the element is mandatory – when that is the case, it is of course expressed in the cardinality.
 </p>
-
+<a name="The laboratory order"> </a>
 <h3>The laboratory order</h3>
 <p>A FHIR artefact to start the workflow with the order has also been created. As this builds on a base structure that is also proposed
 for other referral prescriptions in Belgium, it is currently published within a different Implementation Guide.</p>
@@ -48,37 +50,38 @@ for other referral prescriptions in Belgium, it is currently published within a 
 </ul>
 
 
-
+<a name="The structure of the report:attention points"> </a>
 <h3>The structure of the report: attention points</h3>
 <p>The content of the report is described in detail in the profiles. This chapter highlights some general attention points in the structure. </p>
 <p>The profile defines cardinalities, preferred codesystems etc. As usual in the FHIR standard, it is equally important to take note of the different descriptions explaining the elements in the profile. These descriptions contain information that would otherwise by typically found in a cookbook explaining a technical structure element by element.</p>
 
-
+<a name="Main FHIR resources of the report: the DiagnosticReport"> </a>
 <h4>Main FHIR resources of the report: the DiagnosticReport</h4>
 <p>The main FHIR resource to express the laboratory report is the DiagnosticReport. A Belgian profile has thus been created to use this resource in the intended fashion.</p>
 <p>This DiagnosticReport is the 'organizer' of the report. It forms the high level structure around all the actual concrete information in the laboratory report e.g. the actual observations, the specimen, the patient etc.</p>
+<a name="The Observation and the Specimen"> </a>
 <h5>The Observation and the Specimen</h5>
 <p>The most important content within the DiagnosticReport is expressed using the FHIR resources
  Observation and Specimen. Both have a specific Belgian profile to use in the DiagnosticReport.</p>
-
+<a name="Referencing other FHIR resources"></a>
 <h4>Referencing other FHIR resources</h4>
 <p>As FHIR provides different resources, the DiagnosticReport will reference many other FHIR resources such as Patient, Practitioner, Specimen etc.</p>
 <p>FHIR allows for <a href="https://www.hl7.org/fhir/references.html">multiple ways to reference</a> other resources. For example, these other resources can be referenced using a URL to a server or they can be added in a bundle together with the DiagnosticReport to have everything available in one JSON or XML.</p>
-
+<a name="General remarks on all the items"></a>
 <h4>General remarks on all the items</h4>
 <p>On the high level of the diagnosticReport, there is the possibility to a .conclusion (primitive string FHIR datatype) and/or a .conclusionCode element (CodeableConcept FHIR datatype, when needed to express using a code)</p>
 <p>In both the important Resources Observation and Specimen there is the possibility to use the .note element (also a free text format, following the Annotation FHIR datatype.)</p>
-
+<a name="Role of the narrative in FHIR"></a>
 <h4>Role of the narrative in FHIR</h4>
 <p>Implementers SHALL explicitely take note of the rules around the narrative in FHIR <a href="https://www.hl7.org/fhir/narrative.html">as explained on the pages of HL7.</a></p>
 <p>Specifically, the strong recommendation of HL7 concerning the use of the narrative "to support human-consumption as a fallback" is important in the context of the laboratory report. Indeed, this "human-consumption" aspect actually concerns the inclusion of limited xhtml content and as such an effortless implementation to visualize the content of the report by consuming systems is guarantueed. Also, for systems that might not initially choose to consume reports in a structured way, this guarantuees a way to at least visualize and present the content to the user. </p>
 <p>In the Belgian laboratory report, all content is RECOMMENDED to be available in the structured elements. As such, a narrative with <a href="https://www.hl7.org/fhir/valueset-narrative-status.html">narrative-status 'additional'</a> SHOULD NOT be used. Specifically, on the level of the individual Observation resources, that 'additional' status should be avoided as much as possible and only in cases where the Observation can only be expressed in preformatted text (cfr. infra), it is acceptable to express an Observation using only the narrative of the Observation.</p>
-
+<a name="Specimen overview"></a>
 <h4>Specimen overview</h4>
 <p>Every specimen is expressed as a seperate Specimen resource in FHIR.</p>
 <p>In the DiagnosticReport.specimen element, all the specimen are referenced.</p>
 <p>The actual Observations refer to these Specimen.</p>
-
+<a name="Grouping of observations using Observation resources"></a>
 <h4>Grouping of observations using Observation resources</h4>
 <p>Naturally, the Observation resource is heavily used in the laboratory report.</p>
 <p>It SHALL be noted, the FHIR DiagnosticReport base standard resource takes a <a href="https://www.hl7.org/fhir/diagnosticreport.html#bnc">pragmatic approach</a> to dealing with the multiple observations.</p>
@@ -89,55 +92,64 @@ for other referral prescriptions in Belgium, it is currently published within a 
 <li>The Observation may be part of a group of Observation resources. This is established by using the .hasMember in the Observation. Typically, this is used for a panel or battery where the panel code is given without a value in the parent Observation and the actual results are seperate Observation resources referenced from that parent Observation.</li>
 </ol>
 <p>To summarize, including 0..* Observation in a report always happens by using the first method. These Observation resources might be (relatively) simple or have a complex structure leveraging the two other methods.</p>
+<a name="Using subtitles"></a>
 <h4>Using subtitles</h4>
 <p>An important requirement is the ability to use subtitles in the structure of the laboratory report.</p>
 <p>This can be done in the report by leveraging the third way to use observations grouping supra. When doing this with the goal of only adding a subtitle, the CodeableConcept datatype of the .code element in the parent Observation will minimally contain the .text element.</p>
+<a name="Important time elements"></a>
 <h3>Important time elements</h3>
-<p>This chapter gives a quick overview of where to find the most important time elements in a laboratory report.</p>
 
+<p>This chapter gives a quick overview of where to find the most important time elements in a laboratory report.</p>
+<a name="Time of the prescription"></a>
 <h4>Time of the prescription</h4>
 <p>The time of the prescription lives in the original ServiceRequest resource that is referenced in the DiagnosticReport.basedOn element. The time of the prescription lives in the ServiceRequest.authoredOn element.</p>
+<a name="Time of the specimen collection"></a>
 <h4>Time of the specimen collection</h4>
 <p>This can be expressed in the DiagnosticReport.effectiveDateTime or DiagnosticReport.effectivePeriod element. This is overruled when this is also expressed as part of the Specimen resource that is referenced from within the diagnostic report. The Specimen.collection.collected element gives the dateTime or period of the collection.</p>
+<a name="Time of the specimen reception"></a>
 <h4>Time of the specimen reception</h4>
 <p>This is part of the Specimen resource that is referenced from within the diagnostic report. The Specimen.receivedTime element
  gives the dateTime of reception.</p>
+ <a name="Time when the report is made available"></a>
 <h4>Time when the report is made available</h4>
 <p>This is the DiagnosticReport.issued element.</p>
+<a name="Effective vs Issued"></a>
 <h3>Effective vs Issued</h3>
 <p>It shall be noted the DiagnosticReport, Specimen and Observation resources all have .effective and .issued elements. There is an important difference between these.</p>
 <p>The .effective element mostly points to the time of the specific procedure or specimen collection. The .issued element really is about when this was made available to providers, typically after review and/or verification. Please refer to the detailed descriptions in the FHIR standard for further information.</p>
-
+<a name="Versioning of reports"></a>
 <h3>Versioning of reports</h3>
 <p>The base FHIR resource DiagnosticReport is of the FHIR type DomainResource and as such it inherits the base FHIR resource elements. In its root, it inherits the elements defined in the base Resource FHIR datatype. This includes the <a href="http://hl7.org/fhir/R4/resource.html#Meta">Resource Metadata</a>.</p>
 <p>The Resource Metadata contains in its .versionId the actual version of the DiagnosticReport.</p>
 <p>The laboratory report SHALL also identify itself using a business identifier in the DiagnosticReport.identifier element.</p>
 <p>Some extra data concerning the status of the DiagnosticReport report can be found in its .status element. This element provides the <a href="https://www.hl7.org/fhir/valueset-diagnostic-report-status.html">possibility to add a status like 'corrected', 'final' etc.</a> It is noted also the Observation resources that are part of the report have in their structure each also a .status element. Naturally, the different statuses should be logical.</p>
-
+<a name="Relating reports"></a>
 <h3>Relating reports</h3>
 <p>As described supra, the report has a status. As such, a new version of the report might be a correction. A new version is however still
 the same report. It is also possible to make a new report and declare a relation with a previous one. This is done by the use
 of some specific extensions already available within the HL7 standard.</p>
+<a name="Replacing report by a report"></a>
 <h4>Replacing report by a report</h4>
 <p>It is possible to explicitely replace a report by a different one. Using the HL7 'replace' extension (as included in the be profile published in this guide), it is possible to reference the report that is being replaced.</p>
 <p>This is used when e.g. a report replaces a preliminary report where the subsequent observation may be on more or different material (specimen). Note that this is not same concept asDiagnosticReport.status = preliminary of final.</p>
-
+<a name="Extending report with a report"></a>
 <h4>Extending report with a report</h4>
 <p>It is possible to explicitely reference a related or 'sibiling' report. Using the HL7 'extends' extension (as included in the be profile published in this guide), it is possible to reference the related report.</p>
-
+<a name="Addend report with a report"></a>
 <h4>Addend report with a report</h4>
 <p>It is possible to addend a report with a report. Using the HL7 addendumOf extension (as included in the be profile published in this guide), it is possible to reference the report where the report is an addendum of.</p>
 
 
-
+<a name="Referencing the (sub)order"></a>
 <h3>Referencing the (sub)order</h3>
 <p>The order (ServiceRequest resource) that is referenced from the DiagnosticReport via its .basedOn element contains the time when this order was placed as well as the original order number.</p>
 <p>It is possible for one or more of the Observations to reference a different ServiceRequest by using the .basedOn element in the Observation. This can be used e.g. if needed to explicitely state an Observation was made via a sub order. It is noted the Observation also contains the element .performer to simply specify the Observation had a different performer from the main performer referenced from the DiagnosticReport resource.</p>  
-
+<a name="Adding a PDF representation"></a>
 <h3>Adding a PDF representation</h3>
 <p>If needed to also include the report as a PDF, that is possible using the element .presentedForm. Please refer to the <a href="http://hl7.org/fhir/R4/datatypes.html#Attachment">FHIR complex datatype 'Attachment'</a> for further instructions how to do include this.</p> <p>Naturally, the sender of the report that adds a PDF representation SHALL ensure it remains clinically logical and safe with the way the data is otherwise structurally expressed in the resource.</p>
-
+<a name="Guidance for codes and values in the Observation resource"></a>
 <h3>Guidance for codes and values in the Observation resource</h3>
+<a name="Use of Retam codes"></a>
 <h4>Use of Retam codes</h4>
 <p>The implementer SHALL adhere to the preferred codes to use in the .code element as described here</p>
 <p>The recommended codification used is LOINC as per the subset defined by the FPS Health, for the majority of commonly used lab measurements and demands. This subset is available on the <a href="https://www.vas.ehealth.fgov.be/webretam/retam/home.htm">website of the FPS Health</a>.</p>
@@ -205,16 +217,17 @@ It is allowed to use multiple codes within the FHIR CodeableConcept datatype. Bu
           ]
         }</pre></p>
 	
-
+<a name="Expression of results"></a>
 <h4>Expression of results</h4>
 <ul><li>
 Typically, values will be expressed using a certain unit.
 Units will be expressed using <a href="http://unitsofmeasure.org/ucum.html">UCUM codes</a> as per the specification. The KMEHR reference table CD-UNIT is not used.</li>
 <li>Implementers SHALL take note of the very flexible .value[x] element within the FHIR Observation resource. This allows multiple ways to express the result structurally. Each option has its own datatype. Typically, for measurements, .valueQuantity is expected to be used that leverages the FHIR Quantity datatype. For observation results that do not fall in any structured category, there is the option to use .valueString to express the result in text.
 </li></ul>
+<a name="Use of preformatted text"></a>
 <h4>Use of preformatted text</h4>
 <p>If the Observation can only be fully expressed in preformatted text, this is NOT RECOMMENDED but possible by only providing the mininal required elements in the Observation resource and using the 'pre' tag to include this in the narrative. As such, the Observation will not contain a structured .value and the narrative will normally be marked as ''additional.'</p>
-
+<a name="Relative time for challenge testing"></a>
 <h4>Relative time for challenge testing</h4>
 <p>Some LOINC codes exist that define a specific timing interval as ‘XXX’. E.g.“LOINC 16904-5 GLUCOSE^1ST SPECIMEN POST XXX CHALLENGE” but without a timing interval.
 If the Code needs to be extended with a relative time: use the defined extension to do this.</p>
@@ -237,11 +250,12 @@ If the Code needs to be extended with a relative time: use the defined extension
 			  [...]
 </pre></p>
 
-
+<a name="Use of images"></a>
 <h3>Use of images</h3>
 <p>Images can be included in the Observation by leveraging the .derivedFrom element within the Observation."	
 The target resource that represents a measurement from which this observation value is derived. For example, a calculated anion gap or a fetal measurement based on an ultrasound image."</p>
 <p>If the goal is to simply add images in general to the report, they can be referenced from the diagnosticReport resource itself via the .media element.</p>
+<a name="Caution concerning the size of images"></a>
 <h4>Caution concerning the size of images</h4>
 <p>Use of images SHALL be done with caution towards consumers of the data as including a complete image in a result
 might lead to extremely large payloads.</p>
@@ -269,7 +283,7 @@ the next element could be .data with a Base64.]
       }
 </pre></p>
 
-
+<a name="Guidance for antibiogram structures"></a>
 <h3>Guidance for antibiogram structures</h3>
 <p>The HL7 pages describe how to deal with more complex antibiogram structures. In <a href="https://www.hl7.org/fhir/R4/diagnosticreport-examples.html#10.3.7.1.1">these rules</a>, examples
  are given how to deal with multiple levels to model the organisms and susceptibility panels.</p>
@@ -284,6 +298,7 @@ the next element could be .data with a Base64.]
  
  </li>
 </ul>
+<a name="Codification of organisms"></a>
 <h4>Codification of organisms</h4>
 <p>Organisms are preferably expressed in SNOMED-CT as such:</p>
 <pre> "coding" : [
@@ -294,26 +309,27 @@ the next element could be .data with a Base64.]
             }
           ]</pre>
 
-
+<a name="Guidance for minimal information in supporting resources"></a>
 <h3>Guidance for minimal information in supporting resources</h3>
-
+<a name="Minimal information concerning the subjec"></a>
 <h4>Minimal information concerning the subject</h4>
 <p>Some minimal information concerning the subject (Patient resource) SHOULD be given: an .identifier (SSIN if possible), a .name, at least one .telecom, a .birthDate and a .address</p><p>The .gender SHALL be given (but could be 'unknown'.)</p>
-
+<a name="Minimal information concerning the laboratory"></a>
 <h4>Minimal information concerning the laboratory</h4>
 <p>Some minimal information concerning the laboratory (Organization resource) SHOULD be given: an .identifier (NIHDI if possible), a .name, at least one .telecom and a .address.</p>
-
+<a name="Minimal information concerning the laboratory responsible"></a>
 <h4>Minimal information concerning the laboratory responsible</h4>
 <p>Some minimal information concerning the laboratory responsible (Practitioner resource) SHOULD be given: an .identifier (NIHDI if possible), a .name, at least one .telecom and a .address</p>
-
+<a name="Minimal information concerning other healthcare parties"></a>
 <h4>Minimal information concerning other healthcare parties</h4>
 <p>Some minimal information concerning other healthcare parties (Practitioner resource), if they are used, SHOULD be given: an .identifier (NIHDI if possible), a .name, at least one .telecom and a .address</p>
 
-
+<a name="FHIR technical implementation specifics"></a>
   <h3>FHIR technical implementation specifics</h3>
+  <a name="The federal IG"></a>
   <h4>The federal IG</h4>
 <p>This guide uses the artefacts and guidance as they are defined in <a href="https://www.ehealth.fgov.be/standards/kmehr/en/page/fhir-profiles">the official federal IG as published by eHealth Platform</a>. Implementers SHALL take note of the guidelines defined in that IG. Please take note when you are technically validating against the IG described on this page you also need that IG for the base federal profiles.</p>
-
+<a name="Technical implementation of the specification published here"></a>
 <h4>Technical implementation of the specification published here</h4>
 <p>As per the FHIR standard specifications, there are multiple ways in how the report can be exchanged or requested.</p>
 <p>A POC phase for this project will normally investigate a few possibilities. It is however expected the laboratory will probably be (also)exchanged under some form of FHIR Bundle in which the different used resources are fully available as seperate entries.</p>
