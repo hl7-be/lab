@@ -216,7 +216,9 @@ It is allowed to use multiple codes within the FHIR CodeableConcept datatype. Bu
 <h4>Expression of results</h4>
 <ul><li>
 Typically, values will be expressed using a certain unit.
-Units will be expressed using <a href="http://unitsofmeasure.org/ucum.html">UCUM codes</a> as per the specification. The KMEHR reference table CD-UNIT is not used.</li>
+Units will be expressed using <a href="http://unitsofmeasure.org/ucum.html">UCUM codes</a> as per the specification. The KMEHR reference table CD-UNIT is not used.
+It remains technically possible to express units using a different way. However, as UCUM provides a standardized syntax to 
+express in theory any type of exotic unit, it is HIGHLY RECOMMENDED to always use the UCUM way to express units.</li>
 <li>Implementers SHALL take note of the very flexible .value[x] element within the FHIR Observation resource. This allows multiple ways to express the result structurally. Each option has its own datatype. Typically, for measurements, .valueQuantity is expected to be used that leverages the FHIR Quantity datatype. For observation results that do not fall in any structured category, there is the option to use .valueString to express the result in text.
 </li></ul>
 <a name="Use of preformatted text"></a>
