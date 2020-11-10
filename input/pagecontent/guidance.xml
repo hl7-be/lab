@@ -121,7 +121,8 @@ for other referral prescriptions in Belgium, it is currently published within a 
 <h3>Versioning of reports</h3>
 <p>The base FHIR resource DiagnosticReport is of the FHIR type DomainResource and as such it inherits the base FHIR resource elements. In its root, it inherits the elements defined in the base Resource FHIR datatype. This includes the <a href="http://hl7.org/fhir/R4/resource.html#Meta">Resource Metadata</a>.</p>
 <p>The Resource Metadata contains in its .versionId the actual version of the DiagnosticReport.</p>
-<p>The laboratory report SHALL also identify itself using a business identifier in the DiagnosticReport.identifier element.</p>
+<p>The laboratory report SHALL also identify itself using a business identifier in the DiagnosticReport.
+The combination of system and identifier needs to be globally unique. Typically, the laboratory assigns an identifier that will remain the same during eventual different versions.</p>
 <p>Some extra data concerning the status of the DiagnosticReport report can be found in its .status element. This element provides the <a href="https://www.hl7.org/fhir/valueset-diagnostic-report-status.html">possibility to add a status like 'corrected', 'final' etc.</a> It is noted also the Observation resources that are part of the report have in their structure each also a .status element. Naturally, the different statuses should be logical.</p>
 <a name="Relating reports"></a>
 <h3>Relating reports</h3>
