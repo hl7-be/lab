@@ -124,21 +124,15 @@ for other referral prescriptions in Belgium, it is currently published within a 
 <p>The laboratory report SHALL also identify itself using a business identifier in the DiagnosticReport.
 The combination of system and identifier needs to be globally unique. Typically, the laboratory assigns an identifier that will remain the same during eventual different versions.</p>
 <p>Some extra data concerning the status of the DiagnosticReport report can be found in its .status element. This element provides the <a href="https://www.hl7.org/fhir/valueset-diagnostic-report-status.html">possibility to add a status like 'corrected', 'final' etc.</a> It is noted also the Observation resources that are part of the report have in their structure each also a .status element. Naturally, the different statuses should be logical.</p>
-<a name="Relating reports"></a>
-<h3>Relating reports</h3>
+<a name="Relating reports (replacing, updating)"></a>
+<h3>Relating reports (replacing, updating)</h3>
 <p>As described supra, the report has a status. As such, a new version of the report might be a correction. A new version is however still
-the same report. It is also possible to make a new report and declare a relation with a previous one. This is done by the use
-of some specific extensions already available within the HL7 standard.</p>
-<a name="Replacing report by a report"></a>
-<h4>Replacing report by a report</h4>
-<p>It is possible to explicitely replace a report by a different one. Using the HL7 'replace' extension (as included in the be profile published in this guide), it is possible to reference the report that is being replaced.</p>
-<p>This is used when e.g. a report replaces a preliminary report where the subsequent observation may be on more or different material (specimen). Note that this is not same concept asDiagnosticReport.status = preliminary of final.</p>
-<a name="Extending report with a report"></a>
-<h4>Extending report with a report</h4>
-<p>It is possible to explicitely reference a related or 'sibiling' report. Using the HL7 'extends' extension (as included in the be profile published in this guide), it is possible to reference the related report.</p>
-<a name="Addend report with a report"></a>
-<h4>Addend report with a report</h4>
-<p>It is possible to addend a report with a report. Using the HL7 addendumOf extension (as included in the be profile published in this guide), it is possible to reference the report where the report is an addendum of.</p>
+the same report.</p>
+<p>For example, as the vital element of a laboratory report, the Observation, also carries a distinct status (https://www.hl7.org/fhir/valueset-observation-status.html ) 
+It is up to a receiving consumer, when it receives a new version of a report to correctly interpret any change in statuses on an Observation. 
+When a diagnosticReport is solicited by a party, it should 
+always receive the most up to date version and again, it is up to the consuming party to correctly interpret statuses.</p>
+
 
 
 <a name="Referencing the (sub)order"></a>
