@@ -168,6 +168,11 @@
         <title value="MyIG Home Page"/>
         <generation value="html"/>
       </page>
+	     <page>
+        <nameUrl value="changes.html"/>
+        <title value="Changes"/>
+        <generation value="html"/>
+      </page>
 	  <page>
         <nameUrl value="guidance.html"/>
         <title value="Guidance"/>

@@ -2,7 +2,16 @@
   <a name="scope"> </a>
 	<p>
     This is the HL7 Belgium FHIR Implementation Guide for the Laboratory Report workgroup
- <a href="https://wiki.hl7belgium.org/index.php?title=Laboratory_Workgroup">which can be consulted here</a>. First work in progress is available in this guide on the <a href="artifacts.html">Artifacts page</a> General guidance work in progress information is on the <a href="guidance.html">Guidance page</a>
+ <a href="https://wiki.hl7belgium.org/index.php?title=Laboratory_Workgroup">which can be consulted here</a>. 
+   </p>
+   <p>
+   First work in progress is available in this guide on the <a href="artifacts.html">Artifacts page.</a> 
+   </p>
+   <p>
+   General guidance work in progress information is on the <a href="guidance.html">Guidance page.</a>
+   </p>
+   <p>
+   For a functional overview of changes, consult the <a href="changes.html">Changes page.</a>
    </p>
 	<blockquote class="stu-note">
 	<strong>This documentation and set of artefacts are still undergoing development.</strong>
