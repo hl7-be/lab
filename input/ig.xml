@@ -4,7 +4,7 @@
   <id value="hl7.country.ig"/>
   <url value="http://hl7.country.org/fhir/ig"/>
   <!-- This version will propagate to all artifacts unless the "propagate-version" extension is overridden -->
-  <version value="0.0.2"/>
+  <version value="0.0.3"/>
   <name value="AffiliateIG"/>
   <title value="HL7 BE Laboratory Result WG Implementation Guide (work in progress)"/>
   <status value="draft"/>
@@ -144,15 +144,7 @@
       <groupingId value="exl"/>
     </resource>
 	
-	 <resource>
-      <reference>
-        <reference value="Bundle/AntibiogramAsBundleCollectionSentAsPreformattedText"/>
-      </reference>
-      <fhirVersion value="4.0.1"/>
-      <name value="Antibiogram as preformatted text example in collection bundle"/>
-      <description value="Antibiogram as preformatted text example in collection bundle"/>
-      <groupingId value="exl"/>
-    </resource>
+
 
 
 

@@ -4,6 +4,18 @@
 		Please note, this IG is considered a draft specification until further notice.
 	</p>
 
+<p>
+		<b>2020-12-03 v0.0.3 - Published </b> based on FHIR R4
+	</p>
+	<ul>
+		<li>Version after feedbacks from the HL7 WG of 20201130</li>
+		<li>Clarification around use of images in guidance.</li>
+		<li>Clarification around use of narrative in guidance. </li>
+		<li>Clarification around use of specimen in guidance.</li>
+		
+	</ul>
+
+
 	<p>
 		<b>2020-11-16 v0.0.2 - Published </b> based on FHIR R4
 	</p>

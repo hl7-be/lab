@@ -63,6 +63,10 @@ for other referral prescriptions in Belgium, it is currently published within a 
 <h5>The Observation and the Specimen</h5>
 <p>The most important content within the DiagnosticReport is expressed using the FHIR resources
  Observation and Specimen. Both have a specific Belgian profile to use in the DiagnosticReport.</p>
+ <p>Unless the specimen is explicitly clear from the used LOINC code it SHALL be available in the report. 
+ This means the specimen type itself but also the other functionalities of the Specimen resource 
+ SHALL be leveraged <b>when needed</b> such as extra information about 
+ where the specimen was taken (e.g. taken from left or right elbow).</p>
 <a name="Referencing other FHIR resources"></a>
 <h4>Referencing other FHIR resources</h4>
 <p>As FHIR provides different resources, the DiagnosticReport will reference many other FHIR resources such as Patient, Practitioner, Specimen etc.</p>
@@ -73,9 +77,22 @@ for other referral prescriptions in Belgium, it is currently published within a 
 <p>In both the important Resources Observation and Specimen there is the possibility to use the .note element (also a free text format, following the Annotation FHIR datatype.)</p>
 <a name="Role of the narrative in FHIR"></a>
 <h4>Role of the narrative in FHIR</h4>
-<p>Implementers SHALL explicitely take note of the rules around the narrative in FHIR <a href="https://www.hl7.org/fhir/narrative.html">as explained on the pages of HL7.</a></p>
-<p>Specifically, the strong recommendation of HL7 concerning the use of the narrative "to support human-consumption as a fallback" is important in the context of the laboratory report. Indeed, this "human-consumption" aspect actually concerns the inclusion of limited xhtml content and as such an effortless implementation to visualize the content of the report by consuming systems is guarantueed. Also, for systems that might not initially choose to consume reports in a structured way, this guarantuees a way to at least visualize and present the content to the user. </p>
-<p>In the Belgian laboratory report, all content is RECOMMENDED to be available in the structured elements. As such, a narrative with <a href="https://www.hl7.org/fhir/valueset-narrative-status.html">narrative-status 'additional'</a> SHOULD NOT be used. Specifically, on the level of the individual Observation resources, that 'additional' status should be avoided as much as possible and only in cases where the Observation can only be expressed in preformatted text (cfr. infra), it is acceptable to express an Observation using only the narrative of the Observation.</p>
+<p>Implementers SHALL explicitely take note of the rules 
+around the narrative in FHIR <a href="https://www.hl7.org/fhir/narrative.html">as 
+explained on the pages of HL7.</a></p>
+<p>Specifically, the strong recommendation 
+of HL7 concerning the use of the 
+narrative "to support human-consumption as a fallback" 
+is important in the context of the laboratory report.</p>
+<p>A <b>structured Belgian laboratory report</b> means all content SHALL BE available in the structured elements. As such, a 
+narrative with <a href="https://www.hl7.org/fhir/valueset-narrative-status.html">
+narrative-status 'additional'</a> SHALL NOT be used. 
+Specifically, on the level of the individual Observation resources, 
+that 'additional' status SHALL BE avoided.</p>
+<p>In other words, in cases where a laboratory report cannot be expressed as a structured report, the narrative SHALL NOT be
+used as a fallback. 
+In that case, it is preferred the element to present the report as PDF SHALL be used and the resulting report
+in that case is <b>NOT</b> considered to be a structured Belgian laboratory report.</p>
 <a name="Specimen overview"></a>
 <h4>Specimen overview</h4>
 <p>Every specimen is expressed as a seperate Specimen resource in FHIR.</p>
@@ -249,22 +266,23 @@ If the Code needs to be extended with a relative time: use the defined extension
 
 <a name="Use of images"></a>
 <h3>Use of images</h3>
-<p>Images can be included in the Observation by leveraging the .derivedFrom element within the Observation."	
-The target resource that represents a measurement from which this observation value is derived. For example, a calculated anion gap or a fetal measurement based on an ultrasound image."</p>
-<p>If the goal is to simply add images in general to the report, they can be referenced from the diagnosticReport resource itself via the .media element.</p>
+<p>Note, when it is needed to include a PDF representation, there exists a seperate element for that cfr. supra</p>
+<p>If there is a need to add images in general to the report, 
+they can be referenced from the diagnosticReport resource itself via the .media element.
+A typical example would be to include a scatter diagram.</p>
+<p>Such images SHALL be available in the exchanged message itself. (Meaning the Media resource
+contains the full Base64 and this resource is available as seperate resource in a FHIR Bundle or as a contained
+resource in the DiagnosticReport.) </p> 
 <a name="Caution concerning the size of images"></a>
 <h4>Caution concerning the size of images</h4>
-<p>Use of images SHALL be done with caution towards consumers of the data as including a complete image in a result
-might lead to extremely large payloads.</p>
-<p>In the .derivedFrom element within an Observation as well as in the .media element within the DiagnosticReport resource, the
-FHIR Media resource can be leveraged.</p>
+<p>Use of images SHALL be done with caution towards consumers concerning possible heavy payloads.</p>
 <p>
 Many elements are available within the Media resource to further define, 
 in the below example, minimal use is made of the Media resource to only highlight the bare essentials. 
 This limited use of this resource in this
-guide was a very conscious choice as it appears the Media resource is abanded in future FHIR versions in favor of the DocumentReference resource.
-The impact on the examples here however is minimal as both use the FHIR datatype Attachment to express the actual content.
-Including a full image using Base64 SHALL be used with caution. In this example there is an external link where an image could be retrieved.
+guide was a very conscious choice as it appears the Media resource
+ is abanded in future FHIR versions in favor of the DocumentReference resource.
+The impact of that will however be minimal as both use the FHIR datatype Attachment to express the actual content.
 <pre>
 "resource" : {
         "resourceType" : "Media",
@@ -272,10 +290,8 @@ Including a full image using Base64 SHALL be used with caution. In this example 
         "status" : "completed",
         "content" : {
 		[This element is of the FHIR datatype Attachment]
-          "contentType" : "application/dicom",
-          "url" : "http://imaging.acme.com/wado/server[...]"
-		[Alternatively, the contentType contains a mimetype like e.g. image/gif and in place of the .url element, 
-the next element could be .data with a Base64.]
+          "contentType": "image/gif",
+          "data": "R0lGODlhfgCRAPcAAAAAAIAAAACAAI[...]"
         }
       }
 </pre></p>
