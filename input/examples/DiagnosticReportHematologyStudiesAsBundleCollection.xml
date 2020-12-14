@@ -549,9 +549,11 @@ o 665 Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18
 				<status value="completed"/>
 				<!--Many elements are available within the Media resource to further define, in this example, minimal use is made of the Media resource to only highlight the bare essentials -->
 				<content>
-					<contentType value="application/dicom"/>
-					<!--Alternatively, the contentType contains a mimetype like e.g. image/gif and the next element could be .data with a Base64. This SHALL be used with caution. In this example there is an external link where an image could be retrieved. -->
-					<url value="http://imaging.acme.com/wado/server?requestType=WADO&amp;contentType=application%2Fdicom&amp;studyUid=1.2.840.113619.2.21.848.34082.0.538976288.3&amp;seriesUid=1.2.840.113619.2.21.3408.700.0.757923840.3.0&amp;objectUid=1.2.840.11361907579238403408700.3.1.04.19970327150033"/>
+					<contentType value="image/gif"/>
+					<!-- This SHALL be used with caution concerning load -->
+					<data value="iVBORw0KGgoAAAANSUhEUgAAA+MAAACnCAYAAAB6pY03AAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+jwv8YQUAAAAJcEhZcwAAEnMAABJzAYwiuQcAADBZSURBVHhe7d09rty218fxrOFfZj/ZQHZgwEiZ
+gg=="/> <!-- [...] -->
 				</content>
 			</Media>
 		</resource>
