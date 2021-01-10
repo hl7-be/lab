@@ -1,12 +1,16 @@
 ---
 feedback:
-  active: true
-  formUrl: https://docs.google.com/forms/d/e/1FAIpQLSdrWQl4Uhu7SbtCrEYdXI1cOEmPpKyKSVl7apgNIDIRm-kZ1g/viewform?usp=pp_url
-  dashboard: https://github.com/orgs/hl7-be/projects/7
-  parameters:
-  - name: "'entry.1353807103'"
-    value: encodeURIComponent($(document).attr('title'))
-  - name: "'entry.247644557'"
-    value: document.getElementById(id).textContent
+  - active: true
+    type: "googleform"   
+    label: "Feedback"   
+    formUrl: https://docs.google.com/forms/d/e/1FAIpQLSdrWQl4Uhu7SbtCrEYdXI1cOEmPpKyKSVl7apgNIDIRm-kZ1g/viewform?usp=pp_url
+    dashboard: 
+      url: https://github.com/orgs/hl7-be/projects/7
+      label: "Issues"
+    parameters:
+    - name: "'entry.1353807103'"
+      value: encodeURIComponent($(document).attr('title'))
+    - name: "'entry.247644557'"
+      value: document.getElementById(id).textContent
     
     
