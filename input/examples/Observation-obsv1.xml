@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Observation xmlns="http://hl7.org/fhir">
+<!-- Example to show technical structures - not necessarily clinically logical/valid-->
 				<id value="obsv1"/>
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"/>
@@ -8,11 +9,14 @@
 				<status value="final"/>
 				
 				<code>
+                <!--LOINC code that needs extra attributes-->
 					<coding>
 						<system value="http://loinc.org"/>
-						<code value="30341-2"/>
-						<display value="Erythrocyte sedimentation rate"/>
+						<code value="16904-5"/>
+						<display value="GLUCOSE^1ST SPECIMEN POST XXX CHALLENGE"/>
 					</coding>
+
+
 				</code>
 				<!--OPTIONAL the effectiveDateTime OR effectivePeriod OR effectiveTiming OR effectiveInstant reflects the "The time or time-period the observed value is asserted as being true. For biological subjects - e.g. human patients - this is usually called the "physiologically relevant time". This is usually either the time of the procedure or of specimen collection, but very often the source of the date/time is not known, only the date/time itself." Note also, the next element .issued -->
 				<effectiveDateTime value="2015-11-04T09:16:00-05:00"/>
