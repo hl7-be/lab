@@ -1,7 +1,7 @@
  <?xml version="1.0" encoding="UTF-8"?>
 <Observation xmlns="http://hl7.org/fhir">
 <!-- Example to show technical structures - not necessarily clinically logical/valid-->
-				<id value="obsDynamic1"/>
+				<id value="obsDynamic0"/>
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"/>
 				</meta>
