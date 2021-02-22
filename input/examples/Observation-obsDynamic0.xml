@@ -5,7 +5,13 @@
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"/>
 				</meta>
-				<extension url="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-ext-relative-time">
+				
+				<status value="final"/>
+				
+				<code>
+         
+					<coding>
+					     <extension url="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-ext-relative-time">
     <valueQuantity>
 	<value value="0"/>
 	<unit value="m"/>
@@ -13,11 +19,6 @@
 <code value="m"/>
 </valueQuantity>
   </extension>
-				<status value="final"/>
-				
-				<code>
-              
-					<coding>
 						<system value="http://loinc.org"/>
 						<code value="53093-1"/>
 						<display value="Glucose^post XXX challenge"/>
