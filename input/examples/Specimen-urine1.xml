@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Specimen xmlns="http://hl7.org/fhir">
+				<!-- the other resources use the id to refer to this specimen  -->
+				<id value="urine1"/>
+				<meta>
+					<versionId value="1"/>
+					<!--   claim conformance to the be-profile  -->
+					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-specimen-laboratory"/>
+				</meta>
+		
+				<status value="available"/>
+				<type>
+					<coding>
+						<!--  The actual specimen, described using a coding system. Here, the coding system SNOMED-CT is used for this which is RECOMMENDED for specimen. As a general back-up rule, whenever the laboratory does use a propriety code, a .text element SHALL always be included explaining the code.  -->
+						<system value="http://snomed.info/sct"/>
+						<code value="78014005"/>
+						<display value="Urine"/>
+					</coding>
+			
+				</type>
+				<receivedTime value="2015-11-04"/>
+				<note>
+					<text value="24u urinecollectie"/>
+				</note>
+			</Specimen>
