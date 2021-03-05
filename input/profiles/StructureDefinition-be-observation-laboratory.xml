@@ -127,19 +127,103 @@
       </slicing>
       <mustSupport value="true" />
     </element>
-    <element id="Observation.component:relativeTime">
+    <element id="Observation.component:relativeTimeQualifier">
       <path value="Observation.component" />
-      <sliceName value="relativeTime" />
-      <short value="If the testing code does not include a time interval for timed tests, it SHALL be expressed using this slice." />
+      <sliceName value="relativeTimeQualifier" />
+      <short value="If a testing code does not include a time interval but needs one to qualify the code." />
       <max value="1" />
     </element>
-    <element id="Observation.component:relativeTime.code.coding">
+    <element id="Observation.component:relativeTimeQualifier.code.coding">
       <path value="Observation.component.code.coding" />
       <fixedCoding>
         <system value="http://snomed.info/sct" />
         <code value="118578006" />
         <display value="Relative time" />
       </fixedCoding>
+    </element>
+    <element id="Observation.component:relativeTimeQualifier.code.coding.system">
+      <path value="Observation.component.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Observation.component:relativeTimeQualifier.code.coding.code">
+      <path value="Observation.component.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="118578006" />
+    </element>
+    <element id="Observation.component:relativeTimeQualifier.code.coding.display">
+      <path value="Observation.component.code.coding.display" />
+      <min value="1" />
+      <fixedString value="Relative time" />
+    </element>
+    <element id="Observation.component:relativeTimeQualifier.value[x]">
+      <path value="Observation.component.value[x]" />
+      <short value="UCUM" />
+      <min value="1" />
+      <type>
+        <code value="Quantity" />
+      </type>
+    </element>
+    <element id="Observation.component:substanceAmountQualifier">
+      <path value="Observation.component" />
+      <sliceName value="substanceAmountQualifier" />
+      <short value="If a testing code does not include a substance amount but needs one to qualify the code" />
+      <max value="1" />
+    </element>
+    <element id="Observation.component:substanceAmountQualifier.code.coding.system">
+      <path value="Observation.component.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Observation.component:substanceAmountQualifier.code.coding.code">
+      <path value="Observation.component.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="18555000" />
+    </element>
+    <element id="Observation.component:substanceAmountQualifier.code.coding.display">
+      <path value="Observation.component.code.coding.display" />
+      <min value="1" />
+      <fixedString value="Substance amount" />
+    </element>
+    <element id="Observation.component:substanceAmountQualifier.value[x]">
+      <path value="Observation.component.value[x]" />
+      <short value="UCUM" />
+      <min value="1" />
+      <type>
+        <code value="Quantity" />
+      </type>
+    </element>
+    <element id="Observation.component:productNameQualifier">
+      <path value="Observation.component" />
+      <sliceName value="productNameQualifier" />
+      <short value="If a testing code does not include a product name but needs one to qualify the code" />
+      <max value="1" />
+    </element>
+    <element id="Observation.component:productNameQualifier.code.coding.system">
+      <path value="Observation.component.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Observation.component:productNameQualifier.code.coding.code">
+      <path value="Observation.component.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="774167006" />
+    </element>
+    <element id="Observation.component:productNameQualifier.code.coding.display">
+      <path value="Observation.component.code.coding.display" />
+      <label value="Product name" />
+      <min value="1" />
+      <fixedString value="product name" />
+    </element>
+    <element id="Observation.component:productNameQualifier.value[x]">
+      <path value="Observation.component.value[x]" />
+      <min value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <type>
+        <code value="string" />
+      </type>
     </element>
   </differential>
 </StructureDefinition>

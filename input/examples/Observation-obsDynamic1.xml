@@ -37,9 +37,9 @@
 		</code>
 		<valueQuantity>
 			<value value="68"/>
-			<unit value="m"/>
+			<unit value="min"/>
 			<system value="http://unitsofmeasure.org"/>
-			<code value="m"/>
+			<code value="min"/>
 		</valueQuantity>
 	</component>
 	
