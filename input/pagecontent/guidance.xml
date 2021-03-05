@@ -244,24 +244,48 @@ express in theory any type of exotic unit, it is HIGHLY RECOMMENDED to always us
 <a name="Relative time for challenge testing"></a>
 <h4>Relative time for challenge testing</h4>
 <p>Some LOINC codes exist that define a specific timing interval as ‘XXX’. E.g.“LOINC 16904-5 GLUCOSE^1ST SPECIMEN POST XXX CHALLENGE” but without a timing interval.
-If the Code needs to be extended with a relative time: use the defined extension to do this.</p>
-<p><pre>[...]
-"code" : {
-          "extension" : [
-            {
-              "url" : "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-ext-relative-time",
-              "valueQuantity" : {
-                "value" : 50,
-                "unit" : "m",
-                "system" : "http://unitsofmeasure.org",
-                "code" : "m"
-              }
-            }
-          ],
-          "coding" : [
-            {
-              "system" : "http://loinc.org",
-			  [...]
+If the Code needs to be 'qualified' with a relative time: use the .component structure to do this.</p>
+<p><pre>
+{
+  "resourceType" : "Observation",
+[...]
+  "code" : {
+    "coding" : [
+      {
+        "system" : "http://loinc.org",
+        "code" : "53093-1",
+        "display" : "Glucose^post XXX challenge"
+      }
+    ]
+  },
+[...]
+  "valueQuantity" : {
+    "value" : 9.1,
+    "unit" : "mmol/l",
+    "system" : "http://unitsofmeasure.org",
+    "code" : "mmol/l"
+  },
+  "component" : [
+    {
+      "code" : {
+        "coding" : [
+          {
+            "system" : "http://snomed.info/sct",
+            "code" : "118578006",
+            "display" : "Relative time"
+          }
+        ]
+      },
+      "valueQuantity" : {
+        "value" : 180,
+        "unit" : "m",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "m"
+      }
+    }
+  ]
+}
+[...]
 </pre></p>
 
 <a name="Use of images"></a>
