@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Observation xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///H:/OLD_DESKTOP/Desktop/LATEST%20AND%20GREATEST/FHIR4/observation.xsd">
 	<!-- Example to show technical structures - not necessarily clinically logical/valid-->
-	<id value="obsDynamic0"/>
+	<id value="obsDynamicHead"/>
 	<meta>
 		<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"/>
 	</meta>
