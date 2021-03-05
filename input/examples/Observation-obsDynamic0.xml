@@ -1,26 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Observation xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///H:/OLD_DESKTOP/Desktop/LATEST%20AND%20GREATEST/FHIR4/observation.xsd">
 	<!-- Example to show technical structures - not necessarily clinically logical/valid-->
-	
 	<id value="obsDynamic0"/>
-	
 	<meta>
 		<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"/>
 	</meta>
-	<modifierExtension url="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-ext-relative-time">
-				<valueQuantity>
-					<value value="0"/>
-					<unit value="m"/>
-					<system value="http://unitsofmeasure.org"/>
-					<code value="m"/>
-				</valueQuantity>
-			</modifierExtension>
-		
 	<status value="final"/>
-	
 	<code>
 		<coding>
-			
 			<system value="http://loinc.org"/>
 			<code value="53093-1"/>
 			<display value="Glucose^post XXX challenge"/>
@@ -37,4 +24,19 @@
 		<system value="http://unitsofmeasure.org"/>
 		<code value="mmol/l"/>
 	</valueQuantity>
+	<component>
+		<code>
+			<coding>
+				<system value="http://snomed.info/sct"/>
+				<code value="118578006"/>
+				<display value="Relative time"/>
+			</coding>
+		</code>
+		<valueQuantity>
+			<value value="0"/>
+			<unit value="m"/>
+			<system value="http://unitsofmeasure.org"/>
+			<code value="m"/>
+		</valueQuantity>
+	</component>
 </Observation>
