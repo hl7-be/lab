@@ -5,14 +5,7 @@
 				<meta>
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"/>
 				</meta>
-			 	<modifierExtension url="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-ext-relative-time">
-    <valueQuantity>
-	<value value="180"/>
-	<unit value="m"/>
-	<system value="http://unitsofmeasure.org"/>
-<code value="m"/>
-</valueQuantity>
-  </modifierExtension>
+			 
 				<status value="final"/>
 				
 				<code>
@@ -39,4 +32,19 @@
 					<system value="http://unitsofmeasure.org"/>
 					<code value="mmol/l"/>
 				</valueQuantity>
+					<component>
+		<code>
+			<coding>
+				<system value="http://snomed.info/sct"/>
+				<code value="118578006"/>
+				<display value="Relative time"/>
+			</coding>
+		</code>
+		<valueQuantity>
+			<value value="180"/>
+			<unit value="m"/>
+			<system value="http://unitsofmeasure.org"/>
+			<code value="m"/>
+		</valueQuantity>
+	</component>
 			</Observation>
