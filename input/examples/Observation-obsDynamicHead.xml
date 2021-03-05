@@ -31,15 +31,15 @@
 		<code>
 			<coding>
 				<system value="http://snomed.info/sct"/>
-				<code value="18555000"/>
+				<code value="118555000"/>
 				<display value="Substance amount"/>
 			</coding>
 		</code>
 		<valueQuantity>
 			<value value="75"/>
-			<unit value="gram"/>
+			<unit value="g"/>
 			<system value="http://unitsofmeasure.org"/>
-			<code value="gram"/>
+			<code value="g"/>
 		</valueQuantity>
 	</component>
 		<component>
@@ -50,8 +50,6 @@
 				<display value="Product name"/>
 			</coding>
 		</code>
-		<valueString>
-		<string value ="syrupy glucose solution"/>
-		</valueString>
+		<valueString value ="syrupy glucose solution"/>
 	</component>
 </Observation>

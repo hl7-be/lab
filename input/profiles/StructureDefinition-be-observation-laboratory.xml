@@ -178,7 +178,7 @@
     <element id="Observation.component:substanceAmountQualifier.code.coding.code">
       <path value="Observation.component.code.coding.code" />
       <min value="1" />
-      <fixedCode value="18555000" />
+      <fixedCode value="118555000" />
     </element>
     <element id="Observation.component:substanceAmountQualifier.code.coding.display">
       <path value="Observation.component.code.coding.display" />
@@ -211,9 +211,8 @@
     </element>
     <element id="Observation.component:productNameQualifier.code.coding.display">
       <path value="Observation.component.code.coding.display" />
-      <label value="Product name" />
       <min value="1" />
-      <fixedString value="product name" />
+      <fixedString value="Product name" />
     </element>
     <element id="Observation.component:productNameQualifier.value[x]">
       <path value="Observation.component.value[x]" />
