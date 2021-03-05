@@ -133,14 +133,6 @@
       <short value="If a testing code does not include a time interval but needs one to qualify the code." />
       <max value="1" />
     </element>
-    <element id="Observation.component:relativeTimeQualifier.code.coding">
-      <path value="Observation.component.code.coding" />
-      <fixedCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="118578006" />
-        <display value="Relative time" />
-      </fixedCoding>
-    </element>
     <element id="Observation.component:relativeTimeQualifier.code.coding.system">
       <path value="Observation.component.code.coding.system" />
       <min value="1" />
