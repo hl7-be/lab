@@ -5,9 +5,7 @@
   <meta>
     <profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-organization"/>
   </meta>
-  <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>id</b>: organization1</p><p><b>meta</b>: </p><p><b>identifier</b>: Provider Number = 0425.222.333 (OFFICIAL), Medical License number = 999999999 (OFFICIAL)</p><p><b>active</b>: true</p><p><b>type</b>: <span title="Codes: {https://www.ehealth.fgov.be/standards/fhir/CodeSystem/cd-hcparty orghospital}">hospital</span></p><p><b>name</b>: Enterprise Hospital Ziekenhuis</p><p><b>telecom</b>: ph: 322675199(WORK)</p><p><b>address</b>: </p><ul><li>Vulcansstraat 120, 1000 Brussel(WORK)</li><li>120, Rue des Vulcans, 1000 Bruxelles(WORK)</li></ul></div>
-  </text>
+ 
   <identifier>
     <use value="official"/>
     <type>

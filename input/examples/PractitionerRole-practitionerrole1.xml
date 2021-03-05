@@ -5,9 +5,7 @@
   <meta>
     <profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-practitionerrole"/>
   </meta>
-  <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>id</b>: practitionerrole1</p><p><b>meta</b>: </p><p><b>identifier</b>: 23</p><p><b>active</b>: true</p><p><b>period</b>: Aug 1, 2019, 12:00:00 AM --&gt; Dec 1, 2019, 12:00:00 AM</p><p><b>practitioner</b>: <a href="Practitioner-practitioner1.html">Dr Katherine Pulaski. Generated Summary: id: practitioner1; 79121137740 (OFFICIAL), 18749704477 (OFFICIAL); Katherine Pulaski (OFFICIAL); katherine.pulaski@enterprisehospital.be(WORK), ph: 022675198(WORK), fax: 022675209(WORK); gender: female; birthDate: 1979-12-11</a></p><p><b>code</b>: <span title="Codes: {https://www.ehealth.fgov.be/standards/fhir/CodeSystem/cd-hcparty persphysician}">physician</span></p><p><b>specialty</b>: <span title="Codes: {http://snomed.info/sct 419772000}">Family practice</span></p><blockquote><p><b>availableTime</b></p><p><b>daysOfWeek</b>: mon, tue, wed</p><p><b>availableStartTime</b>: </p><p><b>availableEndTime</b>: </p></blockquote><blockquote><p><b>availableTime</b></p><p><b>daysOfWeek</b>: thu, fri</p><p><b>availableStartTime</b>: </p><p><b>availableEndTime</b>: </p></blockquote><h3>NotAvailables</h3><table class="grid"><tr><td>-</td><td><b>Description</b></td><td><b>During</b></td></tr><tr><td>*</td><td>Katherine will be on extended leave during August 2020</td><td>Aug 1, 2020, 12:00:00 AM --&gt; Aug 20, 2020, 12:00:00 AM</td></tr></table><p><b>availabilityExceptions</b>: Katherine is generally unavailable on public holidays and during the Christmas/New Year break</p></div>
-  </text>
+  
   <identifier>
     <system value="http://www.acme.org/practitioners"/>
     <value value="23"/>
