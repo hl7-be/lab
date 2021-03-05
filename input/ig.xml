@@ -4,7 +4,7 @@
   <id value="hl7.country.ig"/>
   <url value="http://hl7.country.org/fhir/ig"/>
   <!-- This version will propagate to all artifacts unless the "propagate-version" extension is overridden -->
-  <version value="0.0.3"/>
+  <version value="0.0.4"/>
   <name value="AffiliateIG"/>
   <title value="HL7 BE Laboratory Result WG Implementation Guide (work in progress)"/>
   <status value="draft"/>
