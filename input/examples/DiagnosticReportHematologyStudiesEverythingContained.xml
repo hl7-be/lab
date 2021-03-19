@@ -286,10 +286,10 @@ gg=="/>
 			</subject>
 			<authoredOn value="2015-11-01T14:41:00+01:00"/>
 			<requester>
-				<reference value="Practitioner/practitioner1"/>
+				<reference value="#practitioner1"/>
 			</requester>
 			<specimen>
-				<reference value="Specimen/specimen1"/>
+				<reference value="#specimen1"/>
 			</specimen>
 		</ServiceRequest>
 		</contained>
