@@ -22,7 +22,7 @@
 		<reference value="Specimen/urine1"/>
 	</specimen>
 	<hasMember>
-		<reference value="Observation/obsScreening"/>
+		<reference value="Observation/obsUrineScreening"/>
 	</hasMember>
 	<hasMember>
 		<reference value="Observation/obsMagnesium"/>
