@@ -380,6 +380,12 @@ Thus avoiding the need to include a full Patient resource or a reference to a fu
 <a name="Technical implementation of the specification published here"></a>
 <h4>Technical implementation of the specification published here</h4>
 <p>As per the FHIR standard specifications, there are multiple ways in how the report can be exchanged or requested.</p>
-<p>A POC phase for this project will normally investigate a few possibilities. It is however expected the laboratory will probably be (also)exchanged under some form of FHIR Bundle in which the different used resources are fully available as seperate entries.</p>
+<p>A POC phase for this project during 2021 is investigating possibilities.</p>
+<p>Current expectations (at publication date of this draft IG) for the first iteration of the laboratory flows are:</p>
+<ul>
+<li>The laboratory prescription will be send as a serviceRequest complying with the Belgian laboratory prescription profile with all needed artefacts as 'contained'</li>
+<li>The laboratory result will be send as a diagnosticReport complying with the Belgian laboratory result profile with all needed artefacts either as 'contained' or as seperate entries in a FHIR 'bundle' </li>
+</ul>
+
 
 </div>
