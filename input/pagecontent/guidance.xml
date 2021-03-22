@@ -277,7 +277,7 @@ If the Code needs to be 'qualified' with a relative time: use the .component str
         ]
       },
       "valueQuantity" : {
-        "value" : 180,
+        "value" : 240,
         "unit" : "m",
         "system" : "http://unitsofmeasure.org",
         "code" : "m"
@@ -287,6 +287,12 @@ If the Code needs to be 'qualified' with a relative time: use the .component str
 }
 [...]
 </pre></p>
+<a name="Substance amount qualifier and product name qualifier"></a>
+<h4>Substance amount qualifier and product name qualifier</h4>
+<p>As described in the example supra concerning a relative time qualifier, other ways to qualify a code also
+exist. Refer to the different slicings available in the BeObservationLaboratory profile in this guide for
+further guidance.</p>
+
 
 <a name="Use of images"></a>
 <h3>Use of images</h3>

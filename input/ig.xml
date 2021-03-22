@@ -123,6 +123,20 @@
       <description value="Hematology studies example as collection bundle. This is an annoted example. View as XML to read the XML annotations."/>
       <groupingId value="exl"/>
     </resource>
+	
+	
+		<resource>
+	    <reference>
+        <reference value="DiagnosticReport/DiagnosticReportHematologyStudiesEverythingContained"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Hematology studies example"/>
+      <description value="Hematology studies example as one diagnosticReport with all other resources contained."/>
+      <groupingId value="exl"/>
+    </resource>
+	
+	
+	
 		 <resource>
       <reference>
         <reference value="Bundle/AntibiogramAsBundleCollection"/>
@@ -143,6 +157,9 @@
       <description value="Structured Negative Antibiogram in collection bundle"/>
       <groupingId value="exl"/>
     </resource>
+	
+	
+
 	
 
 
