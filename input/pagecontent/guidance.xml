@@ -350,7 +350,18 @@ The impact of that will however be minimal as both use the FHIR datatype Attachm
 <h3>Guidance for minimal information in supporting resources</h3>
 <a name="Minimal information concerning the subjec"></a>
 <h4>Minimal information concerning the subject</h4>
-<p>Some minimal information concerning the subject (Patient resource) SHOULD be given: an .identifier (SSIN if possible), a .name, at least one .telecom, a .birthDate and a .address</p><p>The .gender SHALL be given (but could be 'unknown'.)</p>
+<p>An .identifier (SSIN if possible) SHALL be given.</p>
+<p>If the identifier is the only information to send concerning the patient, it is allowed to use a FHIR logical reference to refer to the patient. 
+Thus avoiding the need to include a full Patient resource or a reference to a full Patient resource on a server. A logical reference will lead to such a structure:</p>
+ <pre>
+  &lt;subject&gt;
+     &lt;identifier>
+        &lt;system value="https://www.ehealth.fgov.be/standards/fhir/NamingSystem/ssin"/&gt;
+	&lt;value value="79121137740"/&gt;
+     &lt;/identifier&gt;
+   &lt;/subject&gt;
+  </pre>
+<p>Some additional minimal information concerning the subject (Patient resource), besides the identifier, SHOULD however be given if available:a .name, at least one .telecom, a .birthDate and a .address. In any Patient resource, the .gender SHALL be given (but could be 'unknown'.)</p>
 <a name="Minimal information concerning the laboratory"></a>
 <h4>Minimal information concerning the laboratory</h4>
 <p>Some minimal information concerning the laboratory (Organization resource) SHOULD be given: an .identifier (NIHDI if possible), a .name, at least one .telecom and a .address.</p>
