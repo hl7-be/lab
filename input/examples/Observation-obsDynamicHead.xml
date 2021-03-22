@@ -10,7 +10,7 @@
 		<coding>
 			<system value="http://loinc.org"/>
 			<code value="72171-2"/>
-			<display value="Glucose tolerance 2 hours panel - Serum or Plasma"/>
+			<display value="Glucose tolerance 4 hours panel - Serum or Plasma"/>
 		</coding>
 	</code>
 	<effectiveDateTime value="2015-11-04T09:16:00-05:00"/>

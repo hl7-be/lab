@@ -4,6 +4,20 @@
 		Please note, this IG is considered a draft specification until further notice.
 	</p>
 
+<p>
+		<b>2021-03-22 v0.0.5 - Published </b> based on FHIR R4
+	</p>
+	<ul>
+		<li>Version after feedbacks from the HL7 WG of 20210308</li>
+		<li>Clarified qualifier in guidance.</li>
+		<li>Expectations in guidance towards use of contained and bundle.</li>
+		<li>Clean up of examples</li>
+		
+	</ul>
+
+
+
+
 
 <p>
 		<b>2021-03-05 v0.0.4 - Published </b> based on FHIR R4

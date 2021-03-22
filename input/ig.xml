@@ -148,6 +148,18 @@
     </resource>
 	
 	
+	
+		 <resource>
+      <reference>
+        <reference value="Bundle/AntibiogramAsBundleCollectionNoPredefinedNarrative"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Structured Antibiogram in collection bundle"/>
+      <description value="Structured Antibiogram in collection bundle. For completeness, this example is the same as the example supra but without added narrative (text) element. This is an annoted example. View as XML to read the XML annotations."/>
+      <groupingId value="exl"/>
+    </resource>
+	
+	
 		 <resource>
       <reference>
         <reference value="Bundle/AntibiogramIsNegativeAsBundleCollection"/>
@@ -158,9 +170,25 @@
       <groupingId value="exl"/>
     </resource>
 	
-	
+			 <resource>
+      <reference>
+        <reference value="Observation/obsDynamicHead"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Detailed structure of panel that uses qualifiers."/>
+      <description value="Details how to structure a panel using qualifiers.(Note this example only concerns the Observation structure, a laboratory report SHALL be send leveraging the diagnosticReport resource that uses this Observation to express its results.)"/>
+      <groupingId value="exl"/>
+    </resource>
 
-	
+	 <resource>
+      <reference>
+        <reference value="Observation/obsCreat"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Detailed structure of fragment of creatinine panel."/>
+      <description value="Detailed structure of fragment of creatinine panel.(Note this example only concerns the Observation structure, a laboratory report SHALL be send leveraging the diagnosticReport resource that uses this Observation to express its results.)"/>
+      <groupingId value="exl"/>
+    </resource>
 
 
 
