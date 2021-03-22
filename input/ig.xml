@@ -151,7 +151,8 @@
 	
 		 <resource>
       <reference>
-        <reference value="Bundle/AntibiogramAsBundleCollectionNoPredefinedNarrative"/>
+        <reference value="Bundle/AntibiogramAsBundleCollectionTestNoPredefinedNarrative"/>
+		
       </reference>
       <fhirVersion value="4.0.1"/>
       <name value="Structured Antibiogram in collection bundle"/>
