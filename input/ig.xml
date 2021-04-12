@@ -49,7 +49,7 @@
       inappropriate to use the defaults.  Feel free to provide feedback about the defaults... -->
     <grouping id="logicalmodels">
       <name value="Logical Models"/>
-      <description value="The Logical Data Models. These are common, functional data descriptions which can be implemented in and mapped to KMEHR, CDA, HL7 v2 and FHIR technical implementations."/>
+      <description value="The Logical Data Models.  These are common, functional data descriptions which can be implemented in and mapped to KMEHR, CDA, HL7 v2 and FHIR technical implementations."/>
     </grouping>
 
     
