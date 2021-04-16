@@ -403,6 +403,12 @@ you also need that IG for the base federal profiles. Once this IG is considered 
 <ul>
 <li>The laboratory prescription SHALL be send as a serviceRequest complying with the Belgian laboratory prescription profile with all needed resources as 'contained'</li>
 <li>The laboratory result SHALL be send as a diagnosticReport complying with the Belgian laboratory result profile with all needed resources either as 'contained' or as seperate entries in a FHIR 'bundle' </li>
+<li>Whenever needed to express the MIME type of a FHIR message, its formal MIME type SHALL be used which is:
+<ul>
+<li>XML: application/fhir+xml</li>
+<li>JSON: application/fhir+json</li>
+</ul>
+</li>
 </ul>
 
 
