@@ -1,0 +1,18 @@
+
+
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../src-generated/schemas/fhir-single.xsd" >
+
+
+<p>This Visualisation Guidance page aims to give guidance about how the visualisation COULD look like in an application that consumes the report.</p>
+<p>This page also marks which elements SHALL be minimally available in any visualisation and how their minimal representation SHALL look like to
+be clinically safe</p>
+<p>Examples are sometimes given in JSON or XML format but it SHALL be understood all structures can be expressed in both as per the FHIR standard.</p>
+
+<a name="Conventions"> </a>
+<h3>Conventions</h3>
+<a name="To do"> </a>
+<h4>To do</h4>
+<p>To do</p>
+
+
+</div>

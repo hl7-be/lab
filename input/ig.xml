@@ -216,6 +216,11 @@
         <title value="Guidance"/>
         <generation value="html"/>
       </page>
+	  	  <page>
+        <nameUrl value="vizguidance.html"/>
+        <title value="Visualisation Guidance"/>
+        <generation value="html"/>
+      </page>
 	    <page>
         <nameUrl value="downloads.html"/>
         <title value="Downloads"/>
