@@ -17,7 +17,7 @@ it is implied any subelements of this element that are available SHALL be displa
 <ul>
 <li>.status</li>
 </ul>
-<p>Identifie(s)s of the reports</p>
+<p>Identifier(s) of the reports</p>
 <ul>
 <li>.identifier</li>
 </ul>
@@ -85,12 +85,12 @@ However, if available, the following elements SHALL be visualised</p>
 <li>.address</li>
 </ul>
 
-<a name=".."> </a>
-<h3>..</h3>
+<a name="Specimen"> </a>
+<h3>Specimen(.specimen)</h3>
 <p>To do</p>
 
-<a name=".."> </a>
-<h3>..</h3>
+<a name="Observation"> </a>
+<h3>Observation(.observation)</h3>
 <p>To do</p>
 
 <a name=".."> </a>
