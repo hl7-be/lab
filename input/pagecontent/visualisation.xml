@@ -3,23 +3,62 @@
 <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../src-generated/schemas/fhir-single.xsd" >
 
 
-<p>This Visualisation Guidance page aims to give guidance about how the visualisation COULD look like in an application that consumes the report.</p>
-<p>This page also marks which elements SHALL be minimally available in any visualisation and how their minimal representation SHALL look like to
-be clinically safe</p>
-<p>Examples are sometimes given in JSON or XML format but it SHALL be understood all structures can be expressed in both as per the FHIR standard.</p>
+<p>This Visualisation Guidance page aims to give guidance about which of the structured elements available in a diagnosticreport SHALL be minimally visualised and in what kind of structure
+they SHALL be minimally presented to safely understand them.</p>
+<p>This page does NOT aim to give exhaustive guidance how the final user friendly visualization should be like - that is 
+considered the domain of any consuming system.</p>
+<p>Whenever a specific element is given infra (e.g. '.identifier') without extra explication, 
+it is implied any subelements of this element that are available SHALL be displayed. Also, if the element repeats, the repeats SHALL be visualized. </p>
 
-<a name="Conventions"> </a>
-<h3>Conventions</h3>
-<a name="To do"> </a>
-<h4>To do</h4>
+
+<a name="General information"> </a>
+<h3>General information</h3>
+<p>Status</p>
+<ul>
+<li>.status</li>
+</ul>
+<p>Identifier(s)s of the reports</p>
+<ul>
+<li>.identifier</li>
+</ul>
+<p>One general title</p>
+<ul>
+<li>.code</li>
+</ul>
+<p>Extra category(ies) applicable to this report</p>
+<ul>
+<li>.catgory</li>
+</ul>
+<p>Issue date of this report</p>
+<ul>
+<li>.issued</li>
+</ul>
+<p>General conclusions based on this report</p>
+<ul>
+<li>.conclusion</li>
+<li>.conclusionCode</li>
+</ul>
+
+<a name="Patient"> </a>
+<h3>Patient(.subject)</h3>
+<p></p>
 <p>To do</p>
 
-<a name="Administrative content"> </a>
-<h3>Administrative content</h3>
-<p>The following information SHALL be visualized</p>
-<a name="To do"> </a>
-<h4>To do</h4>
+
+<a name="Performer"> </a>
+<h3>Performer(.performer)</h3>
 <p>To do</p>
 
+<a name=".."> </a>
+<h3>..</h3>
+<p>To do</p>
+
+<a name=".."> </a>
+<h3>..</h3>
+<p>To do</p>
+
+<a name=".."> </a>
+<h3>..</h3>
+<p>To do</p>
 
 </div>
