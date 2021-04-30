@@ -17,7 +17,7 @@ it is implied any subelements of this element that are available SHALL be displa
 <ul>
 <li>.status</li>
 </ul>
-<p>Identifier(s)s of the reports</p>
+<p>Identifie(s)s of the reports</p>
 <ul>
 <li>.identifier</li>
 </ul>
@@ -41,13 +41,49 @@ it is implied any subelements of this element that are available SHALL be displa
 
 <a name="Patient"> </a>
 <h3>Patient(.subject)</h3>
-<p></p>
-<p>To do</p>
-
+<p>It is fully expected a patient may not be exhaustively available in the report. 
+However, if available, the following elements SHALL be visualised</p>
+<p>Identifier(s)</p>
+<ul>
+<li>.identifier</li>
+</ul>
+<p>Name(s)</p>
+<ul>
+<li>.name</li>
+</ul>
+<p>Birthdate</p>
+<ul>
+<li>.birthDate</li>
+</ul>
+<p>Telecom</p>
+<ul>
+<li>.telecom</li>
+</ul>
+<p>Address</p>
+<ul>
+<li>.address</li>
+</ul>
 
 <a name="Performer"> </a>
 <h3>Performer(.performer)</h3>
-<p>To do</p>
+<p>It is fully expected the performer(s) (here it is assumed they are of the Practitioner and/or Organization type) may not be exhaustively available in the report. 
+However, if available, the following elements SHALL be visualised</p>
+<p>Identifier(s)</p>
+<ul>
+<li>.identifier</li>
+</ul>
+<p>Name(s)</p>
+<ul>
+<li>.name</li>
+</ul>
+<p>Telecom</p>
+<ul>
+<li>.telecom</li>
+</ul>
+<p>Address</p>
+<ul>
+<li>.address</li>
+</ul>
 
 <a name=".."> </a>
 <h3>..</h3>
