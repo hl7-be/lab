@@ -8,7 +8,7 @@ they SHALL be minimally presented to safely understand them.</p>
 <p>This is not a guidance page on the actual report, the thumb of rule here concerning the referenced elements is: this is where they 
 SHALL be visualized IF they are available in the report. Please refer to the other pages in this guide for guidance
 on how to construct the report. It is up to a human inspection to finally judge the quality of the
-report that is visualized followeing the rules on this page.</p>
+report that is visualized following the rules on this page.</p>
 <p>This page does NOT aim to give exhaustive guidance how the final user friendly visualization should be like - that is 
 considered the domain of any consuming system.</p>
 <p>Whenever a specific element is given infra (e.g. '.identifier') without extra explication, 
@@ -35,7 +35,7 @@ it is implied any subelements of this element that are available SHALL be displa
 </ul>
 <p>Effective</p>
 <ul>
-<li>.issued</li>
+<li>.effective[x]</li>
 </ul>
 <p>Issue date of this report</p>
 <ul>
