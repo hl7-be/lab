@@ -46,6 +46,18 @@ it is implied any subelements of this element that are available SHALL be displa
 <li>.conclusion</li>
 <li>.conclusionCode</li>
 </ul>
+<a name="Time of prescription"> </a>
+<h3>Time of prescription(.basedOn)</h3>
+<p>It is fully expected the original prescription may not be exhaustively available in the report. 
+However, if available, the following elements SHALL be visualised</p>
+<p>Identifier(s)</p>
+<ul>
+<li>.identifier</li>
+</ul>
+<p>Authored on</p>
+<ul>
+<li>.authoredOn</li>
+</ul>
 
 <a name="Patient"> </a>
 <h3>Patient(.subject)</h3>
