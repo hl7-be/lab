@@ -200,7 +200,12 @@ in the root of the diagnosticreport</p>
 </li>
 </ul>
 <p>Value (Special attention SHALL be given to also correctly visualize any unit)</p>
-<
+<ul>
+<li>.value[x]</li>
+</ul>
+
+
+
 
 
 
