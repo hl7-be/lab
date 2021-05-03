@@ -167,7 +167,7 @@ Each of these members will have a member list for all the susceptibilities.</p>
 be to visualise these susceptibility lists in columns. (Giving the name of the antibiotic once and expressing the different 
 susceptibilities for the different cultures as columns that are cleary marked to which culture they apply)</p>
 <p>Example:</p>
-<pre>
+<pre>[...]
 Culture	1.Morganella morganii    
 	2.Escherichia coli
 	
@@ -177,6 +177,7 @@ Antibiogram							1			2
 			Nitrofurantoin				R			S
 			Cefuroxime				R			S
 			Gentamicin				S			S
-			Colistin				R			S</pre>
+			Colistin				R			S
+[...]</pre>
 
 </div>
