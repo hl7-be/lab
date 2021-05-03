@@ -157,6 +157,48 @@ SHALL present these structures in a hierarchical fashion.</p>
 <ul>
 <li>.status</li>
 </ul>
+<p>Category</p>
+<ul>
+<li>.category</li>
+</ul>
+<p>Code (NB this is the main code to identify the Observation. When an Observation is used as a title, it may happen no
+actual code is available in the .code element but this title will be available in the .code.text element.)</p>
+<ul>
+<li>.code</li>
+</ul>
+<p>Effective time (the clinically relevant time of of the observation)</p>
+<ul>
+<li>.effective[x]</li>
+</ul>
+<p>Issued time</p>
+<ul>
+<li>.time this observation was made available</li>
+</ul>
+<p>It is fully expected the performer(s) (here it is assumed they are of the Practitioner and/or Organization type) may not be exhaustively available in the report. 
+However, if available, the following elements SHALL be visualised</p>
+<p>For readability purposes, it is RECOMMENDED to only visualise the performer here when it is available and different from the performer
+in the root of the diagnosticreport</p>
+<li>
+<ul><p>Identifier(s)</p>
+<ul>
+<li>.identifier</li>
+</ul></ul>
+<ul><p>Name(s)</p>
+<ul>
+<li>.name</li>
+</ul>
+</ul>
+<ul><p>Telecom</p>
+<ul>
+<li>.telecom</li>
+</ul>
+</ul>
+<ul><p>Address</p>
+<ul>
+<li>.address</li>
+</ul>
+</ul>
+</li>
 
 
 <a name="Extra visualisation guidance concerning antibiogram"> </a>
