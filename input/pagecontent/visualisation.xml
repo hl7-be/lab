@@ -149,7 +149,15 @@ of collection etc.)</p>
 
 <a name="Observation"> </a>
 <h3>Observation(.observation)</h3>
-<p>To do</p>
+<p>As a general guidance concerning the visualisation of the observations any visualisation mechanism SHALL take note an observation
+MAY have components and an observation MAY have member observations. If any of these structures exists, a visualisation mechanism
+SHALL present these structures in a hierarchical fashion.</p>
+
+<p>Status (For readability purposes a status of 'final' MAY be hidden)</p>
+<ul>
+<li>.status</li>
+</ul>
+
 
 <a name=".."> </a>
 <h3>..</h3>
