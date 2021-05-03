@@ -159,8 +159,24 @@ SHALL present these structures in a hierarchical fashion.</p>
 </ul>
 
 
-<a name=".."> </a>
-<h3>..</h3>
-<p>To do</p>
+<a name="Extra visualisation guidance concerning antibiogram"> </a>
+<h4>Extra visualisation guidance concerning antibiogram</h4>
+<p>A typical structure in an antibiogram is a 'master' observation that has a member Observation for each culture.
+Each of these members will have a member list for all the susceptibilities.</p>
+<p>Of course, the rules around hierarchical fashion as described supra apply here as well. The typical visualisation for an antibiogram would
+be to visualise these susceptibility lists in columns. (Giving the name of the antibiotic once and expressing the different 
+susceptibilities for the different cultures as columns that are cleary marked to which culture they apply)</p>
+<p>Example:</p>
+<pre>
+Culture	1.Morganella morganii    
+	2.Escherichia coli
+	
+Antibiogram							1			2
+			Ampicilin				R			S
+			Trimethoprim+Sulfamethoxazole		S			S
+			Nitrofurantoin				R			S
+			Cefuroxime				R			S
+			Gentamicin				S			S
+			Colistin				R			S</pre>
 
 </div>
