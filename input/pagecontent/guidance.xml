@@ -229,6 +229,12 @@ It is allowed to use multiple codes within the FHIR CodeableConcept datatype. Bu
           ]
         }</pre></p>
 	
+<a name="Derived observations"></a>
+<h4>Derived observations</h4>
+<p>When needed to clarify a certain observation is derived from other observations, that can be done by using the .derivedFrom element
+within an Observation. (e.g. an observation that gives the
+free testosterone level and when it is needed to refer to the observations that this is derived from.)</p>
+
 <a name="Expression of results"></a>
 <h4>Expression of results</h4>
 <ul><li>
