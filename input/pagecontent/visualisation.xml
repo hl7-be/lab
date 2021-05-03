@@ -107,25 +107,44 @@ However, if available, the following elements SHALL be visualised</p>
 
 <a name="Specimen"> </a>
 <h3>Specimen(.specimen)</h3>
-<p></p>
+<p>Identifier(s)</p>
 <ul>
-<li>.</li>
+<li>.identifier</li>
 </ul>
-<p></p>
+<p>Status</p>
 <ul>
-<li>.</li>
+<li>.status</li>
 </ul>
-<p></p>
+<p>Type</p>
 <ul>
-<li>.</li>
+<li>.type</li>
 </ul>
-<p></p>
+<p>Received time</p>
 <ul>
-<li>.</li>
+<li>.receivedTime</li>
 </ul>
-<p></p>
+<p>Parent specimen (It is possible a specimen refers to a parent specimen(s), from which it originated. In that case
+ the specimen SHALL clearly state this
+by giving the identifier(s). The actual parent specimen(s) SHALL be visualized as seperate specimen.)</p>
 <ul>
-<li>.</li>
+<li>.parent.identifier</li>
+</ul>
+<p>Collection details (All subelements available under the .collection element SHALL be visualized when available (e.g. when they were collected, the method
+of collection etc.)</p>
+<ul>
+<li>.collection</li>
+</ul>
+<p>Processing details (All subelements available under the .processing element SHALL be visualized when available (e.g. a specific procedure that was done)</p>
+<ul>
+<li>.processing</li>
+</ul>
+<p>Condition</p>
+<ul>
+<li>.condition</li>
+</ul>
+<p>Notes (Any free text note to explain something concerning the specimen)</p>
+<ul>
+<li>.note</li>
 </ul>
 
 <a name="Observation"> </a>
