@@ -62,7 +62,7 @@
     </grouping>
 
 
-
+<!--
    <resource>
       <reference>
         <reference value="StructureDefinition/be-practitioner"/>
@@ -108,7 +108,7 @@
       <description value="Core Belgian profile for Observation"/>
       <groupingId value="sc"/>
     </resource>
-
+-->
 
 	  <resource>
       <reference>
