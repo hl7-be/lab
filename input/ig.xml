@@ -112,7 +112,7 @@
 
 	  <resource>
       <reference>
-        <reference value="Bundle/HematologyStudiesAsBundleCollection"/>
+        <reference value="Bundle/hematologyStudiesAsBundleCollection"/>
       </reference>
       <fhirVersion value="4.0.1"/>
       <name value="Hematology studies example"/>
@@ -123,7 +123,7 @@
 	
 		<resource>
 	    <reference>
-        <reference value="DiagnosticReport/DiagnosticReportHematologyStudiesEverythingContained"/>
+        <reference value="DiagnosticReport/hematologyStudiesEverythingContained"/>
       </reference>
       <fhirVersion value="4.0.1"/>
       <name value="Hematology studies example"/>
@@ -135,7 +135,7 @@
 	
 		 <resource>
       <reference>
-        <reference value="Bundle/AntibiogramAsBundleCollection"/>
+        <reference value="Bundle/antibiogramAsBundleCollection"/>
       </reference>
       <fhirVersion value="4.0.1"/>
       <name value="Structured Antibiogram in collection bundle"/>
@@ -147,7 +147,7 @@
 	
 		 <resource>
       <reference>
-        <reference value="Bundle/AntibiogramAsBundleCollectionTestNoPredefinedNarrative"/>
+        <reference value="Bundle/antibiogramAsBundleCollectionTestNoPredefinedNarrative"/>
 		
       </reference>
       <fhirVersion value="4.0.1"/>
@@ -159,7 +159,7 @@
 	
 		 <resource>
       <reference>
-        <reference value="Bundle/AntibiogramIsNegativeAsBundleCollection"/>
+        <reference value="Bundle/antibiogramIsNegativeAsBundleCollection"/>
       </reference>
       <fhirVersion value="4.0.1"/>
       <name value="Structured Negative Antibiogram in collection bundle"/>

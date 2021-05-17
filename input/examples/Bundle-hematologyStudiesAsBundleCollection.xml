@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///H:/OLD_DESKTOP/Desktop/LATEST%20AND%20GREATEST/FHIR4/bundle.xsd">
-	<id value="HematologyStudiesAsBundleCollection"/>
+	<id value="hematologyStudiesAsBundleCollection"/>
 	<identifier>
 		<!-- A persistent identifier for the bundle that won't change as a bundle is copied from server to server.(https://www.hl7.org/fhir/bundle-definitions.html#Bundle.identifier )-->
 		<system value="urn:ietf:rfc:3986"/>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///H:/OLD_DESKTOP/Desktop/LATEST%20AND%20GREATEST/FHIR4/bundle.xsd">
-	<id value="AntibiogramAsBundleCollectionTestNoPredefinedNarrative"/>
+	<id value="antibiogramAsBundleCollection"/>
 	<identifier> 
  <!-- A persistent identifier for the bundle that won't change as a bundle is copied from server to server.(https://www.hl7.org/fhir/bundle-definitions.html#Bundle.identifier )-->
     <system value="urn:ietf:rfc:3986"/> 
@@ -18,7 +18,45 @@
 					<profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report"/>
 				</meta>
 				<language value="en"/>
-				
+				<text>
+					<status value="generated"/>
+					<div xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+						<p>This example is presented as a Collection bundle for ease of understanding. It makes no assumption towards any final implementation of using FHIR technically. </p>
+						<p>Download and open this as XML in an editor to view XML annotations.</p>
+						<p>ALL LOINC, SNOMED-CT CODES ETC. ARE USED FOR ILLUSTRATIVE PURPOSES AND DO NOT NECESSARILY PRESENT A CLINICALLY CORRECT REAL LIFE LABORATORY REPORT</p>
+						<h2>A narrative SHALL be included</h2>
+						<p>Specifically, the strong recommendation of HL7 concerning the use of the narrative &quot;to support human-consumption as a fallback&quot; is important in the context of the laboratory report. Indeed, this &quot;human-consumption&quot; aspect actually concerns the inclusion of limited xhtml content and as such an effortless implementation to visualize the content of the report by consuming systems is guarantueed. Also, for systems that might not initially choose to consume reports in a structured way, this guarantuees a way to at least visualize and present the content to the user.</p>
+						<p>The exact presentation is left at the discretion of the providing party.</p>
+						<pre>Specimen specification     Throat swab
+
+Culture	1.Morganella morganii    
+	2.Escherichia coli
+	
+Antibiogram							1			2
+			Ampicilin				R			S
+			Trimethoprim+Sulfamethoxazole		S			S
+			Nitrofurantoin				R			S
+			Cefuroxime				R			S
+			Gentamicin				S			S
+			Colistin				R			S
+			Temocillin				S			S
+			Fosfomycin				S			S
+			Levofloxacin				S			S
+			Ofloxacin				S			S
+			Amoxicillin+Clavulanate			R			S
+			Amikacin				S			S
+			Piperacillin+Tazobactam			S			S
+			Ceftriaxone				S			S
+			Cefotaxime				S			S
+			Ceftazidime				S			S
+			Meropenem				S			S
+			
+MRSA					Negative
+MRGN					Negative
+						
+						</pre>
+					</div>
+				</text>
 				<identifier>
 					<system value="http://acme.com/lab/reports"/>
 					<value value="11530231003.2015110413180000000"/>
