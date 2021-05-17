@@ -144,7 +144,7 @@
     </resource>
 	
 	
-	
+	<!--
 		 <resource>
       <reference>
         <reference value="Bundle/antibiogramAsBundleNN"/>
@@ -155,7 +155,7 @@
       <description value="Structured Antibiogram in collection bundle. For completeness, this example is the same as the example supra but without added narrative (text) element. This is an annoted example. View as XML to read the XML annotations."/>
       <groupingId value="exl"/>
     </resource>
-	
+	-->
 	
 		 <resource>
       <reference>
