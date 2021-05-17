@@ -11,8 +11,8 @@ on how to construct the report. It is up to a human inspection to finally judge 
 report that is visualized following the rules on this page.</p>
 <p>This page does NOT aim to give exhaustive guidance how the final user friendly visualization should be like - that is 
 considered the domain of any consuming system.</p>
-<p>Whenever a specific element is given infra (e.g. '.identifier') without extra explication, 
-it is implied any subelements of this element that are available SHALL be displayed. Also, if the element repeats, the repeats SHALL be visualized. </p>
+<p><b>Whenever a specific element is given infra (e.g. '.identifier') without extra explication, 
+it is implied any sub elements of this element that are available SHALL be displayed. Also, if the element repeats, the repeats SHALL be visualized. </b></p>
 
 
 <a name="General information"> </a>
@@ -150,19 +150,24 @@ of collection etc.)</p>
 <a name="Observation"> </a>
 <h3>Observation(.observation)</h3>
 <p>As a general guidance concerning the visualisation of the observations any visualisation mechanism SHALL take note an observation
-MAY have components and an observation MAY have member observations. If any of these structures exists, a visualisation mechanism
-SHALL present these structures in a hierarchical fashion.</p>
-
+MAY have components (.component element) and an observation MAY have member observations (.hasMember element). If any of these structures exists, a visualisation mechanism
+SHALL present these structures in a hierarchical fashion. Cfr. infra for specific guidance in specific reports</p>
+<p><b>When visualizing a CodeableConcept:
+<ul>
+<li>Visualisation mechanisms SHALL display the value given in CodeableConcept.text</li>
+<li>If that is not available, it SHALL display a value given in CodeableConcept.coding.display (if there are multiple .coding and one has the .userSelected flag: it SHALL take that)</li>
+</ul>
+</b></p>
 <p>Status (For readability purposes a status of 'final' MAY be hidden)</p>
 <ul>
 <li>.status</li>
 </ul>
-<p>Category</p>
+<p>Category (NB remark supra 'When visualizing a CodeableConcept')</p>
 <ul>
 <li>.category</li>
 </ul>
 <p>Code (NB this is the main code to identify the Observation. When an Observation is used as a title, it may happen no
-actual code is available in the .code element but this title will be available in the .code.text element.)</p>
+actual code is available in the .code element but this title will be available in the .code.text element.) (NB remark supra 'When visualizing a CodeableConcept')</p>
 <ul>
 <li>.code</li>
 </ul>
@@ -174,6 +179,7 @@ actual code is available in the .code element but this title will be available i
 <ul>
 <li>.time this observation was made available</li>
 </ul>
+<p>Performer</p>
 <p>It is fully expected the performer(s) (here it is assumed they are of the Practitioner and/or Organization type) may not be exhaustively available in the report. 
 However, if available, the following elements SHALL be visualised</p>
 <p>For readability purposes, it is RECOMMENDED to only visualise the performer here when it is available and different from the performer
@@ -203,8 +209,18 @@ in the root of the diagnosticreport</p>
 <ul>
 <li>.value[x]</li>
 </ul>
-
-
+<p>Interpration</p>
+<ul>
+<li>.interpretation</li>
+</ul>
+<p>Interpration</p>
+<ul>
+<li>.interpretation</li>
+</ul>
+<p>Reference Range</p>
+<ul>
+<li>.referenceRange</li>
+</ul>
 
 
 
@@ -213,9 +229,9 @@ in the root of the diagnosticreport</p>
 <h4>Extra visualisation guidance concerning antibiogram</h4>
 <p>A typical structure in an antibiogram is a 'master' observation that has a member Observation for each culture.
 Each of these members will have a member list for all the susceptibilities.</p>
-<p>Of course, the rules around hierarchical fashion as described supra apply here as well. The typical visualisation for an antibiogram would
-be to visualise these susceptibility lists in columns. (Giving the name of the antibiotic once and expressing the different 
-susceptibilities for the different cultures as columns that are cleary marked to which culture they apply)</p>
+<p>The rules around hierarchical fashion as described supra apply here but thevisualisation for an antibiogram SHALL
+be to visualise these susceptibility lists in columns. (Giving the name of the antibiotic only once and expressing the different 
+susceptibilities for the different cultures as columns that are cleary marked to which culture they apply) This means for readibility purposes, only the .interpration element is considered from the susceptibility Observation.</p>
 <p>Example:</p>
 <pre>[...]
 Culture	1.Morganella morganii    
