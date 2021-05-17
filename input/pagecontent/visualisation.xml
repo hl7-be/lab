@@ -209,17 +209,33 @@ in the root of the diagnosticreport</p>
 <ul>
 <li>.value[x]</li>
 </ul>
-<p>Interpration</p>
+<p>Data absent (NB remark supra 'When visualizing a CodeableConcept')</p>
 <ul>
-<li>.interpretation</li>
+<li>.dataAbsentReason</li>
 </ul>
-<p>Interpration</p>
+<p>Interpretation (NB remark supra 'When visualizing a CodeableConcept')</p>
 <ul>
 <li>.interpretation</li>
 </ul>
 <p>Reference Range</p>
 <ul>
 <li>.referenceRange</li>
+</ul>
+<p>Bodysite (NB remark supra 'When visualizing a CodeableConcept')</p>
+<ul>
+<li>.bodySite</li>
+</ul>
+<p>Method  (NB remark supra 'When visualizing a CodeableConcept'</p>
+<ul>
+<li>.method</li>
+</ul>
+
+<p>Notes</p>
+<p>The .note element MAY contain an author and a time. The author MAY be omitted for readability purposes if it is the same as
+the performer of the Observation (when the performer is omitted already because it is the same as the performer in the DiagnosticReport it follows the author of the note, in case
+it is again the same is also omitted)</p>
+<ul>
+<li>.note</li>
 </ul>
 
 
