@@ -244,8 +244,8 @@ it is again the same is also omitted)</p>
 <a name="Extra visualisation guidance concerning antibiogram"> </a>
 <h4>Extra visualisation guidance concerning antibiogram</h4>
 <p>A typical structure in an antibiogram is a 'master' observation that has a member Observation for each culture.
-Each of these members will have a member list for all the susceptibilities.</p>
-<p>The rules around hierarchical fashion as described supra apply here but thevisualisation for an antibiogram SHALL
+Each of these members will have a member list for all the susceptibilities of that culture.</p>
+<p>The rules around hierarchical fashion as described supra apply here but the visualisation for an antibiogram SHALL
 be to visualise these susceptibility lists in columns. (Giving the name of the antibiotic only once and expressing the different 
 susceptibilities for the different cultures as columns that are cleary marked to which culture they apply) This means for readibility purposes, only the .interpration element is considered from the susceptibility Observation.</p>
 <p>Example:</p>
