@@ -4,7 +4,7 @@
 	<identifier>
 		<!-- A persistent identifier for the bundle that won't change as a bundle is copied from server to server.(https://www.hl7.org/fhir/bundle-definitions.html#Bundle.identifier )-->
 		<system value="urn:ietf:rfc:3986"/>
-		<value value="urn:uuid:0c3151bd-1cbf-4d64-b04d-cd9187a4c6e0"/>
+		<value value="urn:uuid:0c3151bd-1cbf-4d65-b04d-cd9187a4c6e0"/>
 	</identifier>
 	<type value="collection"/>
 	<!--This example is presented as a Collection bundle for ease of understanding. It makes no assumption towards any final implementation of using FHIR technically. Open this as XML to view XML annotations.-->

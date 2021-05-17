@@ -147,7 +147,7 @@
 	
 		 <resource>
       <reference>
-        <reference value="Bundle/antibiogramAsBundleCollectionTestNoPredefinedNarrative"/>
+        <reference value="Bundle/antibiogramAsBundleNN"/>
 		
       </reference>
       <fhirVersion value="4.0.1"/>
