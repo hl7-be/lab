@@ -3,9 +3,10 @@
   <id value="be-laboratory-report-composition" />
   <url value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report-composition" />
   <version value="0.0.1" />
-  <name value="BeLaboratoryreportComposition" />
+  <name value="BeLaboratoryReportComposition" />
   <title value="BeLaboratoryreportComposition" />
   <status value="draft" />
+  <description value="Belgian profile for a composition - to use when a laboratory report is sent as FHIR Document" />
   <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="workflow" />
