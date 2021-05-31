@@ -10,7 +10,6 @@
 	<ul>
 		<li>Clarified expected use in Guidance in first iteration is to send a FHIR Document as payload in an eHealth box message.</li>
 		<li>Added Document example</li>
-		<li>Expectations in guidance towards use of contained and bundle.</li>
 		<li>Made .performer optional (as per the base FHIR spec) in the Laboratory Observation profile as in theory all Observations may refer to the performer on the level of the report.</li>
 	
 		
