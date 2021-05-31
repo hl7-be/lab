@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///H:/OLD_DESKTOP/Desktop/LATEST%20AND%20GREATEST/FHIR4/bundle.xsd">
 	<id value="hematologyStudiesAsFHIRDocument"/>
+	 <meta> 
+    <lastUpdated value="2021-05-31T22:12:21Z"/> 
+  </meta> 
 	<identifier>
 		<system value="urn:ietf:rfc:3986"/>
 		<value value="urn:uuid:0c3151bd-1cbf-4d65-b04d-cd9187a4c6e0"/>
@@ -15,6 +18,7 @@
         <meta> 
           <lastUpdated value="2013-05-28T22:12:21Z"/> 
         </meta> 
+		<status value="final"/>
         <type> 
           <coding> 
             <system value="http://loinc.org"/> 
@@ -29,7 +33,7 @@
         <author> 
           	<reference value="Practitioner/practitioner11"/>
         </author> 
-        <confidentiality value="N"/> 
+		<title value="Laboratory Report (mandatory to give a title like this in a FHIR document)"/> 
         <section> 
           <entry> 
             <reference value="DiagnosticReport/diagnosticreport1"/> 

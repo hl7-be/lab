@@ -110,6 +110,17 @@
     </resource>
 -->
 
+ <resource>
+      <reference>
+        <reference value="Bundle/hematologyStudiesAsFHIRDocument"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Hematology studies as FHIR Document example"/>
+      <description value="Hematology studies example as FHIR document
+	  https://build.fhir.org/ig/hl7-be/hl7-be-fhir-laboratory-report/Bundle-hematologyStudiesAsFHIRDocument.html"/>
+      <groupingId value="exl"/>
+    </resource>
+
 	  <resource>
       <reference>
         <reference value="Bundle/hematologyStudiesAsBundleCollection"/>
