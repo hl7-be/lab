@@ -404,7 +404,7 @@ you also need that IG for the base federal profiles. Once this IG is considered 
 <a name="Technical implementation of the specification published here"></a>
 <h4>Technical implementation of the specification published here</h4>
 <p>As per the FHIR standard specifications, there are multiple ways in how the report can be exchanged or requested.</p>
-<p>A POC phase for this project during 2021 is investigating possibilities.</p>
+<p>The Pilot phase for this project during 2021 is elaborating possibilities.</p>
 <p>Current expectations (at publication date of this draft IG) for the first iteration of the laboratory flows are:</p>
 <ul>
 
