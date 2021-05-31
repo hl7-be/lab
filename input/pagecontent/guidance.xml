@@ -163,13 +163,13 @@ always receive the most up to date version and again, it is up to the consuming 
 <h3>Guidance for codes and values in the Observation resource</h3>
 <a name="Use of Retam codes"></a>
 <h4>Use of Retam codes</h4>
-<p>The implementer SHALL adhere to the preferred codes to use in the .code element as described here</p>
-<p>The recommended codification used is LOINC as per the subset defined by the FPS Health, for the majority of commonly used lab measurements and demands. This subset is available on the <a href="https://www.vas.ehealth.fgov.be/webretam/retam/home.htm">website of the FPS Health</a>.</p>
+<p>The implementer SHALL adhere to the strategy to use in the .code element as described here</p>
+<p>The codification to be used SHALL be LOINC as per the subset defined by the FPS Health, for the majority of commonly used lab measurements and demands. This subset is available on the <a href="https://www.vas.ehealth.fgov.be/webretam/retam/home.htm">website of the FPS Health</a>.</p>
 
 <p>
 It is allowed to use multiple codes within the FHIR CodeableConcept datatype. But the code given must follow the following rules.</p>
 <ol>
-<li> The actual observation is preferably coded in LOINC (subset as defined by FPS Health)<ul><li><pre>"code":{
+<li> The actual observation is coded in LOINC (subset as defined by FPS Health)<ul><li><pre>"code":{
 	"coding":[
 		{
 			"system": "http://loinc.org",
