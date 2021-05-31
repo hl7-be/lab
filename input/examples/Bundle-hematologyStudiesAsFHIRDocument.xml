@@ -14,7 +14,7 @@
       <Composition> 
         <id value="180f219f-97a8-486d-99d9-ed631fe4fc57"/> 
         <meta> 
-          <profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report"/> 
+          <profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report-composition"/> 
         </meta> 
 		<status value="final"/>
         <type> 
