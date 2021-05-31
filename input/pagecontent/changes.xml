@@ -5,7 +5,7 @@
 	</p>
 
 <p>
-		<b>2021-03-31 v0.0.6 - Published </b> based on FHIR R4
+		<b>2021-05-31 v0.0.6 - Published </b> based on FHIR R4
 	</p>
 	<ul>
 		<li>Clarified expected use in Guidance in first iteration is to send a FHIR Document as payload in an eHealth box message.</li>
