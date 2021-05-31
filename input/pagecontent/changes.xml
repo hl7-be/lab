@@ -5,6 +5,18 @@
 	</p>
 
 <p>
+		<b>2021-03-31 v0.0.6 - Published </b> based on FHIR R4
+	</p>
+	<ul>
+		<li>Clarified expected use in Guidance in first iteration is to send a FHIR Document as payload in an eHealth box message.</li>
+		<li>Added Document example</li>
+		<li>Expectations in guidance towards use of contained and bundle.</li>
+	
+		
+	</ul>
+
+
+<p>
 		<b>2021-03-22 v0.0.5 - Published </b> based on FHIR R4
 	</p>
 	<ul>
