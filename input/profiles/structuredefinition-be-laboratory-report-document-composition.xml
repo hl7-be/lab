@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="http://example.org/fhir/StructureDefinition/MyComposition" />
-  <name value="MyComposition" />
+  <id value="be-laboratory-report-composition" />
+  <url value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report-composition" />
+  <version value="0.0.1" />
+  <name value="BeLaboratoryreportComposition" />
+  <title value="BeLaboratoryreportComposition" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -34,4 +37,61 @@
   <type value="Composition" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Composition" />
   <derivation value="constraint" />
+  <differential>
+    <element id="Composition.status">
+      <path value="Composition.status" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.type">
+      <path value="Composition.type" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.subject">
+      <path value="Composition.subject" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />
+        <targetProfile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-patient" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.date">
+      <path value="Composition.date" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.author">
+      <path value="Composition.author" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+        <targetProfile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-practitioner" />
+        <targetProfile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-practitionerrole" />
+        <targetProfile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-patient" />
+        <targetProfile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-organization" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.title">
+      <path value="Composition.title" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section">
+      <path value="Composition.section" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section.entry">
+      <path value="Composition.section.entry" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+  </differential>
 </StructureDefinition>
