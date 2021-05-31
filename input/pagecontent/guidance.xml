@@ -417,7 +417,7 @@ be found on the artifact page in this IG. The FHIR Document SHALL include all th
 </ul>
 </li>
 
-<li>The laboratory prescription SHALL be send as a serviceRequest complying with the Belgian laboratory prescription profile with all needed resources as 'contained'</li>
+<li>The laboratory prescription (expected for a future iteration) SHALL be send as a serviceRequest complying with the Belgian laboratory prescription profile with all needed resources as 'contained'</li>
 </ul>
 
 
