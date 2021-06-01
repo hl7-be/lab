@@ -116,11 +116,12 @@
       </reference>
       <fhirVersion value="4.0.1"/>
       <name value="Hematology studies as FHIR Document example"/>
-      <description value="Hematology studies example as FHIR document
+      <description value="Hematology studies example as FHIR document (copy-paste the URL if the link on the left does not work)
 	  https://build.fhir.org/ig/hl7-be/hl7-be-fhir-laboratory-report/Bundle-hematologyStudiesAsFHIRDocument.html"/>
       <groupingId value="exl"/>
     </resource>
 
+<!--
 	  <resource>
       <reference>
         <reference value="Bundle/hematologyStudiesAsBundleCollection"/>
@@ -143,9 +144,9 @@
       <description value="Hematology studies example as one diagnosticReport with all other resources contained."/>
       <groupingId value="exl"/>
     </resource>
+	-->
 	
-	
-	
+	<!--
 		 <resource>
       <reference>
         <reference value="Bundle/antibiogramAsBundleCollection"/>
@@ -153,11 +154,13 @@
       <fhirVersion value="4.0.1"/>
       <name value="Structured Antibiogram in collection bundle"/>
       <description value="Structured Antibiogram in collection bundle. 
-	  This is an annoted example. View as XML to read the XML annotations.
+	  This is an annoted example. View as XML to read the XML annotations.(copy-paste
+	  the URL if the link on the left does not work). This example is simplified presented as a generic bundle (refer to
+	  the example supra for a FHIR Document bundle.
 	  https://build.fhir.org/ig/hl7-be/hl7-be-fhir-laboratory-report/Bundle-antibiogramAsBundleCollection.html"/>
       <groupingId value="exl"/>
     </resource>
-	
+	-->
 	
 	
 		 <resource>
@@ -167,9 +170,9 @@
       </reference>
       <fhirVersion value="4.0.1"/>
       <name value="Structured Antibiogram in collection bundle"/>
-      <description value="Structured Antibiogram in collection bundle. 
-	  For completeness, this example is the same as the example supra but without added narrative (text) element. 
-	  This is an annoted example. View as XML to read the XML annotations. 
+      <description value="Structured Antibiogram in collection bundle. (copy-paste
+	  the URL if the link on the left does not work). This example is simplified and presented as a generic bundle (refer to
+	  the example supra for a FHIR Document bundle.) 
 	  https://build.fhir.org/ig/hl7-be/hl7-be-fhir-laboratory-report/Bundle-antibiogramAsBundleNN.html"/>
       <groupingId value="exl"/>
     </resource>
@@ -181,7 +184,9 @@
       </reference>
       <fhirVersion value="4.0.1"/>
       <name value="Structured Negative Antibiogram in collection bundle"/>
-      <description value="Structured Negative Antibiogram in collection bundle.
+      <description value="Structured Negative Antibiogram in collection bundle. (copy-paste
+	  the URL if the link on the left does not work). This example is simplified and presented as a generic bundle (refer to
+	  the example supra for a FHIR Document bundle.) 
 	  https://build.fhir.org/ig/hl7-be/hl7-be-fhir-laboratory-report/Bundle-antibiogramIsNegativeAsBundleCollection.html"/>
       <groupingId value="exl"/>
     </resource>
