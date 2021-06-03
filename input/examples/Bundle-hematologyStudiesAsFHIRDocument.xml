@@ -31,7 +31,7 @@
         <author> 
           	<reference value="Practitioner/practitioner11"/>
         </author> 
-		<title value="Laboratory Report (mandatory to give a title like this in a FHIR document)"/> 
+		<title value="Laboratory Report (mandatory to give a title like this in a FHIR document.)"/> 
         <section> 
           <entry> 
             <reference value="DiagnosticReport/diagnosticreport1"/> 
