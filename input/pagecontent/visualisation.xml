@@ -4,7 +4,7 @@
 
 
 <p>This Visualisation Guidance page aims to give guidance about
- which of the structured elements available in a diagnosticreport SHALL be minimally visualised
+ which of the structured elements available in a diagnosticreport SHALL be <b>minimally</b> visualised
   and in what kind of structure
 they SHALL be minimally presented to safely understand them..</p>
 <p>This is not a guidance page on the actual report, the thumb of rule here concerning the referenced elements is: this is to be
@@ -119,6 +119,31 @@ However, if available, the following elements SHALL be visualised</p>
 <ul>
 <li>.address</li>
 </ul>
+
+<a name="Results interpreter"> </a>
+<h3>Results interpreter(DiagnosticReport.resultssInterpreter)</h3>
+<p>It is fully expected the results interpreter(s) (here it is assumed they are of the Practitioner and/or Organization type) may not be exhaustively available in the report. 
+However, if available, the following elements SHALL be visualised. If this is the same entity as the performer supra, this MAY be omitted for readability purposes.</p>
+<p>Identifier(s)</p>
+<ul>
+<li>.identifier</li>
+</ul>
+<p>Name(s)</p>
+<ul>
+<li>.name</li>
+</ul>
+<p>Telecom</p>
+<ul>
+<li>.telecom</li>
+</ul>
+<p>Address</p>
+<ul>
+<li>.address</li>
+</ul>
+
+
+
+
 
 <a name="Specimen"> </a>
 <h3>Specimen(DiagnosticReport.specimen)</h3>
@@ -276,5 +301,12 @@ Antibiogram							1			2
 			Gentamicin				S			S
 			Colistin				R			S
 [...]</pre>
+
+
+<a name="Extra visualisation guidance concerning reports only available as pdf"> </a>
+<h4>Extra visualisation guidance concerning reports only available as pdf</h4>
+<p>A report that does not contain any structured information concerning the observations is not considered to be a structured
+Belgian laboratory report but technically, the format still allows for this. A proper visualisation for the results in those kind of reports is the
+rendering of the pdf that will live in the .presentedForm element.</p>
 
 </div>
