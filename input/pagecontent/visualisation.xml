@@ -30,7 +30,7 @@ it is implied any sub elements of this element that are available SHALL be displ
 
 
 <a name="General information"> </a>
-<h3>General information</h3>
+<h3>General information (DiagnosticReport)</h3>
 <p>Status</p>
 <ul>
 <li>.status</li>
@@ -47,7 +47,8 @@ it is implied any sub elements of this element that are available SHALL be displ
 <ul>
 <li>.category</li>
 </ul>
-<p>Effective</p>
+<p>Effective(Time of the specimen collection
+ - is overruled when collection time is given in .specimen element.)</p>
 <ul>
 <li>.effective[x]</li>
 </ul>
@@ -61,7 +62,7 @@ it is implied any sub elements of this element that are available SHALL be displ
 <li>.conclusionCode</li>
 </ul>
 <a name="Time of prescription"> </a>
-<h3>Time of prescription(.basedOn)</h3>
+<h3>Time of prescription(DiagnosticReport.basedOn)</h3>
 <p>It is fully expected the original prescription may not be exhaustively available in the report. 
 However, if available, the following elements SHALL be visualised</p>
 <p>Identifier(s)</p>
@@ -74,7 +75,7 @@ However, if available, the following elements SHALL be visualised</p>
 </ul>
 
 <a name="Patient"> </a>
-<h3>Patient(.subject)</h3>
+<h3>Patient(DiagnosticReport.subject)</h3>
 <p>It is fully expected a patient may not be exhaustively available in the report. 
 However, if available, the following elements SHALL be visualised</p>
 <p>Identifier(s)</p>
@@ -99,7 +100,7 @@ However, if available, the following elements SHALL be visualised</p>
 </ul>
 
 <a name="Performer"> </a>
-<h3>Performer(.performer)</h3>
+<h3>Performer(DiagnosticReport.performer)</h3>
 <p>It is fully expected the performer(s) (here it is assumed they are of the Practitioner and/or Organization type) may not be exhaustively available in the report. 
 However, if available, the following elements SHALL be visualised</p>
 <p>Identifier(s)</p>
@@ -120,7 +121,7 @@ However, if available, the following elements SHALL be visualised</p>
 </ul>
 
 <a name="Specimen"> </a>
-<h3>Specimen(.specimen)</h3>
+<h3>Specimen(DiagnosticReport.specimen)</h3>
 <p>Identifier(s)</p>
 <ul>
 <li>.identifier</li>
@@ -162,7 +163,7 @@ of collection etc.)</p>
 </ul>
 
 <a name="Observation"> </a>
-<h3>Observation(.observation)</h3>
+<h3>Observation(DiagnosticReport.observation)</h3>
 <p>As a general guidance concerning the visualisation of the observations any visualisation mechanism SHALL take note an observation
 MAY have components (.component element) and an observation MAY have member observations (.hasMember element). If any of these structures exists, a visualisation mechanism
 SHALL present these structures in a hierarchical fashion. Cfr. infra for specific guidance in specific reports</p>
