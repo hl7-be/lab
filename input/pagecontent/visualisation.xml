@@ -190,9 +190,9 @@ actual code is available in the .code element but this title will be available i
 <ul>
 <li>.effective[x]</li>
 </ul>
-<p>Issued time</p>
+<p>Issued time (time this observation was made available)</p>
 <ul>
-<li>.time this observation was made available</li>
+<li>.time </li>
 </ul>
 <p>Performer</p>
 <p>It is fully expected the performer(s) (here it is assumed they are of the Practitioner and/or Organization type) may not be exhaustively available in the report. 
