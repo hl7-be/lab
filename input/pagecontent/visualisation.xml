@@ -121,7 +121,7 @@ However, if available, the following elements SHALL be visualised</p>
 </ul>
 
 <a name="Results interpreter"> </a>
-<h3>Results interpreter(DiagnosticReport.resultssInterpreter)</h3>
+<h3>Results interpreter(DiagnosticReport.resultsInterpreter)</h3>
 <p>It is fully expected the results interpreter(s) (here it is assumed they are of the Practitioner and/or Organization type) may not be exhaustively available in the report. 
 However, if available, the following elements SHALL be visualised. If this is the same entity as the performer supra, this MAY be omitted for readability purposes.</p>
 <p>Identifier(s)</p>
