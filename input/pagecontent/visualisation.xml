@@ -219,7 +219,7 @@ actual code is available in the .code element but this title will be available i
 <ul>
 <li>.time </li>
 </ul>
-<p>Performer</p>
+<p>Performer (observation.performer)</p>
 <p>It is fully expected the performer(s) (here it is assumed they are of the Practitioner and/or Organization type) may not be exhaustively available in the report. 
 However, if available, the following elements SHALL be visualised</p>
 <p>For readability purposes, it is RECOMMENDED to only visualise the performer here when it is available and different from the performer
