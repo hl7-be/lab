@@ -83,7 +83,6 @@
         <targetProfile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-practitioner" />
       </type>
       <mustSupport value="true" />
-	  <min value="0" />
     </element>
     <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
