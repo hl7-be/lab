@@ -269,6 +269,10 @@ in the root of the diagnosticreport</p>
 <ul>
 <li>.method</li>
 </ul>
+<p>Specimen  (observation.specimen)</p>
+<ul>
+<li>.identifier</li>
+</ul>
 
 <p>Notes</p>
 <p>The .note element MAY contain an author and a time. The author MAY be omitted for readability purposes if it is the same as
