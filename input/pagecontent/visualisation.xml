@@ -6,7 +6,7 @@
 <p>This Visualisation Guidance page aims to give guidance about
  which of the structured elements available in a diagnosticreport SHALL be <b>minimally</b> visualised
   and in what kind of structure
-they SHALL be minimally presented to safely understand them..</p>
+they SHALL be minimally presented to safely understand them.</p>
 <p>This is not a guidance page on the actual report, the thumb of rule here concerning the referenced elements is: this is to be
 visualized IF they are available in the report. Please refer to the other pages in this guide for guidance
 on how to construct the report. It is up to a human inspection to finally judge the quality of the
