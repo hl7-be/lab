@@ -16,7 +16,7 @@ report that is visualized following the rules on this page.</p>
  investigates possibilities by using the FHIR narrative. This can take the form
   of a tuned narrative template <a href="https://hapifhir.io/hapi-fhir/docs/model/narrative_generation.html">as is described e.g. in the Java FHIR Hapi libraries.</a></p>
 
-<table style="width:100%;border: 1px solid black;border-collapse: collapse;" >
+<table style="width:70%;border: 1px solid black;border-collapse: collapse;" >
  <tr>
   <td><b>PLEASE NOTE: This page does NOT aim to give exhaustive guidance how the final user friendly visualization should be like - that is 
 considered the domain of any consuming system.</b></td>
