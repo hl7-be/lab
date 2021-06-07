@@ -45,6 +45,14 @@
     </element>
     <element id="Specimen.subject">
       <path value="Specimen.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Substance" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Location" />
+        <targetProfile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-patient" />
+      </type>
       <mustSupport value="true" />
     </element>
     <element id="Specimen.receivedTime">
@@ -53,6 +61,10 @@
     </element>
     <element id="Specimen.parent">
       <path value="Specimen.parent" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-specimen" />
+      </type>
       <mustSupport value="true" />
     </element>
     <element id="Specimen.request">
