@@ -12,9 +12,24 @@ visualized IF they are available in the report. Please refer to the other pages 
 on how to construct the report. It is up to a human inspection to finally judge the quality of the
 report that is visualized following the rules on this page.</p>
 
-<p>There are many ways to visualize content. It is highly RECOMMENDED that any initiative towards a general visualisation
+<p>Considerations concerning the way to visualize content.
+<table>
+<tr>
+<td>
+ It is highly RECOMMENDED that any initiative towards a general visualisation
  investigates possibilities by using the FHIR narrative. This can take the form
-  of a tuned narrative template <a href="https://hapifhir.io/hapi-fhir/docs/model/narrative_generation.html">as is described e.g. in the Java FHIR Hapi libraries.</a></p>
+  of a tuned narrative template <a href="https://hapifhir.io/hapi-fhir/docs/model/narrative_generation.html">as is described e.g. in the Java FHIR Hapi libraries.</a></td>
+</tr>
+<tr>
+<td>Any mechanisms that automates visualisation SHALL also run a technical validation against the used FHIR profiles
+before returning any visualisation. An automated mechanism SHALL NOT return any visualised form of a laboratory report when a technical validation contains errors.</td>
+</tr>
+<tr>
+<td>Visualisation SHALL be in such a way the information is presented in a tabular fashion.</td>
+
+</tr>
+</table>
+</p>
 
 <table style="width:70%;border: 1px solid black;border-collapse: collapse;" >
  <tr>
