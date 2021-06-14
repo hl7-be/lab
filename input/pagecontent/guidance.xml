@@ -408,7 +408,7 @@ you also need that IG for the base federal profiles. Once this IG is considered 
 <p>Current expectations (at publication date of this draft IG) for the first iteration of the laboratory flows are:</p>
 <ul>
 
-<li>The laboratory result SHALL be send as the payload in an eHealthBox message. The payload SHALL be an immutable collection according to <a href="https://www.hl7.org/fhir/documents.html">the 'FHIR Document' paradigm</a>. The FHIR Document shall leverage the Composition profile that can
+<li>The laboratory result SHALL be send as the payload in an eHealthBox message. The payload SHALL be an immutable collection according to <a href="https://www.hl7.org/fhir/documents.html">the 'FHIR Document' paradigm</a>. The FHIR Document SHALL leverage the Composition profile that can
 be found on <a href="https://build.fhir.org/ig/hl7-be/hl7-be-fhir-laboratory-report/artifacts.html">the artifact page in this IG.</a> On that artifact page there is also an example of a report in this FHIR Document structure. The FHIR Document SHALL include all the referenced resources in the bundle. </li>
 <li>Whenever needed to express the MIME type of a FHIR message, its formal MIME type SHALL be used which is:
 <ul>
@@ -417,7 +417,8 @@ be found on <a href="https://build.fhir.org/ig/hl7-be/hl7-be-fhir-laboratory-rep
 </ul>
 </li>
 
-<li>The laboratory prescription (expected for a future iteration) SHALL be send as a serviceRequest complying with the Belgian laboratory prescription profile with all needed resources as 'contained'</li>
+<li>The laboratory prescription (expected for a future iteration)
+SHALL be send as a serviceRequest complying with the Belgian laboratory prescription profile</li>
 </ul>
 
 
