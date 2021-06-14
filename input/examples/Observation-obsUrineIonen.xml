@@ -12,6 +12,9 @@
 	</code>
 	<effectiveDateTime value="2015-11-04T09:16:00-05:00"/>
 	<issued value="2015-11-04T09:16:00-05:00"/>
+		<performer>
+		<reference value="Practitioner/practitioner10"/>
+	</performer>
 	<specimen>
 		<reference value="Specimen/urine1"/>
 	</specimen>

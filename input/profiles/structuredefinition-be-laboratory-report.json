@@ -181,7 +181,7 @@
               "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-patient",
               "http://hl7.org/fhir/StructureDefinition/Group",
               "http://hl7.org/fhir/StructureDefinition/Device",
-              "http://hl7.org/fhir/StructureDefinition/Location"
+			  "http://hl7.org/fhir/StructureDefinition/Location",
             ]
           }
         ],
