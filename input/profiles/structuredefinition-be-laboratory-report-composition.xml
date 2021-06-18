@@ -39,6 +39,10 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Composition" />
   <derivation value="constraint" />
   <differential>
+    <element id="Composition.identifier">
+      <path value="Composition.identifier" />
+      <mustSupport value="true" />
+    </element>
     <element id="Composition.status">
       <path value="Composition.status" />
       <mustSupport value="true" />
@@ -76,6 +80,10 @@
     </element>
     <element id="Composition.title">
       <path value="Composition.title" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.relatesTo">
+      <path value="Composition.relatesTo" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section">
