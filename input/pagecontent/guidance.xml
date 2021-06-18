@@ -421,7 +421,7 @@ This is found in Bundle.identifier and is globally unique for this instance of t
 </ul>
 <ul>The Composition relatesTo (optional). This is found in Composition.relatesTo and SHALL be used to clarify with other FHIR document is replaced or appended
 (by using the code 'replaces' or 'appends'). The element Composition.relatesTo.target.targetIdentifier shall give the unique document identifier (as described supra) of the other
-FHIR document.
+FHIR document.</ul>
 </li>
 <li>Whenever needed to express the MIME type of a FHIR message, its formal MIME type SHALL be used which is:
 <ul>
