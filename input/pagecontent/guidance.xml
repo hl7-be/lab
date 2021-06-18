@@ -412,16 +412,18 @@ you also need that IG for the base federal profiles. Once this IG is considered 
 be found on <a href="https://build.fhir.org/ig/hl7-be/hl7-be-fhir-laboratory-report/artifacts.html">the artifact page in this IG.</a> On that artifact page there is also an example of a report in this FHIR Document structure. The FHIR Document SHALL include all the referenced resources in the bundle. </li>
 
 <li>Following specific guidelines SHALL be observed when leveraging the 'FHIR Document':
-<ul>The document identifier (mandatory). 
+<ul>
+<li>The document identifier (mandatory). 
 This is found in Bundle.identifier and is globally unique for this instance of the document,
- and is never re-used, including for other documents derived from the same composition</ul>
-<ul>The Composition identifier (optional). This is found in Composition.identifier, and is the same for all documents that are derived from this composition
-</ul>
-<ul>The Composition status (mandatory). This is found in Composition.status and takes the value preliminary | final | amended | entered-in-error
-</ul>
-<ul>The Composition relatesTo (optional). This is found in Composition.relatesTo and SHALL be used to clarify with other FHIR document is replaced or appended
+ and is never re-used, including for other documents derived from the same composition</li>
+<li>The Composition identifier (optional). This is found in Composition.identifier, and is the same for all documents that are derived from this composition
+</li>
+<li>The Composition status (mandatory). This is found in Composition.status and takes the value preliminary | final | amended | entered-in-error
+</li>
+<li>The Composition relatesTo (optional). This is found in Composition.relatesTo and SHALL be used to clarify with other FHIR document is replaced or appended
 (by using the code 'replaces' or 'appends'). The element Composition.relatesTo.target.targetIdentifier shall give the unique document identifier (as described supra) of the other
-FHIR document.</ul>
+FHIR document.</li>
+</ul>
 </li>
 <li>Whenever needed to express the MIME type of a FHIR message, its formal MIME type SHALL be used which is:
 <ul>
