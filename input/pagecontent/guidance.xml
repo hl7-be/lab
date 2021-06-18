@@ -411,7 +411,7 @@ you also need that IG for the base federal profiles. Once this IG is considered 
 <li>The laboratory result SHALL be send as the payload in an eHealthBox message. The payload SHALL be an immutable collection according to <a href="https://www.hl7.org/fhir/documents.html">the 'FHIR Document' paradigm</a>. The FHIR Document SHALL leverage the Composition profile that can
 be found on <a href="https://build.fhir.org/ig/hl7-be/hl7-be-fhir-laboratory-report/artifacts.html">the artifact page in this IG.</a> On that artifact page there is also an example of a report in this FHIR Document structure. The FHIR Document SHALL include all the referenced resources in the bundle. </li>
 
-<li>Following specific guidelines SHALL be observed when leveraging the 'FHIR Document':
+<li>Following specific guidelines SHALL be observed when leveraging the 'FHIR Document'. Implementers SHALL take note a certain status on a higher level in the bundle SHALL not logically conflict with any status given to resources in the bundle.
 <ul>
 <li>The document identifier (mandatory). 
 This is found in Bundle.identifier and is globally unique for this instance of the document,
