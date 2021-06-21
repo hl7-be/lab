@@ -24,11 +24,11 @@
     </element>
     <element id="Observation.basedOn">
       <path value="Observation.basedOn" />
-      <mustSupport value="true" />
+      <mustSupport value="false" />
     </element>
     <element id="Observation.partOf">
       <path value="Observation.partOf" />
-      <mustSupport value="true" />
+      <mustSupport value="false" />
     </element>
     <element id="Observation.status">
       <path value="Observation.status" />
@@ -54,6 +54,7 @@
     </element>
     <element id="Observation.subject">
       <path value="Observation.subject" />
+      <short value="When sending to eHealthBox, this is BePatient." />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
@@ -118,7 +119,7 @@
     </element>
     <element id="Observation.device">
       <path value="Observation.device" />
-      <mustSupport value="true" />
+      <mustSupport value="false" />
     </element>
     <element id="Observation.referenceRange">
       <path value="Observation.referenceRange" />
@@ -126,10 +127,27 @@
     </element>
     <element id="Observation.hasMember">
       <path value="Observation.hasMember" />
+      <short value="When sending to eHealthBox, this is BeObservationLaboratory" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/MolecularSequence" />
+        <targetProfile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" />
+      </type>
       <mustSupport value="true" />
     </element>
     <element id="Observation.derivedFrom">
       <path value="Observation.derivedFrom" />
+      <short value="When sending to eHealthBox, this is BeObservationLaboratory" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ImagingStudy" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Media" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/MolecularSequence" />
+        <targetProfile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" />
+      </type>
       <mustSupport value="true" />
     </element>
     <element id="Observation.component">

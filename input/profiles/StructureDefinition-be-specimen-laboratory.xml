@@ -45,6 +45,7 @@
     </element>
     <element id="Specimen.subject">
       <path value="Specimen.subject" />
+      <short value="When sending to eHealthBox, this is BePatient." />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
@@ -101,7 +102,8 @@
     </element>
     <element id="Specimen.processing">
       <path value="Specimen.processing" />
-      <mustSupport value="true" />
+      <short value="Processing and processing step details to include when not implicit from specimen." />
+      <mustSupport value="false" />
     </element>
     <element id="Specimen.container">
       <path value="Specimen.container" />

@@ -4,6 +4,20 @@
 		Please note, this IG is considered a draft specification until further notice.
 	</p>
 
+
+<p>
+		<b>2021-06-21 v0.0.7 - Published </b> based on FHIR R4
+	</p>
+	<ul>
+		<li>Clarified which reference types are expected when sending to eHealth Box</li>
+		<li>Added FHIR document clarifications in Guidance.</li>
+		
+	
+		
+	</ul>
+
+
+
 <p>
 		<b>2021-05-31 v0.0.6 - Published </b> based on FHIR R4
 	</p>

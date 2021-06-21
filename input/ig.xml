@@ -4,7 +4,7 @@
   <id value="hl7.country.ig"/>
   <url value="http://hl7.country.org/fhir/ig"/>
   <!-- This version will propagate to all artifacts unless the "propagate-version" extension is overridden -->
-  <version value="0.0.6"/>
+  <version value="0.0.7"/>
   <name value="AffiliateIG"/>
   <title value="HL7 BE Laboratory Result WG Implementation Guide (work in progress)"/>
   <status value="draft"/>
@@ -38,7 +38,7 @@
 <dependsOn>
 <uri value="https://www.ehealth.fgov.be/standards/fhir"/>
 <packageId value="ehealthplatform.be.r4.federalprofiles"/>
-<version value="1.2.1"/>
+<version value="1.2.2"/>
 </dependsOn>
   <definition>
     <!-- You don't need to define any groupings.  The IGPublisher will define them for you.  You only need to do so if your IG is 'special' and it's
