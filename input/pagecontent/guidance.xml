@@ -136,6 +136,9 @@ in that case is <b>NOT</b> considered to be a structured Belgian laboratory repo
 <p>The .effective element mostly points to the time of the specific procedure or specimen collection. The .issued element really is about when this was made available to providers, typically after review and/or verification. Please refer to the detailed descriptions in the FHIR standard for further information.</p>
 <a name="Versioning of reports"></a>
 <h3>Versioning of reports</h3>
+<p><b>When sending the laboratory report as a 'FHIR document' - which is the case in the first
+iteration in production when sending laboratory reports to an eHealth box, please also carefully
+review the guidelines in the paragraph infra at the end of this page 'Technical implementation of the specification published here'</b></p>
 <p>The base FHIR resource DiagnosticReport is of the FHIR type DomainResource and as such it inherits the base FHIR resource elements. In its root, it inherits the elements defined in the base Resource FHIR datatype. This includes the <a href="http://hl7.org/fhir/R4/resource.html#Meta">Resource Metadata</a>.</p>
 <p>The Resource Metadata contains in its .versionId the actual version of the DiagnosticReport.</p>
 <p>The laboratory report SHALL also identify itself using a business identifier in the DiagnosticReport.
