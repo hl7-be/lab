@@ -32,6 +32,13 @@
           	<reference value="Practitioner/practitioner11"/>
         </author> 
 		<title value="Laboratory Report (mandatory to give a title like this in a FHIR document.)"/> 
+		<relatesTo>
+			<code value="replaces"></code>
+			<targetIdentifier>
+					<system value="urn:ietf:rfc:3986"/>
+		<value value="urn:uuid:0c3151bd-1cbf-4d65-b04d-cd9187a4c5e0"/>
+			</targetIdentifier>
+		</relatesTo>
         <section> 
           <entry> 
             <reference value="DiagnosticReport/diagnosticreport1"/> 
