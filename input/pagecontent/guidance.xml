@@ -423,9 +423,14 @@ This is found in Bundle.identifier and is globally unique for this instance of t
 </li>
 <li>The Composition status (mandatory). This is found in Composition.status and takes the value <b> preliminary | final | amended | entered-in-error </b>
 </li>
-<li>The Composition relatesTo (operationally determined - SHALL be used when needed to express a document replaces or appends a previously sent document to the same eHealth Box.). This is found in Composition.relatesTo and SHALL be used to clarify which other FHIR document is replaced or appended
-(by using the code <b> replaces | appends </b>). The element Composition.relatesTo.target.targetIdentifier SHALL give the unique document identifier (as described supra) of the other
-FHIR document.</li>
+<li>The Composition relatesTo (operationally determined - SHALL be used when needed to express a document replaces a previously sent document to the same eHealth Box.). This is found in Composition.relatesTo and SHALL be used to clarify which other FHIR document is replaced
+(by using the code <b>replaces</b>). The element Composition.relatesTo.target.targetIdentifier SHALL give the unique document identifier (as described supra) of the other
+FHIR document.
+<ul>
+<li>please note it MAY be possible a FHIR document that was initially marked as 'final' is still followed up later by a new 'final' version. As such implementers SHALL take note whatever status a FHIR document has, it MAY always be replaced.</li>
+</ul>
+
+</li>
 </ul>
 </li>
 <li>Whenever needed to express the MIME type of a FHIR message, its formal MIME type SHALL be used which is:
