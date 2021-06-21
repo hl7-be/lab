@@ -418,10 +418,10 @@ This is found in Bundle.identifier and is globally unique for this instance of t
  and is never re-used, including for other documents derived from the same composition</li>
 <li>The Composition identifier (optional). This is found in Composition.identifier, and is the same for all documents that are derived from this composition
 </li>
-<li>The Composition status (mandatory). This is found in Composition.status and takes the value preliminary | final | amended | entered-in-error
+<li>The Composition status (mandatory). This is found in Composition.status and takes the value <b> preliminary | final | amended | entered-in-error </b>
 </li>
-<li>The Composition relatesTo (optional - SHALL be used when a document replaces or appends another document). This is found in Composition.relatesTo and SHALL be used to clarify which other FHIR document is replaced or appended
-(by using the code 'replaces' or 'appends'). The element Composition.relatesTo.target.targetIdentifier SHALL give the unique document identifier (as described supra) of the other
+<li>The Composition relatesTo (operationally determined - SHALL be used when a document replaces or appends another document). This is found in Composition.relatesTo and SHALL be used to clarify which other FHIR document is replaced or appended
+(by using the code <b> replaces | appends </b>). The element Composition.relatesTo.target.targetIdentifier SHALL give the unique document identifier (as described supra) of the other
 FHIR document.</li>
 </ul>
 </li>
