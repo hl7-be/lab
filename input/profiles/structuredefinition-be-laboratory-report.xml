@@ -136,6 +136,7 @@
     </element>
     <element id="DiagnosticReport.subject">
       <path value="DiagnosticReport.subject" />
+      <short value="When sending to eHealthBox, this is BePatient." />
       <min value="1" />
       <type>
         <code value="Reference" />
@@ -159,7 +160,7 @@
     </element>
     <element id="DiagnosticReport.performer">
       <path value="DiagnosticReport.performer" />
-      <short value="Entity that takes responsibility for the clinical report." />
+      <short value="When sending to eHealthBox, this is BeOrganization." />
       <definition value="The diagnostic service that is responsible for issuing the report. In the laboratory report, this is typically an organization (i.e. the laboratory)&#xD;&#xA;Note the Observation MAY have a different performer." />
       <min value="1" />
       <type>
@@ -173,7 +174,7 @@
     </element>
     <element id="DiagnosticReport.resultsInterpreter">
       <path value="DiagnosticReport.resultsInterpreter" />
-      <short value="Primary result interpreter. Need to know whom to contact if there are queries about the results." />
+      <short value="When sending to eHealthBox, this is BePractitioner." />
       <min value="1" />
       <type>
         <code value="Reference" />
