@@ -45,7 +45,7 @@
     </element>
     <element id="Specimen.subject">
       <path value="Specimen.subject" />
-      <short value="When sending to eHealthBox, this is BePatient." />
+      <short value="In the initial iteration of the Belgium lab project: when sending to eHealthBox, this is BePatient." />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />

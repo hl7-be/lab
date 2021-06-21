@@ -54,7 +54,7 @@
     </element>
     <element id="Observation.subject">
       <path value="Observation.subject" />
-      <short value="When sending to eHealthBox, this is BePatient." />
+      <short value="In the initial iteration of the Belgium lab project: when sending to eHealthBox, this is BePatient." />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
@@ -127,7 +127,7 @@
     </element>
     <element id="Observation.hasMember">
       <path value="Observation.hasMember" />
-      <short value="When sending to eHealthBox, this is BeObservationLaboratory" />
+      <short value="In the initial iteration of the Belgium lab project: when sending to eHealthBox, this is BeObservationLaboratory" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" />
@@ -138,7 +138,7 @@
     </element>
     <element id="Observation.derivedFrom">
       <path value="Observation.derivedFrom" />
-      <short value="When sending to eHealthBox, this is BeObservationLaboratory" />
+      <short value="In the initial iteration of the Belgium lab project: when sending to eHealthBox, this is BeObservationLaboratory" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference" />
