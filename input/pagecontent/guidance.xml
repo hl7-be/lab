@@ -423,7 +423,7 @@ This is found in Bundle.identifier and is globally unique for this instance of t
 </li>
 <li>The Composition status (mandatory). This is found in Composition.status and takes the value <b> preliminary | final | amended | entered-in-error </b>
 </li>
-<li>The Composition relatesTo (operationally determined - SHALL be used when a document replaces or appends another document). This is found in Composition.relatesTo and SHALL be used to clarify which other FHIR document is replaced or appended
+<li>The Composition relatesTo (operationally determined - SHALL be used when needed to express a document replaces or appends a previously sent document to the same eHealth Box.). This is found in Composition.relatesTo and SHALL be used to clarify which other FHIR document is replaced or appended
 (by using the code <b> replaces | appends </b>). The element Composition.relatesTo.target.targetIdentifier SHALL give the unique document identifier (as described supra) of the other
 FHIR document.</li>
 </ul>
