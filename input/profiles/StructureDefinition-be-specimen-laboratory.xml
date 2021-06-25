@@ -64,7 +64,7 @@
       <path value="Specimen.parent" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-specimen" />
+        <targetProfile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-specimen-laboratory" />
       </type>
       <mustSupport value="true" />
     </element>
