@@ -419,8 +419,6 @@ be found on <a href="https://build.fhir.org/ig/hl7-be/hl7-be-fhir-laboratory-rep
 <li>The document identifier (mandatory). 
 This is found in Bundle.identifier and is globally unique for this instance of the document,
  and is never re-used, including for other documents derived from the same composition</li>
-<li>The Composition identifier (optional). This is found in Composition.identifier, and is the same for all documents that are derived from this composition
-</li>
 <li>The Composition status (mandatory). This is found in Composition.status and takes the value <b> preliminary | final | amended | entered-in-error </b>
 </li>
 <li>The Composition relatesTo (operationally determined - SHALL be used when needed to express a document replaces a previously sent document to the same eHealth Box.). This is found in Composition.relatesTo and SHALL be used to clarify which other FHIR document is replaced
