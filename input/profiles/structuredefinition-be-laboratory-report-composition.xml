@@ -41,6 +41,7 @@
   <differential>
     <element id="Composition.identifier">
       <path value="Composition.identifier" />
+      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.status">
