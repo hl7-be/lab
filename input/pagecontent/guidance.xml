@@ -414,15 +414,16 @@ you also need that IG for the base federal profiles. Once this IG is considered 
 <li>The laboratory result SHALL be send as the payload in an eHealthBox message. The payload SHALL be an immutable collection according to <a href="https://www.hl7.org/fhir/documents.html">the 'FHIR Document' paradigm</a>. The FHIR Document SHALL leverage the Composition profile that can
 be found on <a href="https://build.fhir.org/ig/hl7-be/hl7-be-fhir-laboratory-report/artifacts.html">the artifact page in this IG.</a> On that artifact page there is also an example of a report in this FHIR Document structure. The FHIR Document SHALL include all the referenced resources in the bundle. </li>
 
-<li>Following specific guidelines SHALL be observed when leveraging the 'FHIR Document'. Implementers SHALL take note a certain status on a higher level in the bundle SHALL not logically conflict with any status given to resources in the bundle. Please also consult the document example in this guide.
+<li>Following specific <b> versioning guidelines</b> SHALL be observed when leveraging the 'FHIR Document'. Implementers SHALL take note a certain status on a higher level in the bundle SHALL not logically conflict with any status given to resources in the bundle. Please also consult the document example in this guide.
 <ul>
 <li>The document identifier (mandatory). 
 This is found in Bundle.identifier and is globally unique for this instance of the document,
  and is never re-used, including for other documents derived from the same composition</li>
-<li>The Composition status (mandatory). This is found in Composition.status and takes the value <b> preliminary | final | amended | entered-in-error </b>
+<li>The Composition status (mandatory). This is found in Composition.status and can take the value 'preliminary', 'final', 'amended' or 'entered-in-error'. When using this for the laboratory document, this value SHALL be either <b>'final'</b> or <b>'preliminary'</b>.
+
 </li>
-<li>The Composition relatesTo (operationally determined - SHALL be used when needed to express a document replaces a previously sent document to the same eHealth Box.). This is found in Composition.relatesTo and SHALL be used to clarify which other FHIR document is replaced
-(by using the code <b>replaces</b>). The element Composition.relatesTo.target.targetIdentifier SHALL give the unique document identifier (as described supra) of the other
+<li>The Composition relatesTo (operationally determined - SHALL be used when needed to express a document replaces a previously created document.). This is found in Composition.relatesTo and when used SHALL take the value
+ <b>'replaces'</b>. The element Composition.relatesTo.target.targetIdentifier SHALL give the unique document identifier (as described supra) of the other
 FHIR document.
 <ul>
 <li>please note it MAY be possible a FHIR document that was initially marked as 'final' is still followed up later by a new 'final' version. As such implementers SHALL take note whatever status a FHIR document has, it MAY always be replaced.</li>
