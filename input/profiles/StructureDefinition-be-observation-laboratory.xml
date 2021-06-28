@@ -74,6 +74,7 @@
     </element>
     <element id="Observation.performer">
       <path value="Observation.performer" />
+      <short value="In the initial iteration of the Belgium lab project: when sending to eHealthBox, this is BeOrganization or BePractitioner" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/CareTeam" />
