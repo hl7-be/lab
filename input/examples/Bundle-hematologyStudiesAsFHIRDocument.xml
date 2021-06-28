@@ -16,6 +16,10 @@
         <meta> 
           <profile value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report-composition"/> 
         </meta> 
+		<identifier>
+		<system value="urn:ietf:rfc:3986"/>
+		<value value="urn:uuid:0c3151bd-1cbf-4d65-b04d-cd918999990"/>
+	</identifier>
 		<status value="final"/>
         <type> 
           <coding> 
