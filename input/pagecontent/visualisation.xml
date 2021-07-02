@@ -40,10 +40,6 @@ before returning any visualisation. An automated mechanism SHALL NOT return any 
 <li>
 Visualisation SHALL be in such a way the information is presented in a tabular fashion.
 </li>
-<li>
-Considering the above, it is highly RECOMMENDED a generic visualisation module for the FHIR laboratory report takes the form of an endpoint where
-developers or testers can post a FHIR document bundle and receive in their answer the FHIR document with generated narrative.
-</li>
 </ul>
 </p>
 
