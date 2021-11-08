@@ -1,7 +1,9 @@
-Eerste testfiles; 1 patient, 1 resultaat
+First testfiles; 1 patient, 1 result
 
-Folder bevat pfd van protocol en equivalent json FHIR bericht
+Folder contains 1 FHIR result and PFD of its protocol.
 
-FHIR json valideert als geldig
+Message does not contain comments or headers yet.
 
-Voorbeelddata is GDPR veilig (staat in onze productiesystemen maar is zuiver test data, gaat bvb niet naar metahub
+FHIR json valides as valid.
+
+Example data is GDPR safe (patient identifier is mine; data is dummy and is not copied to e.g. Metahub.
