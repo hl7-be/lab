@@ -2,8 +2,6 @@
 
 This folder contains test FHIR messages from various providers.   
 
-##Folder structure
-
 Structure is as follows:
 
 > testing / PROVIDER
