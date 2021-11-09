@@ -1,6 +1,6 @@
 ## Content
 
-Several examples, each is 1 FHIR result in json and PFD of corresponding protocol.  File names are order number (our barcodes).
+Several examples, each is 1 FHIR result in json and PDF of corresponding protocol.  File names are order number (our barcodes).
 
 ## Comments
 
