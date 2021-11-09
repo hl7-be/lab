@@ -9,4 +9,4 @@ Example data is GDPR safe (patient identifier is mine; data is dummy and is not 
 
 ## Validation Status
 
-FHIR jsons all valide as valid.
+FHIR jsons all tested and valid.
