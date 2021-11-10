@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///H:/OLD_DESKTOP/Desktop/LATEST%20AND%20GREATEST/FHIR4/bundle.xsd">
+<Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
 	<id value="hematologyStudiesAsFHIRDocument"/>
 	<identifier>
 		<system value="urn:ietf:rfc:3986"/>
@@ -66,7 +66,7 @@
 				<language value="en"/>
 				<identifier>
 					<!--Here SHALL be 1..*  business identifier to identify the report. "Need to know what identifier to use when making queries about this report from the source laboratory"-->
-					<system value="http://acme.com/lab/reports"/>
+					<system value="http://test.com/lab/reports"/>
 					<value value="11530231003.2015110413180000000"/>
 				</identifier>
 				<basedOn>
@@ -93,7 +93,7 @@
 						<!-- if needed to give an extra display, the HL7 translate extension can be used -->
 							<extension url="http://hl7.org/fhir/StructureDefinition/translation">
 								<extension url="lang">
-									<valueCode value="be-nl"/>
+									<valueCode value="nl"/>
 								</extension>
 								<extension url="content">
 									<valueString value="HEMATOLOGIE"/>

@@ -21,3 +21,4 @@ Thumbs.db
 # backup files #
 ################
 *.bak
+/gofsh
