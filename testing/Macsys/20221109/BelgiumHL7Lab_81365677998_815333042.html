@@ -1,0 +1,90 @@
+<html><head><style>body {
+    font-family: sans-serif;
+    margin: 48px;
+}
+
+div.hapiHeaderText {
+    font-size: 1.5em;
+    color: #0484DF;
+    text-transform: capitalize;
+}
+
+
+
+/********************************************************
+* The following section is used for tables of values
+* with multiple columns (e.g. the table of Observations
+* in a Diagnostic Report for a lab test)
+********************************************************/
+table.hapiTableOfValues {
+    width: 100%;
+    max-width: 880px;
+    margin-top: 24px;
+    border-spacing: 0;
+    border-collapse: collapse;
+    border: 1px solid #DBDFE3;
+}
+
+table.hapiTableOfValues thead tr td {
+    background: #EEF2F6;
+    color: #5D7184;
+    font-size: .8em;
+    padding: 1em;
+    text-transform: uppercase;
+    border: 1px solid #DBDFE3;
+}
+
+table.hapiTableOfValues tbody tr td {
+    padding: .5em 1em;
+}
+
+table.hapiTableOfValues tbody tr.title td {
+    color: #0484DF;
+    background: #EEF2F6 !important;
+}
+
+table.hapiTableOfValues tbody tr:nth-child(even) td {
+    background: #f7f9fb;
+}
+
+/********************************************************
+* The following section is used for property tables. These
+* tables have two columns, one for the property name, and
+* one for the property value
+********************************************************/
+table.hapiPropertyTable {
+    width: 100%;
+    max-width: 880px;
+    margin-top: 24px;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+table.hapiPropertyTable thead tr td {
+    background: #EEF2F6;
+    color: #5D7184;
+    font-size: .8em;
+    padding: 1em;
+    text-transform: uppercase;
+    border: 1px solid #DBDFE3;
+}
+
+table.hapiPropertyTable tbody tr td:first-child {
+    text-align: right;
+    text-transform: uppercase;
+    color: #5D7184;
+    border: 1px solid #DBDFE3;
+    font-size: .8em;
+    vertical-align: baseline;
+}
+
+table.hapiPropertyTable tbody tr td {
+    vertical-align: top;
+    padding: .5em 1em;
+    margin: 1px;
+    border: 1px solid #DBDFE3;
+    vertical-align: baseline;
+}
+</style></head><body>
+<div><div class="hapiHeaderText"> Laboratory studies (set) </div><table class="hapiPropertyTable"><thead><tr><td colspan="2">Result information</td></tr></thead><tbody><tr><td>Status</td><td>FINAL</td></tr><tr><td>Issued</td><td> 09 November 2021 15:26:38 </td></tr></tbody><thead><tr><td colspan="2">Patient details</td></tr></thead><tbody><tr><td>Identifier</td><td>72032444577</td></tr><tr><td>Patient name</td><td>Stefan Waegemans</td></tr><tr><td>Date of birth</td><td><span>24 March 1972</span></td></tr><tr><td>Address</td><td><span>Willekensmolenstraat 88/2 </span><br/><span>Hasselt </span><span>BE </span></td></tr></tbody></table><table class="hapiTableOfValues"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td></tr></thead><tbody><tr class="title"><td> STOLLING </td><td></td><td></td><td></td><td>FINAL</td></tr><tr class="hapiTableOfValuesRowOddLight"><td> INR </td><td>1.0000000000 </td><td></td><td> - 1.20000 </td><td>FINAL</td></tr><tr class="hapiTableOfValuesRowEvenLight"><td> PT (Quick) </td><td>100.0000000000 % </td><td></td><td> 65.00000 % - </td><td>FINAL</td></tr></tbody></table></div></body></html>
+
