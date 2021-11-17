@@ -93,6 +93,7 @@ that 'additional' status SHALL BE avoided.</p>
 used as a fallback. 
 In that case, it is preferred the element to present the report as PDF SHALL be used and the resulting report
 in that case is <b>NOT</b> considered to be a structured Belgian laboratory report.</p>
+<p> The narrative SHALL not be empty. It will represent the structured content, but there are no layout requirements. </p>
 <a name="Specimen overview"></a>
 <h4>Specimen overview</h4>
 <p>Every specimen is expressed as a seperate Specimen resource in FHIR.</p>
