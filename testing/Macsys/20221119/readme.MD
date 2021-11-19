@@ -1,6 +1,6 @@
 ## Content
 
-One example, FHIR result in json and PDF of corresponding protocol.  File nameis  based on order number (our barcodes).
+One example, FHIR result in json and PDF of corresponding protocol.  File name is  based on order number (our barcodes).
 Changes vs previous versions:
 
 - Bundle Id is now completely unique, for every version/update of the protocol
