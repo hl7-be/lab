@@ -4,8 +4,8 @@ One example, FHIR result in json and PDF of corresponding protocol.  File name i
 Changes vs previous versions:
 
 - Bundle Id is now completely unique, for every version/update of the protocol
-- Bundle Id system refers to Belgian HL7 instead of macsys (be it that the url is not final yet)
-- Protocol identifier is nom id of DiagnosticReport
+- Bundle Id system refers to Belgian HL7 instead of macsys (be it that the url (https://www.ehealth.fgov.be/hl7/bundle) is perhaps not final yet)
+- Protocol identifier is now id of DiagnosticReport
 - Report versioning is included and correct (and is used to make bundle Id unique)
 - 4 types of comments added, 3 of which are covered by Loinc codes: KLINISCHE GEGEVENS, UITZICHT SERUM, COMMENTAAR OP RAPPORT
 - Comment indicating who receives copy has been placed as a note in ServiceRequest.  We found no better place to put it but are open to alternative suggestions
