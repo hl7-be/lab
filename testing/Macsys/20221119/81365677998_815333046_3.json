@@ -191,7 +191,7 @@
             },
             "text":{
                "status":"generated",
-               "div":"<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>code: </b>HEMATOLOGIE</p><p><b>subject: </b>Patient/6388178</p><p><b>effective: </b>2021-11-19T00:00:00+01:00</p><p><b>performer: </b>Practitioner/Responsible</p><p><b>member: </b> // Observation/Observation.1.0.0.1 // Observation/Observation.1.0.0.2 // Observation/Observation.1.0.0.3 // Observation/Observation.1.0.0.4 // Observation/Observation.1.0.0.5 // Observation/Observation.1.0.0.6 // Observation/Observation.1.0.0.7 // Observation/Observation"
+               "div":"<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>code: </b>HEMATOLOGIE</p><p><b>subject: </b>Patient/6388178</p><p><b>effective: </b>2021-11-19T00:00:00+01:00</p><p><b>performer: </b>Practitioner/Responsible</p><p><b>member: </b> // Observation/Observation.1.0.0.1 // Observation/Observation.1.0.0.2 // Observation/Observation.1.0.0.3 // Observation/Observation.1.0.0.4 // Observation/Observation.1.0.0.5 // Observation/Observation.1.0.0.6 // Observation/Observation.1.0.0.7 // Observation/Observation.1.0.0.8 // Observation/Observation.1.0.0.9 // </p></div>"
             },
             "status":"final",
             "code":{
@@ -1499,7 +1499,7 @@
             },
             "text":{
                "status":"generated",
-               "div":"<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>code: </b>http://loinc.org 94330-8 Uitzicht serum</p><p><b>subject: </b>Patient/6388178</p><p><b>effective: </b>2021-11-19T00:00:00+01:00</p><p><b>performer: </b>Practitioner/Responsible</p><p><b>result: </b>Hemolytisch staal: +++\r\nDit kan volgende analysen beïnvloeden:\r\nGamma-GT, GPT (ALT), GOT (AST), Kalium, LDH</p><p><b>interpretation: </b></p></div>"
+               "div":"<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>code: </b>http://loinc.org 94330-8 Uitzicht serum</p><p><b>subject: </b>Patient/6388178</p><p><b>effective: </b>2021-11-19T00:00:00+01:00</p><p><b>performer: </b>Practitioner/Responsible</p><p><b>result: </b>Hemolytisch staal: +++\r\nDit kan volgende analysen beÃ¯nvloeden:\r\nGamma-GT, GPT (ALT), GOT (AST), Kalium, LDH</p><p><b>interpretation: </b></p></div>"
             },
             "status":"final",
             "code":{
@@ -1521,7 +1521,7 @@
                   "reference":"Practitioner/Responsible"
                }
             ],
-            "valueString":"Hemolytisch staal: +++\r\nDit kan volgende analysen beïnvloeden:\r\nGamma-GT, GPT (ALT), GOT (AST), Kalium, LDH"
+            "valueString":"Hemolytisch staal: +++\r\nDit kan volgende analysen beÃ¯nvloeden:\r\nGamma-GT, GPT (ALT), GOT (AST), Kalium, LDH"
          }
       },
       {
