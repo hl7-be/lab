@@ -1,6 +1,6 @@
 ## Content
 
-Several examples, each is 1 FHIR result in json and PDF of corresponding protocol.  File names are based on order number (our barcodes):
+Several reruns of prvious examples, each is 1 FHIR result in json and PDF of corresponding protocol.  File names are based on order number (our barcodes):
 
 - 042: Simple example, 2 tests/results in one subtopic
 - 043: Example with refrange comments
