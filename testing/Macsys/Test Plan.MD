@@ -1,30 +1,39 @@
 # Test Plan
 
-This document lists cases to be tested, and refers to Macsys order numbers that figure the case.
+This document lists cases to be tested for Laboratory Results in FHIR Format.   
 
-FHIR for Laboratory Results – Test Plan
+TBD: listing of macsys order numbers which match the test case.
 
-This document lists cases to be tested for Laboratory Results in FHIR Format.
-
-1.	Structure
+## 1.	Structure
 
 1A: Results on different levels in hierarchy; panels and “titles” on different sublevels.  Including very complex structures (fruit & food allergies).
-1B: RBC?Glucose in different specimen (Blood/urine/CSF)
-2.	Analyses, Results and Units
+
+1B: RBC/Glucose in different specimen (Blood/urine/CSF)
+
+## 2.	Analyses, Results and Units
+
 2A: Analysis with numeric results
+
 2B: Analysis with alphanumeric results
+
 2C: Analysis that has no units
+
 2D: Analysis without LOINC/RETAM code, Albert code, Medidoc (?), own encoding system
+
 2E: Free T3 with notion ‘preliminary result’
+
 2F: Interpretation of result: 5 cases: 
 -	normal, 
 -	L, 
 -	LL, 
 -	H,
 -	HH
+
 2G: Analysis performed by 3rd lab
+
 2H: Accreditation status of Analysis and panel (grouping/title)
-3.	Reference Ranges
+
+## 3.	Reference Ranges
 
 3A: Analysis without reference ranges
 3B: Test with different numeric cases:
