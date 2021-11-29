@@ -2,7 +2,7 @@
 
 This document lists cases to be tested for Laboratory Results in FHIR Format.   
 
-TBD: listing of macsys order numbers which match the test case.
+TBD: listing of Macsys order numbers which match the test case.
 
 ## 1.	Structure
 
