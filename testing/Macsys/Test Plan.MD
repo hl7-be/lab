@@ -46,41 +46,74 @@ TBD: listing of macsys order numbers which match the test case.
 3D: Reference range for test without units
 
 
-4.	Comments
-4.1	Comments in LOINC code
+## 4.	Comments
+
+### 4.1	Comments in LOINC code
 
 4.1A: “Klinische Gegevens” LOINC 55752-0
+
 4.1B: “Uitzicht Staal” LOINC  94330-8
+
 4.1C: Comments (e.g. “Results tentative”) LOINC 86468-6	
+
 4.1D: Multiple occurrences of above LOINC code(s)
-4.2 Reference range comments
+
+### 4.2 Reference range comments
+
 4.2A: Reference range comments
+
 4.2B: Reference range as a table
-4.3 Comments on test level
+
+### 4.3 Comments on test level
+
 4.3A: Test level comment
-4.4 Comments on level ServiceRequest
+
+### 4.4 Comments on level ServiceRequest
+
 4.4A. Comment type “copy to” 
+
 4.4B: Administrative comments (e.g. missing DOBs)
-5.	Specimen Management
+
+## 5.	Specimen Management
+
 5A: Specimen identifiers with LOINC encoding of specimen type
+
 5B: Analysis linked to specimen
+
 5C: No specimen
+
 5D: Partial specimen (some available, others not, in same protocol)
-6.	Edits on Protocol Level
+
+## 6.	Edits on Protocol Level
+
 6A: Protocol with partial results followed by same protocol with final results
+
 6B: Protocol with final results, followed by same protocol with amended result (correction of an individual analysis)
+
 6C: Final protocol for Patient A, followed by correction of same protocol, but different patient (patient inversion)
+
 6D: Testing of version numbering: retransfer of same protocol, with different version number
+
 6E:  Changes in administrative data: prescription date, date of birth, sex of patient, …
-6F:   Second version of the protocol received before the first version
+
+6F:  Second version of the protocol received before the first version
  
-7.	Time Series
+## 7.	Time Series
+
 TBD
-8.	Annexes
+
+## 8.	Annexes
+
 TBD
-9.	MicroBiology
+
+## 9.	MicroBiology
+
 TBD
-10.	Anapath
+
+## 10.	Anapath
+
 TBD
-11.	Protocols in different languages
+
+## 11.	Protocols in different languages
+
 TBD
