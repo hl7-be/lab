@@ -18,7 +18,7 @@ TBD: listing of Macsys order numbers which match the test case.
 
 2C: Analysis that has no units
 
-2D: Analysis without LOINC/RETAM code, Albert code, Medidoc (?), own encoding system
+2D: Analysis without LOINC/RETAM code, Albert code, own encoding system
 
 2E: Free T3 with notion ‘preliminary result’
 
