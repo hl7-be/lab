@@ -40,9 +40,11 @@ table.hapiTableOfValues tbody tr td {
 
 table.hapiTableOfValues tbody tr.title td {
     color: #0484DF;
-    background: #EEF2F6 !important;
 }
 
+table.hapiTableOfValues tbody tr.title.level_0 td {
+    background: #deeeff;
+}
 table.hapiTableOfValues tbody tr:nth-child(even) td {
     background: #f7f9fb;
 }
@@ -85,6 +87,38 @@ table.hapiPropertyTable tbody tr td {
     border: 1px solid #DBDFE3;
     vertical-align: baseline;
 }
+
+tr.level_2 td.label {
+    padding-left: 2em;
+}
+
+tr.level_3 td.label {
+    padding-left: 2em;
+}
+
+tr.level_4 td.label {
+    padding-left: 3em;
+}
+
+tr.level_5 td.label {
+    padding-left: 3em;
+}
+
+tr.level_6 td.label {
+    padding-left: 4em;
+}
+
+tr.level_7 td.label {
+    padding-left: 4em;
+}
+
+tr.level_8 td.label {
+    padding-left: 5em;
+}
+
+tr.level_9 td.label {
+    padding-left: 6em;
+}
 </style></head><body>
-<div><div class="hapiHeaderText"> Laboratory studies (set) </div><table class="hapiPropertyTable"><thead><tr><td colspan="2">Result information</td></tr></thead><tbody><tr><td>Status</td><td>PRELIMINARY</td></tr><tr><td>Issued</td><td> 08 November 2021 11:40:01 </td></tr></tbody><thead><tr><td colspan="2">Patient details</td></tr></thead><tbody><tr><td>Identifier</td><td>66042620739</td></tr><tr><td>Patient name</td><td>Tom Tollenaere</td></tr><tr><td>Date of birth</td><td><span>26 April 1966</span></td></tr><tr><td>Address</td><td><span>Beukenlaan 63/A </span><br/><span>Rotselaar </span><span>BE </span></td></tr></tbody></table><table class="hapiTableOfValues"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td></tr></thead><tbody><tr class="title"><td> INFLAMMATIE </td><td></td><td></td><td></td><td>PRELIMINARY</td></tr><tr class="hapiTableOfValuesRowOddLight"><td> CRP </td><td>0.7000000000 mg/L </td><td></td><td> - 5.00000 mg/L </td><td>FINAL</td></tr></tbody></table></div></body></html>
+<div xmlns="http://www.w3.org/1999/xhtml"><div class="hapiHeaderText"> Laboratory studies (set) </div><table class="hapiPropertyTable"><thead><tr><td colspan="2">Result information</td></tr></thead><tbody><tr><td>Status</td><td>PRELIMINARY</td></tr><tr><td>Issued</td><td> 08 November 2021 11:40:01 </td></tr></tbody><thead><tr><td colspan="2">Patient details</td></tr></thead><tbody><tr><td>Identifier</td><td>66042620739</td></tr><tr><td>Patient name</td><td>Tom Tollenaere</td></tr><tr><td>Date of birth</td><td><span>26 April 1966</span></td></tr><tr><td>Address</td><td><span>Beukenlaan 63/A </span><br/><span>Rotselaar </span><span>BE </span></td></tr></tbody></table><table class="hapiTableOfValues"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td></tr></thead><tbody><tr class="level_0 title"><td class="label"> INFLAMMATIE </td><td></td><td></td><td></td><td>PRELIMINARY</td></tr><tr class="level_1 hapiTableOfValuesRowOdd"><td class="label"> CRP </td><td>0.7000000000 mg/L </td><td></td><td> &lt;&nbsp;5.00000 mg/L </td><td>FINAL</td></tr></tbody></table></div></body></html>
 

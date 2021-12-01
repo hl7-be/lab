@@ -40,9 +40,11 @@ table.hapiTableOfValues tbody tr td {
 
 table.hapiTableOfValues tbody tr.title td {
     color: #0484DF;
-    background: #EEF2F6 !important;
 }
 
+table.hapiTableOfValues tbody tr.title.level_0 td {
+    background: #deeeff;
+}
 table.hapiTableOfValues tbody tr:nth-child(even) td {
     background: #f7f9fb;
 }
@@ -85,6 +87,38 @@ table.hapiPropertyTable tbody tr td {
     border: 1px solid #DBDFE3;
     vertical-align: baseline;
 }
+
+tr.level_2 td.label {
+    padding-left: 2em;
+}
+
+tr.level_3 td.label {
+    padding-left: 2em;
+}
+
+tr.level_4 td.label {
+    padding-left: 3em;
+}
+
+tr.level_5 td.label {
+    padding-left: 3em;
+}
+
+tr.level_6 td.label {
+    padding-left: 4em;
+}
+
+tr.level_7 td.label {
+    padding-left: 4em;
+}
+
+tr.level_8 td.label {
+    padding-left: 5em;
+}
+
+tr.level_9 td.label {
+    padding-left: 6em;
+}
 </style></head><body>
-<div><div class="hapiHeaderText"> Laboratory studies (set) </div><table class="hapiPropertyTable"><thead><tr><td colspan="2">Result information</td></tr></thead><tbody><tr><td>Status</td><td>FINAL</td></tr><tr><td>Issued</td><td> 09 November 2021 15:26:38 </td></tr></tbody><thead><tr><td colspan="2">Patient details</td></tr></thead><tbody><tr><td>Identifier</td><td>72032444577</td></tr><tr><td>Patient name</td><td>Stefan Waegemans</td></tr><tr><td>Date of birth</td><td><span>24 March 1972</span></td></tr><tr><td>Address</td><td><span>Willekensmolenstraat 88/2 </span><br/><span>Hasselt </span><span>BE </span></td></tr></tbody></table><table class="hapiTableOfValues"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td></tr></thead><tbody><tr class="title"><td> STOLLING </td><td></td><td></td><td></td><td>FINAL</td></tr><tr class="hapiTableOfValuesRowOddLight"><td> INR </td><td>1.0000000000 </td><td></td><td> - 1.20000 </td><td>FINAL</td></tr><tr class="hapiTableOfValuesRowEvenLight"><td> PT (Quick) </td><td>100.0000000000 % </td><td></td><td> 65.00000 % - </td><td>FINAL</td></tr></tbody></table></div></body></html>
+<div xmlns="http://www.w3.org/1999/xhtml"><div class="hapiHeaderText"> Laboratory studies (set) </div><table class="hapiPropertyTable"><thead><tr><td colspan="2">Result information</td></tr></thead><tbody><tr><td>Status</td><td>FINAL</td></tr><tr><td>Issued</td><td> 09 November 2021 15:26:38 </td></tr></tbody><thead><tr><td colspan="2">Patient details</td></tr></thead><tbody><tr><td>Identifier</td><td>72032444577</td></tr><tr><td>Patient name</td><td>Stefan Waegemans</td></tr><tr><td>Date of birth</td><td><span>24 March 1972</span></td></tr><tr><td>Address</td><td><span>Willekensmolenstraat 88/2 </span><br/><span>Hasselt </span><span>BE </span></td></tr></tbody></table><table class="hapiTableOfValues"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td></tr></thead><tbody><tr class="level_0 title"><td class="label"> STOLLING </td><td></td><td></td><td></td><td>FINAL</td></tr><tr class="level_1 hapiTableOfValuesRowOdd"><td class="label"> INR </td><td>1.0000000000 </td><td></td><td> &lt;&nbsp;1.20000 </td><td>FINAL</td></tr><tr class="level_1 hapiTableOfValuesRowEven"><td class="label"> PT (Quick) </td><td>100.0000000000 % </td><td></td><td> &gt;&nbsp;65.00000 % </td><td>FINAL</td></tr></tbody></table></div></body></html>
 
