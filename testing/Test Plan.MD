@@ -15,6 +15,7 @@ Work in progress; following to be added:
 ## 1.	Structure
 
 1A: Results on different levels in hierarchy; panels and “titles” on different sublevels.  Including very complex structures (fruit & food allergies).
+* Test files: https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/815333049
 
 1B: RBC/Glucose in different specimen (Blood/urine/CSF)
 
