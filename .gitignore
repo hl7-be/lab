@@ -22,3 +22,5 @@ Thumbs.db
 ################
 *.bak
 /gofsh
+/archive
+/fsh-generated
