@@ -48,17 +48,17 @@ Work in progress; following to be added:
   * TODO
 
 2F: Interpretation of result: 5 cases: 
--	normal, 
+*	normal, 
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333041
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333043
--	L, 
+*	L, 
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333049
--	LL, 
+*	LL, 
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333049
--	H,
+*	H,
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333044
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333045
--	HH
+*	HH
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333050
 
 2G: Analysis performed by 3rd lab
@@ -66,18 +66,31 @@ Work in progress; following to be added:
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333051
 
 2H: Accreditation status of Analysis and panel (grouping/title)
+* Test files:
+  * Any test protocol lists lab accreditation status
+  * Test accrfeditation status: TODO
 
 ## 3.	Reference Ranges
 
 3A: Analysis without reference ranges
+* Test files:
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333049
+  
 3B: Test with different numeric cases:
 -	High and Low
 -	Only High (e.g. <= xx,x)
 -	Only Low (e.g. >= yy,y)
+* Test files:
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333049
+
 
 3C: Test with alphanumeric reference range
+* Test files:
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333045
 
 3D: Reference range for test without units
+* Test files:
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333042
 
 
 ## 4.	Comments
@@ -85,23 +98,39 @@ Work in progress; following to be added:
 ### 4.1	Comments in LOINC code
 
 4.1A: “Klinische Gegevens” LOINC 55752-0
+* Test files:
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333046
+
 
 4.1B: “Uitzicht Staal” LOINC  94330-8
+* Test files:
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333049  (nog in detail te herbekijken)
+   
 
 4.1C: Comments (e.g. “Results tentative”) LOINC 86468-6	
 
 4.1D: Multiple occurrences of above LOINC code(s)
+* Test files:
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333046
+
 
 ### 4.2 Reference range comments
 
 4.2A: Reference range comments
+* Test files:
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333052
+
 
 4.2B: Reference range as a table
+* Test file: NVT for Macsys (case does not occur)
 
 ### 4.3 Comments on test level
 
 4.3A: Test level comment
-
+* Test files:
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333045
+  
+  
 ### 4.4 Comments on level ServiceRequest
 
 4.4A. Comment type “copy to” 
@@ -121,6 +150,8 @@ Work in progress; following to be added:
 ## 6.	Edits on Protocol Level
 
 6A: Protocol with partial results followed by same protocol with final results
+* Test files:
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333047
 
 6B: Protocol with final results, followed by same protocol with amended result (correction of an individual analysis)
 
@@ -151,3 +182,13 @@ TBD
 ## 11.	Protocols in different languages
 
 TBD
+
+## 12. Joint example from multiple labs for same subject
+
+12A: CMA+AKL
+
+Case is as follows: AKL and CMA are 2 differen labs/RIZIV numbers). But they use the same analysis encoding, methodolgies, reference ranges etc.  Results from both labs can safely be plotted cumulatively.
+
+12B:  iLab and MIPS
+
+Case is as follows: MIPS and iLabs are never used at the same time by the same lab.   Whether analyses may be plotted cumulatively depends on LOINC encoding, units etc.
