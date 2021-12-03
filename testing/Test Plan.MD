@@ -15,30 +15,55 @@ Work in progress; following to be added:
 ## 1.	Structure
 
 1A: Results on different levels in hierarchy; panels and “titles” on different sublevels.  Including very complex structures (fruit & food allergies).
-* Test files: https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/815333049
+* Test files:
+** https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333049
 
 1B: RBC/Glucose in different specimen (Blood/urine/CSF)
+* Test files: 
+** https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333050
 
 ## 2.	Analyses, Results and Units
 
 2A: Analysis with numeric results
+* Test files: 
+** https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333041
+** https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333042
+** https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333043
+
 
 2B: Analysis with alphanumeric results
+* Test files:
+** https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333049
 
 2C: Analysis that has no units
+* Test files:
+** https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333042
 
 2D: Analysis without LOINC/RETAM code, Albert code, own encoding system
+* Test files:
+** https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333051
 
 2E: Free T3 with notion ‘preliminary result’
+* Test files:
+** TODO
 
 2F: Interpretation of result: 5 cases: 
 -	normal, 
+** https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333041
+** https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333043
 -	L, 
+** https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333049
 -	LL, 
+** https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333049
 -	H,
+** https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333044
+** https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333045
 -	HH
+** https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333050
 
 2G: Analysis performed by 3rd lab
+* Test files:
+** https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333051
 
 2H: Accreditation status of Analysis and panel (grouping/title)
 
