@@ -7,7 +7,7 @@ Work in progress; following to be added:
 * References to (Macsys) test protocols and example FHIR files
 * Last chapters still need to be written out
 * Per test case, the exact acceptance criteria need to be added to the document
-* To detail per case, whether the case is relevant to the visualiation tool or not
+* To detail per case, whether the case is relevant to the visualisation tool or not (some cases are only relevant to GP software or hospital systems).  Cases are flagged when not relevant to visualiser
 * There are no references yet to MIPS test protocols and example FHIR files
 
   
@@ -149,6 +149,8 @@ Work in progress; following to be added:
 
 ## 6.	Edits on Protocol Level
 
+**This whole section is not relevant for/not tested by visualisation tool**
+
 6A: Protocol with partial results followed by same protocol with final results
 * Test files:
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333047
@@ -159,7 +161,7 @@ Work in progress; following to be added:
 
 6D: Testing of version numbering: retransfer of same protocol, with different version number
 
-6E:  Changes in administrative data: prescription date, date of birth, sex of patient, …
+6E:  Changes in administrative data: prescription date, date of birth, sex of patient, 
 
 6F:  Second version of the protocol received before the first version
  
@@ -184,6 +186,8 @@ TBD
 TBD
 
 ## 12. Joint example from multiple labs for same subject
+
+**This whole section is not relevant for/not tested by visualisation tool**
 
 12A: CMA+AKL
 
