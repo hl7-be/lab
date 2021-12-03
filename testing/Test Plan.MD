@@ -48,9 +48,9 @@ Work in progress; following to be added:
   * TODO
 
 2F: Interpretation of result: 5 cases: 
-*	normal, 
-   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333041
-   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333043
+*	normal,
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333041
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333043
 *	L, 
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333049
 *	LL, 
@@ -77,9 +77,9 @@ Work in progress; following to be added:
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333049
   
 3B: Test with different numeric cases:
--	High and Low
--	Only High (e.g. <= xx,x)
--	Only Low (e.g. >= yy,y)
+*	High and Low
+*	Only High (e.g. <= xx,x)
+*	Only Low (e.g. >= yy,y)
 * Test files:
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333049
 
