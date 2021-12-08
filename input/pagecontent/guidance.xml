@@ -384,6 +384,9 @@ Thus avoiding the need to include a full Patient resource or a reference to a fu
 <p>If the identifier is the only information to send, it is allowed to use a FHIR logical reference to refer to the laboratory. 
 Thus avoiding the need to include a full Organization resource or a reference to a full Organization resource on a server. A logical reference will lead to a structure similar to the one described in the subject example supra.</p>
 <p>Some minimal information concerning the laboratory (Organization resource), besides the identifier SHOULD be given: a .name, at least one .telecom and a .address.</p>
+<a name="Accreditation of the laboratory"></a>
+<h4>Accreditation of the laboratory</h4>
+<p>Any accreditions of the laboratory can be added as an .identifier. For the most common case of BELAC-accreditation, a namesystem is provided. If the BELAC accreditation is mentioned, it SHALL use this namesystem.</p>
 <a name="Minimal information concerning the laboratory responsible"></a>
 <h4>Minimal information concerning the laboratory responsible</h4>
 <p>An .identifier (NIHDI if possible) SHALL be given.</p>
