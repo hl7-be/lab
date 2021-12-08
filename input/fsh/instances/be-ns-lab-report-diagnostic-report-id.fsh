@@ -13,6 +13,8 @@ Usage: #definition
 * contact[=].telecom.value = "http://hl7belgium.org"
 * description = "Unique Identifier for Lab Report Diagnostic Report"
 * jurisdiction = $m49.htm#056 "Belgium"
-* uniqueId.type = #uri
-* uniqueId.value = "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/be-ns-lab-report-diagnostic-report-id"
-* uniqueId.preferred = true
+* uniqueId[0].type = #uri
+* uniqueId[=].value = "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/be-ns-lab-report-diagnostic-report-id"
+* uniqueId[+].type = #uri
+* uniqueId[=].value = "https://www.ehealth.fgov.be/lab-report/diagnostic-report-id"
+* uniqueId[=].preferred = true
