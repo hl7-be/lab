@@ -2,7 +2,7 @@
 
 This document lists cases to be tested for Laboratory Results in FHIR Format.   Most cases apply to the Visualisation Tools, but not all of them.
 
-Work in progress; following to be added:
+Work in progress; following may not be complete:
 
 * References to (Macsys) test protocols and example FHIR files
 * Last chapters still need to be written out
@@ -21,6 +21,12 @@ Work in progress; following to be added:
 1B: RBC/Glucose in different specimen (Blood/urine/CSF)
 * Test files: 
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333050
+
+1C: BundleId and DiagnoticReportId conform to Belgian HL7 standards
+* Test files: 
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333041
+
+**This test case is not relevant for/not tested by visualisation tool**
 
 ## 2.	Analyses, Results and Units
 
@@ -122,7 +128,7 @@ Work in progress; following to be added:
 
 
 4.2B: Reference range as a table
-* Test file: NVT for Macsys (case does not occur)
+* Test file: NVT for Macsys (case does not occur in macsys systems)
 
 ### 4.3 Comments on test level
 
