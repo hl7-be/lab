@@ -18,7 +18,7 @@ Description: "Belgian profile for a laboratory report"
 * identifier ^definition = "An identifier for this laboratory report.\r\n\r\n This identifier will be used to determine if a new resource is needed, or if this resource is an update of an existing one. When an identifier is given, a consumer SHALL NOT ignore it."
 * identifier contains DRID 1..1
 * identifier[DRID] ^definition = "The identifier SHALL at least contain 1 identifier of type BeLabReportDiagnosticReportId. The unicity of this identifier is guaranteed by using the NIHDI number of the lab and a unique number for that lab, separated by a dot."
-* identifier[DRID].system = "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/be-ns-lab-report-diagnostic-report-id" (exactly)
+* identifier[DRID].system = "https://www.ehealth.fgov.be/lab-report/diagnostic-report-id" (exactly)
 * identifier[DRID].value 1..1
 * basedOn 1..1 MS
 * basedOn only Reference(ServiceRequest)
