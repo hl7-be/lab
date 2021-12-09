@@ -80,12 +80,13 @@ Work in progress; following may not be complete:
   * Test accreditation status: TODO
 
 2I: Units other than standard lab units
-** This case may not apply to all systems: not every producer will have this capability, and receivers are not intended blindly handle this case **
 
-2I.1: Results in units other than lab units, by request of receiver.
+** This case may not apply to all systems: not every producer will have this capability, and receivers are not expected to blindly handle this case.  This case does apply to Macsys. **
+
+2I.1: Results in units other than lab units, by request of receiver
 * Test files: TODO
 
-2I.2; Results in multiple units, by request of received
+2I.2; Results in multiple units, by request of receiver
 * Test files: TODO
 
 ## 3.	Reference Ranges
