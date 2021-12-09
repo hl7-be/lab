@@ -81,7 +81,7 @@ Work in progress; following may not be complete:
 
 2I: Units other than standard lab units
 
-** This case may not apply to all systems: not every producer will have this capability, and receivers are not expected to blindly handle this case.  This case does apply to Macsys. **
+**This case may not apply to all systems: not every producer will have this capability, and receivers are not expected to blindly handle this case.  This case does apply to Macsys.**
 
 2I.1: Results in units other than lab units, by request of receiver
 * Test files: TODO
