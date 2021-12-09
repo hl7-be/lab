@@ -23,10 +23,13 @@ Work in progress; following may not be complete:
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333050
 
 1C: BundleId and DiagnoticReportId conform to Belgian HL7 standards
+
+**This test case is not relevant for/not tested by visualisation tool**
+
 * Test files: 
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333041
 
-**This test case is not relevant for/not tested by visualisation tool**
+
 
 ## 2.	Analyses, Results and Units
 
@@ -74,7 +77,16 @@ Work in progress; following may not be complete:
 2H: Accreditation status of Analysis and panel (grouping/title)
 * Test files:
   * Any test protocol lists lab accreditation status
-  * Test accrfeditation status: TODO
+  * Test accreditation status: TODO
+
+2I: Units other than standard lab units
+** This case may not apply to all systems: not every producer will have this capability, and receivers are not intended blindly handle this case **
+
+2I.1: Results in units other than lab units, by request of receiver.
+* Test files: TODO
+
+2I.2; Results in multiple units, by request of received
+* Test files: TODO
 
 ## 3.	Reference Ranges
 
