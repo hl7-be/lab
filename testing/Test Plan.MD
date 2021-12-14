@@ -143,7 +143,7 @@ Work in progress; following may not be complete:
 4.2B: Reference range as a table
 * Test file: NVT for Macsys (case does not occur in macsys systems)
 
-### 4.3 Comments on test level
+### 4.3 Comments on analysis level
 
 4.3A: Test level comment
 * Test files:
