@@ -239,7 +239,14 @@ TBD
 
 ## 8.	Annexes
 
-TBD
+8A: Single Annex in PDF
+* Test file
+* Acceptance criterion:
+  * Embedded pdf is equal to protocol pdf linked to the FHIR file.
+
+8B: Multiple Annexes in (potentially) multiple formats
+**This case is not covered by Macsys examples; in the case of "multiple annexes", Macsys includes those as different pages in one embedded pdf document, i.e. one "embedded annex" in the FHIR message.  Senders other than Macsys may provide examples for this case.
+
 
 ## 9.	MicroBiology
 
