@@ -12,17 +12,26 @@ Work in progress; following may not be complete:
 
   
 
-## 1.	Structure
+## 1.	Structure & agreements
 
 1A: Results on different levels in hierarchy; panels and “titles” on different sublevels.  Including very complex structures (fruit & food allergies).
 * Test files:
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333049
+* Acceptance criterion:
+  * Title headings and levels match those in pfd version of protocol 
 
 1B: RBC/Glucose in different specimen (Blood/urine/CSF)
 * Test files: 
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333050
+* Acceptance criterion:
+  *  SWA: to complete  
 
-1C: BundleId and DiagnoticReportId conform to Belgian HL7 standards
+1C: BundleId and DiagnosticReportId conform to Belgian HL7 standards
+* Test files:
+  *  (need a set that has different versions of the protocol)
+* Acceptance criteria:
+  *  BundleId is lab riziv number +  "." + laboratory unique identifier; unique for every bundle (i.e. across different versions of the same protocol)
+  *  DiagnosticReportId is lab riziv number + "." + laboratory unique identifier unique to the protocol, but identical for different versions of same protocol.
 
 **This test case is not relevant for/not tested by visualisation tool**
 
