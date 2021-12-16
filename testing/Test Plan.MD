@@ -41,6 +41,27 @@ Work in progress; following may not be complete:
 * Acceptance criterion:
   * All surnames in first surname field, concatenated and separated by spaces
 
+1E: Different patient identifier systems
+
+1E.1 Belgian Resident
+* Test file:
+* Acceptance criteria:
+  * Patient identified by means of RRN
+  * (not for visualiser) patient result data matched with other/previous results for same RRN
+
+1E.2 Patient with Belgian BIS number
+* Test file:
+* Acceptance criteria:
+  * Patient identified by means of BIS
+  * (not for visualiser) patient result data matched with other/previous results for same RRN
+
+1E.3 Patient without Belgian identifiers
+* Test file:
+* Acceptance criteria:
+  * Patient identified by means of lab identifier
+  * (not for visualiser) patient result data matched with other/previous results from same lab/same patient
+
+
 ## 2.	Analyses, Results and Units
 
 2A: Analysis with numeric results
