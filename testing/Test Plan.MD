@@ -35,10 +35,11 @@ Work in progress; following may not be complete:
 
 **This test case is not relevant for/not tested by visualisation tool**
 
-* Test files: 
-  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333041
-
-
+1D: Patient with multiple surnames
+* Test files:
+  * TDB
+* Acceptance criterion:
+  * All surnames in first surname field, concatenated and separated by spaces
 
 ## 2.	Analyses, Results and Units
 
@@ -47,19 +48,28 @@ Work in progress; following may not be complete:
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333041
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333042
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333043
-
+* Acceptance criteria:
+  * All numeric values identical as their counterparts in the pdf version of the protocol
+  * Units represented as their counterparts in the pfd version of the protocol
 
 2B: Analysis with alphanumeric results
 * Test files:
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333049
+* Acceptance criteria:
+  * All alphanumeric values identical as their counterparts in the pdf version of the protocol
+  * Units represented as their counterparts in the pdf version of the protocol
 
 2C: Analysis that has no units
 * Test files:
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333042
+* Acceptance criteria:
+  * Where analysis has no units per pdf version of the protocol, no unts are represented off FHIR message either
 
 2D: Analysis without LOINC/RETAM code, Albert code, own encoding system
 * Test files:
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333051
+* Acceptance criterion:
+  * Analysis is shown un human readable form, based on the non LOINC/RETAM/Albert encoding in the FHIR message and correct as compared to that in the pdf version of the protocol
 
 2E: Free T3 with notion ‘preliminary result’
 * Test files:
@@ -78,10 +88,15 @@ Work in progress; following may not be complete:
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333045
 *	HH
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333050
+* Acceptance criteria:
+  * Flagging of results matches those of the equivalents in the pdf versions of the protocol, and relative to the reference ranges for the analysis, i.e. none for normal, L for low, LL for very low, H for high and HH for very high
+
 
 2G: Analysis performed by 3rd lab
 * Test files:
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333051
+* Acceptance criterion:
+  * Analysis performed by 3rd party lab are flagged or labelled as such, and identical to such flagging in the pdf version of the protocol
 
 2H: Accreditation status of Analysis and panel (grouping/title)
 * Test files:
@@ -94,9 +109,13 @@ Work in progress; following may not be complete:
 
 2I.1: Results in units other than lab units, by request of receiver
 * Test files: TODO
-
+* Acceptance criterion:
+  * Receiver receives in units requested, even if those are different from the ones used by the issueing laboratory
+    
 2I.2; Results in multiple units, by request of receiver
 * Test files: TODO
+* Acceptance criterion:
+  * Receiver receives in units requested, even if those are different from the ones used by the issueing laboratory
 
 ## 3.	Reference Ranges
 
