@@ -119,7 +119,7 @@ Work in progress; following may not be complete:
 * Acceptance criterion:
   * Analysis performed by 3rd party lab are flagged or labelled as such, and identical to such flagging in the pdf version of the protocol
 
-2H: Accreditation status of Analysis and panel (grouping/title)
+2H: Accreditation status of analysis and panel (grouping/title)
 * Test files:
   * Any test protocol lists lab accreditation status
   * Test accreditation status: TODO
@@ -143,6 +143,8 @@ Work in progress; following may not be complete:
 3A: Analysis without reference ranges
 * Test files:
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333049
+* Acceptance criterion:
+  * Analysis shown without reference range and without reference range flags 
   
 3B: Test with different numeric cases:
 *	High and Low
@@ -150,16 +152,21 @@ Work in progress; following may not be complete:
 *	Only Low (e.g. >= yy,y)
 * Test files:
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333049
+* Acceptance criteria:
+  * Reference ranges (functionally but not necessarily literally) shown as in pdf version of protocol
 
 
 3C: Test with alphanumeric reference range
 * Test files:
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333045
-
+* Acceptance criterion:
+  * Reference range literally shown as in pdf version of protocol
+  
 3D: Reference range for test without units
 * Test files:
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333042
-
+* Acceptance criterion:
+  * Reference range literally shown as in pdf version of protocol
 
 ## 4.	Comments
 
@@ -168,18 +175,26 @@ Work in progress; following may not be complete:
 4.1A: “Klinische Gegevens” LOINC 55752-0
 * Test files:
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333046
-
+* Acceptance criterion:
+  * Comment code shown as in pfd version of protocol
 
 4.1B: “Uitzicht Staal” LOINC  94330-8
 * Test files:
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333049  (nog in detail te herbekijken)
+* Acceptance criterion:
+  * Comment code shown as in pfd version of protocol
    
 
 4.1C: Comments (e.g. “Results tentative”) LOINC 86468-6	
+* Test files: (missing?)
+* Acceptance criterion:
+  * Comment code shown as in pfd version of protocol
 
 4.1D: Multiple occurrences of above LOINC code(s)
 * Test files:
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333046
+* Acceptance criterion:
+  * All comment codes shown as in pfd version of protocol
 
 
 ### 4.2 Reference range comments
@@ -187,23 +202,32 @@ Work in progress; following may not be complete:
 4.2A: Reference range comments
 * Test files:
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333052
-
+* Acceptance criterion:
+  * Reference range comments shown along with the reference range, and identical to representation in the corresponding pfd version of the protocol 
 
 4.2B: Reference range as a table
 * Test file: NVT for Macsys (case does not occur in macsys systems)
+* Acceptance criterion:
 
 ### 4.3 Comments on analysis level
 
 4.3A: Test level comment
 * Test files:
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333045
-  
+* Acceptation criterion:
+  * All analysis level comments are shown next to (or above/under) the analysis they refer to and are identical to those in the corresponding pfd version of the protocol
   
 ### 4.4 Comments on level ServiceRequest
 
 4.4A. Comment type “copy to” 
+* Test files
+* Acceptation criteria:
+  * Comments are shown on protocol level and are identica to those in corresponding pdf version of the protocol  
 
 4.4B: Administrative comments (e.g. missing DOBs)
+* Test files:
+* Acceptation criteria:
+  * Comments are shown on protocol level and are identica to those in corresponding pdf version of the protocol 
 
 ## 5.	Specimen Management
 
