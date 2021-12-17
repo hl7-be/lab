@@ -1,4 +1,4 @@
-## Content
+## Content - DON'T USE - OUT OF DATE
 
 First testfiles; 1 patient, 1 result
 Folder contains 1 FHIR result and PFD of its protocol.
