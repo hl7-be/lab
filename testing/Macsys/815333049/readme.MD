@@ -9,4 +9,4 @@ Test cases covered by this example:
 * 2B: Analysis with alphanumeric results
 * 2F: Interpretation of results: Low (L) and very Low (LL)
 * 3A: Analysis without reference range
-* 4.1B: comments in LOINC 94330-8
+
