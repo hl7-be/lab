@@ -240,7 +240,8 @@ TBD
 ## 8.	Annexes
 
 8A: Single Annex in PDF
-* Test file
+* Test files
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333041
 * Acceptance criterion:
   * Embedded pdf is equal to protocol pdf linked to the FHIR file.
 
