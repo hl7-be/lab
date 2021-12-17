@@ -241,8 +241,10 @@ Work in progress; following may not be complete:
 5B: Analysis linked to specimen
 
 5C: No specimen
+* Test files:
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333051 (nog te bekijken of dit klopt!) 
 
-5D: Partial specimen (some available, others not, in same protocol)
+5D: Partial specimens (some available, others not, in same protocol)
 
 ## 6.	Edits on Protocol Level
 
@@ -264,13 +266,23 @@ Work in progress; following may not be complete:
  
 ## 7.	Time Series
 
-TBD
+7A: Time series, LOINC coded
+* Test files:
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333056
+* Acceptance criteria:
+  * Results encoded as per relevant pdf protocol, all in LOINC 
+     
+7B: Time series, including encoding nog available in LOINC, coded per lab standard
+* Test files:
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333057
+* Acceptance criteria:
+  * Results encoded as per relevant pdf protocol, including those not encoded in LOINC
 
 ## 8.	Annexes
 
 8A: Single Annex in PDF
 * Test files
-  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333041
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333058
 * Acceptance criterion:
   * Embedded pdf is equal to protocol pdf linked to the FHIR file.
 
@@ -278,13 +290,23 @@ TBD
 **This case is not covered by Macsys examples; in the case of "multiple annexes", Macsys includes those as different pages in one embedded pdf document, i.e. one "embedded annex" in the FHIR message.  Senders other than Macsys may provide examples for this case.
 
 
-## 9.	MicroBiology
+## 9.	Microbiology
 
 TBD
 
 ## 10.	Anapath
 
-TBD
+10A: Protocol with Pathology + Clinicla Biology
+* Test files:
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333059
+* Acceptance criteria
+  * Receiver treats both pathology and clinical biology as per relevant pdf version of the protocol
+
+10B: Single pathology protocol
+* Test files:
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333060
+* Acceptance criteria:
+  * Receiver captures pathology result as in relevant pfd version of the protocol 
 
 ## 11.	Protocols in different languages
 
