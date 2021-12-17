@@ -1,4 +1,4 @@
-## Content - DO NOT USE - OUT OF DATE
+## Content - DON'T USE - OUT OF DATE
 
 Several examples, each is 1 FHIR result in json and PDF of corresponding protocol.  File names are based on order number (our barcodes):
 
