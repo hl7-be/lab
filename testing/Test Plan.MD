@@ -94,7 +94,7 @@ Work in progress; following may not be complete:
 
 2E: Free T3 with notion ‘preliminary result’
 * Test files:
-  * TODO
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333047
 
 2F: Interpretation of result: 5 cases: 
 *	normal,
@@ -129,12 +129,14 @@ Work in progress; following may not be complete:
 **This case may not apply to all systems: not every producer will have this capability, and receivers are not expected to blindly handle this case.  This case does apply to Macsys.**
 
 2I.1: Results in units other than lab units, by request of receiver
-* Test files: TODO
+* Test files: 
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333053
 * Acceptance criterion:
   * Receiver receives in units requested, even if those are different from the ones used by the issueing laboratory
     
 2I.2; Results in multiple units, by request of receiver
-* Test files: TODO
+* Test files: 
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333054
 * Acceptance criterion:
   * Receiver receives in units requested, even if those are different from the ones used by the issueing laboratory
 
@@ -151,7 +153,7 @@ Work in progress; following may not be complete:
 *	Only High (e.g. <= xx,x)
 *	Only Low (e.g. >= yy,y)
 * Test files:
-  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333049
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333052
 * Acceptance criteria:
   * Reference ranges (functionally but not necessarily literally) shown as in pdf version of protocol
 
@@ -180,13 +182,14 @@ Work in progress; following may not be complete:
 
 4.1B: “Uitzicht Staal” LOINC  94330-8
 * Test files:
-  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333049  (nog in detail te herbekijken)
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333046 
 * Acceptance criterion:
   * Comment code shown as in pfd version of protocol
    
 
 4.1C: Comments (e.g. “Results tentative”) LOINC 86468-6	
-* Test files: (missing?)
+* Test files: 
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333046 
 * Acceptance criterion:
   * Comment code shown as in pfd version of protocol
 
@@ -221,11 +224,13 @@ Work in progress; following may not be complete:
 
 4.4A. Comment type “copy to” 
 * Test files
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333049
 * Acceptation criteria:
   * Comments are shown on protocol level and are identica to those in corresponding pdf version of the protocol  
 
 4.4B: Administrative comments (e.g. missing DOBs)
 * Test files:
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333055
 * Acceptation criteria:
   * Comments are shown on protocol level and are identica to those in corresponding pdf version of the protocol 
 
