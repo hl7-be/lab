@@ -103,6 +103,7 @@ in that case is <b>NOT</b> considered to be a structured Belgian laboratory repo
 <h4>Specimen overview</h4>
 <p>Every specimen is expressed as a seperate Specimen resource in FHIR.</p>
 <p>In the DiagnosticReport.specimen element, all the specimen are referenced.</p>
+<p>The  "patient status" during collection of the specimen: sitting, lying down, standing, sober, before/after vaccination, before 1st/2nd/3rd dialysis, is considered to be not clinically relevant, and stored in specimen.note. </p>
 <p>The actual Observations refer to these Specimen.</p>
 <a name="Grouping of observations using Observation resources"></a>
 <h4>Grouping of observations using Observation resources</h4>
