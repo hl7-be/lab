@@ -323,3 +323,12 @@ Case is as follows: AKL and CMA are 2 differen labs/RIZIV numbers). But they use
 12B:  iLab and MIPS
 
 Case is as follows: MIPS and iLabs are never used at the same time by the same lab.   Whether analyses may be plotted cumulatively depends on LOINC encoding, units etc.
+
+## 13. Stress Testing
+
+For this chapter we provide xamples of extreme protocols, either with extreme number of analyses, or extremely large annexes.  Functionally, the examples below do not add any additional functionality to be tested (i.e. all cases in these protocols are tested in earlier test steps; here we are merely testinng volumes and complexity).
+
+* Test files:
+  * Macsys FIDLAB example: TBD 
+* Acceptance criterium
+  *  Receiving system manages the process the FHIR messages (no memory or timing issues)
