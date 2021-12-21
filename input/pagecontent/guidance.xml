@@ -432,7 +432,7 @@ This is found in Bundle.identifier and is globally unique for this instance of t
 
 </li>
 <li>
-The composition identifier (mandatory). This is found in Composition.identifier and is globally unique and SHALL be the same through the different versions of the document.
+The composition identifier (mandatory). This is found in Composition.identifier and is globally unique and SHALL be the same through the different versions of the document. This identifier is identical to the DiagnosticReport.identifier. These identifiers can be used for updates of the report. An example is the case where the patient of two versions of a DiagnosticReport is different. For two consecutive versions, this means that the results should be deleted from the first patient and added to the second.
 </li>
 <li>The Composition relatesTo (operationally determined - SHALL be used when needed to express a document replaces a previously created document.). This is found in Composition.relatesTo and when used SHALL take the value
  <b>'replaces'</b>. The element Composition.relatesTo.target.targetIdentifier SHALL give the unique document identifier (as described supra) of the other
