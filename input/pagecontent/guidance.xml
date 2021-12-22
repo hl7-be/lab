@@ -67,6 +67,11 @@ for other referral prescriptions in Belgium, it is currently published within a 
  This means the specimen type itself but also the other functionalities of the Specimen resource 
  SHALL be leveraged <b>when needed</b> such as extra information about 
  where the specimen was taken (e.g. taken from left or right elbow).</p>
+ <p>If the Observation is an observation executed by an external laboratory, or the observation is accredited, this MAY be expressed by an unstructered remark in Observation.note. This is information for the human reader of the report only.</p>
+<a name="The type of the laboratory report"> </a>
+<h5>The type of the laboratory report</h5>
+<p>The type of the laboratory report is indicated on 2 levels: Diagnostic.report.coding and composition.type. Anatomical pathology results and laboratory results can be part of 1 lab report. On both levels, the LOINC code "Laboratory Report" 11502-2 will be used.</p>
+
 <a name="Referencing other FHIR resources"></a>
 <h4>Referencing other FHIR resources</h4>
 <p>As FHIR provides different resources, the DiagnosticReport will reference many other FHIR resources such as Patient, Practitioner, Specimen etc.</p>
@@ -98,6 +103,7 @@ in that case is <b>NOT</b> considered to be a structured Belgian laboratory repo
 <h4>Specimen overview</h4>
 <p>Every specimen is expressed as a seperate Specimen resource in FHIR.</p>
 <p>In the DiagnosticReport.specimen element, all the specimen are referenced.</p>
+<p>The  "patient status" during collection of the specimen: sitting, lying down, standing, sober, before/after vaccination, before 1st/2nd/3rd dialysis, is considered to be not clinically relevant, and stored in specimen.note. </p>
 <p>The actual Observations refer to these Specimen.</p>
 <a name="Grouping of observations using Observation resources"></a>
 <h4>Grouping of observations using Observation resources</h4>
@@ -384,6 +390,9 @@ Thus avoiding the need to include a full Patient resource or a reference to a fu
 <p>If the identifier is the only information to send, it is allowed to use a FHIR logical reference to refer to the laboratory. 
 Thus avoiding the need to include a full Organization resource or a reference to a full Organization resource on a server. A logical reference will lead to a structure similar to the one described in the subject example supra.</p>
 <p>Some minimal information concerning the laboratory (Organization resource), besides the identifier SHOULD be given: a .name, at least one .telecom and a .address.</p>
+<a name="Accreditation of the laboratory"></a>
+<h4>Accreditation of the laboratory</h4>
+<p>Any accreditions of the laboratory can be added as an .identifier. For the most common case of BELAC-accreditation, a namesystem is provided. If the BELAC accreditation is mentioned, it SHALL use this namesystem.</p>
 <a name="Minimal information concerning the laboratory responsible"></a>
 <h4>Minimal information concerning the laboratory responsible</h4>
 <p>An .identifier (NIHDI if possible) SHALL be given.</p>
@@ -424,7 +433,7 @@ This is found in Bundle.identifier and is globally unique for this instance of t
 
 </li>
 <li>
-The composition identifier (mandatory). This is found in Composition.identifier and is globally unique and SHALL be the same through the different versions of the document.
+The composition identifier (mandatory). This is found in Composition.identifier and is globally unique and SHALL be the same through the different versions of the document. This identifier is identical to the DiagnosticReport.identifier. These identifiers can be used for updates of the report. An example is the case where the patient of two versions of a DiagnosticReport is different. For two consecutive versions, this means that the results should be deleted from the first patient and added to the second.
 </li>
 <li>The Composition relatesTo (operationally determined - SHALL be used when needed to express a document replaces a previously created document.). This is found in Composition.relatesTo and when used SHALL take the value
  <b>'replaces'</b>. The element Composition.relatesTo.target.targetIdentifier SHALL give the unique document identifier (as described supra) of the other
