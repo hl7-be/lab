@@ -1,0 +1,124 @@
+<html><head><style>body {
+    font-family: sans-serif;
+    margin: 48px;
+}
+
+div.hapiHeaderText {
+    font-size: 1.5em;
+    color: #0484DF;
+    text-transform: capitalize;
+}
+
+
+
+/********************************************************
+* The following section is used for tables of values
+* with multiple columns (e.g. the table of Observations
+* in a Diagnostic Report for a lab test)
+********************************************************/
+table.hapiTableOfValues {
+    width: 100%;
+    max-width: 880px;
+    margin-top: 24px;
+    border-spacing: 0;
+    border-collapse: collapse;
+    border: 1px solid #DBDFE3;
+}
+
+table.hapiTableOfValues thead tr td {
+    background: #EEF2F6;
+    color: #5D7184;
+    font-size: .8em;
+    padding: 1em;
+    text-transform: uppercase;
+    border: 1px solid #DBDFE3;
+}
+
+table.hapiTableOfValues tbody tr td {
+    padding: .5em 1em;
+}
+
+table.hapiTableOfValues tbody tr.title td {
+    color: #0484DF;
+}
+
+table.hapiTableOfValues tbody tr.title.level_0 td {
+    background: #deeeff;
+}
+table.hapiTableOfValues tbody tr:nth-child(even) td {
+    background: #f7f9fb;
+}
+
+/********************************************************
+* The following section is used for property tables. These
+* tables have two columns, one for the property name, and
+* one for the property value
+********************************************************/
+table.hapiPropertyTable {
+    width: 100%;
+    max-width: 880px;
+    margin-top: 24px;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+table.hapiPropertyTable thead tr td {
+    background: #EEF2F6;
+    color: #5D7184;
+    font-size: .8em;
+    padding: 1em;
+    text-transform: uppercase;
+    border: 1px solid #DBDFE3;
+}
+
+table.hapiPropertyTable tbody tr td:first-child {
+    text-align: right;
+    text-transform: uppercase;
+    color: #5D7184;
+    border: 1px solid #DBDFE3;
+    font-size: .8em;
+    vertical-align: baseline;
+}
+
+table.hapiPropertyTable tbody tr td {
+    vertical-align: top;
+    padding: .5em 1em;
+    margin: 1px;
+    border: 1px solid #DBDFE3;
+    vertical-align: baseline;
+}
+
+tr.level_2 td.label {
+    padding-left: 2em;
+}
+
+tr.level_3 td.label {
+    padding-left: 2em;
+}
+
+tr.level_4 td.label {
+    padding-left: 3em;
+}
+
+tr.level_5 td.label {
+    padding-left: 3em;
+}
+
+tr.level_6 td.label {
+    padding-left: 4em;
+}
+
+tr.level_7 td.label {
+    padding-left: 4em;
+}
+
+tr.level_8 td.label {
+    padding-left: 5em;
+}
+
+tr.level_9 td.label {
+    padding-left: 6em;
+}
+</style></head><body>
+<div xmlns="http://www.w3.org/1999/xhtml"><div class="hapiHeaderText"> Laboratory report </div><table class="hapiPropertyTable"><thead><tr><td colspan="2">Result information</td></tr></thead><tbody><tr><td>Status</td><td>FINAL</td></tr><tr><td>Issued</td><td> 20 December 2021 14:04:13 </td></tr></tbody><thead><tr><td colspan="2">Patient details</td></tr></thead><tbody><tr><td>Identifier</td><td>40010199714</td></tr><tr><td>Patient name</td><td>Firstname Old Lastname</td></tr><tr><td>Date of birth</td><td><span>01 January 1940</span></td></tr><tr><td>Address</td><td><span>Oud-Strijderslaan 199 </span><br/><span>Herentals </span><span>BE </span></td></tr></tbody>    <!-- Service Request Details --><thead><tr><td colspan="2">Service request details</td></tr></thead><tbody><tr><td>Identifier</td><td>815333042</td></tr>    <!-- Subject --><tr><td>Subject</td><td> Firstname Old Lastname (40010199714) </td></tr>    <!-- Status --><tr><td>Status</td><td>COMPLETED</td></tr>    <!-- Intent --><tr><td>Intent</td><td>ORDER</td></tr>    <!-- Category --><tr><td>Category</td><td> Laboratory procedure (http://snomed.info/sct) (108252007)</td></tr>    <!-- Priority --><tr><td>Priority</td><td>ROUTINE</td></tr>    <!-- Authored on --><tr><td>Authored on</td><td>04 November 2021 01:06:00</td></tr>    <!-- Requester --><tr><td>Requester</td><td> Dr. Fhir Cma - Herentals (nihdi) (10000007999) </td></tr>    <!-- Notes --></tbody>    <!-- Specimen details --><thead><tr><td colspan="2">Specimen details</td></tr></thead><tbody>    <!-- Identifier --><tr><td>Identifier</td><td>003815333042</td></tr>    <!-- Status --><tr><td>Status</td><td>AVAILABLE</td></tr>    <!-- Type --><tr><td>Type</td><td> Citraatvolbloed (http://terminology.hl7.org/CodeSystem/v2-0487) (BLDV)</td></tr>    <!-- Subject --><tr><td>Patient</td><td> Firstname Old Lastname (40010199714) </td></tr>    <!-- Received time --><tr><td>Received</td><td>04 November 2021 01:06:42</td></tr>    <!-- Requests -->    <!-- Specimen collection -->    <!-- Collection collector --><tr><td>Collector</td><td> Dr. Fhir Cma - Herentals (nihdi) (10000007999) </td></tr>    <!-- Collection collected date --><tr><td>Collected date</td><td>04 November 2021 12:00:00</td></tr>    <!-- Collection collected period -->    <!-- Collection duration -->    <!-- Collection quantity -->    <!-- Collection method -->    <!-- Collection body site -->    <!-- Collection fasted status (CodeableConcept) -->    <!-- Fasted status (Duration) -->    <!-- Processings -->    <!-- Containers -->    <!-- Condition -->    <!-- Notes --></tbody></table><table class="hapiTableOfValues"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td></tr></thead><tbody><tr class="level_0 title"><td class="label"> STOLLING </td><td></td><td></td><td></td><td>FINAL</td></tr><tr class="level_1 hapiTableOfValuesRowOdd"><td class="label"> INR </td><td>1.0 {} </td><td></td><td> &lt;&nbsp;1.2 {} </td><td>FINAL</td></tr><tr class="level_1 hapiTableOfValuesRowEven"><td class="label"> PT (Quick) </td><td>100 % </td><td></td><td> &gt;&nbsp;65 % </td><td>FINAL</td></tr></tbody></table></div></body></html>
+
