@@ -332,3 +332,7 @@ For this chapter we provide xamples of extreme protocols, either with extreme nu
   * Macsys FIDLAB example: TBD 
 * Acceptance criterium
   *  Receiving system manages the process the FHIR messages (no memory or timing issues)
+
+## 14. Transmission via eHealthbox
+
+TBD
