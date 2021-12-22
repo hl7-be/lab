@@ -287,6 +287,7 @@ Work in progress; following may not be complete:
   * Embedded pdf is equal to protocol pdf linked to the FHIR file.
 
 8B: Multiple Annexes in (potentially) multiple formats
+
 **This case is not covered by Macsys examples; in the case of "multiple annexes", Macsys includes those as different pages in one embedded pdf document, i.e. one "embedded annex" in the FHIR message.  Senders other than Macsys may provide examples for this case.
 
 
@@ -296,7 +297,7 @@ TBD
 
 ## 10.	Anapath
 
-10A: Protocol with Pathology + Clinicla Biology
+10A: Protocol with Pathology + Clinical Biology
 * Test files:
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333059
 * Acceptance criteria
@@ -335,4 +336,9 @@ For this chapter we provide xamples of extreme protocols, either with extreme nu
 
 ## 14. Transmission via eHealthbox
 
-TBD
+* Test files:
+  * Any FHIR message can be used
+* Acceptance criteria:
+  * Message successfully leaves sender system
+  * Message successfully arrives @ receiver system
+  * Message received equals message sent
