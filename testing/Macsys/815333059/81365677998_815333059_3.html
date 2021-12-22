@@ -78,6 +78,7 @@ table.hapiPropertyTable tbody tr td:first-child {
     border: 1px solid #DBDFE3;
     font-size: .8em;
     vertical-align: baseline;
+    width: 20%;
 }
 
 table.hapiPropertyTable tbody tr td {
@@ -119,6 +120,44 @@ tr.level_8 td.label {
 tr.level_9 td.label {
     padding-left: 6em;
 }
+
+
+td.toggable {
+    cursor: pointer;
+}
+
+td.toggable div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+td.toggable div span {
+    background-color: rgba(107, 128, 148, 0.6);
+    color: #EEF2F6;
+    border-radius: 10px;
+    padding: 2px 6px;
+    font-size: .8em;
+    min-width: 100px;
+    text-align: center;
+}
+
+td.toggable.displayed div span.clicktoshow {
+    display: none;
+}
+
+td.toggable div span.clicktohide {
+    display: none;
+}
+
+td.toggable.displayed div span.clicktohide {
+    display: inline !important;
+}
+
+tbody.hidden {
+    display: none;
+}
 </style></head><body>
-<div xmlns="http://www.w3.org/1999/xhtml"><div class="hapiHeaderText"> Laboratory report </div><table class="hapiPropertyTable"><thead><tr><td colspan="2">Result information</td></tr></thead><tbody><tr><td>Status</td><td>FINAL</td></tr><tr><td>Issued</td><td> 20 December 2021 16:54:06 </td></tr></tbody><thead><tr><td colspan="2">Patient details</td></tr></thead><tbody><tr><td>Identifier</td><td>90010199893</td></tr><tr><td>Patient name</td><td>Firstname Female Lastname</td></tr><tr><td>Date of birth</td><td><span>01 January 1990</span></td></tr><tr><td>Address</td><td><span>Oud-Strijderslaan 199 </span><br/><span>Herentals </span><span>BE </span></td></tr></tbody>    <!-- Service Request Details --><thead><tr><td colspan="2">Service request details</td></tr></thead><tbody><tr><td>Identifier</td><td>815333059</td></tr>    <!-- Subject --><tr><td>Subject</td><td> Firstname Female Lastname (90010199893) </td></tr>    <!-- Status --><tr><td>Status</td><td>COMPLETED</td></tr>    <!-- Intent --><tr><td>Intent</td><td>ORDER</td></tr>    <!-- Category --><tr><td>Category</td><td> Laboratory procedure (http://snomed.info/sct) (108252007)</td></tr>    <!-- Priority --><tr><td>Priority</td><td>ROUTINE</td></tr>    <!-- Authored on --><tr><td>Authored on</td><td>17 December 2021 02:28:00</td></tr>    <!-- Requester --><tr><td>Requester</td><td> Dr. Fhir Cma - Herentals (nihdi) (10000007999) </td></tr>    <!-- Notes --></tbody>    <!-- Specimen details --><thead><tr><td colspan="2">Specimen details</td></tr></thead><tbody>    <!-- Identifier --><tr><td>Identifier</td><td>001815333059</td></tr>    <!-- Status --><tr><td>Status</td><td>AVAILABLE</td></tr>    <!-- Type --><tr><td>Type</td><td> ThinPrep (http://terminology.hl7.org/CodeSystem/v2-0487) (GENV)</td></tr>    <!-- Subject --><tr><td>Patient</td><td> Firstname Female Lastname (90010199893) </td></tr>    <!-- Received time --><tr><td>Received</td><td>17 December 2021 02:28:34</td></tr>    <!-- Requests -->    <!-- Specimen collection -->    <!-- Collection collector --><tr><td>Collector</td><td> Dr. Fhir Cma - Herentals (nihdi) (10000007999) </td></tr>    <!-- Collection collected date --><tr><td>Collected date</td><td>17 December 2021 12:00:00</td></tr>    <!-- Collection collected period -->    <!-- Collection duration -->    <!-- Collection quantity -->    <!-- Collection method -->    <!-- Collection body site -->    <!-- Collection fasted status (CodeableConcept) -->    <!-- Fasted status (Duration) -->    <!-- Processings -->    <!-- Containers -->    <!-- Condition -->    <!-- Notes --></tbody></table><table class="hapiTableOfValues"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td></tr></thead><tbody><tr class="level_0 title"><td class="label"> CERVICOVAGINAAL </td><td></td><td></td><td></td><td>FINAL</td></tr><tr class="level_1 hapiTableOfValuesRowOdd"><td class="label"> Cytologie </td><td>TYPE STAAL Monolayer gescreend mbv. ThinPrep Imaging SystemKWALITEIT Goed beoordeelbaarRESULTAAT Plaveiselepitheel Oppervlakkige : 2+ Intermediaire : 2+ Atypie : 1+ Glandulair epitheel Endocervix : 1+ Metaplasie : 1+ Granulocyten : 1+BESLUIT Vervolgonderzoek 1 LSIL: Laaggradig squameus intraepitheliaal letsel (64CY.LSIL)ADVIES Colposcopie met biopsie Indien mogelijk ontvingen we graag het verslag van het histologisch onderzoek voor verdere follow-up.Elektronisch gevalideerd. Onder supervisie vanDr. Johan Vandepitte (Tel.: 011/225288)</td><td></td><td></td><td>FINAL</td></tr><tr class="level_1 hapiTableOfValuesRowEven"><td class="label"> HPV PCR-DNA op cyt. ind. </td><td>Positief</td><td></td><td></td><td>FINAL</td></tr><tr class="hapiTableOfValuesRowEven"><td colspan="5">HPV high risk 16: negatiefHPV high risk 18: negatiefHPV high risk 31,33,35,39,45,51,52,56,58,59,66 en/of 68: positief</td></tr></tbody></table></div></body></html>
+<div xmlns="http://www.w3.org/1999/xhtml"><div class="hapiHeaderText"> Laboratory report </div><table class="hapiPropertyTable"><thead><tr><td colspan="2">Result information</td></tr></thead><tbody><tr><td>Status</td><td>FINAL</td></tr><tr><td>Issued</td><td> 20 December 2021 16:54:06 </td></tr></tbody><thead><tr><td colspan="2">Patient details</td></tr></thead><tbody><tr><td>Identifier</td><td>90010199893</td></tr><tr><td>Patient name</td><td>Firstname Female Lastname</td></tr><tr><td>Date of birth</td><td><span>01 January 1990</span></td></tr><tr><td>Address</td><td><span>Oud-Strijderslaan 199 </span><br/><span>Herentals </span><span>BE </span></td></tr></tbody>    <!-- Service Request Details --><thead><tr><td colspan="2" onclick="this.classList.toggle('displayed'); this.parentNode.parentNode.nextSibling.classList.toggle('hidden')" class="toggable"><div><div>Service request details</div><div><span class="clicktoshow">click to show</span><span class="clicktohide">click to hide</span></div></div></td></tr></thead><tbody class="hidden"><tr><td>Identifier</td><td>815333059</td></tr>    <!-- Subject --><tr><td>Subject</td><td> Firstname Female Lastname (90010199893) </td></tr>    <!-- Status --><tr><td>Status</td><td>COMPLETED</td></tr>    <!-- Intent --><tr><td>Intent</td><td>ORDER</td></tr>    <!-- Category --><tr><td>Category</td><td> Laboratory procedure (http://snomed.info/sct) (108252007)</td></tr>    <!-- Priority --><tr><td>Priority</td><td>ROUTINE</td></tr>    <!-- Authored on --><tr><td>Authored on</td><td>17 December 2021 02:28:00</td></tr>    <!-- Requester --><tr><td>Requester</td><td> Dr. Fhir Cma - Herentals (nihdi) (10000007999) </td></tr>    <!-- Notes --></tbody>    <!-- Specimen details --><thead><tr><td colspan="2" onclick="this.classList.toggle('displayed'); this.parentNode.parentNode.nextSibling.classList.toggle('hidden')" class="toggable"><div><div>Specimen details</div><div><span class="clicktoshow">click to show</span><span class="clicktohide">click to hide</span></div></div></td></tr></thead><tbody class="hidden">    <!-- Identifier --><tr><td>Identifier</td><td>001815333059</td></tr>    <!-- Status --><tr><td>Status</td><td>AVAILABLE</td></tr>    <!-- Type --><tr><td>Type</td><td> ThinPrep (http://terminology.hl7.org/CodeSystem/v2-0487) (GENV)</td></tr>    <!-- Subject --><tr><td>Patient</td><td> Firstname Female Lastname (90010199893) </td></tr>    <!-- Received time --><tr><td>Received</td><td>17 December 2021 02:28:34</td></tr>    <!-- Requests -->    <!-- Specimen collection -->    <!-- Collection collector --><tr><td>Collector</td><td> Dr. Fhir Cma - Herentals (nihdi) (10000007999) </td></tr>    <!-- Collection collected date --><tr><td>Collected date</td><td>17 December 2021 12:00:00</td></tr>    <!-- Collection collected period -->    <!-- Collection duration -->    <!-- Collection quantity -->    <!-- Collection method -->    <!-- Collection body site -->    <!-- Collection fasted status (CodeableConcept) -->    <!-- Fasted status (Duration) -->    <!-- Processings -->    <!-- Containers -->    <!-- Condition -->    <!-- Notes --></tbody></table><table class="hapiTableOfValues"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td></tr></thead><tbody><tr class="level_0 title"><td class="label"> CERVICOVAGINAAL </td><td></td><td></td><td></td><td>FINAL</td></tr><tr class="level_1 hapiTableOfValuesRowOdd"><td class="label"> Cytologie </td><td>TYPE STAAL Monolayer gescreend mbv. ThinPrep Imaging SystemKWALITEIT Goed beoordeelbaarRESULTAAT Plaveiselepitheel Oppervlakkige : 2+ Intermediaire : 2+ Atypie : 1+ Glandulair epitheel Endocervix : 1+ Metaplasie : 1+ Granulocyten : 1+BESLUIT Vervolgonderzoek 1 LSIL: Laaggradig squameus intraepitheliaal letsel (64CY.LSIL)ADVIES Colposcopie met biopsie Indien mogelijk ontvingen we graag het verslag van het histologisch onderzoek voor verdere follow-up.Elektronisch gevalideerd. Onder supervisie vanDr. Johan Vandepitte (Tel.: 011/225288)</td><td></td><td></td><td>FINAL</td></tr><tr class="level_1 hapiTableOfValuesRowEven"><td class="label"> HPV PCR-DNA op cyt. ind. </td><td>Positief</td><td></td><td></td><td>FINAL</td></tr><tr class="hapiTableOfValuesRowEven"><td colspan="5">HPV high risk 16: negatiefHPV high risk 18: negatiefHPV high risk 31,33,35,39,45,51,52,56,58,59,66 en/of 68: positief</td></tr></tbody></table></div></body></html>
 
