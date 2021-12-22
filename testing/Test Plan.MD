@@ -37,7 +37,7 @@ Work in progress; following may not be complete:
 
 1D: Patient with multiple surnames
 * Test files:
-  * TDB
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333052
 * Acceptance criterion:
   * All surnames in first surname field, concatenated and separated by spaces
 
@@ -45,6 +45,7 @@ Work in progress; following may not be complete:
 
 1E.1 Belgian Resident
 * Test file:
+  *  https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333052
 * Acceptance criteria:
   * Patient identified by means of RRN
   * (not for visualiser) patient result data matched with other/previous results for same RRN
@@ -53,10 +54,11 @@ Work in progress; following may not be complete:
 * Test file:
 * Acceptance criteria:
   * Patient identified by means of BIS
-  * (not for visualiser) patient result data matched with other/previous results for same RRN
+  * (not for visualiser) patient result data matched with other/previous results for same BIS
 
 1E.3 Patient without Belgian identifiers
 * Test file:
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333055
 * Acceptance criteria:
   * Patient identified by means of lab identifier
   * (not for visualiser) patient result data matched with other/previous results from same lab/same patient
@@ -237,8 +239,16 @@ Work in progress; following may not be complete:
 ## 5.	Specimen Management
 
 5A: Specimen identifiers with LOINC encoding of specimen type
+* Test files:
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/blob/master/testing/Macsys/815333044/
+* Acceptance critia:
+  * Every speciment linked to (correct) LOINC speciment type
 
 5B: Analysis linked to specimen
+* Test files:
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/blob/master/testing/Macsys/815333044/
+* Acceptance critia:
+  * Every analysis linked to (correct) specimen
 
 5C: No specimen
 * Test files:
@@ -288,7 +298,7 @@ Work in progress; following may not be complete:
 
 8B: Multiple Annexes in (potentially) multiple formats
 
-**This case is not covered by Macsys examples; in the case of "multiple annexes", Macsys includes those as different pages in one embedded pdf document, i.e. one "embedded annex" in the FHIR message.  Senders other than Macsys may provide examples for this case.
+**This case is not covered by Macsys examples; in the case of "multiple annexes", Macsys includes those as different pages in one embedded pdf document, i.e. one "embedded annex" in the FHIR message.  Senders other than Macsys may provide examples for this case.**
 
 
 ## 9.	Microbiology
@@ -335,6 +345,8 @@ For this chapter we provide xamples of extreme protocols, either with extreme nu
   *  Receiving system manages the process the FHIR messages (no memory or timing issues)
 
 ## 14. Transmission via eHealthbox
+
+**This whole section is not relevant for/not tested by visualisation tool**
 
 * Test files:
   * Any FHIR message can be used
