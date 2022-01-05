@@ -1,0 +1,950 @@
+{
+  "resourceType": "Bundle",
+  "identifier": {
+    "system": "https://www.ehealth.fgov.be/hl7/bundle",
+    "value": "d38c7dab-d201-45ce-8fe8-7563c9a08f9f"
+  },
+  "type": "collection",
+  "entry": [ {
+    "fullUrl": "Practitioner/5898464",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "5898464",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-practitioner" ]
+      },
+      "identifier": [ {
+        "system": "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/nihdi",
+        "value": "1-19981-08-004"
+      } ],
+      "name": [ {
+        "family": "Janssens",
+        "given": [ "Annemie" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "address": [ {
+        "line": [ "Truweelstraat 14" ],
+        "city": "SINT-NIKLAAS",
+        "postalCode": "9100",
+        "country": "B"
+      } ],
+      "gender": "unknown"
+    }
+  }, {
+    "fullUrl": "Patient/20205",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "20205",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-patient" ]
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\">Test <b>XBHELPDESK </b></div><table class=\"hapiPropertyTable\"><tbody><tr><td>Identifier</td><td>11111105124</td></tr><tr><td>Address</td><td><span>C. Heymanslaan 10 </span><br/><span>null </span><br/><span>GENT </span><span>B </span></td></tr><tr><td>Date of birth</td><td><span>11 November 1911</span></td></tr></tbody></table></div>"
+      },
+      "identifier": [ {
+        "system": "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/ssin",
+        "value": "11111105124"
+      } ],
+      "name": [ {
+        "family": "Xbhelpdesk",
+        "given": [ "Test" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "09/332 20 01"
+      }, {
+        "system": "phone",
+        "value": "0475/11.11.11"
+      }, {
+        "system": "email",
+        "value": "bart.hostens@uzgent.be"
+      } ],
+      "gender": "female",
+      "birthDate": "1911-11-11",
+      "address": [ {
+        "line": [ "C. Heymanslaan 10" ],
+        "city": "GENT",
+        "postalCode": "9000",
+        "country": "B"
+      } ],
+      "generalPractitioner": [ {
+        "reference": "Practitioner/5898464"
+      } ]
+    }
+  }, {
+    "fullUrl": "Practitioner/145134",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "145134",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-practitioner" ]
+      },
+      "identifier": [ {
+        "system": "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/nihdi",
+        "value": "1-45630-64-730"
+      } ],
+      "name": [ {
+        "family": "De Pauw",
+        "given": [ "Michel" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "(09)2829663"
+      }, {
+        "system": "fax"
+      }, {
+        "system": "email",
+        "value": "michel.depauw@uzgent.be"
+      } ],
+      "address": [ {
+        "line": [ "Poli cardiologie" ],
+        "city": "GENT",
+        "postalCode": "9000",
+        "country": "B"
+      } ],
+      "gender": "unknown"
+    }
+  }, {
+    "fullUrl": "ServiceRequest/211215-0001",
+    "resource": {
+      "resourceType": "ServiceRequest",
+      "id": "211215-0001",
+      "identifier": [ {
+        "system": "https://mips.be",
+        "value": "211215-0001"
+      }, {
+        "value": "000028202047"
+      } ],
+      "status": "active",
+      "intent": "order",
+      "priority": "asap",
+      "subject": {
+        "reference": "Patient/20205"
+      },
+      "authoredOn": "2021-11-25T15:05:00+01:00",
+      "requester": {
+        "reference": "Practitioner/145134"
+      }
+    }
+  }, {
+    "fullUrl": "Observation/urn:uuid:9768f7d9-4b09-4e16-8af7-4fce48d09b79",
+    "resource": {
+      "resourceType": "Observation",
+      "status": "unknown",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/20205"
+      },
+      "hasMember": [ {
+        "reference": "Observation/388170889"
+      } ]
+    }
+  }, {
+    "fullUrl": "ServiceRequest/274645423",
+    "resource": {
+      "resourceType": "ServiceRequest",
+      "id": "274645423",
+      "identifier": [ {
+        "system": "https://mips.be",
+        "value": "274645423"
+      } ],
+      "status": "active",
+      "intent": "order",
+      "priority": "asap",
+      "subject": {
+        "reference": "Patient/20205"
+      }
+    }
+  }, {
+    "fullUrl": "Observation/388170889",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "388170889",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "basedOn": [ {
+        "reference": "ServiceRequest/274645423"
+      } ],
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be",
+          "code": "TXT1",
+          "display": "Opmerkingen / Inlichtingen"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/20205"
+      },
+      "issued": "2021-11-25T15:06:36.000+01:00",
+      "valueString": "postharttransplant",
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "NORMAL",
+          "display": "N"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/urn:uuid:4f0bd99f-055a-443b-bc3e-b976968378da",
+    "resource": {
+      "resourceType": "Observation",
+      "status": "unknown",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org"
+        } ],
+        "text": "SCHEIKUNDE"
+      },
+      "subject": {
+        "reference": "Patient/20205"
+      },
+      "hasMember": [ {
+        "reference": "Observation/urn:uuid:786d2f1a-7d94-4d41-a5a9-c03d1b014a4e"
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/urn:uuid:786d2f1a-7d94-4d41-a5a9-c03d1b014a4e",
+    "resource": {
+      "resourceType": "Observation",
+      "status": "unknown",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org"
+        } ],
+        "text": "?"
+      },
+      "subject": {
+        "reference": "Patient/20205"
+      },
+      "hasMember": [ {
+        "reference": "Observation/urn:uuid:9a392f9f-843f-4b41-94de-b2ac52101c06"
+      }, {
+        "reference": "Observation/urn:uuid:70133403-7f90-4a2c-a624-b5bab1324ea7"
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/urn:uuid:9a392f9f-843f-4b41-94de-b2ac52101c06",
+    "resource": {
+      "resourceType": "Observation",
+      "status": "unknown",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org"
+        } ],
+        "text": "Ionen"
+      },
+      "subject": {
+        "reference": "Patient/20205"
+      },
+      "hasMember": [ {
+        "reference": "Observation/389059571"
+      }, {
+        "reference": "Observation/389059572"
+      }, {
+        "reference": "Observation/389059573"
+      } ]
+    }
+  }, {
+    "fullUrl": "ServiceRequest/275721237",
+    "resource": {
+      "resourceType": "ServiceRequest",
+      "id": "275721237",
+      "identifier": [ {
+        "system": "https://mips.be",
+        "value": "275721237"
+      } ],
+      "status": "active",
+      "intent": "order",
+      "priority": "routine",
+      "subject": {
+        "reference": "Patient/20205"
+      }
+    }
+  }, {
+    "fullUrl": "Specimen/211215000102",
+    "resource": {
+      "resourceType": "Specimen",
+      "id": "211215000102",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-specimen-laboratory" ]
+      },
+      "identifier": [ {
+        "system": "https://mips.be",
+        "value": "211215000102"
+      } ],
+      "status": "available",
+      "type": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "119364003"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/20205"
+      },
+      "receivedTime": "2021-12-22T08:27:34+01:00",
+      "collection": {
+        "collectedDateTime": "2021-12-15T08:30:00+01:00"
+      }
+    }
+  }, {
+    "fullUrl": "Observation/389059571",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "389059571",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "basedOn": [ {
+        "reference": "ServiceRequest/275721237"
+      } ],
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "2951-2",
+          "display": "Natrium (serum/plasma) [mmol/L]"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/20205"
+      },
+      "issued": "2021-12-22T08:27:33.000+01:00",
+      "valueQuantity": {
+        "value": 140,
+        "system": "http://unitsofmeasure.org",
+        "code": "mmol/L"
+      },
+      "specimen": {
+        "reference": "Specimen/211215000102"
+      },
+      "referenceRange": [ {
+        "low": {
+          "value": 136,
+          "system": "http://unitsofmeasure.org",
+          "code": "mmol/L"
+        },
+        "high": {
+          "value": 145,
+          "system": "http://unitsofmeasure.org",
+          "code": "mmol/L"
+        }
+      } ]
+    }
+  }, {
+    "fullUrl": "ServiceRequest/275721239",
+    "resource": {
+      "resourceType": "ServiceRequest",
+      "id": "275721239",
+      "identifier": [ {
+        "system": "https://mips.be",
+        "value": "275721239"
+      } ],
+      "status": "active",
+      "intent": "order",
+      "priority": "routine",
+      "subject": {
+        "reference": "Patient/20205"
+      }
+    }
+  }, {
+    "fullUrl": "Observation/389059572",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "389059572",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "basedOn": [ {
+        "reference": "ServiceRequest/275721239"
+      } ],
+      "status": "registered",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "6298-4",
+          "display": "Kalium (bloed) [mmol/L]"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/20205"
+      },
+      "issued": "2021-12-22T08:27:40.000+01:00",
+      "specimen": {
+        "reference": "Specimen/211215000102"
+      },
+      "referenceRange": [ {
+        "low": {
+          "value": 3.6,
+          "system": "http://unitsofmeasure.org",
+          "code": "mmol/L"
+        },
+        "high": {
+          "value": 4.8,
+          "system": "http://unitsofmeasure.org",
+          "code": "mmol/L"
+        }
+      } ]
+    }
+  }, {
+    "fullUrl": "ServiceRequest/275721241",
+    "resource": {
+      "resourceType": "ServiceRequest",
+      "id": "275721241",
+      "identifier": [ {
+        "system": "https://mips.be",
+        "value": "275721241"
+      } ],
+      "status": "active",
+      "intent": "order",
+      "priority": "routine",
+      "subject": {
+        "reference": "Patient/20205"
+      }
+    }
+  }, {
+    "fullUrl": "Observation/389059573",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "389059573",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "basedOn": [ {
+        "reference": "ServiceRequest/275721241"
+      } ],
+      "status": "registered",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "2075-0",
+          "display": "Chloride (serum/plasma) [mmol/L]"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/20205"
+      },
+      "specimen": {
+        "reference": "Specimen/211215000102"
+      },
+      "referenceRange": [ {
+        "low": {
+          "value": 98,
+          "system": "http://unitsofmeasure.org",
+          "code": "mmol/L"
+        },
+        "high": {
+          "value": 107,
+          "system": "http://unitsofmeasure.org",
+          "code": "mmol/L"
+        }
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/urn:uuid:70133403-7f90-4a2c-a624-b5bab1324ea7",
+    "resource": {
+      "resourceType": "Observation",
+      "status": "unknown",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org"
+        } ],
+        "text": "Biochemie"
+      },
+      "subject": {
+        "reference": "Patient/20205"
+      },
+      "hasMember": [ {
+        "reference": "Observation/388936577"
+      } ]
+    }
+  }, {
+    "fullUrl": "ServiceRequest/274645417",
+    "resource": {
+      "resourceType": "ServiceRequest",
+      "id": "274645417",
+      "identifier": [ {
+        "system": "https://mips.be",
+        "value": "274645417"
+      } ],
+      "status": "active",
+      "intent": "order",
+      "priority": "asap",
+      "subject": {
+        "reference": "Patient/20205"
+      }
+    }
+  }, {
+    "fullUrl": "Specimen/211215000101",
+    "resource": {
+      "resourceType": "Specimen",
+      "id": "211215000101",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-specimen-laboratory" ]
+      },
+      "identifier": [ {
+        "system": "https://mips.be",
+        "value": "211215000101"
+      } ],
+      "status": "available",
+      "type": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "445295009"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/20205"
+      },
+      "receivedTime": "2021-12-22T08:26:33+01:00",
+      "collection": {
+        "collectedDateTime": "2021-12-15T08:30:00+01:00"
+      }
+    }
+  }, {
+    "fullUrl": "Observation/388936577",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "388936577",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "basedOn": [ {
+        "reference": "ServiceRequest/274645417"
+      } ],
+      "status": "registered",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be",
+          "code": "255",
+          "display": "HbA1c (NGSP)"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/20205"
+      },
+      "issued": "2021-12-22T08:26:33.000+01:00",
+      "specimen": {
+        "reference": "Specimen/211215000101"
+      },
+      "referenceRange": [ {
+        "low": {
+          "value": 4.0,
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        },
+        "high": {
+          "value": 5.5,
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/urn:uuid:51289ba8-ff09-4206-bb0d-a86ac4ce4570",
+    "resource": {
+      "resourceType": "Observation",
+      "status": "unknown",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org"
+        } ],
+        "text": "HORMONOLOGIE"
+      },
+      "subject": {
+        "reference": "Patient/20205"
+      },
+      "hasMember": [ {
+        "reference": "Observation/urn:uuid:0acb2e16-18b8-4fda-8275-50b8a023dbb1"
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/urn:uuid:0acb2e16-18b8-4fda-8275-50b8a023dbb1",
+    "resource": {
+      "resourceType": "Observation",
+      "status": "unknown",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org"
+        } ],
+        "text": "Schildklierparameters en calcitonine"
+      },
+      "subject": {
+        "reference": "Patient/20205"
+      },
+      "hasMember": [ {
+        "reference": "Observation/389059574"
+      }, {
+        "reference": "Observation/389059576"
+      }, {
+        "reference": "Observation/389059577"
+      }, {
+        "reference": "Observation/389059575"
+      } ]
+    }
+  }, {
+    "fullUrl": "ServiceRequest/275721243",
+    "resource": {
+      "resourceType": "ServiceRequest",
+      "id": "275721243",
+      "identifier": [ {
+        "system": "https://mips.be",
+        "value": "275721243"
+      } ],
+      "status": "active",
+      "intent": "order",
+      "priority": "routine",
+      "subject": {
+        "reference": "Patient/20205"
+      }
+    }
+  }, {
+    "fullUrl": "Observation/389059574",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "389059574",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "basedOn": [ {
+        "reference": "ServiceRequest/275721243"
+      } ],
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "3016-3",
+          "display": "Thyroïd stimulerend hormoon (serum/plasma)"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/20205"
+      },
+      "issued": "2021-12-22T15:38:40.000+01:00",
+      "valueQuantity": {
+        "value": 0.020,
+        "comparator": "<",
+        "system": "http://unitsofmeasure.org",
+        "code": "mU/L"
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "BELOW_LOW",
+          "display": "L"
+        } ]
+      } ],
+      "note": [ {
+        "text": "Controleer in combinatie met FT3 en FT4 voor doorbellimieten"
+      } ],
+      "specimen": {
+        "reference": "Specimen/211215000102"
+      }
+    }
+  }, {
+    "fullUrl": "ServiceRequest/275721247",
+    "resource": {
+      "resourceType": "ServiceRequest",
+      "id": "275721247",
+      "identifier": [ {
+        "system": "https://mips.be",
+        "value": "275721247"
+      } ],
+      "status": "active",
+      "intent": "order",
+      "priority": "routine",
+      "subject": {
+        "reference": "Patient/20205"
+      }
+    }
+  }, {
+    "fullUrl": "Observation/389059576",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "389059576",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "basedOn": [ {
+        "reference": "ServiceRequest/275721247"
+      } ],
+      "status": "registered",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "3051-0",
+          "display": "Triiodothyronine vrij (serum/plasma) - in massa/volume"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/20205"
+      },
+      "specimen": {
+        "reference": "Specimen/211215000102"
+      },
+      "referenceRange": [ {
+        "low": {
+          "value": 2.5,
+          "system": "http://unitsofmeasure.org",
+          "code": "pg/mL"
+        },
+        "high": {
+          "value": 4.4,
+          "system": "http://unitsofmeasure.org",
+          "code": "pg/mL"
+        }
+      } ]
+    }
+  }, {
+    "fullUrl": "ServiceRequest/275721249",
+    "resource": {
+      "resourceType": "ServiceRequest",
+      "id": "275721249",
+      "identifier": [ {
+        "system": "https://mips.be",
+        "value": "275721249"
+      } ],
+      "status": "active",
+      "intent": "order",
+      "priority": "routine",
+      "subject": {
+        "reference": "Patient/20205"
+      }
+    }
+  }, {
+    "fullUrl": "Specimen/211215000104",
+    "resource": {
+      "resourceType": "Specimen",
+      "id": "211215000104",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-specimen-laboratory" ]
+      },
+      "identifier": [ {
+        "system": "https://mips.be",
+        "value": "211215000104"
+      } ],
+      "status": "available",
+      "type": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "119364003"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/20205"
+      },
+      "receivedTime": "2021-12-22T15:38:18+01:00",
+      "collection": {
+        "collectedDateTime": "2021-12-15T08:30:00+01:00"
+      }
+    }
+  }, {
+    "fullUrl": "Observation/389059577",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "389059577",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "basedOn": [ {
+        "reference": "ServiceRequest/275721249"
+      } ],
+      "status": "registered",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "3024-7",
+          "display": "Thyroxine vrij (serum/plasma) - in massa/volume"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/20205"
+      },
+      "specimen": {
+        "reference": "Specimen/211215000104"
+      },
+      "referenceRange": [ {
+        "low": {
+          "value": 0.9,
+          "system": "http://unitsofmeasure.org",
+          "code": "ng/dL"
+        },
+        "high": {
+          "value": 1.7,
+          "system": "http://unitsofmeasure.org",
+          "code": "ng/dL"
+        }
+      } ]
+    }
+  }, {
+    "fullUrl": "ServiceRequest/275721245",
+    "resource": {
+      "resourceType": "ServiceRequest",
+      "id": "275721245",
+      "identifier": [ {
+        "system": "https://mips.be",
+        "value": "275721245"
+      } ],
+      "status": "active",
+      "intent": "order",
+      "priority": "routine",
+      "subject": {
+        "reference": "Patient/20205"
+      }
+    }
+  }, {
+    "fullUrl": "Observation/389059575",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "389059575",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "basedOn": [ {
+        "reference": "ServiceRequest/275721245"
+      } ],
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "1992-7",
+          "display": "Calcitonine  (serum/plasma)"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/20205"
+      },
+      "issued": "2021-12-22T15:38:17.000+01:00",
+      "valueQuantity": {
+        "value": 15.12,
+        "system": "http://unitsofmeasure.org",
+        "code": "pg/mL"
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "ABOVE_HIGH",
+          "display": "H"
+        } ]
+      } ],
+      "specimen": {
+        "reference": "Specimen/211215000104"
+      },
+      "referenceRange": [ {
+        "high": {
+          "value": 9.82,
+          "system": "http://unitsofmeasure.org",
+          "code": "pg/mL"
+        }
+      } ]
+    }
+  }, {
+    "fullUrl": "DiagnosticReport/35317854",
+    "resource": {
+      "resourceType": "DiagnosticReport",
+      "id": "35317854",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report" ]
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\"/><table class=\"hapiPropertyTable\"><tbody><tr><td>Status</td><td>REGISTERED</td></tr><tr><td>Issued</td><td> 22 December 2021 15:39:43</td></tr></tbody></table><table class=\"hapiTableOfValues\"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td></tr></thead><tbody><tr class=\"hapiTableOfValuesRowOdd\"><td> ? </td><td/><td/><td/><td>UNKNOWN</td></tr><tr class=\"hapiTableOfValuesRowEven\"><td> Opmerkingen / Inlichtingen </td><td>postharttransplant</td><td> N </td><td/><td>FINAL</td></tr><tr class=\"hapiTableOfValuesRowOdd\"><td> SCHEIKUNDE </td><td/><td/><td/><td>UNKNOWN</td></tr><tr class=\"hapiTableOfValuesRowEven\"><td> ? </td><td/><td/><td/><td>UNKNOWN</td></tr><tr class=\"hapiTableOfValuesRowOdd\"><td> Ionen </td><td/><td/><td/><td>UNKNOWN</td></tr><tr class=\"hapiTableOfValuesRowEven\"><td> Natrium (serum/plasma) [mmol/L] </td><td>140 </td><td/><td> 136 - 145 </td><td>FINAL</td></tr><tr class=\"hapiTableOfValuesRowOdd\"><td> Kalium (bloed) [mmol/L] </td><td/><td/><td> 3.6 - 4.8 </td><td>REGISTERED</td></tr><tr class=\"hapiTableOfValuesRowEven\"><td> Chloride (serum/plasma) [mmol/L] </td><td/><td/><td> 98 - 107 </td><td>REGISTERED</td></tr><tr class=\"hapiTableOfValuesRowOdd\"><td> Biochemie </td><td/><td/><td/><td>UNKNOWN</td></tr><tr class=\"hapiTableOfValuesRowEven\"><td> HbA1c (NGSP) </td><td/><td/><td> 4.0 - 5.5 </td><td>REGISTERED</td></tr><tr class=\"hapiTableOfValuesRowOdd\"><td> HORMONOLOGIE </td><td/><td/><td/><td>UNKNOWN</td></tr><tr class=\"hapiTableOfValuesRowEven\"><td> Schildklierparameters en calcitonine </td><td/><td/><td/><td>UNKNOWN</td></tr><tr class=\"hapiTableOfValuesRowOdd\"><td> Thyroïd stimulerend hormoon (serum/plasma) </td><td>LESS_THAN0.020 </td><td> L </td><td/><td>FINAL</td></tr><tr class=\"hapiTableOfValuesRowOdd\"><td colspan=\"5\">Controleer in combinatie met FT3 en FT4 voor doorbellimieten</td></tr><tr class=\"hapiTableOfValuesRowEven\"><td> Triiodothyronine vrij (serum/plasma) - in massa/volume </td><td/><td/><td> 2.5 - 4.4 </td><td>REGISTERED</td></tr><tr class=\"hapiTableOfValuesRowOdd\"><td> Thyroxine vrij (serum/plasma) - in massa/volume </td><td/><td/><td> 0.9 - 1.7 </td><td>REGISTERED</td></tr><tr class=\"hapiTableOfValuesRowEven\"><td> Calcitonine (serum/plasma) </td><td>15.12 </td><td> H </td><td> - 9.82 </td><td>FINAL</td></tr></tbody></table></div>"
+      },
+      "identifier": [ {
+        "system": "https://mips.be",
+        "value": "35317854"
+      } ],
+      "basedOn": [ {
+        "reference": "ServiceRequest/211215-0001"
+      } ],
+      "status": "registered",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+          "code": "LAB",
+          "display": "Laboratory"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/20205"
+      },
+      "effectiveDateTime": "2021-12-22T15:39:43+01:00",
+      "issued": "2021-12-22T15:39:43.000+01:00",
+      "specimen": [ {
+        "reference": "Specimen/211215000102"
+      }, {
+        "reference": "Specimen/211215000102"
+      }, {
+        "reference": "Specimen/211215000102"
+      }, {
+        "reference": "Specimen/211215000101"
+      }, {
+        "reference": "Specimen/211215000102"
+      }, {
+        "reference": "Specimen/211215000102"
+      }, {
+        "reference": "Specimen/211215000104"
+      }, {
+        "reference": "Specimen/211215000104"
+      } ],
+      "result": [ {
+        "reference": "Observation/urn:uuid:9768f7d9-4b09-4e16-8af7-4fce48d09b79"
+      }, {
+        "reference": "Observation/388170889"
+      }, {
+        "reference": "Observation/urn:uuid:4f0bd99f-055a-443b-bc3e-b976968378da"
+      }, {
+        "reference": "Observation/urn:uuid:786d2f1a-7d94-4d41-a5a9-c03d1b014a4e"
+      }, {
+        "reference": "Observation/urn:uuid:9a392f9f-843f-4b41-94de-b2ac52101c06"
+      }, {
+        "reference": "Observation/389059571"
+      }, {
+        "reference": "Observation/389059572"
+      }, {
+        "reference": "Observation/389059573"
+      }, {
+        "reference": "Observation/urn:uuid:70133403-7f90-4a2c-a624-b5bab1324ea7"
+      }, {
+        "reference": "Observation/388936577"
+      }, {
+        "reference": "Observation/urn:uuid:51289ba8-ff09-4206-bb0d-a86ac4ce4570"
+      }, {
+        "reference": "Observation/urn:uuid:0acb2e16-18b8-4fda-8275-50b8a023dbb1"
+      }, {
+        "reference": "Observation/389059574"
+      }, {
+        "reference": "Observation/389059576"
+      }, {
+        "reference": "Observation/389059577"
+      }, {
+        "reference": "Observation/389059575"
+      } ]
+    }
+  } ]
+}
