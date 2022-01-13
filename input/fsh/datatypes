@@ -1,0 +1,45 @@
+// Data types
+
+// Coded Annotation - introduces a codeable element as a category in the Annotation 
+
+CodeSystem: CodedAnnotationTypesCS
+Id: coded-annotation-types-cs
+Title: "Coded Annotation Type Codes"
+Description: "Code System for specific types of coded annotations"
+* ^status = #active
+* ^jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
+* ^caseSensitive = true
+* ^content = #complete
+* #test-disclaimer "Test Disclaimer" "Test disclaimer with the report"
+* #test-methodology "Test Methodology" "Additional details regarding the test methdology"
+* #result-confirmation "Result Confirmation" "Additional details regarding the confirmation of the results"
+
+
+ValueSet: CodedAnnotationTypesVS
+Id: coded-annotation-types-vs
+Title: "Coded Annotation Types"
+Description: "Value Set for specific types of coded annotations"
+* ^status = #active
+* include codes from system coded-annotation-types-cs
+
+
+Extension: AnnotationCode
+Id: annotation-code
+Title: "Annotation Code"
+Description: "Codifies the content of an Annotation"
+* ^context.type = #element
+* ^context.expression = "Annotation"
+* . ^short = "Annotation Code"
+* . ^definition = "Codifies the content of an Annotation"
+* value[x] only CodeableConcept
+* value[x] from coded-annotation-types-vs (example)
+
+
+Profile: CodedAnnotation
+Parent: Annotation
+Id: coded-annotation
+Title: "Coded Annotation"
+Description: "Annotation DataType with added CodeableConcept extension element"
+* extension contains annotation-code named code 0..1
+
+
