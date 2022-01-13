@@ -33,6 +33,7 @@ Description: "Belgian profile for an observation in a laboratory report"
 * dataAbsentReason MS
 * interpretation MS
 * note MS
+* note only BeCodedAnnotation
 * bodySite MS
 * method MS
 * specimen only Reference(BeSpecimenLaboratory)
