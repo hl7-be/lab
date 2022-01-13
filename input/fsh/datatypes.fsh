@@ -20,11 +20,11 @@ Id: be-vs-coded-annotation-types
 Title: "Coded Annotation Types"
 Description: "Value Set for specific types of coded annotations"
 * ^status = #active
-* include codes from system coded-annotation-types-cs
+* include codes from system be-cs-coded-annotation-types
 
 
 Extension: BeExtAnnotationCode
-Id: be-annotation-code
+Id: annotation-code
 Title: "Annotation Code"
 Description: "Codifies the content of an Annotation"
 * ^context.type = #element
@@ -32,7 +32,7 @@ Description: "Codifies the content of an Annotation"
 * . ^short = "Annotation Code"
 * . ^definition = "Codifies the content of an Annotation"
 * value[x] only CodeableConcept
-* value[x] from coded-annotation-types-vs (example)
+* value[x] from be-vs-coded-annotation-types (example)
 
 
 Profile: BeCodedAnnotation
