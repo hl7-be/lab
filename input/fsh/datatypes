@@ -2,8 +2,8 @@
 
 // Coded Annotation - introduces a codeable element as a category in the Annotation 
 
-CodeSystem: CodedAnnotationTypesCS
-Id: coded-annotation-types-cs
+CodeSystem: BeCSCodedAnnotationTypes
+Id: be-cs-coded-annotation-types
 Title: "Coded Annotation Type Codes"
 Description: "Code System for specific types of coded annotations"
 * ^status = #active
@@ -15,16 +15,16 @@ Description: "Code System for specific types of coded annotations"
 * #result-confirmation "Result Confirmation" "Additional details regarding the confirmation of the results"
 
 
-ValueSet: CodedAnnotationTypesVS
-Id: coded-annotation-types-vs
+ValueSet: BeVSCodedAnnotationTypes
+Id: be-vs-coded-annotation-types
 Title: "Coded Annotation Types"
 Description: "Value Set for specific types of coded annotations"
 * ^status = #active
 * include codes from system coded-annotation-types-cs
 
 
-Extension: AnnotationCode
-Id: annotation-code
+Extension: BeExtAnnotationCode
+Id: be-annotation-code
 Title: "Annotation Code"
 Description: "Codifies the content of an Annotation"
 * ^context.type = #element
@@ -35,7 +35,7 @@ Description: "Codifies the content of an Annotation"
 * value[x] from coded-annotation-types-vs (example)
 
 
-Profile: CodedAnnotation
+Profile: BeCodedAnnotation
 Parent: Annotation
 Id: coded-annotation
 Title: "Coded Annotation"
