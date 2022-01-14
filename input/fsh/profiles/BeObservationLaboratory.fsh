@@ -1,3 +1,11 @@
+Extension: BeReferenceRangeComment
+Id: be-ext-referencerange-comment
+Title: "Comment extension for ReferenceRange"
+Description: "Extension that adds a comment to Observation.ReferenceRange"
+* ^context[+].type = #element
+* ^context[=].expression = "Observation.referenceRange"
+* value[x] only BeCodedAnnotation
+
 Profile: BeObservationLaboratory
 Parent: BeObservation
 Id: be-observation-laboratory
@@ -40,6 +48,7 @@ Description: "Belgian profile for an observation in a laboratory report"
 * specimen MS
 * device ^mustSupport = false
 * referenceRange MS
+* referenceRange.extension contains BeReferenceRangeComment named Comment 0..*
 * hasMember only Reference(QuestionnaireResponse or MolecularSequence or BeObservationLaboratory)
 * hasMember MS
 * hasMember ^short = "In the initial iteration of the Belgium lab project: when sending to eHealthBox, this is BeObservationLaboratory"
