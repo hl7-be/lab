@@ -24,7 +24,7 @@ Work in progress; following may not be complete:
 * Test files: 
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333050
 * Acceptance criterion:
-  *  SWA: to complete  
+  *  Results clearly indicate which type of sample they refer to (Urine vs blood vs CSF)  
 
 1C: BundleId and DiagnosticReportId conform to Belgian HL7 standards
 * Test files:
@@ -51,10 +51,7 @@ Work in progress; following may not be complete:
   * (not for visualiser) patient result data matched with other/previous results for same RRN
 
 1E.2 Patient with Belgian BIS number
-* Test file:
-* Acceptance criteria:
-  * Patient identified by means of BIS
-  * (not for visualiser) patient result data matched with other/previous results for same BIS
+* Not tested separately any more and RRN and BIS use same namespace!
 
 1E.3 Patient without Belgian identifiers
 * Test file:
@@ -282,7 +279,7 @@ Work in progress; following may not be complete:
 * Acceptance criteria:
   * Results encoded as per relevant pdf protocol, all in LOINC 
      
-7B: Time series, including encoding nog available in LOINC, coded per lab standard
+7B: Time series, including encoding not available in LOINC, coded per lab standard
 * Test files:
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333057
 * Acceptance criteria:
@@ -303,7 +300,27 @@ Work in progress; following may not be complete:
 
 ## 9.	Microbiology
 
-TBD
+9A: Microbiology protocol
+* Test files:
+** https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933561
+** https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933562
+** https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933563
+** https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933564
+** https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933565
+** https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933566
+** https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933567
+** https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933568
+** https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933569
+** https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933570
+** https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933571
+** https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933572
+** https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933573
+** https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933574
+
+* Acceptance criteria:
+** All analyses render correctly;, including any comments
+** All antibiogram(s) render correctly and refer to correct analysis (one needs at least one test case specficially for this e:g: Macsys https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933574 )
+
 
 ## 10.	Anapath
 
