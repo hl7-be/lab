@@ -41,5 +41,5 @@ Id: coded-annotation
 Title: "Coded Annotation"
 Description: "Annotation DataType with added CodeableConcept extension element"
 * extension contains annotation-code named code 0..1
-* text only string
+* text ^short = "The annotation - plain text without markdown is strongly recommended"
 
