@@ -3,6 +3,7 @@ Parent: DiagnosticReport
 Id: be-laboratory-report
 Title: "BeLaboratoryReport"
 Description: "Belgian profile for a laboratory report"
+* ^text.status = #empty
 * ^url = "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report"
 * ^version = "0.0.7"
 * ^status = #draft
