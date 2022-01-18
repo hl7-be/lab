@@ -11,6 +11,7 @@ Description: "Belgian profile for a specimen in a laboratory report. In some lab
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://hl7belgium.org"
 * ^jurisdiction = $m49.htm#001
+* text.status = #empty
 * identifier MS
 * identifier ^definition = "Business identifier for specimen is RECOMMENDED to include when available."
 * status MS
