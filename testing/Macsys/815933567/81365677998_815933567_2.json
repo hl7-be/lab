@@ -1,0 +1,639 @@
+{
+    "resourceType": "Bundle",
+    "type": "document",
+    "timestamp": "2022-01-14T15:41:49Z",
+    "identifier": {
+        "system": "https://www.ehealth.fgov.be/lab-report/bundle-id",
+        "value": "81365677998.815933567.2"
+    }
+,             "entry":[{
+    "fullUrl": "Composition/815933567",
+    "resource": {
+        "resourceType": "Composition",
+        "id": "815933567",
+        "meta": {
+            "profile": [
+                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report-composition"
+            ]
+        },
+        "text": {
+            "status": "empty"
+        },
+        "identifier": {
+            "system": "http://www.macsys.be/hl7/Composition",
+            "value": "815933567"
+        },
+        "status": "final",
+        "type": {
+            "coding": [
+                {
+                    "system": "http://loinc.org",
+                    "code": "11502-2"
+                }
+            ],
+            "text": "Laboratory report"
+        },
+        "subject": {
+            "reference": "Patient/7165356"
+        },
+        "date": "2022-01-14T15:41:49+01:00",
+        "author": [
+            {
+                "reference": "Practitioner/Responsible"
+            }
+        ],
+        "title": "Laboratory Report",
+        "section": [
+            {
+                "entry": [
+                    {
+                        "reference": "DiagnosticReport/815933567"
+                    }
+                ]
+            }
+        ]
+    }
+}
+,{
+    "fullUrl": "Specimen/003815933567",
+    "resource": {
+        "resourceType": "Specimen",
+        "id": "003815933567",
+        "meta": {
+            "profile": [
+                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-specimen-laboratory"
+            ]
+        },
+        "text": {
+            "status": "empty"
+        },
+        "identifier": [
+            {
+                "system": "http://www.macsys.be/hl7/Specimen",
+                "value": "003815933567"
+            }
+        ],
+        "status": "available",
+        "type": {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/v2-0487",
+                    "code": "PUS",
+                    "display": "Pus"
+                }
+            ],
+            "text": "Etter"
+        },
+        "subject": {
+            "reference": "Patient/7165356"
+        },
+        "receivedTime": "2022-01-07T15:29:31+01:00",
+        "collection": {
+            "collectedDateTime": "2022-01-07T00:00:00+01:00",
+            "collector": {
+                "reference": "Practitioner/69"
+            }
+        }
+    }
+}
+,{
+    "fullUrl": "Observation/Observation.1.0.0.0",
+    "resource": {
+        "resourceType": "Observation",
+        "id": "Observation.1.0.0.0",
+        "meta": {
+            "profile": [
+                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"
+            ]
+        },
+        "text": {
+            "status": "empty"
+        },
+        "status": "final",
+        "code": {
+            "text": "ETTER"
+        },
+        "subject": {
+            "reference": "Patient/7165356"
+        },
+        "effectiveDateTime": "2022-01-07T00:00:00+01:00",
+        "performer": [
+            {
+                "reference": "Practitioner/Responsible"
+            }
+        ],
+        "hasMember": [
+            {
+                "reference": "Observation/Observation.1.0.0.1"
+            },
+            {
+                "reference": "Observation/Observation.1.0.0.2"
+            },
+            {
+                "reference": "Observation/Observation.1.0.0.3"
+            },
+            {
+                "reference": "Observation/Observation.1.0.0.4"
+            }
+        ]
+    }
+}
+,{
+    "fullUrl": "Observation/Observation.1.0.0.1",
+    "resource": {
+        "resourceType": "Observation",
+        "id": "Observation.1.0.0.1",
+        "meta": {
+            "profile": [
+                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"
+            ]
+        },
+        "text": {
+            "status": "empty"
+        },
+        "status": "final",
+        "code": {
+            "coding": [
+                {
+                    "system": "http://loinc.org",
+                    "code": "39112-8"
+                }
+            ],
+            "text": "Herkomst"
+        },
+        "subject": {
+            "reference": "Patient/7165356"
+        },
+        "effectiveDateTime": "2022-01-07T00:00:00+01:00",
+        "issued": "2022-01-07T15:29:41+01:00",
+        "performer": [
+            {
+                "reference": "Practitioner/Responsible"
+            }
+        ],
+        "valueString": "Diepe etter",
+        "specimen": {
+            "reference": "Specimen/003815933567"
+        }
+    }
+}
+,{
+    "fullUrl": "Observation/Observation.1.0.0.2",
+    "resource": {
+        "resourceType": "Observation",
+        "id": "Observation.1.0.0.2",
+        "meta": {
+            "profile": [
+                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"
+            ]
+        },
+        "text": {
+            "status": "empty"
+        },
+        "status": "final",
+        "code": {
+            "coding": [
+                {
+                    "system": "http://loinc.org",
+                    "code": "632-0"
+                }
+            ],
+            "text": "Cultuur"
+        },
+        "subject": {
+            "reference": "Patient/7165356"
+        },
+        "effectiveDateTime": "2022-01-07T00:00:00+01:00",
+        "issued": "2022-01-07T17:17:56+01:00",
+        "performer": [
+            {
+                "reference": "Practitioner/Responsible"
+            }
+        ],
+        "valueString": "Na aanrijking :  \r\nNegatief (geen groei)",
+        "specimen": {
+            "reference": "Specimen/003815933567"
+        }
+    }
+}
+,{
+    "fullUrl": "Observation/Observation.1.0.0.3",
+    "resource": {
+        "resourceType": "Observation",
+        "id": "Observation.1.0.0.3",
+        "meta": {
+            "profile": [
+                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"
+            ]
+        },
+        "text": {
+            "status": "empty"
+        },
+        "status": "final",
+        "code": {
+            "coding": [
+                {
+                    "system": "http://loinc.org",
+                    "code": "633-8"
+                }
+            ],
+            "text": "Anaerobe cultuur"
+        },
+        "subject": {
+            "reference": "Patient/7165356"
+        },
+        "effectiveDateTime": "2022-01-07T00:00:00+01:00",
+        "issued": "2022-01-07T17:18:12+01:00",
+        "performer": [
+            {
+                "reference": "Practitioner/Responsible"
+            }
+        ],
+        "valueString": "1. Peptostreptococcus anaerobius\r\nBij isolatie van anaeroben wordt routinematig geen antibiogram uitgevoerd. Indien klinisch relevant: empirisch te behandelen met metronidazole, amoxicilline/clavulaanzuur of clindamycine.",
+        "specimen": {
+            "reference": "Specimen/003815933567"
+        }
+    }
+}
+,{
+    "fullUrl": "Observation/Observation.1.0.0.4",
+    "resource": {
+        "resourceType": "Observation",
+        "id": "Observation.1.0.0.4",
+        "meta": {
+            "profile": [
+                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"
+            ]
+        },
+        "text": {
+            "status": "empty"
+        },
+        "status": "final",
+        "code": {
+            "coding": [
+                {
+                    "system": "http://loinc.org",
+                    "code": "29576-6"
+                }
+            ],
+            "text": "Antibiogram"
+        },
+        "subject": {
+            "reference": "Patient/7165356"
+        },
+        "effectiveDateTime": "2022-01-07T00:00:00+01:00",
+        "issued": "2022-01-07T17:17:38+01:00",
+        "performer": [
+            {
+                "reference": "Practitioner/Responsible"
+            }
+        ],
+        "valueString": "Niet uitgevoerd",
+        "specimen": {
+            "reference": "Specimen/003815933567"
+        }
+    }
+}
+,{
+    "fullUrl": "DiagnosticReport/815933567",
+    "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "815933567",
+        "meta": {
+            "versionId": "2",
+            "profile": [
+                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report"
+            ]
+        },
+        "language": "nl",
+        "text": {
+            "status": "empty"
+        },
+        "identifier": [
+            {
+                "system": "https://www.ehealth.fgov.be/lab-report/diagnostic-report-id",
+                "value": "81365677998.815933567"
+            }
+        ],
+        "basedOn": [
+            {
+                "reference": "ServiceRequest/815933567"
+            }
+        ],
+        "status": "final",
+        "category": [
+            {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                        "code": "LAB",
+                        "display": "Laboratory"
+                    }
+                ]
+            }
+        ],
+        "code": {
+            "coding": [
+                {
+                    "system": "http://loinc.org",
+                    "code": "11502-2",
+                    "display": "Laboratory report"
+                }
+            ]
+        },
+        "subject": {
+            "reference": "Patient/7165356"
+        },
+        "effectiveDateTime": "2022-01-07T00:00:00+01:00",
+        "issued": "2022-01-14T15:41:49+01:00",
+        "performer": [
+            {
+                "reference": "Organization/81365677998"
+            }
+        ],
+        "resultsInterpreter": [
+            {
+                "reference": "Practitioner/Responsible"
+            }
+        ],
+        "specimen": [
+            {
+                "reference": "Specimen/003815933567"
+            }
+        ],
+        "result": [
+            {
+                "reference": "Observation/Observation.1.0.0.0"
+            }
+        ]
+    }
+}
+,{
+    "fullUrl": "Organization/81365677998",
+    "resource": {
+        "resourceType": "Organization",
+        "id": "81365677998",
+        "meta": {
+            "profile": [
+                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-organization"
+            ]
+        },
+        "text": {
+            "status": "empty"
+        },
+        "identifier": [
+            {
+                "use": "official",
+                "type": {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                            "code": "MD",
+                            "display": "Medical License number"
+                        }
+                    ]
+                },
+                "system": "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/nihdi",
+                "value": "81365677998"
+            },
+            {
+                "use": "official",
+                "system": "https://economie.fgov.be/belac",
+                "value": "007-MED"
+            }
+        ],
+        "active": true,
+        "type": [
+            {
+                "coding": [
+                    {
+                        "system": "https://www.ehealth.fgov.be/standards/fhir/CodeSystem/cd-hcparty",
+                        "code": "orglaboratory"
+                    }
+                ]
+            }
+        ],
+        "name": "CENTRUM VOOR MEDISCHE ANALYSE",
+        "telecom": [
+            {
+                "system": "phone",
+                "value": "014/28.50.00",
+                "use": "work"
+            },
+            {
+                "system": "fax",
+                "value": "014/22.56.08",
+                "use": "work"
+            },
+            {
+                "system": "email",
+                "value": "info@cma.be",
+                "use": "work"
+            },
+            {
+                "system": "url",
+                "value": "http://www.cma.be",
+                "use": "work"
+            }
+        ],
+        "address": [
+            {
+                "use": "work",
+                "type": "both",
+                "line": [
+                    "Oud-Strijderslaan 199"
+                ],
+                "city": "Herentals",
+                "postalCode": "2200",
+                "country": "BE"
+            }
+        ]
+    }
+}
+,{
+    "fullUrl": "Practitioner/69",
+    "resource": {
+        "resourceType": "Practitioner",
+        "id": "69",
+        "meta": {
+            "profile": [
+                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-practitioner"
+            ]
+        },
+        "text": {
+            "status": "empty"
+        },
+        "identifier": [
+            {
+                "use": "official",
+                "system": "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/nihdi",
+                "value": "10000007999"
+            }
+        ],
+        "name": [
+            {
+                "use": "official",
+                "family": "Cma - Herentals",
+                "given": [
+                    "Fhir"
+                ],
+                "prefix": [
+                    "Dr."
+                ]
+            }
+        ],
+        "telecom": [
+            {
+                "system": "email",
+                "value": "info@cma.be",
+                "use": "work"
+            },
+            {
+                "system": "fax",
+                "value": "(+32)14/225608",
+                "use": "work"
+            },
+            {
+                "system": "phone",
+                "value": "(+32)14/285000",
+                "use": "work"
+            }
+        ],
+        "address": [
+            {
+                "use": "work",
+                "type": "both",
+                "line": [
+                    "Oud-Strijderslaan 199"
+                ],
+                "city": "Herentals",
+                "postalCode": "2200",
+                "country": "BE"
+            }
+        ],
+        "gender": "unknown"
+    }
+}
+,{
+    "fullUrl": "Practitioner/Responsible",
+    "resource": {
+        "resourceType": "Practitioner",
+        "id": "Responsible",
+        "meta": {
+            "profile": [
+                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-practitioner"
+            ]
+        },
+        "text": {
+            "status": "empty"
+        },
+        "identifier": [
+            {
+                "use": "official",
+                "system": "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/nihdi",
+                "value": "68071432800"
+            }
+        ],
+        "name": [
+            {
+                "use": "official",
+                "family": "Engelen",
+                "given": [
+                    "Frans"
+                ]
+            }
+        ],
+        "telecom": [
+            {
+                "system": "phone",
+                "value": "014/28.50.00",
+                "use": "work"
+            }
+        ],
+        "address": [
+            {
+                "use": "work",
+                "type": "both",
+                "line": [
+                    "Oud-Strijderslaan 199"
+                ],
+                "city": "Herentals",
+                "postalCode": "2200",
+                "country": "BE"
+            }
+        ],
+        "gender": "unknown"
+    }
+}
+,{
+    "fullUrl": "Patient/7165356",
+    "resource": {
+        "resourceType": "Patient",
+        "id": "7165356",
+        "meta": {
+            "profile": [
+                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-patient"
+            ]
+        },
+        "text": {
+            "status": "empty"
+        },
+        "identifier": [
+            {
+                "use": "official",
+                "system": "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/ssin",
+                "value": "90010199893"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "use": "official",
+                "family": "Lastname",
+                "given": [
+                    "Firstname Female"
+                ]
+            }
+        ],
+        "gender": "female",
+        "birthDate": "1990-01-01"
+    }
+}
+,{
+    "fullUrl": "ServiceRequest/815933567",
+    "resource": {
+        "resourceType": "ServiceRequest",
+        "id": "815933567",
+        "text": {
+            "status": "empty"
+        },
+        "identifier": [
+            {
+                "system": "http://www.macsys.be/hl7/ServiceRequest",
+                "value": "815933567"
+            }
+        ],
+        "status": "completed",
+        "intent": "order",
+        "category": [
+            {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "108252007",
+                        "display": "Laboratory procedure"
+                    }
+                ]
+            }
+        ],
+        "subject": {
+            "reference": "Patient/7165356"
+        },
+        "priority": "routine",
+        "authoredOn": "2022-01-07T15:29:00+01:00",
+        "requester": {
+            "reference": "Practitioner/69"
+        }
+    }
+}
+]}
