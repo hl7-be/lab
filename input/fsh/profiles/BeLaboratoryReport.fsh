@@ -3,7 +3,6 @@ Parent: DiagnosticReport
 Id: be-laboratory-report
 Title: "BeLaboratoryReport"
 Description: "Belgian profile for a laboratory report"
-* text.status = #empty
 * ^url = "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report"
 * ^version = "0.0.7"
 * ^status = #draft
@@ -12,6 +11,7 @@ Description: "Belgian profile for a laboratory report"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://hl7belgium.org"
 * ^jurisdiction = $m49.htm#001
+* text.status = #empty
 * identifier 1.. MS
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
