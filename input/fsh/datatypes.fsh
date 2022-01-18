@@ -10,9 +10,9 @@ Description: "Code System for specific types of coded annotations"
 * ^jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
 * ^caseSensitive = true
 * ^content = #complete
-* #test-disclaimer "Test Disclaimer" "Test disclaimer with the report"
-* #test-methodology "Test Methodology" "Additional details regarding the test methdology"
-* #result-confirmation "Result Confirmation" "Additional details regarding the confirmation of the results"
+* #lab-test-accreditation "Laboratory Test Accreditation" "Test disclaimer with the report"
+* #lab-test-subcontractor "Laboratory Test subcontractor" "Laboratory Test subcontractor"
+* #lab-referencerange-comment "Comment on laboratory reference range" "Comment on reference range"
 
 
 ValueSet: BeVSCodedAnnotationTypes
