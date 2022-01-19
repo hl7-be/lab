@@ -82,13 +82,10 @@ for other referral prescriptions in Belgium, it is currently published within a 
 <p>In both the important Resources Observation and Specimen there is the possibility to use the .note element (also a free text format, following the Annotation FHIR datatype.)</p>
 <a name="Role of the narrative in FHIR"></a>
 <h4>Role of the narrative in FHIR</h4>
-<p>Implementers SHALL explicitely take note of the rules 
+<p>Implementers SHALL explicitly take note of the rules 
 around the narrative in FHIR <a href="https://www.hl7.org/fhir/narrative.html">as 
 explained on the pages of HL7.</a></p>
-<p>Specifically, the strong recommendation 
-of HL7 concerning the use of the 
-narrative "to support human-consumption as a fallback" 
-is important in the context of the laboratory report.</p>
+<p>More specifically, the status of the narrative SHALL be 'empty'. The narrative SHALL NOT be used to display clinical information in an official context.</p>
 <p>A <b>structured Belgian laboratory report</b> means all content SHALL BE available in the structured elements. As such, a 
 narrative with <a href="https://www.hl7.org/fhir/valueset-narrative-status.html">
 narrative-status 'additional'</a> SHALL NOT be used. 
@@ -98,7 +95,7 @@ that 'additional' status SHALL BE avoided.</p>
 used as a fallback. 
 In that case, it is preferred the element to present the report as PDF SHALL be used and the resulting report
 in that case is <b>NOT</b> considered to be a structured Belgian laboratory report.</p>
-<p> The narrative SHALL not be empty. It will represent the structured content, but there are no layout requirements. </p>
+
 <a name="Specimen overview"></a>
 <h4>Specimen overview</h4>
 <p>Every specimen is expressed as a seperate Specimen resource in FHIR.</p>

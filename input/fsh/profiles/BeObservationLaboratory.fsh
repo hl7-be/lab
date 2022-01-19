@@ -19,6 +19,7 @@ Description: "Belgian profile for an observation in a laboratory report"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://hl7belgium.org"
 * ^jurisdiction = $m49.htm#001
+* text.status = #empty
 * language MS
 * identifier MS
 * basedOn ^mustSupport = false
