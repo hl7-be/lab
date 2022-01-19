@@ -327,8 +327,8 @@ Work in progress; following may not be complete:
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933573
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933574
 * Acceptance criteria:
-** All analyses render correctly;, including any comments
-** All antibiogram(s) render correctly and refer to correct analysis (one needs at least one test case specficially for this e:g: Macsys https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933574 )
+  * All analyses render correctly, including any comments
+  * All antibiogram(s) render correctly and refer to correct analysis (one needs at least one test case specficially for this e:g: Macsys https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933574 )
 
 
 ## 10.	Anapath
