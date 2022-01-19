@@ -165,7 +165,8 @@ always receive the most up to date version and again, it is up to the consuming 
 <p>It is possible for one or more of the Observations to reference a different ServiceRequest by using the .basedOn element in the Observation. This can be used e.g. if needed to explicitely state an Observation was made via a sub order. It is noted the Observation also contains the element .performer to simply specify the Observation had a different performer from the main performer referenced from the DiagnosticReport resource.</p>  
 <a name="Adding a PDF representation"></a>
 <h3>Adding a PDF representation</h3>
-<p>If needed to also include the report as a PDF, that is possible using the element .presentedForm. Please refer to the <a href="http://hl7.org/fhir/R4/datatypes.html#Attachment">FHIR complex datatype 'Attachment'</a> for further instructions how to do include this.</p> <p>Naturally, the sender of the report that adds a PDF representation SHALL ensure it remains clinically logical and safe with the way the data is otherwise structurally expressed in the resource.</p>
+<p>If needed to also include the report as a PDF, that is possible using the element .presentedForm. Please refer to the <a href="http://hl7.org/fhir/R4/datatypes.html#Attachment">FHIR complex datatype 'Attachment'</a> for further instructions how to do include this.</p> <p>Naturally, the sender of the report that adds a PDF representation SHALL ensure it remains clinically logical and safe with the way the data is otherwise structurally expressed in the resource.
+Any other attachments, that clarify the laboraty report SHALL be added in .media . The content type of .media is not limited to PDF. </p>
 <a name="Guidance for codes and values in the Observation resource"></a>
 <h3>Guidance for codes and values in the Observation resource</h3>
 <a name="Use of Retam codes"></a>
