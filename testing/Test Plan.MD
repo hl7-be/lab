@@ -312,34 +312,20 @@ Work in progress; following may not be complete:
 
 9A: Microbiology protocol
 * Test files:
-** https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933561
-
-** https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933562
-
-** https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933563
-
-** https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933564
-
-** https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933565
-
-** https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933566
-
-** https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933567
-
-** https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933568
-
-** https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933569
-
-** https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933570
-
-** https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933571
-
-** https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933572
-
-** https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933573
-
-** https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933574
-
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933561
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933562
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933563
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933564
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933565
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933566
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933567
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933568
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933569
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933570
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933571
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933572
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933573
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933574
 * Acceptance criteria:
 ** All analyses render correctly;, including any comments
 ** All antibiogram(s) render correctly and refer to correct analysis (one needs at least one test case specficially for this e:g: Macsys https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933574 )
