@@ -1,6 +1,6 @@
 # Test Plan
 
-This document lists cases to be tested for Laboratory Results in FHIR Format.   Most cases apply to the Visualisation Tools, but not all of them.
+This document lists cases to be tested for Laboratory Results in FHIR Format.   
 
 Work in progress; following may not be complete:
 
@@ -287,15 +287,25 @@ Work in progress; following may not be complete:
 
 ## 8.	Annexes
 
-8A: Single Annex in PDF
+8A: Embedded protocol
 * Test files
-  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333058
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333058 - DOUBLECHECK of dit nog klopt - was eigenlijk voor andere case bedoeld.
 * Acceptance criterion:
-  * Embedded pdf is equal to protocol pdf linked to the FHIR file.
+  * Embedded protocol is found in PresentedForm is equal to the laboratory protocol pdf linked to the FHIR file in the test data
 
-8B: Multiple Annexes in (potentially) multiple formats
+8B: Embedded Annex in Media
+* Test files
+  * ???? TBD
+* Acceptance criterion:
+  * Embedded annex is found in Media, and is equal to the corresponding annex in the laboratory pdf linked to the FHIR file in the test data
 
-**This case is not covered by Macsys examples; in the case of "multiple annexes", Macsys includes those as different pages in one embedded pdf document, i.e. one "embedded annex" in the FHIR message.  Senders other than Macsys may provide examples for this case.**
+8C: Multiple Embedded Annexes in Media
+* Test files
+  * ???? TBD
+* Acceptance criterion:
+  * Every embedded annex is found in Media, and is equal to the corresponding annex in the laboratory pdf linked to the FHIR file in the test data
+
+
 
 
 ## 9.	Microbiology
