@@ -93,9 +93,10 @@ Work in progress; following may not be complete:
 
 2E: Free T3 with notion ‘preliminary result’
 * Test files:
-  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333047
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333047  -- WRONG FILE REFERENCE
 * Acceptance criterion:
-  * TBD - SWa?
+  * Protocol delivered in 2 stages; first version clearly lists "preliminary" and second version lists result
+  * Second version "overwrites" first version in receiver database (this criterion is NOT for the visualiser)
   
 2F: Interpretation of result: 5 cases: 
 *	normal,
@@ -116,12 +117,14 @@ Work in progress; following may not be complete:
 
 2G: Analysis performed by 3rd lab
 * Test files:
-  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333051
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333051 -- TO DOUBLECHECK
 * Acceptance criterion:
   * Analysis performed by 3rd party lab are flagged or labelled as such, and identical to such flagging in the pdf version of the protocol
 
-2H: Accreditation status of analysis and panel (grouping/title)
+2H: Accreditation status of analysis 
 * Test files:
+  *  TBD 
+*TOM TO COMPLETE
   * Any test protocol lists lab accreditation status
   * Test accreditation status: TODO
 
@@ -254,6 +257,8 @@ Work in progress; following may not be complete:
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333051 (nog te bekijken of dit klopt!) 
 
 5D: Partial specimens (some available, others not, in same protocol)
+* Test files- TBD
+* Criteria: TOM
 
 ## 6.	Edits on Protocol Level
 
@@ -347,7 +352,7 @@ Work in progress; following may not be complete:
 
 10B: Single pathology protocol
 * Test files:
-  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333060
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/501410142
 * Acceptance criteria:
   * Receiver captures pathology result as in relevant pfd version of the protocol 
 
@@ -361,6 +366,7 @@ TBD
 
 12A: CMA+AKL
 
+TODO TOm uitschrijven
 Case is as follows: AKL and CMA are 2 differen labs/RIZIV numbers). But they use the same analysis encoding, methodolgies, reference ranges etc.  Results from both labs can safely be plotted cumulatively.
 
 12B:  iLab and MIPS
@@ -372,7 +378,7 @@ Case is as follows: MIPS and iLabs are never used at the same time by the same l
 For this chapter we provide xamples of extreme protocols, either with extreme number of analyses, or extremely large annexes.  Functionally, the examples below do not add any additional functionality to be tested (i.e. all cases in these protocols are tested in earlier test steps; here we are merely testinng volumes and complexity).
 
 * Test files:
-  * Macsys FIDLAB example: TBD 
+  * Macsys FIDLAB example: TBD - without annex
 * Acceptance criterium
   *  Receiving system manages the process the FHIR messages (no memory or timing issues)
 
