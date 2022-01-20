@@ -94,7 +94,9 @@ Work in progress; following may not be complete:
 2E: Free T3 with notion ‘preliminary result’
 * Test files:
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333047
-
+* Acceptance criterion:
+  * TBD - SWa?
+  
 2F: Interpretation of result: 5 cases: 
 *	normal,
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333041
