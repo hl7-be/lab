@@ -6,13 +6,13 @@ Work in progress; following may not be complete:
 
 * References to (Macsys) test protocols and example FHIR files
 * Last chapters still need to be written out
-* Per test case, the exact acceptance criteria need to be added to the document
+* Per test case, the  acceptance criteria are listed.  Implied is "sender is compliant with requirement, sender does not abend (crash, stop executing) or log error messages on the case, receiver does not abend upon or log error messages upon reception of the FHIR file(s) for the test case
 * To detail per case, whether the case is relevant to the visualisation tool or not (some cases are only relevant to GP software or hospital systems).  Cases are flagged when not relevant to visualiser
 * There are no references yet to MIPS test protocols and example FHIR files
 
   
 
-## 1.	Structure & agreements
+## 1.	Structure & Conventions
 
 1A: Results on different levels in hierarchy; panels and “titles” on different sublevels.  Including very complex structures (fruit & food allergies).
 * Test files:
@@ -305,7 +305,11 @@ Work in progress; following may not be complete:
 * Acceptance criterion:
   * Every embedded annex is found in Media, and is equal to the corresponding annex in the laboratory pdf linked to the FHIR file in the test data
 
-
+8D: One or annexes are available but are not embedded in the FHIR message
+* Test files
+  * ???? TBD
+* Acceptance criterion:
+  * For every non-embedded annex, corresponding media section of the FHIR message lists the existence of the annex, and provides information as to how and where the non-embedded annex may be found or consulted.
 
 
 ## 9.	Microbiology
