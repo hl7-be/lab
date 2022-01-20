@@ -124,9 +124,8 @@ Work in progress; following may not be complete:
 2H: Accreditation status of analysis 
 * Test files:
   *  TBD 
-*TOM TO COMPLETE
-  * Any test protocol lists lab accreditation status
-  * Test accreditation status: TODO
+* Acceptance criterion:
+  * Any test lists its accreditation status, if relevant (i.e. if such status is being communicated in the FHIR message)
 
 2I: Units other than standard lab units
 
@@ -190,7 +189,6 @@ Work in progress; following may not be complete:
 * Acceptance criterion:
   * Comment code shown as in pfd version of protocol
    
-
 4.1C: Comments (e.g. “Results tentative”) LOINC 86468-6	
 * Test files: 
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333046 
@@ -203,7 +201,6 @@ Work in progress; following may not be complete:
 * Acceptance criterion:
   * All comment codes shown as in pfd version of protocol
 
-
 ### 4.2 Reference range comments
 
 4.2A: Reference range comments
@@ -213,8 +210,9 @@ Work in progress; following may not be complete:
   * Reference range comments shown along with the reference range, and identical to representation in the corresponding pfd version of the protocol 
 
 4.2B: Reference range as a table
-* Test file: NVT for Macsys (case does not occur in macsys systems)
+* Test file: NVT for Macsys (case does not occur in Macsys systems)
 * Acceptance criterion:
+  *  Receiver correctly renders the reference table along with the analysis
 
 ### 4.3 Comments on analysis level
 
@@ -250,15 +248,19 @@ Work in progress; following may not be complete:
 * Test files:
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/blob/master/testing/Macsys/815333044/
 * Acceptance critia:
-  * Every analysis linked to (correct) specimen
+  * Every analysis is linked to (correct) specimen
 
 5C: No specimen
 * Test files:
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333051 (nog te bekijken of dit klopt!) 
+* Acceptance criteria:
+  * Receiving system does not tie analyses to specimens, and does not list any speciment types. 
 
 5D: Partial specimens (some available, others not, in same protocol)
-* Test files- TBD
-* Criteria: TOM
+* Test files
+  * TBD
+* Acceptance criteria:
+  * Analyses tied to specimen types are shown as such; analysis tied to missing specimen do not link to specimen type information (leave empty or simply do not renden anything)
 
 ## 6.	Edits on Protocol Level
 
@@ -267,16 +269,42 @@ Work in progress; following may not be complete:
 6A: Protocol with partial results followed by same protocol with final results
 * Test files:
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333047
-
+* Acceptance criteria
+  * Upon reception of preliminary report, any missing or unconfirmed results are flagged as such.
+  * Upon reception of final report, all data is present, and previously data flagged as missing or unconfirmed is no longer available as such or is (e.g. in an audit trail facility) clearly flagged as no longer valid.
+  
 6B: Protocol with final results, followed by same protocol with amended result (correction of an individual analysis)
+* Test files:
+  * TBD
+* Acceptance criteria
+  * After reception of the first version of the protocol, receiver shows initial test results
+  * After reception of the second version (revision) of the protocol, receiver now shows amended results (the ones from the second FHIR, no longer the ones from the original FHIR). Original result data is no longer available or is (e.g. in an audit trail facility) clearly flagged as no longer valid.
 
-6C: Final protocol for Patient A, followed by correction of same protocol, but different patient (patient inversion)
+6C: Final protocol for Patient A, followed by correction of same protocol, but different patient B (patient inversion)
+* Test files:
+  * TBD
+* Acceptance criteria
+  * After reception of the first version of the protocol, receiver shows results for patient A
+  * After reception of the second version (revision) of the protocol, receiver now shows teh data for patient B.   Previously avaialable data for patient A is either no longer available in the receiving system, or is (e.g. in an audit trail facility) clearly flagged as no longer valid.
 
-6D: Testing of version numbering: retransfer of same protocol, with different version number
+6D: Testing of version numbering: retransfer of same protocol, with different version number but otherwise identical data
+* Test files:
+  * TBD
+* Acceptance criteria
+  * Data available for the protocol is identical before and after retransfer (even though the version number is higher)
 
 6E:  Changes in administrative data: prescription date, date of birth, sex of patient, 
+* Test files:
+  * TBD
+* Acceptance criteria
+  * After reception of the first version of the protocol, receiver shows administrative data as per FHIR
+  * After reception of the second version (revision) of the protocol, administrated data is updated, and data pre-update is no longer available or is (e.g. in an audit trail facility) clearly flagged as being out of date
 
 6F:  Second version of the protocol received before the first version
+* Test files:
+  * TBD
+* Acceptance criteria
+  * Upon reception of a protocol, for which the receiver had already received a later version, the data in the receiver system is not updated.  I.e. any data in the older version of the protocol shall not overwrite data from the newer version of the protocol.
  
 ## 7.	Time Series
 
@@ -358,7 +386,12 @@ Work in progress; following may not be complete:
 
 ## 11.	Protocols in different languages
 
-TBD
+11A: 2 versions of same protocol, in 2 different languages
+* Test files:
+  * TBD
+* Acceptance criteria:
+  * Structurally and data-wise, both FHIR messages are identical
+  * Text-wise, each FHIR is in relevant language, and language differences are identical, content-wise (the same is said in both languages, give and take nuances of translation)
 
 ## 12. Joint example from multiple labs for same subject
 
@@ -366,12 +399,19 @@ TBD
 
 12A: CMA+AKL
 
-TODO TOm uitschrijven
-Case is as follows: AKL and CMA are 2 differen labs/RIZIV numbers). But they use the same analysis encoding, methodolgies, reference ranges etc.  Results from both labs can safely be plotted cumulatively.
+Case is as follows: AKL and CMA are 2 differen labs (2 RIZIV/INAMI numbers). But they use the same analysis encoding, methodolgies, reference ranges etc.  Results from both labs can safely be plotted cumulatively.  Test data consists of 2 protocols for the same patient, generated by different laboratory.
+* Test files
+  * TBD 
+* Acceptance criteria:
+  * Receiving system is able to produce cumulative patient report, with values for same analysis plotted on the same line for comparison.  Cumulative report result values match those of the individual protocols (which match what is in the FHIR message per test case in $2 of this plan)
 
 12B:  iLab and MIPS
 
 Case is as follows: MIPS and iLabs are never used at the same time by the same lab.   Whether analyses may be plotted cumulatively depends on LOINC encoding, units etc.
+* Test files:
+  * TBD
+* Acceptance criteria: 
+  * Receiving system is able to produce cumulative patient report, with values for same analysis in combination with same LOINC encoding, plotted on the same line for comparison.  Cumulative report result values match those of the individual protocols (which match what is in the FHIR message per test case in $2 of this plan)
 
 ## 13. Stress Testing
 
@@ -380,7 +420,8 @@ For this chapter we provide xamples of extreme protocols, either with extreme nu
 * Test files:
   * Macsys FIDLAB example: TBD - without annex
 * Acceptance criterium
-  *  Receiving system manages the process the FHIR messages (no memory or timing issues)
+  *  Generating system manages to output the FHIR messages (no memory or timing issues)
+  *  Receiving system manages to process the FHIR messages (no memory or timing issues)
 
 ## 14. Transmission via eHealthbox
 
@@ -392,3 +433,4 @@ For this chapter we provide xamples of extreme protocols, either with extreme nu
   * Message successfully leaves sender system
   * Message successfully arrives @ receiver system
   * Message received equals message sent
+  * Metadata encoded in the ADR XML is LAB-FHIR (not 100% certain yet!)
