@@ -270,7 +270,9 @@ Work in progress; following may not be complete:
 * Test files:
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333047
 * Acceptance criteria
-  * Upon reception of preliminary report, any missing or unconfirmed results are flagged as such.
+  * Upon reception of preliminary report, any missing or unconfirmed results are flagged as such:
+    * Composition.status == "preliminary"
+    * Observation.1.0.0.0.status="draft"
   * Upon reception of final report, all data is present, and previously data flagged as missing or unconfirmed is no longer available as such or is (e.g. in an audit trail facility) clearly flagged as no longer valid.
   
 6B: Protocol with final results, followed by same protocol with amended result (correction of an individual analysis)
