@@ -11,6 +11,7 @@ Description: "Belgian profile for a composition - to use when a laboratory repor
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://hl7belgium.org"
 * ^jurisdiction = $m49.htm#001
+* text.status = #empty
 * identifier 1.. MS
 * status MS
 * type MS

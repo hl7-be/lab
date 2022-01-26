@@ -11,6 +11,7 @@ Description: "Belgian profile for a laboratory report"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://hl7belgium.org"
 * ^jurisdiction = $m49.htm#001
+* text.status = #empty
 * identifier 1.. MS
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
