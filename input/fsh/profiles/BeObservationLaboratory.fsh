@@ -41,7 +41,7 @@ Description: "Belgian profile for an observation in a laboratory report"
 * value[x] MS
 * dataAbsentReason MS
 * interpretation MS
-* interpretation from BeVSObservationInterpretation
+* interpretation from be-vs-observation-interpretation
 * note MS
 * note only BeCodedAnnotation
 * bodySite MS
