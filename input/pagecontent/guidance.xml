@@ -251,6 +251,8 @@ Units will be expressed using <a href="http://unitsofmeasure.org/ucum.html">UCUM
 It remains technically possible to express units using a different way. However, as UCUM provides a standardized syntax to 
 express in theory any type of exotic unit, it is HIGHLY RECOMMENDED to always use the UCUM way to express units.</li>
 <li>Implementers SHALL take note of the very flexible .value[x] element within the FHIR Observation resource. This allows multiple ways to express the result structurally. Each option has its own datatype. Typically, for measurements, .valueQuantity is expected to be used that leverages the FHIR Quantity datatype. For observation results that do not fall in any structured category, there is the option to use .valueString to express the result in text.
+</li> 
+<li>If the FHIR datatype Quantity is used, the .code element SHALL be used. This element will also be shown by the visualizer, and not the .unit element.
 </li></ul>
 <a name="Use of preformatted text"></a>
 <h4>Use of preformatted text</h4>
