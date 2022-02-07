@@ -1,6 +1,7 @@
 ## Description
 
-Folder contains protocol in pdf and corresponding FHIR in json format.
+Folder contains protocol in pdf and corresponding FHIR in json format
+
 
 ## Test Coverage
 
