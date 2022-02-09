@@ -251,6 +251,8 @@ Units will be expressed using <a href="http://unitsofmeasure.org/ucum.html">UCUM
 It remains technically possible to express units using a different way. However, as UCUM provides a standardized syntax to 
 express in theory any type of exotic unit, it is HIGHLY RECOMMENDED to always use the UCUM way to express units.</li>
 <li>Implementers SHALL take note of the very flexible .value[x] element within the FHIR Observation resource. This allows multiple ways to express the result structurally. Each option has its own datatype. Typically, for measurements, .valueQuantity is expected to be used that leverages the FHIR Quantity datatype. For observation results that do not fall in any structured category, there is the option to use .valueString to express the result in text.
+</li> 
+<li>If the FHIR datatype Quantity is used, the .code element SHALL be used. This element will also be shown by the visualizer, and not the .unit element.
 </li></ul>
 <a name="Use of preformatted text"></a>
 <h4>Use of preformatted text</h4>
@@ -419,7 +421,7 @@ you also need that IG for the base federal profiles. Once this IG is considered 
 <p>Current expectations (at publication date of this draft IG) for the first iteration of the laboratory flows are:</p>
 <ul>
 
-<li>The laboratory result SHALL be send as the payload in an eHealthBox message. The payload SHALL be an immutable collection according to <a href="https://www.hl7.org/fhir/documents.html">the 'FHIR Document' paradigm</a>. The FHIR Document SHALL leverage the Composition profile that can
+<li>The laboratory result SHALL be send as the payload in an eHealthBox message. The message SHALL be accompanied by the custom meta data item: HC-FunctionalType='fhir-lab'. It can be accompanied by the custom meta data items: CM-GeneratingSoftware and CM-GeneratingSoftwareVersion. The payload SHALL be an immutable collection according to <a href="https://www.hl7.org/fhir/documents.html">the 'FHIR Document' paradigm</a>. The FHIR Document SHALL leverage the Composition profile that can
 be found on <a href="https://build.fhir.org/ig/hl7-be/hl7-be-fhir-laboratory-report/artifacts.html">the artifact page in this IG.</a> On that artifact page there is also an example of a report in this FHIR Document structure. The FHIR Document SHALL include all the referenced resources in the bundle. </li>
 
 <li>Following specific <b> versioning guidelines</b> SHALL be observed when leveraging the 'FHIR Document'. Implementers SHALL take note a certain status on a higher level in the bundle SHALL not logically conflict with any status given to resources in the bundle. Please also consult the document example in this guide.
