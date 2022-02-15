@@ -2,10 +2,10 @@ ValueSet: BeVSObservationInterpretation
 Id: be-vs-observation-interpretation
 Description: "Limited set of observation interpretations valid in Belgium"
 * ^name = "BeVSObservationInterpretation"
-* http://terminology.hl7.org/ValueSet/v2-0078#HH
-* http://terminology.hl7.org/ValueSet/v2-0078#H
-* http://terminology.hl7.org/ValueSet/v2-0078#N
-* http://terminology.hl7.org/ValueSet/v2-0078#L
-* http://terminology.hl7.org/ValueSet/v2-0078#LL
-* http://terminology.hl7.org/ValueSet/v2-0078#A
-* http://terminology.hl7.org/ValueSet/v2-0078#AA
+* http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#HH
+* http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#H
+* http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N
+* http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#L
+* http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#LL
+* http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#A
+* http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#AA
