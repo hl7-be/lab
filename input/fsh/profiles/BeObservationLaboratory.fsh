@@ -7,7 +7,8 @@ Description: "Extension that adds a comment to Observation.ReferenceRange"
 * value[x] only BeCodedAnnotation
 
 Profile: BeObservationLaboratory
-Parent: BeObservation
+//Parent: BeObservation
+Parent: Observation
 Id: be-observation-laboratory
 Title: "BeObservationLaboratory"
 Description: "Belgian profile for an observation in a laboratory report"
@@ -94,3 +95,12 @@ Description: "Belgian profile for an observation in a laboratory report"
 * component[productNameQualifier].code.coding.display = "Product name" (exactly)
 * component[productNameQualifier].value[x] 1..
 * component[productNameQualifier].value[x] only CodeableConcept or string
+//stuff from BeObservation
+* code only BeObservationCodeableConcept
+* code MS
+* code ^definition = "Describes what was observed. Sometimes this is called the observation \"name\".\r\n\r\nFor providing systems, it is RECOMMENDED to express this using a code and consuming software SHALL record this.\r\nIn general, it shall be noted SNOMED-CT is the preferred national terminology. Other coding systems remain allowed or MAY be preferred in specific flows (e.g. the use of LOINC codes to express a laboratory test.)"
+//* subject only Reference(Patient or Group or Device or Location or BePatient)
+//* performer 1..
+//* performer only Reference(Practitioner or PractitionerRole or Organization or CareTeam or Patient or RelatedPerson or BePatient or BeOrganization or BePractitionerRole or BePractitioner)
+//* performer ^comment = "References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.\r\n\r\nSpecial remarks for KMEHR users:\r\nIn a KMEHR context, this would be 'author'."
+
