@@ -234,7 +234,11 @@ Work in progress; following may not be complete:
 * Test files:
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333055
 * Acceptation criteria:
-  * Comments are shown on protocol level and are identica to those in corresponding pdf version of the protocol 
+  * Comments are shown on protocol level and are identical to those in corresponding pdf version of the protocol 
+
+### 4.5 Comments on level DiagnosticReport 
+
+TBD!!!
 
 ## 5.	Specimen Management
 
