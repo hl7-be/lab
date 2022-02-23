@@ -117,6 +117,30 @@ in that case is <b>NOT</b> considered to be a structured Belgian laboratory repo
 <h4>Using subtitles</h4>
 <p>An important requirement is the ability to use subtitles in the structure of the laboratory report.</p>
 <p>This can be done in the report by leveraging the third way to use observations grouping supra. When doing this with the goal of only adding a subtitle, the CodeableConcept datatype of the .code element in the parent Observation will minimally contain the .text element.</p>
+
+<a name="How to indicate the performer"></a>
+<h3>How to indicate the performer</h3>
+
+The performer of the tests (and related roles, such as the validator or the interpreter of the tests) can be indicated in several resources. This chapter deals with a clarification of these different fields.
+
+<a name="The author of the composition"></a>
+<h4>The author of the composition</h4>
+The mandatory BeLaboratoryReportComposition.author field SHALL contain a reference to the lab.
+
+<a name="The performer of the report"></a>
+<h4>The performer of the report</h4>
+The mandatory BeLaboratoryReport.performer field SHALL contain a reference to the lab.
+
+
+<a name="The interpreter of the results in the report"></a>
+<h4>The interpreter of the results in the report</h4>
+The mandatory BeLaboratoryReport.resultsInterpreter field SHALL contain a reference to the biologist.
+
+<a name="The performer of the observation"></a>
+<h4>The performer of the observation</h4>
+The BeObservation.performer field can contain a reference to an external lab, if the test was performed by a subcontracting lab.
+
+
 <a name="Important time elements"></a>
 <h3>Important time elements</h3>
 
