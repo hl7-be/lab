@@ -381,6 +381,27 @@ The impact of that will however be minimal as both use the FHIR datatype Attachm
  
  </li>
 </ul>
+<a name="Use of LOINC-codes in Antibiotic result values"></a>
+<h4>Use of LOINC-codes in Antibiotic result values</h4>
+<p>An antibiotics result can have multiple values (RIS, MIC, ETEST, AGAR). Each result SHALL be expressed as a separate observations. Create an observation for MIC, ETEST and AGAR (when available) and use the RIS as an interpretation.</p>
+
+<p>Link these observations using the 'observation.derivedFrom'.</p>
+
+<p>Finally, use dedicated LOINC codes for the MIC, ETEST and AGAR observations. For example:
+
+<p>Main observation</p>
+<ul>
+  <li>18861-5 ( https://loinc.org/18861-5/ : Amoxicillin [Susceptibility] )</li>
+</ul>
+
+<p>Derived observations</p>
+
+<ul>
+  <li>16-6  ( https://loinc.org/16-6/  : Amoxicillin [Susceptibility] by Minimum inhibitory concentration (MIC) )</li>
+  <li>6976-5 (https://loinc.org/6976-5/ : Amoxicillin [Susceptibility] by Gradient strip)</li>
+  <li>17-4 ( https://loinc.org/17-4/ : Amoxicillin [Susceptibility] by Disk diffusion (KB) )</li>
+</ul>
+
 <a name="Codification of organisms"></a>
 <h4>Codification of organisms</h4>
 <p>Organisms are preferably expressed in SNOMED-CT as such:</p>
