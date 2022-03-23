@@ -260,6 +260,8 @@ TBD!!!
 * Acceptance criteria:
   * Receiving system does not tie analyses to specimens, and does not list any speciment types. 
 
+ISSUE: does this case cover a missing butexpected sample?  If not we need an extra case for this!
+
 5D: Partial specimens (some available, others not, in same protocol)
 * Test files
   * TBD
