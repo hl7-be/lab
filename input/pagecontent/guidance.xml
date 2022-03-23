@@ -387,7 +387,7 @@ The impact of that will however be minimal as both use the FHIR datatype Attachm
 
 <p>Link these observations using the 'observation.derivedFrom'.</p>
 
-<p>Finally, use dedicated LOINC codes for the MIC, ETEST and AGAR observations. For example:
+<p>Finally, use dedicated LOINC codes for the MIC, ETEST and AGAR observations. For example: </p>
 
 <p>Main observation</p>
 <ul>
