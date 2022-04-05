@@ -1,2 +1,6 @@
-220308-1002  LOINC comments and non-LOINC comments
-220320-1003  (used also for scenario 3): comments on analysis and copy to report 
+4_1  220308-1002 LOINC comments 
+  (77202-2, 2x ) 
+  (57764-3 interpretation bone marrow)
+  (21026-0 pathologist interpretation of blood tests) 
+ and non-LOINC comments (OCSOP: local code)
+3_   220320-1003  (used also for scenario 3): comments on analysis and copy to report 
