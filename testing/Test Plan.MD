@@ -17,12 +17,14 @@ Work in progress; following may not be complete:
 1A: Results on different levels in hierarchy; panels and “titles” on different sublevels.  Including very complex structures (fruit & food allergies).
 * Test files:
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333049
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/MIPS/UZG_scenario1
 * Acceptance criterion:
   * Title headings and levels match those in pfd version of protocol 
 
 1B: RBC/Glucose in different specimen (Blood/urine/CSF)
 * Test files: 
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333050
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/MIPS/UZG_scenario1
 * Acceptance criterion:
   *  Results clearly indicate which type of sample they refer to (Urine vs blood vs CSF)  
 
@@ -38,6 +40,7 @@ Work in progress; following may not be complete:
 1D: Patient with multiple surnames
 * Test files:
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333052
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/MIPS/UZG_scenario1
 * Acceptance criterion:
   * All surnames in first surname field, concatenated and separated by spaces
 
@@ -56,6 +59,7 @@ Work in progress; following may not be complete:
 1E.3 Patient without Belgian identifiers
 * Test file:
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333055
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/MIPS/UZG_scenario1
 * Acceptance criteria:
   * Patient identified by means of lab identifier
   * (not for visualiser) patient result data matched with other/previous results from same lab/same patient
@@ -68,6 +72,7 @@ Work in progress; following may not be complete:
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333041
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333042
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333043
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/MIPS/UZG_scenario2
 * Acceptance criteria:
   * All numeric values identical as their counterparts in the pdf version of the protocol
   * Units represented as their counterparts in the pfd version of the protocol
@@ -75,6 +80,7 @@ Work in progress; following may not be complete:
 2B: Analysis with alphanumeric results
 * Test files:
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333049
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/MIPS/UZG_scenario2
 * Acceptance criteria:
   * All alphanumeric values identical as their counterparts in the pdf version of the protocol
   * Units represented as their counterparts in the pdf version of the protocol
@@ -82,23 +88,27 @@ Work in progress; following may not be complete:
 2C: Analysis that has no units
 * Test files:
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333042
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/MIPS/UZG_scenario2
 * Acceptance criteria:
   * Where analysis has no units per pdf version of the protocol, no unts are represented off FHIR message either
 
 2D: Analysis without LOINC/RETAM code, Albert code, own encoding system
 * Test files:
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333051
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/MIPS/UZG_scenario2
 * Acceptance criterion:
   * Analysis is shown un human readable form, based on the non LOINC/RETAM/Albert encoding in the FHIR message and correct as compared to that in the pdf version of the protocol
 
 2E: Free T3 with notion ‘preliminary result’
 * Test files:
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333047  -- WRONG FILE REFERENCE
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/MIPS/UZG_scenario2
 * Acceptance criterion:
   * Protocol delivered in 2 stages; first version clearly lists "preliminary" and second version lists result
   * Second version "overwrites" first version in receiver database (this criterion is NOT for the visualiser)
   
 2F: Interpretation of result: 5 cases: 
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/MIPS/UZG_scenario2
 *	normal,
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333041
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333043
@@ -118,12 +128,14 @@ Work in progress; following may not be complete:
 2G: Analysis performed by 3rd lab
 * Test files:
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333051 -- TO DOUBLECHECK
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/MIPS/UZG_scenario2
 * Acceptance criterion:
   * Analysis performed by 3rd party lab are flagged or labelled as such, and identical to such flagging in the pdf version of the protocol
 
 2H: Accreditation status of analysis 
 * Test files:
   *  TBD 
+  *  https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/MIPS/UZG_scenario2
 * Acceptance criterion:
   * Any test lists its accreditation status, if relevant (i.e. if such status is being communicated in the FHIR message)
 
@@ -148,6 +160,7 @@ Work in progress; following may not be complete:
 3A: Analysis without reference ranges
 * Test files:
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333049
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/MIPS/UZG_scenario3
 * Acceptance criterion:
   * Analysis shown without reference range and without reference range flags 
   
@@ -157,6 +170,7 @@ Work in progress; following may not be complete:
 *	Only Low (e.g. >= yy,y)
 * Test files:
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333052
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/MIPS/UZG_scenario3
 * Acceptance criteria:
   * Reference ranges (functionally but not necessarily literally) shown as in pdf version of protocol
 
@@ -164,18 +178,22 @@ Work in progress; following may not be complete:
 3C: Test with alphanumeric reference range
 * Test files:
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333045
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/MIPS/UZG_scenario3
 * Acceptance criterion:
   * Reference range literally shown as in pdf version of protocol
   
 3D: Reference range for test without units
 * Test files:
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333042
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/MIPS/UZG_scenario3
 * Acceptance criterion:
   * Reference range literally shown as in pdf version of protocol
 
 ## 4.	Comments
 
 ### 4.1	Comments in LOINC code
+
+* https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/MIPS/UZG_scenario4
 
 4.1A: “Klinische Gegevens” LOINC 55752-0
 * Test files:
@@ -206,11 +224,13 @@ Work in progress; following may not be complete:
 4.2A: Reference range comments
 * Test files:
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333052
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/MIPS/UZG_scenario4
 * Acceptance criterion:
   * Reference range comments shown along with the reference range, and identical to representation in the corresponding pfd version of the protocol 
 
 4.2B: Reference range as a table
 * Test file: NVT for Macsys (case does not occur in Macsys systems)
+* https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/MIPS/UZG_scenario4
 * Acceptance criterion:
   *  Receiver correctly renders the reference table along with the analysis
 
@@ -219,6 +239,7 @@ Work in progress; following may not be complete:
 4.3A: Test level comment
 * Test files:
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333045
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/MIPS/UZG_scenario4
 * Acceptation criterion:
   * All analysis level comments are shown next to (or above/under) the analysis they refer to and are identical to those in the corresponding pfd version of the protocol
   
@@ -227,20 +248,26 @@ Work in progress; following may not be complete:
 4.4A. Comment type “copy to” 
 * Test files
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333049
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/MIPS/UZG_scenario4
 * Acceptation criteria:
   * Comments are shown on protocol level and are identica to those in corresponding pdf version of the protocol  
 
 4.4B: Administrative comments (e.g. missing DOBs)
 * Test files:
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333055
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/MIPS/UZG_scenario4
 * Acceptation criteria:
   * Comments are shown on protocol level and are identical to those in corresponding pdf version of the protocol 
 
 ### 4.5 Comments on level DiagnosticReport 
-
+* https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/MIPS/UZG_scenario4
 TBD!!!
 
 ## 5.	Specimen Management
+
+* https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/MIPS/UZG_scenario5
+* * Acceptance critia:
+  * Every analysis is linked to (correct) specimen, reception status of specimens is correct 
 
 5A: Specimen identifiers with LOINC encoding of specimen type
 * Test files:
@@ -373,6 +400,8 @@ ISSUE: does this case cover a missing butexpected sample?  If not we need an ext
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933572
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933573
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933574
+
+  * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/MIPS/UZG_scenario9
 * Acceptance criteria:
   * All analyses render correctly, including any comments
   * All antibiogram(s) render correctly and refer to correct analysis (one needs at least one test case specficially for this e:g: Macsys https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933574 )

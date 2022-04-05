@@ -1,0 +1,1055 @@
+{
+  "resourceType": "Bundle",
+  "identifier": {
+    "system": "https://www.ehealth.fgov.be/hl7/bundle",
+    "value": "392bcc5c-4c1f-4894-9205-fbfe70e31fb3"
+  },
+  "type": "document",
+  "timestamp": "2022-03-02T16:20:09.974+01:00",
+  "entry": [ {
+    "fullUrl": "Composition/35318150",
+    "resource": {
+      "resourceType": "Composition",
+      "id": "35318150",
+      "meta": {
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report-composition" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": {
+        "system": "https://www.ehealth.fgov.be/lab-report/diagnostic-report-id",
+        "value": "392bcc5c-4c1f-4894-9205-fbfe70e31fb3"
+      },
+      "status": "final",
+      "type": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "11502-2",
+          "display": "Laboratory report"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/1252172"
+      },
+      "date": "2022-03-02T16:20:09+01:00",
+      "author": [ {
+        "reference": "Organization/4335"
+      } ],
+      "title": "Laboratory Report",
+      "section": [ {
+        "entry": [ {
+          "reference": "DiagnosticReport/35318150"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "DiagnosticReport/35318150",
+    "resource": {
+      "resourceType": "DiagnosticReport",
+      "id": "35318150",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://www.ehealth.fgov.be/lab-report/diagnostic-report-id",
+        "value": "392bcc5c-4c1f-4894-9205-fbfe70e31fb3"
+      } ],
+      "basedOn": [ {
+        "reference": "ServiceRequest/220217-1004"
+      } ],
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+          "code": "LAB",
+          "display": "Laboratory"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "11502-2"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/1252172"
+      },
+      "effectiveDateTime": "2022-03-02T16:20:09+01:00",
+      "issued": "2022-02-17T12:13:10.000+01:00",
+      "performer": [ {
+        "reference": "Organization/4335"
+      } ],
+      "resultsInterpreter": [ {
+        "reference": "Practitioner/65175"
+      } ],
+      "specimen": [ {
+        "reference": "Specimen/220217100401"
+      }, {
+        "reference": "Specimen/220217100403"
+      }, {
+        "reference": "Specimen/220217100404"
+      }, {
+        "reference": "Specimen/220217100405"
+      }, {
+        "reference": "Specimen/220217100402"
+      } ],
+      "result": [ {
+        "reference": "Observation/389060085"
+      }, {
+        "reference": "Observation/331504c0-5876-4e97-9cb3-29f1466a9142"
+      }, {
+        "reference": "Observation/f4707f83-b1cb-44de-b74a-5c9d4490556a"
+      } ]
+    }
+  }, {
+    "fullUrl": "Patient/1252172",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "1252172",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-patient" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/ssin",
+        "value": "01482105560"
+      } ],
+      "name": [ {
+        "family": "Xdtestcozohub",
+        "given": [ "Xdtest" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "-"
+      } ],
+      "gender": "male",
+      "birthDate": "2012-04-06",
+      "address": [ {
+        "line": [ "C. Heymanslaan 10" ],
+        "city": "GENT",
+        "postalCode": "9000",
+        "country": "B"
+      } ]
+    }
+  }, {
+    "fullUrl": "ServiceRequest/220217-1004",
+    "resource": {
+      "resourceType": "ServiceRequest",
+      "id": "220217-1004",
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://mips.be/UZG",
+        "value": "220217-1004"
+      }, {
+        "value": "000028232405"
+      } ],
+      "status": "completed",
+      "intent": "order",
+      "priority": "routine",
+      "subject": {
+        "reference": "Patient/1252172"
+      },
+      "authoredOn": "2022-02-17T11:46:00+01:00",
+      "requester": {
+        "reference": "Practitioner/65175"
+      }
+    }
+  }, {
+    "fullUrl": "Practitioner/65175",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "65175",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-practitioner" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/nihdi",
+        "value": "1-45720-71-862"
+      } ],
+      "name": [ {
+        "family": "Fiers",
+        "given": [ "Tom" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "fax"
+      }, {
+        "system": "email",
+        "value": "tom.fiers@uzgent.be"
+      } ],
+      "address": [ {
+        "line": [ "Klinische biologie UZ Gent" ],
+        "city": "GENT",
+        "postalCode": "9000",
+        "country": "B"
+      } ],
+      "gender": "unknown"
+    }
+  }, {
+    "fullUrl": "Organization/4335",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "4335",
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/nihdi",
+        "value": "8-44700-73-998"
+      } ],
+      "name": "Lab UZGent",
+      "telecom": [ {
+        "system": "phone",
+        "value": "09/2406310"
+      }, {
+        "system": "fax",
+        "value": "092404985"
+      } ],
+      "address": [ {
+        "line": [ "C. Heymanslaan 10" ],
+        "city": "GENT",
+        "postalCode": "9000",
+        "country": "B"
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/62c443b2-1d3e-4a71-9f49-6f0084f82af4",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "62c443b2-1d3e-4a71-9f49-6f0084f82af4",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "unknown",
+      "code": {
+        "text": "Biochemie"
+      },
+      "subject": {
+        "reference": "Patient/1252172"
+      },
+      "hasMember": [ {
+        "reference": "Observation/389060086"
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/720948f4-7277-49db-a320-658d14749e36",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "720948f4-7277-49db-a320-658d14749e36",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "unknown",
+      "code": {
+        "text": "?"
+      },
+      "subject": {
+        "reference": "Patient/1252172"
+      },
+      "hasMember": [ {
+        "reference": "Observation/62c443b2-1d3e-4a71-9f49-6f0084f82af4"
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/331504c0-5876-4e97-9cb3-29f1466a9142",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "331504c0-5876-4e97-9cb3-29f1466a9142",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "unknown",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "18719-5"
+        } ],
+        "text": "SCHEIKUNDE"
+      },
+      "subject": {
+        "reference": "Patient/1252172"
+      },
+      "hasMember": [ {
+        "reference": "Observation/720948f4-7277-49db-a320-658d14749e36"
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/3de23bca-d138-4bad-b0aa-4b82d1fc0210",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "3de23bca-d138-4bad-b0aa-4b82d1fc0210",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "unknown",
+      "code": {
+        "text": "Ascitesvocht"
+      },
+      "subject": {
+        "reference": "Patient/1252172"
+      },
+      "hasMember": [ {
+        "reference": "Observation/389060088"
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/be3d5512-ad7c-4d6f-af97-0012324a7be2",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "be3d5512-ad7c-4d6f-af97-0012324a7be2",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "unknown",
+      "code": {
+        "text": "Pleuravocht"
+      },
+      "subject": {
+        "reference": "Patient/1252172"
+      },
+      "hasMember": [ {
+        "reference": "Observation/389060089"
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/dc2c5b7d-d707-4374-9e87-6b0874827b0b",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "dc2c5b7d-d707-4374-9e87-6b0874827b0b",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "unknown",
+      "code": {
+        "text": "Pericardvocht"
+      },
+      "subject": {
+        "reference": "Patient/1252172"
+      },
+      "hasMember": [ {
+        "reference": "Observation/389060090"
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/d5b25772-455b-4745-bd69-75ef46e2961d",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "d5b25772-455b-4745-bd69-75ef46e2961d",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "unknown",
+      "code": {
+        "text": "Lumbaalvocht - cerebrospinaalvocht"
+      },
+      "subject": {
+        "reference": "Patient/1252172"
+      },
+      "hasMember": [ {
+        "reference": "Observation/389060087"
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/f4707f83-b1cb-44de-b74a-5c9d4490556a",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "f4707f83-b1cb-44de-b74a-5c9d4490556a",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "unknown",
+      "code": {
+        "text": "ANDERE LICHAAMSVOCHTEN"
+      },
+      "subject": {
+        "reference": "Patient/1252172"
+      },
+      "hasMember": [ {
+        "reference": "Observation/3de23bca-d138-4bad-b0aa-4b82d1fc0210"
+      }, {
+        "reference": "Observation/be3d5512-ad7c-4d6f-af97-0012324a7be2"
+      }, {
+        "reference": "Observation/dc2c5b7d-d707-4374-9e87-6b0874827b0b"
+      }, {
+        "reference": "Observation/d5b25772-455b-4745-bd69-75ef46e2961d"
+      } ]
+    }
+  }, {
+    "fullUrl": "ServiceRequest/275721943",
+    "resource": {
+      "resourceType": "ServiceRequest",
+      "id": "275721943",
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://mips.be/UZG",
+        "value": "275721943"
+      } ],
+      "status": "completed",
+      "intent": "order",
+      "priority": "routine",
+      "subject": {
+        "reference": "Patient/1252172"
+      }
+    }
+  }, {
+    "fullUrl": "ServiceRequest/275721941",
+    "resource": {
+      "resourceType": "ServiceRequest",
+      "id": "275721941",
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://mips.be/UZG",
+        "value": "275721941"
+      } ],
+      "status": "completed",
+      "intent": "order",
+      "priority": "routine",
+      "subject": {
+        "reference": "Patient/1252172"
+      }
+    }
+  }, {
+    "fullUrl": "ServiceRequest/275721947",
+    "resource": {
+      "resourceType": "ServiceRequest",
+      "id": "275721947",
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://mips.be/UZG",
+        "value": "275721947"
+      } ],
+      "status": "completed",
+      "intent": "order",
+      "priority": "routine",
+      "subject": {
+        "reference": "Patient/1252172"
+      }
+    }
+  }, {
+    "fullUrl": "ServiceRequest/275721949",
+    "resource": {
+      "resourceType": "ServiceRequest",
+      "id": "275721949",
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://mips.be/UZG",
+        "value": "275721949"
+      } ],
+      "status": "completed",
+      "intent": "order",
+      "priority": "routine",
+      "subject": {
+        "reference": "Patient/1252172"
+      }
+    }
+  }, {
+    "fullUrl": "ServiceRequest/275721951",
+    "resource": {
+      "resourceType": "ServiceRequest",
+      "id": "275721951",
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://mips.be/UZG",
+        "value": "275721951"
+      } ],
+      "status": "completed",
+      "intent": "order",
+      "priority": "routine",
+      "subject": {
+        "reference": "Patient/1252172"
+      }
+    }
+  }, {
+    "fullUrl": "ServiceRequest/275721945",
+    "resource": {
+      "resourceType": "ServiceRequest",
+      "id": "275721945",
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://mips.be/UZG",
+        "value": "275721945"
+      } ],
+      "status": "completed",
+      "intent": "order",
+      "priority": "routine",
+      "subject": {
+        "reference": "Patient/1252172"
+      }
+    }
+  }, {
+    "fullUrl": "Observation/389060085",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "389060085",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "basedOn": [ {
+        "reference": "ServiceRequest/275721943"
+      } ],
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "TXT1"
+        } ],
+        "text": "Opmerkingen / Inlichtingen"
+      },
+      "subject": {
+        "reference": "Patient/1252172"
+      },
+      "issued": "2022-02-17T11:47:30.000+01:00",
+      "valueString": "scenario 1b",
+      "note": [ {
+        "extension": [ {
+          "url": "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/annotation-code",
+          "valueCodeableConcept": {
+            "coding": [ {
+              "system": "https://www.ehealth.fgov.be/standards/fhir/CodeSystem/be-cs-coded-annotation-types",
+              "code": "lab-test-accreditation"
+            } ]
+          }
+        } ],
+        "text": "No"
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/389060086",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "389060086",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "basedOn": [ {
+        "reference": "ServiceRequest/275721941"
+      } ],
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "2345-7",
+          "display": "Glucose (serum/plasma) [mg/dL]"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/1252172"
+      },
+      "issued": "2022-02-17T12:09:29.000+01:00",
+      "valueQuantity": {
+        "value": 70,
+        "system": "http://unitsofmeasure.org",
+        "code": "mg/dL"
+      },
+      "note": [ {
+        "extension": [ {
+          "url": "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/annotation-code",
+          "valueCodeableConcept": {
+            "coding": [ {
+              "system": "https://www.ehealth.fgov.be/standards/fhir/CodeSystem/be-cs-coded-annotation-types",
+              "code": "lab-test-accreditation"
+            } ]
+          }
+        } ],
+        "text": "No"
+      } ],
+      "specimen": {
+        "reference": "Specimen/220217100401"
+      },
+      "referenceRange": [ {
+        "low": {
+          "value": 60,
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        },
+        "high": {
+          "value": 100,
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        }
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/389060088",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "389060088",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "basedOn": [ {
+        "reference": "ServiceRequest/275721947"
+      } ],
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "3320"
+        } ],
+        "text": "Glucose"
+      },
+      "subject": {
+        "reference": "Patient/1252172"
+      },
+      "issued": "2022-02-17T12:09:32.000+01:00",
+      "valueQuantity": {
+        "value": 75,
+        "system": "http://unitsofmeasure.org",
+        "code": "mg/dL"
+      },
+      "note": [ {
+        "extension": [ {
+          "url": "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/annotation-code",
+          "valueCodeableConcept": {
+            "coding": [ {
+              "system": "https://www.ehealth.fgov.be/standards/fhir/CodeSystem/be-cs-coded-annotation-types",
+              "code": "lab-test-accreditation"
+            } ]
+          }
+        } ],
+        "text": "No"
+      } ],
+      "specimen": {
+        "reference": "Specimen/220217100403"
+      }
+    }
+  }, {
+    "fullUrl": "Observation/389060089",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "389060089",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "basedOn": [ {
+        "reference": "ServiceRequest/275721949"
+      } ],
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "3412"
+        } ],
+        "text": "Glucose"
+      },
+      "subject": {
+        "reference": "Patient/1252172"
+      },
+      "issued": "2022-02-17T12:09:37.000+01:00",
+      "valueQuantity": {
+        "value": 80,
+        "system": "http://unitsofmeasure.org",
+        "code": "mg/dL"
+      },
+      "note": [ {
+        "extension": [ {
+          "url": "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/annotation-code",
+          "valueCodeableConcept": {
+            "coding": [ {
+              "system": "https://www.ehealth.fgov.be/standards/fhir/CodeSystem/be-cs-coded-annotation-types",
+              "code": "lab-test-accreditation"
+            } ]
+          }
+        } ],
+        "text": "No"
+      } ],
+      "specimen": {
+        "reference": "Specimen/220217100404"
+      }
+    }
+  }, {
+    "fullUrl": "Observation/389060090",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "389060090",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "basedOn": [ {
+        "reference": "ServiceRequest/275721951"
+      } ],
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "3511"
+        } ],
+        "text": "Glucose"
+      },
+      "subject": {
+        "reference": "Patient/1252172"
+      },
+      "issued": "2022-02-17T12:09:40.000+01:00",
+      "valueQuantity": {
+        "value": 90,
+        "system": "http://unitsofmeasure.org",
+        "code": "mg/dL"
+      },
+      "note": [ {
+        "extension": [ {
+          "url": "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/annotation-code",
+          "valueCodeableConcept": {
+            "coding": [ {
+              "system": "https://www.ehealth.fgov.be/standards/fhir/CodeSystem/be-cs-coded-annotation-types",
+              "code": "lab-test-accreditation"
+            } ]
+          }
+        } ],
+        "text": "No"
+      } ],
+      "specimen": {
+        "reference": "Specimen/220217100405"
+      }
+    }
+  }, {
+    "fullUrl": "Observation/389060087",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "389060087",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "basedOn": [ {
+        "reference": "ServiceRequest/275721945"
+      } ],
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "2342-4",
+          "display": "Glucose (cerebral spinal fluid) - in mass/volume"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/1252172"
+      },
+      "issued": "2022-02-17T12:09:44.000+01:00",
+      "valueQuantity": {
+        "value": 100,
+        "system": "http://unitsofmeasure.org",
+        "code": "mg/dL"
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "H"
+        } ]
+      } ],
+      "note": [ {
+        "extension": [ {
+          "url": "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/annotation-code",
+          "valueCodeableConcept": {
+            "coding": [ {
+              "system": "https://www.ehealth.fgov.be/standards/fhir/CodeSystem/be-cs-coded-annotation-types",
+              "code": "lab-test-accreditation"
+            } ]
+          }
+        } ],
+        "text": "No"
+      } ],
+      "specimen": {
+        "reference": "Specimen/220217100402"
+      },
+      "referenceRange": [ {
+        "low": {
+          "value": 49,
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        },
+        "high": {
+          "value": 80,
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        }
+      } ]
+    }
+  }, {
+    "fullUrl": "Specimen/220217100401",
+    "resource": {
+      "resourceType": "Specimen",
+      "id": "220217100401",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-specimen-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://mips.be/UZG",
+        "value": "220217100401"
+      } ],
+      "status": "available",
+      "type": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "119364003"
+        } ],
+        "text": "Serum (oker met gel) of Heparine (met gel)"
+      },
+      "subject": {
+        "reference": "Patient/1252172"
+      },
+      "receivedTime": "2022-02-17T12:09:29+01:00",
+      "request": [ {
+        "reference": "ServiceRequest/275721941"
+      } ],
+      "collection": {
+        "collectedDateTime": "2022-02-17T08:00:00+01:00"
+      }
+    }
+  }, {
+    "fullUrl": "Specimen/220217100403",
+    "resource": {
+      "resourceType": "Specimen",
+      "id": "220217100403",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-specimen-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://mips.be/UZG",
+        "value": "220217100403"
+      } ],
+      "status": "available",
+      "type": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "309201001"
+        } ],
+        "text": "Ascitesvocht"
+      },
+      "subject": {
+        "reference": "Patient/1252172"
+      },
+      "receivedTime": "2022-02-17T12:09:32+01:00",
+      "request": [ {
+        "reference": "ServiceRequest/275721947"
+      } ],
+      "collection": {
+        "collectedDateTime": "2022-02-17T08:00:00+01:00"
+      }
+    }
+  }, {
+    "fullUrl": "Specimen/220217100404",
+    "resource": {
+      "resourceType": "Specimen",
+      "id": "220217100404",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-specimen-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://mips.be/UZG",
+        "value": "220217100404"
+      } ],
+      "status": "available",
+      "type": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "418564007"
+        } ],
+        "text": "Pleuravocht"
+      },
+      "subject": {
+        "reference": "Patient/1252172"
+      },
+      "receivedTime": "2022-02-17T12:09:37+01:00",
+      "request": [ {
+        "reference": "ServiceRequest/275721949"
+      } ],
+      "collection": {
+        "collectedDateTime": "2022-02-17T08:00:00+01:00"
+      }
+    }
+  }, {
+    "fullUrl": "Specimen/220217100405",
+    "resource": {
+      "resourceType": "Specimen",
+      "id": "220217100405",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-specimen-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://mips.be/UZG",
+        "value": "220217100405"
+      } ],
+      "status": "available",
+      "type": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "PC",
+          "display": "Pericardvocht"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/1252172"
+      },
+      "receivedTime": "2022-02-17T12:09:41+01:00",
+      "request": [ {
+        "reference": "ServiceRequest/275721951"
+      } ],
+      "collection": {
+        "collectedDateTime": "2022-02-17T08:00:00+01:00"
+      }
+    }
+  }, {
+    "fullUrl": "Specimen/220217100402",
+    "resource": {
+      "resourceType": "Specimen",
+      "id": "220217100402",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-specimen-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://mips.be/UZG",
+        "value": "220217100402"
+      } ],
+      "status": "available",
+      "type": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "430221008"
+        } ],
+        "text": "Lumbaal vocht"
+      },
+      "subject": {
+        "reference": "Patient/1252172"
+      },
+      "receivedTime": "2022-02-17T12:09:45+01:00",
+      "request": [ {
+        "reference": "ServiceRequest/275721945"
+      } ],
+      "collection": {
+        "collectedDateTime": "2022-02-17T08:00:00+01:00"
+      }
+    }
+  } ]
+}
