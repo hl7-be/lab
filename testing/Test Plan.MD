@@ -299,6 +299,8 @@ ISSUE: does this case cover a missing butexpected sample?  If not we need an ext
 
 **This whole section is not relevant for/not tested by visualisation tool**
 
+6A-6F Mips: https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/MIPS/UZG_scenario6
+
 6A: Protocol with partial results followed by same protocol with final results
 * Test files:
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333047
@@ -340,8 +342,11 @@ ISSUE: does this case cover a missing butexpected sample?  If not we need an ext
   * TBD
 * Acceptance criteria
   * Upon reception of a protocol, for which the receiver had already received a later version, the data in the receiver system is not updated.  I.e. any data in the older version of the protocol shall not overwrite data from the newer version of the protocol.
- 
+
+
 ## 7.	Time Series
+
+https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/MIPS/UZG_scenario7
 
 7A: Time series, LOINC coded
 * Test files:
