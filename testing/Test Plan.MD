@@ -261,7 +261,7 @@ Work in progress; following may not be complete:
 
 ### 4.5 Comments on level DiagnosticReport 
 * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/MIPS/UZG_scenario4
-TBD!!!
+* macsys: TBD!!!
 
 ## 5.	Specimen Management
 
