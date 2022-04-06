@@ -1,0 +1,3240 @@
+{
+  "resourceType": "Bundle",
+  "identifier": {
+    "system": "https://www.ehealth.fgov.be/hl7/bundle",
+    "value": "4f8971a4-8e28-4087-a0bb-e0ae08a28407"
+  },
+  "type": "document",
+  "timestamp": "2022-04-06T10:54:45.835+02:00",
+  "entry": [ {
+    "fullUrl": "Composition/35318340",
+    "resource": {
+      "resourceType": "Composition",
+      "id": "35318340",
+      "meta": {
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report-composition" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": {
+        "system": "https://www.ehealth.fgov.be/lab-report/diagnostic-report-id",
+        "value": "4f8971a4-8e28-4087-a0bb-e0ae08a28407"
+      },
+      "status": "final",
+      "type": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "11502-2",
+          "display": "Laboratory report"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "date": "2022-04-06T10:54:45+02:00",
+      "author": [ {
+        "reference": "Organization/4335"
+      } ],
+      "title": "Laboratory Report",
+      "section": [ {
+        "entry": [ {
+          "reference": "DiagnosticReport/35318340"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "DiagnosticReport/35318340",
+    "resource": {
+      "resourceType": "DiagnosticReport",
+      "id": "35318340",
+      "meta": {
+        "versionId": "3",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://www.ehealth.fgov.be/lab-report/diagnostic-report-id",
+        "value": "4f8971a4-8e28-4087-a0bb-e0ae08a28407"
+      } ],
+      "basedOn": [ {
+        "reference": "ServiceRequest/210101-0155"
+      } ],
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+          "code": "LAB",
+          "display": "Laboratory"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "11502-2"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "effectiveDateTime": "2022-04-06T10:54:45+02:00",
+      "issued": "2022-04-04T13:02:49.000+02:00",
+      "performer": [ {
+        "reference": "Organization/4335"
+      } ],
+      "specimen": [ {
+        "reference": "Specimen/210101015501"
+      } ],
+      "result": [ {
+        "reference": "Observation/c268c454-8bbf-4235-9aec-460f0ba42a9b"
+      } ]
+    }
+  }, {
+    "fullUrl": "Patient/405636",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "405636",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-patient" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/ssin",
+        "value": "11111102504"
+      } ],
+      "name": [ {
+        "family": "Xchelpdesk",
+        "given": [ "Nn" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "092402111"
+      }, {
+        "system": "phone",
+        "value": "04973565151"
+      }, {
+        "system": "email",
+        "value": "debeule.dirk@gmail.com"
+      } ],
+      "gender": "female",
+      "birthDate": "1911-11-11",
+      "address": [ {
+        "line": [ "Corneel Heymanslaan 10" ],
+        "city": "GENT",
+        "postalCode": "9000",
+        "country": "B"
+      } ],
+      "generalPractitioner": [ {
+        "reference": "Practitioner/147772"
+      } ]
+    }
+  }, {
+    "fullUrl": "ServiceRequest/210101-0155",
+    "resource": {
+      "resourceType": "ServiceRequest",
+      "id": "210101-0155",
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://mips.be/UZG",
+        "value": "210101-0155"
+      }, {
+        "value": "000025871925"
+      } ],
+      "status": "completed",
+      "intent": "order",
+      "priority": "routine",
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "authoredOn": "2021-01-01T16:23:00+01:00",
+      "requester": {
+        "reference": "Practitioner/145750"
+      }
+    }
+  }, {
+    "fullUrl": "Practitioner/147772",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "147772",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-practitioner" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/nihdi",
+        "value": "1-12621-93-583"
+      } ],
+      "name": [ {
+        "family": "Abs",
+        "given": [ "Roger" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "fax"
+      } ],
+      "address": [ {
+        "line": [ "Bourcetstraat 35" ],
+        "city": "BERCHEM (ANTWERPEN)",
+        "postalCode": "2600",
+        "country": "B"
+      } ],
+      "gender": "unknown"
+    }
+  }, {
+    "fullUrl": "Practitioner/145750",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "145750",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-practitioner" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/nihdi",
+        "value": "1-46878-77-699"
+      } ],
+      "name": [ {
+        "family": "Van De Voorde",
+        "given": [ "Patrick" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "093248941"
+      }, {
+        "system": "fax"
+      }, {
+        "system": "email",
+        "value": "patrick.vandevoorde@uzgent.be"
+      } ],
+      "address": [ {
+        "line": [ "Spoedopname / MTD Spoed" ],
+        "city": "GENT",
+        "postalCode": "9000",
+        "country": "B"
+      } ],
+      "gender": "unknown"
+    }
+  }, {
+    "fullUrl": "Organization/4335",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "4335",
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/nihdi",
+        "value": "8-44700-73-998"
+      } ],
+      "name": "Lab UZGent",
+      "telecom": [ {
+        "system": "phone",
+        "value": "09/2406310"
+      }, {
+        "system": "fax",
+        "value": "092404985"
+      } ],
+      "address": [ {
+        "line": [ "C. Heymanslaan 10" ],
+        "city": "GENT",
+        "postalCode": "9000",
+        "country": "B"
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/c268c454-8bbf-4235-9aec-460f0ba42a9b",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "c268c454-8bbf-4235-9aec-460f0ba42a9b",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "unknown",
+      "code": {
+        "text": "Microbiologie: Urine, midstream-portie                                                                                  Gekend voor :"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "hasMember": [ {
+        "reference": "Observation/358457205"
+      }, {
+        "reference": "Observation/59bcde3c-773a-4188-b6a4-0249f5df279d"
+      } ]
+    }
+  }, {
+    "fullUrl": "ServiceRequest/239719300",
+    "resource": {
+      "resourceType": "ServiceRequest",
+      "id": "239719300",
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://mips.be/UZG",
+        "value": "239719300"
+      } ],
+      "status": "completed",
+      "intent": "order",
+      "priority": "routine",
+      "subject": {
+        "reference": "Patient/405636"
+      }
+    }
+  }, {
+    "fullUrl": "Observation/358457205",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "358457205",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "basedOn": [ {
+        "reference": "ServiceRequest/239719300"
+      } ],
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "TELLING"
+        } ],
+        "text": "Telling"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-02T12:10:20.000+01:00",
+      "valueString": "1 miljoen (of meer) cfu/ml",
+      "specimen": {
+        "reference": "Specimen/210101015501"
+      }
+    }
+  }, {
+    "fullUrl": "Observation/1d5e3ec7-6adc-41ce-8054-df4008a08b89",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "1d5e3ec7-6adc-41ce-8054-df4008a08b89",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "AMP"
+        } ],
+        "text": "Amoxicilline"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueQuantity": {
+        "value": 21.0,
+        "system": "http://unitsofmeasure.org",
+        "code": "mm"
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/d8943090-a710-49b9-9100-5135a5afd406",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "d8943090-a710-49b9-9100-5135a5afd406",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "AMP"
+        } ],
+        "text": "Amoxicilline"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueString": "< 8.0",
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/2dd39498-86a9-4b97-95e2-602a2864c0d8",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "2dd39498-86a9-4b97-95e2-602a2864c0d8",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "18861-5"
+        } ],
+        "text": "Amoxicilline"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueCodeableConcept": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ],
+      "derivedFrom": [ {
+        "reference": "Observation/1d5e3ec7-6adc-41ce-8054-df4008a08b89"
+      }, {
+        "reference": "Observation/d8943090-a710-49b9-9100-5135a5afd406"
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/981a1d25-12fd-423a-b322-c7a9a9b256b2",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "981a1d25-12fd-423a-b322-c7a9a9b256b2",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "AUG"
+        } ],
+        "text": "Amoxicilline - clavulaanzuur"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueQuantity": {
+        "value": 23.0,
+        "system": "http://unitsofmeasure.org",
+        "code": "mm"
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/39f155c3-94ad-4919-81f8-d710a71410a4",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "39f155c3-94ad-4919-81f8-d710a71410a4",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "AUG"
+        } ],
+        "text": "Amoxicilline - clavulaanzuur"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueString": "< 8.0",
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/4c6892f8-d728-4468-92c5-eb7ec32408ee",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "4c6892f8-d728-4468-92c5-eb7ec32408ee",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "AUG"
+        } ],
+        "text": "Amoxicilline - clavulaanzuur"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueCodeableConcept": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ],
+      "derivedFrom": [ {
+        "reference": "Observation/981a1d25-12fd-423a-b322-c7a9a9b256b2"
+      }, {
+        "reference": "Observation/39f155c3-94ad-4919-81f8-d710a71410a4"
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/b3845f11-2dcc-4867-b6c0-d99cac76b853",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "b3845f11-2dcc-4867-b6c0-d99cac76b853",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "SXT"
+        } ],
+        "text": "Cotrimoxazol"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueQuantity": {
+        "value": 31.0,
+        "system": "http://unitsofmeasure.org",
+        "code": "mm"
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/f28dbbfc-fdb7-4793-818a-f2bdaf01f65a",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "f28dbbfc-fdb7-4793-818a-f2bdaf01f65a",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "SXT"
+        } ],
+        "text": "Cotrimoxazol"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueQuantity": {
+        "value": 0.0625,
+        "system": "http://unitsofmeasure.org",
+        "code": "mg/L"
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/c98f8c41-5aa8-46b0-bc4f-dc783958e2c0",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "c98f8c41-5aa8-46b0-bc4f-dc783958e2c0",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "SXT"
+        } ],
+        "text": "Cotrimoxazol"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueCodeableConcept": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ],
+      "derivedFrom": [ {
+        "reference": "Observation/b3845f11-2dcc-4867-b6c0-d99cac76b853"
+      }, {
+        "reference": "Observation/f28dbbfc-fdb7-4793-818a-f2bdaf01f65a"
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/a987192a-f202-4922-8197-a444b0adcf6f",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "a987192a-f202-4922-8197-a444b0adcf6f",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "FURA"
+        } ],
+        "text": "Nitrofurantoine"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueQuantity": {
+        "value": 20.0,
+        "system": "http://unitsofmeasure.org",
+        "code": "mm"
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/9fdab92e-79f9-4738-82ec-c473406c8e7d",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "9fdab92e-79f9-4738-82ec-c473406c8e7d",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "FURA"
+        } ],
+        "text": "Nitrofurantoine"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueString": "< 64.0",
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/96f9a9f6-0678-4982-be54-82114a81bcd2",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "96f9a9f6-0678-4982-be54-82114a81bcd2",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "FURA"
+        } ],
+        "text": "Nitrofurantoine"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueCodeableConcept": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ],
+      "derivedFrom": [ {
+        "reference": "Observation/a987192a-f202-4922-8197-a444b0adcf6f"
+      }, {
+        "reference": "Observation/9fdab92e-79f9-4738-82ec-c473406c8e7d"
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/0ac32f91-1418-4d8f-9942-4a34732b06b7",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "0ac32f91-1418-4d8f-9942-4a34732b06b7",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "CXM"
+        } ],
+        "text": "Cefuroxim (IV)"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueQuantity": {
+        "value": 24.0,
+        "system": "http://unitsofmeasure.org",
+        "code": "mm"
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/9e8611e5-2098-4de0-9953-a85a1189e62f",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "9e8611e5-2098-4de0-9953-a85a1189e62f",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "CXM"
+        } ],
+        "text": "Cefuroxim (IV)"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueString": "< 8.0",
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/7f4f23d9-72f3-45fe-9f9d-532528467d7e",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "7f4f23d9-72f3-45fe-9f9d-532528467d7e",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "CXM"
+        } ],
+        "text": "Cefuroxim (IV)"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueCodeableConcept": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ],
+      "derivedFrom": [ {
+        "reference": "Observation/0ac32f91-1418-4d8f-9942-4a34732b06b7"
+      }, {
+        "reference": "Observation/9e8611e5-2098-4de0-9953-a85a1189e62f"
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/00ca0db5-e82b-44f4-8d3d-7e0915105bf6",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "00ca0db5-e82b-44f4-8d3d-7e0915105bf6",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "TOB"
+        } ],
+        "text": "Tobramycine"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueQuantity": {
+        "value": 20.0,
+        "system": "http://unitsofmeasure.org",
+        "code": "mm"
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ],
+      "note": [ {
+        "text": "Enkel combinatietherapie."
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/bde8b07c-e228-4b46-8692-b0536e7e5349",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "bde8b07c-e228-4b46-8692-b0536e7e5349",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "TOB"
+        } ],
+        "text": "Tobramycine"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueString": "< 2.0",
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ],
+      "note": [ {
+        "text": "Enkel combinatietherapie."
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/565be307-0bb8-48b1-84b6-8a0a1c552070",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "565be307-0bb8-48b1-84b6-8a0a1c552070",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "TOB"
+        } ],
+        "text": "Tobramycine"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueCodeableConcept": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ],
+      "note": [ {
+        "text": "Enkel combinatietherapie."
+      } ],
+      "derivedFrom": [ {
+        "reference": "Observation/00ca0db5-e82b-44f4-8d3d-7e0915105bf6"
+      }, {
+        "reference": "Observation/bde8b07c-e228-4b46-8692-b0536e7e5349"
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/89d5af1a-fb40-4e0c-9f32-c2a708a7b3fb",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "89d5af1a-fb40-4e0c-9f32-c2a708a7b3fb",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "TEM"
+        } ],
+        "text": "Temocilline"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueQuantity": {
+        "value": 25.0,
+        "system": "http://unitsofmeasure.org",
+        "code": "mm"
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/b4cb8c23-be77-4c9a-b5f7-e9c8c332213d",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "b4cb8c23-be77-4c9a-b5f7-e9c8c332213d",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "TEM"
+        } ],
+        "text": "Temocilline"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueCodeableConcept": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ],
+      "derivedFrom": [ {
+        "reference": "Observation/89d5af1a-fb40-4e0c-9f32-c2a708a7b3fb"
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/9a9f8613-63e5-462f-85df-1bb56b540217",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "9a9f8613-63e5-462f-85df-1bb56b540217",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "FOS"
+        } ],
+        "text": "Fosfomycine"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueQuantity": {
+        "value": 32.0,
+        "system": "http://unitsofmeasure.org",
+        "code": "mm"
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/89bb3de1-74e0-44ce-a7a8-86bd2a85dfe4",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "89bb3de1-74e0-44ce-a7a8-86bd2a85dfe4",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "FOS"
+        } ],
+        "text": "Fosfomycine"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueString": "< 32.0",
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/1dcae4da-2d81-44b6-a9c6-9d5fc88b8593",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "1dcae4da-2d81-44b6-a9c6-9d5fc88b8593",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "FOS"
+        } ],
+        "text": "Fosfomycine"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueCodeableConcept": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ],
+      "derivedFrom": [ {
+        "reference": "Observation/9a9f8613-63e5-462f-85df-1bb56b540217"
+      }, {
+        "reference": "Observation/89bb3de1-74e0-44ce-a7a8-86bd2a85dfe4"
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/571e3f2b-3a55-436c-bf87-a0b6d12086f3",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "571e3f2b-3a55-436c-bf87-a0b6d12086f3",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "OFL"
+        } ],
+        "text": "Ofloxacine/levofloxacine"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueQuantity": {
+        "value": 35.0,
+        "system": "http://unitsofmeasure.org",
+        "code": "mm"
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/0a56ea23-730b-4383-86c0-2268d9dbcbb7",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "0a56ea23-730b-4383-86c0-2268d9dbcbb7",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "OFL"
+        } ],
+        "text": "Ofloxacine/levofloxacine"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueQuantity": {
+        "value": 0.0625,
+        "system": "http://unitsofmeasure.org",
+        "code": "mg/L"
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/1a357641-9e48-4562-98f2-05464b32c3b4",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "1a357641-9e48-4562-98f2-05464b32c3b4",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "OFL"
+        } ],
+        "text": "Ofloxacine/levofloxacine"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueCodeableConcept": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ],
+      "derivedFrom": [ {
+        "reference": "Observation/571e3f2b-3a55-436c-bf87-a0b6d12086f3"
+      }, {
+        "reference": "Observation/0a56ea23-730b-4383-86c0-2268d9dbcbb7"
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/cc1feaaa-8ab4-4c53-87e3-194e305b264c",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "cc1feaaa-8ab4-4c53-87e3-194e305b264c",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "AMI"
+        } ],
+        "text": "Amikacine"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueQuantity": {
+        "value": 22.0,
+        "system": "http://unitsofmeasure.org",
+        "code": "mm"
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ],
+      "note": [ {
+        "text": "Enkel combinatietherapie."
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/b5fac934-4dc7-4746-9df9-e3551f51d5e4",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "b5fac934-4dc7-4746-9df9-e3551f51d5e4",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "AMI"
+        } ],
+        "text": "Amikacine"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueString": "< 8.0",
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ],
+      "note": [ {
+        "text": "Enkel combinatietherapie."
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/5ce5df70-dc6b-4d56-82f0-272899094e08",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "5ce5df70-dc6b-4d56-82f0-272899094e08",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "AMI"
+        } ],
+        "text": "Amikacine"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueCodeableConcept": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ],
+      "note": [ {
+        "text": "Enkel combinatietherapie."
+      } ],
+      "derivedFrom": [ {
+        "reference": "Observation/cc1feaaa-8ab4-4c53-87e3-194e305b264c"
+      }, {
+        "reference": "Observation/b5fac934-4dc7-4746-9df9-e3551f51d5e4"
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/3313a2c9-4c24-4307-9cee-c69e22be8b33",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "3313a2c9-4c24-4307-9cee-c69e22be8b33",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "CTX"
+        } ],
+        "text": "Cefotaxim/ceftriaxone"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueQuantity": {
+        "value": 29.0,
+        "system": "http://unitsofmeasure.org",
+        "code": "mm"
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/10883131-ff14-45d2-a53a-5460b68fec0c",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "10883131-ff14-45d2-a53a-5460b68fec0c",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "CTX"
+        } ],
+        "text": "Cefotaxim/ceftriaxone"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueQuantity": {
+        "value": 0.125,
+        "system": "http://unitsofmeasure.org",
+        "code": "mg/L"
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/9f29f141-c6e8-4054-8085-1811b58319d9",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "9f29f141-c6e8-4054-8085-1811b58319d9",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "CTX"
+        } ],
+        "text": "Cefotaxim/ceftriaxone"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueCodeableConcept": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ],
+      "derivedFrom": [ {
+        "reference": "Observation/3313a2c9-4c24-4307-9cee-c69e22be8b33"
+      }, {
+        "reference": "Observation/10883131-ff14-45d2-a53a-5460b68fec0c"
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/1d1bfd6d-2a40-4952-aee8-f8d43d20acca",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "1d1bfd6d-2a40-4952-aee8-f8d43d20acca",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "CAZ"
+        } ],
+        "text": "Ceftazidime"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueQuantity": {
+        "value": 28.0,
+        "system": "http://unitsofmeasure.org",
+        "code": "mm"
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/33175176-01e4-402c-8503-bf7916c5f32f",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "33175176-01e4-402c-8503-bf7916c5f32f",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "CAZ"
+        } ],
+        "text": "Ceftazidime"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueQuantity": {
+        "value": 0.0625,
+        "system": "http://unitsofmeasure.org",
+        "code": "mg/L"
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/0d9f85ca-fd9a-4b90-8820-b134ffd0c6b9",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "0d9f85ca-fd9a-4b90-8820-b134ffd0c6b9",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "CAZ"
+        } ],
+        "text": "Ceftazidime"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueCodeableConcept": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ],
+      "derivedFrom": [ {
+        "reference": "Observation/1d1bfd6d-2a40-4952-aee8-f8d43d20acca"
+      }, {
+        "reference": "Observation/33175176-01e4-402c-8503-bf7916c5f32f"
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/210101015501-01",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "210101015501-01",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "basedOn": [ {
+        "reference": "ServiceRequest/239719300"
+      } ],
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "112283007"
+        } ],
+        "text": "Escherichia coli"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "effectiveDateTime": "2021-01-01T16:43:00+01:00",
+      "issued": "2021-01-02T13:22:34.000+01:00",
+      "valueString": ".",
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "N"
+        } ]
+      } ],
+      "specimen": {
+        "reference": "Specimen/210101015501"
+      },
+      "hasMember": [ {
+        "reference": "Observation/2dd39498-86a9-4b97-95e2-602a2864c0d8"
+      }, {
+        "reference": "Observation/4c6892f8-d728-4468-92c5-eb7ec32408ee"
+      }, {
+        "reference": "Observation/c98f8c41-5aa8-46b0-bc4f-dc783958e2c0"
+      }, {
+        "reference": "Observation/96f9a9f6-0678-4982-be54-82114a81bcd2"
+      }, {
+        "reference": "Observation/7f4f23d9-72f3-45fe-9f9d-532528467d7e"
+      }, {
+        "reference": "Observation/565be307-0bb8-48b1-84b6-8a0a1c552070"
+      }, {
+        "reference": "Observation/b4cb8c23-be77-4c9a-b5f7-e9c8c332213d"
+      }, {
+        "reference": "Observation/1dcae4da-2d81-44b6-a9c6-9d5fc88b8593"
+      }, {
+        "reference": "Observation/1a357641-9e48-4562-98f2-05464b32c3b4"
+      }, {
+        "reference": "Observation/5ce5df70-dc6b-4d56-82f0-272899094e08"
+      }, {
+        "reference": "Observation/9f29f141-c6e8-4054-8085-1811b58319d9"
+      }, {
+        "reference": "Observation/0d9f85ca-fd9a-4b90-8820-b134ffd0c6b9"
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/59d0025d-0e53-4677-9595-c425437963c2",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "59d0025d-0e53-4677-9595-c425437963c2",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "basedOn": [ {
+        "reference": "ServiceRequest/239719300"
+      } ],
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "6463-4"
+        } ],
+        "text": "Kweek (isolaten, ABgram...)"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "effectiveDateTime": "2021-01-01T16:43:00+01:00",
+      "issued": "2021-01-02T15:06:25.000+01:00",
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "POS"
+        } ]
+      } ],
+      "specimen": {
+        "reference": "Specimen/210101015501"
+      },
+      "hasMember": [ {
+        "reference": "Observation/210101015501-01"
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/e37d620e-f495-4717-8dec-118bd645cc57",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "e37d620e-f495-4717-8dec-118bd645cc57",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "AMP"
+        } ],
+        "text": "Amoxicilline"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueQuantity": {
+        "value": 21.0,
+        "system": "http://unitsofmeasure.org",
+        "code": "mm"
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/fb8df2e8-c661-4017-b2f5-427fe9798040",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "fb8df2e8-c661-4017-b2f5-427fe9798040",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "AMP"
+        } ],
+        "text": "Amoxicilline"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueString": "< 8.0",
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/07c0f427-cb49-4042-b281-8cfa2e5ca605",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "07c0f427-cb49-4042-b281-8cfa2e5ca605",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "18861-5"
+        } ],
+        "text": "Amoxicilline"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueCodeableConcept": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ],
+      "derivedFrom": [ {
+        "reference": "Observation/e37d620e-f495-4717-8dec-118bd645cc57"
+      }, {
+        "reference": "Observation/fb8df2e8-c661-4017-b2f5-427fe9798040"
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/6a2ae33f-9a7e-43e6-bf3a-450e34ea49a3",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "6a2ae33f-9a7e-43e6-bf3a-450e34ea49a3",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "AUG"
+        } ],
+        "text": "Amoxicilline - clavulaanzuur"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueQuantity": {
+        "value": 23.0,
+        "system": "http://unitsofmeasure.org",
+        "code": "mm"
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/b785f1d2-3d00-4245-ad3a-b09feaf6ef05",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "b785f1d2-3d00-4245-ad3a-b09feaf6ef05",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "AUG"
+        } ],
+        "text": "Amoxicilline - clavulaanzuur"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueString": "< 8.0",
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/94d9dc37-1fc6-4678-bbba-afa38ad1a127",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "94d9dc37-1fc6-4678-bbba-afa38ad1a127",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "AUG"
+        } ],
+        "text": "Amoxicilline - clavulaanzuur"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueCodeableConcept": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ],
+      "derivedFrom": [ {
+        "reference": "Observation/6a2ae33f-9a7e-43e6-bf3a-450e34ea49a3"
+      }, {
+        "reference": "Observation/b785f1d2-3d00-4245-ad3a-b09feaf6ef05"
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/2ce9e094-141e-405a-8c07-fa3aee3c7d29",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "2ce9e094-141e-405a-8c07-fa3aee3c7d29",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "SXT"
+        } ],
+        "text": "Cotrimoxazol"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueQuantity": {
+        "value": 31.0,
+        "system": "http://unitsofmeasure.org",
+        "code": "mm"
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/c29df95e-62d4-4c38-9f57-fc6dfda7e4c8",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "c29df95e-62d4-4c38-9f57-fc6dfda7e4c8",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "SXT"
+        } ],
+        "text": "Cotrimoxazol"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueQuantity": {
+        "value": 0.0625,
+        "system": "http://unitsofmeasure.org",
+        "code": "mg/L"
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/c73d62f0-f820-42f2-a507-e8805cba2e85",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "c73d62f0-f820-42f2-a507-e8805cba2e85",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "SXT"
+        } ],
+        "text": "Cotrimoxazol"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueCodeableConcept": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ],
+      "derivedFrom": [ {
+        "reference": "Observation/2ce9e094-141e-405a-8c07-fa3aee3c7d29"
+      }, {
+        "reference": "Observation/c29df95e-62d4-4c38-9f57-fc6dfda7e4c8"
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/a1f251d7-9c1b-465f-bf7a-e57a519c2ed6",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "a1f251d7-9c1b-465f-bf7a-e57a519c2ed6",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "FURA"
+        } ],
+        "text": "Nitrofurantoine"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueQuantity": {
+        "value": 20.0,
+        "system": "http://unitsofmeasure.org",
+        "code": "mm"
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/5dc7f1a7-7557-4eab-8de3-503089688465",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "5dc7f1a7-7557-4eab-8de3-503089688465",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "FURA"
+        } ],
+        "text": "Nitrofurantoine"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueString": "< 64.0",
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/9c0078bf-37ca-4094-bfea-8dbab4a79de3",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "9c0078bf-37ca-4094-bfea-8dbab4a79de3",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "FURA"
+        } ],
+        "text": "Nitrofurantoine"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueCodeableConcept": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ],
+      "derivedFrom": [ {
+        "reference": "Observation/a1f251d7-9c1b-465f-bf7a-e57a519c2ed6"
+      }, {
+        "reference": "Observation/5dc7f1a7-7557-4eab-8de3-503089688465"
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/509b7712-b0a6-425a-a081-a2cf190a0b20",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "509b7712-b0a6-425a-a081-a2cf190a0b20",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "CXM"
+        } ],
+        "text": "Cefuroxim (IV)"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueQuantity": {
+        "value": 24.0,
+        "system": "http://unitsofmeasure.org",
+        "code": "mm"
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/7164aff4-1998-4023-a7b3-dbb49e7c0032",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "7164aff4-1998-4023-a7b3-dbb49e7c0032",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "CXM"
+        } ],
+        "text": "Cefuroxim (IV)"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueString": "< 8.0",
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/50d0ab41-3bcb-4148-8f20-4d52e20d8f84",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "50d0ab41-3bcb-4148-8f20-4d52e20d8f84",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "CXM"
+        } ],
+        "text": "Cefuroxim (IV)"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueCodeableConcept": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ],
+      "derivedFrom": [ {
+        "reference": "Observation/509b7712-b0a6-425a-a081-a2cf190a0b20"
+      }, {
+        "reference": "Observation/7164aff4-1998-4023-a7b3-dbb49e7c0032"
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/9279a531-13ad-43c9-9659-2df4e3d0caea",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "9279a531-13ad-43c9-9659-2df4e3d0caea",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "TOB"
+        } ],
+        "text": "Tobramycine"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueQuantity": {
+        "value": 20.0,
+        "system": "http://unitsofmeasure.org",
+        "code": "mm"
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ],
+      "note": [ {
+        "text": "Enkel combinatietherapie."
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/484cc788-ea50-4bcd-8b68-81fd907e7315",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "484cc788-ea50-4bcd-8b68-81fd907e7315",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "TOB"
+        } ],
+        "text": "Tobramycine"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueString": "< 2.0",
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ],
+      "note": [ {
+        "text": "Enkel combinatietherapie."
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/e7e0d9f3-5355-4782-a917-5c902ca75b95",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "e7e0d9f3-5355-4782-a917-5c902ca75b95",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "TOB"
+        } ],
+        "text": "Tobramycine"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueCodeableConcept": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ],
+      "note": [ {
+        "text": "Enkel combinatietherapie."
+      } ],
+      "derivedFrom": [ {
+        "reference": "Observation/9279a531-13ad-43c9-9659-2df4e3d0caea"
+      }, {
+        "reference": "Observation/484cc788-ea50-4bcd-8b68-81fd907e7315"
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/7c918660-3b99-4b2f-84a4-788b231c4573",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "7c918660-3b99-4b2f-84a4-788b231c4573",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "TEM"
+        } ],
+        "text": "Temocilline"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueQuantity": {
+        "value": 25.0,
+        "system": "http://unitsofmeasure.org",
+        "code": "mm"
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/80e5a0d5-7570-4c27-9605-7d8863b5c5fc",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "80e5a0d5-7570-4c27-9605-7d8863b5c5fc",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "TEM"
+        } ],
+        "text": "Temocilline"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueCodeableConcept": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ],
+      "derivedFrom": [ {
+        "reference": "Observation/7c918660-3b99-4b2f-84a4-788b231c4573"
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/37c27ba9-5462-4656-ad5f-f93c1b123df9",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "37c27ba9-5462-4656-ad5f-f93c1b123df9",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "FOS"
+        } ],
+        "text": "Fosfomycine"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueQuantity": {
+        "value": 32.0,
+        "system": "http://unitsofmeasure.org",
+        "code": "mm"
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/4d2087c9-92ba-455e-aed6-ad2e574996f2",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "4d2087c9-92ba-455e-aed6-ad2e574996f2",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "FOS"
+        } ],
+        "text": "Fosfomycine"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueString": "< 32.0",
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/1cbf31a3-030d-4f71-b61d-57fc5e17ebb6",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "1cbf31a3-030d-4f71-b61d-57fc5e17ebb6",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "FOS"
+        } ],
+        "text": "Fosfomycine"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueCodeableConcept": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ],
+      "derivedFrom": [ {
+        "reference": "Observation/37c27ba9-5462-4656-ad5f-f93c1b123df9"
+      }, {
+        "reference": "Observation/4d2087c9-92ba-455e-aed6-ad2e574996f2"
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/c723fb07-0d2f-41b5-a48c-bdc58c3e673f",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "c723fb07-0d2f-41b5-a48c-bdc58c3e673f",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "OFL"
+        } ],
+        "text": "Ofloxacine/levofloxacine"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueQuantity": {
+        "value": 35.0,
+        "system": "http://unitsofmeasure.org",
+        "code": "mm"
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/6a5a91dc-2ef1-4ccf-9a60-c0d14583e24d",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "6a5a91dc-2ef1-4ccf-9a60-c0d14583e24d",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "OFL"
+        } ],
+        "text": "Ofloxacine/levofloxacine"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueQuantity": {
+        "value": 0.0625,
+        "system": "http://unitsofmeasure.org",
+        "code": "mg/L"
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/d0a1a59c-7b7f-4f91-9adc-e2ab3590a2b2",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "d0a1a59c-7b7f-4f91-9adc-e2ab3590a2b2",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "OFL"
+        } ],
+        "text": "Ofloxacine/levofloxacine"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueCodeableConcept": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ],
+      "derivedFrom": [ {
+        "reference": "Observation/c723fb07-0d2f-41b5-a48c-bdc58c3e673f"
+      }, {
+        "reference": "Observation/6a5a91dc-2ef1-4ccf-9a60-c0d14583e24d"
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/7ffad3ad-5614-43d9-ab7b-d8c209d2dd17",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "7ffad3ad-5614-43d9-ab7b-d8c209d2dd17",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "AMI"
+        } ],
+        "text": "Amikacine"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueQuantity": {
+        "value": 22.0,
+        "system": "http://unitsofmeasure.org",
+        "code": "mm"
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ],
+      "note": [ {
+        "text": "Enkel combinatietherapie."
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/af274b2a-44fd-4df4-b477-e7d2d180e98d",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "af274b2a-44fd-4df4-b477-e7d2d180e98d",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "AMI"
+        } ],
+        "text": "Amikacine"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueString": "< 8.0",
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ],
+      "note": [ {
+        "text": "Enkel combinatietherapie."
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/c3911c8c-7ea1-474b-aa31-eab70f5205b7",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "c3911c8c-7ea1-474b-aa31-eab70f5205b7",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "AMI"
+        } ],
+        "text": "Amikacine"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueCodeableConcept": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ],
+      "note": [ {
+        "text": "Enkel combinatietherapie."
+      } ],
+      "derivedFrom": [ {
+        "reference": "Observation/7ffad3ad-5614-43d9-ab7b-d8c209d2dd17"
+      }, {
+        "reference": "Observation/af274b2a-44fd-4df4-b477-e7d2d180e98d"
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/e433355c-673a-47ab-be1b-353a6a1dfd16",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "e433355c-673a-47ab-be1b-353a6a1dfd16",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "CTX"
+        } ],
+        "text": "Cefotaxim/ceftriaxone"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueQuantity": {
+        "value": 29.0,
+        "system": "http://unitsofmeasure.org",
+        "code": "mm"
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/853b0412-40c7-4fed-bcd2-5ec422d18699",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "853b0412-40c7-4fed-bcd2-5ec422d18699",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "CTX"
+        } ],
+        "text": "Cefotaxim/ceftriaxone"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueQuantity": {
+        "value": 0.125,
+        "system": "http://unitsofmeasure.org",
+        "code": "mg/L"
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/49df37cb-1ff0-470d-a17d-969a08a496cd",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "49df37cb-1ff0-470d-a17d-969a08a496cd",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "CTX"
+        } ],
+        "text": "Cefotaxim/ceftriaxone"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueCodeableConcept": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ],
+      "derivedFrom": [ {
+        "reference": "Observation/e433355c-673a-47ab-be1b-353a6a1dfd16"
+      }, {
+        "reference": "Observation/853b0412-40c7-4fed-bcd2-5ec422d18699"
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/a18c1844-8e96-4341-a577-9621a39e9152",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "a18c1844-8e96-4341-a577-9621a39e9152",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "CAZ"
+        } ],
+        "text": "Ceftazidime"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueQuantity": {
+        "value": 28.0,
+        "system": "http://unitsofmeasure.org",
+        "code": "mm"
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/a6302271-b185-49c5-af91-aedf0f89d1d6",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "a6302271-b185-49c5-af91-aedf0f89d1d6",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "CAZ"
+        } ],
+        "text": "Ceftazidime"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueQuantity": {
+        "value": 0.0625,
+        "system": "http://unitsofmeasure.org",
+        "code": "mg/L"
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/b02b1812-5b7d-4263-bb7b-b299ef64a2a2",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "b02b1812-5b7d-4263-bb7b-b299ef64a2a2",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "CAZ"
+        } ],
+        "text": "Ceftazidime"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2021-01-04T08:51:11.000+01:00",
+      "valueCodeableConcept": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ],
+      "derivedFrom": [ {
+        "reference": "Observation/a18c1844-8e96-4341-a577-9621a39e9152"
+      }, {
+        "reference": "Observation/a6302271-b185-49c5-af91-aedf0f89d1d6"
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/59bcde3c-773a-4188-b6a4-0249f5df279d",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "59bcde3c-773a-4188-b6a4-0249f5df279d",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "basedOn": [ {
+        "reference": "ServiceRequest/239719300"
+      } ],
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "6463-4"
+        } ],
+        "text": "Kweek (isolaten, ABgram...)"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "effectiveDateTime": "2021-01-01T16:43:00+01:00",
+      "issued": "2021-01-02T15:06:25.000+01:00",
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "POS"
+        } ]
+      } ],
+      "specimen": {
+        "reference": "Specimen/210101015501"
+      },
+      "hasMember": [ {
+        "reference": "Observation/210101015501-01"
+      } ]
+    }
+  }, {
+    "fullUrl": "Specimen/210101015501",
+    "resource": {
+      "resourceType": "Specimen",
+      "id": "210101015501",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-specimen-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://mips.be/UZG",
+        "value": "210101015501"
+      } ],
+      "status": "available",
+      "type": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "M_UR",
+          "display": "M Urine"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "receivedTime": "2021-01-01T16:43:37+01:00",
+      "request": [ {
+        "reference": "ServiceRequest/239719300"
+      } ],
+      "collection": {
+        "collectedDateTime": "2021-01-01T16:43:00+01:00"
+      }
+    }
+  } ]
+}

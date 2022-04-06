@@ -1,0 +1,1524 @@
+{
+  "resourceType": "Bundle",
+  "identifier": {
+    "system": "https://www.ehealth.fgov.be/hl7/bundle",
+    "value": "c4c611d9-73c1-4c53-980c-17650b227075"
+  },
+  "type": "document",
+  "timestamp": "2022-03-16T16:07:30.359+01:00",
+  "entry": [ {
+    "fullUrl": "Composition/35318179",
+    "resource": {
+      "resourceType": "Composition",
+      "id": "35318179",
+      "meta": {
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report-composition" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": {
+        "system": "https://www.ehealth.fgov.be/lab-report/diagnostic-report-id",
+        "value": "c4c611d9-73c1-4c53-980c-17650b227075"
+      },
+      "status": "final",
+      "type": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "11502-2",
+          "display": "Laboratory report"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "date": "2022-03-16T16:07:30+01:00",
+      "author": [ {
+        "reference": "Organization/4335"
+      } ],
+      "title": "Laboratory Report",
+      "section": [ {
+        "entry": [ {
+          "reference": "DiagnosticReport/35318179"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "DiagnosticReport/35318179",
+    "resource": {
+      "resourceType": "DiagnosticReport",
+      "id": "35318179",
+      "meta": {
+        "versionId": "4",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://www.ehealth.fgov.be/lab-report/diagnostic-report-id",
+        "value": "c4c611d9-73c1-4c53-980c-17650b227075"
+      } ],
+      "basedOn": [ {
+        "reference": "ServiceRequest/220226-1002"
+      } ],
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+          "code": "LAB",
+          "display": "Laboratory"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "11502-2"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "effectiveDateTime": "2022-03-16T16:07:30+01:00",
+      "issued": "2022-02-26T11:05:25.000+01:00",
+      "performer": [ {
+        "reference": "Organization/4335"
+      } ],
+      "resultsInterpreter": [ {
+        "reference": "Practitioner/65175"
+      } ],
+      "specimen": [ {
+        "reference": "Specimen/220226100201"
+      } ],
+      "result": [ {
+        "reference": "Observation/e51d3718-33ed-4d02-8e2f-3e92210bd3d6"
+      } ]
+    }
+  }, {
+    "fullUrl": "Patient/405636",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "405636",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-patient" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/ssin",
+        "value": "11111102504"
+      } ],
+      "name": [ {
+        "family": "Xchelpdesk",
+        "given": [ "Nn" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "092402111"
+      }, {
+        "system": "phone",
+        "value": "04973565151"
+      }, {
+        "system": "email",
+        "value": "debeule.dirk@gmail.com"
+      } ],
+      "gender": "female",
+      "birthDate": "1911-11-11",
+      "address": [ {
+        "line": [ "Corneel Heymanslaan 10" ],
+        "city": "GENT",
+        "postalCode": "9000",
+        "country": "B"
+      } ],
+      "generalPractitioner": [ {
+        "reference": "Practitioner/147772"
+      } ]
+    }
+  }, {
+    "fullUrl": "ServiceRequest/220226-1002",
+    "resource": {
+      "resourceType": "ServiceRequest",
+      "id": "220226-1002",
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://mips.be/UZG",
+        "value": "220226-1002"
+      } ],
+      "status": "active",
+      "intent": "order",
+      "priority": "routine",
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "authoredOn": "2022-02-26T10:41:00+01:00",
+      "requester": {
+        "reference": "Practitioner/13783685"
+      }
+    }
+  }, {
+    "fullUrl": "Practitioner/147772",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "147772",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-practitioner" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/nihdi",
+        "value": "1-12621-93-583"
+      } ],
+      "name": [ {
+        "family": "Abs",
+        "given": [ "Roger" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "fax"
+      } ],
+      "address": [ {
+        "line": [ "Bourcetstraat 35" ],
+        "city": "BERCHEM (ANTWERPEN)",
+        "postalCode": "2600",
+        "country": "B"
+      } ],
+      "gender": "unknown"
+    }
+  }, {
+    "fullUrl": "Practitioner/13783685",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "13783685",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-practitioner" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/nihdi",
+        "value": "1-37904-30-058"
+      } ],
+      "name": [ {
+        "family": "Fieuws",
+        "given": [ "Sarah" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "sarah.fieuws@uzgent.be"
+      } ],
+      "address": [ {
+        "line": [ "Medische oncologie" ],
+        "city": "GENT",
+        "postalCode": "9000",
+        "country": "B"
+      } ],
+      "gender": "unknown"
+    }
+  }, {
+    "fullUrl": "Practitioner/65175",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "65175",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-practitioner" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/nihdi",
+        "value": "1-45720-71-862"
+      } ],
+      "name": [ {
+        "family": "Fiers",
+        "given": [ "Tom" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "fax"
+      }, {
+        "system": "email",
+        "value": "tom.fiers@uzgent.be"
+      } ],
+      "address": [ {
+        "line": [ "Klinische biologie UZ Gent" ],
+        "city": "GENT",
+        "postalCode": "9000",
+        "country": "B"
+      } ],
+      "gender": "unknown"
+    }
+  }, {
+    "fullUrl": "Organization/4335",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "4335",
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/nihdi",
+        "value": "8-44700-73-998"
+      } ],
+      "name": "Lab UZGent",
+      "telecom": [ {
+        "system": "phone",
+        "value": "09/2406310"
+      }, {
+        "system": "fax",
+        "value": "092404985"
+      } ],
+      "address": [ {
+        "line": [ "C. Heymanslaan 10" ],
+        "city": "GENT",
+        "postalCode": "9000",
+        "country": "B"
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/e51d3718-33ed-4d02-8e2f-3e92210bd3d6",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "e51d3718-33ed-4d02-8e2f-3e92210bd3d6",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "contained": [ {
+        "resourceType": "Observation",
+        "id": "1",
+        "meta": {
+          "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+        },
+        "basedOn": [ {
+          "reference": "ServiceRequest/275722285"
+        } ],
+        "status": "final",
+        "code": {
+          "coding": [ {
+            "system": "http://snomed.info/sct",
+            "code": "112283007"
+          } ],
+          "text": "Escherichia coli"
+        },
+        "subject": {
+          "reference": "Patient/405636"
+        },
+        "effectiveDateTime": "2022-02-26T10:41:00+01:00",
+        "issued": "2022-02-26T11:02:02.000+01:00",
+        "performer": [ {
+          "reference": "Practitioner/65175"
+        } ],
+        "interpretation": [ {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+            "code": "N"
+          } ]
+        } ],
+        "specimen": {
+          "reference": "Specimen/220226100201"
+        },
+        "hasMember": [ {
+          "reference": "Observation/158bd61c-f3c7-4f61-9978-2573f1491f79"
+        }, {
+          "reference": "Observation/43eeb4d2-0863-4688-89b8-052b7718d24d"
+        }, {
+          "reference": "Observation/3ff953e8-4552-49fa-b924-e88207a8db9d"
+        }, {
+          "reference": "Observation/b39aaa4a-b718-4d02-8c77-56d7b03ec857"
+        }, {
+          "reference": "Observation/e0701142-f3be-4fc8-9b82-d1ff5fc61025"
+        }, {
+          "reference": "Observation/d70daae4-8eda-44e8-b1b1-fd83a1346ad4"
+        }, {
+          "reference": "Observation/4a859eb1-1238-473a-9689-8b283be77472"
+        }, {
+          "reference": "Observation/8bb24c11-4968-4aa3-8868-74ba66bc86dd"
+        }, {
+          "reference": "Observation/fd26a724-fa10-4bbd-928b-0b920d9d05ca"
+        }, {
+          "reference": "Observation/f80fd587-c8fb-4932-abbe-37ffcf22bcdc"
+        }, {
+          "reference": "Observation/524098e3-bb98-4590-b9f3-38b468280660"
+        }, {
+          "reference": "Observation/adb07bf4-a282-43d4-bae6-c3a7803f3c25"
+        }, {
+          "reference": "Observation/f4d8e38d-8fda-4e4b-9cdc-6b2fcfeb06d4"
+        }, {
+          "reference": "Observation/e90507db-4b1d-42fd-a2bf-e33b712b85dc"
+        }, {
+          "reference": "Observation/dee6c290-9727-4414-aa43-b8219772a35a"
+        }, {
+          "reference": "Observation/26dcefdb-526b-459a-8e11-746ef27b9ed5"
+        } ]
+      }, {
+        "resourceType": "Observation",
+        "id": "2",
+        "meta": {
+          "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+        },
+        "basedOn": [ {
+          "reference": "ServiceRequest/275722285"
+        } ],
+        "status": "final",
+        "code": {
+          "coding": [ {
+            "system": "http://snomed.info/sct",
+            "code": "3092008"
+          } ],
+          "text": "Staphylococcus aureus"
+        },
+        "subject": {
+          "reference": "Patient/405636"
+        },
+        "effectiveDateTime": "2022-02-26T10:41:00+01:00",
+        "issued": "2022-02-26T11:03:26.000+01:00",
+        "performer": [ {
+          "reference": "Practitioner/65175"
+        } ],
+        "interpretation": [ {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+            "code": "N"
+          } ]
+        } ],
+        "specimen": {
+          "reference": "Specimen/220226100201"
+        },
+        "hasMember": [ {
+          "reference": "Observation/9e2b4dbd-310f-48ba-bd77-d99b1a4ef752"
+        }, {
+          "reference": "Observation/d231d10c-4fd2-4149-8b6e-eaa79bd8a1fd"
+        }, {
+          "reference": "Observation/ab1f756b-067f-4ad3-a4ba-306a67a339ae"
+        }, {
+          "reference": "Observation/cebb6743-a522-4604-99f2-df8cf19d44bb"
+        }, {
+          "reference": "Observation/9902c6ef-e514-4c34-8f0b-df9a97c47998"
+        }, {
+          "reference": "Observation/6edaed02-a447-4a75-9d5c-a9517af57cf4"
+        }, {
+          "reference": "Observation/0d0dd175-8a71-4f3a-8b9b-1d231d5a675d"
+        }, {
+          "reference": "Observation/39bc6557-4b44-474f-ab26-87b2f1300d3a"
+        } ]
+      } ],
+      "status": "unknown",
+      "code": {
+        "text": "Microbiologie: Urine, midstream-portie                                                                                  Gekend voor :"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "hasMember": [ {
+        "reference": "Observation/null"
+      }, {
+        "reference": "Observation/null"
+      }, {
+        "reference": "Observation/389060301"
+      } ]
+    }
+  }, {
+    "fullUrl": "ServiceRequest/275722285",
+    "resource": {
+      "resourceType": "ServiceRequest",
+      "id": "275722285",
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://mips.be/UZG",
+        "value": "275722285"
+      } ],
+      "status": "active",
+      "intent": "order",
+      "priority": "routine",
+      "subject": {
+        "reference": "Patient/405636"
+      }
+    }
+  }, {
+    "fullUrl": "Observation/158bd61c-f3c7-4f61-9978-2573f1491f79",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "158bd61c-f3c7-4f61-9978-2573f1491f79",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "112283007"
+        } ],
+        "text": "Escherichia coli"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "effectiveDateTime": "2022-02-26T10:41:00+01:00",
+      "issued": "2022-02-26T11:02:02.000+01:00",
+      "performer": [ {
+        "reference": "Practitioner/65175"
+      } ],
+      "valueString": "++",
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "N"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/43eeb4d2-0863-4688-89b8-052b7718d24d",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "43eeb4d2-0863-4688-89b8-052b7718d24d",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "18861-5"
+        } ],
+        "text": "Amoxicilline"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2022-02-26T11:02:08.000+01:00",
+      "performer": [ {
+        "reference": "Practitioner/65175"
+      } ],
+      "valueQuantity": {
+        "value": 0.5
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "R"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/3ff953e8-4552-49fa-b924-e88207a8db9d",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "3ff953e8-4552-49fa-b924-e88207a8db9d",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "18862-3"
+        } ],
+        "text": "Amoxicilline - clavulaanzuur"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2022-02-26T11:02:10.000+01:00",
+      "performer": [ {
+        "reference": "Practitioner/65175"
+      } ],
+      "valueQuantity": {
+        "value": 0.2
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "I"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/b39aaa4a-b718-4d02-8c77-56d7b03ec857",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "b39aaa4a-b718-4d02-8c77-56d7b03ec857",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "18998-5"
+        } ],
+        "text": "Cotrimoxazol"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2022-02-26T11:02:09.000+01:00",
+      "performer": [ {
+        "reference": "Practitioner/65175"
+      } ],
+      "valueQuantity": {
+        "value": 0.2
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "I"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/e0701142-f3be-4fc8-9b82-d1ff5fc61025",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "e0701142-f3be-4fc8-9b82-d1ff5fc61025",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "18955-5"
+        } ],
+        "text": "Nitrofurantoine"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2022-02-26T11:02:09.000+01:00",
+      "performer": [ {
+        "reference": "Practitioner/65175"
+      } ],
+      "valueQuantity": {
+        "value": 0.2
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/d70daae4-8eda-44e8-b1b1-fd83a1346ad4",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "d70daae4-8eda-44e8-b1b1-fd83a1346ad4",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "51724-3"
+        } ],
+        "text": "Cefuroxim (IV)"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2022-02-26T11:02:09.000+01:00",
+      "performer": [ {
+        "reference": "Practitioner/65175"
+      } ],
+      "valueQuantity": {
+        "value": 0.2
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "I"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/4a859eb1-1238-473a-9689-8b283be77472",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "4a859eb1-1238-473a-9689-8b283be77472",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "18928-2"
+        } ],
+        "text": "Gentamycine"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2022-02-26T11:02:09.000+01:00",
+      "performer": [ {
+        "reference": "Practitioner/65175"
+      } ],
+      "valueQuantity": {
+        "value": 0.15
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/8bb24c11-4968-4aa3-8868-74ba66bc86dd",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "8bb24c11-4968-4aa3-8868-74ba66bc86dd",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "18912-6"
+        } ],
+        "text": "Colimycine"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2022-02-26T11:02:09.000+01:00",
+      "performer": [ {
+        "reference": "Practitioner/65175"
+      } ],
+      "valueQuantity": {
+        "value": 0.5
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/fd26a724-fa10-4bbd-928b-0b920d9d05ca",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "fd26a724-fa10-4bbd-928b-0b920d9d05ca",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "18991-0"
+        } ],
+        "text": "Temocilline"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2022-02-26T11:02:10.000+01:00",
+      "performer": [ {
+        "reference": "Practitioner/65175"
+      } ],
+      "valueQuantity": {
+        "value": 1.0
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "I"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/f80fd587-c8fb-4932-abbe-37ffcf22bcdc",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "f80fd587-c8fb-4932-abbe-37ffcf22bcdc",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "25596-8"
+        } ],
+        "text": "Fosfomycine"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2022-02-26T11:02:09.000+01:00",
+      "performer": [ {
+        "reference": "Practitioner/65175"
+      } ],
+      "valueQuantity": {
+        "value": 0.75
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "I"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/524098e3-bb98-4590-b9f3-38b468280660",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "524098e3-bb98-4590-b9f3-38b468280660",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "18959-7"
+        } ],
+        "text": "Ofloxacine/levofloxacine"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2022-02-26T11:02:09.000+01:00",
+      "performer": [ {
+        "reference": "Practitioner/65175"
+      } ],
+      "valueQuantity": {
+        "value": 0.5
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "R"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/adb07bf4-a282-43d4-bae6-c3a7803f3c25",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "adb07bf4-a282-43d4-bae6-c3a7803f3c25",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "18860-7"
+        } ],
+        "text": "Amikacine"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2022-02-26T11:02:09.000+01:00",
+      "performer": [ {
+        "reference": "Practitioner/65175"
+      } ],
+      "valueQuantity": {
+        "value": 0.23
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "R"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/f4d8e38d-8fda-4e4b-9cdc-6b2fcfeb06d4",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "f4d8e38d-8fda-4e4b-9cdc-6b2fcfeb06d4",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "18970-4"
+        } ],
+        "text": "Piperacilline/tazobactam"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2022-02-26T11:02:10.000+01:00",
+      "performer": [ {
+        "reference": "Practitioner/65175"
+      } ],
+      "valueQuantity": {
+        "value": 0.5
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/e90507db-4b1d-42fd-a2bf-e33b712b85dc",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "e90507db-4b1d-42fd-a2bf-e33b712b85dc",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "18886-2"
+        } ],
+        "text": "Cefotaxim/ceftriaxone"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2022-02-26T11:02:09.000+01:00",
+      "performer": [ {
+        "reference": "Practitioner/65175"
+      } ],
+      "valueQuantity": {
+        "value": 0.3
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "R"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/dee6c290-9727-4414-aa43-b8219772a35a",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "dee6c290-9727-4414-aa43-b8219772a35a",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "18893-8"
+        } ],
+        "text": "Ceftazidime"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2022-02-26T11:02:10.000+01:00",
+      "performer": [ {
+        "reference": "Practitioner/65175"
+      } ],
+      "valueString": "< 0.3",
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/26dcefdb-526b-459a-8e11-746ef27b9ed5",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "26dcefdb-526b-459a-8e11-746ef27b9ed5",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "18943-1"
+        } ],
+        "text": "Meropenem"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2022-02-26T11:02:10.000+01:00",
+      "performer": [ {
+        "reference": "Practitioner/65175"
+      } ],
+      "valueString": "<= 0.5",
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "I"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/null",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "#1",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "basedOn": [ {
+        "reference": "ServiceRequest/275722285"
+      } ],
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "112283007"
+        } ],
+        "text": "Escherichia coli"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "effectiveDateTime": "2022-02-26T10:41:00+01:00",
+      "issued": "2022-02-26T11:02:02.000+01:00",
+      "performer": [ {
+        "reference": "Practitioner/65175"
+      } ],
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "N"
+        } ]
+      } ],
+      "specimen": {
+        "reference": "Specimen/220226100201"
+      },
+      "hasMember": [ {
+        "reference": "Observation/158bd61c-f3c7-4f61-9978-2573f1491f79"
+      }, {
+        "reference": "Observation/43eeb4d2-0863-4688-89b8-052b7718d24d"
+      }, {
+        "reference": "Observation/3ff953e8-4552-49fa-b924-e88207a8db9d"
+      }, {
+        "reference": "Observation/b39aaa4a-b718-4d02-8c77-56d7b03ec857"
+      }, {
+        "reference": "Observation/e0701142-f3be-4fc8-9b82-d1ff5fc61025"
+      }, {
+        "reference": "Observation/d70daae4-8eda-44e8-b1b1-fd83a1346ad4"
+      }, {
+        "reference": "Observation/4a859eb1-1238-473a-9689-8b283be77472"
+      }, {
+        "reference": "Observation/8bb24c11-4968-4aa3-8868-74ba66bc86dd"
+      }, {
+        "reference": "Observation/fd26a724-fa10-4bbd-928b-0b920d9d05ca"
+      }, {
+        "reference": "Observation/f80fd587-c8fb-4932-abbe-37ffcf22bcdc"
+      }, {
+        "reference": "Observation/524098e3-bb98-4590-b9f3-38b468280660"
+      }, {
+        "reference": "Observation/adb07bf4-a282-43d4-bae6-c3a7803f3c25"
+      }, {
+        "reference": "Observation/f4d8e38d-8fda-4e4b-9cdc-6b2fcfeb06d4"
+      }, {
+        "reference": "Observation/e90507db-4b1d-42fd-a2bf-e33b712b85dc"
+      }, {
+        "reference": "Observation/dee6c290-9727-4414-aa43-b8219772a35a"
+      }, {
+        "reference": "Observation/26dcefdb-526b-459a-8e11-746ef27b9ed5"
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/9e2b4dbd-310f-48ba-bd77-d99b1a4ef752",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "9e2b4dbd-310f-48ba-bd77-d99b1a4ef752",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "3092008"
+        } ],
+        "text": "Staphylococcus aureus"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "effectiveDateTime": "2022-02-26T10:41:00+01:00",
+      "issued": "2022-02-26T11:03:26.000+01:00",
+      "performer": [ {
+        "reference": "Practitioner/65175"
+      } ],
+      "valueString": "+++",
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "N"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/d231d10c-4fd2-4149-8b6e-eaa79bd8a1fd",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "d231d10c-4fd2-4149-8b6e-eaa79bd8a1fd",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "MTH",
+          "display": "Methicilline"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2022-02-26T11:03:32.000+01:00",
+      "performer": [ {
+        "reference": "Practitioner/65175"
+      } ],
+      "valueQuantity": {
+        "value": 0.2
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "R"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/ab1f756b-067f-4ad3-a4ba-306a67a339ae",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "ab1f756b-067f-4ad3-a4ba-306a67a339ae",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "18964-7"
+        } ],
+        "text": "Penicilline"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2022-02-26T11:03:33.000+01:00",
+      "performer": [ {
+        "reference": "Practitioner/65175"
+      } ],
+      "valueQuantity": {
+        "value": 0.05
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/cebb6743-a522-4604-99f2-df8cf19d44bb",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "cebb6743-a522-4604-99f2-df8cf19d44bb",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "18998-5"
+        } ],
+        "text": "Cotrimoxazol"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2022-02-26T11:03:33.000+01:00",
+      "performer": [ {
+        "reference": "Practitioner/65175"
+      } ],
+      "valueQuantity": {
+        "value": 0.8
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/9902c6ef-e514-4c34-8f0b-df9a97c47998",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "9902c6ef-e514-4c34-8f0b-df9a97c47998",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "18919-1"
+        } ],
+        "text": "Erythromycine"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2022-02-26T11:03:34.000+01:00",
+      "performer": [ {
+        "reference": "Practitioner/65175"
+      } ],
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/6edaed02-a447-4a75-9d5c-a9517af57cf4",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "6edaed02-a447-4a75-9d5c-a9517af57cf4",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "18974-6"
+        } ],
+        "text": "Rifampicine"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2022-02-26T11:03:34.000+01:00",
+      "performer": [ {
+        "reference": "Practitioner/65175"
+      } ],
+      "valueQuantity": {
+        "value": 0.5
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "R"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/0d0dd175-8a71-4f3a-8b9b-1d231d5a675d",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "0d0dd175-8a71-4f3a-8b9b-1d231d5a675d",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "18908-4"
+        } ],
+        "text": "Clindamycine"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2022-02-26T11:03:33.000+01:00",
+      "performer": [ {
+        "reference": "Practitioner/65175"
+      } ],
+      "valueQuantity": {
+        "value": 0.3
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/39bc6557-4b44-474f-ab26-87b2f1300d3a",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "39bc6557-4b44-474f-ab26-87b2f1300d3a",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "18928-2"
+        } ],
+        "text": "Gentamycine"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2022-02-26T11:03:34.000+01:00",
+      "performer": [ {
+        "reference": "Practitioner/65175"
+      } ],
+      "valueQuantity": {
+        "value": 0.4
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "S"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/389060301",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "389060301",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "basedOn": [ {
+        "reference": "ServiceRequest/275722285"
+      } ],
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "MCOMMENT"
+        } ],
+        "text": "Commentaar"
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "issued": "2022-02-26T11:04:42.000+01:00",
+      "valueString": "Algemene commentaar",
+      "note": [ {
+        "extension": [ {
+          "url": "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/annotation-code",
+          "valueCodeableConcept": {
+            "coding": [ {
+              "system": "https://www.ehealth.fgov.be/standards/fhir/CodeSystem/be-cs-coded-annotation-types",
+              "code": "lab-test-accreditation"
+            } ]
+          }
+        } ],
+        "text": "No"
+      } ],
+      "specimen": {
+        "reference": "Specimen/220226100201"
+      }
+    }
+  }, {
+    "fullUrl": "Specimen/220226100201",
+    "resource": {
+      "resourceType": "Specimen",
+      "id": "220226100201",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-specimen-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://mips.be/UZG",
+        "value": "220226100201"
+      } ],
+      "status": "available",
+      "type": {
+        "coding": [ {
+          "system": "https://mips.be/UZG",
+          "code": "M_UR",
+          "display": "M Urine"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/405636"
+      },
+      "receivedTime": "2022-02-26T10:47:35+01:00",
+      "request": [ {
+        "reference": "ServiceRequest/275722285"
+      } ],
+      "collection": {
+        "collectedDateTime": "2022-02-26T10:41:00+01:00"
+      }
+    }
+  } ]
+}
