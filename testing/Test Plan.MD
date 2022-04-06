@@ -386,6 +386,15 @@ https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/MIPS
 * Acceptance criterion:
   * For every non-embedded annex, corresponding media section of the FHIR message lists the existence of the annex, and provides information as to how and where the non-embedded annex may be found or consulted.
 
+8E: Annex on Observation Level
+
+This case is e.g. when the sender prefers to link electrophoresis images to the electrophoresis observation.
+This case is not applicable to Macsys
+* Test files
+  * ???
+* Acceptance criterion:
+  * TBD for those who provide this case   
+
 
 ## 9.	Microbiology
 
