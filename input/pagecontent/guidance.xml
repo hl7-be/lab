@@ -214,7 +214,7 @@ It is allowed to use multiple codes within the FHIR CodeableConcept datatype. Bu
 <ul><li><pre>"code":{
 	"coding":[
 		{
-			"system": "https://www.ehealth.fgov.be/standards/fhir/CodeSystem/albert",
+			"system": "https://www.ehealth.fgov.be/standards/fhir/lab/CodeSystem/albert",
 			"code": "26224",
 			"display": "Glucose (urine 24h)"
 		}

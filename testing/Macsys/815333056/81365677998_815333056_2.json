@@ -1372,7 +1372,7 @@
             {
                 "coding": [
                     {
-                        "system": "https://www.ehealth.fgov.be/standards/fhir/CodeSystem/cd-hcparty",
+                        "system": "https://www.ehealth.fgov.be/standards/fhir/lab/CodeSystem/cd-hcparty",
                         "code": "orglaboratory"
                     }
                 ]

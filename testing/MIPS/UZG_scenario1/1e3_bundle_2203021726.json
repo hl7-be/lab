@@ -493,7 +493,7 @@
           "url": "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/annotation-code",
           "valueCodeableConcept": {
             "coding": [ {
-              "system": "https://www.ehealth.fgov.be/standards/fhir/CodeSystem/be-cs-coded-annotation-types",
+              "system": "https://www.ehealth.fgov.be/standards/fhir/lab/CodeSystem/be-cs-coded-annotation-types",
               "code": "lab-test-accreditation"
             } ]
           }
@@ -540,7 +540,7 @@
           "url": "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/annotation-code",
           "valueCodeableConcept": {
             "coding": [ {
-              "system": "https://www.ehealth.fgov.be/standards/fhir/CodeSystem/be-cs-coded-annotation-types",
+              "system": "https://www.ehealth.fgov.be/standards/fhir/lab/CodeSystem/be-cs-coded-annotation-types",
               "code": "lab-test-accreditation"
             } ]
           }
@@ -595,7 +595,7 @@
           "url": "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/annotation-code",
           "valueCodeableConcept": {
             "coding": [ {
-              "system": "https://www.ehealth.fgov.be/standards/fhir/CodeSystem/be-cs-coded-annotation-types",
+              "system": "https://www.ehealth.fgov.be/standards/fhir/lab/CodeSystem/be-cs-coded-annotation-types",
               "code": "lab-test-accreditation"
             } ]
           }
@@ -648,7 +648,7 @@
           "url": "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/annotation-code",
           "valueCodeableConcept": {
             "coding": [ {
-              "system": "https://www.ehealth.fgov.be/standards/fhir/CodeSystem/be-cs-coded-annotation-types",
+              "system": "https://www.ehealth.fgov.be/standards/fhir/lab/CodeSystem/be-cs-coded-annotation-types",
               "code": "lab-test-accreditation"
             } ]
           }
@@ -693,7 +693,7 @@
           "url": "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/annotation-code",
           "valueCodeableConcept": {
             "coding": [ {
-              "system": "https://www.ehealth.fgov.be/standards/fhir/CodeSystem/be-cs-coded-annotation-types",
+              "system": "https://www.ehealth.fgov.be/standards/fhir/lab/CodeSystem/be-cs-coded-annotation-types",
               "code": "lab-test-accreditation"
             } ]
           }
@@ -738,7 +738,7 @@
           "url": "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/annotation-code",
           "valueCodeableConcept": {
             "coding": [ {
-              "system": "https://www.ehealth.fgov.be/standards/fhir/CodeSystem/be-cs-coded-annotation-types",
+              "system": "https://www.ehealth.fgov.be/standards/fhir/lab/CodeSystem/be-cs-coded-annotation-types",
               "code": "lab-test-accreditation"
             } ]
           }
@@ -785,7 +785,7 @@
           "url": "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/annotation-code",
           "valueCodeableConcept": {
             "coding": [ {
-              "system": "https://www.ehealth.fgov.be/standards/fhir/CodeSystem/be-cs-coded-annotation-types",
+              "system": "https://www.ehealth.fgov.be/standards/fhir/lab/CodeSystem/be-cs-coded-annotation-types",
               "code": "lab-test-accreditation"
             } ]
           }
