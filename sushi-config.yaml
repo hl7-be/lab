@@ -186,10 +186,10 @@ FSHOnly: false
 #applyExtensionMetadataToRoot: false
 
 #dependencies:
-#  ehealthplatform.be.r4.federalprofiles:
-#    uri: https://simplifier.net/packages/ehealthplatform.be.r4.federalprofiles/1.2.2/snapshots/$download 
+#  hl7.fhir.be.core:
+#    uri: https://simplifier.net/packages/hl7.fhir.be.core/2.0.0/snapshots/$download 
 #    uri: https://www.ehealth.fgov.be/standards/fhir/
-#    version: 1.2.x
+#    version: 2.0.0
 
 dependencies:
   hl7.be.fhir.core: current

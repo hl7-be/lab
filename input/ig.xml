@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ImplementationGuide xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas/R5/fhir-single.xsd">
 
-  <id value="hl7.country.ig"/>
-  <url value="http://hl7.country.org/fhir/ig"/>
+  <id value="hl7.fhir.be.lab"/>
+  <url value="https://www.ehealth.fgov.be/standards/fhir/lab"/>
   <!-- This version will propagate to all artifacts unless the "propagate-version" extension is overridden -->
   <version value="0.0.7"/>
   <name value="AffiliateIG"/>
@@ -30,15 +30,15 @@
       -->
     </coding>
   </jurisdiction>
-  <packageId value="hl7.country.fhir.ig"/>
+  <packageId value="hl7.fhir.be.lab"/>
   <!-- This should be changed to 'not-open-source' or another license if appropriate for non-HL7-published content -->
   <license value="CC0-1.0"/>
   <!-- This is whatever FHIR version(s) the IG artifacts are targeting (not the version of this file, which should always be 'current release') -->
   <fhirVersion value="4.0.1"/>
 <dependsOn>
 <uri value="https://www.ehealth.fgov.be/standards/fhir"/>
-<packageId value="ehealthplatform.be.r4.federalprofiles"/>
-<version value="1.2.2"/>
+<packageId value="hl7.fhir.be.core"/>
+<version value="2.0.0"/>
 </dependsOn>
   <definition>
     <!-- You don't need to define any groupings.  The IGPublisher will define them for you.  You only need to do so if your IG is 'special' and it's
