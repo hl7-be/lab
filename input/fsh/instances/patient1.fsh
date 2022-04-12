@@ -2,7 +2,7 @@ Instance: patient1
 InstanceOf: BePatient
 Usage: #definition
 * identifier.use = #official
-* identifier.system = "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/ssin"
+* identifier.system = "https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/ssin"
 * identifier.value = "79121137740"
 * active = true
 * name.family = "La Paradisio"

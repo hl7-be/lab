@@ -132,7 +132,7 @@
         "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
       },
       "identifier": [ {
-        "system": "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/ssin",
+        "system": "https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/ssin",
         "value": "01482105560"
       } ],
       "name": [ {

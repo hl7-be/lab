@@ -112,7 +112,7 @@
       },
       "identifier": [ {
         "use": "official",
-        "system": "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/ssin",
+        "system": "https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/ssin",
         "value": "11111102504"
       }, {
         "system": "https://www.uzgent.be",

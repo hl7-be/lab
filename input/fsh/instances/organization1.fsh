@@ -3,7 +3,7 @@ InstanceOf: BeOrganization
 Usage: #definition
 * identifier[0].use = #official
 * identifier[=].type = $v2-0203#PRN "Provider Number"
-* identifier[=].system = "https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/cbd"
+* identifier[=].system = "https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/cbe"
 * identifier[=].value = "0425.222.333"
 * identifier[+].use = #official
 * identifier[=].type = $v2-0203#MD "Medical License number"

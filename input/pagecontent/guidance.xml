@@ -423,7 +423,7 @@ Thus avoiding the need to include a full Patient resource or a reference to a fu
  <pre>
   &lt;subject&gt;
      &lt;identifier>
-        &lt;system value="https://www.ehealth.fgov.be/standards/fhir/NamingSystem/ssin"/&gt;
+        &lt;system value="https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/ssin"/&gt;
 	&lt;value value="79121137740"/&gt;
      &lt;/identifier&gt;
    &lt;/subject&gt;
