@@ -51,8 +51,8 @@ contact:
 # The jurisdiction can be a single item or a list. The FHIR Shorthand
 # code syntax can be used here.
 
-#jurisdiction: urn:iso:std:iso:3166#US "United States of America"
-jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#056 "Belgium"
+jurisdiction: urn:iso:std:iso:3166#BE "Belgium"
+#jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#056 "Belgium"
 
 
 # The dependencies property corresponds to IG.dependsOn. The key is the
@@ -192,4 +192,4 @@ FSHOnly: false
 #    version: 2.0.0
 
 dependencies:
-  hl7.be.fhir.core: current
+  hl7.fhir.be.core: 2.0.0

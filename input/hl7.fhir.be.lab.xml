@@ -36,7 +36,7 @@
   <!-- This is whatever FHIR version(s) the IG artifacts are targeting (not the version of this file, which should always be 'current release') -->
   <fhirVersion value="4.0.1"/>
 <dependsOn>
-<uri value="https://www.ehealth.fgov.be/standards/fhir"/>
+<uri value="https://www.ehealth.fgov.be/standards/fhir/core"/>
 <packageId value="hl7.fhir.be.core"/>
 <version value="2.0.0"/>
 </dependsOn>
