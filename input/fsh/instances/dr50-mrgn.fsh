@@ -1,6 +1,8 @@
 Instance: dr50-mrgn
 InstanceOf: BeObservationLaboratory
 Usage: #inline
+* text.status = #empty
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>empty</div>"
 * status = #final
 * code = $loinc#78702-8 "Multiple drug resistant gram negative organism [Identifier] in Unspecified specimen by Culture"
 * code.text = "MRGN"

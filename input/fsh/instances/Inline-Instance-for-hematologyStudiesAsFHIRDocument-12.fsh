@@ -1,6 +1,8 @@
 Instance: Inline-Instance-for-hematologyStudiesAsFHIRDocument-12
 InstanceOf: ServiceRequest
 Usage: #inline
+* text.status = #empty
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>empty</div>"
 * id = "servicerequest1"
 * identifier.system = "https://www.GTL-LABO.be/orderingsystem"
 * identifier.value = "12334546"

@@ -1,6 +1,8 @@
 Instance: org51-trimethoprim-sulfamethoxazole
 InstanceOf: BeObservationLaboratory
 Usage: #inline
+* text.status = #empty
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>empty</div>"
 * status = #final
 * code = $loinc#516-5 "Trimethoprim+Sulfamethoxazole [Susceptibility] by Minimum inhibitory concentration (MIC)"
 * code.text = "Trimethoprim+Sulfamethoxazole"

@@ -1,6 +1,8 @@
 Instance: org52-cefotaxime
 InstanceOf: BeObservationLaboratory
 Usage: #inline
+* text.status = #empty
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>empty</div>"
 * status = #final
 * code = $loinc#108-1 "Cefotaxime [Susceptibility] by Minimum inhibitory concentration (MIC)"
 * code.text = "Cefotaxime"

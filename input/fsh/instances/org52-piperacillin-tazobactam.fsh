@@ -1,6 +1,8 @@
 Instance: org52-piperacillin-tazobactam
 InstanceOf: BeObservationLaboratory
 Usage: #inline
+* text.status = #empty
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>empty</div>"
 * status = #final
 * code = $loinc#412-7 "Piperacillin+Tazobactam [Susceptibility] by Minimum inhibitory concentration (MIC)"
 * code.text = "Piperacillin+Tazobactam"

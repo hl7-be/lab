@@ -1,6 +1,8 @@
 Instance: organization10
 InstanceOf: BeOrganization
 Usage: #definition
+* text.status = #empty
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>empty</div>"
 * identifier.use = #official
 * identifier.type = $v2-0203#MD "Medical License number"
 * identifier.system = "https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/nihdi"

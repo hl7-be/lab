@@ -1,6 +1,8 @@
 Instance: practitioner1
 InstanceOf: BePractitioner
 Usage: #definition
+* text.status = #empty
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>empty</div>"
 * identifier.use = #official
 * identifier.system = "https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/nihdi"
 * identifier.value = "18749704477"

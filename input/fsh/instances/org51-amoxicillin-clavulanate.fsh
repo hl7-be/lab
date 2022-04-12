@@ -1,6 +1,8 @@
 Instance: org51-amoxicillin-clavulanate
 InstanceOf: BeObservationLaboratory
 Usage: #inline
+* text.status = #empty
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>empty</div>"
 * status = #final
 * code = $loinc#20-8 "Amoxicillin+Clavulanate [Susceptibility] by Minimum inhibitory concentration (MIC)"
 * code.text = "Amoxicillin+Clavulanate"

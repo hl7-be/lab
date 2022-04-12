@@ -1,6 +1,8 @@
 Instance: specimen1
 InstanceOf: BeSpecimenLaboratory
 Usage: #inline
+* text.status = #empty
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>empty</div>"
 * meta.versionId = "1"
 * identifier.system = "https://www.GTL-LABO.be/"
 * identifier.value = "1"
