@@ -7,10 +7,10 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 
 
-id: my-ig
-canonical: https://www.ehealth.fgov.be/standards/fhir
-url: http://example.com/fhir/example
-name: ExampleIG
+id: hl7.fhir.be.lab
+canonical: https://www.ehealth.fgov.be/standards/fhir/lab
+url: https://www.ehealth.fgov.be/standards/fhir/lab
+name: Laboratory
 title: "HL7 BE Laboratory Result WG Implementation Guide (work in progress)"
 description: HL7 BE Laboratory Result WG Implementation Guide (work in progress)
 status: draft

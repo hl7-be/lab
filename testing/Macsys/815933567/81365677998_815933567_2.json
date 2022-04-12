@@ -407,7 +407,7 @@
             {
                 "coding": [
                     {
-                        "system": "https://www.ehealth.fgov.be/standards/fhir/lab/CodeSystem/cd-hcparty",
+                        "system": "https://www.ehealth.fgov.be/standards/fhir/core/CodeSystem/cd-hcparty",
                         "code": "orglaboratory"
                     }
                 ]

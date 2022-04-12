@@ -4,7 +4,7 @@
    <text>
       <status value="extensions"/>
       <div xmlns="http://www.w3.org/1999/xhtml">
-         <h2>AffiliateIG</h2>
+         <h2>Laboratory Implementation Guide</h2>
          <p>The official URL for this implementation guide is: </p>
          <pre>https://www.ehealth.fgov.be/standards/fhir/lab/ImplementationGuide/hl7.fhir.be.lab</pre>
          <div>
@@ -14,7 +14,7 @@
    </text>
    <url value="https://www.ehealth.fgov.be/standards/fhir/lab/ImplementationGuide/hl7.fhir.be.lab"/>
    <version value="0.2.0"/>
-   <name value="AffiliateIG"/>
+   <name value="Laboratory Implementation Guide"/>
    <title value="HL7 BE Laboratory Result WG Implementation Guide (work in progress)"/>
    <status value="draft"/>
    <experimental value="false"/>
