@@ -12,7 +12,7 @@ Parent: Observation
 Id: be-observation-laboratory
 Title: "BeObservationLaboratory"
 Description: "Belgian profile for an observation in a laboratory report"
-* ^url = "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"
+* ^url = "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory"
 * ^version = "0.0.7"
 * ^status = #draft
 * ^date = "2021-11-08T16:57:45+01:00"

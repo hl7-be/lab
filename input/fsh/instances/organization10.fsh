@@ -3,7 +3,7 @@ InstanceOf: BeOrganization
 Usage: #definition
 * identifier.use = #official
 * identifier.type = $v2-0203#MD "Medical License number"
-* identifier.system = "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/nihdi"
+* identifier.system = "https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/nihdi"
 * identifier.value = "81165343998"
 * active = true
 * type = $cd-hcparty#orglaboratory

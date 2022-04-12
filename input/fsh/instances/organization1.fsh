@@ -3,11 +3,11 @@ InstanceOf: BeOrganization
 Usage: #definition
 * identifier[0].use = #official
 * identifier[=].type = $v2-0203#PRN "Provider Number"
-* identifier[=].system = "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/cbe"
+* identifier[=].system = "https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/cbd"
 * identifier[=].value = "0425.222.333"
 * identifier[+].use = #official
 * identifier[=].type = $v2-0203#MD "Medical License number"
-* identifier[=].system = "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/nihdi"
+* identifier[=].system = "https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/nihdi"
 * identifier[=].value = "999999999"
 * active = true
 * type = $cd-hcparty#orghospital

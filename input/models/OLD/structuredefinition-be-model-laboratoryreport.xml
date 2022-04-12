@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="be-model-laboratoryreport" />
-  <url value="https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-model-laboratoryreport" />
+  <url value="https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-model-laboratoryreport" />
   <version value="0.0.1" />
   <name value="BeLaboratoryReportModel" />
   <status value="draft" />

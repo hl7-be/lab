@@ -2,7 +2,7 @@ Instance: practitioner10
 InstanceOf: BePractitioner
 Usage: #definition
 * identifier.use = #official
-* identifier.system = "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/nihdi"
+* identifier.system = "https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/nihdi"
 * identifier.value = "554488997"
 * name.use = #official
 * name.family = "Davoust"

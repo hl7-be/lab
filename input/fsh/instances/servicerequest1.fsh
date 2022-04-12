@@ -1,7 +1,7 @@
 Instance: servicerequest1
 InstanceOf: ServiceRequest
 Usage: #definition
-* meta.profile = "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-servicerequest"
+* meta.profile = "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-servicerequest"
 * status = #active
 * intent = #order
 * category = $sct#108252007 "Laboratory procedure"
