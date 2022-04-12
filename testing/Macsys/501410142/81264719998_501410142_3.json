@@ -5,7 +5,7 @@
         "id": "501410142",
         "meta": {
             "profile": [
-                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report-composition"
+                "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-laboratory-report-composition"
             ]
         },
         "text": {
@@ -136,7 +136,7 @@
         },
         "text": {
             "status": "generated",
-            "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>code: </b>http://loinc.org 66121-5 Resultaat</p><p><b>subject: </b>Patient/7168528</p><p><b>effective: </b>2021-11-17T00:00:00+01:00</p><p><b>performer: </b>Practitioner/Responsible</p><p><b>result: </b>KLINISCHE GEGEVENS\r\nExcisie rug: cyste, maligne?\r\n\r\nMACROSCOPIE\r\nExcisie 1,1 X 0,9 cm, 2 dwarse, rest\r\n\r\nMICROSCOPIE\r\nDe dwarse doorsneden bestaat uit epiderm, derm en subcutis. In de dermis en subcutis van één van deze doorsneden bevindt er zich een</p><p><b>specimen: </b>Specimen/003501410142</p><p><b>note: </b>Analyse uitgevoerd door extern labo.</p></div>"
+            "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>code: </b>http://loinc.org 66121-5 Resultaat</p><p><b>subject: </b>Patient/7168528</p><p><b>effective: </b>2021-11-17T00:00:00+01:00</p><p><b>performer: </b>Practitioner/Responsible</p><p><b>result: </b>KLINISCHE GEGEVENS\r\nExcisie rug: cyste, maligne?\r\n\r\nMACROSCOPIE\r\nExcisie 1,1 X 0,9 cm, 2 dwarse, rest\r\n\r\nMICROSCOPIE\r\nDe dwarse doorsneden bestaat uit epiderm, derm en subcutis. In de dermis en subcutis van ï¿½ï¿½n van deze doorsneden bevindt er zich een</p><p><b>specimen: </b>Specimen/003501410142</p><p><b>note: </b>Analyse uitgevoerd door extern labo.</p></div>"
         },
         "status": "final",
         "code": {
@@ -158,7 +158,7 @@
                 "reference": "Practitioner/Responsible"
             }
         ],
-        "valueString": "KLINISCHE GEGEVENS\r\nExcisie rug: cyste, maligne?\r\n\r\nMACROSCOPIE\r\nExcisie 1,1 X 0,9 cm, 2 dwarse, rest\r\n\r\nMICROSCOPIE\r\nDe dwarse doorsneden bestaat uit epiderm, derm en subcutis. In de dermis en subcutis van één van deze doorsneden bevindt er zich een cyste, afgeboord door een goed gedifferentieerd squameus epitheel. Dit epitheel rijpt normaal uit, via een stratum granulosum, tot een massale hoeveelheid lamellaire orthokeratine. De cystewand is intact en vertoont geen kenmerken van actuele ruptuur. Rond de cyste bezitten dermis en subcutis een lichte fibrose. Deze epidermale inclusiecyste is goedaardig en in toto verwijderd.\r\n\r\n\r\nBESLUIT\r\nHuid rug: grote epidermale inclusiecyste, goedaardig en in toto.\r\n\r\nAnatomopathologie uitgevoerd en elektronisch gevalideerd door Dr. Hilde Demarsin (Tel.: 03/2313689).(20/11/21)\r\n\r\n",
+        "valueString": "KLINISCHE GEGEVENS\r\nExcisie rug: cyste, maligne?\r\n\r\nMACROSCOPIE\r\nExcisie 1,1 X 0,9 cm, 2 dwarse, rest\r\n\r\nMICROSCOPIE\r\nDe dwarse doorsneden bestaat uit epiderm, derm en subcutis. In de dermis en subcutis van ï¿½ï¿½n van deze doorsneden bevindt er zich een cyste, afgeboord door een goed gedifferentieerd squameus epitheel. Dit epitheel rijpt normaal uit, via een stratum granulosum, tot een massale hoeveelheid lamellaire orthokeratine. De cystewand is intact en vertoont geen kenmerken van actuele ruptuur. Rond de cyste bezitten dermis en subcutis een lichte fibrose. Deze epidermale inclusiecyste is goedaardig en in toto verwijderd.\r\n\r\n\r\nBESLUIT\r\nHuid rug: grote epidermale inclusiecyste, goedaardig en in toto.\r\n\r\nAnatomopathologie uitgevoerd en elektronisch gevalideerd door Dr. Hilde Demarsin (Tel.: 03/2313689).(20/11/21)\r\n\r\n",
         "note": [
             {
                 "text": "Analyse uitgevoerd door extern labo."
@@ -177,7 +177,7 @@
         "meta": {
             "versionId": "3",
             "profile": [
-                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report"
+                "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-laboratory-report"
             ]
         },
         "language": "nl",
@@ -258,7 +258,7 @@
         "id": "81264719998",
         "meta": {
             "profile": [
-                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-organization"
+                "https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-organization"
             ]
         },
         "text": {
@@ -336,7 +336,7 @@
         "id": "69",
         "meta": {
             "profile": [
-                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-practitioner"
+                "https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-practitioner"
             ]
         },
         "text": {
@@ -401,7 +401,7 @@
         "id": "Responsible",
         "meta": {
             "profile": [
-                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-practitioner"
+                "https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-practitioner"
             ]
         },
         "text": {
@@ -453,7 +453,7 @@
         "id": "7168528",
         "meta": {
             "profile": [
-                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-patient"
+                "https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-patient"
             ]
         },
         "text": {

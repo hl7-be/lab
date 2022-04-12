@@ -5,7 +5,7 @@
         "id": "815333058",
         "meta": {
             "profile": [
-                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report-composition"
+                "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-laboratory-report-composition"
             ]
         },
         "text": {
@@ -485,7 +485,7 @@
         },
         "text": {
             "status": "generated",
-            "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>code: </b>http://loinc.org 13982-4 Bèta-globulines</p><p><b>subject: </b>Patient/7168528</p><p><b>effective: </b>2021-12-17T00:00:00+01:00</p><p><b>performer: </b>Practitioner/Responsible</p><p><b>result: </b>6,6 %</p><p><b>specimen: </b>Specimen/001815333058</p><p><b>interpretation: </b>L</p><p><b>referenceRange: </b> // Low: 8,4 % // High: 13,1 % // </p></div>"
+            "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>code: </b>http://loinc.org 13982-4 Bï¿½ta-globulines</p><p><b>subject: </b>Patient/7168528</p><p><b>effective: </b>2021-12-17T00:00:00+01:00</p><p><b>performer: </b>Practitioner/Responsible</p><p><b>result: </b>6,6 %</p><p><b>specimen: </b>Specimen/001815333058</p><p><b>interpretation: </b>L</p><p><b>referenceRange: </b> // Low: 8,4 % // High: 13,1 % // </p></div>"
         },
         "status": "final",
         "code": {
@@ -495,7 +495,7 @@
                     "code": "13982-4"
                 }
             ],
-            "text": "Bèta-globulines"
+            "text": "Bï¿½ta-globulines"
         },
         "subject": {
             "reference": "Patient/7168528"
@@ -820,7 +820,7 @@
         },
         "text": {
             "status": "generated",
-            "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>code: </b>http://loinc.org 2871-2 Bèta-globulines</p><p><b>subject: </b>Patient/7168528</p><p><b>effective: </b>2021-12-17T00:00:00+01:00</p><p><b>performer: </b>Practitioner/Responsible</p><p><b>result: </b>3,8 g/L</p><p><b>specimen: </b>Specimen/001815333058</p><p><b>interpretation: </b>L</p><p><b>referenceRange: </b> // Low: 6,1 g/L // High: 9,6 g/L // </p></div>"
+            "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>code: </b>http://loinc.org 2871-2 Bï¿½ta-globulines</p><p><b>subject: </b>Patient/7168528</p><p><b>effective: </b>2021-12-17T00:00:00+01:00</p><p><b>performer: </b>Practitioner/Responsible</p><p><b>result: </b>3,8 g/L</p><p><b>specimen: </b>Specimen/001815333058</p><p><b>interpretation: </b>L</p><p><b>referenceRange: </b> // Low: 6,1 g/L // High: 9,6 g/L // </p></div>"
         },
         "status": "final",
         "code": {
@@ -830,7 +830,7 @@
                     "code": "2871-2"
                 }
             ],
-            "text": "Bèta-globulines"
+            "text": "Bï¿½ta-globulines"
         },
         "subject": {
             "reference": "Patient/7168528"
@@ -1215,7 +1215,7 @@
         },
         "text": {
             "status": "generated",
-            "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>code: </b>http://loinc.org 25700-6 Immunofixatie</p><p><b>subject: </b>Patient/7168528</p><p><b>effective: </b>2021-12-17T00:00:00+01:00</p><p><b>performer: </b>Practitioner/Responsible</p><p><b>result: </b>Monoklonale gammapathie\r\nParaproteïne IgM type kappa</p><p><b>specimen: </b>Specimen/001815333058</p></div>"
+            "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>code: </b>http://loinc.org 25700-6 Immunofixatie</p><p><b>subject: </b>Patient/7168528</p><p><b>effective: </b>2021-12-17T00:00:00+01:00</p><p><b>performer: </b>Practitioner/Responsible</p><p><b>result: </b>Monoklonale gammapathie\r\nParaproteï¿½ne IgM type kappa</p><p><b>specimen: </b>Specimen/001815333058</p></div>"
         },
         "status": "final",
         "code": {
@@ -1237,7 +1237,7 @@
                 "reference": "Practitioner/Responsible"
             }
         ],
-        "valueString": "Monoklonale gammapathie\r\nParaproteïne IgM type kappa",
+        "valueString": "Monoklonale gammapathie\r\nParaproteï¿½ne IgM type kappa",
         "specimen": {
             "reference": "Specimen/001815333058"
         }
@@ -1451,7 +1451,7 @@
         "meta": {
             "versionId": "2",
             "profile": [
-                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report"
+                "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-laboratory-report"
             ]
         },
         "language": "nl",
@@ -1532,7 +1532,7 @@
         "id": "81365677998",
         "meta": {
             "profile": [
-                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-organization"
+                "https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-organization"
             ]
         },
         "text": {
@@ -1615,7 +1615,7 @@
         "id": "69",
         "meta": {
             "profile": [
-                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-practitioner"
+                "https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-practitioner"
             ]
         },
         "text": {
@@ -1680,7 +1680,7 @@
         "id": "Responsible",
         "meta": {
             "profile": [
-                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-practitioner"
+                "https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-practitioner"
             ]
         },
         "text": {
@@ -1732,7 +1732,7 @@
         "id": "7168528",
         "meta": {
             "profile": [
-                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-patient"
+                "https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-patient"
             ]
         },
         "text": {

@@ -13,7 +13,7 @@
         "id": "815333051",
         "meta": {
             "profile": [
-                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report-composition"
+                "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-laboratory-report-composition"
             ]
         },
         "text": {
@@ -2159,7 +2159,7 @@
         },
         "text": {
             "status": "generated",
-            "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>code: </b>http://loinc.org 9465-6 Benzeen</p><p><b>subject: </b>Patient/7164976</p><p><b>effective: </b>2021-12-01T00:00:00+01:00</p><p><b>performer: </b>Practitioner/Responsible</p><p><b>result: </b>&lt;5,00 ug/L</p><p><b>specimen: </b>Specimen/012815333051</p><p><b>referenceRange: </b> // Bij blootstelling: &lt;5 µg/L\r\n // </p></div>"
+            "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>code: </b>http://loinc.org 9465-6 Benzeen</p><p><b>subject: </b>Patient/7164976</p><p><b>effective: </b>2021-12-01T00:00:00+01:00</p><p><b>performer: </b>Practitioner/Responsible</p><p><b>result: </b>&lt;5,00 ug/L</p><p><b>specimen: </b>Specimen/012815333051</p><p><b>referenceRange: </b> // Bij blootstelling: &lt;5 ï¿½g/L\r\n // </p></div>"
         },
         "status": "final",
         "code": {
@@ -2193,7 +2193,7 @@
         },
         "referenceRange": [
             {
-                "text": "Bij blootstelling: <5 µg/L\r\n"
+                "text": "Bij blootstelling: <5 ï¿½g/L\r\n"
             }
         ]
     }
@@ -2801,7 +2801,7 @@
         "meta": {
             "versionId": "8",
             "profile": [
-                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report"
+                "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-laboratory-report"
             ]
         },
         "language": "nl",
@@ -2948,7 +2948,7 @@
         "id": "81365677998",
         "meta": {
             "profile": [
-                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-organization"
+                "https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-organization"
             ]
         },
         "text": {
@@ -3031,7 +3031,7 @@
         "id": "69",
         "meta": {
             "profile": [
-                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-practitioner"
+                "https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-practitioner"
             ]
         },
         "text": {
@@ -3096,7 +3096,7 @@
         "id": "Responsible",
         "meta": {
             "profile": [
-                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-practitioner"
+                "https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-practitioner"
             ]
         },
         "text": {
@@ -3148,7 +3148,7 @@
         "id": "7164976",
         "meta": {
             "profile": [
-                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-patient"
+                "https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-patient"
             ]
         },
         "text": {

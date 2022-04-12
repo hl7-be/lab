@@ -12,7 +12,7 @@
       "resourceType": "Composition",
       "id": "35318152",
       "meta": {
-        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report-composition" ]
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-laboratory-report-composition" ]
       },
       "text": {
         "status": "empty",
@@ -51,7 +51,7 @@
       "id": "35318152",
       "meta": {
         "versionId": "1",
-        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report" ]
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-laboratory-report" ]
       },
       "text": {
         "status": "empty",
@@ -109,7 +109,7 @@
       "id": "180935",
       "meta": {
         "versionId": "1",
-        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-patient" ]
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-patient" ]
       },
       "text": {
         "status": "empty",
@@ -178,7 +178,7 @@
       "id": "155191",
       "meta": {
         "versionId": "1",
-        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-practitioner" ]
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-practitioner" ]
       },
       "text": {
         "status": "empty",
@@ -214,7 +214,7 @@
       "id": "65175",
       "meta": {
         "versionId": "1",
-        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-practitioner" ]
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-practitioner" ]
       },
       "text": {
         "status": "empty",

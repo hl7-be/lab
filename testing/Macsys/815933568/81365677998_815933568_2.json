@@ -13,7 +13,7 @@
         "id": "815933568",
         "meta": {
             "profile": [
-                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report-composition"
+                "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-laboratory-report-composition"
             ]
         },
         "text": {
@@ -82,7 +82,7 @@
                     "display": "Blood venous"
                 }
             ],
-            "text": "Aërobe fles"
+            "text": "Aï¿½robe fles"
         },
         "subject": {
             "reference": "Patient/7165401"
@@ -124,7 +124,7 @@
                     "display": "Blood venous"
                 }
             ],
-            "text": "Anaërobe fles"
+            "text": "Anaï¿½robe fles"
         },
         "subject": {
             "reference": "Patient/7165401"
@@ -249,7 +249,7 @@
                 "reference": "Practitioner/Responsible"
             }
         ],
-        "valueString": "Geen strikt anaerobe kiemen geïsoleerd",
+        "valueString": "Geen strikt anaerobe kiemen geï¿½soleerd",
         "specimen": {
             "reference": "Specimen/002815933568"
         }
@@ -302,7 +302,7 @@
         "meta": {
             "versionId": "2",
             "profile": [
-                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report"
+                "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-laboratory-report"
             ]
         },
         "language": "nl",
@@ -378,7 +378,7 @@
         "id": "81365677998",
         "meta": {
             "profile": [
-                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-organization"
+                "https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-organization"
             ]
         },
         "text": {
@@ -460,7 +460,7 @@
         "id": "69",
         "meta": {
             "profile": [
-                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-practitioner"
+                "https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-practitioner"
             ]
         },
         "text": {
@@ -524,7 +524,7 @@
         "id": "Responsible",
         "meta": {
             "profile": [
-                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-practitioner"
+                "https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-practitioner"
             ]
         },
         "text": {
@@ -575,7 +575,7 @@
         "id": "7165401",
         "meta": {
             "profile": [
-                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-patient"
+                "https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-patient"
             ]
         },
         "text": {

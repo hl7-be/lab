@@ -3,7 +3,7 @@ Parent: Composition
 Id: be-laboratory-report-composition
 Title: "BeLaboratoryreportComposition"
 Description: "Belgian profile for a composition - to use when a laboratory report is sent as FHIR Document"
-* ^url = "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report-composition"
+* ^url = "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-laboratory-report-composition"
 * ^version = "0.0.7"
 * ^status = #draft
 * ^date = "2021-11-08T16:57:45+01:00"

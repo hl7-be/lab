@@ -13,7 +13,7 @@
         "id": "815333044",
         "meta": {
             "profile": [
-                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report-composition"
+                "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-laboratory-report-composition"
             ]
         },
         "text": {
@@ -1638,7 +1638,7 @@
         "meta": {
             "versionId": "5",
             "profile": [
-                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report"
+                "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-laboratory-report"
             ]
         },
         "language": "nl",
@@ -1728,7 +1728,7 @@
         "id": "81365677998",
         "meta": {
             "profile": [
-                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-organization"
+                "https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-organization"
             ]
         },
         "text": {
@@ -1811,7 +1811,7 @@
         "id": "69",
         "meta": {
             "profile": [
-                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-practitioner"
+                "https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-practitioner"
             ]
         },
         "text": {
@@ -1876,7 +1876,7 @@
         "id": "Responsible",
         "meta": {
             "profile": [
-                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-practitioner"
+                "https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-practitioner"
             ]
         },
         "text": {
@@ -1928,7 +1928,7 @@
         "id": "7168528",
         "meta": {
             "profile": [
-                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-patient"
+                "https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-patient"
             ]
         },
         "text": {
@@ -2006,7 +2006,7 @@
         },
         "note": [
             {
-                "text": "Betreft: wijziging, correctie, aanvulling patiëntgegevens. Hierdoor kunnen de referentiewaarden van huidige en vorige rapporteditie verschillen."
+                "text": "Betreft: wijziging, correctie, aanvulling patiï¿½ntgegevens. Hierdoor kunnen de referentiewaarden van huidige en vorige rapporteditie verschillen."
             }
         ]
     }

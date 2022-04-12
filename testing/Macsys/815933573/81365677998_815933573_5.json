@@ -13,7 +13,7 @@
         "id": "815933573",
         "meta": {
             "profile": [
-                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report-composition"
+                "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-laboratory-report-composition"
             ]
         },
         "text": {
@@ -349,7 +349,7 @@
                 "reference": "Practitioner/Responsible"
             }
         ],
-        "valueString": "Squameus epitheel 3+\r\nNiet squameus epitheel 1+\r\nBacteriën zelden",
+        "valueString": "Squameus epitheel 3+\r\nNiet squameus epitheel 1+\r\nBacteriï¿½n zelden",
         "specimen": {
             "reference": "Specimen/001815933573"
         }
@@ -817,7 +817,7 @@
                     "code": "18955-5"
                 }
             ],
-            "text": "Nitrofurantoïne"
+            "text": "Nitrofurantoï¿½ne"
         },
         "subject": {
             "reference": "Patient/7201514"
@@ -1363,7 +1363,7 @@
         "meta": {
             "versionId": "5",
             "profile": [
-                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report"
+                "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-laboratory-report"
             ]
         },
         "language": "nl",
@@ -1442,7 +1442,7 @@
         "id": "81365677998",
         "meta": {
             "profile": [
-                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-organization"
+                "https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-organization"
             ]
         },
         "text": {
@@ -1524,7 +1524,7 @@
         "id": "69",
         "meta": {
             "profile": [
-                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-practitioner"
+                "https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-practitioner"
             ]
         },
         "text": {
@@ -1588,7 +1588,7 @@
         "id": "Responsible",
         "meta": {
             "profile": [
-                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-practitioner"
+                "https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-practitioner"
             ]
         },
         "text": {
@@ -1639,7 +1639,7 @@
         "id": "7201514",
         "meta": {
             "profile": [
-                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-patient"
+                "https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-patient"
             ]
         },
         "text": {
