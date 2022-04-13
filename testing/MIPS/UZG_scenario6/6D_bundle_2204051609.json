@@ -1,0 +1,588 @@
+{
+  "resourceType": "Bundle",
+  "identifier": {
+    "system": "https://www.ehealth.fgov.be/hl7/bundle",
+    "value": "4e3d3167-55bc-4b72-847b-8ee4b76b2576"
+  },
+  "type": "document",
+  "timestamp": "2022-04-05T16:09:45.653+02:00",
+  "entry": [ {
+    "fullUrl": "Composition/35318370",
+    "resource": {
+      "resourceType": "Composition",
+      "id": "35318370",
+      "meta": {
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report-composition" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": {
+        "system": "https://www.ehealth.fgov.be/lab-report/diagnostic-report-id",
+        "value": "4e3d3167-55bc-4b72-847b-8ee4b76b2576"
+      },
+      "status": "final",
+      "type": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "11502-2",
+          "display": "Laboratory report"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/1987919"
+      },
+      "date": "2022-04-05T16:09:45+02:00",
+      "author": [ {
+        "reference": "Organization/4335"
+      } ],
+      "title": "Laboratory Report",
+      "section": [ {
+        "entry": [ {
+          "reference": "DiagnosticReport/35318370"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "DiagnosticReport/35318370",
+    "resource": {
+      "resourceType": "DiagnosticReport",
+      "id": "35318370",
+      "meta": {
+        "versionId": "2",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "extension": [ {
+        "url": "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-ext-note",
+        "valueAnnotation": {
+          "text": "Labgids: labo.uzgent.be"
+        }
+      }, {
+        "url": "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-ext-note",
+        "valueAnnotation": {
+          "text": "Uitslagen: 09-332.34.34"
+        }
+      }, {
+        "url": "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-ext-note",
+        "valueAnnotation": {
+          "text": "Elektronisch gehandtekend door: Dr. apr. biol. Oyaert Matthijs"
+        }
+      } ],
+      "identifier": [ {
+        "system": "https://www.ehealth.fgov.be/lab-report/diagnostic-report-id",
+        "value": "4e3d3167-55bc-4b72-847b-8ee4b76b2576"
+      } ],
+      "basedOn": [ {
+        "reference": "ServiceRequest/00220406-0001"
+      } ],
+      "status": "corrected",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+          "code": "LAB",
+          "display": "Laboratory"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "11502-2"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/1987919"
+      },
+      "effectiveDateTime": "2022-04-05T16:09:45+02:00",
+      "issued": "2022-04-05T16:07:44.000+02:00",
+      "performer": [ {
+        "reference": "Organization/4335"
+      } ],
+      "resultsInterpreter": [ {
+        "reference": "Practitioner/65175"
+      } ],
+      "specimen": [ {
+        "reference": "Specimen/00220406000101"
+      } ],
+      "result": [ {
+        "reference": "Observation/823af171-76ed-4438-9c36-700ed0c2c1f1"
+      } ]
+    }
+  }, {
+    "fullUrl": "Patient/1987919",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "1987919",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-patient" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "name": [ {
+        "family": "Pan",
+        "given": [ "Peter" ]
+      } ],
+      "gender": "male",
+      "birthDate": "1984-03-01",
+      "address": [ {
+        "line": [ "Test 1" ],
+        "city": "GENT",
+        "postalCode": "9000",
+        "country": "B"
+      } ]
+    }
+  }, {
+    "fullUrl": "ServiceRequest/00220406-0001",
+    "resource": {
+      "resourceType": "ServiceRequest",
+      "id": "00220406-0001",
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://mips.be/UZG",
+        "value": "00220406-0001"
+      }, {
+        "value": "000029081191"
+      } ],
+      "status": "completed",
+      "intent": "order",
+      "priority": "routine",
+      "subject": {
+        "reference": "Patient/1987919"
+      },
+      "authoredOn": "2022-04-05T15:45:00+02:00",
+      "requester": {
+        "reference": "Practitioner/65175"
+      }
+    }
+  }, {
+    "fullUrl": "Practitioner/65175",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "65175",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-practitioner" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/nihdi",
+        "value": "1-45720-71-862"
+      } ],
+      "name": [ {
+        "family": "Fiers",
+        "given": [ "Tom" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "fax"
+      }, {
+        "system": "email",
+        "value": "tom.fiers@uzgent.be"
+      } ],
+      "address": [ {
+        "line": [ "Klinische biologie UZ Gent" ],
+        "city": "GENT",
+        "postalCode": "9000",
+        "country": "B"
+      } ],
+      "gender": "unknown"
+    }
+  }, {
+    "fullUrl": "Organization/4335",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "4335",
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/nihdi",
+        "value": "8-44700-73-998"
+      } ],
+      "name": "Lab UZGent",
+      "telecom": [ {
+        "system": "phone",
+        "value": "09/2406310"
+      }, {
+        "system": "fax",
+        "value": "092404985"
+      } ],
+      "address": [ {
+        "line": [ "C. Heymanslaan 10" ],
+        "city": "GENT",
+        "postalCode": "9000",
+        "country": "B"
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/b16f4ea2-4fab-429d-ad57-5fd045bb21f7",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "b16f4ea2-4fab-429d-ad57-5fd045bb21f7",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "unknown",
+      "code": {
+        "text": "Ionen"
+      },
+      "subject": {
+        "reference": "Patient/1987919"
+      },
+      "hasMember": [ {
+        "reference": "Observation/389061070"
+      }, {
+        "reference": "Observation/389061071"
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/193e889f-1ae3-4f95-a650-84a9d4c7f1ae",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "193e889f-1ae3-4f95-a650-84a9d4c7f1ae",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "unknown",
+      "code": {
+        "text": "Lipiden"
+      },
+      "subject": {
+        "reference": "Patient/1987919"
+      },
+      "hasMember": [ {
+        "reference": "Observation/389061072"
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/823af171-76ed-4438-9c36-700ed0c2c1f1",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "823af171-76ed-4438-9c36-700ed0c2c1f1",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "unknown",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "18719-5"
+        } ],
+        "text": "SCHEIKUNDE"
+      },
+      "subject": {
+        "reference": "Patient/1987919"
+      },
+      "hasMember": [ {
+        "reference": "Observation/b16f4ea2-4fab-429d-ad57-5fd045bb21f7"
+      }, {
+        "reference": "Observation/193e889f-1ae3-4f95-a650-84a9d4c7f1ae"
+      } ]
+    }
+  }, {
+    "fullUrl": "ServiceRequest/275723203",
+    "resource": {
+      "resourceType": "ServiceRequest",
+      "id": "275723203",
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://mips.be/UZG",
+        "value": "275723203"
+      } ],
+      "status": "completed",
+      "intent": "order",
+      "priority": "routine",
+      "subject": {
+        "reference": "Patient/1987919"
+      }
+    }
+  }, {
+    "fullUrl": "ServiceRequest/275723205",
+    "resource": {
+      "resourceType": "ServiceRequest",
+      "id": "275723205",
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://mips.be/UZG",
+        "value": "275723205"
+      } ],
+      "status": "completed",
+      "intent": "order",
+      "priority": "routine",
+      "subject": {
+        "reference": "Patient/1987919"
+      }
+    }
+  }, {
+    "fullUrl": "ServiceRequest/275723207",
+    "resource": {
+      "resourceType": "ServiceRequest",
+      "id": "275723207",
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://mips.be/UZG",
+        "value": "275723207"
+      } ],
+      "status": "completed",
+      "intent": "order",
+      "priority": "routine",
+      "subject": {
+        "reference": "Patient/1987919"
+      }
+    }
+  }, {
+    "fullUrl": "Observation/389061070",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "389061070",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "basedOn": [ {
+        "reference": "ServiceRequest/275723203"
+      } ],
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "2951-2",
+          "display": "Sodium (serum/plasma) [mmol/L]"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/1987919"
+      },
+      "issued": "2022-04-05T15:54:21.000+02:00",
+      "valueQuantity": {
+        "value": 140,
+        "system": "http://unitsofmeasure.org",
+        "code": "mmol/L"
+      },
+      "note": [ {
+        "extension": [ {
+          "url": "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/annotation-code",
+          "valueCodeableConcept": {
+            "coding": [ {
+              "system": "https://www.ehealth.fgov.be/standards/fhir/CodeSystem/be-cs-coded-annotation-types",
+              "code": "lab-test-accreditation"
+            } ]
+          }
+        } ],
+        "text": "No"
+      } ],
+      "specimen": {
+        "reference": "Specimen/00220406000101"
+      },
+      "referenceRange": [ {
+        "low": {
+          "value": 136,
+          "system": "http://unitsofmeasure.org",
+          "code": "mmol/L"
+        },
+        "high": {
+          "value": 145,
+          "system": "http://unitsofmeasure.org",
+          "code": "mmol/L"
+        }
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/389061071",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "389061071",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "basedOn": [ {
+        "reference": "ServiceRequest/275723205"
+      } ],
+      "status": "corrected",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "6298-4",
+          "display": "Potassium (blood) [mmol/L]"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/1987919"
+      },
+      "issued": "2022-04-05T16:01:05.000+02:00",
+      "valueQuantity": {
+        "value": 5.0,
+        "system": "http://unitsofmeasure.org",
+        "code": "mmol/L"
+      },
+      "interpretation": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "H"
+        } ]
+      } ],
+      "note": [ {
+        "extension": [ {
+          "url": "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/annotation-code",
+          "valueCodeableConcept": {
+            "coding": [ {
+              "system": "https://www.ehealth.fgov.be/standards/fhir/CodeSystem/be-cs-coded-annotation-types",
+              "code": "lab-test-accreditation"
+            } ]
+          }
+        } ],
+        "text": "No"
+      } ],
+      "specimen": {
+        "reference": "Specimen/00220406000101"
+      },
+      "referenceRange": [ {
+        "low": {
+          "value": 3.6,
+          "system": "http://unitsofmeasure.org",
+          "code": "mmol/L"
+        },
+        "high": {
+          "value": 4.8,
+          "system": "http://unitsofmeasure.org",
+          "code": "mmol/L"
+        }
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/389061072",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "389061072",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "basedOn": [ {
+        "reference": "ServiceRequest/275723207"
+      } ],
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "2093-3",
+          "display": "Cholesterol (serum/plasma) - [mg/dL]"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/1987919"
+      },
+      "issued": "2022-04-05T15:54:36.000+02:00",
+      "valueQuantity": {
+        "value": 150,
+        "system": "http://unitsofmeasure.org",
+        "code": "mg/dL"
+      },
+      "note": [ {
+        "extension": [ {
+          "url": "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/annotation-code",
+          "valueCodeableConcept": {
+            "coding": [ {
+              "system": "https://www.ehealth.fgov.be/standards/fhir/CodeSystem/be-cs-coded-annotation-types",
+              "code": "lab-test-accreditation"
+            } ]
+          }
+        } ],
+        "text": "No"
+      } ],
+      "specimen": {
+        "reference": "Specimen/00220406000101"
+      },
+      "referenceRange": [ {
+        "text": "146 - 270 (Streefwaarde EAS: <190)"
+      } ]
+    }
+  }, {
+    "fullUrl": "Specimen/00220406000101",
+    "resource": {
+      "resourceType": "Specimen",
+      "id": "00220406000101",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-specimen-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://mips.be/UZG",
+        "value": "00220406000101"
+      } ],
+      "status": "available",
+      "type": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "119364003"
+        } ],
+        "text": "Serum (oker met gel) of Heparine (met gel)"
+      },
+      "subject": {
+        "reference": "Patient/1987919"
+      },
+      "receivedTime": "2022-04-05T15:54:21+02:00",
+      "request": [ {
+        "reference": "ServiceRequest/275723203"
+      } ],
+      "collection": {
+        "collectedDateTime": "2022-04-06T08:00:00+02:00"
+      }
+    }
+  } ]
+}

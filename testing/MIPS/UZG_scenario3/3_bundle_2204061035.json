@@ -2,10 +2,10 @@
   "resourceType": "Bundle",
   "identifier": {
     "system": "https://www.ehealth.fgov.be/hl7/bundle",
-    "value": "cee111a3-7f08-4e2c-95de-ec9b973804db"
+    "value": "e5393306-b11c-4c5d-8630-ed5d306e294d"
   },
   "type": "document",
-  "timestamp": "2022-04-04T14:54:08.250+02:00",
+  "timestamp": "2022-04-06T10:35:19.970+02:00",
   "entry": [ {
     "fullUrl": "Composition/35318325",
     "resource": {
@@ -20,7 +20,7 @@
       },
       "identifier": {
         "system": "https://www.ehealth.fgov.be/lab-report/diagnostic-report-id",
-        "value": "cee111a3-7f08-4e2c-95de-ec9b973804db"
+        "value": "e5393306-b11c-4c5d-8630-ed5d306e294d"
       },
       "status": "final",
       "type": {
@@ -33,7 +33,7 @@
       "subject": {
         "reference": "Patient/405636"
       },
-      "date": "2022-04-04T14:54:08+02:00",
+      "date": "2022-04-06T10:35:19+02:00",
       "author": [ {
         "reference": "Organization/4335"
       } ],
@@ -50,7 +50,7 @@
       "resourceType": "DiagnosticReport",
       "id": "35318325",
       "meta": {
-        "versionId": "3",
+        "versionId": "4",
         "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report" ]
       },
       "text": {
@@ -75,7 +75,7 @@
       } ],
       "identifier": [ {
         "system": "https://www.ehealth.fgov.be/lab-report/diagnostic-report-id",
-        "value": "cee111a3-7f08-4e2c-95de-ec9b973804db"
+        "value": "e5393306-b11c-4c5d-8630-ed5d306e294d"
       } ],
       "basedOn": [ {
         "reference": "ServiceRequest/220320-1003"
@@ -97,8 +97,8 @@
       "subject": {
         "reference": "Patient/405636"
       },
-      "effectiveDateTime": "2022-04-04T14:54:08+02:00",
-      "issued": "2022-04-04T14:54:03.000+02:00",
+      "effectiveDateTime": "2022-04-06T10:35:19+02:00",
+      "issued": "2022-04-06T10:35:15.000+02:00",
       "performer": [ {
         "reference": "Organization/4335"
       } ],
@@ -127,21 +127,21 @@
       }, {
         "reference": "Observation/389060981"
       }, {
-        "reference": "Observation/8be9b6b9-0ed4-42ae-ba23-56389230a5a1"
+        "reference": "Observation/be786a38-4f61-4866-953f-8acc2cc8eae3"
       }, {
-        "reference": "Observation/8db91774-1eb7-4e9a-88a8-354eced4a779"
+        "reference": "Observation/5193e8cc-615d-44a6-b32d-e9e51808e304"
       }, {
-        "reference": "Observation/8f893ae5-a433-434b-960c-579cb0ecf5d8"
+        "reference": "Observation/b8ff5c6f-10b6-4898-b728-56b5ac99e5ab"
       }, {
-        "reference": "Observation/26f109b8-5cc0-4274-9324-50af68dd1f1c"
+        "reference": "Observation/79bf968d-b4a3-452a-b0ad-9318c35242b1"
       }, {
-        "reference": "Observation/46d94eb4-dc20-4aac-bc0f-a86d65e4f079"
+        "reference": "Observation/771fb582-8a3a-4165-9c22-adc79f4d0ac8"
       }, {
-        "reference": "Observation/a2cfd2ec-8283-4501-b204-11a7a4cabf1e"
+        "reference": "Observation/25355bf1-3b73-41c8-a334-6fd1cf0c7e0a"
       }, {
-        "reference": "Observation/f33a7c25-d265-4b52-bb6b-0bbe17d606e1"
+        "reference": "Observation/3ab9ce41-d61b-4271-bda6-0ef87502c19a"
       }, {
-        "reference": "Observation/2530727c-fadf-40cc-9a04-9cc894775d7c"
+        "reference": "Observation/5c2a9ddf-7876-4304-a718-31b8c256ea98"
       } ]
     }
   }, {
@@ -209,7 +209,10 @@
       "authoredOn": "2022-03-15T16:21:00+01:00",
       "requester": {
         "reference": "Practitioner/65175"
-      }
+      },
+      "note": [ {
+        "text": "Copy to Stove Veronique"
+      } ]
     }
   }, {
     "fullUrl": "Practitioner/147772",
@@ -309,10 +312,10 @@
       } ]
     }
   }, {
-    "fullUrl": "Observation/b260ab6e-9ad5-456d-b79c-1039e8eb9c52",
+    "fullUrl": "Observation/e3539162-3b0e-4ba6-90e5-fdbf14ad869b",
     "resource": {
       "resourceType": "Observation",
-      "id": "b260ab6e-9ad5-456d-b79c-1039e8eb9c52",
+      "id": "e3539162-3b0e-4ba6-90e5-fdbf14ad869b",
       "meta": {
         "versionId": "1",
         "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
@@ -333,10 +336,10 @@
       } ]
     }
   }, {
-    "fullUrl": "Observation/8be9b6b9-0ed4-42ae-ba23-56389230a5a1",
+    "fullUrl": "Observation/be786a38-4f61-4866-953f-8acc2cc8eae3",
     "resource": {
       "resourceType": "Observation",
-      "id": "8be9b6b9-0ed4-42ae-ba23-56389230a5a1",
+      "id": "be786a38-4f61-4866-953f-8acc2cc8eae3",
       "meta": {
         "versionId": "1",
         "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
@@ -357,14 +360,14 @@
         "reference": "Patient/405636"
       },
       "hasMember": [ {
-        "reference": "Observation/b260ab6e-9ad5-456d-b79c-1039e8eb9c52"
+        "reference": "Observation/e3539162-3b0e-4ba6-90e5-fdbf14ad869b"
       } ]
     }
   }, {
-    "fullUrl": "Observation/a91f4e58-f998-4ffe-ba9a-621c2e934af9",
+    "fullUrl": "Observation/7e536126-a24b-4550-8278-d475c06a93b0",
     "resource": {
       "resourceType": "Observation",
-      "id": "a91f4e58-f998-4ffe-ba9a-621c2e934af9",
+      "id": "7e536126-a24b-4550-8278-d475c06a93b0",
       "meta": {
         "versionId": "1",
         "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
@@ -385,10 +388,10 @@
       } ]
     }
   }, {
-    "fullUrl": "Observation/8db91774-1eb7-4e9a-88a8-354eced4a779",
+    "fullUrl": "Observation/5193e8cc-615d-44a6-b32d-e9e51808e304",
     "resource": {
       "resourceType": "Observation",
-      "id": "8db91774-1eb7-4e9a-88a8-354eced4a779",
+      "id": "5193e8cc-615d-44a6-b32d-e9e51808e304",
       "meta": {
         "versionId": "1",
         "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
@@ -409,14 +412,14 @@
         "reference": "Patient/405636"
       },
       "hasMember": [ {
-        "reference": "Observation/a91f4e58-f998-4ffe-ba9a-621c2e934af9"
+        "reference": "Observation/7e536126-a24b-4550-8278-d475c06a93b0"
       } ]
     }
   }, {
-    "fullUrl": "Observation/a6e90994-38f8-4df4-90e3-098c670bcaa8",
+    "fullUrl": "Observation/1caa8698-d6a6-46af-a150-d42673b51843",
     "resource": {
       "resourceType": "Observation",
-      "id": "a6e90994-38f8-4df4-90e3-098c670bcaa8",
+      "id": "1caa8698-d6a6-46af-a150-d42673b51843",
       "meta": {
         "versionId": "1",
         "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
@@ -441,10 +444,10 @@
       } ]
     }
   }, {
-    "fullUrl": "Observation/8f893ae5-a433-434b-960c-579cb0ecf5d8",
+    "fullUrl": "Observation/b8ff5c6f-10b6-4898-b728-56b5ac99e5ab",
     "resource": {
       "resourceType": "Observation",
-      "id": "8f893ae5-a433-434b-960c-579cb0ecf5d8",
+      "id": "b8ff5c6f-10b6-4898-b728-56b5ac99e5ab",
       "meta": {
         "versionId": "1",
         "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
@@ -465,14 +468,14 @@
         "reference": "Patient/405636"
       },
       "hasMember": [ {
-        "reference": "Observation/a6e90994-38f8-4df4-90e3-098c670bcaa8"
+        "reference": "Observation/1caa8698-d6a6-46af-a150-d42673b51843"
       } ]
     }
   }, {
-    "fullUrl": "Observation/71ef7344-5f25-4a93-b58a-2b2aa032064f",
+    "fullUrl": "Observation/eabf066f-872c-4f55-8e46-f25f628be5e5",
     "resource": {
       "resourceType": "Observation",
-      "id": "71ef7344-5f25-4a93-b58a-2b2aa032064f",
+      "id": "eabf066f-872c-4f55-8e46-f25f628be5e5",
       "meta": {
         "versionId": "1",
         "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
@@ -497,10 +500,10 @@
       } ]
     }
   }, {
-    "fullUrl": "Observation/ea1225ff-a2c9-4220-8e6f-699222c31bed",
+    "fullUrl": "Observation/d9192d18-d5de-424a-a129-3738f8ab529d",
     "resource": {
       "resourceType": "Observation",
-      "id": "ea1225ff-a2c9-4220-8e6f-699222c31bed",
+      "id": "d9192d18-d5de-424a-a129-3738f8ab529d",
       "meta": {
         "versionId": "1",
         "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
@@ -521,10 +524,10 @@
       } ]
     }
   }, {
-    "fullUrl": "Observation/33c61807-c3af-454b-a3bc-558370502e70",
+    "fullUrl": "Observation/f66201d0-979a-4a6c-a9c2-0f75a917c9b4",
     "resource": {
       "resourceType": "Observation",
-      "id": "33c61807-c3af-454b-a3bc-558370502e70",
+      "id": "f66201d0-979a-4a6c-a9c2-0f75a917c9b4",
       "meta": {
         "versionId": "1",
         "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
@@ -545,16 +548,16 @@
         "reference": "Patient/405636"
       },
       "hasMember": [ {
-        "reference": "Observation/71ef7344-5f25-4a93-b58a-2b2aa032064f"
+        "reference": "Observation/eabf066f-872c-4f55-8e46-f25f628be5e5"
       }, {
-        "reference": "Observation/ea1225ff-a2c9-4220-8e6f-699222c31bed"
+        "reference": "Observation/d9192d18-d5de-424a-a129-3738f8ab529d"
       } ]
     }
   }, {
-    "fullUrl": "Observation/26f109b8-5cc0-4274-9324-50af68dd1f1c",
+    "fullUrl": "Observation/79bf968d-b4a3-452a-b0ad-9318c35242b1",
     "resource": {
       "resourceType": "Observation",
-      "id": "26f109b8-5cc0-4274-9324-50af68dd1f1c",
+      "id": "79bf968d-b4a3-452a-b0ad-9318c35242b1",
       "meta": {
         "versionId": "1",
         "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
@@ -571,14 +574,14 @@
         "reference": "Patient/405636"
       },
       "hasMember": [ {
-        "reference": "Observation/33c61807-c3af-454b-a3bc-558370502e70"
+        "reference": "Observation/f66201d0-979a-4a6c-a9c2-0f75a917c9b4"
       } ]
     }
   }, {
-    "fullUrl": "Observation/aa994468-f686-4d6d-b3e8-8f1b7d19659d",
+    "fullUrl": "Observation/7c0d1f42-de67-411d-a347-8e195081bd71",
     "resource": {
       "resourceType": "Observation",
-      "id": "aa994468-f686-4d6d-b3e8-8f1b7d19659d",
+      "id": "7c0d1f42-de67-411d-a347-8e195081bd71",
       "meta": {
         "versionId": "1",
         "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
@@ -599,10 +602,10 @@
       } ]
     }
   }, {
-    "fullUrl": "Observation/46d94eb4-dc20-4aac-bc0f-a86d65e4f079",
+    "fullUrl": "Observation/771fb582-8a3a-4165-9c22-adc79f4d0ac8",
     "resource": {
       "resourceType": "Observation",
-      "id": "46d94eb4-dc20-4aac-bc0f-a86d65e4f079",
+      "id": "771fb582-8a3a-4165-9c22-adc79f4d0ac8",
       "meta": {
         "versionId": "1",
         "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
@@ -623,14 +626,14 @@
         "reference": "Patient/405636"
       },
       "hasMember": [ {
-        "reference": "Observation/aa994468-f686-4d6d-b3e8-8f1b7d19659d"
+        "reference": "Observation/7c0d1f42-de67-411d-a347-8e195081bd71"
       } ]
     }
   }, {
-    "fullUrl": "Observation/92168a44-b2ea-4090-839d-78793b9de930",
+    "fullUrl": "Observation/0f4f6d49-505e-442b-a3b0-c1996c8d6f0b",
     "resource": {
       "resourceType": "Observation",
-      "id": "92168a44-b2ea-4090-839d-78793b9de930",
+      "id": "0f4f6d49-505e-442b-a3b0-c1996c8d6f0b",
       "meta": {
         "versionId": "1",
         "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
@@ -651,10 +654,10 @@
       } ]
     }
   }, {
-    "fullUrl": "Observation/7e13d79f-9f52-440d-9cc5-c99400c8eba6",
+    "fullUrl": "Observation/f625550f-9660-463d-b7f3-a282fa57507a",
     "resource": {
       "resourceType": "Observation",
-      "id": "7e13d79f-9f52-440d-9cc5-c99400c8eba6",
+      "id": "f625550f-9660-463d-b7f3-a282fa57507a",
       "meta": {
         "versionId": "1",
         "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
@@ -679,10 +682,10 @@
       } ]
     }
   }, {
-    "fullUrl": "Observation/a2cfd2ec-8283-4501-b204-11a7a4cabf1e",
+    "fullUrl": "Observation/25355bf1-3b73-41c8-a334-6fd1cf0c7e0a",
     "resource": {
       "resourceType": "Observation",
-      "id": "a2cfd2ec-8283-4501-b204-11a7a4cabf1e",
+      "id": "25355bf1-3b73-41c8-a334-6fd1cf0c7e0a",
       "meta": {
         "versionId": "1",
         "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
@@ -699,16 +702,16 @@
         "reference": "Patient/405636"
       },
       "hasMember": [ {
-        "reference": "Observation/92168a44-b2ea-4090-839d-78793b9de930"
+        "reference": "Observation/0f4f6d49-505e-442b-a3b0-c1996c8d6f0b"
       }, {
-        "reference": "Observation/7e13d79f-9f52-440d-9cc5-c99400c8eba6"
+        "reference": "Observation/f625550f-9660-463d-b7f3-a282fa57507a"
       } ]
     }
   }, {
-    "fullUrl": "Observation/f33a7c25-d265-4b52-bb6b-0bbe17d606e1",
+    "fullUrl": "Observation/3ab9ce41-d61b-4271-bda6-0ef87502c19a",
     "resource": {
       "resourceType": "Observation",
-      "id": "f33a7c25-d265-4b52-bb6b-0bbe17d606e1",
+      "id": "3ab9ce41-d61b-4271-bda6-0ef87502c19a",
       "meta": {
         "versionId": "1",
         "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
@@ -739,10 +742,10 @@
       } ]
     }
   }, {
-    "fullUrl": "Observation/2530727c-fadf-40cc-9a04-9cc894775d7c",
+    "fullUrl": "Observation/5c2a9ddf-7876-4304-a718-31b8c256ea98",
     "resource": {
       "resourceType": "Observation",
-      "id": "2530727c-fadf-40cc-9a04-9cc894775d7c",
+      "id": "5c2a9ddf-7876-4304-a718-31b8c256ea98",
       "meta": {
         "versionId": "1",
         "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
@@ -1130,19 +1133,7 @@
         "reference": "Patient/405636"
       },
       "issued": "2022-03-24T17:21:25.000+01:00",
-      "valueString": "StopGezet",
-      "note": [ {
-        "extension": [ {
-          "url": "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/annotation-code",
-          "valueCodeableConcept": {
-            "coding": [ {
-              "system": "https://www.ehealth.fgov.be/standards/fhir/CodeSystem/be-cs-coded-annotation-types",
-              "code": "lab-test-accreditation"
-            } ]
-          }
-        } ],
-        "text": "No"
-      } ]
+      "valueString": "StopGezet"
     }
   }, {
     "fullUrl": "Observation/389060981",
@@ -1172,19 +1163,7 @@
         "reference": "Patient/405636"
       },
       "issued": "2022-03-24T17:21:12.000+01:00",
-      "valueString": "StopGezet",
-      "note": [ {
-        "extension": [ {
-          "url": "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/annotation-code",
-          "valueCodeableConcept": {
-            "coding": [ {
-              "system": "https://www.ehealth.fgov.be/standards/fhir/CodeSystem/be-cs-coded-annotation-types",
-              "code": "lab-test-accreditation"
-            } ]
-          }
-        } ],
-        "text": "No"
-      } ]
+      "valueString": "StopGezet"
     }
   }, {
     "fullUrl": "Observation/389060976",
@@ -1220,18 +1199,6 @@
         "system": "http://unitsofmeasure.org",
         "code": "/100{WBC}"
       },
-      "note": [ {
-        "extension": [ {
-          "url": "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/annotation-code",
-          "valueCodeableConcept": {
-            "coding": [ {
-              "system": "https://www.ehealth.fgov.be/standards/fhir/CodeSystem/be-cs-coded-annotation-types",
-              "code": "lab-test-accreditation"
-            } ]
-          }
-        } ],
-        "text": "No"
-      } ],
       "specimen": {
         "reference": "Specimen/220320100306"
       },
@@ -1275,18 +1242,6 @@
         "value": 2,
         "system": "http://unitsofmeasure.org"
       },
-      "note": [ {
-        "extension": [ {
-          "url": "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/annotation-code",
-          "valueCodeableConcept": {
-            "coding": [ {
-              "system": "https://www.ehealth.fgov.be/standards/fhir/CodeSystem/be-cs-coded-annotation-types",
-              "code": "lab-test-accreditation"
-            } ]
-          }
-        } ],
-        "text": "No"
-      } ],
       "specimen": {
         "reference": "Specimen/220320100305"
       },
@@ -1339,18 +1294,6 @@
           "code": "H"
         } ]
       } ],
-      "note": [ {
-        "extension": [ {
-          "url": "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/annotation-code",
-          "valueCodeableConcept": {
-            "coding": [ {
-              "system": "https://www.ehealth.fgov.be/standards/fhir/CodeSystem/be-cs-coded-annotation-types",
-              "code": "lab-test-accreditation"
-            } ]
-          }
-        } ],
-        "text": "No"
-      } ],
       "specimen": {
         "reference": "Specimen/220320100304"
       },
@@ -1398,18 +1341,6 @@
         "system": "http://unitsofmeasure.org",
         "code": "mmol/L"
       },
-      "note": [ {
-        "extension": [ {
-          "url": "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/annotation-code",
-          "valueCodeableConcept": {
-            "coding": [ {
-              "system": "https://www.ehealth.fgov.be/standards/fhir/CodeSystem/be-cs-coded-annotation-types",
-              "code": "lab-test-accreditation"
-            } ]
-          }
-        } ],
-        "text": "No"
-      } ],
       "specimen": {
         "reference": "Specimen/220320100301"
       }
@@ -1447,18 +1378,6 @@
         "system": "http://unitsofmeasure.org",
         "code": "mmol/L"
       },
-      "note": [ {
-        "extension": [ {
-          "url": "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/annotation-code",
-          "valueCodeableConcept": {
-            "coding": [ {
-              "system": "https://www.ehealth.fgov.be/standards/fhir/CodeSystem/be-cs-coded-annotation-types",
-              "code": "lab-test-accreditation"
-            } ]
-          }
-        } ],
-        "text": "No"
-      } ],
       "specimen": {
         "reference": "Specimen/220320100301"
       }
@@ -1491,18 +1410,6 @@
         "reference": "Patient/405636"
       },
       "valueString": "volgt",
-      "note": [ {
-        "extension": [ {
-          "url": "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/annotation-code",
-          "valueCodeableConcept": {
-            "coding": [ {
-              "system": "https://www.ehealth.fgov.be/standards/fhir/CodeSystem/be-cs-coded-annotation-types",
-              "code": "lab-test-accreditation"
-            } ]
-          }
-        } ],
-        "text": "No"
-      } ],
       "specimen": {
         "reference": "Specimen/220320100301"
       },
@@ -1553,18 +1460,6 @@
         "system": "http://unitsofmeasure.org",
         "code": "mg/L"
       },
-      "note": [ {
-        "extension": [ {
-          "url": "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/annotation-code",
-          "valueCodeableConcept": {
-            "coding": [ {
-              "system": "https://www.ehealth.fgov.be/standards/fhir/CodeSystem/be-cs-coded-annotation-types",
-              "code": "lab-test-accreditation"
-            } ]
-          }
-        } ],
-        "text": "No"
-      } ],
       "specimen": {
         "reference": "Specimen/220320100301"
       },
@@ -1623,17 +1518,6 @@
       } ],
       "note": [ {
         "text": "Buis ontvangen op: 24/03/2022/16:46"
-      }, {
-        "extension": [ {
-          "url": "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/annotation-code",
-          "valueCodeableConcept": {
-            "coding": [ {
-              "system": "https://www.ehealth.fgov.be/standards/fhir/CodeSystem/be-cs-coded-annotation-types",
-              "code": "lab-test-accreditation"
-            } ]
-          }
-        } ],
-        "text": "No"
       } ],
       "specimen": {
         "reference": "Specimen/220320100307"
@@ -1683,17 +1567,6 @@
       } ],
       "note": [ {
         "text": "Gewijzigde referentiewaarde sinds 15/03/2022. Resultaten liggen gemiddeld 10% hoger"
-      }, {
-        "extension": [ {
-          "url": "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/annotation-code",
-          "valueCodeableConcept": {
-            "coding": [ {
-              "system": "https://www.ehealth.fgov.be/standards/fhir/CodeSystem/be-cs-coded-annotation-types",
-              "code": "lab-test-accreditation"
-            } ]
-          }
-        } ],
-        "text": "No"
       } ],
       "specimen": {
         "reference": "Specimen/220320100303"
@@ -1734,18 +1607,6 @@
         "reference": "Patient/405636"
       },
       "valueString": "volgt",
-      "note": [ {
-        "extension": [ {
-          "url": "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/annotation-code",
-          "valueCodeableConcept": {
-            "coding": [ {
-              "system": "https://www.ehealth.fgov.be/standards/fhir/CodeSystem/be-cs-coded-annotation-types",
-              "code": "lab-test-accreditation"
-            } ]
-          }
-        } ],
-        "text": "No"
-      } ],
       "specimen": {
         "reference": "Specimen/220320100303"
       },
@@ -1787,18 +1648,6 @@
         "system": "http://unitsofmeasure.org",
         "code": "ug/L"
       },
-      "note": [ {
-        "extension": [ {
-          "url": "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/annotation-code",
-          "valueCodeableConcept": {
-            "coding": [ {
-              "system": "https://www.ehealth.fgov.be/standards/fhir/CodeSystem/be-cs-coded-annotation-types",
-              "code": "lab-test-accreditation"
-            } ]
-          }
-        } ],
-        "text": "No"
-      } ],
       "specimen": {
         "reference": "Specimen/220320100303"
       },
@@ -1839,18 +1688,6 @@
         "system": "http://unitsofmeasure.org",
         "code": "U/L"
       },
-      "note": [ {
-        "extension": [ {
-          "url": "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/annotation-code",
-          "valueCodeableConcept": {
-            "coding": [ {
-              "system": "https://www.ehealth.fgov.be/standards/fhir/CodeSystem/be-cs-coded-annotation-types",
-              "code": "lab-test-accreditation"
-            } ]
-          }
-        } ],
-        "text": "No"
-      } ],
       "specimen": {
         "reference": "Specimen/220320100303"
       },
@@ -1891,18 +1728,6 @@
         "system": "http://unitsofmeasure.org",
         "code": "%"
       },
-      "note": [ {
-        "extension": [ {
-          "url": "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/annotation-code",
-          "valueCodeableConcept": {
-            "coding": [ {
-              "system": "https://www.ehealth.fgov.be/standards/fhir/CodeSystem/be-cs-coded-annotation-types",
-              "code": "lab-test-accreditation"
-            } ]
-          }
-        } ],
-        "text": "No"
-      } ],
       "specimen": {
         "reference": "Specimen/220320100308"
       },
@@ -1951,17 +1776,6 @@
       } ],
       "note": [ {
         "text": "Positief"
-      }, {
-        "extension": [ {
-          "url": "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/annotation-code",
-          "valueCodeableConcept": {
-            "coding": [ {
-              "system": "https://www.ehealth.fgov.be/standards/fhir/CodeSystem/be-cs-coded-annotation-types",
-              "code": "lab-test-accreditation"
-            } ]
-          }
-        } ],
-        "text": "No"
       } ],
       "specimen": {
         "reference": "Specimen/220320100308"
@@ -1999,18 +1813,6 @@
       },
       "issued": "2022-03-24T16:59:41.000+01:00",
       "valueString": "Negatief",
-      "note": [ {
-        "extension": [ {
-          "url": "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/annotation-code",
-          "valueCodeableConcept": {
-            "coding": [ {
-              "system": "https://www.ehealth.fgov.be/standards/fhir/CodeSystem/be-cs-coded-annotation-types",
-              "code": "lab-test-accreditation"
-            } ]
-          }
-        } ],
-        "text": "No"
-      } ],
       "specimen": {
         "reference": "Specimen/220320100308"
       },
@@ -2047,18 +1849,6 @@
       },
       "issued": "2022-03-24T16:59:52.000+01:00",
       "valueString": "negatief",
-      "note": [ {
-        "extension": [ {
-          "url": "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/annotation-code",
-          "valueCodeableConcept": {
-            "coding": [ {
-              "system": "https://www.ehealth.fgov.be/standards/fhir/CodeSystem/be-cs-coded-annotation-types",
-              "code": "lab-test-accreditation"
-            } ]
-          }
-        } ],
-        "text": "No"
-      } ],
       "specimen": {
         "reference": "Specimen/220320100308"
       }
@@ -2094,17 +1884,6 @@
       "valueString": "negatief",
       "note": [ {
         "text": "Analyse enkel gevalideerd op lumbaal vocht."
-      }, {
-        "extension": [ {
-          "url": "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/annotation-code",
-          "valueCodeableConcept": {
-            "coding": [ {
-              "system": "https://www.ehealth.fgov.be/standards/fhir/CodeSystem/be-cs-coded-annotation-types",
-              "code": "lab-test-accreditation"
-            } ]
-          }
-        } ],
-        "text": "No"
       } ],
       "specimen": {
         "reference": "Specimen/220320100310"

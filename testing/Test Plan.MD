@@ -261,7 +261,7 @@ Work in progress; following may not be complete:
 
 ### 4.5 Comments on level DiagnosticReport 
 * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/MIPS/UZG_scenario4
-TBD!!!
+* macsys: TBD!!!
 
 ## 5.	Specimen Management
 
@@ -298,6 +298,8 @@ ISSUE: does this case cover a missing butexpected sample?  If not we need an ext
 ## 6.	Edits on Protocol Level
 
 **This whole section is not relevant for/not tested by visualisation tool**
+
+6A-6F Mips: https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/MIPS/UZG_scenario6
 
 6A: Protocol with partial results followed by same protocol with final results
 * Test files:
@@ -340,8 +342,11 @@ ISSUE: does this case cover a missing butexpected sample?  If not we need an ext
   * TBD
 * Acceptance criteria
   * Upon reception of a protocol, for which the receiver had already received a later version, the data in the receiver system is not updated.  I.e. any data in the older version of the protocol shall not overwrite data from the newer version of the protocol.
- 
+
+
 ## 7.	Time Series
+
+https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/MIPS/UZG_scenario7
 
 7A: Time series, LOINC coded
 * Test files:
@@ -380,6 +385,15 @@ ISSUE: does this case cover a missing butexpected sample?  If not we need an ext
   * ???? TBD
 * Acceptance criterion:
   * For every non-embedded annex, corresponding media section of the FHIR message lists the existence of the annex, and provides information as to how and where the non-embedded annex may be found or consulted.
+
+8E: Annex on Observation Level
+
+This case is e.g. when the sender prefers to link electrophoresis images to the electrophoresis observation.
+This case is not applicable to Macsys
+* Test files
+  * ???
+* Acceptance criterion:
+  * TBD for those who provide this case   
 
 
 ## 9.	Microbiology
