@@ -384,7 +384,7 @@ The impact of that will however be minimal as both use the FHIR datatype Attachm
 <a name="Use of LOINC-codes in Antibiotic result values"></a>
 <h4>Use of LOINC-codes in Antibiotic result values</h4>
 <p>An antibiotics result can have multiple values (RIS, MIC, ETEST, AGAR). Each result SHALL be expressed as a separate observations. Create an observation for MIC, ETEST and AGAR (when available) and use the RIS as an interpretation.</p>
-
+<p>If an observation only contains the RIS value as a result, then it SHALL also be present in the interpretation field. However, for the visualization in systems for practitioners, we RECOMMEND that if the RIS value and the interpretation are identical, we only show the value, to avoid visual duplication.<p>
 <p>Link these observations using the 'observation.derivedFrom'.</p>
 
 <p>Finally, use dedicated LOINC codes for the MIC, ETEST and AGAR observations. For example: </p>
