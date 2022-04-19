@@ -214,7 +214,7 @@ It is allowed to use multiple codes within the FHIR CodeableConcept datatype. Bu
 <ul><li><pre>"code":{
 	"coding":[
 		{
-			"system": "https://www.ehealth.fgov.be/standards/fhir/CodeSystem/albert",
+			"system": "https://www.ehealth.fgov.be/standards/fhir/lab/CodeSystem/albert",
 			"code": "26224",
 			"display": "Glucose (urine 24h)"
 		}
@@ -388,7 +388,7 @@ The impact of that will however be minimal as both use the FHIR datatype Attachm
 <a name="Use of LOINC-codes in Antibiotic result values"></a>
 <h4>Use of LOINC-codes in Antibiotic result values</h4>
 <p>An antibiotics result can have multiple values (RIS, MIC, ETEST, AGAR). Each result SHALL be expressed as a separate observations. Create an observation for MIC, ETEST and AGAR (when available) and use the RIS as an interpretation.</p>
-<p>If an observation only contains the RIS value as a result, then it SHALL also be present in the interpretation field. However, for the visualization in systems for practitioners, we RECOMMEND that if the RIS value and the interpretation are identical, we only show the value, to avoid visual duplication.<p>
+<p>If an observation only contains the RIS value as a result, then it SHALL also be present in the interpretation field. However, for the visualization in systems for practitioners, we RECOMMEND that if the RIS value and the interpretation are identical, we only show the value, to avoid visual duplication.</p>
 <p>Link these observations using the 'observation.derivedFrom'.</p>
 
 <p>Finally, use dedicated LOINC codes for the MIC, ETEST and AGAR observations. For example: </p>
@@ -427,7 +427,7 @@ Thus avoiding the need to include a full Patient resource or a reference to a fu
  <pre>
   &lt;subject&gt;
      &lt;identifier>
-        &lt;system value="https://www.ehealth.fgov.be/standards/fhir/NamingSystem/ssin"/&gt;
+        &lt;system value="https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/ssin"/&gt;
 	&lt;value value="79121137740"/&gt;
      &lt;/identifier&gt;
    &lt;/subject&gt;
@@ -462,7 +462,7 @@ Thus avoiding the need to include a full Practitioner resource or a reference to
 <p>This guide uses the artefacts and guidance as they are defined in <a href="https://www.ehealth.fgov.be/standards/kmehr/en/page/fhir-profiles">the official federal IG as published by eHealth Platform</a>. Implementers 
 SHALL take note of the guidelines defined in that IG. 
 Please take note when you are technically validating against the IG described on this page 
-you also need that IG for the base federal profiles. Once this IG is considered no longer a work in progress, it will follow procedures to be fully integrated in the federal IG.</p>
+you also need that IG for the base federal profiles.</p>
 <a name="Technical implementation of the specification published here"></a>
 <h4>Technical implementation of the specification published here</h4>
 <p>As per the FHIR standard specifications, there are multiple ways in how the report can be exchanged or requested.</p>

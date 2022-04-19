@@ -1,6 +1,8 @@
 Instance: mac60
 InstanceOf: BeObservationLaboratory
 Usage: #inline
+* text.status = #empty
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>empty</div>"
 * status = #final
 * code = $loinc#74574-5 "Macroscopic observation [Interpretation] in Unspecified specimen Narrative"
 * code.text = "Macroscopic observation"

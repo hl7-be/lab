@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ImplementationGuide xmlns="http://hl7.org/fhir">
-   <id value="hl7.country.fhir.ig"/>
+   <id value="hl7.fhir.be.lab"/>
    <text>
       <status value="extensions"/>
       <div xmlns="http://www.w3.org/1999/xhtml">
-         <h2>AffiliateIG</h2>
+         <h2>Laboratory Implementation Guide</h2>
          <p>The official URL for this implementation guide is: </p>
-         <pre>http://hl7.country.org/fhir/ig/ImplementationGuide/hl7.country.fhir.ig</pre>
+         <pre>https://www.ehealth.fgov.be/standards/fhir/lab/ImplementationGuide/hl7.fhir.be.lab</pre>
          <div>
             <p>A barebones ImplementationGuide for HL7 Affiliates</p>
          </div>
       </div>
    </text>
-   <url value="http://hl7.country.org/fhir/ig/ImplementationGuide/hl7.country.fhir.ig"/>
+   <url value="https://www.ehealth.fgov.be/standards/fhir/lab/ImplementationGuide/hl7.fhir.be.lab"/>
    <version value="0.2.0"/>
-   <name value="AffiliateIG"/>
+   <name value="Laboratory Implementation Guide"/>
    <title value="HL7 BE Laboratory Result WG Implementation Guide (work in progress)"/>
    <status value="draft"/>
    <experimental value="false"/>
@@ -33,7 +33,7 @@
          <code value="001"/>
       </coding>
    </jurisdiction>
-   <packageId value="hl7.country.fhir.ig"/>
+   <packageId value="hl7.fhir.be.lab"/>
    <license value="CC0-1.0"/>
    <fhirVersion value="4.0.1"/>
    <definition>

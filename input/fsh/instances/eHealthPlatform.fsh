@@ -1,6 +1,8 @@
 Instance: eHealthPlatform
 InstanceOf: BeOrganization
 Usage: #definition
+* text.status = #empty
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>empty</div>"
 * active = true
 * name = "eHealth Platform"
 * telecom.system = #phone

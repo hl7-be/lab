@@ -1,8 +1,10 @@
 Instance: patient1
 InstanceOf: BePatient
 Usage: #definition
+* text.status = #empty
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>empty</div>"
 * identifier.use = #official
-* identifier.system = "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/ssin"
+* identifier.system = "https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/ssin"
 * identifier.value = "79121137740"
 * active = true
 * name.family = "La Paradisio"

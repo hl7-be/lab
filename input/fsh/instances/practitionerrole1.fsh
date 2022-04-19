@@ -1,6 +1,8 @@
 Instance: practitionerrole1
 InstanceOf: BePractitionerRole
 Usage: #definition
+* text.status = #empty
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>empty</div>"
 * identifier.system = "http://www.acme.org/practitioners"
 * identifier.value = "23"
 * active = true

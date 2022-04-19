@@ -1,6 +1,8 @@
 Instance: org52-temocillin
 InstanceOf: BeObservationLaboratory
 Usage: #inline
+* text.status = #empty
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>empty</div>"
 * status = #final
 * code = $loinc#492-9 "Temocillin [Susceptibility] by Minimum inhibitory concentration (MIC)"
 * code.text = "Temocillin"

@@ -1,6 +1,8 @@
 Instance: cult60
 InstanceOf: BeObservationLaboratory
 Usage: #inline
+* text.status = #empty
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>empty</div>"
 * status = #final
 * code = $loinc#43411-8 "Bacteria identified in Aspirate by Culture"
 * code.text = "Culture"

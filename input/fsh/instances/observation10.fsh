@@ -1,6 +1,8 @@
 Instance: observation10
 InstanceOf: BeObservationLaboratory
 Usage: #inline
+* text.status = #empty
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>empty</div>"
 * status = #final
 * code = $loinc#30341-2 "Erythrocyte sedimentation rate"
 * subject = Reference(Patient/patient1)

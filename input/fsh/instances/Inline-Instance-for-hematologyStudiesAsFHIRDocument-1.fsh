@@ -1,6 +1,8 @@
 Instance: Inline-Instance-for-hematologyStudiesAsFHIRDocument-1
 InstanceOf: BeLaboratoryReportComposition
 Usage: #inline
+* text.status = #empty
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>empty</div>"
 * id = "180f219f-97a8-486d-99d9-ed631fe4fc57"
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:dbcf0eb0-d825-11eb-b8bc-0242ac130003"

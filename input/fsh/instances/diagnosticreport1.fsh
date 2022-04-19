@@ -1,10 +1,11 @@
 Instance: diagnosticreport1
 InstanceOf: BeLaboratoryReport
 Usage: #inline
+* text.status = #empty
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>empty</div>"
 * meta.versionId = "1"
 * language = #en
-* identifier.system = "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/be-ns-lab-report-diagnostic-report-id"
-* identifier.value = "11530231003.2015110413180000000"
+* identifier[DRID].value = "11530231003.2015110413180000000"
 * basedOn = Reference(servicerequest1)
 * status = #final
 * category = $v2-0074#LAB "Laboratory"

@@ -7,16 +7,16 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 
 
-id: my-ig
-canonical: https://www.ehealth.fgov.be/standards/fhir
-url: http://example.com/fhir/example
-name: ExampleIG
-title: "HL7 BE Laboratory Result WG Implementation Guide (work in progress)"
-description: HL7 BE Laboratory Result WG Implementation Guide (work in progress)
-status: draft
+id: hl7.fhir.be.lab
+canonical: https://www.ehealth.fgov.be/standards/fhir/lab
+url: https://www.ehealth.fgov.be/standards/fhir/lab
+name: Laboratory
+title: "HL7 BE Laboratory WG Implementation Guide"
+description: HL7 BE Laboratory WG Implementation Guide
+status: active
 license: CC0-1.0
 date: 2020-02-26
-version: 0.2.0
+version: 1.0.0
 
 # Although fhirVersions is 0..* in the ImplementationGuide resource
 # it can be a single item OR and array here (but so far SUSHI only
@@ -51,8 +51,8 @@ contact:
 # The jurisdiction can be a single item or a list. The FHIR Shorthand
 # code syntax can be used here.
 
-#jurisdiction: urn:iso:std:iso:3166#US "United States of America"
-jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#056 "Belgium"
+jurisdiction: urn:iso:std:iso:3166#BE "Belgium"
+#jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#056 "Belgium"
 
 
 # The dependencies property corresponds to IG.dependsOn. The key is the
@@ -186,10 +186,11 @@ FSHOnly: false
 #applyExtensionMetadataToRoot: false
 
 #dependencies:
-#  ehealthplatform.be.r4.federalprofiles:
-#    uri: https://simplifier.net/packages/ehealthplatform.be.r4.federalprofiles/1.2.2/snapshots/$download 
+#  hl7.fhir.be.core:
+#    uri: https://simplifier.net/packages/hl7.fhir.be.core/2.0.0/snapshots/$download 
 #    uri: https://www.ehealth.fgov.be/standards/fhir/
-#    version: 1.2.x
+#    version: 2.0.0
 
 dependencies:
-  hl7.be.fhir.core: current
+  hl7.fhir.be.core: 2.0.0
+  hl7.fhir.be.core-clinical: dev
