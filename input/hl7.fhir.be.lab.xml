@@ -4,20 +4,20 @@
   <id value="hl7.fhir.be.lab"/>
   <url value="https://www.ehealth.fgov.be/standards/fhir/lab"/>
   <!-- This version will propagate to all artifacts unless the "propagate-version" extension is overridden -->
-  <version value="0.0.7"/>
+  <version value="1.0.0"/>
   <name value="Laboratory Implementation Guide"/>
-  <title value="HL7 BE Laboratory Result WG Implementation Guide (work in progress)"/>
-  <status value="draft"/>
+  <title value="HL7 BE Laboratory WG Implementation Guide"/>
+  <status value="STU"/>
   <experimental value="false"/>
-  <publisher value="HL7 Belgium"/>
+  <publisher value="eHealth Platform"/>
   <contact>
     <telecom>
       <!-- Or whatever URL and/or email address(es) are appropriate -->
       <system value="url"/>
-      <value value="http://hl7belgium.org"/>
+      <value value="https://www.ehealth.fgov.be"/>
     </telecom>
   </contact>
-  <description value="A barebones ImplementationGuide for HL7 Affiliates"/>
+  <description value="HL7 BE Laboratory WG Implementation Guide"/>
   <jurisdiction>
     <!-- This will drive SNOMED release used -->
     <coding>
@@ -258,6 +258,10 @@
     <parameter>
       <code value="copyrightyear"/>
       <value value="2019+"/>
+    </parameter>
+    <parameter>
+      <code value="propagate-status"/>
+      <value value="true"/>
     </parameter>
     <!-- releaselabel should be the ballot status for HL7-published IGs. -->
     <parameter>
