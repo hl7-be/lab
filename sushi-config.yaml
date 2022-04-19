@@ -11,12 +11,12 @@ id: hl7.fhir.be.lab
 canonical: https://www.ehealth.fgov.be/standards/fhir/lab
 url: https://www.ehealth.fgov.be/standards/fhir/lab
 name: Laboratory
-title: "HL7 BE Laboratory Result WG Implementation Guide (work in progress)"
-description: HL7 BE Laboratory Result WG Implementation Guide (work in progress)
-status: draft
+title: "HL7 BE Laboratory WG Implementation Guide"
+description: HL7 BE Laboratory WG Implementation Guide
+status: active
 license: CC0-1.0
 date: 2020-02-26
-version: 0.2.0
+version: 1.0.0
 
 # Although fhirVersions is 0..* in the ImplementationGuide resource
 # it can be a single item OR and array here (but so far SUSHI only
