@@ -2,17 +2,17 @@
   "resourceType": "Bundle",
   "identifier": {
     "system": "https://www.ehealth.fgov.be/hl7/bundle",
-    "value": "9b156a50-b4d3-4531-89e8-7ec151069b4a"
+    "value": "fe88441f-9c6c-4e87-a1b9-547d8c2f92ed"
   },
   "type": "document",
-  "timestamp": "2022-04-12T10:18:01.420+02:00",
+  "timestamp": "2022-04-19T10:02:27.523+02:00",
   "entry": [ {
     "fullUrl": "Composition/35318270",
     "resource": {
       "resourceType": "Composition",
       "id": "35318270",
       "meta": {
-        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-laboratory-report-composition" ]
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report-composition" ]
       },
       "text": {
         "status": "empty",
@@ -20,7 +20,7 @@
       },
       "identifier": {
         "system": "https://www.ehealth.fgov.be/lab-report/diagnostic-report-id",
-        "value": "9b156a50-b4d3-4531-89e8-7ec151069b4a"
+        "value": "fe88441f-9c6c-4e87-a1b9-547d8c2f92ed"
       },
       "status": "final",
       "type": {
@@ -33,7 +33,7 @@
       "subject": {
         "reference": "Patient/1252172"
       },
-      "date": "2022-04-12T10:18:01+02:00",
+      "date": "2022-04-19T10:02:27+02:00",
       "author": [ {
         "reference": "Organization/4335"
       } ],
@@ -50,8 +50,8 @@
       "resourceType": "DiagnosticReport",
       "id": "35318270",
       "meta": {
-        "versionId": "8",
-        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-laboratory-report" ]
+        "versionId": "11",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report" ]
       },
       "text": {
         "status": "empty",
@@ -59,7 +59,7 @@
       },
       "identifier": [ {
         "system": "https://www.ehealth.fgov.be/lab-report/diagnostic-report-id",
-        "value": "9b156a50-b4d3-4531-89e8-7ec151069b4a"
+        "value": "fe88441f-9c6c-4e87-a1b9-547d8c2f92ed"
       } ],
       "basedOn": [ {
         "reference": "ServiceRequest/211126-3044"
@@ -82,7 +82,7 @@
       "subject": {
         "reference": "Patient/1252172"
       },
-      "effectiveDateTime": "2022-04-12T10:18:01+02:00",
+      "effectiveDateTime": "2022-04-19T10:02:27+02:00",
       "issued": "2022-03-11T16:07:44.000+01:00",
       "performer": [ {
         "reference": "Organization/4335"
@@ -91,7 +91,7 @@
         "reference": "Specimen/211126304401"
       } ],
       "result": [ {
-        "reference": "Observation/aeb85b26-eeae-4300-9673-5dea3672cee6"
+        "reference": "Observation/e059a9f9-bd9d-4e2d-a693-c9bf6b2e2f93"
       } ]
     }
   }, {
@@ -101,7 +101,7 @@
       "id": "1252172",
       "meta": {
         "versionId": "1",
-        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-patient" ]
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-patient" ]
       },
       "text": {
         "status": "empty",
@@ -109,7 +109,7 @@
       },
       "identifier": [ {
         "use": "official",
-        "system": "https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/ssin",
+        "system": "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/ssin",
         "value": "01482105560"
       }, {
         "system": "https://www.uzgent.be",
@@ -168,7 +168,7 @@
       "id": "3018623",
       "meta": {
         "versionId": "1",
-        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-practitioner" ]
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-practitioner" ]
       },
       "text": {
         "status": "empty",
@@ -216,13 +216,13 @@
       } ]
     }
   }, {
-    "fullUrl": "Observation/aeb85b26-eeae-4300-9673-5dea3672cee6",
+    "fullUrl": "Observation/e059a9f9-bd9d-4e2d-a693-c9bf6b2e2f93",
     "resource": {
       "resourceType": "Observation",
-      "id": "aeb85b26-eeae-4300-9673-5dea3672cee6",
+      "id": "e059a9f9-bd9d-4e2d-a693-c9bf6b2e2f93",
       "meta": {
         "versionId": "1",
-        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory" ]
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
       },
       "text": {
         "status": "empty",
@@ -358,7 +358,7 @@
       "id": "388289510",
       "meta": {
         "versionId": "1",
-        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory" ]
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
       },
       "text": {
         "status": "empty",
@@ -388,7 +388,7 @@
       "id": "388529871",
       "meta": {
         "versionId": "1",
-        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory" ]
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
       },
       "text": {
         "status": "empty",
@@ -421,7 +421,7 @@
       "id": "388289517",
       "meta": {
         "versionId": "1",
-        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory" ]
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
       },
       "text": {
         "status": "empty",
@@ -454,7 +454,7 @@
       "id": "388516000",
       "meta": {
         "versionId": "1",
-        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory" ]
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
       },
       "text": {
         "status": "empty",
@@ -475,7 +475,7 @@
         "reference": "Patient/1252172"
       },
       "issued": "2021-12-01T13:34:46.000+01:00",
-      "valueString": "1   4\nAmoxicilline             R\nVancomycine              S\nOfloxacine/levofloxacine R\nCefalosporines           R       Intrinsieke resistentie\nMeropenem                    S",
+      "valueString": "                         1   4\nAmoxicilline             R\nVancomycine              S\nOfloxacine/levofloxacine R\nCefalosporines           R       Intrinsieke resistentie\nMeropenem                    S",
       "specimen": {
         "reference": "Specimen/211126304401"
       }
@@ -487,7 +487,7 @@
       "id": "388529593",
       "meta": {
         "versionId": "1",
-        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory" ]
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
       },
       "text": {
         "status": "empty",
@@ -520,7 +520,7 @@
       "id": "388289513",
       "meta": {
         "versionId": "1",
-        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory" ]
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
       },
       "text": {
         "status": "empty",
@@ -553,7 +553,7 @@
       "id": "388289514",
       "meta": {
         "versionId": "1",
-        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory" ]
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
       },
       "text": {
         "status": "empty",
@@ -586,7 +586,7 @@
       "id": "211126304401",
       "meta": {
         "versionId": "1",
-        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-specimen-laboratory" ]
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-specimen-laboratory" ]
       },
       "text": {
         "status": "empty",

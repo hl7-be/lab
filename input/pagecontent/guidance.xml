@@ -336,13 +336,14 @@ further guidance.</p>
 
 <a name="Use of images"></a>
 <h3>Use of images</h3>
-<p>Note, when it is needed to include a PDF representation, there exists a seperate element for that cfr. supra</p>
+<p>Note, when it is needed to include a PDF representation, there exists a separate element for that cfr. supra</p>
 <p>If there is a need to add images in general to the report, 
 they can be referenced from the diagnosticReport resource itself via the .media element.
 A typical example would be to include a scatter diagram.</p>
 <p>Such images SHALL be available in the exchanged message itself. (Meaning the Media resource
 contains the full Base64 and this resource is available as seperate resource in a FHIR Bundle or as a contained
-resource in the DiagnosticReport.) </p> 
+resource in the DiagnosticReport.) </p>
+<p>Images are allowed both on the Report level and the Observation level.</p> 
 <a name="Caution concerning the size of images"></a>
 <h4>Caution concerning the size of images</h4>
 <p>Use of images SHALL be done with caution towards consumers concerning possible heavy payloads.</p>
@@ -351,7 +352,7 @@ Many elements are available within the Media resource to further define,
 in the below example, minimal use is made of the Media resource to only highlight the bare essentials. 
 This limited use of this resource in this
 guide was a very conscious choice as it appears the Media resource
- is abanded in future FHIR versions in favor of the DocumentReference resource.
+ is abandoned in future FHIR versions in favor of the DocumentReference resource.
 The impact of that will however be minimal as both use the FHIR datatype Attachment to express the actual content.
 <pre>
 "resource" : {
@@ -374,17 +375,20 @@ The impact of that will however be minimal as both use the FHIR datatype Attachm
  <p>It basically leverages the third way as described supra how to group resources:</p>
  <ul>
   <li>Any general Observation that is done is on the level of the report.</li>
- <li>For each organism there is an Observation on the level of the report: the 'organism observation'
+  <li>If there are many cultures, you can add culture observations, which have organism observatons as members.</li>
+ <li>For each organism there is an Observation on the level of the report, or on the level of the culture observation: the 'organism observation'
  <ul>
  <li>Every panel Observation on the organism is referenced via a .hasMember in that 'organism observation'</li>  
  </ul>
  
  </li>
 </ul>
+<p>In order to obtain a visualization that is intuitive for practioners, we suggest that microbiology results be presented as a table.</p>
+
 <a name="Use of LOINC-codes in Antibiotic result values"></a>
 <h4>Use of LOINC-codes in Antibiotic result values</h4>
 <p>An antibiotics result can have multiple values (RIS, MIC, ETEST, AGAR). Each result SHALL be expressed as a separate observations. Create an observation for MIC, ETEST and AGAR (when available) and use the RIS as an interpretation.</p>
-
+<p>If an observation only contains the RIS value as a result, then it SHALL also be present in the interpretation field. However, for the visualization in systems for practitioners, we RECOMMEND that if the RIS value and the interpretation are identical, we only show the value, to avoid visual duplication.<p>
 <p>Link these observations using the 'observation.derivedFrom'.</p>
 
 <p>Finally, use dedicated LOINC codes for the MIC, ETEST and AGAR observations. For example: </p>
