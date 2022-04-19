@@ -383,6 +383,8 @@ The impact of that will however be minimal as both use the FHIR datatype Attachm
  
  </li>
 </ul>
+<p>In order to obtain a visualization that is intuitive for practioners, we suggest that microbiology results be presented as a table.</p>
+
 <a name="Use of LOINC-codes in Antibiotic result values"></a>
 <h4>Use of LOINC-codes in Antibiotic result values</h4>
 <p>An antibiotics result can have multiple values (RIS, MIC, ETEST, AGAR). Each result SHALL be expressed as a separate observations. Create an observation for MIC, ETEST and AGAR (when available) and use the RIS as an interpretation.</p>
