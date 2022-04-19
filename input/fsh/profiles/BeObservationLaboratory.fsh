@@ -57,7 +57,7 @@ Description: "Belgian profile for an observation in a laboratory report"
 * hasMember ^short = "In the initial iteration of the Belgium lab project: when sending to eHealthBox, this is BeObservationLaboratory"
 * derivedFrom only Reference(DocumentReference or ImagingStudy or Media or QuestionnaireResponse or MolecularSequence or BeObservationLaboratory)
 * derivedFrom MS
-* derivedFrom ^short = "In the initial iteration of the Belgium lab project: when sending to eHealthBox, this is BeObservationLaboratory"
+* derivedFrom ^short = "In the initial iteration of the Belgium lab project: when sending to eHealthBox, this can be  BeObservationLaboratory or Media"
 * component MS
 * component ^slicing.discriminator.type = #value
 * component ^slicing.discriminator.path = "code.coding.code"
