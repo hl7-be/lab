@@ -375,7 +375,8 @@ The impact of that will however be minimal as both use the FHIR datatype Attachm
  <p>It basically leverages the third way as described supra how to group resources:</p>
  <ul>
   <li>Any general Observation that is done is on the level of the report.</li>
- <li>For each organism there is an Observation on the level of the report: the 'organism observation'
+  <li>If there are many cultures, you can add culture observations, which have organism observatons as members.</li>
+ <li>For each organism there is an Observation on the level of the report, or on the level of the culture observation: the 'organism observation'
  <ul>
  <li>Every panel Observation on the organism is referenced via a .hasMember in that 'organism observation'</li>  
  </ul>
