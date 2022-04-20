@@ -14,4 +14,6 @@ Description: "This code system is to identify Albert code"
 * ^contact[=].telecom.value = "message-structure@ehealth.fgov.be"
 * ^content = #fragment
 * ^count = 1
+//* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
+//* ^extension[=].valueInteger = 1
 * #26223 "Aldosterone (urine)"

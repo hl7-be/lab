@@ -15,7 +15,9 @@ Description: "Belgian profile for a laboratory report"
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
 * extension contains
-    BeExtNote named note 0..* MS
+    BeExtNote named note 0..* MS 
+//* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
+//* ^extension[=].valueInteger = 1
 * text.status = #empty
 * identifier 1.. MS
 * identifier ^slicing.discriminator.type = #value
