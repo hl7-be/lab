@@ -10,8 +10,7 @@ Description: "Code System for specific types of coded annotations"
 * ^jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
 * ^caseSensitive = true
 * ^content = #complete
-//* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
-//* ^extension[=].valueInteger = 1
+//* ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm].valueInteger = 1
 * #lab-test-accreditation "Laboratory Test Accreditation" "Test disclaimer with the report"
 * #lab-test-subcontractor "Laboratory Test subcontractor" "Laboratory Test subcontractor"
 * #lab-referencerange-comment "Comment on laboratory reference range" "Comment on reference range"
@@ -22,8 +21,7 @@ Id: be-vs-coded-annotation-types
 Title: "Coded Annotation Types"
 Description: "Value Set for specific types of coded annotations"
 * ^status = #active
-//* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
-//* ^extension[=].valueInteger = 1
+//* ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm].valueInteger = 1
 * include codes from system be-cs-coded-annotation-types
 
 
