@@ -68,6 +68,8 @@ for other referral prescriptions in Belgium, it is currently published within a 
  SHALL be leveraged <b>when needed</b> such as extra information about 
  where the specimen was taken (e.g. taken from left or right elbow).</p>
  <p>If the Observation is an observation executed by an external laboratory, or the observation is accredited, this MAY be expressed by an unstructered remark in Observation.note. This is information for the human reader of the report only.</p>
+ <p>If an Observation is expected to contain actual data (i.e. it is an observation that is not used to structure the report (e.g. title,...)), but the result is missing for some reason, the result SHALL never be empty. If there is no result, then the result SHALL contain a language specific text that indicates the reason of the missing result.
+e.g. result pending, sample not received. In addition, the .dataAbsentReason field can be used.</p>
 <a name="The type of the laboratory report"> </a>
 <h5>The type of the laboratory report</h5>
 <p>The type of the laboratory report is indicated on 2 levels: Diagnostic.report.coding and composition.type. Anatomical pathology results and laboratory results can be part of 1 lab report. On both levels, the LOINC code "Laboratory Report" 11502-2 will be used.</p>
