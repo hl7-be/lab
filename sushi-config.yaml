@@ -7,16 +7,17 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 
 
-id: my-ig
-canonical: https://www.ehealth.fgov.be/standards/fhir
-url: http://example.com/fhir/example
-name: ExampleIG
-title: "HL7 BE Laboratory Result WG Implementation Guide (work in progress)"
-description: HL7 BE Laboratory Result WG Implementation Guide (work in progress)
-status: draft
+id: hl7.fhir.be.lab
+canonical: https://www.ehealth.fgov.be/standards/fhir/lab
+url: https://www.ehealth.fgov.be/standards/fhir/lab
+name: Laboratory
+title: "HL7 BE Laboratory WG Implementation Guide"
+description: HL7 BE Laboratory WG Implementation Guide
+status: active
 license: CC0-1.0
 date: 2020-02-26
-version: 0.2.0
+version: 1.0.0
+fmm: 1
 
 # Although fhirVersions is 0..* in the ImplementationGuide resource
 # it can be a single item OR and array here (but so far SUSHI only
@@ -37,8 +38,8 @@ releaseLabel: CI
 # as IG.publisher.  The contact details and/or additional publishers
 # will be translated into IG.contact values.
 publisher:
-  name: HL7 Belgium 
-  url: http://hl7belgium.org
+  name: eHealth Platform
+  url: https://www.ehealth.fgov.be
 
 # ContactDetail is required by the template.
 contact:
@@ -51,8 +52,8 @@ contact:
 # The jurisdiction can be a single item or a list. The FHIR Shorthand
 # code syntax can be used here.
 
-#jurisdiction: urn:iso:std:iso:3166#US "United States of America"
-jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#056 "Belgium"
+jurisdiction: urn:iso:std:iso:3166#BE "Belgium"
+#jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#056 "Belgium"
 
 
 # The dependencies property corresponds to IG.dependsOn. The key is the
@@ -64,6 +65,11 @@ jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#056 "Belgium"
 #    id: mcode
 #    uri: http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode
 #    version: 1.0.0
+
+
+dependencies:
+  hl7.fhir.be.core: 2.0.0
+  hl7.fhir.be.core-clinical: dev
 
 # The global property corresponds to the IG.global property, but it
 # uses the type as the YAML key and the profile as its value. Since
@@ -117,6 +123,25 @@ jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#056 "Belgium"
 #    - StructureDefinition/bark-control
 #    - StructureDefinition/bee-sting
 
+groups:
+#  logicalmodels:
+#    name: Logical Models
+#    description: The Logical Data Models.  These are common, functional data descriptions which can be implemented in and mapped to KMEHR, CDA, HL7 v2 and FHIR technical implementations.
+#    resources:
+#  sc:
+#    name: Supporting Conformance Resources
+#    description: Supporting conformance resources used in this IG.
+#    resources:
+  exl:
+    name: Laboratory Report examples
+    description: Specific examples made for the Belgian laboratory report.
+    resources:
+      - Bundle/hematologyStudiesAsFHIRDocument
+      - Bundle/antibiogramAsBundleNN
+      - Bundle/antibiogramIsNegativeAsBundleCollection
+      - Observation/obsDynamicHead
+      - Observation/obsCreat
+
 # The pages property corresponds to IG.definition.page. SUSHI can
 # auto-generate the page list, but if the author includes pages in
 # this file, it is assumed that the author will fully manage the
@@ -135,6 +160,19 @@ jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#056 "Belgium"
 #    title: Examples Overview
 #    simpleExamples.xml:
 #    complexExamples.xml:
+
+
+pages:
+   index.xml:
+     title: Laboratory IG Home Page
+   changes.xml:
+     title: Changes
+   guidance.xml:
+     title: Guidance
+   visualisation.xml:
+       title: Visualisation
+   downloads.xml:
+        title: Downloads
 
 # The ImplementationGuide resource defines several other properties
 # not represented above. These properties can be used as-is and
@@ -157,14 +195,16 @@ jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#056 "Belgium"
 # currently only supports one level deep on sub-menus.
 # To provide a custom menu.xml file, do not include this property and
 # include a `menu.xml` file in input/includes.
-#menu:
-#  Home: index.html
-#  Artifacts:
-#    Profiles: artifacts.html#2
-#    Extensions: artifacts.html#3
-#    Value Sets: artifacts.html#4
-#  Downloads: downloads.html
-#  History: http://hl7.org/fhir/us/example/history.html
+menu:
+  Home: index.html
+  Guidance: guidance.html
+  Visualization: visualisation.html
+  Artifacts:
+    Profiles: artifacts.html#2
+    Extensions: artifacts.html#3
+    Value Sets: artifacts.html#4
+  Changes: changes.html
+  Downloads: downloads.html
 
 # The parameters property represents IG.definition.parameter. Rather
 # than a list of code/value pairs (as in the ImplementationGuide
@@ -175,6 +215,11 @@ jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#056 "Belgium"
 #parameters:
 #  excludettl: true
 #  validation: [allow-any-extensions, no-broken-links]
+parameters:
+  propagate-status: true
+  find-other-resources: true
+  path-binary: input\cql
+
 
 # The FSHOnly flag indicates if only FSH resources should be exported.
 # If set to true, no IG related content will be generated.
@@ -185,11 +230,3 @@ FSHOnly: false
 # be set to the "Title" and "Description" of that Extension. Default is true.
 #applyExtensionMetadataToRoot: false
 
-#dependencies:
-#  ehealthplatform.be.r4.federalprofiles:
-#    uri: https://simplifier.net/packages/ehealthplatform.be.r4.federalprofiles/1.2.2/snapshots/$download 
-#    uri: https://www.ehealth.fgov.be/standards/fhir/
-#    version: 1.2.x
-
-dependencies:
-  hl7.be.fhir.core: current

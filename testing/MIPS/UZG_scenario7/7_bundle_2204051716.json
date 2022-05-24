@@ -12,7 +12,7 @@
       "resourceType": "Composition",
       "id": "35318377",
       "meta": {
-        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report-composition" ]
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-laboratory-report-composition" ]
       },
       "text": {
         "status": "empty",
@@ -51,24 +51,24 @@
       "id": "35318377",
       "meta": {
         "versionId": "1",
-        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report" ]
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-laboratory-report" ]
       },
       "text": {
         "status": "empty",
         "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
       },
       "extension": [ {
-        "url": "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-ext-note",
+        "url": "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-ext-note",
         "valueAnnotation": {
           "text": "Labgids: labo.uzgent.be"
         }
       }, {
-        "url": "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-ext-note",
+        "url": "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-ext-note",
         "valueAnnotation": {
           "text": "Uitslagen: 09-332.34.34"
         }
       }, {
-        "url": "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-ext-note",
+        "url": "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-ext-note",
         "valueAnnotation": {
           "text": "Elektronisch gehandtekend door: Prof. dr. Verstraete Alain"
         }
@@ -131,7 +131,7 @@
       "id": "1988182",
       "meta": {
         "versionId": "1",
-        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-patient" ]
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-patient" ]
       },
       "text": {
         "status": "empty",
@@ -193,14 +193,14 @@
       "id": "152797",
       "meta": {
         "versionId": "1",
-        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-practitioner" ]
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-practitioner" ]
       },
       "text": {
         "status": "empty",
         "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
       },
       "identifier": [ {
-        "system": "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/nihdi",
+        "system": "https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/nihdi",
         "value": "1-41862-49-004"
       } ],
       "name": [ {
@@ -226,14 +226,14 @@
       "id": "65175",
       "meta": {
         "versionId": "1",
-        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-practitioner" ]
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-practitioner" ]
       },
       "text": {
         "status": "empty",
         "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
       },
       "identifier": [ {
-        "system": "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/nihdi",
+        "system": "https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/nihdi",
         "value": "1-45720-71-862"
       } ],
       "name": [ {
@@ -265,7 +265,7 @@
         "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
       },
       "identifier": [ {
-        "system": "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/nihdi",
+        "system": "https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/nihdi",
         "value": "8-44700-73-998"
       } ],
       "name": "Lab UZGent",
@@ -290,7 +290,7 @@
       "id": "376a1844-fd3b-421e-8bbf-973aba0683ff",
       "meta": {
         "versionId": "1",
-        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory" ]
       },
       "text": {
         "status": "empty",
@@ -318,7 +318,7 @@
       "id": "e2c02094-8f1a-4415-a50e-db8aa1d290bc",
       "meta": {
         "versionId": "1",
-        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory" ]
       },
       "text": {
         "status": "empty",
@@ -352,7 +352,7 @@
       "id": "7988bebc-1f20-4184-bbeb-335e87362696",
       "meta": {
         "versionId": "1",
-        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory" ]
       },
       "text": {
         "status": "empty",
@@ -378,7 +378,7 @@
       "id": "220c8c66-a4cd-4453-8aa0-e361a5bdae50",
       "meta": {
         "versionId": "1",
-        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory" ]
       },
       "text": {
         "status": "empty",
@@ -582,7 +582,7 @@
       "id": "389061082",
       "meta": {
         "versionId": "1",
-        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory" ]
       },
       "text": {
         "status": "empty",
@@ -610,10 +610,10 @@
       },
       "note": [ {
         "extension": [ {
-          "url": "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/annotation-code",
+          "url": "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/annotation-code",
           "valueCodeableConcept": {
             "coding": [ {
-              "system": "https://www.ehealth.fgov.be/standards/fhir/CodeSystem/be-cs-coded-annotation-types",
+              "system": "https://www.ehealth.fgov.be/standards/fhir/lab/CodeSystem/be-cs-coded-annotation-types",
               "code": "lab-test-accreditation"
             } ]
           }
@@ -631,7 +631,7 @@
       "id": "389061083",
       "meta": {
         "versionId": "1",
-        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory" ]
       },
       "text": {
         "status": "empty",
@@ -659,10 +659,10 @@
       },
       "note": [ {
         "extension": [ {
-          "url": "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/annotation-code",
+          "url": "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/annotation-code",
           "valueCodeableConcept": {
             "coding": [ {
-              "system": "https://www.ehealth.fgov.be/standards/fhir/CodeSystem/be-cs-coded-annotation-types",
+              "system": "https://www.ehealth.fgov.be/standards/fhir/lab/CodeSystem/be-cs-coded-annotation-types",
               "code": "lab-test-accreditation"
             } ]
           }
@@ -680,7 +680,7 @@
       "id": "389061084",
       "meta": {
         "versionId": "1",
-        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory" ]
       },
       "text": {
         "status": "empty",
@@ -708,10 +708,10 @@
       },
       "note": [ {
         "extension": [ {
-          "url": "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/annotation-code",
+          "url": "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/annotation-code",
           "valueCodeableConcept": {
             "coding": [ {
-              "system": "https://www.ehealth.fgov.be/standards/fhir/CodeSystem/be-cs-coded-annotation-types",
+              "system": "https://www.ehealth.fgov.be/standards/fhir/lab/CodeSystem/be-cs-coded-annotation-types",
               "code": "lab-test-accreditation"
             } ]
           }
@@ -729,7 +729,7 @@
       "id": "389061081",
       "meta": {
         "versionId": "1",
-        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory" ]
       },
       "text": {
         "status": "empty",
@@ -757,10 +757,10 @@
       },
       "note": [ {
         "extension": [ {
-          "url": "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/annotation-code",
+          "url": "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/annotation-code",
           "valueCodeableConcept": {
             "coding": [ {
-              "system": "https://www.ehealth.fgov.be/standards/fhir/CodeSystem/be-cs-coded-annotation-types",
+              "system": "https://www.ehealth.fgov.be/standards/fhir/lab/CodeSystem/be-cs-coded-annotation-types",
               "code": "lab-test-accreditation"
             } ]
           }
@@ -778,7 +778,7 @@
       "id": "389061077",
       "meta": {
         "versionId": "1",
-        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory" ]
       },
       "text": {
         "status": "empty",
@@ -806,10 +806,10 @@
       },
       "note": [ {
         "extension": [ {
-          "url": "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/annotation-code",
+          "url": "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/annotation-code",
           "valueCodeableConcept": {
             "coding": [ {
-              "system": "https://www.ehealth.fgov.be/standards/fhir/CodeSystem/be-cs-coded-annotation-types",
+              "system": "https://www.ehealth.fgov.be/standards/fhir/lab/CodeSystem/be-cs-coded-annotation-types",
               "code": "lab-test-accreditation"
             } ]
           }
@@ -827,7 +827,7 @@
       "id": "389061076",
       "meta": {
         "versionId": "1",
-        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory" ]
       },
       "text": {
         "status": "empty",
@@ -855,10 +855,10 @@
       },
       "note": [ {
         "extension": [ {
-          "url": "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/annotation-code",
+          "url": "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/annotation-code",
           "valueCodeableConcept": {
             "coding": [ {
-              "system": "https://www.ehealth.fgov.be/standards/fhir/CodeSystem/be-cs-coded-annotation-types",
+              "system": "https://www.ehealth.fgov.be/standards/fhir/lab/CodeSystem/be-cs-coded-annotation-types",
               "code": "lab-test-accreditation"
             } ]
           }
@@ -876,7 +876,7 @@
       "id": "389061080",
       "meta": {
         "versionId": "1",
-        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory" ]
       },
       "text": {
         "status": "empty",
@@ -904,10 +904,10 @@
       },
       "note": [ {
         "extension": [ {
-          "url": "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/annotation-code",
+          "url": "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/annotation-code",
           "valueCodeableConcept": {
             "coding": [ {
-              "system": "https://www.ehealth.fgov.be/standards/fhir/CodeSystem/be-cs-coded-annotation-types",
+              "system": "https://www.ehealth.fgov.be/standards/fhir/lab/CodeSystem/be-cs-coded-annotation-types",
               "code": "lab-test-accreditation"
             } ]
           }
@@ -925,7 +925,7 @@
       "id": "389061078",
       "meta": {
         "versionId": "1",
-        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory" ]
       },
       "text": {
         "status": "empty",
@@ -953,10 +953,10 @@
       },
       "note": [ {
         "extension": [ {
-          "url": "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/annotation-code",
+          "url": "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/annotation-code",
           "valueCodeableConcept": {
             "coding": [ {
-              "system": "https://www.ehealth.fgov.be/standards/fhir/CodeSystem/be-cs-coded-annotation-types",
+              "system": "https://www.ehealth.fgov.be/standards/fhir/lab/CodeSystem/be-cs-coded-annotation-types",
               "code": "lab-test-accreditation"
             } ]
           }
@@ -974,7 +974,7 @@
       "id": "389061079",
       "meta": {
         "versionId": "1",
-        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory" ]
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory" ]
       },
       "text": {
         "status": "empty",
@@ -1002,10 +1002,10 @@
       },
       "note": [ {
         "extension": [ {
-          "url": "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/annotation-code",
+          "url": "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/annotation-code",
           "valueCodeableConcept": {
             "coding": [ {
-              "system": "https://www.ehealth.fgov.be/standards/fhir/CodeSystem/be-cs-coded-annotation-types",
+              "system": "https://www.ehealth.fgov.be/standards/fhir/lab/CodeSystem/be-cs-coded-annotation-types",
               "code": "lab-test-accreditation"
             } ]
           }
@@ -1023,7 +1023,7 @@
       "id": "00220406000202",
       "meta": {
         "versionId": "1",
-        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-specimen-laboratory" ]
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-specimen-laboratory" ]
       },
       "text": {
         "status": "empty",
@@ -1059,7 +1059,7 @@
       "id": "00220406000207",
       "meta": {
         "versionId": "1",
-        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-specimen-laboratory" ]
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-specimen-laboratory" ]
       },
       "text": {
         "status": "empty",
@@ -1095,7 +1095,7 @@
       "id": "00220406000205",
       "meta": {
         "versionId": "1",
-        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-specimen-laboratory" ]
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-specimen-laboratory" ]
       },
       "text": {
         "status": "empty",
@@ -1131,7 +1131,7 @@
       "id": "00220406000206",
       "meta": {
         "versionId": "1",
-        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-specimen-laboratory" ]
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-specimen-laboratory" ]
       },
       "text": {
         "status": "empty",
@@ -1167,7 +1167,7 @@
       "id": "00220406000201",
       "meta": {
         "versionId": "1",
-        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-specimen-laboratory" ]
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-specimen-laboratory" ]
       },
       "text": {
         "status": "empty",
@@ -1203,7 +1203,7 @@
       "id": "00220406000203",
       "meta": {
         "versionId": "1",
-        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-specimen-laboratory" ]
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-specimen-laboratory" ]
       },
       "text": {
         "status": "empty",
@@ -1239,7 +1239,7 @@
       "id": "00220406000204",
       "meta": {
         "versionId": "1",
-        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-specimen-laboratory" ]
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-specimen-laboratory" ]
       },
       "text": {
         "status": "empty",

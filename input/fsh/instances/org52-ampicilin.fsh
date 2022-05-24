@@ -1,6 +1,8 @@
 Instance: org52-ampicilin
 InstanceOf: BeObservationLaboratory
 Usage: #inline
+* text.status = #empty
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>empty</div>"
 * status = #final
 * code = $loinc#29-9 "Ampicillin [Susceptibility] by Disk diffusion (KB)"
 * subject = Reference(Patient/patient1)

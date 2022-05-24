@@ -14,7 +14,7 @@ Usage: #definition
 * description = "Unique Identifier for Lab Report Bundles"
 * jurisdiction = $m49.htm#056 "Belgium"
 * uniqueId[0].type = #uri
-* uniqueId[=].value = "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/be-ns-lab-report-bundle-id"
+* uniqueId[=].value = "https://www.ehealth.fgov.be/standards/fhir/lab/NamingSystem/be-ns-lab-report-bundle-id"
 * uniqueId[+].type = #uri
 * uniqueId[=].value = "https://www.ehealth.fgov.be/lab-report/bundle-id"
 * uniqueId[=].preferred = true

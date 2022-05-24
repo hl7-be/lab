@@ -1,6 +1,8 @@
 Instance: org52
 InstanceOf: BeObservationLaboratory
 Usage: #inline
+* text.status = #empty
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>empty</div>"
 * status = #final
 * code = $loinc#73960-7 "Bacteria identified in Mouth by Culture"
 * subject = Reference(Patient/patient1)

@@ -420,6 +420,8 @@ This case is not applicable to Macsys
   * All analyses render correctly, including any comments
   * All antibiogram(s) render correctly and refer to correct analysis (one needs at least one test case specficially for this e:g: Macsys https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815933574 )
 
+9B.  Case for additional level of detail (not applicable to Macsys)
+TBD
 
 ## 10.	Anapath
 

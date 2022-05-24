@@ -1,6 +1,8 @@
 Instance: org51-nitrofurantoin
 InstanceOf: BeObservationLaboratory
 Usage: #inline
+* text.status = #empty
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>empty</div>"
 * status = #final
 * code = $loinc#363-2 "Nitrofurantoin [Susceptibility] by Minimum inhibitory concentration (MIC)"
 * code.text = "Nitrofurantoin"

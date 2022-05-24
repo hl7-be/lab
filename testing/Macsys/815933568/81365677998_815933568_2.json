@@ -13,7 +13,7 @@
         "id": "815933568",
         "meta": {
             "profile": [
-                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report-composition"
+                "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-laboratory-report-composition"
             ]
         },
         "text": {
@@ -61,7 +61,7 @@
         "id": "001815933568",
         "meta": {
             "profile": [
-                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-specimen-laboratory"
+                "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-specimen-laboratory"
             ]
         },
         "text": {
@@ -82,7 +82,7 @@
                     "display": "Blood venous"
                 }
             ],
-            "text": "Aërobe fles"
+            "text": "Aï¿½robe fles"
         },
         "subject": {
             "reference": "Patient/7165401"
@@ -103,7 +103,7 @@
         "id": "002815933568",
         "meta": {
             "profile": [
-                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-specimen-laboratory"
+                "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-specimen-laboratory"
             ]
         },
         "text": {
@@ -124,7 +124,7 @@
                     "display": "Blood venous"
                 }
             ],
-            "text": "Anaërobe fles"
+            "text": "Anaï¿½robe fles"
         },
         "subject": {
             "reference": "Patient/7165401"
@@ -145,7 +145,7 @@
         "id": "Observation.1.0.0.0",
         "meta": {
             "profile": [
-                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"
+                "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory"
             ]
         },
         "text": {
@@ -184,7 +184,7 @@
         "id": "Observation.1.0.0.1",
         "meta": {
             "profile": [
-                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"
+                "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory"
             ]
         },
         "text": {
@@ -223,7 +223,7 @@
         "id": "Observation.1.0.0.2",
         "meta": {
             "profile": [
-                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"
+                "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory"
             ]
         },
         "text": {
@@ -249,7 +249,7 @@
                 "reference": "Practitioner/Responsible"
             }
         ],
-        "valueString": "Geen strikt anaerobe kiemen geïsoleerd",
+        "valueString": "Geen strikt anaerobe kiemen geï¿½soleerd",
         "specimen": {
             "reference": "Specimen/002815933568"
         }
@@ -262,7 +262,7 @@
         "id": "Observation.1.0.0.3",
         "meta": {
             "profile": [
-                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"
+                "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory"
             ]
         },
         "text": {
@@ -302,7 +302,7 @@
         "meta": {
             "versionId": "2",
             "profile": [
-                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-laboratory-report"
+                "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-laboratory-report"
             ]
         },
         "language": "nl",
@@ -378,7 +378,7 @@
         "id": "81365677998",
         "meta": {
             "profile": [
-                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-organization"
+                "https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-organization"
             ]
         },
         "text": {
@@ -396,7 +396,7 @@
                         }
                     ]
                 },
-                "system": "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/nihdi",
+                "system": "https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/nihdi",
                 "value": "81365677998"
             },
             {
@@ -410,7 +410,7 @@
             {
                 "coding": [
                     {
-                        "system": "https://www.ehealth.fgov.be/standards/fhir/CodeSystem/cd-hcparty",
+                        "system": "https://www.ehealth.fgov.be/standards/fhir/core/CodeSystem/cd-hcparty",
                         "code": "orglaboratory"
                     }
                 ]
@@ -460,7 +460,7 @@
         "id": "69",
         "meta": {
             "profile": [
-                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-practitioner"
+                "https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-practitioner"
             ]
         },
         "text": {
@@ -469,7 +469,7 @@
         "identifier": [
             {
                 "use": "official",
-                "system": "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/nihdi",
+                "system": "https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/nihdi",
                 "value": "10000007999"
             }
         ],
@@ -524,7 +524,7 @@
         "id": "Responsible",
         "meta": {
             "profile": [
-                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-practitioner"
+                "https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-practitioner"
             ]
         },
         "text": {
@@ -533,7 +533,7 @@
         "identifier": [
             {
                 "use": "official",
-                "system": "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/nihdi",
+                "system": "https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/nihdi",
                 "value": "68071432800"
             }
         ],
@@ -575,7 +575,7 @@
         "id": "7165401",
         "meta": {
             "profile": [
-                "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-patient"
+                "https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-patient"
             ]
         },
         "text": {
@@ -584,7 +584,7 @@
         "identifier": [
             {
                 "use": "official",
-                "system": "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/ssin",
+                "system": "https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/ssin",
                 "value": "40010199813"
             }
         ],

@@ -1,6 +1,8 @@
 Instance: observation11
 InstanceOf: BeObservationLaboratory
 Usage: #inline
+* text.status = #empty
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>empty</div>"
 * status = #final
 * code.text = "SCREENING"
 * subject = Reference(Patient/patient1)

@@ -3,7 +3,7 @@ Parent: Specimen
 Id: be-specimen-laboratory
 Title: "BeSpecimenLaboratory"
 Description: "Belgian profile for a specimen in a laboratory report. In some laboratory reports, specimen information is allowed to be minimal as many informations concerning the specimen are implied by the observations done."
-* ^url = "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-specimen-laboratory"
+* ^url = "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-specimen-laboratory"
 * ^version = "0.0.7"
 * ^status = #draft
 * ^date = "2021-11-08T16:57:45+01:00"
@@ -11,6 +11,9 @@ Description: "Belgian profile for a specimen in a laboratory report. In some lab
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://hl7belgium.org"
 * ^jurisdiction = $m49.htm#001
+* ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm].valueInteger = 1
+
+
 * text.status = #empty
 * identifier MS
 * identifier ^definition = "Business identifier for specimen is RECOMMENDED to include when available."

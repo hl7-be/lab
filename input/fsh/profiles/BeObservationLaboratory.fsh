@@ -12,7 +12,7 @@ Parent: Observation
 Id: be-observation-laboratory
 Title: "BeObservationLaboratory"
 Description: "Belgian profile for an observation in a laboratory report"
-* ^url = "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-observation-laboratory"
+* ^url = "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory"
 * ^version = "0.0.7"
 * ^status = #draft
 * ^date = "2021-11-08T16:57:45+01:00"
@@ -20,6 +20,9 @@ Description: "Belgian profile for an observation in a laboratory report"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://hl7belgium.org"
 * ^jurisdiction = $m49.htm#001
+* ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm].valueInteger = 1
+
+
 * text.status = #empty
 * language MS
 * identifier MS
@@ -57,7 +60,7 @@ Description: "Belgian profile for an observation in a laboratory report"
 * hasMember ^short = "In the initial iteration of the Belgium lab project: when sending to eHealthBox, this is BeObservationLaboratory"
 * derivedFrom only Reference(DocumentReference or ImagingStudy or Media or QuestionnaireResponse or MolecularSequence or BeObservationLaboratory)
 * derivedFrom MS
-* derivedFrom ^short = "In the initial iteration of the Belgium lab project: when sending to eHealthBox, this is BeObservationLaboratory"
+* derivedFrom ^short = "In the initial iteration of the Belgium lab project: when sending to eHealthBox, this can be  BeObservationLaboratory or Media"
 * component MS
 * component ^slicing.discriminator.type = #value
 * component ^slicing.discriminator.path = "code.coding.code"

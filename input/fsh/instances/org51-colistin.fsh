@@ -1,6 +1,8 @@
 Instance: org51-colistin
 InstanceOf: BeObservationLaboratory
 Usage: #inline
+* text.status = #empty
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>empty</div>"
 * status = #final
 * code = $loinc#205-5 "Colistin [Susceptibility] by Minimum inhibitory concentration (MIC)"
 * code.text = "Colistin"
