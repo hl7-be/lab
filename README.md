@@ -5,7 +5,7 @@ Laboratory IG
 ### Publication
 This ImplementationGuide is published in the following locations:
 
-Continuous Build: __http://build.fhir.org/ig/hl7-be/lab/branches/main/index.html__  
+Continuous Build: __http://build.fhir.org/ig/hl7-be/lab__  
 Canonical / permanent URL: 
 <br> </br>
 
