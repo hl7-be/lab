@@ -13,10 +13,11 @@
    <p>
    For a functional overview of changes, consult the <a href="changes.html">Changes page.</a>
    </p>
-	<blockquote class="stu-note">
-	<strong>This documentation and set of artefacts are still undergoing development.</strong>
-	The working groups of HL7 and the different interested parties are working on this specification. This publication is a development version that has not yet been validated by HL7 nor by the users and implementers.
-	</blockquote>
+
+   <p>
+    Please address any questions about this implementation guide to  <a href="mailto:support@be-ehealth-standards.atlassian.net">the e-Health Platform Standards Team</a>.
+    </p>
+	
 	<p> </p>
 	<a name="content"> </a>
   <h3>Content</h3>
