@@ -25,6 +25,6 @@ Usage: #definition
 * entry[+].fullUrl = "urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d42"
 * entry[=].resource = patient1
 * entry[+].fullUrl = "urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d43"
-* entry[=].resource = Inline-Instance-for-hematologyStudiesAsBundleCollection-4
+* entry[=].resource = servicerequest1
 * entry[+].fullUrl = "urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d44"
 * entry[=].resource = practitioner1
