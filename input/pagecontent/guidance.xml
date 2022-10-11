@@ -43,10 +43,10 @@ The text here does not aim to explain the HL7 FHIR standard as such nor does thi
 for other referral prescriptions in Belgium, it is currently published within a different Implementation Guide.</p>
 <p>The ordering profile starts from the base FHIR resource 'serviceRequests'. More details:</p>
 <ul>
-<li><a href="http://build.fhir.org/ig/hl7-be/hl7-be-fhir-referral-prescription/guidance.html#guidance">General guidance</a>
- concerning the orders in Belgium and <a href="http://build.fhir.org/ig/hl7-be/hl7-be-fhir-referral-prescription/guidance.html#specifics-concerning-the-referral-prescription-for-laboratory">specific laboratory order guidance.</a></li>
-<li><a href="http://build.fhir.org/ig/hl7-be/hl7-be-fhir-referral-prescription/StructureDefinition-be-lab-prescription.html">Technical definition</a> of the order for laboratory.</li>
-<li>An <a href="http://build.fhir.org/ig/hl7-be/hl7-be-fhir-referral-prescription/ServiceRequest-laboratory-order-example1.html">example</a> for the order.</li>
+<li><a href="http://build.fhir.org/ig/hl7-be/referral/guidance.html#guidance">General guidance</a>
+ concerning the orders in Belgium and <a href="http://build.fhir.org/ig/hl7-be/referral/guidance.html#specifics-concerning-the-referral-prescription-for-laboratory">specific laboratory order guidance.</a></li>
+<li><a href="http://build.fhir.org/ig/hl7-be/referral/StructureDefinition-be-lab-prescription.html">Technical definition</a> of the order for laboratory.</li>
+<li>An <a href="http://build.fhir.org/ig/hl7-be/referral/ServiceRequest-laboratory-order-example1.html">example</a> for the order.</li>
 </ul>
 
 
@@ -249,7 +249,7 @@ It is allowed to use multiple codes within the FHIR CodeableConcept datatype. Bu
                     "extension": [
                       {
                         "url": "lang",
-                        "valueCode": "be-nl"
+                        "valueCode": "nl-BE"
                       },
                       {
                         "url": "content",

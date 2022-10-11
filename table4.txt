@@ -1,0 +1,13 @@
+#!/usr/bin/bash
+sed -i  -e 's#Reference(diagnosticreport1)#Reference(urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d34)#g' $(find ./input/fsh/ -type f)
+sed -i  -e 's#Reference(specimen1)#Reference(urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d35)#g' $(find ./input/fsh/ -type f)
+sed -i  -e 's#Reference(observation10)#Reference(urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d36)#g' $(find ./input/fsh/ -type f)
+sed -i  -e 's#Reference(observation11)#Reference(urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d37)#g' $(find ./input/fsh/ -type f)
+sed -i  -e 's#Reference(observation111)#Reference(urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d38)#g' $(find ./input/fsh/ -type f)
+sed -i  -e 's#Reference(observation112)#Reference(urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d39)#g' $(find ./input/fsh/ -type f)
+sed -i  -e 's#Reference(media1)#Reference(urn:uuid:7c16c9c0-c469-4088-ae18-48abcadd8d40)#g' $(find ./input/fsh/ -type f)
+sed -i  -e 's#Reference(organization10)#Reference(urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d40)#g' $(find ./input/fsh/ -type f)
+sed -i  -e 's#Reference(practitioner11)#Reference(urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d41)#g' $(find ./input/fsh/ -type f)
+sed -i  -e 's#Reference(patient1)#Reference(urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d42)#g' $(find ./input/fsh/ -type f)
+sed -i  -e 's#Reference(servicerequest1)#Reference(urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d43)#g' $(find ./input/fsh/ -type f)
+sed -i  -e 's#Reference(practitioner1)#Reference(urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d44)#g' $(find ./input/fsh/ -type f)

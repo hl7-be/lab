@@ -9,11 +9,11 @@ Usage: #inline
 * status = #final
 * type = $loinc#11502-2
 * type.text = "Laboratort report"
-* subject = Reference(Patient/patient1)
+* subject = Reference(urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d74)
 * date = "2013-02-01T12:30:02Z"
-* author = Reference(Practitioner/practitioner11)
+* author = Reference(urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d73)
 * title = "Laboratory Report (mandatory to give a title like this in a FHIR document.)"
 * relatesTo.code = #replaces
 * relatesTo.targetIdentifier.system = "urn:ietf:rfc:3986"
 * relatesTo.targetIdentifier.value = "urn:uuid:0c3151bd-1cbf-4d65-b04d-cd9187a4c5e0"
-* section.entry = Reference(diagnosticreport1)
+* section.entry = Reference(urn:uuid:7c16c9c0-c471-4098-ae18-48abcadd8d34)
