@@ -13,7 +13,7 @@ url: https://www.ehealth.fgov.be/standards/fhir/lab
 name: Laboratory
 title: "HL7 BE Laboratory WG Implementation Guide"
 description: HL7 BE Laboratory WG Implementation Guide
-status: active
+status: draft
 license: CC0-1.0
 date: 2022-09-09
 version: 1.0.0
