@@ -16,7 +16,7 @@ description: HL7 BE Laboratory WG Implementation Guide
 status: draft
 license: CC0-1.0
 date: 2022-09-09
-version: 1.0.0
+version: 1.0.1
 fmm: 1
 
 # Although fhirVersions is 0..* in the ImplementationGuide resource
