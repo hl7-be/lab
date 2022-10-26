@@ -3,7 +3,6 @@ InstanceOf: ServiceRequest
 Usage: #definition
 * text.status = #empty
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>empty</div>"
-* meta.profile = "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-servicerequest"
 * status = #active
 * intent = #order
 * category = $sct#108252007 "Laboratory procedure"
