@@ -28,7 +28,7 @@ Project Digitalisation Labresults – QUESTIONS – ANSWERS
 |DOMAIN|SUBJECT|QUESTION|ANSWER|
 | :-: | :-: | :-: | :-: |
 |LOINC codes|Conversion |<p>How can you do the conversion between the codification system we use now and the LOINC codes ?</p><p></p>|There are mapping tables at your disposal  between LOINC codes and Medidoc and RSW/FRATEM codes, which your LIS provider can use.|
-|LOINC codes|Storage|<p>Where can you find these codes ?</p><p></p>|<https://www.ehealth.fgov.be/standards/kmehr/en/page/retam-exports>|
+|LOINC codes|Storage|<p>Where can you find these codes ?</p><p></p>|<https://www.ehealth.fgov.be/standards/kmehr/en/page/retam-exports> <br>See also... https://github.com/hl7-be/lab/issues?q=retam<br>|
 |Issues|eHealth|To whom can you address our questions and issues ?|<p>The created github from eHealth is the place to ask questions or to signal a problem:</p><p><https://github.com/hl7-be/lab/issues></p><p></p>|
 |Fhir|Starting with|How do we start with Fhir ?|<p>Technical workshop about Fhir organized by eHealth</p><p>There are technical Q&A sessions organised every 6 weeks. Please send an email to support@be-ehealth-standards.atlassian.net</p><p></p>|
 |Visualization tool|Access|How can you start this tool ?|<p>This is the link you need: <https://vizapp.icure.dev/></p><p>Attention: during DEV phase</p>|
