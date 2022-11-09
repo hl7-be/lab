@@ -1,0 +1,18 @@
+Logical: BeModelLabReport
+Parent: Element
+Description: """This is the logical model for a lab report"""
+* identifier 1..1 Identifier "This is the business identifier of the report. If another report has the same business identifier, this means that it is either a previous or a later state of the same report."
+* basedOn 1..1 Reference "Reference to the lab order"
+* status 1..1 code "The status of the report"
+* subject 1..1 Reference "Reference to the patient this report is about"
+* effectiveDateTime 1..1 dateTime "Date and time of the specimen collection, unless overridden in the specimen"
+* issued 1..1 dateTime "Date and time this report was created"
+* performer 1..1 Reference "Reference to the lab that performed the analyses, or obtained the analyses from another lab"
+* resultsInterpreter 1..1 Reference "Reference to the clinical biologist that interpreted and validated the results"
+* specimen 0..* Reference "Reference to one or more specimen this report is about"
+* result 1..* Reference "Reference to one or a group of labresults"
+* media 0..* Media "Non textual information linked to the report"
+* conclusion 0..* string "Conclusion of the report"
+* conclusionCode 0..* code "Conclusion of the report in coded form"
+* presentedForm 1..1 BackboneElement "Printable version of the entire protocol"
+* note 0..* Annotation "Note to the entire report"

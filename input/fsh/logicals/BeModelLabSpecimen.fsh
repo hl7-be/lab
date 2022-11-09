@@ -1,0 +1,15 @@
+Logical: BeModelLabSpecimen
+Parent: Element
+Description: """This is the logical model for a specimen in a lab context"""
+* identifier 1..* Identifier "Business identifier of the specimen"
+* status 1..1 code "Status of the specimen"
+* type 1..* CodeableConcept "Material of the specimen"
+* subject 1..1 Reference "The patient the specimen refers to"
+* receivedTime 0..1 dateTime "The time the specimen was received at the lab"
+* collection 1..1 BackboneElement " "
+* collection.collectedDateTime 1..1 dateTime "The time the specimen was collected from the patient"
+* collection.collector 1..1 Reference "The person that collected the specimen"
+* parent 0..1 Reference "Another specimen that this specimen is a part from"
+* condition 0..1 string "Condition of the specimen"
+* note 0..* Annotation "Additional information about the specimen"
+* request 0..1 Reference "Reference to the request for taking the specimen"
