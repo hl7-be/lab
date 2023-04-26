@@ -1,0 +1,3315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Bundle xmlns="http://hl7.org/fhir" >
+<identifier>
+<system value="https://www.ehealth.fgov.be/lab-report/diagnostic-report-id" />
+<value value="84461066.Report-2301168790" />
+</identifier>
+<id value="Report-2301168790" />
+<type value="document" />
+<timestamp value="2023-03-23T14:22:10.000+01:00" />
+<entry>
+<fullUrl value="Composition/Report-2301168790" />
+<resource>
+<Composition>
+<id value="Report-2301168790" />
+<identifier>
+<system value="https://www.ehealth.fgov.be/lab-report/diagnostic-report-id" />
+<value value="84461066.Report-2301168790" />
+</identifier>
+<status value="final" />
+<type>
+<coding>
+<system value="http://loinc.org" />
+<code value="11502-2" />
+<display value="Laboratory report" />
+</coding>
+</type>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+</subject>
+<title value="Laboratory report" />
+<date value="2023-03-23T14:22:10.000+01:00" />
+<author>
+<reference value="Organization/Lab-000" />
+</author>
+<section>
+<entry>
+<reference value="DiagnosticReport/Report-2301168790" />
+</entry>
+</section>
+</Composition>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Test-00333" />
+<resource>
+<Observation>
+<id value="Test-00333" />
+<basedOn>
+<reference value="ServiceRequest/Request-2301168790" />
+</basedOn>
+<status value="amended" />
+<code>
+<coding>
+<system value="https://www.nuytinck.be" />
+<code value="00333" />
+<display value="Bezinkingssnelheid" />
+</coding>
+<text value="Bezinkingssnelheid" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<performer>
+<reference value="Practitioner/Biologist-000025" />
+<display value="Heide De Haene" />
+</performer>
+<issued value="2023-03-23T14:20:42.000+01:00" />
+<valueQuantity>
+<value value="6" />
+<unit value="mm" />
+<system value="http://unitsofmeasure.org" />
+<code value="mm" />
+</valueQuantity>
+<interpretation>
+<coding>
+<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" />
+<code value="N" />
+<display value="Normal" />
+</coding>
+</interpretation>
+<referenceRange>
+<low>
+<value value="0" />
+<unit value="mm" />
+<system value="http://unitsofmeasure.org" />
+<code value="mm" />
+</low>
+<high>
+<value value="15" />
+<unit value="mm" />
+<system value="http://unitsofmeasure.org" />
+<code value="mm" />
+</high>
+</referenceRange>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Test-00185" />
+<resource>
+<Observation>
+<id value="Test-00185" />
+<basedOn>
+<reference value="ServiceRequest/Request-2301168790" />
+</basedOn>
+<status value="final" />
+<code>
+<coding>
+<system value="http://loinc.org" />
+<code value="4544-3" />
+<display value="Hematocrit [Volume Fraction] of Blood by Automated count" />
+</coding>
+<text value="Hematocriet" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<performer>
+<reference value="Practitioner/Biologist-000025" />
+<display value="Heide De Haene" />
+</performer>
+<issued value="2023-03-23T14:20:42.000+01:00" />
+<valueQuantity>
+<value value="45" />
+<unit value="%" />
+<system value="http://unitsofmeasure.org" />
+<code value="%" />
+</valueQuantity>
+<interpretation>
+<coding>
+<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" />
+<code value="N" />
+<display value="Normal" />
+</coding>
+</interpretation>
+<referenceRange>
+<low>
+<value value="36" />
+<unit value="%" />
+<system value="http://unitsofmeasure.org" />
+<code value="%" />
+</low>
+<high>
+<value value="50" />
+<unit value="%" />
+<system value="http://unitsofmeasure.org" />
+<code value="%" />
+</high>
+</referenceRange>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Test-00002" />
+<resource>
+<Observation>
+<id value="Test-00002" />
+<basedOn>
+<reference value="ServiceRequest/Request-2301168790" />
+</basedOn>
+<status value="final" />
+<code>
+<coding>
+<system value="http://loinc.org" />
+<code value="789-8" />
+<display value="Erythrocytes [#/volume] in Blood by Automated count" />
+</coding>
+<text value="Erytrocyten" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<performer>
+<reference value="Practitioner/Biologist-000025" />
+<display value="Heide De Haene" />
+</performer>
+<issued value="2023-03-23T14:20:42.000+01:00" />
+<valueQuantity>
+<value value="4.67" />
+<unit value="10*6/mcL" />
+<system value="http://unitsofmeasure.org" />
+<code value="10*6/uL" />
+</valueQuantity>
+<interpretation>
+<coding>
+<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" />
+<code value="N" />
+<display value="Normal" />
+</coding>
+</interpretation>
+<referenceRange>
+<low>
+<value value="3.80" />
+<unit value="10*6/mcL" />
+<system value="http://unitsofmeasure.org" />
+<code value="10*6/uL" />
+</low>
+<high>
+<value value="5.50" />
+<unit value="10*6/mcL" />
+<system value="http://unitsofmeasure.org" />
+<code value="10*6/uL" />
+</high>
+</referenceRange>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Test-00298" />
+<resource>
+<Observation>
+<id value="Test-00298" />
+<basedOn>
+<reference value="ServiceRequest/Request-2301168790" />
+</basedOn>
+<status value="final" />
+<code>
+<coding>
+<system value="http://loinc.org" />
+<code value="787-2" />
+<display value="MCV [Entitic volume] by Automated count" />
+</coding>
+<text value="MCV" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<performer>
+<reference value="Practitioner/Biologist-000025" />
+<display value="Heide De Haene" />
+</performer>
+<issued value="2023-03-23T14:20:42.000+01:00" />
+<valueQuantity>
+<value value="96.1" />
+<unit value="fL" />
+<system value="http://unitsofmeasure.org" />
+<code value="fL" />
+</valueQuantity>
+<interpretation>
+<coding>
+<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" />
+<code value="N" />
+<display value="Normal" />
+</coding>
+</interpretation>
+<referenceRange>
+<low>
+<value value="83.0" />
+<unit value="fL" />
+<system value="http://unitsofmeasure.org" />
+<code value="fL" />
+</low>
+<high>
+<value value="101.0" />
+<unit value="fL" />
+<system value="http://unitsofmeasure.org" />
+<code value="fL" />
+</high>
+</referenceRange>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Test-00299" />
+<resource>
+<Observation>
+<id value="Test-00299" />
+<basedOn>
+<reference value="ServiceRequest/Request-2301168790" />
+</basedOn>
+<status value="final" />
+<code>
+<coding>
+<system value="http://loinc.org" />
+<code value="785-6" />
+<display value="MCH [Entitic mass] by Automated count" />
+</coding>
+<text value="MCH" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<performer>
+<reference value="Practitioner/Biologist-000025" />
+<display value="Heide De Haene" />
+</performer>
+<issued value="2023-03-23T14:20:42.000+01:00" />
+<valueQuantity>
+<value value="33.0" />
+<unit value="pg" />
+<system value="http://unitsofmeasure.org" />
+<code value="pg" />
+</valueQuantity>
+<interpretation>
+<coding>
+<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" />
+<code value="H" />
+<display value="High" />
+</coding>
+</interpretation>
+<referenceRange>
+<low>
+<value value="27.0" />
+<unit value="pg" />
+<system value="http://unitsofmeasure.org" />
+<code value="pg" />
+</low>
+<high>
+<value value="32.0" />
+<unit value="pg" />
+<system value="http://unitsofmeasure.org" />
+<code value="pg" />
+</high>
+</referenceRange>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Test-00300" />
+<resource>
+<Observation>
+<id value="Test-00300" />
+<basedOn>
+<reference value="ServiceRequest/Request-2301168790" />
+</basedOn>
+<status value="final" />
+<code>
+<coding>
+<system value="http://loinc.org" />
+<code value="786-4" />
+<display value="MCHC [Mass/volume] by Automated count" />
+</coding>
+<text value="MCHC" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<performer>
+<reference value="Practitioner/Biologist-000025" />
+<display value="Heide De Haene" />
+</performer>
+<issued value="2023-03-23T14:20:42.000+01:00" />
+<valueQuantity>
+<value value="34.3" />
+<unit value="g/dL" />
+<system value="http://unitsofmeasure.org" />
+<code value="g/dL" />
+</valueQuantity>
+<interpretation>
+<coding>
+<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" />
+<code value="N" />
+<display value="Normal" />
+</coding>
+</interpretation>
+<referenceRange>
+<low>
+<value value="31.0" />
+<unit value="g/dL" />
+<system value="http://unitsofmeasure.org" />
+<code value="g/dL" />
+</low>
+<high>
+<value value="37.0" />
+<unit value="g/dL" />
+<system value="http://unitsofmeasure.org" />
+<code value="g/dL" />
+</high>
+</referenceRange>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Test-00003" />
+<resource>
+<Observation>
+<id value="Test-00003" />
+<basedOn>
+<reference value="ServiceRequest/Request-2301168790" />
+</basedOn>
+<status value="final" />
+<code>
+<coding>
+<system value="http://loinc.org" />
+<code value="6690-2" />
+<display value="Leukocytes [#/volume] in Blood by Automated count" />
+</coding>
+<text value="Leukocyten" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<performer>
+<reference value="Practitioner/Biologist-000025" />
+<display value="Heide De Haene" />
+</performer>
+<issued value="2023-03-23T14:20:42.000+01:00" />
+<valueQuantity>
+<value value="4230" />
+<unit value="/mcL" />
+<system value="http://unitsofmeasure.org" />
+<code value="/uL" />
+</valueQuantity>
+<interpretation>
+<coding>
+<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" />
+<code value="N" />
+<display value="Normal" />
+</coding>
+</interpretation>
+<referenceRange>
+<low>
+<value value="4000" />
+<unit value="/mcL" />
+<system value="http://unitsofmeasure.org" />
+<code value="/uL" />
+</low>
+<high>
+<value value="10000" />
+<unit value="/mcL" />
+<system value="http://unitsofmeasure.org" />
+<code value="/uL" />
+</high>
+</referenceRange>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Test-00093" />
+<resource>
+<Observation>
+<id value="Test-00093" />
+<basedOn>
+<reference value="ServiceRequest/Request-2301168790" />
+</basedOn>
+<status value="final" />
+<code>
+<coding>
+<system value="http://loinc.org" />
+<code value="26505-8" />
+<display value="Segmented neutrophils/100 leukocytes in Blood" />
+</coding>
+<text value="neutrofielen" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<performer>
+<reference value="Practitioner/Biologist-000025" />
+<display value="Heide De Haene" />
+</performer>
+<issued value="2023-03-23T14:20:42.000+01:00" />
+<valueQuantity>
+<value value="47.9" />
+<unit value="%" />
+<system value="http://unitsofmeasure.org" />
+<code value="%" />
+</valueQuantity>
+<interpretation>
+<coding>
+<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" />
+<code value="N" />
+<display value="Normal" />
+</coding>
+</interpretation>
+<referenceRange>
+<low>
+<value value="40.0" />
+<unit value="%" />
+<system value="http://unitsofmeasure.org" />
+<code value="%" />
+</low>
+<high>
+<value value="80.0" />
+<unit value="%" />
+<system value="http://unitsofmeasure.org" />
+<code value="%" />
+</high>
+</referenceRange>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Test-00095" />
+<resource>
+<Observation>
+<id value="Test-00095" />
+<basedOn>
+<reference value="ServiceRequest/Request-2301168790" />
+</basedOn>
+<status value="final" />
+<code>
+<coding>
+<system value="http://loinc.org" />
+<code value="26450-7" />
+<display value="Eosinophils/100 leukocytes in Blood" />
+</coding>
+<text value="eosinofielen" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<performer>
+<reference value="Practitioner/Biologist-000025" />
+<display value="Heide De Haene" />
+</performer>
+<issued value="2023-03-23T14:20:42.000+01:00" />
+<valueQuantity>
+<value value="3.8" />
+<unit value="%" />
+<system value="http://unitsofmeasure.org" />
+<code value="%" />
+</valueQuantity>
+<interpretation>
+<coding>
+<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" />
+<code value="N" />
+<display value="Normal" />
+</coding>
+</interpretation>
+<referenceRange>
+<low>
+<value value="0.0" />
+<unit value="%" />
+<system value="http://unitsofmeasure.org" />
+<code value="%" />
+</low>
+<high>
+<value value="6.0" />
+<unit value="%" />
+<system value="http://unitsofmeasure.org" />
+<code value="%" />
+</high>
+</referenceRange>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Test-00096" />
+<resource>
+<Observation>
+<id value="Test-00096" />
+<basedOn>
+<reference value="ServiceRequest/Request-2301168790" />
+</basedOn>
+<status value="final" />
+<code>
+<coding>
+<system value="http://loinc.org" />
+<code value="30180-4" />
+<display value="Basophils/100 leukocytes in Blood" />
+</coding>
+<text value="basofielen" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<performer>
+<reference value="Practitioner/Biologist-000025" />
+<display value="Heide De Haene" />
+</performer>
+<issued value="2023-03-23T14:20:42.000+01:00" />
+<valueQuantity>
+<value value="0.7" />
+<unit value="%" />
+<system value="http://unitsofmeasure.org" />
+<code value="%" />
+</valueQuantity>
+<interpretation>
+<coding>
+<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" />
+<code value="N" />
+<display value="Normal" />
+</coding>
+</interpretation>
+<referenceRange>
+<low>
+<value value="0.0" />
+<unit value="%" />
+<system value="http://unitsofmeasure.org" />
+<code value="%" />
+</low>
+<high>
+<value value="2.0" />
+<unit value="%" />
+<system value="http://unitsofmeasure.org" />
+<code value="%" />
+</high>
+</referenceRange>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Test-00004" />
+<resource>
+<Observation>
+<id value="Test-00004" />
+<basedOn>
+<reference value="ServiceRequest/Request-2301168790" />
+</basedOn>
+<status value="final" />
+<code>
+<coding>
+<system value="http://loinc.org" />
+<code value="26478-8" />
+<display value="Lymphocytes/100 leukocytes in Blood" />
+</coding>
+<text value="lymfocyten" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<performer>
+<reference value="Practitioner/Biologist-000025" />
+<display value="Heide De Haene" />
+</performer>
+<issued value="2023-03-23T14:20:42.000+01:00" />
+<valueQuantity>
+<value value="40.0" />
+<unit value="%" />
+<system value="http://unitsofmeasure.org" />
+<code value="%" />
+</valueQuantity>
+<interpretation>
+<coding>
+<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" />
+<code value="N" />
+<display value="Normal" />
+</coding>
+</interpretation>
+<referenceRange>
+<low>
+<value value="20.0" />
+<unit value="%" />
+<system value="http://unitsofmeasure.org" />
+<code value="%" />
+</low>
+<high>
+<value value="40.0" />
+<unit value="%" />
+<system value="http://unitsofmeasure.org" />
+<code value="%" />
+</high>
+</referenceRange>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Test-00070" />
+<resource>
+<Observation>
+<id value="Test-00070" />
+<basedOn>
+<reference value="ServiceRequest/Request-2301168790" />
+</basedOn>
+<status value="final" />
+<code>
+<coding>
+<system value="http://loinc.org" />
+<code value="26485-3" />
+<display value="Monocytes/100 leukocytes in Blood" />
+</coding>
+<text value="monocyten" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<performer>
+<reference value="Practitioner/Biologist-000025" />
+<display value="Heide De Haene" />
+</performer>
+<issued value="2023-03-23T14:20:42.000+01:00" />
+<valueQuantity>
+<value value="7.6" />
+<unit value="%" />
+<system value="http://unitsofmeasure.org" />
+<code value="%" />
+</valueQuantity>
+<interpretation>
+<coding>
+<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" />
+<code value="N" />
+<display value="Normal" />
+</coding>
+</interpretation>
+<referenceRange>
+<low>
+<value value="2.0" />
+<unit value="%" />
+<system value="http://unitsofmeasure.org" />
+<code value="%" />
+</low>
+<high>
+<value value="12.0" />
+<unit value="%" />
+<system value="http://unitsofmeasure.org" />
+<code value="%" />
+</high>
+</referenceRange>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Title-T02554" />
+<resource>
+<Observation>
+<id value="Title-T02554" />
+<status value="unknown" />
+<code>
+<coding>
+<system value="https://www.nuytinck.be" />
+<code value="02554" />
+</coding>
+<text value="Formule (percent)" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<hasMember>
+<reference value="Observation/Test-00093" />
+</hasMember>
+<hasMember>
+<reference value="Observation/Test-00095" />
+</hasMember>
+<hasMember>
+<reference value="Observation/Test-00096" />
+</hasMember>
+<hasMember>
+<reference value="Observation/Test-00004" />
+</hasMember>
+<hasMember>
+<reference value="Observation/Test-00070" />
+</hasMember>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Test-00749" />
+<resource>
+<Observation>
+<id value="Test-00749" />
+<basedOn>
+<reference value="ServiceRequest/Request-2301168790" />
+</basedOn>
+<status value="final" />
+<code>
+<coding>
+<system value="http://loinc.org" />
+<code value="26499-4" />
+<display value="Neutrophils [#/volume] in Blood" />
+</coding>
+<text value="neutrofielen" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<performer>
+<reference value="Practitioner/Biologist-000025" />
+<display value="Heide De Haene" />
+</performer>
+<issued value="2023-03-23T14:20:42.000+01:00" />
+<valueQuantity>
+<value value="2030" />
+<unit value="/mcL" />
+<system value="http://unitsofmeasure.org" />
+<code value="/uL" />
+</valueQuantity>
+<interpretation>
+<coding>
+<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" />
+<code value="N" />
+<display value="Normal" />
+</coding>
+</interpretation>
+<referenceRange>
+<low>
+<value value="2000" />
+<unit value="/mcL" />
+<system value="http://unitsofmeasure.org" />
+<code value="/uL" />
+</low>
+<high>
+<value value="7000" />
+<unit value="/mcL" />
+<system value="http://unitsofmeasure.org" />
+<code value="/uL" />
+</high>
+</referenceRange>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Test-00007" />
+<resource>
+<Observation>
+<id value="Test-00007" />
+<basedOn>
+<reference value="ServiceRequest/Request-2301168790" />
+</basedOn>
+<status value="final" />
+<code>
+<coding>
+<system value="http://loinc.org" />
+<code value="26449-9" />
+<display value="Eosinophils [#/volume] in Blood" />
+</coding>
+<text value="eosinofielen" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<performer>
+<reference value="Practitioner/Biologist-000025" />
+<display value="Heide De Haene" />
+</performer>
+<issued value="2023-03-23T14:20:42.000+01:00" />
+<valueQuantity>
+<value value="160" />
+<unit value="/mcL" />
+<system value="http://unitsofmeasure.org" />
+<code value="/uL" />
+</valueQuantity>
+<interpretation>
+<coding>
+<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" />
+<code value="N" />
+<display value="Normal" />
+</coding>
+</interpretation>
+<referenceRange>
+<low>
+<value value="20" />
+<unit value="/mcL" />
+<system value="http://unitsofmeasure.org" />
+<code value="/uL" />
+</low>
+<high>
+<value value="300" />
+<unit value="/mcL" />
+<system value="http://unitsofmeasure.org" />
+<code value="/uL" />
+</high>
+</referenceRange>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Test-01731" />
+<resource>
+<Observation>
+<id value="Test-01731" />
+<basedOn>
+<reference value="ServiceRequest/Request-2301168790" />
+</basedOn>
+<status value="final" />
+<code>
+<coding>
+<system value="http://loinc.org" />
+<code value="26444-0" />
+<display value="Basophils [#/volume] in Blood" />
+</coding>
+<text value="basofielen" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<performer>
+<reference value="Practitioner/Biologist-000025" />
+<display value="Heide De Haene" />
+</performer>
+<issued value="2023-03-23T14:20:42.000+01:00" />
+<valueQuantity>
+<value value="30" />
+<unit value="/mcL" />
+<system value="http://unitsofmeasure.org" />
+<code value="/uL" />
+</valueQuantity>
+<interpretation>
+<coding>
+<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" />
+<code value="N" />
+<display value="Normal" />
+</coding>
+</interpretation>
+<referenceRange>
+<low>
+<value value="0" />
+<unit value="/mcL" />
+<system value="http://unitsofmeasure.org" />
+<code value="/uL" />
+</low>
+<high>
+<value value="100" />
+<unit value="/mcL" />
+<system value="http://unitsofmeasure.org" />
+<code value="/uL" />
+</high>
+</referenceRange>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Test-00550" />
+<resource>
+<Observation>
+<id value="Test-00550" />
+<basedOn>
+<reference value="ServiceRequest/Request-2301168790" />
+</basedOn>
+<status value="final" />
+<code>
+<coding>
+<system value="http://loinc.org" />
+<code value="26474-7" />
+<display value="Lymphocytes [#/volume] in Blood" />
+</coding>
+<text value="lymfocyten" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<performer>
+<reference value="Practitioner/Biologist-000025" />
+<display value="Heide De Haene" />
+</performer>
+<issued value="2023-03-23T14:20:42.000+01:00" />
+<valueQuantity>
+<value value="1690" />
+<unit value="/mcL" />
+<system value="https://www.nuytinck.be" />
+<code value="/mcL" />
+</valueQuantity>
+<interpretation>
+<coding>
+<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" />
+<code value="N" />
+<display value="Normal" />
+</coding>
+</interpretation>
+<referenceRange>
+<low>
+<value value="1000" />
+<unit value="/mcL" />
+<system value="https://www.nuytinck.be" />
+<code value="/mcL" />
+</low>
+<high>
+<value value="3000" />
+<unit value="/mcL" />
+<system value="https://www.nuytinck.be" />
+<code value="/mcL" />
+</high>
+</referenceRange>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Test-01730" />
+<resource>
+<Observation>
+<id value="Test-01730" />
+<basedOn>
+<reference value="ServiceRequest/Request-2301168790" />
+</basedOn>
+<status value="final" />
+<code>
+<coding>
+<system value="http://loinc.org" />
+<code value="26484-6" />
+<display value="Monocytes [#/volume] in Blood" />
+</coding>
+<text value="monocyten" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<performer>
+<reference value="Practitioner/Biologist-000025" />
+<display value="Heide De Haene" />
+</performer>
+<issued value="2023-03-23T14:20:42.000+01:00" />
+<valueQuantity>
+<value value="320" />
+<unit value="/mcL" />
+<system value="http://unitsofmeasure.org" />
+<code value="/uL" />
+</valueQuantity>
+<interpretation>
+<coding>
+<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" />
+<code value="N" />
+<display value="Normal" />
+</coding>
+</interpretation>
+<referenceRange>
+<low>
+<value value="200" />
+<unit value="/mcL" />
+<system value="http://unitsofmeasure.org" />
+<code value="/uL" />
+</low>
+<high>
+<value value="1000" />
+<unit value="/mcL" />
+<system value="http://unitsofmeasure.org" />
+<code value="/uL" />
+</high>
+</referenceRange>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Title-T02555" />
+<resource>
+<Observation>
+<id value="Title-T02555" />
+<status value="unknown" />
+<code>
+<coding>
+<system value="https://www.nuytinck.be" />
+<code value="02555" />
+</coding>
+<text value="Formule (absoluut)" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<hasMember>
+<reference value="Observation/Test-00749" />
+</hasMember>
+<hasMember>
+<reference value="Observation/Test-00007" />
+</hasMember>
+<hasMember>
+<reference value="Observation/Test-01731" />
+</hasMember>
+<hasMember>
+<reference value="Observation/Test-00550" />
+</hasMember>
+<hasMember>
+<reference value="Observation/Test-01730" />
+</hasMember>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Test-00551" />
+<resource>
+<Observation>
+<id value="Test-00551" />
+<basedOn>
+<reference value="ServiceRequest/Request-2301168790" />
+</basedOn>
+<status value="final" />
+<code>
+<coding>
+<system value="https://www.nuytinck.be" />
+<code value="00551" />
+<display value="CD8+ CD38+ Activ. T8" />
+</coding>
+<text value="CD8+ CD38+ Activ. T8" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<performer>
+<reference value="Practitioner/Biologist-000025" />
+<display value="Heide De Haene" />
+</performer>
+<issued value="2023-03-23T14:20:42.000+01:00" />
+<valueQuantity>
+<value value="7" />
+<unit value="%" />
+<system value="http://unitsofmeasure.org" />
+<code value="%" />
+</valueQuantity>
+<interpretation>
+<coding>
+<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" />
+<code value="N" />
+<display value="Normal" />
+</coding>
+</interpretation>
+<referenceRange>
+<low>
+<value value="5" />
+<unit value="%" />
+<system value="http://unitsofmeasure.org" />
+<code value="%" />
+</low>
+<high>
+<value value="18" />
+<unit value="%" />
+<system value="http://unitsofmeasure.org" />
+<code value="%" />
+</high>
+</referenceRange>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Test-00552" />
+<resource>
+<Observation>
+<id value="Test-00552" />
+<basedOn>
+<reference value="ServiceRequest/Request-2301168790" />
+</basedOn>
+<status value="final" />
+<code>
+<coding>
+<system value="https://www.nuytinck.be" />
+<code value="00552" />
+<display value="CD8+ CD38+ Activ. T8" />
+</coding>
+<text value="CD8+ CD38+ Activ. T8" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<performer>
+<reference value="Practitioner/Biologist-000025" />
+<display value="Heide De Haene" />
+</performer>
+<issued value="2023-03-23T14:20:42.000+01:00" />
+<valueQuantity>
+<value value="118" />
+<unit value="/mcL" />
+<system value="http://unitsofmeasure.org" />
+<code value="/uL" />
+</valueQuantity>
+<interpretation>
+<coding>
+<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" />
+<code value="N" />
+<display value="Normal" />
+</coding>
+</interpretation>
+<referenceRange>
+<low>
+<value value="65" />
+<unit value="/mcL" />
+<system value="http://unitsofmeasure.org" />
+<code value="/uL" />
+</low>
+<high>
+<value value="275" />
+<unit value="/mcL" />
+<system value="http://unitsofmeasure.org" />
+<code value="/uL" />
+</high>
+</referenceRange>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Test-00008" />
+<resource>
+<Observation>
+<id value="Test-00008" />
+<basedOn>
+<reference value="ServiceRequest/Request-2301168790" />
+</basedOn>
+<status value="final" />
+<code>
+<coding>
+<system value="http://loinc.org" />
+<code value="777-3" />
+<display value="Platelets [#/volume] in Blood by Automated count" />
+</coding>
+<text value="Trombocyten" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<performer>
+<reference value="Practitioner/Biologist-000025" />
+<display value="Heide De Haene" />
+</performer>
+<issued value="2023-03-23T14:20:42.000+01:00" />
+<valueQuantity>
+<value value="287" />
+<unit value="10*3/mcL" />
+<system value="http://unitsofmeasure.org" />
+<code value="10*3/uL" />
+</valueQuantity>
+<interpretation>
+<coding>
+<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" />
+<code value="N" />
+<display value="Normal" />
+</coding>
+</interpretation>
+<referenceRange>
+<low>
+<value value="150" />
+<unit value="10*3/mcL" />
+<system value="http://unitsofmeasure.org" />
+<code value="10*3/uL" />
+</low>
+<high>
+<value value="400" />
+<unit value="10*3/mcL" />
+<system value="http://unitsofmeasure.org" />
+<code value="10*3/uL" />
+</high>
+</referenceRange>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Test-00056" />
+<resource>
+<Observation>
+<id value="Test-00056" />
+<basedOn>
+<reference value="ServiceRequest/Request-2301168790" />
+</basedOn>
+<status value="final" />
+<code>
+<coding>
+<system value="http://loinc.org" />
+<code value="2498-4" />
+<display value="Iron [Mass/volume] in Serum or Plasma" />
+</coding>
+<text value="Ijzer" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<performer>
+<reference value="Practitioner/Biologist-000025" />
+<display value="Heide De Haene" />
+</performer>
+<issued value="2023-03-23T14:20:42.000+01:00" />
+<valueQuantity>
+<value value="114" />
+<unit value="mcg/dL" />
+<system value="http://unitsofmeasure.org" />
+<code value="ug/dL" />
+</valueQuantity>
+<interpretation>
+<coding>
+<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" />
+<code value="N" />
+<display value="Normal" />
+</coding>
+</interpretation>
+<referenceRange>
+<low>
+<value value="33" />
+<unit value="mcg/dL" />
+<system value="http://unitsofmeasure.org" />
+<code value="ug/dL" />
+</low>
+<high>
+<value value="193" />
+<unit value="mcg/dL" />
+<system value="http://unitsofmeasure.org" />
+<code value="ug/dL" />
+</high>
+</referenceRange>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Header-102" />
+<resource>
+<Observation>
+<id value="Header-102" />
+<status value="unknown" />
+<code>
+<coding>
+<system value="http://snomed.info/sct" />
+<code value="4321000179101" />
+</coding>
+<text value="HEMATOLOGIE" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<hasMember>
+<reference value="Observation/Test-00333" />
+</hasMember>
+<hasMember>
+<reference value="Observation/Test-00185" />
+</hasMember>
+<hasMember>
+<reference value="Observation/Test-00002" />
+</hasMember>
+<hasMember>
+<reference value="Observation/Test-00298" />
+</hasMember>
+<hasMember>
+<reference value="Observation/Test-00299" />
+</hasMember>
+<hasMember>
+<reference value="Observation/Test-00300" />
+</hasMember>
+<hasMember>
+<reference value="Observation/Test-00003" />
+</hasMember>
+<hasMember>
+<reference value="Observation/Title-T02554" />
+</hasMember>
+<hasMember>
+<reference value="Observation/Title-T02555" />
+</hasMember>
+<hasMember>
+<reference value="Observation/Test-00551" />
+</hasMember>
+<hasMember>
+<reference value="Observation/Test-00552" />
+</hasMember>
+<hasMember>
+<reference value="Observation/Test-00008" />
+</hasMember>
+<hasMember>
+<reference value="Observation/Test-00056" />
+</hasMember>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Test-01118" />
+<resource>
+<Observation>
+<id value="Test-01118" />
+<basedOn>
+<reference value="ServiceRequest/Request-2301168790" />
+</basedOn>
+<status value="final" />
+<code>
+<coding>
+<system value="http://loinc.org" />
+<code value="53049-3" />
+<display value="Glucose [Mass/volume] in Serum or Plasma --pre-meal" />
+</coding>
+<text value="Glucose nuchter" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<performer>
+<reference value="Practitioner/Biologist-000025" />
+<display value="Heide De Haene" />
+</performer>
+<issued value="2023-03-23T14:20:42.000+01:00" />
+<valueQuantity>
+<value value="81" />
+<unit value="mg/dL" />
+<system value="http://unitsofmeasure.org" />
+<code value="mg/dL" />
+</valueQuantity>
+<interpretation>
+<coding>
+<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" />
+<code value="N" />
+<display value="Normal" />
+</coding>
+</interpretation>
+<referenceRange>
+<low>
+<value value="55" />
+<unit value="mg/dL" />
+<system value="http://unitsofmeasure.org" />
+<code value="mg/dL" />
+</low>
+<high>
+<value value="99" />
+<unit value="mg/dL" />
+<system value="http://unitsofmeasure.org" />
+<code value="mg/dL" />
+</high>
+</referenceRange>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Header-104" />
+<resource>
+<Observation>
+<id value="Header-104" />
+<status value="unknown" />
+<code>
+<coding>
+<system value="https://www.nuytinck.be" />
+<code value="H104" />
+<display value="KOOLHYDRATENMETABOLISME" />
+</coding>
+<text value="KOOLHYDRATENMETABOLISME" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<hasMember>
+<reference value="Observation/Test-01118" />
+</hasMember>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Test-00045" />
+<resource>
+<Observation>
+<id value="Test-00045" />
+<basedOn>
+<reference value="ServiceRequest/Request-2301168790" />
+</basedOn>
+<status value="final" />
+<code>
+<coding>
+<system value="http://loinc.org" />
+<code value="2093-3" />
+<display value="Cholesterol [Mass/volume] in Serum or Plasma" />
+</coding>
+<text value="Totaal cholesterol" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<performer>
+<reference value="Practitioner/Biologist-000025" />
+<display value="Heide De Haene" />
+</performer>
+<issued value="2023-03-23T14:20:42.000+01:00" />
+<valueQuantity>
+<value value="237" />
+<unit value="mg/dL" />
+<system value="http://unitsofmeasure.org" />
+<code value="mg/dL" />
+</valueQuantity>
+<interpretation>
+<coding>
+<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" />
+<code value="H" />
+<display value="High" />
+</coding>
+</interpretation>
+<referenceRange>
+<low>
+<value value="0" />
+<unit value="mg/dL" />
+<system value="http://unitsofmeasure.org" />
+<code value="mg/dL" />
+</low>
+<high>
+<value value="189" />
+<unit value="mg/dL" />
+<system value="http://unitsofmeasure.org" />
+<code value="mg/dL" />
+</high>
+</referenceRange>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Header-105" />
+<resource>
+<Observation>
+<id value="Header-105" />
+<status value="unknown" />
+<code>
+<coding>
+<system value="http://snomed.info/sct" />
+<code value="365791005" />
+</coding>
+<text value="LIPIDEN" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<hasMember>
+<reference value="Observation/Test-00045" />
+</hasMember>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Test-00182" />
+<resource>
+<Observation>
+<id value="Test-00182" />
+<basedOn>
+<reference value="ServiceRequest/Request-2301168790" />
+</basedOn>
+<status value="final" />
+<code>
+<coding>
+<system value="http://loinc.org" />
+<code value="1975-2" />
+<display value="Bilirubin.total [Mass/volume] in Serum or Plasma" />
+</coding>
+<text value="Bilirubine totaal" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<performer>
+<reference value="Practitioner/Biologist-000025" />
+<display value="Heide De Haene" />
+</performer>
+<issued value="2023-03-23T14:20:42.000+01:00" />
+<valueQuantity>
+<value value="0.30" />
+<unit value="mg/dL" />
+<system value="http://unitsofmeasure.org" />
+<code value="mg/dL" />
+</valueQuantity>
+<interpretation>
+<coding>
+<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" />
+<code value="N" />
+<display value="Normal" />
+</coding>
+</interpretation>
+<referenceRange>
+<low>
+<value value="0.00" />
+<unit value="mg/dL" />
+<system value="http://unitsofmeasure.org" />
+<code value="mg/dL" />
+</low>
+<high>
+<value value="1.40" />
+<unit value="mg/dL" />
+<system value="http://unitsofmeasure.org" />
+<code value="mg/dL" />
+</high>
+</referenceRange>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Test-00035" />
+<resource>
+<Observation>
+<id value="Test-00035" />
+<basedOn>
+<reference value="ServiceRequest/Request-2301168790" />
+</basedOn>
+<status value="final" />
+<code>
+<coding>
+<system value="http://loinc.org" />
+<code value="15152-2" />
+<display value="Bilirubin.conjugated [Mass/volume] in Serum or Plasma" />
+</coding>
+<text value="Bilirubine direct" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<performer>
+<reference value="Practitioner/Biologist-000025" />
+<display value="Heide De Haene" />
+</performer>
+<issued value="2023-03-23T14:20:42.000+01:00" />
+<valueQuantity>
+<value value="0.18" />
+<unit value="mg/dL" />
+<system value="http://unitsofmeasure.org" />
+<code value="mg/dL" />
+</valueQuantity>
+<interpretation>
+<coding>
+<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" />
+<code value="N" />
+<display value="Normal" />
+</coding>
+</interpretation>
+<referenceRange>
+<low>
+<value value="0.00" />
+<unit value="mg/dL" />
+<system value="http://unitsofmeasure.org" />
+<code value="mg/dL" />
+</low>
+<high>
+<value value="0.30" />
+<unit value="mg/dL" />
+<system value="http://unitsofmeasure.org" />
+<code value="mg/dL" />
+</high>
+</referenceRange>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Test-00034" />
+<resource>
+<Observation>
+<id value="Test-00034" />
+<basedOn>
+<reference value="ServiceRequest/Request-2301168790" />
+</basedOn>
+<status value="final" />
+<code>
+<coding>
+<system value="http://loinc.org" />
+<code value="1971-1" />
+<display value="Bilirubin.indirect [Mass/volume] in Serum or Plasma" />
+</coding>
+<text value="Bilirubine indirect" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<performer>
+<reference value="Practitioner/Biologist-000025" />
+<display value="Heide De Haene" />
+</performer>
+<issued value="2023-03-23T14:20:42.000+01:00" />
+<valueQuantity>
+<value value="0.12" />
+<unit value="mg/dL" />
+<system value="http://unitsofmeasure.org" />
+<code value="mg/dL" />
+</valueQuantity>
+<interpretation>
+<coding>
+<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" />
+<code value="N" />
+<display value="Normal" />
+</coding>
+</interpretation>
+<referenceRange>
+<low>
+<value value="0.00" />
+<unit value="mg/dL" />
+<system value="http://unitsofmeasure.org" />
+<code value="mg/dL" />
+</low>
+<high>
+<value value="1.10" />
+<unit value="mg/dL" />
+<system value="http://unitsofmeasure.org" />
+<code value="mg/dL" />
+</high>
+</referenceRange>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Test-00037" />
+<resource>
+<Observation>
+<id value="Test-00037" />
+<basedOn>
+<reference value="ServiceRequest/Request-2301168790" />
+</basedOn>
+<status value="final" />
+<code>
+<coding>
+<system value="http://loinc.org" />
+<code value="1742-6" />
+<display value="Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma" />
+</coding>
+<text value="ALT (GPT)" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<performer>
+<reference value="Practitioner/Biologist-000025" />
+<display value="Heide De Haene" />
+</performer>
+<issued value="2023-03-23T14:20:42.000+01:00" />
+<valueQuantity>
+<value value="20" />
+<unit value="U/L" />
+<system value="http://unitsofmeasure.org" />
+<code value="[iU]/L" />
+</valueQuantity>
+<interpretation>
+<coding>
+<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" />
+<code value="N" />
+<display value="Normal" />
+</coding>
+</interpretation>
+<referenceRange>
+<low>
+<value value="0" />
+<unit value="U/L" />
+<system value="http://unitsofmeasure.org" />
+<code value="[iU]/L" />
+</low>
+<high>
+<value value="41" />
+<unit value="U/L" />
+<system value="http://unitsofmeasure.org" />
+<code value="[iU]/L" />
+</high>
+</referenceRange>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Test-00135" />
+<resource>
+<Observation>
+<id value="Test-00135" />
+<basedOn>
+<reference value="ServiceRequest/Request-2301168790" />
+</basedOn>
+<status value="final" />
+<code>
+<coding>
+<system value="http://loinc.org" />
+<code value="2324-2" />
+<display value="Gamma glutamyl transferase [Enzymatic activity/volume] in Serum or Plasma" />
+</coding>
+<text value="Gamma-GT" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<performer>
+<reference value="Practitioner/Biologist-000025" />
+<display value="Heide De Haene" />
+</performer>
+<issued value="2023-03-23T14:20:42.000+01:00" />
+<valueQuantity>
+<value value="19" />
+<unit value="U/L" />
+<system value="http://unitsofmeasure.org" />
+<code value="[iU]/L" />
+</valueQuantity>
+<interpretation>
+<coding>
+<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" />
+<code value="N" />
+<display value="Normal" />
+</coding>
+</interpretation>
+<referenceRange>
+<low>
+<value value="0" />
+<unit value="U/L" />
+<system value="http://unitsofmeasure.org" />
+<code value="[iU]/L" />
+</low>
+<high>
+<value value="60" />
+<unit value="U/L" />
+<system value="http://unitsofmeasure.org" />
+<code value="[iU]/L" />
+</high>
+</referenceRange>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Test-00038" />
+<resource>
+<Observation>
+<id value="Test-00038" />
+<basedOn>
+<reference value="ServiceRequest/Request-2301168790" />
+</basedOn>
+<status value="final" />
+<code>
+<coding>
+<system value="http://loinc.org" />
+<code value="6768-6" />
+<display value="Alkaline phosphatase [Enzymatic activity/volume] in Serum or Plasma" />
+</coding>
+<text value="Alkalische fosfatase" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<performer>
+<reference value="Practitioner/Biologist-000025" />
+<display value="Heide De Haene" />
+</performer>
+<issued value="2023-03-23T14:20:42.000+01:00" />
+<valueQuantity>
+<value value="78" />
+<unit value="U/L" />
+<system value="http://unitsofmeasure.org" />
+<code value="[iU]/L" />
+</valueQuantity>
+<interpretation>
+<coding>
+<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" />
+<code value="N" />
+<display value="Normal" />
+</coding>
+</interpretation>
+<referenceRange>
+<low>
+<value value="35" />
+<unit value="U/L" />
+<system value="http://unitsofmeasure.org" />
+<code value="[iU]/L" />
+</low>
+<high>
+<value value="129" />
+<unit value="U/L" />
+<system value="http://unitsofmeasure.org" />
+<code value="[iU]/L" />
+</high>
+</referenceRange>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Header-106" />
+<resource>
+<Observation>
+<id value="Header-106" />
+<status value="unknown" />
+<code>
+<coding>
+<system value="https://www.nuytinck.be" />
+<code value="H106" />
+<display value="HART-SPIER-LEVER-GALWEGEN-PANCREAS" />
+</coding>
+<text value="HART-SPIER-LEVER-GALWEGEN-PANCREAS" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<hasMember>
+<reference value="Observation/Test-00182" />
+</hasMember>
+<hasMember>
+<reference value="Observation/Test-00035" />
+</hasMember>
+<hasMember>
+<reference value="Observation/Test-00034" />
+</hasMember>
+<hasMember>
+<reference value="Observation/Test-00037" />
+</hasMember>
+<hasMember>
+<reference value="Observation/Test-00135" />
+</hasMember>
+<hasMember>
+<reference value="Observation/Test-00038" />
+</hasMember>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Test-01070" />
+<resource>
+<Observation>
+<id value="Test-01070" />
+<basedOn>
+<reference value="ServiceRequest/Request-2301168790" />
+</basedOn>
+<status value="final" />
+<code>
+<coding>
+<system value="http://loinc.org" />
+<code value="2160-0" />
+<display value="Creatinine [Mass/volume] in Serum or Plasma" />
+</coding>
+<text value="Creatinine" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<performer>
+<reference value="Practitioner/Biologist-000025" />
+<display value="Heide De Haene" />
+</performer>
+<issued value="2023-03-23T14:20:42.000+01:00" />
+<valueQuantity>
+<value value="0.70" />
+<unit value="mg/dL" />
+<system value="http://unitsofmeasure.org" />
+<code value="mg/dL" />
+</valueQuantity>
+<interpretation>
+<coding>
+<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" />
+<code value="N" />
+<display value="Normal" />
+</coding>
+</interpretation>
+<referenceRange>
+<low>
+<value value="0.50" />
+<unit value="mg/dL" />
+<system value="http://unitsofmeasure.org" />
+<code value="mg/dL" />
+</low>
+<high>
+<value value="1.20" />
+<unit value="mg/dL" />
+<system value="http://unitsofmeasure.org" />
+<code value="mg/dL" />
+</high>
+</referenceRange>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Test-01078" />
+<resource>
+<Observation>
+<id value="Test-01078" />
+<basedOn>
+<reference value="ServiceRequest/Request-2301168790" />
+</basedOn>
+<status value="final" />
+<code>
+<coding>
+<system value="http://loinc.org" />
+<code value="35591-7" />
+<display value="Creatinine renal clearance predicted by Cockcroft-Gault formula" />
+</coding>
+<text value="Geschatte GFR" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<performer>
+<reference value="Practitioner/Biologist-000025" />
+<display value="Heide De Haene" />
+</performer>
+<issued value="2023-03-23T14:20:42.000+01:00" />
+<valueString value="&gt;90" />
+<note>
+<text value="Berekend volgens de formule CKD-EPI." />
+</note>
+<interpretation>
+<coding>
+<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" />
+<code value="N" />
+<display value="Normal" />
+</coding>
+</interpretation>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Header-107" />
+<resource>
+<Observation>
+<id value="Header-107" />
+<status value="unknown" />
+<code>
+<coding>
+<system value="http://snomed.info/sct" />
+<code value="11953005" />
+</coding>
+<text value="NIERFUNCTIE" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<hasMember>
+<reference value="Observation/Test-01070" />
+</hasMember>
+<hasMember>
+<reference value="Observation/Test-01078" />
+</hasMember>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Test-00051" />
+<resource>
+<Observation>
+<id value="Test-00051" />
+<basedOn>
+<reference value="ServiceRequest/Request-2301168790" />
+</basedOn>
+<status value="final" />
+<code>
+<coding>
+<system value="http://loinc.org" />
+<code value="2000-8" />
+<display value="Calcium [Moles/volume] in Serum or Plasma" />
+</coding>
+<text value="Calcium" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<performer>
+<reference value="Practitioner/Biologist-000025" />
+<display value="Heide De Haene" />
+</performer>
+<issued value="2023-03-23T14:20:42.000+01:00" />
+<valueQuantity>
+<value value="2.42" />
+<unit value="mmol/L" />
+<system value="http://unitsofmeasure.org" />
+<code value="mmol/L" />
+</valueQuantity>
+<interpretation>
+<coding>
+<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" />
+<code value="N" />
+<display value="Normal" />
+</coding>
+</interpretation>
+<referenceRange>
+<low>
+<value value="2.10" />
+<unit value="mmol/L" />
+<system value="http://unitsofmeasure.org" />
+<code value="mmol/L" />
+</low>
+<high>
+<value value="2.55" />
+<unit value="mmol/L" />
+<system value="http://unitsofmeasure.org" />
+<code value="mmol/L" />
+</high>
+</referenceRange>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Test-00553" />
+<resource>
+<Observation>
+<id value="Test-00553" />
+<basedOn>
+<reference value="ServiceRequest/Request-2301168790" />
+</basedOn>
+<status value="final" />
+<code>
+<coding>
+<system value="http://loinc.org" />
+<code value="47597-0" />
+<display value="Calcium [Moles/volume] corrected for total protein in Blood" />
+</coding>
+<text value="Calcium geionis. ber" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<performer>
+<reference value="Practitioner/Biologist-000025" />
+<display value="Heide De Haene" />
+</performer>
+<issued value="2023-03-23T14:20:42.000+01:00" />
+<valueQuantity>
+<value value="1.08" />
+<unit value="mmol/L" />
+<system value="http://unitsofmeasure.org" />
+<code value="mmol/L" />
+</valueQuantity>
+<interpretation>
+<coding>
+<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" />
+<code value="H" />
+<display value="High" />
+</coding>
+</interpretation>
+<referenceRange>
+<low>
+<value value="0.90" />
+<unit value="mmol/L" />
+<system value="http://unitsofmeasure.org" />
+<code value="mmol/L" />
+</low>
+<high>
+<value value="1.05" />
+<unit value="mmol/L" />
+<system value="http://unitsofmeasure.org" />
+<code value="mmol/L" />
+</high>
+</referenceRange>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Test-00169" />
+<resource>
+<Observation>
+<id value="Test-00169" />
+<basedOn>
+<reference value="ServiceRequest/Request-2301168790" />
+</basedOn>
+<status value="final" />
+<code>
+<coding>
+<system value="http://loinc.org" />
+<code value="2597-3" />
+<display value="Magnesium [Moles/volume] in Red Blood Cells" />
+</coding>
+<text value="Magnesium intracel." />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<performer>
+<reference value="Practitioner/Biologist-000025" />
+<display value="Heide De Haene" />
+</performer>
+<issued value="2023-03-23T14:20:42.000+01:00" />
+<valueQuantity>
+<value value="1.80" />
+<unit value="mmol/L" />
+<system value="http://unitsofmeasure.org" />
+<code value="mmol/L" />
+</valueQuantity>
+<interpretation>
+<coding>
+<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" />
+<code value="L" />
+<display value="Low" />
+</coding>
+</interpretation>
+<referenceRange>
+<low>
+<value value="2.08" />
+<unit value="mmol/L" />
+<system value="http://unitsofmeasure.org" />
+<code value="mmol/L" />
+</low>
+<high>
+<value value="3.00" />
+<unit value="mmol/L" />
+<system value="http://unitsofmeasure.org" />
+<code value="mmol/L" />
+</high>
+</referenceRange>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Header-108" />
+<resource>
+<Observation>
+<id value="Header-108" />
+<status value="unknown" />
+<code>
+<coding>
+<system value="https://www.nuytinck.be" />
+<code value="H108" />
+<display value="ELEKTROLIETEN EN SPOORELEMENTEN" />
+</coding>
+<text value="ELEKTROLIETEN EN SPOORELEMENTEN" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<hasMember>
+<reference value="Observation/Test-00051" />
+</hasMember>
+<hasMember>
+<reference value="Observation/Test-00553" />
+</hasMember>
+<hasMember>
+<reference value="Observation/Test-00169" />
+</hasMember>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Test-00030" />
+<resource>
+<Observation>
+<id value="Test-00030" />
+<basedOn>
+<reference value="ServiceRequest/Request-2301168790" />
+</basedOn>
+<status value="final" />
+<code>
+<coding>
+<system value="http://loinc.org" />
+<code value="2885-2" />
+<display value="Protein [Mass/volume] in Serum or Plasma" />
+</coding>
+<text value="Totaal eiwit" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<performer>
+<reference value="Practitioner/Biologist-000025" />
+<display value="Heide De Haene" />
+</performer>
+<issued value="2023-03-23T14:20:42.000+01:00" />
+<valueQuantity>
+<value value="69" />
+<unit value="g/L" />
+<system value="http://unitsofmeasure.org" />
+<code value="g/L" />
+</valueQuantity>
+<interpretation>
+<coding>
+<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" />
+<code value="N" />
+<display value="Normal" />
+</coding>
+</interpretation>
+<referenceRange>
+<low>
+<value value="64" />
+<unit value="g/L" />
+<system value="http://unitsofmeasure.org" />
+<code value="g/L" />
+</low>
+<high>
+<value value="83" />
+<unit value="g/L" />
+<system value="http://unitsofmeasure.org" />
+<code value="g/L" />
+</high>
+</referenceRange>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Header-109" />
+<resource>
+<Observation>
+<id value="Header-109" />
+<status value="unknown" />
+<code>
+<coding>
+<system value="https://www.nuytinck.be" />
+<code value="H109" />
+<display value="PROTEINEN" />
+</coding>
+<text value="PROTEINEN" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<hasMember>
+<reference value="Observation/Test-00030" />
+</hasMember>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Test-03213" />
+<resource>
+<Observation>
+<id value="Test-03213" />
+<basedOn>
+<reference value="ServiceRequest/Request-2301168790" />
+</basedOn>
+<status value="final" />
+<code>
+<coding>
+<system value="http://loinc.org" />
+<code value="3016-3" />
+<display value="Thyrotropin [Units/volume] in Serum or Plasma" />
+</coding>
+<text value="TSH" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<performer>
+<reference value="Practitioner/Biologist-000025" />
+<display value="Heide De Haene" />
+</performer>
+<issued value="2023-03-23T14:20:42.000+01:00" />
+<valueQuantity>
+<value value="3.76" />
+<unit value="mU/L" />
+<system value="https://www.nuytinck.be" />
+<code value="mU/L" />
+</valueQuantity>
+<interpretation>
+<coding>
+<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" />
+<code value="N" />
+<display value="Normal" />
+</coding>
+</interpretation>
+<referenceRange>
+<low>
+<value value="0.30" />
+<unit value="mU/L" />
+<system value="https://www.nuytinck.be" />
+<code value="mU/L" />
+</low>
+<high>
+<value value="4.20" />
+<unit value="mU/L" />
+<system value="https://www.nuytinck.be" />
+<code value="mU/L" />
+</high>
+</referenceRange>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Test-00442" />
+<resource>
+<Observation>
+<id value="Test-00442" />
+<basedOn>
+<reference value="ServiceRequest/Request-2301168790" />
+</basedOn>
+<status value="final" />
+<code>
+<coding>
+<system value="http://loinc.org" />
+<code value="3013-0" />
+<display value="Thyroglobulin [Mass/volume] in Serum or Plasma" />
+</coding>
+<text value="Thyroglobuline" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<performer>
+<reference value="Practitioner/Biologist-000025" />
+<display value="Heide De Haene" />
+</performer>
+<issued value="2023-03-23T14:20:42.000+01:00" />
+<valueQuantity>
+<value value="39.5" />
+<unit value="mcg/L" />
+<system value="http://unitsofmeasure.org" />
+<code value="ug/L" />
+</valueQuantity>
+<interpretation>
+<coding>
+<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" />
+<code value="N" />
+<display value="Normal" />
+</coding>
+</interpretation>
+<referenceRange>
+<low>
+<value value="3.5" />
+<unit value="mcg/L" />
+<system value="http://unitsofmeasure.org" />
+<code value="ug/L" />
+</low>
+<high>
+<value value="77.0" />
+<unit value="mcg/L" />
+<system value="http://unitsofmeasure.org" />
+<code value="ug/L" />
+</high>
+</referenceRange>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Test-00146" />
+<resource>
+<Observation>
+<id value="Test-00146" />
+<basedOn>
+<reference value="ServiceRequest/Request-2301168790" />
+</basedOn>
+<status value="final" />
+<code>
+<coding>
+<system value="http://loinc.org" />
+<code value="8098-6" />
+<display value="Thyroglobulin Ab [Units/volume] in Serum or Plasma" />
+</coding>
+<text value="Thyroglobuline As" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<performer>
+<reference value="Practitioner/Biologist-000025" />
+<display value="Heide De Haene" />
+</performer>
+<issued value="2023-03-23T14:20:42.000+01:00" />
+<valueString value="&lt;15" />
+<interpretation>
+<coding>
+<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" />
+<code value="N" />
+<display value="Normal" />
+</coding>
+</interpretation>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Test-02541" />
+<resource>
+<Observation>
+<id value="Test-02541" />
+<basedOn>
+<reference value="ServiceRequest/Request-2301168790" />
+</basedOn>
+<status value="final" />
+<code>
+<coding>
+<system value="http://loinc.org" />
+<code value="2143-6" />
+<display value="Cortisol [Mass/volume] in Serum or Plasma" />
+</coding>
+<text value="Cortisol" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<performer>
+<reference value="Practitioner/Biologist-000025" />
+<display value="Heide De Haene" />
+</performer>
+<issued value="2023-03-23T14:20:42.000+01:00" />
+<valueQuantity>
+<value value="19.32" />
+<unit value="mcg/dL" />
+<system value="http://unitsofmeasure.org" />
+<code value="ug/dL" />
+</valueQuantity>
+<note>
+<text value="Ochtend:  6.02-18.4
+Namiddag: 2.68-10.5
+                                                           ." />
+</note>
+<interpretation>
+<coding>
+<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" />
+<code value="H" />
+<display value="High" />
+</coding>
+</interpretation>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Test-00330" />
+<resource>
+<Observation>
+<id value="Test-00330" />
+<basedOn>
+<reference value="ServiceRequest/Request-2301168790" />
+</basedOn>
+<status value="final" />
+<code>
+<coding>
+<system value="http://loinc.org" />
+<code value="3033-8" />
+<display value="Transcortin [Mass/volume] in Serum" />
+</coding>
+<text value="Transcortine" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<performer>
+<reference value="Practitioner/Biologist-000025" />
+<display value="Heide De Haene" />
+</performer>
+<issued value="2023-03-23T14:20:42.000+01:00" />
+<valueQuantity>
+<value value="91" />
+<unit value="mg/L" />
+<system value="http://unitsofmeasure.org" />
+<code value="mg/L" />
+</valueQuantity>
+<note>
+<text value="De referentiewaarden omvatten oestrogeenbehandeling
+bij vrouwen." />
+</note>
+<interpretation>
+<coding>
+<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" />
+<code value="N" />
+<display value="Normal" />
+</coding>
+</interpretation>
+<referenceRange>
+<low>
+<value value="23" />
+<unit value="mg/L" />
+<system value="http://unitsofmeasure.org" />
+<code value="mg/L" />
+</low>
+<high>
+<value value="149" />
+<unit value="mg/L" />
+<system value="http://unitsofmeasure.org" />
+<code value="mg/L" />
+</high>
+</referenceRange>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Test-00571" />
+<resource>
+<Observation>
+<id value="Test-00571" />
+<basedOn>
+<reference value="ServiceRequest/Request-2301168790" />
+</basedOn>
+<status value="final" />
+<code>
+<coding>
+<system value="http://loinc.org" />
+<code value="2145-1" />
+<display value="Cortisol Free [Mass/volume] in Serum or Plasma" />
+</coding>
+<text value="Vrij cortisol (ber)" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<performer>
+<reference value="Practitioner/Biologist-000025" />
+<display value="Heide De Haene" />
+</performer>
+<issued value="2023-03-23T14:20:42.000+01:00" />
+<valueQuantity>
+<value value="4.8" />
+<unit value="ng/mL" />
+<system value="http://unitsofmeasure.org" />
+<code value="ng/mL" />
+</valueQuantity>
+<note>
+<text value="&apos;s Morgens : 2.5-12.0        &apos;s Avonds: 0.5-4.1" />
+</note>
+<interpretation>
+<coding>
+<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" />
+<code value="N" />
+<display value="Normal" />
+</coding>
+</interpretation>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Test-00569" />
+<resource>
+<Observation>
+<id value="Test-00569" />
+<basedOn>
+<reference value="ServiceRequest/Request-2301168790" />
+</basedOn>
+<status value="final" />
+<code>
+<coding>
+<system value="http://loinc.org" />
+<code value="2141-0" />
+<display value="Corticotropin [Mass/volume] in Plasma" />
+</coding>
+<text value="ACTH" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<performer>
+<reference value="Practitioner/Biologist-000025" />
+<display value="Heide De Haene" />
+</performer>
+<issued value="2023-03-23T14:20:42.000+01:00" />
+<valueQuantity>
+<value value="34.0" />
+<unit value="pg/mL" />
+<system value="http://unitsofmeasure.org" />
+<code value="pg/mL" />
+</valueQuantity>
+<note>
+<text value="Ochtendstaal (08u - 10u):                        10.0 - 63.3
+Avondstaal   (20u - 22u):                         7.2 - 30.0" />
+</note>
+<interpretation>
+<coding>
+<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" />
+<code value="N" />
+<display value="Normal" />
+</coding>
+</interpretation>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Test-00156" />
+<resource>
+<Observation>
+<id value="Test-00156" />
+<basedOn>
+<reference value="ServiceRequest/Request-2301168790" />
+</basedOn>
+<status value="final" />
+<code>
+<coding>
+<system value="http://loinc.org" />
+<code value="2191-5" />
+<display value="Dehydroepiandrosterone sulfate (DHEA-S) [Mass/volume] in Serum or Plasma" />
+</coding>
+<text value="DHEAS" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<performer>
+<reference value="Practitioner/Biologist-000025" />
+<display value="Heide De Haene" />
+</performer>
+<issued value="2023-03-23T14:20:42.000+01:00" />
+<valueQuantity>
+<value value="35.3" />
+<unit value="mcg/dL" />
+<system value="http://unitsofmeasure.org" />
+<code value="ug/dL" />
+</valueQuantity>
+<interpretation>
+<coding>
+<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" />
+<code value="N" />
+<display value="Normal" />
+</coding>
+</interpretation>
+<referenceRange>
+<low>
+<value value="18.9" />
+<unit value="mcg/dL" />
+<system value="http://unitsofmeasure.org" />
+<code value="ug/dL" />
+</low>
+<high>
+<value value="492.0" />
+<unit value="mcg/dL" />
+<system value="http://unitsofmeasure.org" />
+<code value="ug/dL" />
+</high>
+</referenceRange>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Header-112" />
+<resource>
+<Observation>
+<id value="Header-112" />
+<status value="unknown" />
+<code>
+<coding>
+<system value="https://www.nuytinck.be" />
+<code value="H112" />
+<display value="ENDOCRINOLOGIE" />
+</coding>
+<text value="ENDOCRINOLOGIE" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<hasMember>
+<reference value="Observation/Test-03213" />
+</hasMember>
+<hasMember>
+<reference value="Observation/Test-00442" />
+</hasMember>
+<hasMember>
+<reference value="Observation/Test-00146" />
+</hasMember>
+<hasMember>
+<reference value="Observation/Test-02541" />
+</hasMember>
+<hasMember>
+<reference value="Observation/Test-00330" />
+</hasMember>
+<hasMember>
+<reference value="Observation/Test-00571" />
+</hasMember>
+<hasMember>
+<reference value="Observation/Test-00569" />
+</hasMember>
+<hasMember>
+<reference value="Observation/Test-00156" />
+</hasMember>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Test-04508" />
+<resource>
+<Observation>
+<id value="Test-04508" />
+<basedOn>
+<reference value="ServiceRequest/Request-2301168790" />
+</basedOn>
+<status value="final" />
+<code>
+<coding>
+<system value="https://www.nuytinck.be" />
+<code value="04508" />
+<display value="SARS-CoV-2 S-As" />
+</coding>
+<text value="SARS-CoV-2 S-As" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<performer>
+<reference value="Practitioner/Biologist-000025" />
+<display value="Heide De Haene" />
+</performer>
+<issued value="2023-03-23T14:20:42.000+01:00" />
+<valueString value="&gt;250.0" />
+<note>
+<text value="Het is nog niet duidelijk welke titer correleert met
+immuniteit.
+Kwantitatieve bepaling van S-antistoffen." />
+</note>
+<interpretation>
+<coding>
+<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" />
+<code value="H" />
+<display value="High" />
+</coding>
+</interpretation>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Header-111" />
+<resource>
+<Observation>
+<id value="Header-111" />
+<status value="unknown" />
+<code>
+<coding>
+<system value="https://www.nuytinck.be" />
+<code value="H111" />
+<display value="SEROLOGIE" />
+</coding>
+<text value="SEROLOGIE" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<hasMember>
+<reference value="Observation/Test-04508" />
+</hasMember>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Test-00494" />
+<resource>
+<Observation>
+<id value="Test-00494" />
+<basedOn>
+<reference value="ServiceRequest/Request-2301168790" />
+</basedOn>
+<status value="final" />
+<code>
+<coding>
+<system value="http://loinc.org" />
+<code value="2963-7" />
+<display value="Somatotropin [Mass/volume] in Serum or Plasma" />
+</coding>
+<text value="Groeihormoon" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<performer>
+<reference value="Practitioner/Biologist-000025" />
+<display value="Heide De Haene" />
+</performer>
+<issued value="2023-03-23T14:20:42.000+01:00" />
+<valueQuantity>
+<value value="2.49" />
+<unit value="mcg/L" />
+<system value="http://unitsofmeasure.org" />
+<code value="ug/L" />
+</valueQuantity>
+<interpretation>
+<coding>
+<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" />
+<code value="N" />
+<display value="Normal" />
+</coding>
+</interpretation>
+<referenceRange>
+<low>
+<value value="0.00" />
+<unit value="mcg/L" />
+<system value="http://unitsofmeasure.org" />
+<code value="ug/L" />
+</low>
+<high>
+<value value="9.88" />
+<unit value="mcg/L" />
+<system value="http://unitsofmeasure.org" />
+<code value="ug/L" />
+</high>
+</referenceRange>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Header-114" />
+<resource>
+<Observation>
+<id value="Header-114" />
+<status value="unknown" />
+<code>
+<coding>
+<system value="https://www.nuytinck.be" />
+<code value="H114" />
+<display value="DIVERSEN" />
+</coding>
+<text value="DIVERSEN" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<hasMember>
+<reference value="Observation/Test-00494" />
+</hasMember>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Test-01081" />
+<resource>
+<Observation>
+<id value="Test-01081" />
+<basedOn>
+<reference value="ServiceRequest/Request-2301168790" />
+</basedOn>
+<status value="final" />
+<code>
+<coding>
+<system value="https://www.nuytinck.be" />
+<code value="01081" />
+<display value="Leukocyten" />
+</coding>
+<text value="Leukocyten" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<performer>
+<reference value="Practitioner/Biologist-000025" />
+<display value="Heide De Haene" />
+</performer>
+<issued value="2023-03-23T14:20:42.000+01:00" />
+<valueQuantity>
+<value value="5" />
+<unit value="/mcL" />
+<system value="http://unitsofmeasure.org" />
+<code value="/uL" />
+</valueQuantity>
+<interpretation>
+<coding>
+<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" />
+<code value="N" />
+<display value="Normal" />
+</coding>
+</interpretation>
+<referenceRange>
+<low>
+<value value="0" />
+<unit value="/mcL" />
+<system value="http://unitsofmeasure.org" />
+<code value="/uL" />
+</low>
+<high>
+<value value="25" />
+<unit value="/mcL" />
+<system value="http://unitsofmeasure.org" />
+<code value="/uL" />
+</high>
+</referenceRange>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Test-01082" />
+<resource>
+<Observation>
+<id value="Test-01082" />
+<basedOn>
+<reference value="ServiceRequest/Request-2301168790" />
+</basedOn>
+<status value="final" />
+<code>
+<coding>
+<system value="http://loinc.org" />
+<code value="798-9" />
+<display value="Erythrocytes [#/volume] in Urine by Automated count" />
+</coding>
+<text value="Erytrocyten" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<performer>
+<reference value="Practitioner/Biologist-000025" />
+<display value="Heide De Haene" />
+</performer>
+<issued value="2023-03-23T14:20:42.000+01:00" />
+<valueQuantity>
+<value value="3" />
+<unit value="/mcL" />
+<system value="http://unitsofmeasure.org" />
+<code value="/uL" />
+</valueQuantity>
+<interpretation>
+<coding>
+<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" />
+<code value="N" />
+<display value="Normal" />
+</coding>
+</interpretation>
+<referenceRange>
+<low>
+<value value="0" />
+<unit value="/mcL" />
+<system value="http://unitsofmeasure.org" />
+<code value="/uL" />
+</low>
+<high>
+<value value="25" />
+<unit value="/mcL" />
+<system value="http://unitsofmeasure.org" />
+<code value="/uL" />
+</high>
+</referenceRange>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Test-01083" />
+<resource>
+<Observation>
+<id value="Test-01083" />
+<basedOn>
+<reference value="ServiceRequest/Request-2301168790" />
+</basedOn>
+<status value="final" />
+<code>
+<coding>
+<system value="https://www.nuytinck.be" />
+<code value="01083" />
+<display value="Epitheelcellen" />
+</coding>
+<text value="Epitheelcellen" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<performer>
+<reference value="Practitioner/Biologist-000025" />
+<display value="Heide De Haene" />
+</performer>
+<issued value="2023-03-23T14:20:42.000+01:00" />
+<valueString value="negatief" />
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Test-01085" />
+<resource>
+<Observation>
+<id value="Test-01085" />
+<basedOn>
+<reference value="ServiceRequest/Request-2301168790" />
+</basedOn>
+<status value="final" />
+<code>
+<coding>
+<system value="https://www.nuytinck.be" />
+<code value="01085" />
+<display value="Kiemen" />
+</coding>
+<text value="Kiemen" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<performer>
+<reference value="Practitioner/Biologist-000025" />
+<display value="Heide De Haene" />
+</performer>
+<issued value="2023-03-23T14:20:42.000+01:00" />
+<valueString value="negatief" />
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Observation/Header-224" />
+<resource>
+<Observation>
+<id value="Header-224" />
+<status value="unknown" />
+<code>
+<coding>
+<system value="https://www.nuytinck.be" />
+<code value="H224" />
+<display value="MORFOLOGISCH ONDERZOEK (URINE)" />
+</coding>
+<text value="MORFOLOGISCH ONDERZOEK (URINE)" />
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<hasMember>
+<reference value="Observation/Test-01081" />
+</hasMember>
+<hasMember>
+<reference value="Observation/Test-01082" />
+</hasMember>
+<hasMember>
+<reference value="Observation/Test-01083" />
+</hasMember>
+<hasMember>
+<reference value="Observation/Test-01085" />
+</hasMember>
+</Observation>
+</resource>
+</entry>
+<entry>
+<fullUrl value="DiagnosticReport/Report-2301168790" />
+<resource>
+<DiagnosticReport>
+<id value="Report-2301168790" />
+<identifier>
+<system value="https://www.ehealth.fgov.be/lab-report/diagnostic-report-id" />
+<value value="84461066.Report-2301168790" />
+</identifier>
+<language value="nl" />
+<basedOn>
+<reference value="ServiceRequest/Request-2301168790" />
+</basedOn>
+<status value="final" />
+<code>
+<coding>
+<system value="http://loinc.org" />
+<code value="11502-2" />
+<display value="Laboratory report" />
+</coding>
+</code>
+<subject>
+<reference value="Patient/Patient-2301168790" />
+<display value="TEST" />
+</subject>
+<effectiveDateTime value="2023-03-23T14:22:10.000+01:00" />
+<issued value="2023-03-23T14:20:42.000+01:00" />
+<performer>
+<reference value="Organization/Lab-000" />
+<display value="LABO NUYTINCK" />
+</performer>
+<resultsInterpreter>
+<reference value="Practitioner/Biologist-000025" />
+<display value="Heide De Haene" />
+</resultsInterpreter>
+<result>
+<reference value="Observation/Header-102" />
+<display value="HEMATOLOGIE" />
+</result>
+<result>
+<reference value="Observation/Header-104" />
+<display value="KOOLHYDRATENMETABOLISME" />
+</result>
+<result>
+<reference value="Observation/Header-105" />
+<display value="LIPIDEN" />
+</result>
+<result>
+<reference value="Observation/Header-106" />
+<display value="HART-SPIER-LEVER-GALWEGEN-PANCREAS" />
+</result>
+<result>
+<reference value="Observation/Header-107" />
+<display value="NIERFUNCTIE" />
+</result>
+<result>
+<reference value="Observation/Header-108" />
+<display value="ELEKTROLIETEN EN SPOORELEMENTEN" />
+</result>
+<result>
+<reference value="Observation/Header-109" />
+<display value="PROTEINEN" />
+</result>
+<result>
+<reference value="Observation/Header-112" />
+<display value="ENDOCRINOLOGIE" />
+</result>
+<result>
+<reference value="Observation/Header-111" />
+<display value="SEROLOGIE" />
+</result>
+<result>
+<reference value="Observation/Header-114" />
+<display value="DIVERSEN" />
+</result>
+<result>
+<reference value="Observation/Header-224" />
+<display value="MORFOLOGISCH ONDERZOEK (URINE)" />
+</result>
+</DiagnosticReport>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Organization/Lab-000" />
+<resource>
+<Organization>
+<id value="Lab-000" />
+<identifier>
+<use value="official" />
+<type>
+<coding>
+<system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+<code value="MD" />
+<display value="Medical License number" />
+</coding>
+</type>
+<system value="https://www.ehealth.fgov.be/standards/fhir/NamingSystem/nihdi" />
+<value value="84461066" />
+</identifier>
+<active value="true" />
+<type>
+<coding>
+<system value="https://www.ehealth.fgov.be/standards/fhir/core/CodeSystem/cd-hcparty" />
+<code value="orglaboratory" />
+</coding>
+</type>
+<name value="LABO NUYTINCK" />
+<telecom>
+<system value="phone" />
+<value value="09/2536030" />
+<use value="work" />
+</telecom>
+<address>
+<use value="work" />
+<type value="both" />
+<line value="Noorwegenstraat 4" />
+<city value="Evergem" />
+<postalCode value="9940" />
+<country value="BE" />
+</address>
+</Organization>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Patient/Patient-2301168790" />
+<resource>
+<Patient>
+<id value="Patient-2301168790" />
+<identifier>
+<use value="secondary" />
+<system value="https://www.nuytinck.be" />
+<value value="2301168790" />
+</identifier>
+<active value="true" />
+<name>
+<family value="TEST" />
+<given value="unknown" />
+</name>
+<gender value="unknown" />
+<birthDate value="0001-01-01" />
+<address>
+<use value="home" />
+<type value="both" />
+<line value="unknown" />
+<city value="unknown" />
+<postalCode value="unknown" />
+<country value="BE" />
+</address>
+</Patient>
+</resource>
+</entry>
+<entry>
+<fullUrl value="ServiceRequest/Request-2301168790" />
+<resource>
+<ServiceRequest>
+<id value="Request-2301168790" />
+<identifier>
+<system value="https://www.nuytinck.be" />
+<value value="Request-2301168790" />
+</identifier>
+<status value="active" />
+<intent value="order" />
+<subject>
+<reference value="Patient/Patient-2301168790" />
+</subject>
+<requester>
+<reference value="Practitioner/Doctor-00910" />
+</requester>
+</ServiceRequest>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Practitioner/Biologist-000025" />
+<resource>
+<Practitioner>
+<id value="Biologist-000025" />
+<identifier>
+<use value="official" />
+<system value="https://www.ehealth.fgov.be/standards/fhir/NamingSystem/nihdi" />
+<value value="13607318" />
+</identifier>
+<name>
+<use value="official" />
+<family value="De Haene" />
+<given value="Heide" />
+</name>
+<telecom>
+<system value="email" />
+<value value="heide.de.haene@nuytinck.be" />
+<use value="work" />
+</telecom>
+<telecom>
+<system value="phone" />
+<value value="09/ 253 60 30" />
+<use value="work" />
+</telecom>
+</Practitioner>
+</resource>
+</entry>
+<entry>
+<fullUrl value="Practitioner/Doctor-00910" />
+<resource>
+<Practitioner>
+<id value="Doctor-00910" />
+<identifier>
+<use value="official" />
+<system value="https://www.ehealth.fgov.be/standards/fhir/NamingSystem/nihdi" />
+<value value="14352139" />
+</identifier>
+<name>
+<use value="official" />
+<family value="MACHTELINCKX" />
+<given value="LUDWIG" />
+</name>
+<telecom>
+<system value="email" />
+<value value="ditiseentestmailadres.datvoldoendelangmoetzijnomde" />
+<use value="work" />
+</telecom>
+<telecom>
+<system value="phone" />
+<value value="unknown" />
+<use value="work" />
+</telecom>
+<address>
+<use value="work" />
+<line value="NOORWEGENSTRAAT 4" />
+<city value="EVERGEM" />
+<postalCode value="9940" />
+<country value="BE" />
+</address>
+</Practitioner>
+</resource>
+</entry>
+</Bundle>

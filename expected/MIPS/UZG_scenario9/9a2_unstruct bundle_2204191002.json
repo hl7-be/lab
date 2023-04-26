@@ -1,0 +1,619 @@
+{
+  "resourceType": "Bundle",
+  "identifier": {
+    "system": "https://www.ehealth.fgov.be/hl7/bundle",
+    "value": "fe88441f-9c6c-4e87-a1b9-547d8c2f92ed"
+  },
+  "type": "document",
+  "timestamp": "2022-04-19T10:02:27.523+02:00",
+  "entry": [ {
+    "fullUrl": "Composition/35318270",
+    "resource": {
+      "resourceType": "Composition",
+      "id": "35318270",
+      "meta": {
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-laboratory-report-composition" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": {
+        "system": "https://www.ehealth.fgov.be/lab-report/diagnostic-report-id",
+        "value": "fe88441f-9c6c-4e87-a1b9-547d8c2f92ed"
+      },
+      "status": "final",
+      "type": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "11502-2",
+          "display": "Laboratory report"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/1252172"
+      },
+      "date": "2022-04-19T10:02:27+02:00",
+      "author": [ {
+        "reference": "Organization/4335"
+      } ],
+      "title": "Laboratory Report",
+      "section": [ {
+        "entry": [ {
+          "reference": "DiagnosticReport/35318270"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "DiagnosticReport/35318270",
+    "resource": {
+      "resourceType": "DiagnosticReport",
+      "id": "35318270",
+      "meta": {
+        "versionId": "11",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-laboratory-report" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://www.ehealth.fgov.be/lab-report/diagnostic-report-id",
+        "value": "fe88441f-9c6c-4e87-a1b9-547d8c2f92ed"
+      } ],
+      "basedOn": [ {
+        "reference": "ServiceRequest/211126-3044"
+      } ],
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+          "code": "LAB",
+          "display": "Laboratory"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "11502-2"
+        } ],
+        "text": "Labo rapport"
+      },
+      "subject": {
+        "reference": "Patient/1252172"
+      },
+      "effectiveDateTime": "2022-04-19T10:02:27+02:00",
+      "issued": "2022-03-11T16:07:44.000+01:00",
+      "performer": [ {
+        "reference": "Organization/4335"
+      } ],
+      "specimen": [ {
+        "reference": "Specimen/211126304401"
+      } ],
+      "result": [ {
+        "reference": "Observation/e059a9f9-bd9d-4e2d-a693-c9bf6b2e2f93"
+      } ]
+    }
+  }, {
+    "fullUrl": "Patient/1252172",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "1252172",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-patient" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "use": "official",
+        "system": "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/ssin",
+        "value": "01482105560"
+      }, {
+        "system": "https://www.uzgent.be",
+        "value": "120406 045A84"
+      }, {
+        "system": "http://mips.be/UZGent",
+        "value": "20120406XDTX09"
+      } ],
+      "name": [ {
+        "family": "Xdtestcozohub",
+        "given": [ "Xdtest" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "-"
+      } ],
+      "gender": "male",
+      "birthDate": "2012-04-06",
+      "address": [ {
+        "line": [ "C. Heymanslaan 10" ],
+        "city": "GENT",
+        "postalCode": "9000",
+        "country": "B"
+      } ]
+    }
+  }, {
+    "fullUrl": "ServiceRequest/211126-3044",
+    "resource": {
+      "resourceType": "ServiceRequest",
+      "id": "211126-3044",
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://www.uzgent.be",
+        "value": "211126-3044"
+      }, {
+        "value": "000028208822"
+      } ],
+      "status": "completed",
+      "intent": "order",
+      "priority": "routine",
+      "subject": {
+        "reference": "Patient/1252172"
+      },
+      "authoredOn": "2021-11-26T12:19:00+01:00",
+      "requester": {
+        "reference": "Practitioner/3018623"
+      }
+    }
+  }, {
+    "fullUrl": "Practitioner/3018623",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "3018623",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-practitioner" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "name": [ {
+        "family": "Moors",
+        "given": [ "Ine" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "ine.moors@ugent.be"
+      } ],
+      "address": [ {
+        "line": [ "Poli Hematologie" ],
+        "city": "GENT",
+        "postalCode": "9000",
+        "country": "B"
+      } ],
+      "gender": "unknown"
+    }
+  }, {
+    "fullUrl": "Organization/4335",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "4335",
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "name": "Lab UZGent",
+      "telecom": [ {
+        "system": "phone",
+        "value": "09/2406310"
+      }, {
+        "system": "fax",
+        "value": "092404985"
+      } ],
+      "address": [ {
+        "line": [ "C. Heymanslaan 10" ],
+        "city": "GENT",
+        "postalCode": "9000",
+        "country": "B"
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/e059a9f9-bd9d-4e2d-a693-c9bf6b2e2f93",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "e059a9f9-bd9d-4e2d-a693-c9bf6b2e2f93",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "unknown",
+      "code": {
+        "text": "Microbiologie:  peri-anaal defect, ondermijn, zwarte kleur                                                                                 Gekend voor :"
+      },
+      "subject": {
+        "reference": "Patient/1252172"
+      },
+      "hasMember": [ {
+        "reference": "Observation/388289510"
+      }, {
+        "reference": "Observation/388529871"
+      }, {
+        "reference": "Observation/388289517"
+      }, {
+        "reference": "Observation/388516000"
+      }, {
+        "reference": "Observation/388529593"
+      }, {
+        "reference": "Observation/388289513"
+      }, {
+        "reference": "Observation/388289514"
+      } ]
+    }
+  }, {
+    "fullUrl": "ServiceRequest/274786725",
+    "resource": {
+      "resourceType": "ServiceRequest",
+      "id": "274786725",
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://www.uzgent.be",
+        "value": "274786725"
+      } ],
+      "status": "completed",
+      "intent": "order",
+      "priority": "routine",
+      "subject": {
+        "reference": "Patient/1252172"
+      }
+    }
+  }, {
+    "fullUrl": "ServiceRequest/274786723",
+    "resource": {
+      "resourceType": "ServiceRequest",
+      "id": "274786723",
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://www.uzgent.be",
+        "value": "274786723"
+      } ],
+      "status": "completed",
+      "intent": "order",
+      "priority": "routine",
+      "subject": {
+        "reference": "Patient/1252172"
+      }
+    }
+  }, {
+    "fullUrl": "ServiceRequest/275079885",
+    "resource": {
+      "resourceType": "ServiceRequest",
+      "id": "275079885",
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://www.uzgent.be",
+        "value": "275079885"
+      } ],
+      "status": "completed",
+      "intent": "order",
+      "priority": "routine",
+      "subject": {
+        "reference": "Patient/1252172"
+      }
+    }
+  }, {
+    "fullUrl": "ServiceRequest/274786729",
+    "resource": {
+      "resourceType": "ServiceRequest",
+      "id": "274786729",
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://www.uzgent.be",
+        "value": "274786729"
+      } ],
+      "status": "completed",
+      "intent": "order",
+      "priority": "routine",
+      "subject": {
+        "reference": "Patient/1252172"
+      }
+    }
+  }, {
+    "fullUrl": "ServiceRequest/274786731",
+    "resource": {
+      "resourceType": "ServiceRequest",
+      "id": "274786731",
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://www.uzgent.be",
+        "value": "274786731"
+      } ],
+      "status": "completed",
+      "intent": "order",
+      "priority": "routine",
+      "subject": {
+        "reference": "Patient/1252172"
+      }
+    }
+  }, {
+    "fullUrl": "Observation/388289510",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "388289510",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "basedOn": [ {
+        "reference": "ServiceRequest/274786725"
+      } ],
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "77202-0"
+        } ],
+        "text": "Staal Specificatie"
+      },
+      "subject": {
+        "reference": "Patient/1252172"
+      },
+      "issued": "2021-11-26T12:20:12.000+01:00",
+      "valueString": "peri-anaal defect, ondermijn, zwarte kleur"
+    }
+  }, {
+    "fullUrl": "Observation/388529871",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "388529871",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "basedOn": [ {
+        "reference": "ServiceRequest/274786723"
+      } ],
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://www.uzgent.be",
+          "code": "GRAM"
+        } ],
+        "text": "Gramkleuring"
+      },
+      "subject": {
+        "reference": "Patient/1252172"
+      },
+      "issued": "2021-11-29T09:29:06.000+01:00",
+      "valueString": "WBC +- meerdere soorten bacteriën +++",
+      "specimen": {
+        "reference": "Specimen/211126304401"
+      }
+    }
+  }, {
+    "fullUrl": "Observation/388289517",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "388289517",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "basedOn": [ {
+        "reference": "ServiceRequest/274786723"
+      } ],
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "6463-4"
+        } ],
+        "text": "Kweek (isolaten, ABgram...)"
+      },
+      "subject": {
+        "reference": "Patient/1252172"
+      },
+      "issued": "2021-12-01T13:34:51.000+01:00",
+      "valueString": "1: : Enterococcus faecium +++\n2: : Nakaseomyces glabrataa (vroeger Candida glabrata) +\n3: : Clostridium innocuum ++\n4: : Bacteroides fragilis ++\n5: : Bacteroides thetaiotaomicron ++\n6: : KIEM ++\n          Parabacteroides distasonis",
+      "specimen": {
+        "reference": "Specimen/211126304401"
+      }
+    }
+  }, {
+    "fullUrl": "Observation/388516000",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "388516000",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "basedOn": [ {
+        "reference": "ServiceRequest/274786723"
+      } ],
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://www.uzgent.be",
+          "code": "ANTIBIOGRAM"
+        } ],
+        "text": "Antibiogram"
+      },
+      "subject": {
+        "reference": "Patient/1252172"
+      },
+      "issued": "2021-12-01T13:34:46.000+01:00",
+      "valueString": "                         1   4\nAmoxicilline             R\nVancomycine              S\nOfloxacine/levofloxacine R\nCefalosporines           R       Intrinsieke resistentie\nMeropenem                    S",
+      "specimen": {
+        "reference": "Specimen/211126304401"
+      }
+    }
+  }, {
+    "fullUrl": "Observation/388529593",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "388529593",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "basedOn": [ {
+        "reference": "ServiceRequest/275079885"
+      } ],
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "635-3",
+          "display": "Anaerobic culture: microorganisms identified (specimen defined elsewhere in the message)"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/1252172"
+      },
+      "issued": "2021-12-01T13:33:08.000+01:00",
+      "valueString": "Positief",
+      "specimen": {
+        "reference": "Specimen/211126304401"
+      }
+    }
+  }, {
+    "fullUrl": "Observation/388289513",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "388289513",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "basedOn": [ {
+        "reference": "ServiceRequest/274786729"
+      } ],
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://www.uzgent.be",
+          "code": "MGIST"
+        } ],
+        "text": "Kweek Gisten"
+      },
+      "subject": {
+        "reference": "Patient/1252172"
+      },
+      "issued": "2021-11-27T11:44:58.000+01:00",
+      "valueString": "+",
+      "specimen": {
+        "reference": "Specimen/211126304401"
+      }
+    }
+  }, {
+    "fullUrl": "Observation/388289514",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "388289514",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "basedOn": [ {
+        "reference": "ServiceRequest/274786731"
+      } ],
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://www.uzgent.be",
+          "code": "MSCHIM"
+        } ],
+        "text": "Kweek schimmels"
+      },
+      "subject": {
+        "reference": "Patient/1252172"
+      },
+      "issued": "2021-12-01T07:47:39.000+01:00",
+      "valueString": "Negatief",
+      "specimen": {
+        "reference": "Specimen/211126304401"
+      }
+    }
+  }, {
+    "fullUrl": "Specimen/211126304401",
+    "resource": {
+      "resourceType": "Specimen",
+      "id": "211126304401",
+      "meta": {
+        "versionId": "1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-specimen-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://www.uzgent.be",
+        "value": "211126304401"
+      } ],
+      "status": "available",
+      "type": {
+        "coding": [ {
+          "system": "https://www.uzgent.be",
+          "code": "M_VA",
+          "display": "M Varia"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/1252172"
+      },
+      "receivedTime": "2021-11-26T15:36:18+01:00",
+      "request": [ {
+        "reference": "ServiceRequest/274786723"
+      } ],
+      "collection": {
+        "collectedDateTime": "2021-11-26T15:36:00+01:00"
+      }
+    }
+  } ]
+}

@@ -1,0 +1,7 @@
+6A_1		00220406-0001 preliminary 
+6A_2		00220406-0001 final 
+6B		00220406-0001 amended
+6C		00220406-0001 patient change
+6D		00220406-0001 retransmit different creation, same protocol. Version number?
+6E		00220406-0001 changes in prescription, DOB, sex
+6F		00220406-0001 older protocol (=6C) should not overwrite newer one	

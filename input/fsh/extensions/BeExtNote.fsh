@@ -3,6 +3,6 @@ Id: be-ext-note
 Title: "BeExtNote"
 Description: "BeExtNote"
 * ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm].valueInteger = 1
-
-
 * value[x] only Annotation
+* ^context.type = "#element"
+* ^context.expression = "DiagnosticReport"

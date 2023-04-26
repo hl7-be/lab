@@ -1,0 +1,163 @@
+<html><head><style>body {
+    font-family: sans-serif;
+    margin: 48px;
+}
+
+div.hapiHeaderText {
+    font-size: 1.5em;
+    color: #0484DF;
+}
+
+
+
+/********************************************************
+* The following section is used for tables of values
+* with multiple columns (e.g. the table of Observations
+* in a Diagnostic Report for a lab test)
+********************************************************/
+table.hapiTableOfValues {
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 24px;
+    border-spacing: 0;
+    border-collapse: collapse;
+    border: 1px solid #DBDFE3;
+}
+
+table.hapiTableOfValues thead tr td {
+    background: #EEF2F6;
+    color: #5D7184;
+    font-size: .8em;
+    padding: 1em;
+    text-transform: uppercase;
+    border: 1px solid #DBDFE3;
+}
+
+table.hapiTableOfValues tbody tr td {
+    padding: .5em 1em;
+    border: 1px solid #DBDFE3;
+}
+
+table.hapiTableOfValues tbody tr.title td {
+    color: #0484DF;
+}
+
+table.hapiTableOfValues tbody tr.title.level_0 td {
+    background: #deeeff;
+}
+
+/********************************************************
+* The following section is used for property tables. These
+* tables have two columns, one for the property name, and
+* one for the property value
+********************************************************/
+table.hapiPropertyTable {
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 24px;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+table.hapiPropertyTable thead tr td {
+    background: #EEF2F6;
+    color: #5D7184;
+    font-size: .8em;
+    padding: 1em;
+    text-transform: uppercase;
+    border: 1px solid #DBDFE3;
+}
+
+table.hapiPropertyTable tbody tr td:first-child {
+    text-align: right;
+    text-transform: uppercase;
+    color: #5D7184;
+    border: 1px solid #DBDFE3;
+    font-size: .8em;
+    vertical-align: baseline;
+    width: 20%;
+}
+
+table.hapiPropertyTable tbody tr td {
+    vertical-align: top;
+    padding: .5em 1em;
+    margin: 1px;
+    border: 1px solid #DBDFE3;
+    vertical-align: baseline;
+}
+
+tr.level_2 td.label {
+    padding-left: 2em;
+}
+
+tr.level_3 td.label {
+    padding-left: 3em;
+}
+
+tr.level_4 td.label {
+    padding-left: 4em;
+}
+
+tr.level_5 td.label {
+    padding-left: 5em;
+}
+
+tr.level_6 td.label {
+    padding-left: 6em;
+}
+
+tr.level_7 td.label {
+    padding-left: 7em;
+}
+
+tr.level_8 td.label {
+    padding-left: 8em;
+}
+
+tr.level_9 td.label {
+    padding-left: 9em;
+}
+
+td.toggable {
+    cursor: pointer;
+}
+
+td.toggable div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+td.toggable div span {
+    background-color: rgba(107, 128, 148, 0.6);
+    color: #EEF2F6;
+    border-radius: 10px;
+    padding: 4px 6px 2px;
+    font-size: .8em;
+    min-width: 100px;
+    text-align: center;
+}
+
+td.toggable div span.inline {
+    min-width: 20px;
+}
+
+td.toggable.displayed div span.clicktoshow {
+    display: none;
+}
+
+td.toggable div span.clicktohide {
+    display: none;
+}
+
+td.toggable.displayed div span.clicktohide {
+    display: inline !important;
+}
+
+.hidden {
+    display: none;
+}
+</style></head><body>
+<div xmlns="http://www.w3.org/1999/xhtml"><div class="hapiHeaderText"> Laboratory studies (set) </div><table class="hapiPropertyTable"><thead><tr><td colspan="2">Result information</td></tr></thead><tbody><tr><td>Status</td><td>FINAL</td></tr><tr><td>Issued</td><td> 16 December 2021 16:07:58 </td></tr><tr><td>Version Id</td><td>44</td></tr></tbody>    <!-- patient --><thead><tr><td colspan="2">Patient</td></tr></thead><tbody><tr><td>Identifier</td><td> Official 66042620739 (https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/ssin) </td></tr><tr><td>Patient name</td><td>Tom Tollenaere</td></tr><tr><td>Date of birth</td><td><span>26 April 1966</span></td></tr><tr><td>Gender</td><td>male</td></tr><tr><td>PHONE</td><td>0497054020</td></tr><tr><td>EMAIL</td><td>TOM.TOLLENAERE@MACSYS.BE</td></tr><tr><td>Address</td><td><span>Beukenlaan 63/A </span><br/><span>Rotselaar </span><span>BE </span></td></tr></tbody>    <!-- notes extension -->    <!-- Service Request Details --><thead><tr><td colspan="2" onclick="this.classList.toggle('displayed'); this.parentElement.parentElement.nextElementSibling.classList.toggle('hidden')" class="toggable"><div><div>Service request</div><div><span class="clicktoshow">click to show</span><span class="clicktohide">click to hide</span></div></div></td></tr></thead><tbody class="hidden"><tr><td>Identifier</td><td>815333041</td></tr>    <!-- Subject --><tr><td>Subject</td><td> Tom Tollenaere (66042620739) </td></tr>    <!-- Status --><tr><td>Status</td><td>COMPLETED</td></tr>    <!-- Intent --><tr><td>Intent</td><td>ORDER</td></tr>    <!-- Category --><tr><td>Category</td><td> Laboratory procedure (108252007) (http://snomed.info/sct) </td></tr>    <!-- Priority --><tr><td>Priority</td><td>ROUTINE</td></tr>    <!-- Authored on --><tr><td>Authored on</td><td>04 November 2021 13:02:00</td></tr>    <!-- Requester --><tr class="Requester"><td>Requester</td><td onclick="this.classList.toggle('displayed'); var ns = this.parentElement; while(ns.nextElementSibling &amp;&amp; ns.nextElementSibling.classList.contains([...ns.classList].find(function(x) { return x !== 'hidden' }))) { ns.nextElementSibling.classList.toggle('hidden'); ns = ns.nextElementSibling }" class="toggable"><div><div> Dr. Stefan Waegemans (https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/nihdi) (11849242860) </div><div><span class="inline clicktoshow">+</span><span class="inline clicktohide">-</span></div></div></td></tr><tr class="hidden Requester"><td>Identifier</td><td>11849242860</td></tr><tr class="hidden Requester"><td>Name</td><td>Dr. Stefan Waegemans</td></tr><tr class="hidden Requester"><td>Telecom</td><td>stefan.waegemans@cma.be</td></tr><tr class="hidden Requester"><td>Telecom</td><td>(+32)11/243291</td></tr><tr class="hidden Requester"><td>Telecom</td><td>(+32)11/225288</td></tr><tr class="hidden Requester"><td>Address</td><td><span>Willekensmolenstraat 88/2 </span><br/><span>Hasselt </span><span>BE </span></td></tr>    <!-- Performer -->    <!-- Notes --></tbody>    <!-- Specimen details --><thead><tr><td colspan="2" onclick="this.classList.toggle('displayed'); this.parentElement.parentElement.nextElementSibling.classList.toggle('hidden')" class="toggable"><div><div>Specimen</div><div><span class="clicktoshow">click to show</span><span class="clicktohide">click to hide</span></div></div></td></tr></thead><tbody class="hidden">    <!-- Identifier --><tr><td>Identifier</td><td> 001815333041 (http://www.macsys.be/hl7/Specimen) </td></tr>    <!-- Status --><tr><td>Status</td><td>AVAILABLE</td></tr>    <!-- Type --><tr><td>Type</td><td> Serum (SER) (http://terminology.hl7.org/CodeSystem/v2-0487) </td></tr>    <!-- Subject --><tr><td>Patient</td><td> Tom Tollenaere (66042620739) </td></tr>    <!-- Received time --><tr><td>Received</td><td>04 November 2021 13:02:36</td></tr>    <!-- Requests -->    <!-- Specimen collection -->    <!-- Collection collector --><tr class="Collector"><td>Collector</td><td onclick="this.classList.toggle('displayed'); var ns = this.parentElement; while(ns.nextElementSibling &amp;&amp; ns.nextElementSibling.classList.contains([...ns.classList].find(function(x) { return x !== 'hidden' }))) { ns.nextElementSibling.classList.toggle('hidden'); ns = ns.nextElementSibling }" class="toggable"><div><div> Dr. Stefan Waegemans (https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/nihdi) (11849242860) </div><div><span class="inline clicktoshow">+</span><span class="inline clicktohide">-</span></div></div></td></tr><tr class="hidden Collector"><td>Identifier</td><td>11849242860</td></tr><tr class="hidden Collector"><td>Name</td><td>Dr. Stefan Waegemans</td></tr><tr class="hidden Collector"><td>Telecom</td><td>stefan.waegemans@cma.be</td></tr><tr class="hidden Collector"><td>Telecom</td><td>(+32)11/243291</td></tr><tr class="hidden Collector"><td>Telecom</td><td>(+32)11/225288</td></tr><tr class="hidden Collector"><td>Address</td><td><span>Willekensmolenstraat 88/2 </span><br/><span>Hasselt </span><span>BE </span></td></tr>    <!-- Collection collected date --><tr><td>Collected date</td><td>04 November 2021 00:00:00</td></tr>    <!-- Collection collected period -->    <!-- Collection duration -->    <!-- Collection quantity -->    <!-- Collection method -->    <!-- Collection body site -->    <!-- Collection fasted status (CodeableConcept) -->    <!-- Fasted status (Duration) -->    <!-- Processings -->    <!-- Containers -->    <!-- Condition -->    <!-- Notes --></tbody>    <!-- Performer details --><thead><tr><td colspan="2" onclick="this.classList.toggle('displayed'); this.parentElement.parentElement.nextElementSibling.classList.toggle('hidden')" class="toggable"><div><div>Performer</div><div><span class="clicktoshow">click to show</span><span class="clicktohide">click to hide</span></div></div></td></tr></thead><tbody class="hidden"><tr><td>Type</td><td> (orglaboratory) (https://www.ehealth.fgov.be/standards/fhir/core/CodeSystem/cd-hcparty) </td></tr><tr><td>Identifier</td><td> Official 81365677998 (https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/nihdi) </td></tr><tr><td>Identifier</td><td> Official 007-MED (https://economie.fgov.be/belac) </td></tr><tr><td>Name</td><td>CENTRUM VOOR MEDISCHE ANALYSE</td></tr><tr><td>PHONE</td><td>014/28.50.00</td></tr><tr><td>FAX</td><td>014/22.56.08</td></tr><tr><td>EMAIL</td><td>info@cma.be</td></tr><tr><td>URL</td><td>http://www.cma.be</td></tr><tr><td>Address</td><td><span>Oud-Strijderslaan 199 </span><br/><span>Herentals </span><span>BE </span></td></tr></tbody>    <!-- Results interpreter --><thead><tr><td colspan="2" onclick="this.classList.toggle('displayed'); this.parentElement.parentElement.nextElementSibling.classList.toggle('hidden')" class="toggable"><div><div>Results Interpreter</div><div><span class="clicktoshow">click to show</span><span class="clicktohide">click to hide</span></div></div></td></tr></thead><tbody class="hidden"><tr><td>Identifier</td><td>68071432800</td></tr><tr><td>Name</td><td>Frans Engelen</td></tr><tr><td>Telecom</td><td>014/28.50.00</td></tr><tr><td>Address</td><td><span>Oud-Strijderslaan 199 </span><br/><span>Herentals </span><span>BE </span></td></tr></tbody>    <!-- Media --></table><table class="hapiTableOfValues"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td><td></td></tr></thead><tbody><tr class="level_0 title"><td style="vertical-align:top" class="label"> INFLAMMATIE </td><td>    <!-- quantity -->    <!-- string -->    <!-- codeable concept -->    <!-- boolean -->    <!-- date time -->    <!-- integer -->    <!-- period -->    <!-- range -->    <!-- ratio -->    <!-- sample data, what is this in a lab context? -->    <!-- time --></td><td></td><td></td><td></td><td onclick="this.classList.toggle('displayed');  this.parentElement.nextElementSibling.classList.toggle('hidden');" class="toggable"><div><span class="inline clicktoshow">+</span><span class="inline clicktohide">-</span></div></td></tr><tr class="hidden"><td colspan="6"><table class="hapiPropertyTable"><thead><tr><td colspan="2">Details</td></tr></thead><tbody><tr><td>Code</td><td>INFLAMMATIE</td></tr><tr><td>Effective date (datetime)</td><td>04 November 2021 00:00:00</td></tr>    <!-- will effective timing ever occur in context of lab results? -->    <!-- tr th:if="${result.resource.hasEffectiveTiming}"><td>Effective date</td><td>(effective timing)</td></tr --></tbody><thead><tr><td colspan="2" onclick="this.classList.toggle('displayed'); this.parentElement.parentElement.nextElementSibling.classList.toggle('hidden')" class="toggable"><div><div>Subject</div><div><span class="clicktoshow">click to show</span><span class="clicktohide">click to hide</span></div></div></td></tr></thead><tbody class="hidden"><tr><td>Identifier</td><td> Official 66042620739 (https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/ssin) </td></tr><tr><td>Patient name</td><td>Tom Tollenaere</td></tr><tr><td>Date of birth</td><td><span>26 April 1966</span></td></tr><tr><td>Gender</td><td>male</td></tr><tr><td>PHONE</td><td>0497054020</td></tr><tr><td>EMAIL</td><td>TOM.TOLLENAERE@MACSYS.BE</td></tr><tr><td>Address</td><td><span>Beukenlaan 63/A </span><br/><span>Rotselaar </span><span>BE </span></td></tr></tbody><thead><tr><td colspan="2" onclick="this.classList.toggle('displayed'); this.parentElement.parentElement.nextElementSibling.classList.toggle('hidden')" class="toggable"><div><div>Performer</div><div><span class="clicktoshow">click to show</span><span class="clicktohide">click to hide</span></div></div></td></tr></thead><tbody class="hidden"><tr><td>Identifier</td><td>68071432800</td></tr><tr><td>Name</td><td>Frans Engelen</td></tr><tr><td>Telecom</td><td>014/28.50.00</td></tr><tr><td>Address</td><td><span>Oud-Strijderslaan 199 </span><br/><span>Herentals </span><span>BE </span></td></tr></tbody></table></td></tr><tr class="level_1 hapiTableOfValuesRowOdd"><td style="vertical-align:top" class="label"> CRP </td><td>    <!-- quantity --> 0.7 mg/L     <!-- string -->    <!-- codeable concept -->    <!-- boolean -->    <!-- date time -->    <!-- integer -->    <!-- period -->    <!-- range -->    <!-- ratio -->    <!-- sample data, what is this in a lab context? -->    <!-- time --></td><td></td><td> &lt;&nbsp;5.0 mg/L </td><td> FINAL </td><td onclick="this.classList.toggle('displayed');  this.parentElement.nextElementSibling.classList.toggle('hidden');" class="toggable"><div><span class="inline clicktoshow">+</span><span class="inline clicktohide">-</span></div></td></tr><tr class="hidden"><td colspan="6"><table class="hapiPropertyTable"><thead><tr><td colspan="2">Details</td></tr></thead><tbody><tr><td>Code</td><td> CRP (1988-5) (http://loinc.org) </td></tr><tr><td>Effective date (datetime)</td><td>04 November 2021 00:00:00</td></tr>    <!-- will effective timing ever occur in context of lab results? -->    <!-- tr th:if="${result.resource.hasEffectiveTiming}"><td>Effective date</td><td>(effective timing)</td></tr --><tr><td>Issued date</td><td>2021-11-04T01:04:05.005+0100</td></tr><tr><td>Note</td><td> Analyse gedekt door accreditatie.</td></tr></tbody><thead><tr><td colspan="2" onclick="this.classList.toggle('displayed'); this.parentElement.parentElement.nextElementSibling.classList.toggle('hidden')" class="toggable"><div><div>Subject</div><div><span class="clicktoshow">click to show</span><span class="clicktohide">click to hide</span></div></div></td></tr></thead><tbody class="hidden"><tr><td>Identifier</td><td> Official 66042620739 (https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/ssin) </td></tr><tr><td>Patient name</td><td>Tom Tollenaere</td></tr><tr><td>Date of birth</td><td><span>26 April 1966</span></td></tr><tr><td>Gender</td><td>male</td></tr><tr><td>PHONE</td><td>0497054020</td></tr><tr><td>EMAIL</td><td>TOM.TOLLENAERE@MACSYS.BE</td></tr><tr><td>Address</td><td><span>Beukenlaan 63/A </span><br/><span>Rotselaar </span><span>BE </span></td></tr></tbody><thead><tr><td colspan="2" onclick="this.classList.toggle('displayed'); this.parentElement.parentElement.nextElementSibling.classList.toggle('hidden')" class="toggable"><div><div>Specimen</div><div><span class="clicktoshow">click to show</span><span class="clicktohide">click to hide</span></div></div></td></tr></thead><tbody class="hidden">    <!-- Identifier --><tr><td>Identifier</td><td> 001815333041 (http://www.macsys.be/hl7/Specimen) </td></tr>    <!-- Status --><tr><td>Status</td><td>AVAILABLE</td></tr>    <!-- Type --><tr><td>Type</td><td> Serum (SER) (http://terminology.hl7.org/CodeSystem/v2-0487) </td></tr>    <!-- Subject --><tr><td>Patient</td><td> Tom Tollenaere (66042620739) </td></tr>    <!-- Received time --><tr><td>Received</td><td>04 November 2021 13:02:36</td></tr>    <!-- Requests -->    <!-- Specimen collection -->    <!-- Collection collector --><tr class="Collector"><td>Collector</td><td onclick="this.classList.toggle('displayed'); var ns = this.parentElement; while(ns.nextElementSibling &amp;&amp; ns.nextElementSibling.classList.contains([...ns.classList].find(function(x) { return x !== 'hidden' }))) { ns.nextElementSibling.classList.toggle('hidden'); ns = ns.nextElementSibling }" class="toggable"><div><div> Dr. Stefan Waegemans (https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/nihdi) (11849242860) </div><div><span class="inline clicktoshow">+</span><span class="inline clicktohide">-</span></div></div></td></tr><tr class="hidden Collector"><td>Identifier</td><td>11849242860</td></tr><tr class="hidden Collector"><td>Name</td><td>Dr. Stefan Waegemans</td></tr><tr class="hidden Collector"><td>Telecom</td><td>stefan.waegemans@cma.be</td></tr><tr class="hidden Collector"><td>Telecom</td><td>(+32)11/243291</td></tr><tr class="hidden Collector"><td>Telecom</td><td>(+32)11/225288</td></tr><tr class="hidden Collector"><td>Address</td><td><span>Willekensmolenstraat 88/2 </span><br/><span>Hasselt </span><span>BE </span></td></tr>    <!-- Collection collected date --><tr><td>Collected date</td><td>04 November 2021 00:00:00</td></tr>    <!-- Collection collected period -->    <!-- Collection duration -->    <!-- Collection quantity -->    <!-- Collection method -->    <!-- Collection body site -->    <!-- Collection fasted status (CodeableConcept) -->    <!-- Fasted status (Duration) -->    <!-- Processings -->    <!-- Containers -->    <!-- Condition -->    <!-- Notes --></tbody><thead><tr><td colspan="2" onclick="this.classList.toggle('displayed'); this.parentElement.parentElement.nextElementSibling.classList.toggle('hidden')" class="toggable"><div><div>Performer</div><div><span class="clicktoshow">click to show</span><span class="clicktohide">click to hide</span></div></div></td></tr></thead><tbody class="hidden"><tr><td>Identifier</td><td>68071432800</td></tr><tr><td>Name</td><td>Frans Engelen</td></tr><tr><td>Telecom</td><td>014/28.50.00</td></tr><tr><td>Address</td><td><span>Oud-Strijderslaan 199 </span><br/><span>Herentals </span><span>BE </span></td></tr></tbody></table></td></tr></tbody></table></div></body></html>
+
