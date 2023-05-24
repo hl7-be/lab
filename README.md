@@ -27,6 +27,17 @@ Project Digitalisation Labresults – QUESTIONS – ANSWERS
 
 |DOMAIN|SUBJECT|QUESTION|ANSWER|
 | :-: | :-: | :-: | :-: |
+|LOINC codes| Conversion | What information do I need to provide when requesting a new ReTaM code?| Every request needs to provide the following info when requesting a new ReTaM code:
+1.	Label without abbreviation
+2.	Used/usual abbreviation (may contain abbreviated terms)
+3.	Sample/matrix 
+4.	Method
+5.	Type and unit of result
+6.	Proposed LOINC code 
+7.	If known, Fratem/RSW-code
+8.	If known, Medidoc-code
+This makes sure that the requests are sufficiently clear and precise, and prevents work for analyses that already exist in ReTaM
+|
 |LOINC codes|Conversion |<p>How can you do the conversion between the codification system we use now and the LOINC codes ?</p><p></p>|There are mapping tables at your disposal  between LOINC codes and Medidoc and RSW/FRATEM codes, which your LIS provider can use.<br>https://www.vas.ehealth.fgov.be/webretam/retam/home.htm?eventName=MENU_SEARCH|
 |LOINC codes|Storage|<p>Where can you find these codes ?</p><p></p>|<https://www.ehealth.fgov.be/standards/kmehr/en/page/retam-exports> <br>See also... https://github.com/hl7-be/lab/issues?q=retam<br>|
 |SNOMED CT codes|Conversion|Where can you find these codes?|Some resources (Specimen) use SNOMED CT codes. You can use values from the Belgian edition of SNOMED CT: https://browser.ihtsdotools.org/?perspective=full&conceptId1=404684003&edition=MAIN/SNOMEDCT-BE/2022-03-15&release=&languages=en,nl,fr .<br> If the value is not available in the Belgian edition, you can use a value from the international edition, but signal this use to [terminology@health.fgov.be with subject: New LOINC code in context Lab Result](mailto:terminology@health.fgov.be?subject=New+LOINC+code+in+context+Lab+Result) |
