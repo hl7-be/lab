@@ -470,11 +470,19 @@ Case is as follows: MIPS and iLabs are never used at the same time by the same l
 
 For this chapter we provide xamples of extreme protocols, either with extreme number of analyses, or extremely large annexes.  Functionally, the examples below do not add any additional functionality to be tested (i.e. all cases in these protocols are tested in earlier test steps; here we are merely testinng volumes and complexity).
 
+13A: large and complex files
 * Test files:
   * Macsys FIDLAB example: TBD - without annex
 * Acceptance criterium
   *  Generating system manages to output the FHIR messages (no memory or timing issues)
   *  Receiving system manages to process the FHIR messages (no memory or timing issues)
+
+13B: multiple protocols for multiple patients in 1 bundle
+* Test files
+  * Macsys TBD
+* Acceptance criteria
+  * Received manages to read and process every protocol in the bundle, and allocate to the appropriate patient 
+
 
 ## 14. Transmission via eHealthbox
 
