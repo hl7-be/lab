@@ -38,7 +38,7 @@ Project Digitalisation Labresults – QUESTIONS – ANSWERS
 |Use cases|Definition|What is use case ?|<p>This term finds its origin in UML (Unified Modeling Language), the theoretical definition says: it’s a description of a behavior of a system that reacts on an input from the outside world.</p><p>On a practical level you need to test a new application and therefore you need a set of real situations in input to be able to test your system and to control the validity of the outcome. The number and the quality of the use cases will determine the risk percentage on errors of your application.</p><p></p>|
 |API|Definition|What is an API?|API is short for Application Programming Interface. An API is a technical description of the system-to-system communication in terms of actions and input and output descriptions.|
 |JSON|Definition|What is a JSON-file?|A JSON file is a file that contains data in a syntactic format that is currently popular. Other similar, but technically different syntaxes for data are XML, HL7v2, CSV,...|
-|Test server|What is the RIZIV/INAMI number of the Test Server eHealthBox| the RIZIV/INAMI number of the eHBox is 17166921 and the HCIType is DOCTOR or 73100906111 and the HCIType is SSIN |
+|Test server| Access |What is the RIZIV/INAMI number of the Test Server eHealthBox| the RIZIV/INAMI number of the eHBox is 17166921 and the HCIType is DOCTOR or 73100906111 and the HCIType is SSIN |
 
 
 
