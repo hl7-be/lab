@@ -287,8 +287,6 @@ Work in progress; following may not be complete:
 * Acceptance criteria:
   * Receiving system does not tie analyses to specimens, and does not list any speciment types. 
 
-ISSUE: does this case cover a missing butexpected sample?  If not we need an extra case for this!
-
 5D: Partial specimens (some available, others not, in same protocol)
 * Test files
   * TBD
@@ -370,7 +368,7 @@ https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/MIPS
 
 8B: Embedded Annex in Media
 * Test files
-  * ???? TBD
+  * E.g. protein electrophoresis
 * Acceptance criterion:
   * Embedded annex is found in Media, and is equal to the corresponding annex in the laboratory pdf linked to the FHIR file in the test data
 
@@ -382,7 +380,7 @@ https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/MIPS
 
 8D: One or annexes are available but are not embedded in the FHIR message
 * Test files
-  * ???? TBD
+  * Not applicable to Macsys
 * Acceptance criterion:
   * For every non-embedded annex, corresponding media section of the FHIR message lists the existence of the annex, and provides information as to how and where the non-embedded annex may be found or consulted.
 
@@ -391,7 +389,7 @@ https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/MIPS
 This case is e.g. when the sender prefers to link electrophoresis images to the electrophoresis observation.
 This case is not applicable to Macsys
 * Test files
-  * ???
+  * Not applicable to Macsys
 * Acceptance criterion:
   * TBD for those who provide this case   
 
@@ -477,9 +475,9 @@ For this chapter we provide xamples of extreme protocols, either with extreme nu
   *  Generating system manages to output the FHIR messages (no memory or timing issues)
   *  Receiving system manages to process the FHIR messages (no memory or timing issues)
 
-13B: multiple protocols for multiple patients in 1 bundle
+13B: multiple protocols in 1 bundle
 * Test files
-  * Macsys TBD
+  * Macsys TBD for multiple protocols*same patient in 1 bundle (case multple patients in 1 bundle does not happen)
 * Acceptance criteria
   * Received manages to read and process every protocol in the bundle, and allocate to the appropriate patient 
 
