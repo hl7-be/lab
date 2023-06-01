@@ -41,6 +41,7 @@ Project Digitalisation Labresults – QUESTIONS – ANSWERS
 |JSON|Definition|What is a JSON-file?|A JSON file is a file that contains data in a syntactic format that is currently popular. Other similar, but technically different syntaxes for data are XML, HL7v2, CSV,...|
 |Test server| Access |What is the RIZIV/INAMI number of the Test Server eHealthBox| the RIZIV/INAMI number of the eHBox is 17166921 and the HCIType is DOCTOR or 73100906111 and the HCIType is SSIN |
 |Test server| Access |What are the SSIN numbers of the different testcases? | The list of SSIN numbers for the testcases can be found here: https://docs.google.com/spreadsheets/d/1Zpkz2_rBUYXOHI0f_eQQTXIrXdaTsiUc1qyOrIk-WmY/edit#gid=0 |
+|Test server| Access | Where can I request a user for the testserver? | Request your user here: https://fhir-testserver.be/index.php/login If you send your messages using a eHBox with a RIZIV/INAMI number, do not forget to mention it! Otherwise a CBE is enough.|
 
 
 
