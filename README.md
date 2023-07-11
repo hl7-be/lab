@@ -19,6 +19,14 @@ Kanban board:  __https://github.com/hl7-be/lab/projects/1__
 
 Implementation help can always be found by searching the issues. Additionally, some FAQs for implementers on the receiving side have been provided by the industry themselves: __https://github.com/hl7-be/lab/blob/master/testing/Lab%20results%20in%20FHIR%20-%20Implementation%20Guide%20for%20Receivers.pdf__
 
+### Successful testcases
+
+| NUMBER | Reference file provided by |
+| :-: | :-: |
+| 1A | MACSYS |
+| 1B | Labo St Luc Bxl (almost: pdf still missing) |
+| 2A1 | Labo UZ Leuven |
+
 ### FAQ
 
 Project Digitalisation Labresults – QUESTIONS – ANSWERS
