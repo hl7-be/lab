@@ -30,6 +30,7 @@ Implementation help can always be found by searching the issues. Additionally, s
 | 1C | Labo UZ Leuven |
 | 2A1 | Labo UZ Leuven |
 | 2A2 | Labo St Luc Bxl (almost...) |
+| 2F2 | Labo St Luc Bxl |
 
 ### FAQ
 
