@@ -31,8 +31,7 @@ Implementation help can always be found by searching the issues. Additionally, s
 | 2A1 | Labo UZ Leuven |
 | 2A2 | Labo St Luc Bxl (almost...) |
 | 2F2 | Labo St Luc Bxl |
-
-### FAQ
+| 2F3 | Labo St Luc Bxl |
 
 Project Digitalisation Labresults – QUESTIONS – ANSWERS
 
