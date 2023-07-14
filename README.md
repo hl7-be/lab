@@ -26,10 +26,8 @@ Implementation help can always be found by searching the issues. Additionally, s
 | NUMBER | Reference file provided by |
 | :-: | :-: |
 | 1A | MACSYS |
-| 1B | Labo St Luc Bxl (almost: pdf still missing) |
 | 1C | Labo UZ Leuven |
 | 2A1 | Labo UZ Leuven |
-| 2A2 | Labo St Luc Bxl (almost...) |
 | 2F2 | Labo St Luc Bxl |
 | 2F3 | Labo St Luc Bxl |
 
