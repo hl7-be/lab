@@ -27,6 +27,7 @@ Implementation help can always be found by searching the issues. Additionally, s
 | :-: | :-: |
 | 1A | MACSYS |
 | 1C | Labo UZ Leuven |
+| 1D | Labo St Luc Bxl |
 | 2A1 | Labo UZ Leuven |
 | 2A3 | Labo St Luc Bxl |
 | 2F2 | Labo St Luc Bxl |
