@@ -224,6 +224,7 @@ parameters:
   apply-jurisdiction: 'true'
   apply-publisher: 'true'
   apply-version: 'true'  
+  display-warnings: true
 
 
 # The FSHOnly flag indicates if only FSH resources should be exported.
