@@ -28,13 +28,19 @@ Implementation help can always be found by searching the issues. Additionally, s
 | 1A | MACSYS |
 | 1C | Labo UZ Leuven |
 | 1D | Labo St Luc Bxl |
+| 1E1 | CGM Lab Belgium |
 | 2A1 | Labo UZ Leuven |
 | 2A3 | Labo St Luc Bxl |
+| 2B | CGM Lab Belgium |
+| 2E | CGM Lab Belgium |
 | 2F1 | CGM Lab Belgium |
 | 2F2 | Labo St Luc Bxl |
 | 2F3 | Labo St Luc Bxl |
 | 2F4| CGM Lab Belgium |
 | 2F5| CGM Lab Belgium |
+| 2G | CGM Lab Belgium |
+| 3A | CGM Lab Belgium |
+
 
 
 Project Digitalisation Labresults – QUESTIONS – ANSWERS
