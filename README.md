@@ -21,7 +21,7 @@ Implementation help can always be found by searching the issues. Additionally, s
 
 ### Successful testcases
 
-5 labs are actively testing
+7 labs are actively testing
 
 | NUMBER | Reference file provided by |
 | :-: | :-: |
