@@ -32,6 +32,8 @@ Implementation help can always be found by searching the issues. Additionally, s
 | 2A3 | Labo St Luc Bxl |
 | 2F2 | Labo St Luc Bxl |
 | 2F3 | Labo St Luc Bxl |
+| 2F4| CGM Lab Belgium |
+| 2F5| CGM Lab Belgium |
 
 Project Digitalisation Labresults – QUESTIONS – ANSWERS
 
