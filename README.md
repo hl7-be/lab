@@ -25,7 +25,7 @@ Implementation help can always be found by searching the issues. Additionally, s
 
 | NUMBER | Reference file provided by |
 | :-: | :-: |
-| 1A | MACSYS |
+| 1A | MACSYS/CMA BV |
 | 1C | Labo UZ Leuven |
 | 1D | Labo St Luc Bxl |
 | 1E1 | CGM Lab Belgium |
@@ -33,6 +33,7 @@ Implementation help can always be found by searching the issues. Additionally, s
 | 2A1 | Labo UZ Leuven |
 | 2A3 | Labo St Luc Bxl |
 | 2B | CGM Lab Belgium |
+| 2D | MACSYS/CMA BV |
 | 2E | CGM Lab Belgium |
 | 2F1 | CGM Lab Belgium |
 | 2F2 | Labo St Luc Bxl |
