@@ -31,6 +31,7 @@ Implementation help can always be found by searching the issues. Additionally, s
 | 1E1 | CGM Lab Belgium |
 | 1E3 | CGM Lab Belgium |
 | 2A1 | Labo UZ Leuven |
+| 2A2 | MACSYS/CMA BV |
 | 2A3 | Labo St Luc Bxl |
 | 2B | CGM Lab Belgium |
 | 2C | MACSYS/CMA BV |
