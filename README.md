@@ -29,6 +29,7 @@ Implementation help can always be found by searching the issues. Additionally, s
 | 1C | Labo UZ Leuven |
 | 1D | Labo St Luc Bxl |
 | 1E1 | CGM Lab Belgium |
+| 1E3 | CGM Lab Belgium |
 | 2A1 | Labo UZ Leuven |
 | 2A3 | Labo St Luc Bxl |
 | 2B | CGM Lab Belgium |
@@ -38,8 +39,13 @@ Implementation help can always be found by searching the issues. Additionally, s
 | 2F3 | Labo St Luc Bxl |
 | 2F4| CGM Lab Belgium |
 | 2F5| CGM Lab Belgium |
+| 2H | CGM Lab Belgium |
 | 2G | CGM Lab Belgium |
 | 3A | CGM Lab Belgium |
+| 3C | CGM Lab Belgium |
+| 41A | CGM Lab Belgium |
+| 41C | CGM Lab Belgium |
+| 8E | CGM Lab Belgium |
 
 
 
