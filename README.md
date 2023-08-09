@@ -48,7 +48,15 @@ Implementation help can always be found by searching the issues. Additionally, s
 | 3A | CGM Lab Belgium |
 | 3C | CGM Lab Belgium |
 | 41A | CGM Lab Belgium |
+| 41B | MACSYS/CMA BV |
 | 41C | CGM Lab Belgium |
+| 41D | MACSYS/CMA BV |
+| 42A | MACSYS/CMA BV |
+| 43A | MACSYS/CMA BV |
+| 44A | MACSYS/CMA BV |
+| 5 | MACSYS/CMA BV |
+| 5B | MACSYS/CMA BV |
+| 5C | MACSYS/CMA BV |
 | 7A | MACSYS/CMA BV |
 | 7B | MACSYS/CMA BV |
 | 8A | MACSYS/CMA BV |
