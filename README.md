@@ -62,7 +62,6 @@ Implementation help can always be found by searching the issues. Additionally, s
 | 8A | MACSYS/CMA BV |
 | 8B | MACSYS/CMA BV |
 | 8C | MACSYS/CMA BV |
-| 8E | CGM Lab Belgium |
 | 9A1 | MACSYS/CMA BV |
 | 9A2 | MACSYS/CMA BV |
 | 9A3 | MACSYS/CMA BV |
