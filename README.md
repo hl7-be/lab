@@ -19,9 +19,22 @@ Kanban board:  __https://github.com/hl7-be/lab/projects/1__
 
 Implementation help can always be found by searching the issues. Additionally, some FAQs for implementers on the receiving side have been provided by the industry themselves: __https://github.com/hl7-be/lab/blob/master/testing/Lab%20results%20in%20FHIR%20-%20Implementation%20Guide%20for%20Receivers.pdf__
 
+### Open testcases
+
+| NUMBER | Topic |
+| :-: | :-: |
+| 42B | Reference range as a table |
+| 44B | Administrative comments (e.g. missing DOBs)|
+| 45 | Comments on level DiagnosticReport |
+| 5A | Specimen identifiers with LOINC encoding of specimen type (i.e. specimen type is clear from Observation LOINC code) |
+| 5D | Partial specimens (some available, others not, in same protocol) |
+| 8D | One or more annexes are available but are not embedded in the FHIR message |
+| 8E | Annex on Observation Level |
+
+
 ### Successful testcases
 
-7 labs are actively testing
+7 labs are actively testing (A big "thank you" to all labs and software vendors providing reference files!)
 
 | NUMBER | Reference file provided by |
 | :-: | :-: |
@@ -46,7 +59,9 @@ Implementation help can always be found by searching the issues. Additionally, s
 | 2H | CGM Lab Belgium |
 | 2G | CGM Lab Belgium |
 | 3A | CGM Lab Belgium |
+| 3B | CGM Lab Belgium |
 | 3C | CGM Lab Belgium |
+| 3D | CGM Lab Belgium |
 | 41A | CGM Lab Belgium |
 | 41B | MACSYS/CMA BV |
 | 41C | CGM Lab Belgium |
@@ -69,6 +84,16 @@ Implementation help can always be found by searching the issues. Additionally, s
 | 9A5 | MACSYS/CMA BV |
 | 9A6 | MACSYS/CMA BV |
 | 9A7 | MACSYS/CMA BV |
+| 9A8 | MACSYS/CMA BV |
+| 9A9 | MACSYS/CMA BV |
+| 9A10 | MACSYS/CMA BV |
+| 9A11 | MACSYS/CMA BV |
+| 9A12 | MACSYS/CMA BV |
+| 9A13 | MACSYS/CMA BV |
+| 9A14 | MACSYS/CMA BV |
+| 10A | MACSYS/CMA BV |
+| 10B | MACSYS/CMA BV |
+
 
 
 
