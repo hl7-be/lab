@@ -24,8 +24,6 @@ Implementation help can always be found by searching the issues. Additionally, s
 | NUMBER | Topic |
 | :-: | :-: |
 | 42B | Reference range as a table |
-| 45 | Comments on level DiagnosticReport |
-| 5A | Specimen identifiers with LOINC encoding of specimen type (i.e. specimen type is clear from Observation LOINC code) |
 | 8D | One or more annexes are available but are not embedded in the FHIR message |
 | 8E | Annex on Observation Level |
 
@@ -68,7 +66,9 @@ Implementation help can always be found by searching the issues. Additionally, s
 | 43A | MACSYS/CMA BV |
 | 44A | MACSYS/CMA BV |
 | 44B | MACSYS/CMA BV |
+| 45 | CGM Lab Belgium |
 | 5 | MACSYS/CMA BV |
+| 5A | CGM Lab Belgium |
 | 5B | MACSYS/CMA BV |
 | 5C | MACSYS/CMA BV |
 | 5D | MACSYS/CMA BV |
