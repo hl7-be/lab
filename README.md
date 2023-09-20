@@ -23,7 +23,6 @@ Implementation help can always be found by searching the issues. Additionally, s
 
 | NUMBER | Topic |
 | :-: | :-: |
-| 42B | Reference range as a table |
 | 8D | One or more annexes are available but are not embedded in the FHIR message |
 | 8E | Annex on Observation Level |
 
@@ -63,6 +62,7 @@ Implementation help can always be found by searching the issues. Additionally, s
 | 41C | CGM Lab Belgium |
 | 41D | MACSYS/CMA BV |
 | 42A | MACSYS/CMA BV |
+| 42B | CGM Lab Belgium |
 | 43A | MACSYS/CMA BV |
 | 44A | MACSYS/CMA BV |
 | 44B | MACSYS/CMA BV |
