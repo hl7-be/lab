@@ -24,7 +24,6 @@ Implementation help can always be found by searching the issues. Additionally, s
 | NUMBER | Topic |
 | :-: | :-: |
 | 8D | One or more annexes are available but are not embedded in the FHIR message |
-| 8E | Annex on Observation Level |
 
 
 ### Successful testcases
