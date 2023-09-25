@@ -19,16 +19,9 @@ Kanban board:  __https://github.com/hl7-be/lab/projects/1__
 
 Implementation help can always be found by searching the issues. Additionally, some FAQs for implementers on the receiving side have been provided by the industry themselves: __https://github.com/hl7-be/lab/blob/master/testing/Lab%20results%20in%20FHIR%20-%20Implementation%20Guide%20for%20Receivers.pdf__
 
-### Open testcases
-
-| NUMBER | Topic |
-| :-: | :-: |
-| 8D | One or more annexes are available but are not embedded in the FHIR message |
-
-
 ### Successful testcases
 
-7 labs are actively testing (A big "thank you" to all labs and software vendors providing reference files!)
+8 labs are actively testing (A big "thank you" to all labs and software vendors providing reference files!)
 
 | NUMBER | Reference file provided by |
 | :-: | :-: |
@@ -76,6 +69,7 @@ Implementation help can always be found by searching the issues. Additionally, s
 | 8A | MACSYS/CMA BV |
 | 8B | MACSYS/CMA BV |
 | 8C | MACSYS/CMA BV |
+| 8D | CGM Lab Belgium |
 | 8E | CGM Lab Belgium |
 | 9A1 | MACSYS/CMA BV |
 | 9A2 | MACSYS/CMA BV |
