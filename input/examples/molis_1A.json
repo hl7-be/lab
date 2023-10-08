@@ -1,5 +1,6 @@
 {
-    "resourceType": "Bundle",
+    "id": "some-id",
+	"resourceType": "Bundle",
     "entry": [
         {
             "fullUrl": "urn:uuid:6069963e-1bb3-4c46-8913-14c68e44824b",
