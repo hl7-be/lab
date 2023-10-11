@@ -201,7 +201,7 @@ Work in progress; following may not be complete:
 * Acceptance criterion:
   * Comment code shown as in pfd version of protocol
 
-4.1B: “Uitzicht Staal” LOINC  86468-6
+4.1B: “Uitzicht Staal” LOINC  77202-0
 * Test files:
   * https://github.com/hl7-be/hl7-be-fhir-laboratory-report/tree/master/testing/Macsys/815333046 
 * Acceptance criterion:
