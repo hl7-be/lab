@@ -79,7 +79,7 @@ Implementation help can always be found by searching the issues. Additionally, s
 | 9A6 | MACSYS/CMA BV |
 | 9A7 | MACSYS/CMA BV |
 | 9A8 | MACSYS/CMA BV |
-| 9A9 | MACSYS/CMA BV |
+| 9A9 | Labo Nuytinck |
 | 9A10 | MACSYS/CMA BV |
 | 9A11 | MACSYS/CMA BV |
 | 9A12 | MACSYS/CMA BV |
