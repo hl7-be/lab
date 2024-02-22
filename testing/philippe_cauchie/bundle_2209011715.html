@@ -1,0 +1,159 @@
+<html><head><style>
+div.hapiHeaderText {
+    font-size: 1.5em;
+    color: #0484DF;
+}
+
+
+
+/********************************************************
+* The following section is used for tables of values
+* with multiple columns (e.g. the table of Observations
+* in a Diagnostic Report for a lab test)
+********************************************************/
+table.hapiTableOfValues {
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 24px;
+    border-spacing: 0;
+    border-collapse: collapse;
+    border: 1px solid #DBDFE3;
+}
+
+table.hapiTableOfValues thead tr td {
+    background: #EEF2F6;
+    color: #5D7184;
+    font-size: .8em;
+    padding: 1em;
+    text-transform: uppercase;
+    border: 1px solid #DBDFE3;
+}
+
+table.hapiTableOfValues tbody tr td {
+    padding: .5em 1em;
+    border: 1px solid #DBDFE3;
+}
+
+table.hapiTableOfValues tbody tr.title td {
+    color: #0484DF;
+}
+
+table.hapiTableOfValues tbody tr.title.level_0 td {
+    background: #deeeff;
+}
+
+/********************************************************
+* The following section is used for property tables. These
+* tables have two columns, one for the property name, and
+* one for the property value
+********************************************************/
+table.hapiPropertyTable {
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 24px;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+table.hapiPropertyTable thead tr td {
+    background: #EEF2F6;
+    color: #5D7184;
+    font-size: .8em;
+    padding: 1em;
+    text-transform: uppercase;
+    border: 1px solid #DBDFE3;
+}
+
+table.hapiPropertyTable tbody tr td:first-child {
+    text-align: right;
+    text-transform: uppercase;
+    color: #5D7184;
+    border: 1px solid #DBDFE3;
+    font-size: .8em;
+    vertical-align: baseline;
+    width: 20%;
+}
+
+table.hapiPropertyTable tbody tr td {
+    vertical-align: top;
+    padding: .5em 1em;
+    margin: 1px;
+    border: 1px solid #DBDFE3;
+    vertical-align: baseline;
+}
+
+tr.level_2 td.label {
+    padding-left: 2em;
+}
+
+tr.level_3 td.label {
+    padding-left: 3em;
+}
+
+tr.level_4 td.label {
+    padding-left: 4em;
+}
+
+tr.level_5 td.label {
+    padding-left: 5em;
+}
+
+tr.level_6 td.label {
+    padding-left: 6em;
+}
+
+tr.level_7 td.label {
+    padding-left: 7em;
+}
+
+tr.level_8 td.label {
+    padding-left: 8em;
+}
+
+tr.level_9 td.label {
+    padding-left: 9em;
+}
+
+td.toggable {
+    cursor: pointer;
+}
+
+td.toggable div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+td.toggable div span {
+    background-color: rgba(107, 128, 148, 0.6);
+    color: #EEF2F6;
+    border-radius: 10px;
+    padding: 4px 6px 2px;
+    font-size: .8em;
+    min-width: 100px;
+    text-align: center;
+}
+
+td.toggable div span.inline {
+    min-width: 20px;
+}
+
+td.toggable.displayed div span.clicktoshow {
+    display: none;
+}
+
+td.toggable div span.clicktohide {
+    display: none;
+}
+
+td.toggable.displayed div span.clicktohide {
+    display: inline !important;
+}
+
+.hidden {
+    display: none;
+}
+</style></head><body>
+<div/><br/></body></html>
+
