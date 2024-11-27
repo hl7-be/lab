@@ -236,3 +236,7 @@ FSHOnly: false
 # be set to the "Title" and "Description" of that Extension. Default is true.
 #applyExtensionMetadataToRoot: false
 
+resources:
+  Bundle/hpv-example:
+    name: "HPV message to BCR"
+    description: Report containing HPV screening tests for the Belgian Cancer Register.
