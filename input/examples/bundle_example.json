@@ -1,0 +1,526 @@
+{
+  "resourceType": "Bundle",
+  "id": "hpv-example",
+  "identifier": {
+    "system": "https://www.ehealth.fgov.be/lab-report/bundle-id",
+    "value": "81365677998.c4be752d-f603-45c1-b3f5-1273aa7e380b"
+  },
+  "type": "document",
+  "timestamp": "2024-11-26T14:13:00.569+01:00",
+  "entry": [ {
+    "fullUrl": "Composition/818818261",
+    "resource": {
+      "resourceType": "Composition",
+      "id": "818818261",
+      "meta": {
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-laboratory-report-composition" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": {
+        "system": "http://www.macsys.be/hl7/Composition",
+        "value": "818818261"
+      },
+      "status": "final",
+      "type": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "11502-2"
+        } ],
+        "text": "Laboratory report"
+      },
+      "subject": {
+        "reference": "Patient/7695410"
+      },
+      "date": "2024-11-26T14:13:00+01:00",
+      "author": [ {
+        "reference": "Organization/81365677998"
+      } ],
+      "title": "HPV report",
+      "section": [ {
+        "entry": [ {
+          "reference": "DiagnosticReport/818818261"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "DiagnosticReport/818818261",
+    "resource": {
+      "resourceType": "DiagnosticReport",
+      "id": "818818261",
+      "meta": {
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-laboratory-report" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://www.ehealth.fgov.be/lab-report/diagnostic-report-id",
+        "value": "81365677998.b61f0ea9-f830-439e-9142-7097149e47e5"
+      } ],
+      "basedOn": [ {
+        "reference": "ServiceRequest/818818261"
+      } ],
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+          "code": "LAB",
+          "display": "Laboratory"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "11502-2"
+        } ],
+        "text": "Laboratory report"
+      },
+      "subject": {
+        "reference": "Patient/7695410"
+      },
+      "effectiveDateTime": "2024-11-26T14:13:00+01:00",
+      "issued": "2024-11-26T14:13:00.570+01:00",
+      "performer": [ {
+        "reference": "Organization/81365677998"
+      } ],
+      "resultsInterpreter": [ {
+        "reference": "Practitioner/Responsible"
+      } ],
+      "specimen": [ {
+        "reference": "Specimen/123"
+      } ],
+      "result": [ {
+        "reference": "Observation/Observation.1.0.0.0"
+      } ],
+      "conclusionCode": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "183627004"
+        } ],
+        "text": "?????"
+      } ]
+    }
+  }, {
+    "fullUrl": "Patient/7695410",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "7695410",
+      "meta": {
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-patient" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/ssin",
+        "value": "00030299929"
+      } ],
+      "name": [ {
+        "family": "Patientname61",
+        "given": [ "Patient61" ]
+      } ],
+      "gender": "male",
+      "birthDate": "1980-06-29",
+      "address": [ {
+        "postalCode": "9000",
+        "country": "be"
+      } ]
+    }
+  }, {
+    "fullUrl": "Practitioner/Responsible",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "hpv-labresponsible",
+      "meta": {
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-practitioner" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "name": [ {
+        "family": "Engelen",
+        "given": [ "Frans" ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Practitioner/Biologist",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "Biologist",
+      "meta": {
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-practitioner" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/nihdi",
+        "value": "10000007999"
+      } ],
+      "name": [ {
+        "family": "Cma - Herentals",
+        "given": [ "X" ],
+        "prefix": [ "Dr." ]
+      } ]
+    }
+  }, {
+    "fullUrl": "Organization/81365677998",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "81365677998",
+      "meta": {
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-organization" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/nihdi",
+        "value": "81365677998"
+      } ],
+      "type": [ {
+        "coding": [ {
+          "system": "https://www.ehealth.fgov.be/standards/fhir/core/CodeSystem/cd-hcparty",
+          "code": "orglaboratory"
+        } ]
+      } ],
+      "name": "CENTRUM VOOR MEDISCHE ANALYSE",
+      "telecom": [ {
+        "system": "email",
+        "value": "info@cma.be",
+        "use": "work"
+      }, {
+        "system": "fax",
+        "value": "014/22.56.08",
+        "use": "work"
+      }, {
+        "system": "phone",
+        "value": "014/28.50.00",
+        "use": "work"
+      }, {
+        "system": "url",
+        "value": "http://www.cma.be",
+        "use": "work"
+      } ],
+      "address": [ {
+        "use": "work",
+        "type": "both",
+        "line": [ "Oud-Strijderslaan 199" ],
+        "city": "Herentals",
+        "postalCode": "2200",
+        "country": "BE"
+      } ]
+    }
+  }, {
+    "fullUrl": "ServiceRequest/818818261",
+    "resource": {
+      "resourceType": "ServiceRequest",
+      "id": "818818261",
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "http://www.macsys.be/hl7/ServiceRequest/lab",
+        "value": "818818261"
+      }, {
+        "system": "http://www.macsys.be/hl7/ServiceRequest/external",
+        "value": "TESTCASE 10A"
+      } ],
+      "status": "active",
+      "intent": "order",
+      "subject": {
+        "reference": "Patient/7695410"
+      },
+      "requester": {
+        "reference": "Practitioner/Biologist"
+      }
+    }
+  }, {
+    "fullUrl": "Specimen/123",
+    "resource": {
+      "resourceType": "Specimen",
+      "id": "123",
+      "meta": {
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-specimen-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "value": "123"
+      } ],
+      "status": "available",
+      "subject": {
+        "reference": "Patient/7695410"
+      },
+      "request": [ {
+        "reference": "ServiceRequest/818818261"
+      } ],
+      "collection": {
+        "collectedDateTime": "2024-11-26T14:13:00+01:00",
+        "method": {
+          "coding": [ {
+            "system": "http://snomed.info/sct",
+            "code": "70777001",
+            "display": "Urine specimen collection, catheterized"
+          } ]
+        }
+      }
+    }
+  }, {
+    "fullUrl": "Observation/Observation.1.0.0.0",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "Observation.1.0.0.0",
+      "meta": {
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "http://my.own.lab/billingcode",
+        "value": "123123"
+      } ],
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "101822-5",
+          "display": "Human papilloma virus cytology and high-risk genotypes panel - Cervix"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/7695410"
+      },
+      "hasMember": [ {
+        "reference": "Observation/Observation.1.0.0.1"
+      }, {
+        "reference": "Observation/Observation.1.0.0.2"
+      }, {
+        "reference": "Observation/Observation.1.0.0.3"
+      }, {
+        "reference": "Observation/Observation.1.0.0.4"
+      }, {
+        "reference": "Observation/Observation.1.0.0.5"
+      }, {
+        "reference": "Observation/Observation.1.0.0.6"
+      }, {
+        "reference": "Observation/Observation.1.0.0.7"
+      } ]
+    }
+  }, {
+    "fullUrl": "Observation/Observation.1.0.0.1",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "Observation.1.0.0.1",
+      "meta": {
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "11083-3",
+          "display": "Human papilloma virus identified in Cervix"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/7695410"
+      },
+      "effectiveDateTime": "2024-11-26T14:13:00+01:00",
+      "performer": [ {
+        "reference": "Practitioner/Biologist"
+      } ],
+      "valueBoolean": true
+    }
+  }, {
+    "fullUrl": "Observation/Observation.1.0.0.2",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "Observation.1.0.0.2",
+      "meta": {
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "14503-7",
+          "display": "Human papilloma virus 16+18 Ag [Presence] in Cervix"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/7695410"
+      },
+      "effectiveDateTime": "2024-11-26T14:13:00+01:00",
+      "performer": [ {
+        "reference": "Practitioner/Biologist"
+      } ],
+      "valueBoolean": true
+    }
+  }, {
+    "fullUrl": "Observation/Observation.1.0.0.3",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "Observation.1.0.0.3",
+      "meta": {
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "21441-1",
+          "display": "Human papilloma virus 6+11+42+43+44 DNA [Presence] in Cervix by Probe"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/7695410"
+      },
+      "effectiveDateTime": "2024-11-26T14:13:00+01:00",
+      "performer": [ {
+        "reference": "Practitioner/Biologist"
+      } ],
+      "valueBoolean": true
+    }
+  }, {
+    "fullUrl": "Observation/Observation.1.0.0.4",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "Observation.1.0.0.4",
+      "meta": {
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "47528-5",
+          "display": "Cytology report of Cervical or vaginal smear or scraping Cyto stain"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/7695410"
+      },
+      "effectiveDateTime": "2024-11-26T14:13:00+01:00",
+      "performer": [ {
+        "reference": "Practitioner/Biologist"
+      } ],
+      "valueString": "The text of the cytology report"
+    }
+  }, {
+    "fullUrl": "Observation/Observation.1.0.0.5",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "Observation.1.0.0.5",
+      "meta": {
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "code": "CYT12M",
+          "display": "Opvolging_cytologie_12m triage"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/7695410"
+      },
+      "effectiveDateTime": "2024-11-26T14:13:00+01:00",
+      "performer": [ {
+        "reference": "Practitioner/Biologist"
+      } ],
+      "valueBoolean": true
+    }
+  }, {
+    "fullUrl": "Observation/Observation.1.0.0.6",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "Observation.1.0.0.6",
+      "meta": {
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "PCX_SCT_6",
+          "display": "Resultaat reflex HPV-test volgt"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/7695410"
+      },
+      "effectiveDateTime": "2024-11-26T14:13:00+01:00",
+      "performer": [ {
+        "reference": "Practitioner/Biologist"
+      } ],
+      "valueBoolean": true
+    }
+  }, {
+    "fullUrl": "Observation/Observation.1.0.0.7",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "Observation.1.0.0.7",
+      "meta": {
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "PCX_SCT_16",
+          "display": "Correlatie kliniek aangewezen om endometriumpathologie uit te sluiten"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/7695410"
+      },
+      "effectiveDateTime": "2024-11-26T14:13:00+01:00",
+      "performer": [ {
+        "reference": "Practitioner/Biologist"
+      } ],
+      "valueBoolean": true
+    }
+  } ]
+}
