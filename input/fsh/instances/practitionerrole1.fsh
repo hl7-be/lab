@@ -8,7 +8,7 @@ Usage: #definition
 * active = true
 * period.start = "2019-08-01T00:00:00.000Z"
 * period.end = "2019-12-01T00:00:00.000Z"
-* practitioner.reference = "Practitioner/practitioner1"
+* practitioner.reference = "Practitioner/practitioner10"
 * practitioner.display = "Dr Katherine Pulaski"
 * code = $cd-hcparty#persphysician "physician"
 * specialty = $sct#419772000 "Family practice"

@@ -8,7 +8,7 @@
   "type": "document",
   "timestamp": "2024-11-26T14:13:00.569+01:00",
   "entry": [ {
-    "fullUrl": "Composition/818818261",
+    "fullUrl": "urn:uuid:e22deeeb-ffd2-479c-8c1d-412e63f3d58b",
     "resource": {
       "resourceType": "Composition",
       "id": "818818261",
@@ -32,21 +32,21 @@
         "text": "Laboratory report"
       },
       "subject": {
-        "reference": "Patient/7695410"
+        "reference": "urn:uuid:6789bc38-3ce9-4d9c-9621-840ed076a767"
       },
       "date": "2024-11-26T14:13:00+01:00",
       "author": [ {
-        "reference": "Organization/81365677998"
+        "reference": "urn:uuid:04320025-83fb-4098-ac47-1cef97d2967b"
       } ],
       "title": "HPV report",
       "section": [ {
         "entry": [ {
-          "reference": "DiagnosticReport/818818261"
+          "reference": "urn:uuid:c9b80331-4752-4df6-9c59-71679c9b1a01"
         } ]
       } ]
     }
   }, {
-    "fullUrl": "DiagnosticReport/818818261",
+    "fullUrl": "urn:uuid:c9b80331-4752-4df6-9c59-71679c9b1a01",
     "resource": {
       "resourceType": "DiagnosticReport",
       "id": "818818261",
@@ -62,7 +62,7 @@
         "value": "81365677998.b61f0ea9-f830-439e-9142-7097149e47e5"
       } ],
       "basedOn": [ {
-        "reference": "ServiceRequest/818818261"
+        "reference": "urn:uuid:24e76627-700e-422f-aafd-3240e1978f04"
       } ],
       "status": "final",
       "category": [ {
@@ -80,21 +80,21 @@
         "text": "Laboratory report"
       },
       "subject": {
-        "reference": "Patient/7695410"
+        "reference": "urn:uuid:6789bc38-3ce9-4d9c-9621-840ed076a767"
       },
       "effectiveDateTime": "2024-11-26T14:13:00+01:00",
       "issued": "2024-11-26T14:13:00.570+01:00",
       "performer": [ {
-        "reference": "Organization/81365677998"
+        "reference": "urn:uuid:04320025-83fb-4098-ac47-1cef97d2967b"
       } ],
       "resultsInterpreter": [ {
-        "reference": "Practitioner/Responsible"
+        "reference": "urn:uuid:c2b2ac30-2cfb-4c49-a548-4bc5a9c628c8"
       } ],
       "specimen": [ {
-        "reference": "Specimen/123"
+        "reference": "urn:uuid:733cec1d-fbc5-46e5-8c3e-b06b45043a42"
       } ],
       "result": [ {
-        "reference": "Observation/Observation.1.0.0.0"
+        "reference": "urn:uuid:1f58a654-c770-4223-bd7f-770b9836b4ef"
       } ],
       "conclusionCode": [ {
         "coding": [ {
@@ -105,7 +105,7 @@
       } ]
     }
   }, {
-    "fullUrl": "Patient/7695410",
+    "fullUrl": "urn:uuid:6789bc38-3ce9-4d9c-9621-840ed076a767",
     "resource": {
       "resourceType": "Patient",
       "id": "7695410",
@@ -132,7 +132,7 @@
       } ]
     }
   }, {
-    "fullUrl": "Practitioner/Responsible",
+    "fullUrl": "urn:uuid:c2b2ac30-2cfb-4c49-a548-4bc5a9c628c8",
     "resource": {
       "resourceType": "Practitioner",
       "id": "hpv-labresponsible",
@@ -149,7 +149,7 @@
       } ]
     }
   }, {
-    "fullUrl": "Practitioner/Biologist",
+    "fullUrl": "urn:uuid:1f633cae-0f5a-41cc-aff8-f343d319eb52",
     "resource": {
       "resourceType": "Practitioner",
       "id": "Biologist",
@@ -171,7 +171,7 @@
       } ]
     }
   }, {
-    "fullUrl": "Organization/81365677998",
+    "fullUrl": "urn:uuid:04320025-83fb-4098-ac47-1cef97d2967b",
     "resource": {
       "resourceType": "Organization",
       "id": "81365677998",
@@ -220,7 +220,7 @@
       } ]
     }
   }, {
-    "fullUrl": "ServiceRequest/818818261",
+    "fullUrl": "urn:uuid:24e76627-700e-422f-aafd-3240e1978f04",
     "resource": {
       "resourceType": "ServiceRequest",
       "id": "818818261",
@@ -238,14 +238,14 @@
       "status": "active",
       "intent": "order",
       "subject": {
-        "reference": "Patient/7695410"
+        "reference": "urn:uuid:6789bc38-3ce9-4d9c-9621-840ed076a767"
       },
       "requester": {
-        "reference": "Practitioner/Biologist"
+        "reference": "urn:uuid:1f633cae-0f5a-41cc-aff8-f343d319eb52"
       }
     }
   }, {
-    "fullUrl": "Specimen/123",
+    "fullUrl": "urn:uuid:733cec1d-fbc5-46e5-8c3e-b06b45043a42",
     "resource": {
       "resourceType": "Specimen",
       "id": "123",
@@ -261,10 +261,10 @@
       } ],
       "status": "available",
       "subject": {
-        "reference": "Patient/7695410"
+        "reference": "urn:uuid:6789bc38-3ce9-4d9c-9621-840ed076a767"
       },
       "request": [ {
-        "reference": "ServiceRequest/818818261"
+        "reference": "urn:uuid:24e76627-700e-422f-aafd-3240e1978f04"
       } ],
       "collection": {
         "collectedDateTime": "2024-11-26T14:13:00+01:00",
@@ -278,7 +278,7 @@
       }
     }
   }, {
-    "fullUrl": "Observation/Observation.1.0.0.0",
+    "fullUrl": "urn:uuid:1f58a654-c770-4223-bd7f-770b9836b4ef",
     "resource": {
       "resourceType": "Observation",
       "id": "Observation.1.0.0.0",
@@ -302,26 +302,26 @@
         } ]
       },
       "subject": {
-        "reference": "Patient/7695410"
+        "reference": "urn:uuid:6789bc38-3ce9-4d9c-9621-840ed076a767"
       },
       "hasMember": [ {
-        "reference": "Observation/Observation.1.0.0.1"
+        "reference": "urn:uuid:681ae35e-1970-4668-8090-461191b32bb0"
       }, {
-        "reference": "Observation/Observation.1.0.0.2"
+        "reference": "urn:uuid:87fdb0b2-3331-48ac-9fe8-ce227d577816"
       }, {
-        "reference": "Observation/Observation.1.0.0.3"
+        "reference": "urn:uuid:96a9e3fa-eb06-4825-9aa0-c4eeddb7e7a9"
       }, {
-        "reference": "Observation/Observation.1.0.0.4"
+        "reference": "urn:uuid:c280928c-b15e-44a2-a0c0-392920684454"
       }, {
-        "reference": "Observation/Observation.1.0.0.5"
+        "reference": "urn:uuid:6d7b4959-f8aa-45e7-9015-b93d9bcf4085"
       }, {
-        "reference": "Observation/Observation.1.0.0.6"
+        "reference": "urn:uuid:b92eb4cd-181e-408b-a81d-07ae5c244458"
       }, {
-        "reference": "Observation/Observation.1.0.0.7"
+        "reference": "urn:uuid:20ee1d24-a823-4133-9aa7-95fb30d68e26"
       } ]
     }
   }, {
-    "fullUrl": "Observation/Observation.1.0.0.1",
+    "fullUrl": "urn:uuid:681ae35e-1970-4668-8090-461191b32bb0",
     "resource": {
       "resourceType": "Observation",
       "id": "Observation.1.0.0.1",
@@ -341,16 +341,16 @@
         } ]
       },
       "subject": {
-        "reference": "Patient/7695410"
+        "reference": "urn:uuid:6789bc38-3ce9-4d9c-9621-840ed076a767"
       },
       "effectiveDateTime": "2024-11-26T14:13:00+01:00",
       "performer": [ {
-        "reference": "Practitioner/Biologist"
+        "reference": "urn:uuid:1f633cae-0f5a-41cc-aff8-f343d319eb52"
       } ],
       "valueBoolean": true
     }
   }, {
-    "fullUrl": "Observation/Observation.1.0.0.2",
+    "fullUrl": "urn:uuid:87fdb0b2-3331-48ac-9fe8-ce227d577816",
     "resource": {
       "resourceType": "Observation",
       "id": "Observation.1.0.0.2",
@@ -370,16 +370,16 @@
         } ]
       },
       "subject": {
-        "reference": "Patient/7695410"
+        "reference": "urn:uuid:6789bc38-3ce9-4d9c-9621-840ed076a767"
       },
       "effectiveDateTime": "2024-11-26T14:13:00+01:00",
       "performer": [ {
-        "reference": "Practitioner/Biologist"
+        "reference": "urn:uuid:1f633cae-0f5a-41cc-aff8-f343d319eb52"
       } ],
       "valueBoolean": true
     }
   }, {
-    "fullUrl": "Observation/Observation.1.0.0.3",
+    "fullUrl": "urn:uuid:96a9e3fa-eb06-4825-9aa0-c4eeddb7e7a9",
     "resource": {
       "resourceType": "Observation",
       "id": "Observation.1.0.0.3",
@@ -399,16 +399,16 @@
         } ]
       },
       "subject": {
-        "reference": "Patient/7695410"
+        "reference": "urn:uuid:6789bc38-3ce9-4d9c-9621-840ed076a767"
       },
       "effectiveDateTime": "2024-11-26T14:13:00+01:00",
       "performer": [ {
-        "reference": "Practitioner/Biologist"
+        "reference": "urn:uuid:1f633cae-0f5a-41cc-aff8-f343d319eb52"
       } ],
       "valueBoolean": true
     }
   }, {
-    "fullUrl": "Observation/Observation.1.0.0.4",
+    "fullUrl": "urn:uuid:c280928c-b15e-44a2-a0c0-392920684454",
     "resource": {
       "resourceType": "Observation",
       "id": "Observation.1.0.0.4",
@@ -428,16 +428,16 @@
         } ]
       },
       "subject": {
-        "reference": "Patient/7695410"
+        "reference": "urn:uuid:6789bc38-3ce9-4d9c-9621-840ed076a767"
       },
       "effectiveDateTime": "2024-11-26T14:13:00+01:00",
       "performer": [ {
-        "reference": "Practitioner/Biologist"
+        "reference": "urn:uuid:1f633cae-0f5a-41cc-aff8-f343d319eb52"
       } ],
       "valueString": "The text of the cytology report"
     }
   }, {
-    "fullUrl": "Observation/Observation.1.0.0.5",
+    "fullUrl": "urn:uuid:6d7b4959-f8aa-45e7-9015-b93d9bcf4085",
     "resource": {
       "resourceType": "Observation",
       "id": "Observation.1.0.0.5",
@@ -456,16 +456,16 @@
         } ]
       },
       "subject": {
-        "reference": "Patient/7695410"
+        "reference": "urn:uuid:6789bc38-3ce9-4d9c-9621-840ed076a767"
       },
       "effectiveDateTime": "2024-11-26T14:13:00+01:00",
       "performer": [ {
-        "reference": "Practitioner/Biologist"
+        "reference": "urn:uuid:1f633cae-0f5a-41cc-aff8-f343d319eb52"
       } ],
       "valueBoolean": true
     }
   }, {
-    "fullUrl": "Observation/Observation.1.0.0.6",
+    "fullUrl": "urn:uuid:b92eb4cd-181e-408b-a81d-07ae5c244458",
     "resource": {
       "resourceType": "Observation",
       "id": "Observation.1.0.0.6",
@@ -485,16 +485,16 @@
         } ]
       },
       "subject": {
-        "reference": "Patient/7695410"
+        "reference": "urn:uuid:6789bc38-3ce9-4d9c-9621-840ed076a767"
       },
       "effectiveDateTime": "2024-11-26T14:13:00+01:00",
       "performer": [ {
-        "reference": "Practitioner/Biologist"
+        "reference": "urn:uuid:1f633cae-0f5a-41cc-aff8-f343d319eb52"
       } ],
       "valueBoolean": true
     }
   }, {
-    "fullUrl": "Observation/Observation.1.0.0.7",
+    "fullUrl": "urn:uuid:20ee1d24-a823-4133-9aa7-95fb30d68e26",
     "resource": {
       "resourceType": "Observation",
       "id": "Observation.1.0.0.7",
@@ -514,11 +514,11 @@
         } ]
       },
       "subject": {
-        "reference": "Patient/7695410"
+        "reference": "urn:uuid:6789bc38-3ce9-4d9c-9621-840ed076a767"
       },
       "effectiveDateTime": "2024-11-26T14:13:00+01:00",
       "performer": [ {
-        "reference": "Practitioner/Biologist"
+        "reference": "urn:uuid:1f633cae-0f5a-41cc-aff8-f343d319eb52"
       } ],
       "valueBoolean": true
     }
