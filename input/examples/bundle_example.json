@@ -6,6 +6,7 @@
     "value": "81365677998.c4be752d-f603-45c1-b3f5-1273aa7e380b"
   },
   "type": "document",
+  "timestamp": "2024-11-29T13:33:53.453+01:00",
   "entry": [ {
     "fullUrl": "urn:uuid:e22deeeb-ffd2-479c-8c1d-412e63f3d58b",
     "resource": {
@@ -33,7 +34,7 @@
       "subject": {
         "reference": "urn:uuid:6789bc38-3ce9-4d9c-9621-840ed076a767"
       },
-      "date": "2024-11-28T16:45:35+01:00",
+      "date": "2024-11-29T13:33:53+01:00",
       "author": [ {
         "reference": "urn:uuid:04320025-83fb-4098-ac47-1cef97d2967b"
       } ],
@@ -81,7 +82,7 @@
       "subject": {
         "reference": "urn:uuid:6789bc38-3ce9-4d9c-9621-840ed076a767"
       },
-      "issued": "2024-11-28T16:45:35.233+01:00",
+      "issued": "2024-11-29T13:33:53.455+01:00",
       "performer": [ {
         "reference": "urn:uuid:04320025-83fb-4098-ac47-1cef97d2967b"
       } ],
@@ -318,7 +319,7 @@
       "subject": {
         "reference": "urn:uuid:6789bc38-3ce9-4d9c-9621-840ed076a767"
       },
-      "effectiveDateTime": "2024-11-28T16:45:35+01:00",
+      "effectiveDateTime": "2024-11-29T13:33:53+01:00",
       "valueBoolean": true
     }
   }, {
@@ -344,7 +345,7 @@
       "subject": {
         "reference": "urn:uuid:6789bc38-3ce9-4d9c-9621-840ed076a767"
       },
-      "effectiveDateTime": "2024-11-28T16:45:35+01:00",
+      "effectiveDateTime": "2024-11-29T13:33:53+01:00",
       "valueBoolean": true
     }
   }, {
@@ -370,7 +371,7 @@
       "subject": {
         "reference": "urn:uuid:6789bc38-3ce9-4d9c-9621-840ed076a767"
       },
-      "effectiveDateTime": "2024-11-28T16:45:35+01:00",
+      "effectiveDateTime": "2024-11-29T13:33:53+01:00",
       "valueBoolean": true
     }
   }, {
@@ -396,7 +397,7 @@
       "subject": {
         "reference": "urn:uuid:6789bc38-3ce9-4d9c-9621-840ed076a767"
       },
-      "effectiveDateTime": "2024-11-28T16:45:35+01:00",
+      "effectiveDateTime": "2024-11-29T13:33:53+01:00",
       "valueString": "The text of the cytology report"
     }
   }, {
@@ -422,7 +423,7 @@
       "subject": {
         "reference": "urn:uuid:6789bc38-3ce9-4d9c-9621-840ed076a767"
       },
-      "effectiveDateTime": "2024-11-28T16:45:35+01:00",
+      "effectiveDateTime": "2024-11-29T13:33:53+01:00",
       "valueBoolean": true
     }
   } ]
