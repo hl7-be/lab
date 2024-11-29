@@ -6,7 +6,6 @@
     "value": "81365677998.c4be752d-f603-45c1-b3f5-1273aa7e380b"
   },
   "type": "document",
-  "timestamp": "2024-11-26T14:13:00.569+01:00",
   "entry": [ {
     "fullUrl": "urn:uuid:e22deeeb-ffd2-479c-8c1d-412e63f3d58b",
     "resource": {
@@ -34,7 +33,7 @@
       "subject": {
         "reference": "urn:uuid:6789bc38-3ce9-4d9c-9621-840ed076a767"
       },
-      "date": "2024-11-26T14:13:00+01:00",
+      "date": "2024-11-28T16:45:35+01:00",
       "author": [ {
         "reference": "urn:uuid:04320025-83fb-4098-ac47-1cef97d2967b"
       } ],
@@ -82,8 +81,7 @@
       "subject": {
         "reference": "urn:uuid:6789bc38-3ce9-4d9c-9621-840ed076a767"
       },
-      "effectiveDateTime": "2024-11-26T14:13:00+01:00",
-      "issued": "2024-11-26T14:13:00.570+01:00",
+      "issued": "2024-11-28T16:45:35.233+01:00",
       "performer": [ {
         "reference": "urn:uuid:04320025-83fb-4098-ac47-1cef97d2967b"
       } ],
@@ -98,11 +96,55 @@
       } ],
       "conclusionCode": [ {
         "coding": [ {
-          "system": "http://snomed.info/sct",
-          "code": "183627004"
+          "system": "https://kankerregister.org/hpv/integrated_advice",
+          "code": "PCX_SCT_6"
         } ],
-        "text": "?????"
+        "text": "Resultaat reflex HPV-test volgt"
+      }, {
+        "coding": [ {
+          "system": "https://kankerregister.org/hpv/integrated_advice",
+          "code": "PCX_SCT_16"
+        } ],
+        "text": "Correlatie kliniek aangewezen om endometriumpathologie uit te sluiten"
+      }, {
+        "coding": [ {
+          "system": "https://kankerregister.org/cervibase",
+          "code": "xxx"
+        } ],
+        "text": "????"
       } ]
+    }
+  }, {
+    "fullUrl": "urn:uuid:733cec1d-fbc5-46e5-8c3e-b06b45043a42",
+    "resource": {
+      "resourceType": "Specimen",
+      "id": "123",
+      "meta": {
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-specimen-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "value": "123"
+      } ],
+      "status": "available",
+      "subject": {
+        "reference": "urn:uuid:6789bc38-3ce9-4d9c-9621-840ed076a767"
+      },
+      "request": [ {
+        "reference": "urn:uuid:24e76627-700e-422f-aafd-3240e1978f04"
+      } ],
+      "collection": {
+        "method": {
+          "coding": [ {
+            "system": "http://snomed.info/sct",
+            "code": "70777001",
+            "display": "Urine specimen collection, catheterized"
+          } ]
+        }
+      }
     }
   }, {
     "fullUrl": "urn:uuid:6789bc38-3ce9-4d9c-9621-840ed076a767",
@@ -149,10 +191,10 @@
       } ]
     }
   }, {
-    "fullUrl": "urn:uuid:1f633cae-0f5a-41cc-aff8-f343d319eb52",
+    "fullUrl": "urn:uuid:8ead9dd7-a92c-48b4-ae63-952362666eb8",
     "resource": {
       "resourceType": "Practitioner",
-      "id": "Biologist",
+      "id": "Requester",
       "meta": {
         "profile": [ "https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-practitioner" ]
       },
@@ -162,11 +204,10 @@
       },
       "identifier": [ {
         "system": "https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/nihdi",
-        "value": "10000007999"
+        "value": "10000007998"
       } ],
       "name": [ {
-        "family": "Cma - Herentals",
-        "given": [ "X" ],
+        "family": "Besard",
         "prefix": [ "Dr." ]
       } ]
     }
@@ -192,32 +233,7 @@
           "code": "orglaboratory"
         } ]
       } ],
-      "name": "CENTRUM VOOR MEDISCHE ANALYSE",
-      "telecom": [ {
-        "system": "email",
-        "value": "info@cma.be",
-        "use": "work"
-      }, {
-        "system": "fax",
-        "value": "014/22.56.08",
-        "use": "work"
-      }, {
-        "system": "phone",
-        "value": "014/28.50.00",
-        "use": "work"
-      }, {
-        "system": "url",
-        "value": "http://www.cma.be",
-        "use": "work"
-      } ],
-      "address": [ {
-        "use": "work",
-        "type": "both",
-        "line": [ "Oud-Strijderslaan 199" ],
-        "city": "Herentals",
-        "postalCode": "2200",
-        "country": "BE"
-      } ]
+      "name": "CENTRUM VOOR MEDISCHE ANALYSE"
     }
   }, {
     "fullUrl": "urn:uuid:24e76627-700e-422f-aafd-3240e1978f04",
@@ -241,40 +257,7 @@
         "reference": "urn:uuid:6789bc38-3ce9-4d9c-9621-840ed076a767"
       },
       "requester": {
-        "reference": "urn:uuid:1f633cae-0f5a-41cc-aff8-f343d319eb52"
-      }
-    }
-  }, {
-    "fullUrl": "urn:uuid:733cec1d-fbc5-46e5-8c3e-b06b45043a42",
-    "resource": {
-      "resourceType": "Specimen",
-      "id": "123",
-      "meta": {
-        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-specimen-laboratory" ]
-      },
-      "text": {
-        "status": "empty",
-        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
-      },
-      "identifier": [ {
-        "value": "123"
-      } ],
-      "status": "available",
-      "subject": {
-        "reference": "urn:uuid:6789bc38-3ce9-4d9c-9621-840ed076a767"
-      },
-      "request": [ {
-        "reference": "urn:uuid:24e76627-700e-422f-aafd-3240e1978f04"
-      } ],
-      "collection": {
-        "collectedDateTime": "2024-11-26T14:13:00+01:00",
-        "method": {
-          "coding": [ {
-            "system": "http://snomed.info/sct",
-            "code": "70777001",
-            "display": "Urine specimen collection, catheterized"
-          } ]
-        }
+        "reference": "urn:uuid:8ead9dd7-a92c-48b4-ae63-952362666eb8"
       }
     }
   }, {
@@ -289,10 +272,6 @@
         "status": "empty",
         "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
       },
-      "identifier": [ {
-        "system": "http://my.own.lab/billingcode",
-        "value": "123123"
-      } ],
       "status": "final",
       "code": {
         "coding": [ {
@@ -314,10 +293,6 @@
         "reference": "urn:uuid:c280928c-b15e-44a2-a0c0-392920684454"
       }, {
         "reference": "urn:uuid:6d7b4959-f8aa-45e7-9015-b93d9bcf4085"
-      }, {
-        "reference": "urn:uuid:b92eb4cd-181e-408b-a81d-07ae5c244458"
-      }, {
-        "reference": "urn:uuid:20ee1d24-a823-4133-9aa7-95fb30d68e26"
       } ]
     }
   }, {
@@ -343,10 +318,7 @@
       "subject": {
         "reference": "urn:uuid:6789bc38-3ce9-4d9c-9621-840ed076a767"
       },
-      "effectiveDateTime": "2024-11-26T14:13:00+01:00",
-      "performer": [ {
-        "reference": "urn:uuid:1f633cae-0f5a-41cc-aff8-f343d319eb52"
-      } ],
+      "effectiveDateTime": "2024-11-28T16:45:35+01:00",
       "valueBoolean": true
     }
   }, {
@@ -372,10 +344,7 @@
       "subject": {
         "reference": "urn:uuid:6789bc38-3ce9-4d9c-9621-840ed076a767"
       },
-      "effectiveDateTime": "2024-11-26T14:13:00+01:00",
-      "performer": [ {
-        "reference": "urn:uuid:1f633cae-0f5a-41cc-aff8-f343d319eb52"
-      } ],
+      "effectiveDateTime": "2024-11-28T16:45:35+01:00",
       "valueBoolean": true
     }
   }, {
@@ -401,10 +370,7 @@
       "subject": {
         "reference": "urn:uuid:6789bc38-3ce9-4d9c-9621-840ed076a767"
       },
-      "effectiveDateTime": "2024-11-26T14:13:00+01:00",
-      "performer": [ {
-        "reference": "urn:uuid:1f633cae-0f5a-41cc-aff8-f343d319eb52"
-      } ],
+      "effectiveDateTime": "2024-11-28T16:45:35+01:00",
       "valueBoolean": true
     }
   }, {
@@ -430,10 +396,7 @@
       "subject": {
         "reference": "urn:uuid:6789bc38-3ce9-4d9c-9621-840ed076a767"
       },
-      "effectiveDateTime": "2024-11-26T14:13:00+01:00",
-      "performer": [ {
-        "reference": "urn:uuid:1f633cae-0f5a-41cc-aff8-f343d319eb52"
-      } ],
+      "effectiveDateTime": "2024-11-28T16:45:35+01:00",
       "valueString": "The text of the cytology report"
     }
   }, {
@@ -451,6 +414,7 @@
       "status": "final",
       "code": {
         "coding": [ {
+          "system": "https://kankerregister.org/hpv/indication",
           "code": "CYT12M",
           "display": "Opvolging_cytologie_12m triage"
         } ]
@@ -458,68 +422,7 @@
       "subject": {
         "reference": "urn:uuid:6789bc38-3ce9-4d9c-9621-840ed076a767"
       },
-      "effectiveDateTime": "2024-11-26T14:13:00+01:00",
-      "performer": [ {
-        "reference": "urn:uuid:1f633cae-0f5a-41cc-aff8-f343d319eb52"
-      } ],
-      "valueBoolean": true
-    }
-  }, {
-    "fullUrl": "urn:uuid:b92eb4cd-181e-408b-a81d-07ae5c244458",
-    "resource": {
-      "resourceType": "Observation",
-      "id": "Observation.1.0.0.6",
-      "meta": {
-        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory" ]
-      },
-      "text": {
-        "status": "empty",
-        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
-      },
-      "status": "final",
-      "code": {
-        "coding": [ {
-          "system": "http://snomed.info/sct",
-          "code": "PCX_SCT_6",
-          "display": "Resultaat reflex HPV-test volgt"
-        } ]
-      },
-      "subject": {
-        "reference": "urn:uuid:6789bc38-3ce9-4d9c-9621-840ed076a767"
-      },
-      "effectiveDateTime": "2024-11-26T14:13:00+01:00",
-      "performer": [ {
-        "reference": "urn:uuid:1f633cae-0f5a-41cc-aff8-f343d319eb52"
-      } ],
-      "valueBoolean": true
-    }
-  }, {
-    "fullUrl": "urn:uuid:20ee1d24-a823-4133-9aa7-95fb30d68e26",
-    "resource": {
-      "resourceType": "Observation",
-      "id": "Observation.1.0.0.7",
-      "meta": {
-        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory" ]
-      },
-      "text": {
-        "status": "empty",
-        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
-      },
-      "status": "final",
-      "code": {
-        "coding": [ {
-          "system": "http://snomed.info/sct",
-          "code": "PCX_SCT_16",
-          "display": "Correlatie kliniek aangewezen om endometriumpathologie uit te sluiten"
-        } ]
-      },
-      "subject": {
-        "reference": "urn:uuid:6789bc38-3ce9-4d9c-9621-840ed076a767"
-      },
-      "effectiveDateTime": "2024-11-26T14:13:00+01:00",
-      "performer": [ {
-        "reference": "urn:uuid:1f633cae-0f5a-41cc-aff8-f343d319eb52"
-      } ],
+      "effectiveDateTime": "2024-11-28T16:45:35+01:00",
       "valueBoolean": true
     }
   } ]
