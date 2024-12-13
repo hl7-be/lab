@@ -1,0 +1,312 @@
+{
+  "resourceType": "Bundle",
+  "id": "RealTime-High-Risk-HPV-Test-insufficient",
+  "identifier": {
+    "system": "https://www.ehealth.fgov.be/lab-report/bundle-id",
+    "value": "81365677998.c4be752d-f603-45c1-b3f5-1273aa7e380b"
+  },
+  "type": "document",
+  "timestamp": "2024-12-12T17:39:35.155+01:00",
+  "entry": [ {
+    "fullUrl": "urn:uuid:e22deeeb-ffd2-479c-8c1d-412e63f3d58b",
+    "resource": {
+      "resourceType": "Composition",
+      "id": "818818261",
+      "meta": {
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-laboratory-report-composition" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": {
+        "system": "http://www.macsys.be/hl7/Composition",
+        "value": "818818261"
+      },
+      "status": "final",
+      "type": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "11502-2"
+        } ],
+        "text": "Laboratory report"
+      },
+      "subject": {
+        "reference": "urn:uuid:6789bc38-3ce9-4d9c-9621-840ed076a767"
+      },
+      "date": "2024-12-12T17:39:35+01:00",
+      "author": [ {
+        "reference": "urn:uuid:04320025-83fb-4098-ac47-1cef97d2967b"
+      } ],
+      "title": "HPV report",
+      "section": [ {
+        "entry": [ {
+          "reference": "urn:uuid:c9b80331-4752-4df6-9c59-71679c9b1a01"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "urn:uuid:c9b80331-4752-4df6-9c59-71679c9b1a01",
+    "resource": {
+      "resourceType": "DiagnosticReport",
+      "id": "818818261",
+      "meta": {
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-laboratory-report" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://www.ehealth.fgov.be/lab-report/diagnostic-report-id",
+        "value": "81365677998.b61f0ea9-f830-439e-9142-7097149e47e5"
+      } ],
+      "basedOn": [ {
+        "reference": "urn:uuid:24e76627-700e-422f-aafd-3240e1978f04"
+      } ],
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+          "code": "LAB",
+          "display": "Laboratory"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "11502-2"
+        } ],
+        "text": "Laboratory report"
+      },
+      "subject": {
+        "reference": "urn:uuid:6789bc38-3ce9-4d9c-9621-840ed076a767"
+      },
+      "issued": "2024-12-12T17:39:35.155+01:00",
+      "performer": [ {
+        "reference": "urn:uuid:04320025-83fb-4098-ac47-1cef97d2967b"
+      } ],
+      "resultsInterpreter": [ {
+        "reference": "urn:uuid:c2b2ac30-2cfb-4c49-a548-4bc5a9c628c8"
+      } ],
+      "specimen": [ {
+        "reference": "urn:uuid:733cec1d-fbc5-46e5-8c3e-b06b45043a42"
+      } ],
+      "result": [ {
+        "reference": "urn:uuid:1f58a654-c770-4223-bd7f-770b9836b4ef"
+      } ],
+      "conclusionCode": [ {
+        "coding": [ {
+          "system": "https://kankerregister.org/hpv/integrated_advice",
+          "code": "PCX_SCT_10"
+        } ],
+        "text": "Nieuwe staalname ten vroegste binnen 6 weken"
+      } ]
+    }
+  }, {
+    "fullUrl": "urn:uuid:733cec1d-fbc5-46e5-8c3e-b06b45043a42",
+    "resource": {
+      "resourceType": "Specimen",
+      "id": "123",
+      "meta": {
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-specimen-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "value": "LAB_REQUEST_123456789"
+      } ],
+      "status": "available",
+      "subject": {
+        "reference": "urn:uuid:6789bc38-3ce9-4d9c-9621-840ed076a767"
+      },
+      "request": [ {
+        "reference": "urn:uuid:24e76627-700e-422f-aafd-3240e1978f04"
+      } ],
+      "collection": {
+        "method": {
+          "coding": [ {
+            "system": "http://snomed.info/sct",
+            "code": "417036008",
+            "display": "Liquid based cervical cytology screening (procedure)"
+          } ]
+        }
+      }
+    }
+  }, {
+    "fullUrl": "urn:uuid:6789bc38-3ce9-4d9c-9621-840ed076a767",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "7695410",
+      "meta": {
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-patient" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/ssin",
+        "value": "00030299929"
+      } ],
+      "name": [ {
+        "family": "Bols",
+        "given": [ "Jan" ]
+      } ],
+      "gender": "male",
+      "birthDate": "1980-06-29",
+      "address": [ {
+        "postalCode": "9000",
+        "country": "be"
+      } ]
+    }
+  }, {
+    "fullUrl": "urn:uuid:c2b2ac30-2cfb-4c49-a548-4bc5a9c628c8",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "hpv-labresponsible",
+      "meta": {
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-practitioner" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "name": [ {
+        "family": "Engelen",
+        "given": [ "Frans" ]
+      } ]
+    }
+  }, {
+    "fullUrl": "urn:uuid:8ead9dd7-a92c-48b4-ae63-952362666eb8",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "Requester",
+      "meta": {
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-practitioner" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/nihdi",
+        "value": "10000007998"
+      } ],
+      "name": [ {
+        "family": "Besard",
+        "prefix": [ "Dr." ]
+      } ]
+    }
+  }, {
+    "fullUrl": "urn:uuid:04320025-83fb-4098-ac47-1cef97d2967b",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "81365677998",
+      "meta": {
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-organization" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/nihdi",
+        "value": "81365677998"
+      } ],
+      "type": [ {
+        "coding": [ {
+          "system": "https://www.ehealth.fgov.be/standards/fhir/core/CodeSystem/cd-hcparty",
+          "code": "orglaboratory"
+        } ]
+      } ],
+      "name": "CENTRUM VOOR MEDISCHE ANALYSE"
+    }
+  }, {
+    "fullUrl": "urn:uuid:24e76627-700e-422f-aafd-3240e1978f04",
+    "resource": {
+      "resourceType": "ServiceRequest",
+      "id": "818818261",
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "identifier": [ {
+        "system": "http://www.macsys.be/hl7/ServiceRequest/lab",
+        "value": "818818261"
+      }, {
+        "system": "http://www.macsys.be/hl7/ServiceRequest/external",
+        "value": "TESTCASE 10A"
+      } ],
+      "status": "active",
+      "intent": "order",
+      "subject": {
+        "reference": "urn:uuid:6789bc38-3ce9-4d9c-9621-840ed076a767"
+      },
+      "requester": {
+        "reference": "urn:uuid:8ead9dd7-a92c-48b4-ae63-952362666eb8"
+      }
+    }
+  }, {
+    "fullUrl": "urn:uuid:1f58a654-c770-4223-bd7f-770b9836b4ef",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "Observation.1.0.0.0",
+      "meta": {
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "101822-5",
+          "display": "Human papilloma virus cytology and high-risk genotypes panel - Cervix"
+        } ]
+      },
+      "subject": {
+        "reference": "urn:uuid:6789bc38-3ce9-4d9c-9621-840ed076a767"
+      },
+      "hasMember": [ {
+        "reference": "urn:uuid:170fe820-e48d-4399-9b8c-ded8c75a6388"
+      } ]
+    }
+  }, {
+    "fullUrl": "urn:uuid:170fe820-e48d-4399-9b8c-ded8c75a6388",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "Observation.1.0.1.1",
+      "meta": {
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/lab/StructureDefinition/be-observation-laboratory" ]
+      },
+      "text": {
+        "status": "empty",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">empty</div>"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "104720-8",
+          "display": "Clinical indication Narrative"
+        } ]
+      },
+      "subject": {
+        "reference": "urn:uuid:6789bc38-3ce9-4d9c-9621-840ed076a767"
+      },
+      "effectiveDateTime": "2024-11-02T09:55:00+01:00",
+      "valueCodeableConcept": {
+        "coding": [ {
+          "system": "http://kankerregister.org/profplatform/coding/indication",
+          "code": "HPVSCR",
+          "display": "Screening_HPV"
+        } ]
+      }
+    }
+  } ]
+}
