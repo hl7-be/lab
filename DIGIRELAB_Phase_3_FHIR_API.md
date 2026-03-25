@@ -1,27 +1,27 @@
-# H1 DIGIRELAB Phase 3: proposal for API (to be finetuned)
+# DIGIRELAB Phase 3: proposal for API (to be finetuned)
 
 This is a short description of the target API that was discussed in the DIGIRELAB Phase 2 & 3 meetings with the HUBs (with some representatives from the LABS).
 
-###### H6 The meeting minutes of these meetings can be found here:
+###### The meeting minutes of these meetings can be found here:
 
-*[2025-11-04](https://docs.google.com/document/d/1shwuxzbQbQb-rzLkQvs01xk2qPdhMWJMYAdl_hcdGP0/edit?usp=drive_link)
-*[2025-09-03](https://docs.google.com/document/d/1ZHS2k9OqByr7NOE9l6hJ1ew5qAjK2M1R1ADfCAVDHoE/edit?usp=drive_link)
-*[2025-07-10](https://docs.google.com/document/d/1B9vjMm-JdfBA8YkfMqkhTlZUqOsrEopU9lM3IijpHdY/edit?usp=drive_link)
-*[2025-06-17](https://docs.google.com/document/d/1_U60AonxVh5um5V1m_f7c4fOt5GtYB7jfOqA2uQ22PA/edit?usp=drive_link)
-*[2025-05-14](https://docs.google.com/document/d/150QbuCRCBid2KuvZROD7_GiWsuVgfixBzi5DWO9vhjQ/edit?usp=drive_link)
-*[2025-03-10](https://docs.google.com/document/d/1jGJsRQk6aRz9OJ3GzPb1rABlhVWnGtQFSEeM1dxq64w/edit?usp=drive_link)
-*[2025-08-01](https://docs.google.com/document/d/1nUTDahBf-V3-TG8Kytds6ZeegCEqKESyq800BYBwzHw/edit?usp=drive_link)
-*[2024-09-18](https://docs.google.com/document/d/1-z2O10rpGwWtc02zYYvVtWCZQKpC1TnoOp2FkKlq9uU/edit?usp=drive_link)
-*[2024-10-24](https://docs.google.com/document/d/11zdsCbOoARx7MU6DnFaFLkofqQcjlmqbesDnR_XEzmQ/edit?usp=drive_link)
+* [2025-11-04](https://docs.google.com/document/d/1shwuxzbQbQb-rzLkQvs01xk2qPdhMWJMYAdl_hcdGP0/edit?usp=drive_link)
+* [2025-09-03](https://docs.google.com/document/d/1ZHS2k9OqByr7NOE9l6hJ1ew5qAjK2M1R1ADfCAVDHoE/edit?usp=drive_link)
+* [2025-07-10](https://docs.google.com/document/d/1B9vjMm-JdfBA8YkfMqkhTlZUqOsrEopU9lM3IijpHdY/edit?usp=drive_link)
+* [2025-06-17](https://docs.google.com/document/d/1_U60AonxVh5um5V1m_f7c4fOt5GtYB7jfOqA2uQ22PA/edit?usp=drive_link)
+* [2025-05-14](https://docs.google.com/document/d/150QbuCRCBid2KuvZROD7_GiWsuVgfixBzi5DWO9vhjQ/edit?usp=drive_link)
+* [2025-03-10](https://docs.google.com/document/d/1jGJsRQk6aRz9OJ3GzPb1rABlhVWnGtQFSEeM1dxq64w/edit?usp=drive_link)
+* [2025-08-01](https://docs.google.com/document/d/1nUTDahBf-V3-TG8Kytds6ZeegCEqKESyq800BYBwzHw/edit?usp=drive_link)
+* [2024-09-18](https://docs.google.com/document/d/1-z2O10rpGwWtc02zYYvVtWCZQKpC1TnoOp2FkKlq9uU/edit?usp=drive_link)
+* [2024-10-24](https://docs.google.com/document/d/11zdsCbOoARx7MU6DnFaFLkofqQcjlmqbesDnR_XEzmQ/edit?usp=drive_link)
 
 
-###### H6 Early versions of the API descriptions: functionally: 
+###### Early versions of the API descriptions: functionally: 
 
 https://docs.google.com/spreadsheets/d/1Sfcnu13sbDjb93QsTRog5rsfUtzBO6zPFMBa7YA7IjU/edit?usp=drive_link
 https://docs.google.com/document/d/1UtfWtjISYsy2Qa3aoaUMd2pUcwIwKYchbfdZn6rpfp0/edit?usp=drive_link
 
 
-## H2 For resource type Observation:
+## For resource type Observation:
 
 this covers all search functionality for laboratory test results
 
