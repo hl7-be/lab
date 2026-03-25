@@ -17,33 +17,38 @@ This is a short description of the target API that was discussed in the DIGIRELA
 
 ###### Early versions of the API descriptions: functionally: 
 
-https://docs.google.com/spreadsheets/d/1Sfcnu13sbDjb93QsTRog5rsfUtzBO6zPFMBa7YA7IjU/edit?usp=drive_link
-https://docs.google.com/document/d/1UtfWtjISYsy2Qa3aoaUMd2pUcwIwKYchbfdZn6rpfp0/edit?usp=drive_link
+* [Spreadsheet](https://docs.google.com/spreadsheets/d/1Sfcnu13sbDjb93QsTRog5rsfUtzBO6zPFMBa7YA7IjU/edit?usp=drive_link)
+* [Additional comments](https://docs.google.com/document/d/1UtfWtjISYsy2Qa3aoaUMd2pUcwIwKYchbfdZn6rpfp0/edit?usp=drive_link)
 
 
 ## For resource type Observation:
 
 this covers all search functionality for laboratory test results
 
-[fhir-root]/Observation?code=http://loinc.org|[code]
-[fhir-root]/Observation?date=[date] and the comparison operators described here: https://hl7.org/fhir/R4/search.html#date
-[fhir-root]/Observation?subject.identifier=http://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/ssin|[SSIN-number] 
-[fhir-root]/Observation?_sort=date AND [fhir-root]/Observation?_sort=-date
-[fhir-root]/Observation?_count=[integer]
+`[fhir-root]/Observation?code=http://loinc.org|[code]`
+`[fhir-root]/Observation?date=[date]` and the comparison operators described here: https://hl7.org/fhir/R4/search.html#date
+`[fhir-root]/Observation?subject.identifier=http://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/ssin|[SSIN-number]` 
+`[fhir-root]/Observation?_sort=date` AND `[fhir-root]/Observation?_sort=-date`
+`[fhir-root]/Observation?_count=[integer]`
 
 And the combinations of the above using ‘&’ and ‘,’ as described in the FHIR search standard (https://hl7.org/fhir/R4/search.htm )
 the use of _include to include all necessary resources in the Bundle
 
-For resource type Composition:
-this covers the link to the original report:
-[fhir-root]/Composition/[id]/$document where id is the unique identifier of the composition contained in the lab report. ‘$document’ indicates that not the Composition resource should be served, but the entire document associated with it.
+It is possible that the combinations of the above are restricted, due to a performance point of view. One of the decisions evident from the meeting minutes, is that any search request will have to contain at least a patient id and a maximal number of results. Other restrictions might surface during the coalition of the willing.
 
-For resource type DocumentReference:
+## For resource type Composition:
+
+this covers the link to the original report:
+
+`[fhir-root]/Composition/[id]/$document` where `id` is the unique identifier of the composition contained in the lab report. ‘$document’ indicates that not the Composition resource should be served, but the entire document associated with it. See https://www.hl7.org/fhir/R4/composition-operation-document.html
+
+## For resource type DocumentReference:
 this covers the intermediary resource between the Observation and the Composition (this is only necessary for internal FHIR reasons):
 
-[fhir-root]/DocumentReference/[id]
+`[fhir-root]/DocumentReference/[id]`
 
-For resource type Bundle:
+## For resource type Bundle:
+
 Two types of Bundles will need to be served as the result to the search calls:
 
 The existing Lab Report, a bundle of type “document”
