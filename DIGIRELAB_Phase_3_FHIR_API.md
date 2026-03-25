@@ -25,11 +25,11 @@ This is a short description of the target API that was discussed in the DIGIRELA
 
 this covers all search functionality for laboratory test results
 
-`[fhir-root]/Observation?code=http://loinc.org|[code]`
-`[fhir-root]/Observation?date=[date]` and the comparison operators described here: https://hl7.org/fhir/R4/search.html#date
-`[fhir-root]/Observation?subject.identifier=http://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/ssin|[SSIN-number]` 
-`[fhir-root]/Observation?_sort=date` AND `[fhir-root]/Observation?_sort=-date`
-`[fhir-root]/Observation?_count=[integer]`
+* `[fhir-root]/Observation?code=http://loinc.org|[code]`
+* `[fhir-root]/Observation?date=[date]` and the comparison operators described here: https://hl7.org/fhir/R4/search.html#date
+* `[fhir-root]/Observation?subject.identifier=http://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/ssin|[SSIN-number]` 
+* `[fhir-root]/Observation?_sort=date` AND `[fhir-root]/Observation?_sort=-date`
+* `[fhir-root]/Observation?_count=[integer]`
 
 And the combinations of the above using ‘&’ and ‘,’ as described in the FHIR search standard (https://hl7.org/fhir/R4/search.htm )
 the use of _include to include all necessary resources in the Bundle
@@ -51,8 +51,8 @@ this covers the intermediary resource between the Observation and the Compositio
 
 Two types of Bundles will need to be served as the result to the search calls:
 
-The existing Lab Report, a bundle of type “document”
-The synthetic query response, a bundle of type “searchset”
+* The existing Lab Report, a bundle of type “document”
+* The synthetic query response, a bundle of type “searchset”
 
 
 
